@@ -46,6 +46,140 @@ SystemCoreClock     0x4               build/lib/boards/edu-ciaa-nxp.a(chip_18xx_
 
 Discarded input sections
 
+ .group         0x0000000000000000        0xc build/obj/src/digital.o
+ .group         0x0000000000000000        0xc build/obj/src/digital.o
+ .group         0x0000000000000000        0xc build/obj/src/digital.o
+ .group         0x0000000000000000        0xc build/obj/src/digital.o
+ .group         0x0000000000000000        0xc build/obj/src/digital.o
+ .group         0x0000000000000000        0xc build/obj/src/digital.o
+ .group         0x0000000000000000        0xc build/obj/src/digital.o
+ .group         0x0000000000000000        0xc build/obj/src/digital.o
+ .group         0x0000000000000000        0xc build/obj/src/digital.o
+ .group         0x0000000000000000        0xc build/obj/src/digital.o
+ .group         0x0000000000000000        0xc build/obj/src/digital.o
+ .group         0x0000000000000000        0xc build/obj/src/digital.o
+ .group         0x0000000000000000        0xc build/obj/src/digital.o
+ .group         0x0000000000000000        0xc build/obj/src/digital.o
+ .group         0x0000000000000000        0xc build/obj/src/digital.o
+ .group         0x0000000000000000        0xc build/obj/src/digital.o
+ .group         0x0000000000000000        0xc build/obj/src/digital.o
+ .group         0x0000000000000000        0xc build/obj/src/digital.o
+ .group         0x0000000000000000        0xc build/obj/src/digital.o
+ .group         0x0000000000000000        0xc build/obj/src/digital.o
+ .group         0x0000000000000000        0xc build/obj/src/digital.o
+ .group         0x0000000000000000        0xc build/obj/src/digital.o
+ .group         0x0000000000000000        0xc build/obj/src/digital.o
+ .group         0x0000000000000000        0xc build/obj/src/digital.o
+ .group         0x0000000000000000        0xc build/obj/src/digital.o
+ .group         0x0000000000000000        0xc build/obj/src/digital.o
+ .group         0x0000000000000000        0xc build/obj/src/digital.o
+ .group         0x0000000000000000        0xc build/obj/src/digital.o
+ .group         0x0000000000000000        0xc build/obj/src/digital.o
+ .group         0x0000000000000000        0xc build/obj/src/digital.o
+ .group         0x0000000000000000        0xc build/obj/src/digital.o
+ .group         0x0000000000000000        0xc build/obj/src/digital.o
+ .group         0x0000000000000000        0xc build/obj/src/digital.o
+ .group         0x0000000000000000        0xc build/obj/src/digital.o
+ .group         0x0000000000000000        0xc build/obj/src/digital.o
+ .group         0x0000000000000000        0xc build/obj/src/digital.o
+ .group         0x0000000000000000        0xc build/obj/src/digital.o
+ .group         0x0000000000000000        0xc build/obj/src/digital.o
+ .group         0x0000000000000000        0xc build/obj/src/digital.o
+ .group         0x0000000000000000        0xc build/obj/src/digital.o
+ .group         0x0000000000000000        0xc build/obj/src/digital.o
+ .group         0x0000000000000000        0xc build/obj/src/digital.o
+ .group         0x0000000000000000        0xc build/obj/src/digital.o
+ .group         0x0000000000000000        0xc build/obj/src/digital.o
+ .group         0x0000000000000000        0xc build/obj/src/digital.o
+ .group         0x0000000000000000        0xc build/obj/src/digital.o
+ .group         0x0000000000000000        0xc build/obj/src/digital.o
+ .group         0x0000000000000000        0xc build/obj/src/digital.o
+ .group         0x0000000000000000        0xc build/obj/src/digital.o
+ .group         0x0000000000000000        0xc build/obj/src/digital.o
+ .group         0x0000000000000000        0xc build/obj/src/digital.o
+ .group         0x0000000000000000        0xc build/obj/src/digital.o
+ .group         0x0000000000000000        0xc build/obj/src/digital.o
+ .group         0x0000000000000000        0xc build/obj/src/digital.o
+ .group         0x0000000000000000        0xc build/obj/src/digital.o
+ .text          0x0000000000000000        0x0 build/obj/src/digital.o
+ .data          0x0000000000000000        0x0 build/obj/src/digital.o
+ .bss           0x0000000000000000        0x0 build/obj/src/digital.o
+ .bss.instance  0x0000000000000000        0x2 build/obj/src/digital.o
+ .text.DigitalOutputCreate
+                0x0000000000000000       0x30 build/obj/src/digital.o
+ .text.DigitalOutputActivate
+                0x0000000000000000       0x14 build/obj/src/digital.o
+ .text.DigitalOutputDeactivate
+                0x0000000000000000       0x14 build/obj/src/digital.o
+ .text.DigitalOutputToogle
+                0x0000000000000000       0x14 build/obj/src/digital.o
+ .debug_info    0x0000000000000000      0x6a9 build/obj/src/digital.o
+ .debug_abbrev  0x0000000000000000      0x151 build/obj/src/digital.o
+ .debug_aranges
+                0x0000000000000000       0x38 build/obj/src/digital.o
+ .debug_ranges  0x0000000000000000       0x28 build/obj/src/digital.o
+ .debug_macro   0x0000000000000000      0x31f build/obj/src/digital.o
+ .debug_macro   0x0000000000000000      0xaba build/obj/src/digital.o
+ .debug_macro   0x0000000000000000       0x22 build/obj/src/digital.o
+ .debug_macro   0x0000000000000000       0x8e build/obj/src/digital.o
+ .debug_macro   0x0000000000000000       0x51 build/obj/src/digital.o
+ .debug_macro   0x0000000000000000       0xef build/obj/src/digital.o
+ .debug_macro   0x0000000000000000       0x6a build/obj/src/digital.o
+ .debug_macro   0x0000000000000000      0x1df build/obj/src/digital.o
+ .debug_macro   0x0000000000000000       0x10 build/obj/src/digital.o
+ .debug_macro   0x0000000000000000       0x22 build/obj/src/digital.o
+ .debug_macro   0x0000000000000000       0x73 build/obj/src/digital.o
+ .debug_macro   0x0000000000000000       0x22 build/obj/src/digital.o
+ .debug_macro   0x0000000000000000       0x1c build/obj/src/digital.o
+ .debug_macro   0x0000000000000000       0x22 build/obj/src/digital.o
+ .debug_macro   0x0000000000000000       0xdf build/obj/src/digital.o
+ .debug_macro   0x0000000000000000     0x102d build/obj/src/digital.o
+ .debug_macro   0x0000000000000000      0x11f build/obj/src/digital.o
+ .debug_macro   0x0000000000000000      0x2c3 build/obj/src/digital.o
+ .debug_macro   0x0000000000000000      0x112 build/obj/src/digital.o
+ .debug_macro   0x0000000000000000       0x11 build/obj/src/digital.o
+ .debug_macro   0x0000000000000000       0x2a build/obj/src/digital.o
+ .debug_macro   0x0000000000000000       0x16 build/obj/src/digital.o
+ .debug_macro   0x0000000000000000      0x2e6 build/obj/src/digital.o
+ .debug_macro   0x0000000000000000       0x82 build/obj/src/digital.o
+ .debug_macro   0x0000000000000000      0x13d build/obj/src/digital.o
+ .debug_macro   0x0000000000000000      0x198 build/obj/src/digital.o
+ .debug_macro   0x0000000000000000       0x34 build/obj/src/digital.o
+ .debug_macro   0x0000000000000000       0x58 build/obj/src/digital.o
+ .debug_macro   0x0000000000000000      0x236 build/obj/src/digital.o
+ .debug_macro   0x0000000000000000      0x572 build/obj/src/digital.o
+ .debug_macro   0x0000000000000000       0x16 build/obj/src/digital.o
+ .debug_macro   0x0000000000000000      0x18a build/obj/src/digital.o
+ .debug_macro   0x0000000000000000       0x88 build/obj/src/digital.o
+ .debug_macro   0x0000000000000000      0x1b9 build/obj/src/digital.o
+ .debug_macro   0x0000000000000000      0x1da build/obj/src/digital.o
+ .debug_macro   0x0000000000000000       0x40 build/obj/src/digital.o
+ .debug_macro   0x0000000000000000       0x1c build/obj/src/digital.o
+ .debug_macro   0x0000000000000000       0x2e build/obj/src/digital.o
+ .debug_macro   0x0000000000000000       0x2e build/obj/src/digital.o
+ .debug_macro   0x0000000000000000       0x22 build/obj/src/digital.o
+ .debug_macro   0x0000000000000000      0x201 build/obj/src/digital.o
+ .debug_macro   0x0000000000000000       0xe0 build/obj/src/digital.o
+ .debug_macro   0x0000000000000000      0x34c build/obj/src/digital.o
+ .debug_macro   0x0000000000000000       0xdc build/obj/src/digital.o
+ .debug_macro   0x0000000000000000       0xc4 build/obj/src/digital.o
+ .debug_macro   0x0000000000000000       0x8f build/obj/src/digital.o
+ .debug_macro   0x0000000000000000       0x94 build/obj/src/digital.o
+ .debug_macro   0x0000000000000000       0xb8 build/obj/src/digital.o
+ .debug_macro   0x0000000000000000       0x4c build/obj/src/digital.o
+ .debug_macro   0x0000000000000000       0x16 build/obj/src/digital.o
+ .debug_macro   0x0000000000000000      0x328 build/obj/src/digital.o
+ .debug_macro   0x0000000000000000       0x3a build/obj/src/digital.o
+ .debug_macro   0x0000000000000000       0xd0 build/obj/src/digital.o
+ .debug_macro   0x0000000000000000       0x18 build/obj/src/digital.o
+ .debug_macro   0x0000000000000000       0x22 build/obj/src/digital.o
+ .debug_macro   0x0000000000000000       0x40 build/obj/src/digital.o
+ .debug_line    0x0000000000000000      0x81e build/obj/src/digital.o
+ .debug_str     0x0000000000000000    0x173aa build/obj/src/digital.o
+ .comment       0x0000000000000000       0x69 build/obj/src/digital.o
+ .debug_frame   0x0000000000000000       0xb0 build/obj/src/digital.o
+ .ARM.attributes
+                0x0000000000000000       0x32 build/obj/src/digital.o
  .group         0x0000000000000000        0xc build/obj/src/main.o
  .group         0x0000000000000000        0xc build/obj/src/main.o
  .group         0x0000000000000000        0xc build/obj/src/main.o
@@ -104,6 +238,61 @@ Discarded input sections
  .text          0x0000000000000000        0x0 build/obj/src/main.o
  .data          0x0000000000000000        0x0 build/obj/src/main.o
  .bss           0x0000000000000000        0x0 build/obj/src/main.o
+ .debug_macro   0x0000000000000000      0xaba build/obj/src/main.o
+ .debug_macro   0x0000000000000000       0x10 build/obj/src/main.o
+ .debug_macro   0x0000000000000000       0x22 build/obj/src/main.o
+ .debug_macro   0x0000000000000000       0x8e build/obj/src/main.o
+ .debug_macro   0x0000000000000000       0x51 build/obj/src/main.o
+ .debug_macro   0x0000000000000000       0xef build/obj/src/main.o
+ .debug_macro   0x0000000000000000       0x6a build/obj/src/main.o
+ .debug_macro   0x0000000000000000      0x1df build/obj/src/main.o
+ .debug_macro   0x0000000000000000       0x22 build/obj/src/main.o
+ .debug_macro   0x0000000000000000       0x73 build/obj/src/main.o
+ .debug_macro   0x0000000000000000       0x22 build/obj/src/main.o
+ .debug_macro   0x0000000000000000       0x1c build/obj/src/main.o
+ .debug_macro   0x0000000000000000       0x22 build/obj/src/main.o
+ .debug_macro   0x0000000000000000       0xdf build/obj/src/main.o
+ .debug_macro   0x0000000000000000     0x102d build/obj/src/main.o
+ .debug_macro   0x0000000000000000      0x11f build/obj/src/main.o
+ .debug_macro   0x0000000000000000      0x2c3 build/obj/src/main.o
+ .debug_macro   0x0000000000000000      0x112 build/obj/src/main.o
+ .debug_macro   0x0000000000000000       0x11 build/obj/src/main.o
+ .debug_macro   0x0000000000000000       0x2a build/obj/src/main.o
+ .debug_macro   0x0000000000000000       0x16 build/obj/src/main.o
+ .debug_macro   0x0000000000000000      0x2e6 build/obj/src/main.o
+ .debug_macro   0x0000000000000000       0x82 build/obj/src/main.o
+ .debug_macro   0x0000000000000000      0x13d build/obj/src/main.o
+ .debug_macro   0x0000000000000000      0x198 build/obj/src/main.o
+ .debug_macro   0x0000000000000000       0x34 build/obj/src/main.o
+ .debug_macro   0x0000000000000000       0x58 build/obj/src/main.o
+ .debug_macro   0x0000000000000000      0x236 build/obj/src/main.o
+ .debug_macro   0x0000000000000000      0x572 build/obj/src/main.o
+ .debug_macro   0x0000000000000000       0x16 build/obj/src/main.o
+ .debug_macro   0x0000000000000000      0x18a build/obj/src/main.o
+ .debug_macro   0x0000000000000000       0x88 build/obj/src/main.o
+ .debug_macro   0x0000000000000000      0x1b9 build/obj/src/main.o
+ .debug_macro   0x0000000000000000      0x1da build/obj/src/main.o
+ .debug_macro   0x0000000000000000       0x40 build/obj/src/main.o
+ .debug_macro   0x0000000000000000       0x1c build/obj/src/main.o
+ .debug_macro   0x0000000000000000       0x2e build/obj/src/main.o
+ .debug_macro   0x0000000000000000       0x2e build/obj/src/main.o
+ .debug_macro   0x0000000000000000       0x22 build/obj/src/main.o
+ .debug_macro   0x0000000000000000      0x201 build/obj/src/main.o
+ .debug_macro   0x0000000000000000       0xe0 build/obj/src/main.o
+ .debug_macro   0x0000000000000000      0x34c build/obj/src/main.o
+ .debug_macro   0x0000000000000000       0xdc build/obj/src/main.o
+ .debug_macro   0x0000000000000000       0xc4 build/obj/src/main.o
+ .debug_macro   0x0000000000000000       0x8f build/obj/src/main.o
+ .debug_macro   0x0000000000000000       0x94 build/obj/src/main.o
+ .debug_macro   0x0000000000000000       0xb8 build/obj/src/main.o
+ .debug_macro   0x0000000000000000       0x4c build/obj/src/main.o
+ .debug_macro   0x0000000000000000       0x16 build/obj/src/main.o
+ .debug_macro   0x0000000000000000      0x328 build/obj/src/main.o
+ .debug_macro   0x0000000000000000       0x3a build/obj/src/main.o
+ .debug_macro   0x0000000000000000       0xd0 build/obj/src/main.o
+ .debug_macro   0x0000000000000000       0x18 build/obj/src/main.o
+ .debug_macro   0x0000000000000000       0x22 build/obj/src/main.o
+ .debug_macro   0x0000000000000000       0x40 build/obj/src/main.o
  .group         0x0000000000000000        0xc build/lib/boards/edu-ciaa-nxp.a(armv7m_startup.o)
  .text          0x0000000000000000        0x0 build/lib/boards/edu-ciaa-nxp.a(armv7m_startup.o)
  .data          0x0000000000000000        0x0 build/lib/boards/edu-ciaa-nxp.a(armv7m_startup.o)
@@ -1859,6 +2048,7 @@ RamAHB_ETB16     0x000000002000c000 0x0000000000004000 xrw
 
 Linker script and memory map
 
+LOAD build/obj/src/digital.o
 LOAD build/obj/src/main.o
 LOAD build/lib/boards/edu-ciaa-nxp.a
 START GROUP
@@ -2438,102 +2628,47 @@ OUTPUT(build/bin/eititp3.elf elf32-littlearm)
  .debug_ranges  0x0000000000000740       0x30 build/lib/boards/edu-ciaa-nxp.a(chip_18xx_43xx.o)
  .debug_ranges  0x0000000000000770       0x18 build/lib/boards/edu-ciaa-nxp.a(gpio_18xx_43xx.o)
 
-.debug_macro    0x0000000000000000     0x8211
+.debug_macro    0x0000000000000000     0x380c
  .debug_macro   0x0000000000000000      0x441 build/obj/src/main.o
- .debug_macro   0x0000000000000441      0xaba build/obj/src/main.o
- .debug_macro   0x0000000000000efb       0x10 build/obj/src/main.o
- .debug_macro   0x0000000000000f0b       0x22 build/obj/src/main.o
- .debug_macro   0x0000000000000f2d       0x8e build/obj/src/main.o
- .debug_macro   0x0000000000000fbb       0x51 build/obj/src/main.o
- .debug_macro   0x000000000000100c       0xef build/obj/src/main.o
- .debug_macro   0x00000000000010fb       0x6a build/obj/src/main.o
- .debug_macro   0x0000000000001165      0x1df build/obj/src/main.o
- .debug_macro   0x0000000000001344       0x22 build/obj/src/main.o
- .debug_macro   0x0000000000001366       0x73 build/obj/src/main.o
- .debug_macro   0x00000000000013d9       0x22 build/obj/src/main.o
- .debug_macro   0x00000000000013fb       0x1c build/obj/src/main.o
- .debug_macro   0x0000000000001417       0x22 build/obj/src/main.o
- .debug_macro   0x0000000000001439       0xdf build/obj/src/main.o
- .debug_macro   0x0000000000001518     0x102d build/obj/src/main.o
- .debug_macro   0x0000000000002545      0x11f build/obj/src/main.o
- .debug_macro   0x0000000000002664      0x2c3 build/obj/src/main.o
- .debug_macro   0x0000000000002927      0x112 build/obj/src/main.o
- .debug_macro   0x0000000000002a39       0x11 build/obj/src/main.o
- .debug_macro   0x0000000000002a4a       0x2a build/obj/src/main.o
- .debug_macro   0x0000000000002a74       0x16 build/obj/src/main.o
- .debug_macro   0x0000000000002a8a      0x2e6 build/obj/src/main.o
- .debug_macro   0x0000000000002d70       0x82 build/obj/src/main.o
- .debug_macro   0x0000000000002df2      0x13d build/obj/src/main.o
- .debug_macro   0x0000000000002f2f      0x198 build/obj/src/main.o
- .debug_macro   0x00000000000030c7       0x34 build/obj/src/main.o
- .debug_macro   0x00000000000030fb       0x58 build/obj/src/main.o
- .debug_macro   0x0000000000003153      0x236 build/obj/src/main.o
- .debug_macro   0x0000000000003389      0x572 build/obj/src/main.o
- .debug_macro   0x00000000000038fb       0x16 build/obj/src/main.o
- .debug_macro   0x0000000000003911      0x18a build/obj/src/main.o
- .debug_macro   0x0000000000003a9b       0x88 build/obj/src/main.o
- .debug_macro   0x0000000000003b23      0x1b9 build/obj/src/main.o
- .debug_macro   0x0000000000003cdc      0x1da build/obj/src/main.o
- .debug_macro   0x0000000000003eb6       0x40 build/obj/src/main.o
- .debug_macro   0x0000000000003ef6       0x1c build/obj/src/main.o
- .debug_macro   0x0000000000003f12       0x2e build/obj/src/main.o
- .debug_macro   0x0000000000003f40       0x2e build/obj/src/main.o
- .debug_macro   0x0000000000003f6e       0x22 build/obj/src/main.o
- .debug_macro   0x0000000000003f90      0x201 build/obj/src/main.o
- .debug_macro   0x0000000000004191       0xe0 build/obj/src/main.o
- .debug_macro   0x0000000000004271      0x34c build/obj/src/main.o
- .debug_macro   0x00000000000045bd       0xdc build/obj/src/main.o
- .debug_macro   0x0000000000004699       0xc4 build/obj/src/main.o
- .debug_macro   0x000000000000475d       0x8f build/obj/src/main.o
- .debug_macro   0x00000000000047ec       0x94 build/obj/src/main.o
- .debug_macro   0x0000000000004880       0xb8 build/obj/src/main.o
- .debug_macro   0x0000000000004938       0x4c build/obj/src/main.o
- .debug_macro   0x0000000000004984       0x16 build/obj/src/main.o
- .debug_macro   0x000000000000499a      0x328 build/obj/src/main.o
- .debug_macro   0x0000000000004cc2       0x3a build/obj/src/main.o
- .debug_macro   0x0000000000004cfc       0xd0 build/obj/src/main.o
- .debug_macro   0x0000000000004dcc       0x18 build/obj/src/main.o
- .debug_macro   0x0000000000004de4       0x22 build/obj/src/main.o
- .debug_macro   0x0000000000004e06       0x40 build/obj/src/main.o
- .debug_macro   0x0000000000004e46       0x1d build/lib/boards/edu-ciaa-nxp.a(armv7m_startup.o)
- .debug_macro   0x0000000000004e63      0x492 build/lib/boards/edu-ciaa-nxp.a(sysinit.o)
- .debug_macro   0x00000000000052f5       0x64 build/lib/boards/edu-ciaa-nxp.a(sysinit.o)
- .debug_macro   0x0000000000005359       0x18 build/lib/boards/edu-ciaa-nxp.a(sysinit.o)
- .debug_macro   0x0000000000005371       0x35 build/lib/boards/edu-ciaa-nxp.a(sysinit.o)
- .debug_macro   0x00000000000053a6       0x34 build/lib/boards/edu-ciaa-nxp.a(sysinit.o)
- .debug_macro   0x00000000000053da       0x16 build/lib/boards/edu-ciaa-nxp.a(sysinit.o)
- .debug_macro   0x00000000000053f0       0x97 build/lib/boards/edu-ciaa-nxp.a(sysinit.o)
- .debug_macro   0x0000000000005487      0x333 build/lib/boards/edu-ciaa-nxp.a(sysinit.o)
- .debug_macro   0x00000000000057ba       0xfd build/lib/boards/edu-ciaa-nxp.a(sysinit.o)
- .debug_macro   0x00000000000058b7       0x10 build/lib/boards/edu-ciaa-nxp.a(sysinit.o)
- .debug_macro   0x00000000000058c7       0x58 build/lib/boards/edu-ciaa-nxp.a(sysinit.o)
- .debug_macro   0x000000000000591f       0x1f build/lib/boards/edu-ciaa-nxp.a(sysinit.o)
- .debug_macro   0x000000000000593e       0x43 build/lib/boards/edu-ciaa-nxp.a(sysinit.o)
- .debug_macro   0x0000000000005981       0x20 build/lib/boards/edu-ciaa-nxp.a(sysinit.o)
- .debug_macro   0x00000000000059a1      0x18e build/lib/boards/edu-ciaa-nxp.a(sysinit.o)
- .debug_macro   0x0000000000005b2f       0x10 build/lib/boards/edu-ciaa-nxp.a(sysinit.o)
- .debug_macro   0x0000000000005b3f       0x1c build/lib/boards/edu-ciaa-nxp.a(sysinit.o)
- .debug_macro   0x0000000000005b5b       0x52 build/lib/boards/edu-ciaa-nxp.a(sysinit.o)
- .debug_macro   0x0000000000005bad       0x40 build/lib/boards/edu-ciaa-nxp.a(sysinit.o)
- .debug_macro   0x0000000000005bed       0x10 build/lib/boards/edu-ciaa-nxp.a(sysinit.o)
- .debug_macro   0x0000000000005bfd       0x40 build/lib/boards/edu-ciaa-nxp.a(sysinit.o)
- .debug_macro   0x0000000000005c3d       0xd7 build/lib/boards/edu-ciaa-nxp.a(sysinit.o)
- .debug_macro   0x0000000000005d14       0x1c build/lib/boards/edu-ciaa-nxp.a(sysinit.o)
- .debug_macro   0x0000000000005d30       0x3d build/lib/boards/edu-ciaa-nxp.a(sysinit.o)
- .debug_macro   0x0000000000005d6d       0x16 build/lib/boards/edu-ciaa-nxp.a(sysinit.o)
- .debug_macro   0x0000000000005d83      0x16f build/lib/boards/edu-ciaa-nxp.a(sysinit.o)
- .debug_macro   0x0000000000005ef2       0x20 build/lib/boards/edu-ciaa-nxp.a(sysinit.o)
- .debug_macro   0x0000000000005f12      0x109 build/lib/boards/edu-ciaa-nxp.a(sysinit.o)
- .debug_macro   0x000000000000601b      0x4a4 build/lib/boards/edu-ciaa-nxp.a(board_lpcopen.o)
- .debug_macro   0x00000000000064bf      0x492 build/lib/boards/edu-ciaa-nxp.a(board_sysinit.o)
- .debug_macro   0x0000000000006951      0x315 build/lib/boards/edu-ciaa-nxp.a(sysinit_18xx_43xx.o)
- .debug_macro   0x0000000000006c66      0x315 build/lib/boards/edu-ciaa-nxp.a(adc_18xx_43xx.o)
- .debug_macro   0x0000000000006f7b      0x327 build/lib/boards/edu-ciaa-nxp.a(i2c_18xx_43xx.o)
- .debug_macro   0x00000000000072a2      0x315 build/lib/boards/edu-ciaa-nxp.a(uart_18xx_43xx.o)
- .debug_macro   0x00000000000075b7      0x315 build/lib/boards/edu-ciaa-nxp.a(ssp_18xx_43xx.o)
- .debug_macro   0x00000000000078cc      0x31b build/lib/boards/edu-ciaa-nxp.a(clock_18xx_43xx.o)
- .debug_macro   0x0000000000007be7      0x315 build/lib/boards/edu-ciaa-nxp.a(chip_18xx_43xx.o)
- .debug_macro   0x0000000000007efc      0x315 build/lib/boards/edu-ciaa-nxp.a(gpio_18xx_43xx.o)
+ .debug_macro   0x0000000000000441       0x1d build/lib/boards/edu-ciaa-nxp.a(armv7m_startup.o)
+ .debug_macro   0x000000000000045e      0x492 build/lib/boards/edu-ciaa-nxp.a(sysinit.o)
+ .debug_macro   0x00000000000008f0       0x64 build/lib/boards/edu-ciaa-nxp.a(sysinit.o)
+ .debug_macro   0x0000000000000954       0x18 build/lib/boards/edu-ciaa-nxp.a(sysinit.o)
+ .debug_macro   0x000000000000096c       0x35 build/lib/boards/edu-ciaa-nxp.a(sysinit.o)
+ .debug_macro   0x00000000000009a1       0x34 build/lib/boards/edu-ciaa-nxp.a(sysinit.o)
+ .debug_macro   0x00000000000009d5       0x16 build/lib/boards/edu-ciaa-nxp.a(sysinit.o)
+ .debug_macro   0x00000000000009eb       0x97 build/lib/boards/edu-ciaa-nxp.a(sysinit.o)
+ .debug_macro   0x0000000000000a82      0x333 build/lib/boards/edu-ciaa-nxp.a(sysinit.o)
+ .debug_macro   0x0000000000000db5       0xfd build/lib/boards/edu-ciaa-nxp.a(sysinit.o)
+ .debug_macro   0x0000000000000eb2       0x10 build/lib/boards/edu-ciaa-nxp.a(sysinit.o)
+ .debug_macro   0x0000000000000ec2       0x58 build/lib/boards/edu-ciaa-nxp.a(sysinit.o)
+ .debug_macro   0x0000000000000f1a       0x1f build/lib/boards/edu-ciaa-nxp.a(sysinit.o)
+ .debug_macro   0x0000000000000f39       0x43 build/lib/boards/edu-ciaa-nxp.a(sysinit.o)
+ .debug_macro   0x0000000000000f7c       0x20 build/lib/boards/edu-ciaa-nxp.a(sysinit.o)
+ .debug_macro   0x0000000000000f9c      0x18e build/lib/boards/edu-ciaa-nxp.a(sysinit.o)
+ .debug_macro   0x000000000000112a       0x10 build/lib/boards/edu-ciaa-nxp.a(sysinit.o)
+ .debug_macro   0x000000000000113a       0x1c build/lib/boards/edu-ciaa-nxp.a(sysinit.o)
+ .debug_macro   0x0000000000001156       0x52 build/lib/boards/edu-ciaa-nxp.a(sysinit.o)
+ .debug_macro   0x00000000000011a8       0x40 build/lib/boards/edu-ciaa-nxp.a(sysinit.o)
+ .debug_macro   0x00000000000011e8       0x10 build/lib/boards/edu-ciaa-nxp.a(sysinit.o)
+ .debug_macro   0x00000000000011f8       0x40 build/lib/boards/edu-ciaa-nxp.a(sysinit.o)
+ .debug_macro   0x0000000000001238       0xd7 build/lib/boards/edu-ciaa-nxp.a(sysinit.o)
+ .debug_macro   0x000000000000130f       0x1c build/lib/boards/edu-ciaa-nxp.a(sysinit.o)
+ .debug_macro   0x000000000000132b       0x3d build/lib/boards/edu-ciaa-nxp.a(sysinit.o)
+ .debug_macro   0x0000000000001368       0x16 build/lib/boards/edu-ciaa-nxp.a(sysinit.o)
+ .debug_macro   0x000000000000137e      0x16f build/lib/boards/edu-ciaa-nxp.a(sysinit.o)
+ .debug_macro   0x00000000000014ed       0x20 build/lib/boards/edu-ciaa-nxp.a(sysinit.o)
+ .debug_macro   0x000000000000150d      0x109 build/lib/boards/edu-ciaa-nxp.a(sysinit.o)
+ .debug_macro   0x0000000000001616      0x4a4 build/lib/boards/edu-ciaa-nxp.a(board_lpcopen.o)
+ .debug_macro   0x0000000000001aba      0x492 build/lib/boards/edu-ciaa-nxp.a(board_sysinit.o)
+ .debug_macro   0x0000000000001f4c      0x315 build/lib/boards/edu-ciaa-nxp.a(sysinit_18xx_43xx.o)
+ .debug_macro   0x0000000000002261      0x315 build/lib/boards/edu-ciaa-nxp.a(adc_18xx_43xx.o)
+ .debug_macro   0x0000000000002576      0x327 build/lib/boards/edu-ciaa-nxp.a(i2c_18xx_43xx.o)
+ .debug_macro   0x000000000000289d      0x315 build/lib/boards/edu-ciaa-nxp.a(uart_18xx_43xx.o)
+ .debug_macro   0x0000000000002bb2      0x315 build/lib/boards/edu-ciaa-nxp.a(ssp_18xx_43xx.o)
+ .debug_macro   0x0000000000002ec7      0x31b build/lib/boards/edu-ciaa-nxp.a(clock_18xx_43xx.o)
+ .debug_macro   0x00000000000031e2      0x315 build/lib/boards/edu-ciaa-nxp.a(chip_18xx_43xx.o)
+ .debug_macro   0x00000000000034f7      0x315 build/lib/boards/edu-ciaa-nxp.a(gpio_18xx_43xx.o)
 
 .debug_line     0x0000000000000000     0x8d4f
  .debug_line    0x0000000000000000      0x925 build/obj/src/main.o
@@ -2808,6 +2943,10 @@ Chip_UART_TXIntHandlerRB                          build/lib/boards/edu-ciaa-nxp.
 Chip_USB0_Init                                    build/lib/boards/edu-ciaa-nxp.a(chip_18xx_43xx.o)
 Chip_USB1_Init                                    build/lib/boards/edu-ciaa-nxp.a(chip_18xx_43xx.o)
 DebugMon_Handler                                  build/lib/boards/edu-ciaa-nxp.a(armv7m_startup.o)
+DigitalOutputActivate                             build/obj/src/digital.o
+DigitalOutputCreate                               build/obj/src/digital.o
+DigitalOutputDeactivate                           build/obj/src/digital.o
+DigitalOutputToogle                               build/obj/src/digital.o
 ExtRateIn                                         build/lib/boards/edu-ciaa-nxp.a(board_lpcopen.o)
                                                   build/lib/boards/edu-ciaa-nxp.a(clock_18xx_43xx.o)
 HardFault_Handler                                 build/lib/boards/edu-ciaa-nxp.a(armv7m_startup.o)
