@@ -1,0 +1,220 @@
+\hypertarget{cmock_8h}{}\section{muju/vendor/ceedling/vendor/cmock/src/cmock.h File Reference}
+\label{cmock_8h}\index{muju/vendor/ceedling/vendor/cmock/src/cmock.\+h@{muju/vendor/ceedling/vendor/cmock/src/cmock.\+h}}
+{\ttfamily \#include \char`\"{}cmock\+\_\+internals.\+h\char`\"{}}\newline
+{\ttfamily \#include $<$stddef.\+h$>$}\newline
+Include dependency graph for cmock.\+h\+:
+% FIG 0
+This graph shows which files directly or indirectly include this file\+:
+% FIG 1
+\subsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#define \hyperlink{cmock_8h_a98dfc057ea3c0e2c8fe96a15b86a8cbf}{C\+M\+O\+C\+K\+\_\+\+V\+E\+R\+S\+I\+O\+N\+\_\+\+M\+A\+J\+OR}~2
+\item 
+\#define \hyperlink{cmock_8h_aa3a2e0d31d93b4cdee7a7bd70724ba52}{C\+M\+O\+C\+K\+\_\+\+V\+E\+R\+S\+I\+O\+N\+\_\+\+M\+I\+N\+OR}~5
+\item 
+\#define \hyperlink{cmock_8h_ae263da631f6c5db5c9d6dbf4271be365}{C\+M\+O\+C\+K\+\_\+\+V\+E\+R\+S\+I\+O\+N\+\_\+\+B\+U\+I\+LD}~4
+\item 
+\#define \hyperlink{cmock_8h_a9f86cafc77b75d1f944968d7cffc4628}{C\+M\+O\+C\+K\+\_\+\+V\+E\+R\+S\+I\+ON}~((\hyperlink{cmock_8h_a98dfc057ea3c0e2c8fe96a15b86a8cbf}{C\+M\+O\+C\+K\+\_\+\+V\+E\+R\+S\+I\+O\+N\+\_\+\+M\+A\+J\+OR} $<$$<$ 16) $\vert$ (\hyperlink{cmock_8h_aa3a2e0d31d93b4cdee7a7bd70724ba52}{C\+M\+O\+C\+K\+\_\+\+V\+E\+R\+S\+I\+O\+N\+\_\+\+M\+I\+N\+OR} $<$$<$ 8) $\vert$ \hyperlink{cmock_8h_ae263da631f6c5db5c9d6dbf4271be365}{C\+M\+O\+C\+K\+\_\+\+V\+E\+R\+S\+I\+O\+N\+\_\+\+B\+U\+I\+LD})
+\item 
+\#define \hyperlink{cmock_8h_aaf866fd7ef9bf9fe6f36d2d4e6abe041}{C\+M\+O\+C\+K\+\_\+\+M\+E\+M\+\_\+\+I\+N\+D\+E\+X\+\_\+\+T\+Y\+PE}~size\+\_\+t
+\item 
+\#define \hyperlink{cmock_8h_a69da4d21581a8e97542a164b7d28b30a}{C\+M\+O\+C\+K\+\_\+\+G\+U\+T\+S\+\_\+\+N\+O\+NE}~(0)
+\item 
+\#define \hyperlink{cmock_8h_a11c266b156e7f66efe80277ad956a152}{C\+M\+O\+C\+K\+\_\+\+F\+U\+N\+C\+T\+I\+O\+N\+\_\+\+A\+T\+TR}(a)~/$\ast$ ignore $\ast$/
+\end{DoxyCompactItemize}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{cmock_8h_aaf866fd7ef9bf9fe6f36d2d4e6abe041}{C\+M\+O\+C\+K\+\_\+\+M\+E\+M\+\_\+\+I\+N\+D\+E\+X\+\_\+\+T\+Y\+PE} \hyperlink{cmock_8h_a70143d967ec301bbce3efb6b59a90e5e}{C\+Mock\+\_\+\+Guts\+\_\+\+Mem\+New} (\hyperlink{cmock_8h_aaf866fd7ef9bf9fe6f36d2d4e6abe041}{C\+M\+O\+C\+K\+\_\+\+M\+E\+M\+\_\+\+I\+N\+D\+E\+X\+\_\+\+T\+Y\+PE} size)
+\item 
+\hyperlink{cmock_8h_aaf866fd7ef9bf9fe6f36d2d4e6abe041}{C\+M\+O\+C\+K\+\_\+\+M\+E\+M\+\_\+\+I\+N\+D\+E\+X\+\_\+\+T\+Y\+PE} \hyperlink{cmock_8h_a15d51ffb4affbacc256f9569f46b7371}{C\+Mock\+\_\+\+Guts\+\_\+\+Mem\+Chain} (\hyperlink{cmock_8h_aaf866fd7ef9bf9fe6f36d2d4e6abe041}{C\+M\+O\+C\+K\+\_\+\+M\+E\+M\+\_\+\+I\+N\+D\+E\+X\+\_\+\+T\+Y\+PE} root\+\_\+index, \hyperlink{cmock_8h_aaf866fd7ef9bf9fe6f36d2d4e6abe041}{C\+M\+O\+C\+K\+\_\+\+M\+E\+M\+\_\+\+I\+N\+D\+E\+X\+\_\+\+T\+Y\+PE} obj\+\_\+index)
+\item 
+\hyperlink{cmock_8h_aaf866fd7ef9bf9fe6f36d2d4e6abe041}{C\+M\+O\+C\+K\+\_\+\+M\+E\+M\+\_\+\+I\+N\+D\+E\+X\+\_\+\+T\+Y\+PE} \hyperlink{cmock_8h_adaf54414b5da37d4bc7b513cb95c796f}{C\+Mock\+\_\+\+Guts\+\_\+\+Mem\+Next} (\hyperlink{cmock_8h_aaf866fd7ef9bf9fe6f36d2d4e6abe041}{C\+M\+O\+C\+K\+\_\+\+M\+E\+M\+\_\+\+I\+N\+D\+E\+X\+\_\+\+T\+Y\+PE} previous\+\_\+item\+\_\+index) \hyperlink{cmock_8h_a11c266b156e7f66efe80277ad956a152}{C\+M\+O\+C\+K\+\_\+\+F\+U\+N\+C\+T\+I\+O\+N\+\_\+\+A\+T\+TR}(pure)
+\item 
+\hyperlink{cmock_8h_aaf866fd7ef9bf9fe6f36d2d4e6abe041}{C\+M\+O\+C\+K\+\_\+\+M\+E\+M\+\_\+\+I\+N\+D\+E\+X\+\_\+\+T\+Y\+PE} \hyperlink{cmock_8h_a2077830ea3165bbd23c8658ae06c9cc2}{C\+Mock\+\_\+\+Guts\+\_\+\+Mem\+End\+Of\+Chain} (\hyperlink{cmock_8h_aaf866fd7ef9bf9fe6f36d2d4e6abe041}{C\+M\+O\+C\+K\+\_\+\+M\+E\+M\+\_\+\+I\+N\+D\+E\+X\+\_\+\+T\+Y\+PE} root\+\_\+index) \hyperlink{cmock_8h_a11c266b156e7f66efe80277ad956a152}{C\+M\+O\+C\+K\+\_\+\+F\+U\+N\+C\+T\+I\+O\+N\+\_\+\+A\+T\+TR}(pure)
+\item 
+void $\ast$ \hyperlink{cmock_8h_a1977262d5594435eecfaa98ac5f2cef8}{C\+Mock\+\_\+\+Guts\+\_\+\+Get\+Address\+For} (\hyperlink{cmock_8h_aaf866fd7ef9bf9fe6f36d2d4e6abe041}{C\+M\+O\+C\+K\+\_\+\+M\+E\+M\+\_\+\+I\+N\+D\+E\+X\+\_\+\+T\+Y\+PE} index) \hyperlink{cmock_8h_a11c266b156e7f66efe80277ad956a152}{C\+M\+O\+C\+K\+\_\+\+F\+U\+N\+C\+T\+I\+O\+N\+\_\+\+A\+T\+TR}(pure)
+\item 
+\hyperlink{cmock_8h_aaf866fd7ef9bf9fe6f36d2d4e6abe041}{C\+M\+O\+C\+K\+\_\+\+M\+E\+M\+\_\+\+I\+N\+D\+E\+X\+\_\+\+T\+Y\+PE} \hyperlink{cmock_8h_a2bbad52fb9fe073084b72cd4ab285895}{C\+Mock\+\_\+\+Guts\+\_\+\+Mem\+Bytes\+Capacity} (void) \hyperlink{cmock_8h_a11c266b156e7f66efe80277ad956a152}{C\+M\+O\+C\+K\+\_\+\+F\+U\+N\+C\+T\+I\+O\+N\+\_\+\+A\+T\+TR}(const)
+\item 
+\hyperlink{cmock_8h_aaf866fd7ef9bf9fe6f36d2d4e6abe041}{C\+M\+O\+C\+K\+\_\+\+M\+E\+M\+\_\+\+I\+N\+D\+E\+X\+\_\+\+T\+Y\+PE} \hyperlink{cmock_8h_a35f545e26035f08a3b157b63716d1cba}{C\+Mock\+\_\+\+Guts\+\_\+\+Mem\+Bytes\+Free} (void) \hyperlink{cmock_8h_a11c266b156e7f66efe80277ad956a152}{C\+M\+O\+C\+K\+\_\+\+F\+U\+N\+C\+T\+I\+O\+N\+\_\+\+A\+T\+TR}(pure)
+\item 
+\hyperlink{cmock_8h_aaf866fd7ef9bf9fe6f36d2d4e6abe041}{C\+M\+O\+C\+K\+\_\+\+M\+E\+M\+\_\+\+I\+N\+D\+E\+X\+\_\+\+T\+Y\+PE} \hyperlink{cmock_8h_abae018795510cea82cf43da53bb701e6}{C\+Mock\+\_\+\+Guts\+\_\+\+Mem\+Bytes\+Used} (void) \hyperlink{cmock_8h_a11c266b156e7f66efe80277ad956a152}{C\+M\+O\+C\+K\+\_\+\+F\+U\+N\+C\+T\+I\+O\+N\+\_\+\+A\+T\+TR}(pure)
+\item 
+void \hyperlink{cmock_8h_a348bc07d37efc57ac52128cd99ee7c72}{C\+Mock\+\_\+\+Guts\+\_\+\+Mem\+Free\+All} (void)
+\item 
+void \hyperlink{cmock_8h_aa8a20fa157f61e9e1379170847287cc9}{C\+Mock\+\_\+\+Guts\+\_\+\+Mem\+Free\+Final} (void)
+\end{DoxyCompactItemize}
+
+
+\subsection{Macro Definition Documentation}
+\mbox{\Hypertarget{cmock_8h_a11c266b156e7f66efe80277ad956a152}\label{cmock_8h_a11c266b156e7f66efe80277ad956a152}} 
+\index{cmock.\+h@{cmock.\+h}!C\+M\+O\+C\+K\+\_\+\+F\+U\+N\+C\+T\+I\+O\+N\+\_\+\+A\+T\+TR@{C\+M\+O\+C\+K\+\_\+\+F\+U\+N\+C\+T\+I\+O\+N\+\_\+\+A\+T\+TR}}
+\index{C\+M\+O\+C\+K\+\_\+\+F\+U\+N\+C\+T\+I\+O\+N\+\_\+\+A\+T\+TR@{C\+M\+O\+C\+K\+\_\+\+F\+U\+N\+C\+T\+I\+O\+N\+\_\+\+A\+T\+TR}!cmock.\+h@{cmock.\+h}}
+\subsubsection{\texorpdfstring{C\+M\+O\+C\+K\+\_\+\+F\+U\+N\+C\+T\+I\+O\+N\+\_\+\+A\+T\+TR}{CMOCK\_FUNCTION\_ATTR}}
+{\footnotesize\ttfamily \#define C\+M\+O\+C\+K\+\_\+\+F\+U\+N\+C\+T\+I\+O\+N\+\_\+\+A\+T\+TR(\begin{DoxyParamCaption}\item[{}]{a }\end{DoxyParamCaption})~/$\ast$ ignore $\ast$/}
+
+
+
+Definition at line 28 of file cmock.\+h.
+
+\mbox{\Hypertarget{cmock_8h_a69da4d21581a8e97542a164b7d28b30a}\label{cmock_8h_a69da4d21581a8e97542a164b7d28b30a}} 
+\index{cmock.\+h@{cmock.\+h}!C\+M\+O\+C\+K\+\_\+\+G\+U\+T\+S\+\_\+\+N\+O\+NE@{C\+M\+O\+C\+K\+\_\+\+G\+U\+T\+S\+\_\+\+N\+O\+NE}}
+\index{C\+M\+O\+C\+K\+\_\+\+G\+U\+T\+S\+\_\+\+N\+O\+NE@{C\+M\+O\+C\+K\+\_\+\+G\+U\+T\+S\+\_\+\+N\+O\+NE}!cmock.\+h@{cmock.\+h}}
+\subsubsection{\texorpdfstring{C\+M\+O\+C\+K\+\_\+\+G\+U\+T\+S\+\_\+\+N\+O\+NE}{CMOCK\_GUTS\_NONE}}
+{\footnotesize\ttfamily \#define C\+M\+O\+C\+K\+\_\+\+G\+U\+T\+S\+\_\+\+N\+O\+NE~(0)}
+
+
+
+Definition at line 23 of file cmock.\+h.
+
+\mbox{\Hypertarget{cmock_8h_aaf866fd7ef9bf9fe6f36d2d4e6abe041}\label{cmock_8h_aaf866fd7ef9bf9fe6f36d2d4e6abe041}} 
+\index{cmock.\+h@{cmock.\+h}!C\+M\+O\+C\+K\+\_\+\+M\+E\+M\+\_\+\+I\+N\+D\+E\+X\+\_\+\+T\+Y\+PE@{C\+M\+O\+C\+K\+\_\+\+M\+E\+M\+\_\+\+I\+N\+D\+E\+X\+\_\+\+T\+Y\+PE}}
+\index{C\+M\+O\+C\+K\+\_\+\+M\+E\+M\+\_\+\+I\+N\+D\+E\+X\+\_\+\+T\+Y\+PE@{C\+M\+O\+C\+K\+\_\+\+M\+E\+M\+\_\+\+I\+N\+D\+E\+X\+\_\+\+T\+Y\+PE}!cmock.\+h@{cmock.\+h}}
+\subsubsection{\texorpdfstring{C\+M\+O\+C\+K\+\_\+\+M\+E\+M\+\_\+\+I\+N\+D\+E\+X\+\_\+\+T\+Y\+PE}{CMOCK\_MEM\_INDEX\_TYPE}}
+{\footnotesize\ttfamily \#define C\+M\+O\+C\+K\+\_\+\+M\+E\+M\+\_\+\+I\+N\+D\+E\+X\+\_\+\+T\+Y\+PE~size\+\_\+t}
+
+
+
+Definition at line 20 of file cmock.\+h.
+
+\mbox{\Hypertarget{cmock_8h_a9f86cafc77b75d1f944968d7cffc4628}\label{cmock_8h_a9f86cafc77b75d1f944968d7cffc4628}} 
+\index{cmock.\+h@{cmock.\+h}!C\+M\+O\+C\+K\+\_\+\+V\+E\+R\+S\+I\+ON@{C\+M\+O\+C\+K\+\_\+\+V\+E\+R\+S\+I\+ON}}
+\index{C\+M\+O\+C\+K\+\_\+\+V\+E\+R\+S\+I\+ON@{C\+M\+O\+C\+K\+\_\+\+V\+E\+R\+S\+I\+ON}!cmock.\+h@{cmock.\+h}}
+\subsubsection{\texorpdfstring{C\+M\+O\+C\+K\+\_\+\+V\+E\+R\+S\+I\+ON}{CMOCK\_VERSION}}
+{\footnotesize\ttfamily \#define C\+M\+O\+C\+K\+\_\+\+V\+E\+R\+S\+I\+ON~((\hyperlink{cmock_8h_a98dfc057ea3c0e2c8fe96a15b86a8cbf}{C\+M\+O\+C\+K\+\_\+\+V\+E\+R\+S\+I\+O\+N\+\_\+\+M\+A\+J\+OR} $<$$<$ 16) $\vert$ (\hyperlink{cmock_8h_aa3a2e0d31d93b4cdee7a7bd70724ba52}{C\+M\+O\+C\+K\+\_\+\+V\+E\+R\+S\+I\+O\+N\+\_\+\+M\+I\+N\+OR} $<$$<$ 8) $\vert$ \hyperlink{cmock_8h_ae263da631f6c5db5c9d6dbf4271be365}{C\+M\+O\+C\+K\+\_\+\+V\+E\+R\+S\+I\+O\+N\+\_\+\+B\+U\+I\+LD})}
+
+
+
+Definition at line 15 of file cmock.\+h.
+
+\mbox{\Hypertarget{cmock_8h_ae263da631f6c5db5c9d6dbf4271be365}\label{cmock_8h_ae263da631f6c5db5c9d6dbf4271be365}} 
+\index{cmock.\+h@{cmock.\+h}!C\+M\+O\+C\+K\+\_\+\+V\+E\+R\+S\+I\+O\+N\+\_\+\+B\+U\+I\+LD@{C\+M\+O\+C\+K\+\_\+\+V\+E\+R\+S\+I\+O\+N\+\_\+\+B\+U\+I\+LD}}
+\index{C\+M\+O\+C\+K\+\_\+\+V\+E\+R\+S\+I\+O\+N\+\_\+\+B\+U\+I\+LD@{C\+M\+O\+C\+K\+\_\+\+V\+E\+R\+S\+I\+O\+N\+\_\+\+B\+U\+I\+LD}!cmock.\+h@{cmock.\+h}}
+\subsubsection{\texorpdfstring{C\+M\+O\+C\+K\+\_\+\+V\+E\+R\+S\+I\+O\+N\+\_\+\+B\+U\+I\+LD}{CMOCK\_VERSION\_BUILD}}
+{\footnotesize\ttfamily \#define C\+M\+O\+C\+K\+\_\+\+V\+E\+R\+S\+I\+O\+N\+\_\+\+B\+U\+I\+LD~4}
+
+
+
+Definition at line 14 of file cmock.\+h.
+
+\mbox{\Hypertarget{cmock_8h_a98dfc057ea3c0e2c8fe96a15b86a8cbf}\label{cmock_8h_a98dfc057ea3c0e2c8fe96a15b86a8cbf}} 
+\index{cmock.\+h@{cmock.\+h}!C\+M\+O\+C\+K\+\_\+\+V\+E\+R\+S\+I\+O\+N\+\_\+\+M\+A\+J\+OR@{C\+M\+O\+C\+K\+\_\+\+V\+E\+R\+S\+I\+O\+N\+\_\+\+M\+A\+J\+OR}}
+\index{C\+M\+O\+C\+K\+\_\+\+V\+E\+R\+S\+I\+O\+N\+\_\+\+M\+A\+J\+OR@{C\+M\+O\+C\+K\+\_\+\+V\+E\+R\+S\+I\+O\+N\+\_\+\+M\+A\+J\+OR}!cmock.\+h@{cmock.\+h}}
+\subsubsection{\texorpdfstring{C\+M\+O\+C\+K\+\_\+\+V\+E\+R\+S\+I\+O\+N\+\_\+\+M\+A\+J\+OR}{CMOCK\_VERSION\_MAJOR}}
+{\footnotesize\ttfamily \#define C\+M\+O\+C\+K\+\_\+\+V\+E\+R\+S\+I\+O\+N\+\_\+\+M\+A\+J\+OR~2}
+
+
+
+Definition at line 12 of file cmock.\+h.
+
+\mbox{\Hypertarget{cmock_8h_aa3a2e0d31d93b4cdee7a7bd70724ba52}\label{cmock_8h_aa3a2e0d31d93b4cdee7a7bd70724ba52}} 
+\index{cmock.\+h@{cmock.\+h}!C\+M\+O\+C\+K\+\_\+\+V\+E\+R\+S\+I\+O\+N\+\_\+\+M\+I\+N\+OR@{C\+M\+O\+C\+K\+\_\+\+V\+E\+R\+S\+I\+O\+N\+\_\+\+M\+I\+N\+OR}}
+\index{C\+M\+O\+C\+K\+\_\+\+V\+E\+R\+S\+I\+O\+N\+\_\+\+M\+I\+N\+OR@{C\+M\+O\+C\+K\+\_\+\+V\+E\+R\+S\+I\+O\+N\+\_\+\+M\+I\+N\+OR}!cmock.\+h@{cmock.\+h}}
+\subsubsection{\texorpdfstring{C\+M\+O\+C\+K\+\_\+\+V\+E\+R\+S\+I\+O\+N\+\_\+\+M\+I\+N\+OR}{CMOCK\_VERSION\_MINOR}}
+{\footnotesize\ttfamily \#define C\+M\+O\+C\+K\+\_\+\+V\+E\+R\+S\+I\+O\+N\+\_\+\+M\+I\+N\+OR~5}
+
+
+
+Definition at line 13 of file cmock.\+h.
+
+
+
+\subsection{Function Documentation}
+\mbox{\Hypertarget{cmock_8h_a1977262d5594435eecfaa98ac5f2cef8}\label{cmock_8h_a1977262d5594435eecfaa98ac5f2cef8}} 
+\index{cmock.\+h@{cmock.\+h}!C\+Mock\+\_\+\+Guts\+\_\+\+Get\+Address\+For@{C\+Mock\+\_\+\+Guts\+\_\+\+Get\+Address\+For}}
+\index{C\+Mock\+\_\+\+Guts\+\_\+\+Get\+Address\+For@{C\+Mock\+\_\+\+Guts\+\_\+\+Get\+Address\+For}!cmock.\+h@{cmock.\+h}}
+\subsubsection{\texorpdfstring{C\+Mock\+\_\+\+Guts\+\_\+\+Get\+Address\+For()}{CMock\_Guts\_GetAddressFor()}}
+{\footnotesize\ttfamily void$\ast$ C\+Mock\+\_\+\+Guts\+\_\+\+Get\+Address\+For (\begin{DoxyParamCaption}\item[{\hyperlink{cmock_8h_aaf866fd7ef9bf9fe6f36d2d4e6abe041}{C\+M\+O\+C\+K\+\_\+\+M\+E\+M\+\_\+\+I\+N\+D\+E\+X\+\_\+\+T\+Y\+PE}}]{index }\end{DoxyParamCaption})}
+
+
+
+Definition at line 158 of file cmock.\+c.
+
+\mbox{\Hypertarget{cmock_8h_a2bbad52fb9fe073084b72cd4ab285895}\label{cmock_8h_a2bbad52fb9fe073084b72cd4ab285895}} 
+\index{cmock.\+h@{cmock.\+h}!C\+Mock\+\_\+\+Guts\+\_\+\+Mem\+Bytes\+Capacity@{C\+Mock\+\_\+\+Guts\+\_\+\+Mem\+Bytes\+Capacity}}
+\index{C\+Mock\+\_\+\+Guts\+\_\+\+Mem\+Bytes\+Capacity@{C\+Mock\+\_\+\+Guts\+\_\+\+Mem\+Bytes\+Capacity}!cmock.\+h@{cmock.\+h}}
+\subsubsection{\texorpdfstring{C\+Mock\+\_\+\+Guts\+\_\+\+Mem\+Bytes\+Capacity()}{CMock\_Guts\_MemBytesCapacity()}}
+{\footnotesize\ttfamily \hyperlink{cmock_8h_aaf866fd7ef9bf9fe6f36d2d4e6abe041}{C\+M\+O\+C\+K\+\_\+\+M\+E\+M\+\_\+\+I\+N\+D\+E\+X\+\_\+\+T\+Y\+PE} C\+Mock\+\_\+\+Guts\+\_\+\+Mem\+Bytes\+Capacity (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption}) const}
+
+\mbox{\Hypertarget{cmock_8h_a35f545e26035f08a3b157b63716d1cba}\label{cmock_8h_a35f545e26035f08a3b157b63716d1cba}} 
+\index{cmock.\+h@{cmock.\+h}!C\+Mock\+\_\+\+Guts\+\_\+\+Mem\+Bytes\+Free@{C\+Mock\+\_\+\+Guts\+\_\+\+Mem\+Bytes\+Free}}
+\index{C\+Mock\+\_\+\+Guts\+\_\+\+Mem\+Bytes\+Free@{C\+Mock\+\_\+\+Guts\+\_\+\+Mem\+Bytes\+Free}!cmock.\+h@{cmock.\+h}}
+\subsubsection{\texorpdfstring{C\+Mock\+\_\+\+Guts\+\_\+\+Mem\+Bytes\+Free()}{CMock\_Guts\_MemBytesFree()}}
+{\footnotesize\ttfamily \hyperlink{cmock_8h_aaf866fd7ef9bf9fe6f36d2d4e6abe041}{C\+M\+O\+C\+K\+\_\+\+M\+E\+M\+\_\+\+I\+N\+D\+E\+X\+\_\+\+T\+Y\+PE} C\+Mock\+\_\+\+Guts\+\_\+\+Mem\+Bytes\+Free (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+
+
+
+Definition at line 181 of file cmock.\+c.
+
+\mbox{\Hypertarget{cmock_8h_abae018795510cea82cf43da53bb701e6}\label{cmock_8h_abae018795510cea82cf43da53bb701e6}} 
+\index{cmock.\+h@{cmock.\+h}!C\+Mock\+\_\+\+Guts\+\_\+\+Mem\+Bytes\+Used@{C\+Mock\+\_\+\+Guts\+\_\+\+Mem\+Bytes\+Used}}
+\index{C\+Mock\+\_\+\+Guts\+\_\+\+Mem\+Bytes\+Used@{C\+Mock\+\_\+\+Guts\+\_\+\+Mem\+Bytes\+Used}!cmock.\+h@{cmock.\+h}}
+\subsubsection{\texorpdfstring{C\+Mock\+\_\+\+Guts\+\_\+\+Mem\+Bytes\+Used()}{CMock\_Guts\_MemBytesUsed()}}
+{\footnotesize\ttfamily \hyperlink{cmock_8h_aaf866fd7ef9bf9fe6f36d2d4e6abe041}{C\+M\+O\+C\+K\+\_\+\+M\+E\+M\+\_\+\+I\+N\+D\+E\+X\+\_\+\+T\+Y\+PE} C\+Mock\+\_\+\+Guts\+\_\+\+Mem\+Bytes\+Used (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+
+
+
+Definition at line 189 of file cmock.\+c.
+
+\mbox{\Hypertarget{cmock_8h_a15d51ffb4affbacc256f9569f46b7371}\label{cmock_8h_a15d51ffb4affbacc256f9569f46b7371}} 
+\index{cmock.\+h@{cmock.\+h}!C\+Mock\+\_\+\+Guts\+\_\+\+Mem\+Chain@{C\+Mock\+\_\+\+Guts\+\_\+\+Mem\+Chain}}
+\index{C\+Mock\+\_\+\+Guts\+\_\+\+Mem\+Chain@{C\+Mock\+\_\+\+Guts\+\_\+\+Mem\+Chain}!cmock.\+h@{cmock.\+h}}
+\subsubsection{\texorpdfstring{C\+Mock\+\_\+\+Guts\+\_\+\+Mem\+Chain()}{CMock\_Guts\_MemChain()}}
+{\footnotesize\ttfamily \hyperlink{cmock_8h_aaf866fd7ef9bf9fe6f36d2d4e6abe041}{C\+M\+O\+C\+K\+\_\+\+M\+E\+M\+\_\+\+I\+N\+D\+E\+X\+\_\+\+T\+Y\+PE} C\+Mock\+\_\+\+Guts\+\_\+\+Mem\+Chain (\begin{DoxyParamCaption}\item[{\hyperlink{cmock_8h_aaf866fd7ef9bf9fe6f36d2d4e6abe041}{C\+M\+O\+C\+K\+\_\+\+M\+E\+M\+\_\+\+I\+N\+D\+E\+X\+\_\+\+T\+Y\+PE}}]{root\+\_\+index,  }\item[{\hyperlink{cmock_8h_aaf866fd7ef9bf9fe6f36d2d4e6abe041}{C\+M\+O\+C\+K\+\_\+\+M\+E\+M\+\_\+\+I\+N\+D\+E\+X\+\_\+\+T\+Y\+PE}}]{obj\+\_\+index }\end{DoxyParamCaption})}
+
+
+
+Definition at line 74 of file cmock.\+c.
+
+\mbox{\Hypertarget{cmock_8h_a2077830ea3165bbd23c8658ae06c9cc2}\label{cmock_8h_a2077830ea3165bbd23c8658ae06c9cc2}} 
+\index{cmock.\+h@{cmock.\+h}!C\+Mock\+\_\+\+Guts\+\_\+\+Mem\+End\+Of\+Chain@{C\+Mock\+\_\+\+Guts\+\_\+\+Mem\+End\+Of\+Chain}}
+\index{C\+Mock\+\_\+\+Guts\+\_\+\+Mem\+End\+Of\+Chain@{C\+Mock\+\_\+\+Guts\+\_\+\+Mem\+End\+Of\+Chain}!cmock.\+h@{cmock.\+h}}
+\subsubsection{\texorpdfstring{C\+Mock\+\_\+\+Guts\+\_\+\+Mem\+End\+Of\+Chain()}{CMock\_Guts\_MemEndOfChain()}}
+{\footnotesize\ttfamily \hyperlink{cmock_8h_aaf866fd7ef9bf9fe6f36d2d4e6abe041}{C\+M\+O\+C\+K\+\_\+\+M\+E\+M\+\_\+\+I\+N\+D\+E\+X\+\_\+\+T\+Y\+PE} C\+Mock\+\_\+\+Guts\+\_\+\+Mem\+End\+Of\+Chain (\begin{DoxyParamCaption}\item[{\hyperlink{cmock_8h_aaf866fd7ef9bf9fe6f36d2d4e6abe041}{C\+M\+O\+C\+K\+\_\+\+M\+E\+M\+\_\+\+I\+N\+D\+E\+X\+\_\+\+T\+Y\+PE}}]{root\+\_\+index }\end{DoxyParamCaption})}
+
+
+
+Definition at line 140 of file cmock.\+c.
+
+\mbox{\Hypertarget{cmock_8h_a348bc07d37efc57ac52128cd99ee7c72}\label{cmock_8h_a348bc07d37efc57ac52128cd99ee7c72}} 
+\index{cmock.\+h@{cmock.\+h}!C\+Mock\+\_\+\+Guts\+\_\+\+Mem\+Free\+All@{C\+Mock\+\_\+\+Guts\+\_\+\+Mem\+Free\+All}}
+\index{C\+Mock\+\_\+\+Guts\+\_\+\+Mem\+Free\+All@{C\+Mock\+\_\+\+Guts\+\_\+\+Mem\+Free\+All}!cmock.\+h@{cmock.\+h}}
+\subsubsection{\texorpdfstring{C\+Mock\+\_\+\+Guts\+\_\+\+Mem\+Free\+All()}{CMock\_Guts\_MemFreeAll()}}
+{\footnotesize\ttfamily void C\+Mock\+\_\+\+Guts\+\_\+\+Mem\+Free\+All (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+
+
+
+Definition at line 197 of file cmock.\+c.
+
+\mbox{\Hypertarget{cmock_8h_aa8a20fa157f61e9e1379170847287cc9}\label{cmock_8h_aa8a20fa157f61e9e1379170847287cc9}} 
+\index{cmock.\+h@{cmock.\+h}!C\+Mock\+\_\+\+Guts\+\_\+\+Mem\+Free\+Final@{C\+Mock\+\_\+\+Guts\+\_\+\+Mem\+Free\+Final}}
+\index{C\+Mock\+\_\+\+Guts\+\_\+\+Mem\+Free\+Final@{C\+Mock\+\_\+\+Guts\+\_\+\+Mem\+Free\+Final}!cmock.\+h@{cmock.\+h}}
+\subsubsection{\texorpdfstring{C\+Mock\+\_\+\+Guts\+\_\+\+Mem\+Free\+Final()}{CMock\_Guts\_MemFreeFinal()}}
+{\footnotesize\ttfamily void C\+Mock\+\_\+\+Guts\+\_\+\+Mem\+Free\+Final (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+
+
+
+Definition at line 205 of file cmock.\+c.
+
+\mbox{\Hypertarget{cmock_8h_a70143d967ec301bbce3efb6b59a90e5e}\label{cmock_8h_a70143d967ec301bbce3efb6b59a90e5e}} 
+\index{cmock.\+h@{cmock.\+h}!C\+Mock\+\_\+\+Guts\+\_\+\+Mem\+New@{C\+Mock\+\_\+\+Guts\+\_\+\+Mem\+New}}
+\index{C\+Mock\+\_\+\+Guts\+\_\+\+Mem\+New@{C\+Mock\+\_\+\+Guts\+\_\+\+Mem\+New}!cmock.\+h@{cmock.\+h}}
+\subsubsection{\texorpdfstring{C\+Mock\+\_\+\+Guts\+\_\+\+Mem\+New()}{CMock\_Guts\_MemNew()}}
+{\footnotesize\ttfamily \hyperlink{cmock_8h_aaf866fd7ef9bf9fe6f36d2d4e6abe041}{C\+M\+O\+C\+K\+\_\+\+M\+E\+M\+\_\+\+I\+N\+D\+E\+X\+\_\+\+T\+Y\+PE} C\+Mock\+\_\+\+Guts\+\_\+\+Mem\+New (\begin{DoxyParamCaption}\item[{\hyperlink{cmock_8h_aaf866fd7ef9bf9fe6f36d2d4e6abe041}{C\+M\+O\+C\+K\+\_\+\+M\+E\+M\+\_\+\+I\+N\+D\+E\+X\+\_\+\+T\+Y\+PE}}]{size }\end{DoxyParamCaption})}
+
+
+
+Definition at line 36 of file cmock.\+c.
+
+\mbox{\Hypertarget{cmock_8h_adaf54414b5da37d4bc7b513cb95c796f}\label{cmock_8h_adaf54414b5da37d4bc7b513cb95c796f}} 
+\index{cmock.\+h@{cmock.\+h}!C\+Mock\+\_\+\+Guts\+\_\+\+Mem\+Next@{C\+Mock\+\_\+\+Guts\+\_\+\+Mem\+Next}}
+\index{C\+Mock\+\_\+\+Guts\+\_\+\+Mem\+Next@{C\+Mock\+\_\+\+Guts\+\_\+\+Mem\+Next}!cmock.\+h@{cmock.\+h}}
+\subsubsection{\texorpdfstring{C\+Mock\+\_\+\+Guts\+\_\+\+Mem\+Next()}{CMock\_Guts\_MemNext()}}
+{\footnotesize\ttfamily \hyperlink{cmock_8h_aaf866fd7ef9bf9fe6f36d2d4e6abe041}{C\+M\+O\+C\+K\+\_\+\+M\+E\+M\+\_\+\+I\+N\+D\+E\+X\+\_\+\+T\+Y\+PE} C\+Mock\+\_\+\+Guts\+\_\+\+Mem\+Next (\begin{DoxyParamCaption}\item[{\hyperlink{cmock_8h_aaf866fd7ef9bf9fe6f36d2d4e6abe041}{C\+M\+O\+C\+K\+\_\+\+M\+E\+M\+\_\+\+I\+N\+D\+E\+X\+\_\+\+T\+Y\+PE}}]{previous\+\_\+item\+\_\+index }\end{DoxyParamCaption})}
+
+
+
+Definition at line 118 of file cmock.\+c.
+

@@ -1,0 +1,9 @@
+digraph "CHIP: LPC18xx/43xx Clock Driver"
+{
+  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
+  node [fontname="Helvetica",fontsize="10",shape=record];
+  rankdir=LR;
+  Node1 [label="CHIP: LPC18xx/43xx\l Clock Driver driver\l options",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$group___c_l_o_c_k__18_x_x__43_x_x___o_p_t_i_o_n_s.html"];
+  Node0 [label="CHIP: LPC18xx/43xx\l Clock Driver",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black"];
+  Node0->Node1 [shape=plaintext, dir="back", style="solid"];
+}

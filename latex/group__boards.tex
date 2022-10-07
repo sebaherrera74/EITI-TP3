@@ -1,0 +1,93 @@
+\hypertarget{group__boards}{}\section{Boards}
+\label{group__boards}\index{Boards@{Boards}}
+
+
+Posix emulated board specific declarations.  
+
+
+\subsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#define \hyperlink{group__boards_ga7df8b8faeffb332d3a85829727f6e3f3}{B\+L\+I\+N\+K\+I\+N\+G\+\_\+\+L\+ED}~\&(const struct \hyperlink{structterminal__s}{terminal\+\_\+s})\{.port = 0, .pin = 0\}
+\item 
+\#define \hyperlink{group__boards_ga11baf524276151957e8037eaed95b162}{T\+O\+U\+C\+H\+\_\+\+L\+ED}~\&(const struct \hyperlink{structterminal__s}{terminal\+\_\+s})\{.port = 1, .pin = 0\}
+\item 
+\#define \hyperlink{group__boards_ga622f361da595a38bbb742894f48f7339}{T\+O\+U\+C\+H\+\_\+\+K\+EY}~\&(const struct \hyperlink{structterminal__s}{terminal\+\_\+s})\{.port = 1, .pin = 1\}
+\end{DoxyCompactItemize}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \hyperlink{group__boards_gad24575a3bcf2c2433e7720830d813e64}{Board\+Init} (void)
+\begin{DoxyCompactList}\small\item\em Function to configure board devices. \end{DoxyCompactList}\item 
+void \hyperlink{group__boards_gace922d758774792e0573b7c568fe2a3f}{Delay\+Ms} (uint32\+\_\+t value)
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Posix emulated board specific declarations. 
+
+Board support 
+
+\subsection{Macro Definition Documentation}
+\mbox{\Hypertarget{group__boards_ga7df8b8faeffb332d3a85829727f6e3f3}\label{group__boards_ga7df8b8faeffb332d3a85829727f6e3f3}} 
+\index{Boards@{Boards}!B\+L\+I\+N\+K\+I\+N\+G\+\_\+\+L\+ED@{B\+L\+I\+N\+K\+I\+N\+G\+\_\+\+L\+ED}}
+\index{B\+L\+I\+N\+K\+I\+N\+G\+\_\+\+L\+ED@{B\+L\+I\+N\+K\+I\+N\+G\+\_\+\+L\+ED}!Boards@{Boards}}
+\subsubsection{\texorpdfstring{B\+L\+I\+N\+K\+I\+N\+G\+\_\+\+L\+ED}{BLINKING\_LED}}
+{\footnotesize\ttfamily \#define B\+L\+I\+N\+K\+I\+N\+G\+\_\+\+L\+ED~\&(const struct \hyperlink{structterminal__s}{terminal\+\_\+s})\{.port = 0, .pin = 0\}}
+
+
+
+Definition at line 56 of file board.\+h.
+
+\mbox{\Hypertarget{group__boards_ga622f361da595a38bbb742894f48f7339}\label{group__boards_ga622f361da595a38bbb742894f48f7339}} 
+\index{Boards@{Boards}!T\+O\+U\+C\+H\+\_\+\+K\+EY@{T\+O\+U\+C\+H\+\_\+\+K\+EY}}
+\index{T\+O\+U\+C\+H\+\_\+\+K\+EY@{T\+O\+U\+C\+H\+\_\+\+K\+EY}!Boards@{Boards}}
+\subsubsection{\texorpdfstring{T\+O\+U\+C\+H\+\_\+\+K\+EY}{TOUCH\_KEY}}
+{\footnotesize\ttfamily \#define T\+O\+U\+C\+H\+\_\+\+K\+EY~\&(const struct \hyperlink{structterminal__s}{terminal\+\_\+s})\{.port = 1, .pin = 1\}}
+
+
+
+Definition at line 58 of file board.\+h.
+
+\mbox{\Hypertarget{group__boards_ga11baf524276151957e8037eaed95b162}\label{group__boards_ga11baf524276151957e8037eaed95b162}} 
+\index{Boards@{Boards}!T\+O\+U\+C\+H\+\_\+\+L\+ED@{T\+O\+U\+C\+H\+\_\+\+L\+ED}}
+\index{T\+O\+U\+C\+H\+\_\+\+L\+ED@{T\+O\+U\+C\+H\+\_\+\+L\+ED}!Boards@{Boards}}
+\subsubsection{\texorpdfstring{T\+O\+U\+C\+H\+\_\+\+L\+ED}{TOUCH\_LED}}
+{\footnotesize\ttfamily \#define T\+O\+U\+C\+H\+\_\+\+L\+ED~\&(const struct \hyperlink{structterminal__s}{terminal\+\_\+s})\{.port = 1, .pin = 0\}}
+
+
+
+Definition at line 57 of file board.\+h.
+
+
+
+\subsection{Function Documentation}
+\mbox{\Hypertarget{group__boards_gad24575a3bcf2c2433e7720830d813e64}\label{group__boards_gad24575a3bcf2c2433e7720830d813e64}} 
+\index{Boards@{Boards}!Board\+Init@{Board\+Init}}
+\index{Board\+Init@{Board\+Init}!Boards@{Boards}}
+\subsubsection{\texorpdfstring{Board\+Init()}{BoardInit()}}
+{\footnotesize\ttfamily void Board\+Init (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+
+
+
+Function to configure board devices. 
+
+
+
+Definition at line 62 of file board.\+c.
+
+\mbox{\Hypertarget{group__boards_gace922d758774792e0573b7c568fe2a3f}\label{group__boards_gace922d758774792e0573b7c568fe2a3f}} 
+\index{Boards@{Boards}!Delay\+Ms@{Delay\+Ms}}
+\index{Delay\+Ms@{Delay\+Ms}!Boards@{Boards}}
+\subsubsection{\texorpdfstring{Delay\+Ms()}{DelayMs()}}
+{\footnotesize\ttfamily void Delay\+Ms (\begin{DoxyParamCaption}\item[{uint32\+\_\+t}]{value }\end{DoxyParamCaption})}
+
+
+\begin{DoxyParams}{Parameters}
+{\em value} & \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 66 of file board.\+c.
+

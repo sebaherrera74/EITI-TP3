@@ -1,0 +1,1890 @@
+\hypertarget{group___r_t_c__18_x_x__43_x_x}{}\section{C\+H\+IP\+: L\+P\+C18xx/43xx Real Time Clock driver}
+\label{group___r_t_c__18_x_x__43_x_x}\index{C\+H\+I\+P\+: L\+P\+C18xx/43xx Real Time Clock driver@{C\+H\+I\+P\+: L\+P\+C18xx/43xx Real Time Clock driver}}
+\subsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+struct \hyperlink{struct_l_p_c___r_t_c___t}{L\+P\+C\+\_\+\+R\+T\+C\+\_\+T}
+\begin{DoxyCompactList}\small\item\em Real Time Clock register block structure. \end{DoxyCompactList}\item 
+struct \hyperlink{struct_l_p_c___r_e_g_f_i_l_e___t}{L\+P\+C\+\_\+\+R\+E\+G\+F\+I\+L\+E\+\_\+T}
+\begin{DoxyCompactList}\small\item\em Register File register block structure. \end{DoxyCompactList}\item 
+struct \hyperlink{struct_r_t_c___e_v___t_i_m_e_s_t_a_m_p___t}{R\+T\+C\+\_\+\+E\+V\+\_\+\+T\+I\+M\+E\+S\+T\+A\+M\+P\+\_\+T}
+\begin{DoxyCompactList}\small\item\em Event Monitor/\+Recorder Timestamp structure. \end{DoxyCompactList}\item 
+struct \hyperlink{struct_r_t_c___t_i_m_e___t}{R\+T\+C\+\_\+\+T\+I\+M\+E\+\_\+T}
+\end{DoxyCompactItemize}
+\subsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#define \hyperlink{group___r_t_c__18_x_x__43_x_x_gaeebb09cabedc374d2fd54020862be3cf}{R\+T\+C\+\_\+\+E\+V\+\_\+\+S\+U\+P\+P\+O\+RT}~1				/$\ast$ Event Monitor/Recorder support $\ast$/
+\item 
+\#define \hyperlink{group___r_t_c__18_x_x__43_x_x_ga9c00baff0fca4f8e747fadfe9ee12775}{R\+T\+C\+\_\+\+I\+L\+R\+\_\+\+B\+I\+T\+M\+A\+SK}~((0x00000003))
+\item 
+\#define \hyperlink{group___r_t_c__18_x_x__43_x_x_gaf706fff68e830a082d476467fe71f297}{R\+T\+C\+\_\+\+I\+R\+L\+\_\+\+R\+T\+C\+C\+IF}~((1 $<$$<$ 0))
+\item 
+\#define \hyperlink{group___r_t_c__18_x_x__43_x_x_ga237351d2c7f08b447254eff9578eb11e}{R\+T\+C\+\_\+\+I\+R\+L\+\_\+\+R\+T\+C\+A\+LF}~((1 $<$$<$ 1))
+\item 
+\#define \hyperlink{group___r_t_c__18_x_x__43_x_x_gadc461b6f544d66841e09499b2b9734c7}{R\+T\+C\+\_\+\+C\+C\+R\+\_\+\+B\+I\+T\+M\+A\+SK}~((0x00000013))
+\item 
+\#define \hyperlink{group___r_t_c__18_x_x__43_x_x_gad08af035635f5acd7931cb982f95e771}{R\+T\+C\+\_\+\+C\+C\+R\+\_\+\+C\+L\+K\+EN}~((1 $<$$<$ 0))
+\item 
+\#define \hyperlink{group___r_t_c__18_x_x__43_x_x_ga70900054432c82dad7d63d4598502923}{R\+T\+C\+\_\+\+C\+C\+R\+\_\+\+C\+T\+C\+R\+ST}~((1 $<$$<$ 1))
+\item 
+\#define \hyperlink{group___r_t_c__18_x_x__43_x_x_gaeb77b2340d896fae77ea670bb70e972e}{R\+T\+C\+\_\+\+C\+C\+R\+\_\+\+C\+C\+A\+L\+EN}~((1 $<$$<$ 4))
+\item 
+\#define \hyperlink{group___r_t_c__18_x_x__43_x_x_ga30c785b6017020d4c0b61b22aff30aac}{R\+T\+C\+\_\+\+A\+M\+R\+\_\+\+C\+I\+I\+R\+\_\+\+I\+M\+S\+EC}~((1 $<$$<$ 0))
+\item 
+\#define \hyperlink{group___r_t_c__18_x_x__43_x_x_ga3d67e7c72ec7bcd0831628841496cbc6}{R\+T\+C\+\_\+\+A\+M\+R\+\_\+\+C\+I\+I\+R\+\_\+\+I\+M\+M\+IN}~((1 $<$$<$ 1))
+\item 
+\#define \hyperlink{group___r_t_c__18_x_x__43_x_x_ga4e20983ef05abf10773186d3193270f9}{R\+T\+C\+\_\+\+A\+M\+R\+\_\+\+C\+I\+I\+R\+\_\+\+I\+M\+H\+O\+UR}~((1 $<$$<$ 2))
+\item 
+\#define \hyperlink{group___r_t_c__18_x_x__43_x_x_gacd23cffe1367b6bb612fb37ebdf2e279}{R\+T\+C\+\_\+\+A\+M\+R\+\_\+\+C\+I\+I\+R\+\_\+\+I\+M\+D\+OM}~((1 $<$$<$ 3))
+\item 
+\#define \hyperlink{group___r_t_c__18_x_x__43_x_x_ga6494d5878d87398a4519e90a367bffe5}{R\+T\+C\+\_\+\+A\+M\+R\+\_\+\+C\+I\+I\+R\+\_\+\+I\+M\+D\+OW}~((1 $<$$<$ 4))
+\item 
+\#define \hyperlink{group___r_t_c__18_x_x__43_x_x_gaec7d51e7a503514c1d71bf9428c6f3e8}{R\+T\+C\+\_\+\+A\+M\+R\+\_\+\+C\+I\+I\+R\+\_\+\+I\+M\+D\+OY}~((1 $<$$<$ 5))
+\item 
+\#define \hyperlink{group___r_t_c__18_x_x__43_x_x_ga841dfecc952d8b6d275e799cb9e89c02}{R\+T\+C\+\_\+\+A\+M\+R\+\_\+\+C\+I\+I\+R\+\_\+\+I\+M\+M\+ON}~((1 $<$$<$ 6))
+\item 
+\#define \hyperlink{group___r_t_c__18_x_x__43_x_x_ga56b312d9e291685d843f6dae171f4441}{R\+T\+C\+\_\+\+A\+M\+R\+\_\+\+C\+I\+I\+R\+\_\+\+I\+M\+Y\+E\+AR}~((1 $<$$<$ 7))
+\item 
+\#define \hyperlink{group___r_t_c__18_x_x__43_x_x_gafcc754fba01521c5aa4f1775b889e894}{R\+T\+C\+\_\+\+A\+M\+R\+\_\+\+C\+I\+I\+R\+\_\+\+B\+I\+T\+M\+A\+SK}~((0x\+F\+F))
+\item 
+\#define \hyperlink{group___r_t_c__18_x_x__43_x_x_gaafb1215dfd0f9bbe198274689a1f1584}{R\+T\+C\+\_\+\+A\+U\+X\+\_\+\+R\+T\+C\+\_\+\+O\+S\+CF}~((1 $<$$<$ 4))
+\item 
+\#define \hyperlink{group___r_t_c__18_x_x__43_x_x_ga12b8af6f1d4757d19c1b09d85d3fc497}{R\+T\+C\+\_\+\+A\+U\+X\+E\+N\+\_\+\+R\+T\+C\+\_\+\+O\+S\+C\+F\+EN}~((1 $<$$<$ 4))
+\item 
+\#define \hyperlink{group___r_t_c__18_x_x__43_x_x_ga913865a5d046fddddcae67fb05210d87}{R\+T\+C\+\_\+\+C\+T\+I\+M\+E0\+\_\+\+S\+E\+C\+O\+N\+D\+S\+\_\+\+M\+A\+SK}~((0x3\+F))
+\item 
+\#define \hyperlink{group___r_t_c__18_x_x__43_x_x_ga3b8e88e913a22b08a7b814763e4c8452}{R\+T\+C\+\_\+\+C\+T\+I\+M\+E0\+\_\+\+M\+I\+N\+U\+T\+E\+S\+\_\+\+M\+A\+SK}~((0x3\+F00))
+\item 
+\#define \hyperlink{group___r_t_c__18_x_x__43_x_x_ga1778d80de2c97e680394bdd8770b9119}{R\+T\+C\+\_\+\+C\+T\+I\+M\+E0\+\_\+\+H\+O\+U\+R\+S\+\_\+\+M\+A\+SK}~((0x1\+F0000))
+\item 
+\#define \hyperlink{group___r_t_c__18_x_x__43_x_x_gaee63196753f1c3ce9621a780c2fae3c9}{R\+T\+C\+\_\+\+C\+T\+I\+M\+E0\+\_\+\+D\+O\+W\+\_\+\+M\+A\+SK}~((0x7000000))
+\item 
+\#define \hyperlink{group___r_t_c__18_x_x__43_x_x_gaa8d85ab9bd2feee7a013b3b422bb740d}{R\+T\+C\+\_\+\+C\+T\+I\+M\+E1\+\_\+\+D\+O\+M\+\_\+\+M\+A\+SK}~((0x1\+F))
+\item 
+\#define \hyperlink{group___r_t_c__18_x_x__43_x_x_ga9778cbc861fb273870db239e31cc6140}{R\+T\+C\+\_\+\+C\+T\+I\+M\+E1\+\_\+\+M\+O\+N\+T\+H\+\_\+\+M\+A\+SK}~((0x\+F00))
+\item 
+\#define \hyperlink{group___r_t_c__18_x_x__43_x_x_gae56e613fe29951a7adaa30e1a3cad8b4}{R\+T\+C\+\_\+\+C\+T\+I\+M\+E1\+\_\+\+Y\+E\+A\+R\+\_\+\+M\+A\+SK}~((0x\+F\+F\+F0000))
+\item 
+\#define \hyperlink{group___r_t_c__18_x_x__43_x_x_gaef423e0d45dc1e2a201d44f8abb1253a}{R\+T\+C\+\_\+\+C\+T\+I\+M\+E2\+\_\+\+D\+O\+Y\+\_\+\+M\+A\+SK}~((0x\+F\+F\+F))
+\item 
+\#define \hyperlink{group___r_t_c__18_x_x__43_x_x_gabc478af38e7fa3018d8449f22c51d10e}{R\+T\+C\+\_\+\+S\+E\+C\+\_\+\+M\+A\+SK}~(0x0000003\+F)
+\item 
+\#define \hyperlink{group___r_t_c__18_x_x__43_x_x_ga9f3224adad8ed73109ee0309c3580998}{R\+T\+C\+\_\+\+M\+I\+N\+\_\+\+M\+A\+SK}~(0x0000003\+F)
+\item 
+\#define \hyperlink{group___r_t_c__18_x_x__43_x_x_ga3c6fd786e3cb5f56b71474fc2d26a8a4}{R\+T\+C\+\_\+\+H\+O\+U\+R\+\_\+\+M\+A\+SK}~(0x0000001\+F)
+\item 
+\#define \hyperlink{group___r_t_c__18_x_x__43_x_x_ga7c4ea655a8ccf43870c672c1058a133e}{R\+T\+C\+\_\+\+D\+O\+M\+\_\+\+M\+A\+SK}~(0x0000001\+F)
+\item 
+\#define \hyperlink{group___r_t_c__18_x_x__43_x_x_ga6564edf565a643214a54ffac364c69ca}{R\+T\+C\+\_\+\+D\+O\+W\+\_\+\+M\+A\+SK}~(0x00000007)
+\item 
+\#define \hyperlink{group___r_t_c__18_x_x__43_x_x_ga7c8c3332f827ea092523b75ef953bd8b}{R\+T\+C\+\_\+\+D\+O\+Y\+\_\+\+M\+A\+SK}~(0x000001\+F\+F)
+\item 
+\#define \hyperlink{group___r_t_c__18_x_x__43_x_x_ga491df15fba29dd3237f7bd59a9338050}{R\+T\+C\+\_\+\+M\+O\+N\+T\+H\+\_\+\+M\+A\+SK}~(0x0000000\+F)
+\item 
+\#define \hyperlink{group___r_t_c__18_x_x__43_x_x_ga35a455a48ccdb557b824e87701449c76}{R\+T\+C\+\_\+\+Y\+E\+A\+R\+\_\+\+M\+A\+SK}~(0x00000\+F\+F\+F)
+\item 
+\#define \hyperlink{group___r_t_c__18_x_x__43_x_x_ga60bbeee3abbb647a0daa7c2130965646}{R\+T\+C\+\_\+\+S\+E\+C\+O\+N\+D\+\_\+\+M\+AX}~59
+\item 
+\#define \hyperlink{group___r_t_c__18_x_x__43_x_x_gab55b557eeb5c66e94a2fda3638e3b7ee}{R\+T\+C\+\_\+\+M\+I\+N\+U\+T\+E\+\_\+\+M\+AX}~59
+\item 
+\#define \hyperlink{group___r_t_c__18_x_x__43_x_x_ga35630c42240ce2e8f74c38e1731d7e68}{R\+T\+C\+\_\+\+H\+O\+U\+R\+\_\+\+M\+AX}~23
+\item 
+\#define \hyperlink{group___r_t_c__18_x_x__43_x_x_ga5002ab062a5871b7ed73c7ff0cb00e6b}{R\+T\+C\+\_\+\+M\+O\+N\+T\+H\+\_\+\+M\+IN}~1
+\item 
+\#define \hyperlink{group___r_t_c__18_x_x__43_x_x_gacad40d1a94fd9b6884ec6160abb07674}{R\+T\+C\+\_\+\+M\+O\+N\+T\+H\+\_\+\+M\+AX}~12
+\item 
+\#define \hyperlink{group___r_t_c__18_x_x__43_x_x_gafbcf1009356ffdad8f11920167908213}{R\+T\+C\+\_\+\+D\+A\+Y\+O\+F\+M\+O\+N\+T\+H\+\_\+\+M\+IN}~1
+\item 
+\#define \hyperlink{group___r_t_c__18_x_x__43_x_x_gaddd515ae325f802e35e8202fef5f2957}{R\+T\+C\+\_\+\+D\+A\+Y\+O\+F\+M\+O\+N\+T\+H\+\_\+\+M\+AX}~31
+\item 
+\#define \hyperlink{group___r_t_c__18_x_x__43_x_x_ga83c5c53e8b56ca8d48d9c46d7e8c50fa}{R\+T\+C\+\_\+\+D\+A\+Y\+O\+F\+W\+E\+E\+K\+\_\+\+M\+AX}~6
+\item 
+\#define \hyperlink{group___r_t_c__18_x_x__43_x_x_ga132dcf308a59affe54749f4f11cd22a6}{R\+T\+C\+\_\+\+D\+A\+Y\+O\+F\+Y\+E\+A\+R\+\_\+\+M\+IN}~1
+\item 
+\#define \hyperlink{group___r_t_c__18_x_x__43_x_x_ga2621bb8d69ee212101605c2e3739db4d}{R\+T\+C\+\_\+\+D\+A\+Y\+O\+F\+Y\+E\+A\+R\+\_\+\+M\+AX}~366
+\item 
+\#define \hyperlink{group___r_t_c__18_x_x__43_x_x_ga72b68660aec4a924c12a124e2ec5f852}{R\+T\+C\+\_\+\+Y\+E\+A\+R\+\_\+\+M\+AX}~4095
+\item 
+\#define \hyperlink{group___r_t_c__18_x_x__43_x_x_gafe263620e5d0709ddf51abfdf408c770}{R\+T\+C\+\_\+\+C\+A\+L\+I\+B\+R\+A\+T\+I\+O\+N\+\_\+\+C\+A\+L\+V\+A\+L\+\_\+\+M\+A\+SK}~((0x1\+F\+F\+F\+F))
+\item 
+\#define \hyperlink{group___r_t_c__18_x_x__43_x_x_gae818a2f408ec0a1025ab3f02947d4b84}{R\+T\+C\+\_\+\+C\+A\+L\+I\+B\+R\+A\+T\+I\+O\+N\+\_\+\+L\+I\+B\+D\+IR}~((1 $<$$<$ 17))
+\item 
+\#define \hyperlink{group___r_t_c__18_x_x__43_x_x_gaeb077cfbe5f74f3b15ff72fed96abfe6}{R\+T\+C\+\_\+\+C\+A\+L\+I\+B\+R\+A\+T\+I\+O\+N\+\_\+\+M\+AX}~((0x20000))
+\item 
+\#define \hyperlink{group___r_t_c__18_x_x__43_x_x_ga4f53042ce8b730a4b2c6eb40b856e4e8}{R\+T\+C\+\_\+\+C\+A\+L\+I\+B\+\_\+\+D\+I\+R\+\_\+\+F\+O\+R\+W\+A\+RD}~((uint8\+\_\+t) (0))
+\item 
+\#define \hyperlink{group___r_t_c__18_x_x__43_x_x_ga0a3b0243c2fd9528066365ef74c45cf4}{R\+T\+C\+\_\+\+C\+A\+L\+I\+B\+\_\+\+D\+I\+R\+\_\+\+B\+A\+C\+K\+W\+A\+RD}~((uint8\+\_\+t) (1))
+\item 
+\#define \hyperlink{group___r_t_c__18_x_x__43_x_x_gaad3f36ce7e197e776d91a364cac6b828}{R\+T\+C\+\_\+\+E\+R\+C\+T\+R\+L\+\_\+\+B\+I\+T\+M\+A\+SK}~((uint32\+\_\+t) 0x\+C0\+F03\+C0\+F)
+\item 
+\#define \hyperlink{group___r_t_c__18_x_x__43_x_x_ga1289a9b31c3e539c89dba3852f509580}{R\+T\+C\+\_\+\+E\+R\+C\+T\+R\+L\+\_\+\+I\+N\+T\+W\+A\+K\+E\+\_\+\+EN}~((uint32\+\_\+t) (1 $<$$<$ 0))
+\item 
+\#define \hyperlink{group___r_t_c__18_x_x__43_x_x_gaad7422eeba094d2538ddc97144066ba0}{R\+T\+C\+\_\+\+E\+R\+C\+T\+R\+L\+\_\+\+G\+P\+C\+L\+E\+A\+R\+\_\+\+EN}~((uint32\+\_\+t) (1 $<$$<$ 1))
+\item 
+\#define \hyperlink{group___r_t_c__18_x_x__43_x_x_ga385935dbe73607b57dc1d31793b34f74}{R\+T\+C\+\_\+\+E\+R\+C\+T\+R\+L\+\_\+\+P\+O\+L\+\_\+\+N\+E\+G\+A\+T\+I\+VE}~(0)		/$\ast$ Event as positive edge $\ast$/
+\item 
+\#define \hyperlink{group___r_t_c__18_x_x__43_x_x_ga78137f50cb725cf3c51b4ac396d0cc83}{R\+T\+C\+\_\+\+E\+R\+C\+T\+R\+L\+\_\+\+P\+O\+L\+\_\+\+P\+O\+S\+I\+T\+I\+VE}~((uint32\+\_\+t) (1 $<$$<$ 2))	/$\ast$ Event as negative edge $\ast$/
+\item 
+\#define \hyperlink{group___r_t_c__18_x_x__43_x_x_ga3446ab4643553dbba73e5b080827619e}{R\+T\+C\+\_\+\+E\+R\+C\+T\+R\+L\+\_\+\+I\+N\+P\+U\+T\+\_\+\+EN}~((uint32\+\_\+t) (1 $<$$<$ 3))
+\item 
+\#define \hyperlink{group___r_t_c__18_x_x__43_x_x_ga92d490ffb38a83d5087fa71de39484c6}{R\+T\+C\+\_\+\+E\+R\+C\+T\+R\+L\+\_\+\+C\+H\+A\+N\+N\+E\+L\+\_\+\+C\+O\+N\+F\+I\+G\+\_\+\+B\+I\+T\+M\+A\+SK}(ch)~((uint32\+\_\+t) (0x0\+F $<$$<$ (10 $\ast$ ch)))
+\item 
+\#define \hyperlink{group___r_t_c__18_x_x__43_x_x_gada99735428b58b1f2af7ed899d019e09}{R\+T\+C\+\_\+\+E\+R\+C\+T\+R\+L\+\_\+\+C\+H\+A\+N\+N\+E\+L\+\_\+\+C\+O\+N\+F\+IG}(ch,  \hyperlink{sdio__18xx__43xx_8c_a8fac2498fe5bd106b35d43af5bc91f6f}{flag})~((uint32\+\_\+t) (\hyperlink{sdio__18xx__43xx_8c_a8fac2498fe5bd106b35d43af5bc91f6f}{flag} $<$$<$ (10 $\ast$ ch)))
+\item 
+\#define \hyperlink{group___r_t_c__18_x_x__43_x_x_ga1d26213d7c42922f4e7d0e231e2b5ae8}{R\+T\+C\+\_\+\+E\+R\+C\+T\+R\+L\+\_\+\+M\+O\+D\+E\+\_\+\+M\+A\+SK}~(((uint32\+\_\+t) 3) $<$$<$ 30)
+\item 
+\#define \hyperlink{group___r_t_c__18_x_x__43_x_x_ga2d96a47a877ecf282ad30c0dce313894}{R\+T\+C\+\_\+\+E\+R\+C\+T\+R\+L\+\_\+\+M\+O\+D\+E\+\_\+\+C\+L\+K\+\_\+\+D\+I\+S\+A\+B\+LE}~(((uint32\+\_\+t) 0) $<$$<$ 30)
+\item 
+\#define \hyperlink{group___r_t_c__18_x_x__43_x_x_ga7d2c669dd9d71998a2d7a9eb7f7db2ab}{R\+T\+C\+\_\+\+E\+R\+C\+T\+R\+L\+\_\+\+M\+O\+D\+E\+\_\+16\+HZ}~(((uint32\+\_\+t) 1) $<$$<$ 30)
+\item 
+\#define \hyperlink{group___r_t_c__18_x_x__43_x_x_ga04e510f093b5f89a5603e748bb2e8394}{R\+T\+C\+\_\+\+E\+R\+C\+T\+R\+L\+\_\+\+M\+O\+D\+E\+\_\+64\+HZ}~(((uint32\+\_\+t) 2) $<$$<$ 30)
+\item 
+\#define \hyperlink{group___r_t_c__18_x_x__43_x_x_gae2733de737c026afa2ce9b9cd65f909c}{R\+T\+C\+\_\+\+E\+R\+C\+T\+R\+L\+\_\+\+M\+O\+D\+E\+\_\+1\+K\+HZ}~(((uint32\+\_\+t) 3) $<$$<$ 30)
+\item 
+\#define \hyperlink{group___r_t_c__18_x_x__43_x_x_ga340ba5fcf5656fde4e98fa41deb92aca}{R\+T\+C\+\_\+\+E\+R\+C\+T\+R\+L\+\_\+\+M\+O\+DE}(n)~(((uint32\+\_\+t) n) $<$$<$ 30)
+\item 
+\#define \hyperlink{group___r_t_c__18_x_x__43_x_x_ga4aa755787c9fdebd2a3a3c02b3d57007}{R\+T\+C\+\_\+\+E\+R\+S\+T\+A\+T\+U\+S\+\_\+\+C\+H\+A\+N\+N\+E\+L\+\_\+\+EV}(ch)~((uint32\+\_\+t) (1 $<$$<$ ch))		/$\ast$ At least 1 \hyperlink{structevent}{event} has occurred on a specific channel $\ast$/
+\item 
+\#define \hyperlink{group___r_t_c__18_x_x__43_x_x_gadd02a72f5a99bf2d67e3aded8e700142}{R\+T\+C\+\_\+\+E\+R\+S\+T\+A\+T\+U\+S\+\_\+\+G\+P\+C\+L\+E\+A\+R\+ED}~((uint32\+\_\+t) (1 $<$$<$ 3))
+\item 
+\#define \hyperlink{group___r_t_c__18_x_x__43_x_x_gaad84e4ab46519c68d328db9b823c2c44}{R\+T\+C\+\_\+\+E\+R\+S\+T\+A\+T\+U\+S\+\_\+\+W\+A\+K\+E\+UP}~((uint32\+\_\+t) (((uint32\+\_\+t) 1) $<$$<$ 31))
+\item 
+\#define \hyperlink{group___r_t_c__18_x_x__43_x_x_ga9a6e53010e34cbc8a4b61e96c924ff18}{R\+T\+C\+\_\+\+E\+R\+\_\+\+C\+O\+U\+N\+T\+ER}(ch,  n)~((uint32\+\_\+t) ((n $>$$>$ (8 $\ast$ ch)) \& 0x07))
+\item 
+\#define \hyperlink{group___r_t_c__18_x_x__43_x_x_gaaf1c33359c54ee591723481d7f6a4a27}{R\+T\+C\+\_\+\+E\+R\+\_\+\+T\+I\+M\+E\+S\+T\+A\+M\+P\+\_\+\+S\+EC}(n)~((uint32\+\_\+t) (n \& 0x3\+F))
+\item 
+\#define \hyperlink{group___r_t_c__18_x_x__43_x_x_gaa23e4f27ac7ddd367b7b8749b63b9e33}{R\+T\+C\+\_\+\+E\+R\+\_\+\+T\+I\+M\+E\+S\+T\+A\+M\+P\+\_\+\+M\+IN}(n)~((uint32\+\_\+t) ((n $>$$>$ 6) \& 0x3\+F))
+\item 
+\#define \hyperlink{group___r_t_c__18_x_x__43_x_x_ga54eaa9d5a1d5b3f6aad644a794e21c8c}{R\+T\+C\+\_\+\+E\+R\+\_\+\+T\+I\+M\+E\+S\+T\+A\+M\+P\+\_\+\+H\+O\+UR}(n)~((uint32\+\_\+t) ((n $>$$>$ 12) \& 0x1\+F))
+\item 
+\#define \hyperlink{group___r_t_c__18_x_x__43_x_x_ga3e39b9c4bb850c2d8a2c7a3b7c599c39}{R\+T\+C\+\_\+\+E\+R\+\_\+\+T\+I\+M\+E\+S\+T\+A\+M\+P\+\_\+\+D\+OY}(n)~((uint32\+\_\+t) ((n $>$$>$ 17) \& 0x1\+F\+F))
+\end{DoxyCompactItemize}
+\subsection*{Typedefs}
+\begin{DoxyCompactItemize}
+\item 
+typedef enum \hyperlink{group___r_t_c__18_x_x__43_x_x_gaefde431348a2ce3d7721a63780e9d9ba}{I\+P\+\_\+\+R\+T\+C\+\_\+\+E\+V\+\_\+\+M\+O\+DE} \hyperlink{group___r_t_c__18_x_x__43_x_x_gabcbfff4a7d52791dc0b1cdcb078a2a05}{R\+T\+C\+\_\+\+E\+V\+\_\+\+M\+O\+D\+E\+\_\+T}
+\begin{DoxyCompactList}\small\item\em Event Monitor/\+Recorder Mode definition. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Enumerations}
+\begin{DoxyCompactItemize}
+\item 
+enum \hyperlink{group___r_t_c__18_x_x__43_x_x_ga8144898fe628404d396db06dc8aac0e0}{R\+T\+C\+\_\+\+T\+I\+M\+E\+I\+N\+D\+E\+X\+\_\+T} \{ \newline
+\hyperlink{group___r_t_c__18_x_x__43_x_x_gga8144898fe628404d396db06dc8aac0e0ac0bdc1ff011be37cfeecb77c241e7fb8}{R\+T\+C\+\_\+\+T\+I\+M\+E\+T\+Y\+P\+E\+\_\+\+S\+E\+C\+O\+ND}, 
+\hyperlink{group___r_t_c__18_x_x__43_x_x_gga8144898fe628404d396db06dc8aac0e0a11974e5996bfe6fbf0381d7ef3836964}{R\+T\+C\+\_\+\+T\+I\+M\+E\+T\+Y\+P\+E\+\_\+\+M\+I\+N\+U\+TE}, 
+\hyperlink{group___r_t_c__18_x_x__43_x_x_gga8144898fe628404d396db06dc8aac0e0a4e88c263358395fecc19306556addacc}{R\+T\+C\+\_\+\+T\+I\+M\+E\+T\+Y\+P\+E\+\_\+\+H\+O\+UR}, 
+\hyperlink{group___r_t_c__18_x_x__43_x_x_gga8144898fe628404d396db06dc8aac0e0a3cc8b55755f86e8a6a1a870a79122324}{R\+T\+C\+\_\+\+T\+I\+M\+E\+T\+Y\+P\+E\+\_\+\+D\+A\+Y\+O\+F\+M\+O\+N\+TH}, 
+\newline
+\hyperlink{group___r_t_c__18_x_x__43_x_x_gga8144898fe628404d396db06dc8aac0e0a88f328753d58927fafd45b35e0815e80}{R\+T\+C\+\_\+\+T\+I\+M\+E\+T\+Y\+P\+E\+\_\+\+D\+A\+Y\+O\+F\+W\+E\+EK}, 
+\hyperlink{group___r_t_c__18_x_x__43_x_x_gga8144898fe628404d396db06dc8aac0e0ad05ce02297b482d4fa5b6a491ff04aff}{R\+T\+C\+\_\+\+T\+I\+M\+E\+T\+Y\+P\+E\+\_\+\+D\+A\+Y\+O\+F\+Y\+E\+AR}, 
+\hyperlink{group___r_t_c__18_x_x__43_x_x_gga8144898fe628404d396db06dc8aac0e0a45d2078908fb25a714cbd01766f55fae}{R\+T\+C\+\_\+\+T\+I\+M\+E\+T\+Y\+P\+E\+\_\+\+M\+O\+N\+TH}, 
+\hyperlink{group___r_t_c__18_x_x__43_x_x_gga8144898fe628404d396db06dc8aac0e0a780e93b1c505ed02ed139894566fcfe0}{R\+T\+C\+\_\+\+T\+I\+M\+E\+T\+Y\+P\+E\+\_\+\+Y\+E\+AR}, 
+\newline
+\hyperlink{group___r_t_c__18_x_x__43_x_x_gga8144898fe628404d396db06dc8aac0e0a0d4fafef57b6ef363f9a0875ff339cad}{R\+T\+C\+\_\+\+T\+I\+M\+E\+T\+Y\+P\+E\+\_\+\+L\+A\+ST}
+ \}\begin{DoxyCompactList}\small\item\em R\+TC time type option. \end{DoxyCompactList}
+\item 
+enum \hyperlink{group___r_t_c__18_x_x__43_x_x_gaac7e8d7c66860037449fdde1bdfb657b}{R\+T\+C\+\_\+\+E\+V\+\_\+\+C\+H\+A\+N\+N\+E\+L\+\_\+T} \{ \hyperlink{group___r_t_c__18_x_x__43_x_x_ggaac7e8d7c66860037449fdde1bdfb657ba9e945d3545e1b313d7c8ab890dc98521}{R\+T\+C\+\_\+\+E\+V\+\_\+\+C\+H\+A\+N\+N\+E\+L\+\_\+1} = 0, 
+\hyperlink{group___r_t_c__18_x_x__43_x_x_ggaac7e8d7c66860037449fdde1bdfb657baeb2b8110c74497dcdbc0f8b6d533fb69}{R\+T\+C\+\_\+\+E\+V\+\_\+\+C\+H\+A\+N\+N\+E\+L\+\_\+2}, 
+\hyperlink{group___r_t_c__18_x_x__43_x_x_ggaac7e8d7c66860037449fdde1bdfb657bab5908409b28ddbf4fd51eaf4f85aeb69}{R\+T\+C\+\_\+\+E\+V\+\_\+\+C\+H\+A\+N\+N\+E\+L\+\_\+3}, 
+\hyperlink{group___r_t_c__18_x_x__43_x_x_ggaac7e8d7c66860037449fdde1bdfb657bae56aa8110b05663f96d666d4ce378c85}{R\+T\+C\+\_\+\+E\+V\+\_\+\+C\+H\+A\+N\+N\+E\+L\+\_\+\+N\+UM}
+ \}\begin{DoxyCompactList}\small\item\em Event Channel Identifier definitions. \end{DoxyCompactList}
+\item 
+enum \hyperlink{group___r_t_c__18_x_x__43_x_x_gaefde431348a2ce3d7721a63780e9d9ba}{I\+P\+\_\+\+R\+T\+C\+\_\+\+E\+V\+\_\+\+M\+O\+DE} \{ \newline
+\hyperlink{group___r_t_c__18_x_x__43_x_x_ggaefde431348a2ce3d7721a63780e9d9baad24f32a223a364f8c097c31ed1ab3138}{R\+T\+C\+\_\+\+E\+V\+\_\+\+M\+O\+D\+E\+\_\+\+D\+I\+S\+A\+B\+LE} = 0, 
+\hyperlink{group___r_t_c__18_x_x__43_x_x_ggaefde431348a2ce3d7721a63780e9d9baa3e6fef6c94b90897af317e8ddb84576d}{R\+T\+C\+\_\+\+E\+V\+\_\+\+M\+O\+D\+E\+\_\+\+E\+N\+A\+B\+L\+E\+\_\+16\+HZ} = 1, 
+\hyperlink{group___r_t_c__18_x_x__43_x_x_ggaefde431348a2ce3d7721a63780e9d9baac104b566ab32b4d49c505b7f9528cfbb}{R\+T\+C\+\_\+\+E\+V\+\_\+\+M\+O\+D\+E\+\_\+\+E\+N\+A\+B\+L\+E\+\_\+64\+HZ} = 2, 
+\hyperlink{group___r_t_c__18_x_x__43_x_x_ggaefde431348a2ce3d7721a63780e9d9baa5a47148b47f17f5c12b30c89f40d573e}{R\+T\+C\+\_\+\+E\+V\+\_\+\+M\+O\+D\+E\+\_\+\+E\+N\+A\+B\+L\+E\+\_\+1\+K\+HZ} = 3, 
+\newline
+\hyperlink{group___r_t_c__18_x_x__43_x_x_ggaefde431348a2ce3d7721a63780e9d9baab4e33e3423660ab9e4fa677f4cd438a9}{R\+T\+C\+\_\+\+E\+V\+\_\+\+M\+O\+D\+E\+\_\+\+L\+A\+ST}
+ \}\begin{DoxyCompactList}\small\item\em Event Monitor/\+Recorder Mode definition. \end{DoxyCompactList}
+\item 
+enum \hyperlink{group___r_t_c__18_x_x__43_x_x_gacbb4f3e21ac0f90878c95afe11f49161}{R\+T\+C\+\_\+\+I\+N\+T\+\_\+\+O\+P\+T\+\_\+T} \{ \hyperlink{group___r_t_c__18_x_x__43_x_x_ggacbb4f3e21ac0f90878c95afe11f49161a1545f38fd2671cb7521a77e7da3bde4d}{R\+T\+C\+\_\+\+I\+N\+T\+\_\+\+C\+O\+U\+N\+T\+E\+R\+\_\+\+I\+N\+C\+R\+E\+A\+SE} = R\+T\+C\+\_\+\+I\+R\+L\+\_\+\+R\+T\+C\+C\+IF, 
+\hyperlink{group___r_t_c__18_x_x__43_x_x_ggacbb4f3e21ac0f90878c95afe11f49161adec1af649886bf5a419d636276ca54a5}{R\+T\+C\+\_\+\+I\+N\+T\+\_\+\+A\+L\+A\+RM} = R\+T\+C\+\_\+\+I\+R\+L\+\_\+\+R\+T\+C\+A\+LF
+ \}\begin{DoxyCompactList}\small\item\em R\+TC enumeration. \end{DoxyCompactList}
+\end{DoxyCompactItemize}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \hyperlink{group___r_t_c__18_x_x__43_x_x_ga1d569e8d5d570f6c79d2d1f803bb5f7c}{Chip\+\_\+\+R\+T\+C\+\_\+\+Reset\+Clock\+Tick\+Counter} (\hyperlink{struct_l_p_c___r_t_c___t}{L\+P\+C\+\_\+\+R\+T\+C\+\_\+T} $\ast$p\+R\+TC)
+\begin{DoxyCompactList}\small\item\em Reset clock tick counter in the R\+TC peripheral. \end{DoxyCompactList}\item 
+void \hyperlink{group___r_t_c__18_x_x__43_x_x_gaad05032c6d6c4bc5ea9e02311cdc9a18}{Chip\+\_\+\+R\+T\+C\+\_\+\+Enable} (\hyperlink{struct_l_p_c___r_t_c___t}{L\+P\+C\+\_\+\+R\+T\+C\+\_\+T} $\ast$p\+R\+TC, \hyperlink{group___l_p_c___types___public___types_gac9a7e9a35d2513ec15c3b537aaa4fba1}{Functional\+State} New\+State)
+\begin{DoxyCompactList}\small\item\em Start/\+Stop R\+TC peripheral. \end{DoxyCompactList}\item 
+void \hyperlink{group___r_t_c__18_x_x__43_x_x_gaddaf7559a23df0704358128234fcb214}{Chip\+\_\+\+R\+T\+C\+\_\+\+Cnt\+Incr\+Int\+Config} (\hyperlink{struct_l_p_c___r_t_c___t}{L\+P\+C\+\_\+\+R\+T\+C\+\_\+T} $\ast$p\+R\+TC, uint32\+\_\+t cntr\+Mask, \hyperlink{group___l_p_c___types___public___types_gac9a7e9a35d2513ec15c3b537aaa4fba1}{Functional\+State} New\+State)
+\begin{DoxyCompactList}\small\item\em Enable/\+Disable Counter increment interrupt for a time type in the R\+TC peripheral. \end{DoxyCompactList}\item 
+void \hyperlink{group___r_t_c__18_x_x__43_x_x_ga2ecd6a555d1a1977a80a30ca21645ca4}{Chip\+\_\+\+R\+T\+C\+\_\+\+Alarm\+Int\+Config} (\hyperlink{struct_l_p_c___r_t_c___t}{L\+P\+C\+\_\+\+R\+T\+C\+\_\+T} $\ast$p\+R\+TC, uint32\+\_\+t alarm\+Mask, \hyperlink{group___l_p_c___types___public___types_gac9a7e9a35d2513ec15c3b537aaa4fba1}{Functional\+State} New\+State)
+\begin{DoxyCompactList}\small\item\em Enable/\+Disable Alarm interrupt for a time type in the R\+TC peripheral. \end{DoxyCompactList}\item 
+\hyperlink{group___l_p_c___types___public___macros_ga10b2d890d871e1489bb02b7e70d9bdfb}{S\+T\+A\+T\+IC} \hyperlink{spifi__18xx__43xx_8h_a2eb6f9e0395b47b8d5e3eeae4fe0c116}{I\+N\+L\+I\+NE} void \hyperlink{group___r_t_c__18_x_x__43_x_x_ga8104b580aeb00a3d5a9e325b3162b1bb}{Chip\+\_\+\+R\+T\+C\+\_\+\+Set\+Time} (\hyperlink{struct_l_p_c___r_t_c___t}{L\+P\+C\+\_\+\+R\+T\+C\+\_\+T} $\ast$p\+R\+TC, \hyperlink{group___r_t_c__18_x_x__43_x_x_ga8144898fe628404d396db06dc8aac0e0}{R\+T\+C\+\_\+\+T\+I\+M\+E\+I\+N\+D\+E\+X\+\_\+T} Timetype, uint32\+\_\+t Time\+Value)
+\begin{DoxyCompactList}\small\item\em Set current time value for a time type in the R\+TC peripheral. \end{DoxyCompactList}\item 
+\hyperlink{group___l_p_c___types___public___macros_ga10b2d890d871e1489bb02b7e70d9bdfb}{S\+T\+A\+T\+IC} \hyperlink{spifi__18xx__43xx_8h_a2eb6f9e0395b47b8d5e3eeae4fe0c116}{I\+N\+L\+I\+NE} uint32\+\_\+t \hyperlink{group___r_t_c__18_x_x__43_x_x_ga661c73c8fce7243b30a207ad7cbee59b}{Chip\+\_\+\+R\+T\+C\+\_\+\+Get\+Time} (\hyperlink{struct_l_p_c___r_t_c___t}{L\+P\+C\+\_\+\+R\+T\+C\+\_\+T} $\ast$p\+R\+TC, \hyperlink{group___r_t_c__18_x_x__43_x_x_ga8144898fe628404d396db06dc8aac0e0}{R\+T\+C\+\_\+\+T\+I\+M\+E\+I\+N\+D\+E\+X\+\_\+T} Timetype)
+\begin{DoxyCompactList}\small\item\em Get current time value for a type time type. \end{DoxyCompactList}\item 
+void \hyperlink{group___r_t_c__18_x_x__43_x_x_ga501471295a030ca2dc2872577367073e}{Chip\+\_\+\+R\+T\+C\+\_\+\+Set\+Full\+Time} (\hyperlink{struct_l_p_c___r_t_c___t}{L\+P\+C\+\_\+\+R\+T\+C\+\_\+T} $\ast$p\+R\+TC, \hyperlink{struct_r_t_c___t_i_m_e___t}{R\+T\+C\+\_\+\+T\+I\+M\+E\+\_\+T} $\ast$p\+Full\+Time)
+\begin{DoxyCompactList}\small\item\em Set full time in the R\+TC peripheral. \end{DoxyCompactList}\item 
+void \hyperlink{group___r_t_c__18_x_x__43_x_x_gab03d971e0b77ba907f414cdc00acce3b}{Chip\+\_\+\+R\+T\+C\+\_\+\+Get\+Full\+Time} (\hyperlink{struct_l_p_c___r_t_c___t}{L\+P\+C\+\_\+\+R\+T\+C\+\_\+T} $\ast$p\+R\+TC, \hyperlink{struct_r_t_c___t_i_m_e___t}{R\+T\+C\+\_\+\+T\+I\+M\+E\+\_\+T} $\ast$p\+Full\+Time)
+\begin{DoxyCompactList}\small\item\em Get full time from the R\+TC peripheral. \end{DoxyCompactList}\item 
+\hyperlink{group___l_p_c___types___public___macros_ga10b2d890d871e1489bb02b7e70d9bdfb}{S\+T\+A\+T\+IC} \hyperlink{spifi__18xx__43xx_8h_a2eb6f9e0395b47b8d5e3eeae4fe0c116}{I\+N\+L\+I\+NE} void \hyperlink{group___r_t_c__18_x_x__43_x_x_ga7ac6a9a813f710e8e93c4b598a14a795}{Chip\+\_\+\+R\+T\+C\+\_\+\+Set\+Alarm\+Time} (\hyperlink{struct_l_p_c___r_t_c___t}{L\+P\+C\+\_\+\+R\+T\+C\+\_\+T} $\ast$p\+R\+TC, \hyperlink{group___r_t_c__18_x_x__43_x_x_ga8144898fe628404d396db06dc8aac0e0}{R\+T\+C\+\_\+\+T\+I\+M\+E\+I\+N\+D\+E\+X\+\_\+T} Timetype, uint32\+\_\+t A\+L\+Value)
+\begin{DoxyCompactList}\small\item\em Set alarm time value for a time type. \end{DoxyCompactList}\item 
+\hyperlink{group___l_p_c___types___public___macros_ga10b2d890d871e1489bb02b7e70d9bdfb}{S\+T\+A\+T\+IC} \hyperlink{spifi__18xx__43xx_8h_a2eb6f9e0395b47b8d5e3eeae4fe0c116}{I\+N\+L\+I\+NE} uint32\+\_\+t \hyperlink{group___r_t_c__18_x_x__43_x_x_gaf094ef7c4ff7295c74be8ab77e39a967}{Chip\+\_\+\+R\+T\+C\+\_\+\+Get\+Alarm\+Time} (\hyperlink{struct_l_p_c___r_t_c___t}{L\+P\+C\+\_\+\+R\+T\+C\+\_\+T} $\ast$p\+R\+TC, \hyperlink{group___r_t_c__18_x_x__43_x_x_ga8144898fe628404d396db06dc8aac0e0}{R\+T\+C\+\_\+\+T\+I\+M\+E\+I\+N\+D\+E\+X\+\_\+T} Timetype)
+\begin{DoxyCompactList}\small\item\em Get alarm time value for a time type. \end{DoxyCompactList}\item 
+void \hyperlink{group___r_t_c__18_x_x__43_x_x_ga7ad6b4d1d2aaaf093ddde0cef9023ba0}{Chip\+\_\+\+R\+T\+C\+\_\+\+Set\+Full\+Alarm\+Time} (\hyperlink{struct_l_p_c___r_t_c___t}{L\+P\+C\+\_\+\+R\+T\+C\+\_\+T} $\ast$p\+R\+TC, \hyperlink{struct_r_t_c___t_i_m_e___t}{R\+T\+C\+\_\+\+T\+I\+M\+E\+\_\+T} $\ast$p\+Full\+Time)
+\begin{DoxyCompactList}\small\item\em Set full alarm time in the R\+TC peripheral. \end{DoxyCompactList}\item 
+void \hyperlink{group___r_t_c__18_x_x__43_x_x_ga21b9a7c640870482b47deda15ff0a01b}{Chip\+\_\+\+R\+T\+C\+\_\+\+Get\+Full\+Alarm\+Time} (\hyperlink{struct_l_p_c___r_t_c___t}{L\+P\+C\+\_\+\+R\+T\+C\+\_\+T} $\ast$p\+R\+TC, \hyperlink{struct_r_t_c___t_i_m_e___t}{R\+T\+C\+\_\+\+T\+I\+M\+E\+\_\+T} $\ast$p\+Full\+Time)
+\begin{DoxyCompactList}\small\item\em Get full alarm time in the R\+TC peripheral. \end{DoxyCompactList}\item 
+\hyperlink{group___l_p_c___types___public___macros_ga10b2d890d871e1489bb02b7e70d9bdfb}{S\+T\+A\+T\+IC} \hyperlink{spifi__18xx__43xx_8h_a2eb6f9e0395b47b8d5e3eeae4fe0c116}{I\+N\+L\+I\+NE} void \hyperlink{group___r_t_c__18_x_x__43_x_x_ga8607152173e77715f7cc42be74799b65}{Chip\+\_\+\+R\+E\+G\+F\+I\+L\+E\+\_\+\+Write} (\hyperlink{struct_l_p_c___r_e_g_f_i_l_e___t}{L\+P\+C\+\_\+\+R\+E\+G\+F\+I\+L\+E\+\_\+T} $\ast$p\+Reg\+File, uint8\+\_\+t index, uint32\+\_\+t value)
+\begin{DoxyCompactList}\small\item\em Write value to General purpose registers. \end{DoxyCompactList}\item 
+\hyperlink{group___l_p_c___types___public___macros_ga10b2d890d871e1489bb02b7e70d9bdfb}{S\+T\+A\+T\+IC} \hyperlink{spifi__18xx__43xx_8h_a2eb6f9e0395b47b8d5e3eeae4fe0c116}{I\+N\+L\+I\+NE} uint32\+\_\+t \hyperlink{group___r_t_c__18_x_x__43_x_x_gafdad7b4e551aa7e6d52b49a7a072f4ae}{Chip\+\_\+\+R\+E\+G\+F\+I\+L\+E\+\_\+\+Read} (\hyperlink{struct_l_p_c___r_e_g_f_i_l_e___t}{L\+P\+C\+\_\+\+R\+E\+G\+F\+I\+L\+E\+\_\+T} $\ast$p\+Reg\+File, uint8\+\_\+t index)
+\begin{DoxyCompactList}\small\item\em Read value from General purpose registers. \end{DoxyCompactList}\item 
+void \hyperlink{group___r_t_c__18_x_x__43_x_x_ga987c9ab06dc2bb157388ddf9159de813}{Chip\+\_\+\+R\+T\+C\+\_\+\+Calib\+Counter\+Cmd} (\hyperlink{struct_l_p_c___r_t_c___t}{L\+P\+C\+\_\+\+R\+T\+C\+\_\+T} $\ast$p\+R\+TC, \hyperlink{group___l_p_c___types___public___types_gac9a7e9a35d2513ec15c3b537aaa4fba1}{Functional\+State} New\+State)
+\begin{DoxyCompactList}\small\item\em Enable/\+Disable calibration counter in the R\+TC peripheral. \end{DoxyCompactList}\item 
+\hyperlink{group___l_p_c___types___public___macros_ga10b2d890d871e1489bb02b7e70d9bdfb}{S\+T\+A\+T\+IC} \hyperlink{spifi__18xx__43xx_8h_a2eb6f9e0395b47b8d5e3eeae4fe0c116}{I\+N\+L\+I\+NE} void \hyperlink{group___r_t_c__18_x_x__43_x_x_ga4f0a93e9a72f793b5891e2d691a1d35d}{Chip\+\_\+\+R\+T\+C\+\_\+\+Calib\+Config} (\hyperlink{struct_l_p_c___r_t_c___t}{L\+P\+C\+\_\+\+R\+T\+C\+\_\+T} $\ast$p\+R\+TC, uint32\+\_\+t Calib\+Value, uint8\+\_\+t Calib\+Dir)
+\begin{DoxyCompactList}\small\item\em Configures Calibration in the R\+TC peripheral. \end{DoxyCompactList}\item 
+\hyperlink{group___l_p_c___types___public___macros_ga10b2d890d871e1489bb02b7e70d9bdfb}{S\+T\+A\+T\+IC} \hyperlink{spifi__18xx__43xx_8h_a2eb6f9e0395b47b8d5e3eeae4fe0c116}{I\+N\+L\+I\+NE} void \hyperlink{group___r_t_c__18_x_x__43_x_x_gaa43865e87cf61d579a4ee52a307b3e30}{Chip\+\_\+\+R\+T\+C\+\_\+\+Clear\+Int\+Pending} (\hyperlink{struct_l_p_c___r_t_c___t}{L\+P\+C\+\_\+\+R\+T\+C\+\_\+T} $\ast$p\+R\+TC, uint32\+\_\+t Int\+Type)
+\begin{DoxyCompactList}\small\item\em Clear specified Location interrupt pending in the R\+TC peripheral. \end{DoxyCompactList}\item 
+\hyperlink{group___l_p_c___types___public___macros_ga10b2d890d871e1489bb02b7e70d9bdfb}{S\+T\+A\+T\+IC} \hyperlink{spifi__18xx__43xx_8h_a2eb6f9e0395b47b8d5e3eeae4fe0c116}{I\+N\+L\+I\+NE} \hyperlink{group___l_p_c___types___public___types_gab7d263072f745b4f3913fb0afc434c4e}{Int\+Status} \hyperlink{group___r_t_c__18_x_x__43_x_x_gaab21524984ac344d4f508d2dfd6c5098}{Chip\+\_\+\+R\+T\+C\+\_\+\+Get\+Int\+Pending} (\hyperlink{struct_l_p_c___r_t_c___t}{L\+P\+C\+\_\+\+R\+T\+C\+\_\+T} $\ast$p\+R\+TC, uint32\+\_\+t Int\+Type)
+\begin{DoxyCompactList}\small\item\em Check whether if specified location interrupt in the R\+TC peripheral is set or not. \end{DoxyCompactList}\item 
+\hyperlink{group___l_p_c___types___public___macros_ga10b2d890d871e1489bb02b7e70d9bdfb}{S\+T\+A\+T\+IC} \hyperlink{spifi__18xx__43xx_8h_a2eb6f9e0395b47b8d5e3eeae4fe0c116}{I\+N\+L\+I\+NE} void \hyperlink{group___r_t_c__18_x_x__43_x_x_ga522a16f061cbc11f00e2a6681da07ad2}{Chip\+\_\+\+R\+T\+C\+\_\+\+E\+V\+\_\+\+Config} (\hyperlink{struct_l_p_c___r_t_c___t}{L\+P\+C\+\_\+\+R\+T\+C\+\_\+T} $\ast$p\+R\+TC, \hyperlink{group___r_t_c__18_x_x__43_x_x_gaac7e8d7c66860037449fdde1bdfb657b}{R\+T\+C\+\_\+\+E\+V\+\_\+\+C\+H\+A\+N\+N\+E\+L\+\_\+T} ch, uint32\+\_\+t \hyperlink{sdio__18xx__43xx_8c_a8fac2498fe5bd106b35d43af5bc91f6f}{flag})
+\begin{DoxyCompactList}\small\item\em Configure a specific event channel. \end{DoxyCompactList}\item 
+\hyperlink{group___l_p_c___types___public___macros_ga10b2d890d871e1489bb02b7e70d9bdfb}{S\+T\+A\+T\+IC} \hyperlink{spifi__18xx__43xx_8h_a2eb6f9e0395b47b8d5e3eeae4fe0c116}{I\+N\+L\+I\+NE} void \hyperlink{group___r_t_c__18_x_x__43_x_x_ga6b1011cc2afb90d24e7b63eccea42564}{Chip\+\_\+\+R\+T\+C\+\_\+\+E\+V\+\_\+\+Set\+Mode} (\hyperlink{struct_l_p_c___r_t_c___t}{L\+P\+C\+\_\+\+R\+T\+C\+\_\+T} $\ast$p\+R\+TC, \hyperlink{group___r_t_c__18_x_x__43_x_x_gabcbfff4a7d52791dc0b1cdcb078a2a05}{R\+T\+C\+\_\+\+E\+V\+\_\+\+M\+O\+D\+E\+\_\+T} mode)
+\begin{DoxyCompactList}\small\item\em Enable/\+Disable and select clock frequency for Event Monitor/\+Recorder. \end{DoxyCompactList}\item 
+\hyperlink{group___l_p_c___types___public___macros_ga10b2d890d871e1489bb02b7e70d9bdfb}{S\+T\+A\+T\+IC} \hyperlink{spifi__18xx__43xx_8h_a2eb6f9e0395b47b8d5e3eeae4fe0c116}{I\+N\+L\+I\+NE} uint8\+\_\+t \hyperlink{group___r_t_c__18_x_x__43_x_x_gaee85196612badea27e318e8b0b8eaf0b}{Chip\+\_\+\+R\+T\+C\+\_\+\+E\+V\+\_\+\+Get\+Status} (\hyperlink{struct_l_p_c___r_t_c___t}{L\+P\+C\+\_\+\+R\+T\+C\+\_\+T} $\ast$p\+R\+TC)
+\begin{DoxyCompactList}\small\item\em Get Event Monitor/\+Recorder Status. \end{DoxyCompactList}\item 
+\hyperlink{group___l_p_c___types___public___macros_ga10b2d890d871e1489bb02b7e70d9bdfb}{S\+T\+A\+T\+IC} \hyperlink{spifi__18xx__43xx_8h_a2eb6f9e0395b47b8d5e3eeae4fe0c116}{I\+N\+L\+I\+NE} void \hyperlink{group___r_t_c__18_x_x__43_x_x_gaa8609e2618eb4c011a8d8741cebc94c0}{Chip\+\_\+\+R\+T\+C\+\_\+\+E\+V\+\_\+\+Clear\+Status} (\hyperlink{struct_l_p_c___r_t_c___t}{L\+P\+C\+\_\+\+R\+T\+C\+\_\+T} $\ast$p\+R\+TC, uint32\+\_\+t \hyperlink{sdio__18xx__43xx_8c_a8fac2498fe5bd106b35d43af5bc91f6f}{flag})
+\begin{DoxyCompactList}\small\item\em Clear Event Monitor/\+Recorder Status. \end{DoxyCompactList}\item 
+\hyperlink{group___l_p_c___types___public___macros_ga10b2d890d871e1489bb02b7e70d9bdfb}{S\+T\+A\+T\+IC} \hyperlink{spifi__18xx__43xx_8h_a2eb6f9e0395b47b8d5e3eeae4fe0c116}{I\+N\+L\+I\+NE} \hyperlink{group___l_p_c___types___public___types_ga89136caac2e14c55151f527ac02daaff}{Flag\+Status} \hyperlink{group___r_t_c__18_x_x__43_x_x_gada3039d4961d4e849cba1785a61c9915}{Chip\+\_\+\+R\+T\+C\+\_\+\+E\+V\+\_\+\+Get\+Channel\+Status} (\hyperlink{struct_l_p_c___r_t_c___t}{L\+P\+C\+\_\+\+R\+T\+C\+\_\+T} $\ast$p\+R\+TC, \hyperlink{group___r_t_c__18_x_x__43_x_x_gaac7e8d7c66860037449fdde1bdfb657b}{R\+T\+C\+\_\+\+E\+V\+\_\+\+C\+H\+A\+N\+N\+E\+L\+\_\+T} ch)
+\begin{DoxyCompactList}\small\item\em Get status of a specific event channel. \end{DoxyCompactList}\item 
+\hyperlink{group___l_p_c___types___public___macros_ga10b2d890d871e1489bb02b7e70d9bdfb}{S\+T\+A\+T\+IC} \hyperlink{spifi__18xx__43xx_8h_a2eb6f9e0395b47b8d5e3eeae4fe0c116}{I\+N\+L\+I\+NE} void \hyperlink{group___r_t_c__18_x_x__43_x_x_ga34389a184b0362b6255d36594084be80}{Chip\+\_\+\+R\+T\+C\+\_\+\+E\+V\+\_\+\+Clear\+Channel\+Status} (\hyperlink{struct_l_p_c___r_t_c___t}{L\+P\+C\+\_\+\+R\+T\+C\+\_\+T} $\ast$p\+R\+TC, \hyperlink{group___r_t_c__18_x_x__43_x_x_gaac7e8d7c66860037449fdde1bdfb657b}{R\+T\+C\+\_\+\+E\+V\+\_\+\+C\+H\+A\+N\+N\+E\+L\+\_\+T} ch)
+\begin{DoxyCompactList}\small\item\em Clear status of a specific event channel. \end{DoxyCompactList}\item 
+\hyperlink{group___l_p_c___types___public___macros_ga10b2d890d871e1489bb02b7e70d9bdfb}{S\+T\+A\+T\+IC} \hyperlink{spifi__18xx__43xx_8h_a2eb6f9e0395b47b8d5e3eeae4fe0c116}{I\+N\+L\+I\+NE} uint8\+\_\+t \hyperlink{group___r_t_c__18_x_x__43_x_x_ga5e03e0be6371bbd1e778f7e10653f045}{Chip\+\_\+\+R\+T\+C\+\_\+\+E\+V\+\_\+\+Get\+Counter} (\hyperlink{struct_l_p_c___r_t_c___t}{L\+P\+C\+\_\+\+R\+T\+C\+\_\+T} $\ast$p\+R\+TC, \hyperlink{group___r_t_c__18_x_x__43_x_x_gaac7e8d7c66860037449fdde1bdfb657b}{R\+T\+C\+\_\+\+E\+V\+\_\+\+C\+H\+A\+N\+N\+E\+L\+\_\+T} ch)
+\begin{DoxyCompactList}\small\item\em Get counter value of a specific event channel. \end{DoxyCompactList}\item 
+void \hyperlink{group___r_t_c__18_x_x__43_x_x_ga7e3af0c85e9683474f034b2e370181ef}{Chip\+\_\+\+R\+T\+C\+\_\+\+E\+V\+\_\+\+Get\+First\+Time\+Stamp} (\hyperlink{struct_l_p_c___r_t_c___t}{L\+P\+C\+\_\+\+R\+T\+C\+\_\+T} $\ast$p\+R\+TC, \hyperlink{group___r_t_c__18_x_x__43_x_x_gaac7e8d7c66860037449fdde1bdfb657b}{R\+T\+C\+\_\+\+E\+V\+\_\+\+C\+H\+A\+N\+N\+E\+L\+\_\+T} ch, \hyperlink{struct_r_t_c___e_v___t_i_m_e_s_t_a_m_p___t}{R\+T\+C\+\_\+\+E\+V\+\_\+\+T\+I\+M\+E\+S\+T\+A\+M\+P\+\_\+T} $\ast$p\+Time\+Stamp)
+\begin{DoxyCompactList}\small\item\em Get first time stamp of a specific event channel. \end{DoxyCompactList}\item 
+void \hyperlink{group___r_t_c__18_x_x__43_x_x_gab32567fa96fb9be16d3596b6ab64116a}{Chip\+\_\+\+R\+T\+C\+\_\+\+E\+V\+\_\+\+Get\+Last\+Time\+Stamp} (\hyperlink{struct_l_p_c___r_t_c___t}{L\+P\+C\+\_\+\+R\+T\+C\+\_\+T} $\ast$p\+R\+TC, \hyperlink{group___r_t_c__18_x_x__43_x_x_gaac7e8d7c66860037449fdde1bdfb657b}{R\+T\+C\+\_\+\+E\+V\+\_\+\+C\+H\+A\+N\+N\+E\+L\+\_\+T} ch, \hyperlink{struct_r_t_c___e_v___t_i_m_e_s_t_a_m_p___t}{R\+T\+C\+\_\+\+E\+V\+\_\+\+T\+I\+M\+E\+S\+T\+A\+M\+P\+\_\+T} $\ast$p\+Time\+Stamp)
+\begin{DoxyCompactList}\small\item\em Get last time stamp of a specific event channel. \end{DoxyCompactList}\item 
+void \hyperlink{group___r_t_c__18_x_x__43_x_x_gac37fe41fed088f1336797e05674125ff}{Chip\+\_\+\+R\+T\+C\+\_\+\+Init} (\hyperlink{struct_l_p_c___r_t_c___t}{L\+P\+C\+\_\+\+R\+T\+C\+\_\+T} $\ast$p\+R\+TC)
+\begin{DoxyCompactList}\small\item\em Initialize the R\+TC peripheral. \end{DoxyCompactList}\item 
+void \hyperlink{group___r_t_c__18_x_x__43_x_x_ga63cc16f1c4b72523e0e67a6c651f0026}{Chip\+\_\+\+R\+T\+C\+\_\+\+De\+Init} (\hyperlink{struct_l_p_c___r_t_c___t}{L\+P\+C\+\_\+\+R\+T\+C\+\_\+T} $\ast$p\+R\+TC)
+\begin{DoxyCompactList}\small\item\em De-\/initialize the R\+TC peripheral. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+
+
+\subsection{Macro Definition Documentation}
+\mbox{\Hypertarget{group___r_t_c__18_x_x__43_x_x_gafcc754fba01521c5aa4f1775b889e894}\label{group___r_t_c__18_x_x__43_x_x_gafcc754fba01521c5aa4f1775b889e894}} 
+\index{C\+H\+I\+P\+: L\+P\+C18xx/43xx Real Time Clock driver@{C\+H\+I\+P\+: L\+P\+C18xx/43xx Real Time Clock driver}!R\+T\+C\+\_\+\+A\+M\+R\+\_\+\+C\+I\+I\+R\+\_\+\+B\+I\+T\+M\+A\+SK@{R\+T\+C\+\_\+\+A\+M\+R\+\_\+\+C\+I\+I\+R\+\_\+\+B\+I\+T\+M\+A\+SK}}
+\index{R\+T\+C\+\_\+\+A\+M\+R\+\_\+\+C\+I\+I\+R\+\_\+\+B\+I\+T\+M\+A\+SK@{R\+T\+C\+\_\+\+A\+M\+R\+\_\+\+C\+I\+I\+R\+\_\+\+B\+I\+T\+M\+A\+SK}!C\+H\+I\+P\+: L\+P\+C18xx/43xx Real Time Clock driver@{C\+H\+I\+P\+: L\+P\+C18xx/43xx Real Time Clock driver}}
+\subsubsection{\texorpdfstring{R\+T\+C\+\_\+\+A\+M\+R\+\_\+\+C\+I\+I\+R\+\_\+\+B\+I\+T\+M\+A\+SK}{RTC\_AMR\_CIIR\_BITMASK}}
+{\footnotesize\ttfamily \#define R\+T\+C\+\_\+\+A\+M\+R\+\_\+\+C\+I\+I\+R\+\_\+\+B\+I\+T\+M\+A\+SK~((0x\+F\+F))}
+
+C\+I\+IR bit mask 
+
+Definition at line 147 of file rtc\+\_\+18xx\+\_\+43xx.\+h.
+
+\mbox{\Hypertarget{group___r_t_c__18_x_x__43_x_x_gacd23cffe1367b6bb612fb37ebdf2e279}\label{group___r_t_c__18_x_x__43_x_x_gacd23cffe1367b6bb612fb37ebdf2e279}} 
+\index{C\+H\+I\+P\+: L\+P\+C18xx/43xx Real Time Clock driver@{C\+H\+I\+P\+: L\+P\+C18xx/43xx Real Time Clock driver}!R\+T\+C\+\_\+\+A\+M\+R\+\_\+\+C\+I\+I\+R\+\_\+\+I\+M\+D\+OM@{R\+T\+C\+\_\+\+A\+M\+R\+\_\+\+C\+I\+I\+R\+\_\+\+I\+M\+D\+OM}}
+\index{R\+T\+C\+\_\+\+A\+M\+R\+\_\+\+C\+I\+I\+R\+\_\+\+I\+M\+D\+OM@{R\+T\+C\+\_\+\+A\+M\+R\+\_\+\+C\+I\+I\+R\+\_\+\+I\+M\+D\+OM}!C\+H\+I\+P\+: L\+P\+C18xx/43xx Real Time Clock driver@{C\+H\+I\+P\+: L\+P\+C18xx/43xx Real Time Clock driver}}
+\subsubsection{\texorpdfstring{R\+T\+C\+\_\+\+A\+M\+R\+\_\+\+C\+I\+I\+R\+\_\+\+I\+M\+D\+OM}{RTC\_AMR\_CIIR\_IMDOM}}
+{\footnotesize\ttfamily \#define R\+T\+C\+\_\+\+A\+M\+R\+\_\+\+C\+I\+I\+R\+\_\+\+I\+M\+D\+OM~((1 $<$$<$ 3))}
+
+Counter Increment Interrupt bit for day of month 
+
+Definition at line 137 of file rtc\+\_\+18xx\+\_\+43xx.\+h.
+
+\mbox{\Hypertarget{group___r_t_c__18_x_x__43_x_x_ga6494d5878d87398a4519e90a367bffe5}\label{group___r_t_c__18_x_x__43_x_x_ga6494d5878d87398a4519e90a367bffe5}} 
+\index{C\+H\+I\+P\+: L\+P\+C18xx/43xx Real Time Clock driver@{C\+H\+I\+P\+: L\+P\+C18xx/43xx Real Time Clock driver}!R\+T\+C\+\_\+\+A\+M\+R\+\_\+\+C\+I\+I\+R\+\_\+\+I\+M\+D\+OW@{R\+T\+C\+\_\+\+A\+M\+R\+\_\+\+C\+I\+I\+R\+\_\+\+I\+M\+D\+OW}}
+\index{R\+T\+C\+\_\+\+A\+M\+R\+\_\+\+C\+I\+I\+R\+\_\+\+I\+M\+D\+OW@{R\+T\+C\+\_\+\+A\+M\+R\+\_\+\+C\+I\+I\+R\+\_\+\+I\+M\+D\+OW}!C\+H\+I\+P\+: L\+P\+C18xx/43xx Real Time Clock driver@{C\+H\+I\+P\+: L\+P\+C18xx/43xx Real Time Clock driver}}
+\subsubsection{\texorpdfstring{R\+T\+C\+\_\+\+A\+M\+R\+\_\+\+C\+I\+I\+R\+\_\+\+I\+M\+D\+OW}{RTC\_AMR\_CIIR\_IMDOW}}
+{\footnotesize\ttfamily \#define R\+T\+C\+\_\+\+A\+M\+R\+\_\+\+C\+I\+I\+R\+\_\+\+I\+M\+D\+OW~((1 $<$$<$ 4))}
+
+Counter Increment Interrupt bit for day of week 
+
+Definition at line 139 of file rtc\+\_\+18xx\+\_\+43xx.\+h.
+
+\mbox{\Hypertarget{group___r_t_c__18_x_x__43_x_x_gaec7d51e7a503514c1d71bf9428c6f3e8}\label{group___r_t_c__18_x_x__43_x_x_gaec7d51e7a503514c1d71bf9428c6f3e8}} 
+\index{C\+H\+I\+P\+: L\+P\+C18xx/43xx Real Time Clock driver@{C\+H\+I\+P\+: L\+P\+C18xx/43xx Real Time Clock driver}!R\+T\+C\+\_\+\+A\+M\+R\+\_\+\+C\+I\+I\+R\+\_\+\+I\+M\+D\+OY@{R\+T\+C\+\_\+\+A\+M\+R\+\_\+\+C\+I\+I\+R\+\_\+\+I\+M\+D\+OY}}
+\index{R\+T\+C\+\_\+\+A\+M\+R\+\_\+\+C\+I\+I\+R\+\_\+\+I\+M\+D\+OY@{R\+T\+C\+\_\+\+A\+M\+R\+\_\+\+C\+I\+I\+R\+\_\+\+I\+M\+D\+OY}!C\+H\+I\+P\+: L\+P\+C18xx/43xx Real Time Clock driver@{C\+H\+I\+P\+: L\+P\+C18xx/43xx Real Time Clock driver}}
+\subsubsection{\texorpdfstring{R\+T\+C\+\_\+\+A\+M\+R\+\_\+\+C\+I\+I\+R\+\_\+\+I\+M\+D\+OY}{RTC\_AMR\_CIIR\_IMDOY}}
+{\footnotesize\ttfamily \#define R\+T\+C\+\_\+\+A\+M\+R\+\_\+\+C\+I\+I\+R\+\_\+\+I\+M\+D\+OY~((1 $<$$<$ 5))}
+
+Counter Increment Interrupt bit for day of year 
+
+Definition at line 141 of file rtc\+\_\+18xx\+\_\+43xx.\+h.
+
+\mbox{\Hypertarget{group___r_t_c__18_x_x__43_x_x_ga4e20983ef05abf10773186d3193270f9}\label{group___r_t_c__18_x_x__43_x_x_ga4e20983ef05abf10773186d3193270f9}} 
+\index{C\+H\+I\+P\+: L\+P\+C18xx/43xx Real Time Clock driver@{C\+H\+I\+P\+: L\+P\+C18xx/43xx Real Time Clock driver}!R\+T\+C\+\_\+\+A\+M\+R\+\_\+\+C\+I\+I\+R\+\_\+\+I\+M\+H\+O\+UR@{R\+T\+C\+\_\+\+A\+M\+R\+\_\+\+C\+I\+I\+R\+\_\+\+I\+M\+H\+O\+UR}}
+\index{R\+T\+C\+\_\+\+A\+M\+R\+\_\+\+C\+I\+I\+R\+\_\+\+I\+M\+H\+O\+UR@{R\+T\+C\+\_\+\+A\+M\+R\+\_\+\+C\+I\+I\+R\+\_\+\+I\+M\+H\+O\+UR}!C\+H\+I\+P\+: L\+P\+C18xx/43xx Real Time Clock driver@{C\+H\+I\+P\+: L\+P\+C18xx/43xx Real Time Clock driver}}
+\subsubsection{\texorpdfstring{R\+T\+C\+\_\+\+A\+M\+R\+\_\+\+C\+I\+I\+R\+\_\+\+I\+M\+H\+O\+UR}{RTC\_AMR\_CIIR\_IMHOUR}}
+{\footnotesize\ttfamily \#define R\+T\+C\+\_\+\+A\+M\+R\+\_\+\+C\+I\+I\+R\+\_\+\+I\+M\+H\+O\+UR~((1 $<$$<$ 2))}
+
+Counter Increment Interrupt bit for hour 
+
+Definition at line 135 of file rtc\+\_\+18xx\+\_\+43xx.\+h.
+
+\mbox{\Hypertarget{group___r_t_c__18_x_x__43_x_x_ga3d67e7c72ec7bcd0831628841496cbc6}\label{group___r_t_c__18_x_x__43_x_x_ga3d67e7c72ec7bcd0831628841496cbc6}} 
+\index{C\+H\+I\+P\+: L\+P\+C18xx/43xx Real Time Clock driver@{C\+H\+I\+P\+: L\+P\+C18xx/43xx Real Time Clock driver}!R\+T\+C\+\_\+\+A\+M\+R\+\_\+\+C\+I\+I\+R\+\_\+\+I\+M\+M\+IN@{R\+T\+C\+\_\+\+A\+M\+R\+\_\+\+C\+I\+I\+R\+\_\+\+I\+M\+M\+IN}}
+\index{R\+T\+C\+\_\+\+A\+M\+R\+\_\+\+C\+I\+I\+R\+\_\+\+I\+M\+M\+IN@{R\+T\+C\+\_\+\+A\+M\+R\+\_\+\+C\+I\+I\+R\+\_\+\+I\+M\+M\+IN}!C\+H\+I\+P\+: L\+P\+C18xx/43xx Real Time Clock driver@{C\+H\+I\+P\+: L\+P\+C18xx/43xx Real Time Clock driver}}
+\subsubsection{\texorpdfstring{R\+T\+C\+\_\+\+A\+M\+R\+\_\+\+C\+I\+I\+R\+\_\+\+I\+M\+M\+IN}{RTC\_AMR\_CIIR\_IMMIN}}
+{\footnotesize\ttfamily \#define R\+T\+C\+\_\+\+A\+M\+R\+\_\+\+C\+I\+I\+R\+\_\+\+I\+M\+M\+IN~((1 $<$$<$ 1))}
+
+Counter Increment Interrupt bit for minute 
+
+Definition at line 133 of file rtc\+\_\+18xx\+\_\+43xx.\+h.
+
+\mbox{\Hypertarget{group___r_t_c__18_x_x__43_x_x_ga841dfecc952d8b6d275e799cb9e89c02}\label{group___r_t_c__18_x_x__43_x_x_ga841dfecc952d8b6d275e799cb9e89c02}} 
+\index{C\+H\+I\+P\+: L\+P\+C18xx/43xx Real Time Clock driver@{C\+H\+I\+P\+: L\+P\+C18xx/43xx Real Time Clock driver}!R\+T\+C\+\_\+\+A\+M\+R\+\_\+\+C\+I\+I\+R\+\_\+\+I\+M\+M\+ON@{R\+T\+C\+\_\+\+A\+M\+R\+\_\+\+C\+I\+I\+R\+\_\+\+I\+M\+M\+ON}}
+\index{R\+T\+C\+\_\+\+A\+M\+R\+\_\+\+C\+I\+I\+R\+\_\+\+I\+M\+M\+ON@{R\+T\+C\+\_\+\+A\+M\+R\+\_\+\+C\+I\+I\+R\+\_\+\+I\+M\+M\+ON}!C\+H\+I\+P\+: L\+P\+C18xx/43xx Real Time Clock driver@{C\+H\+I\+P\+: L\+P\+C18xx/43xx Real Time Clock driver}}
+\subsubsection{\texorpdfstring{R\+T\+C\+\_\+\+A\+M\+R\+\_\+\+C\+I\+I\+R\+\_\+\+I\+M\+M\+ON}{RTC\_AMR\_CIIR\_IMMON}}
+{\footnotesize\ttfamily \#define R\+T\+C\+\_\+\+A\+M\+R\+\_\+\+C\+I\+I\+R\+\_\+\+I\+M\+M\+ON~((1 $<$$<$ 6))}
+
+Counter Increment Interrupt bit for month 
+
+Definition at line 143 of file rtc\+\_\+18xx\+\_\+43xx.\+h.
+
+\mbox{\Hypertarget{group___r_t_c__18_x_x__43_x_x_ga30c785b6017020d4c0b61b22aff30aac}\label{group___r_t_c__18_x_x__43_x_x_ga30c785b6017020d4c0b61b22aff30aac}} 
+\index{C\+H\+I\+P\+: L\+P\+C18xx/43xx Real Time Clock driver@{C\+H\+I\+P\+: L\+P\+C18xx/43xx Real Time Clock driver}!R\+T\+C\+\_\+\+A\+M\+R\+\_\+\+C\+I\+I\+R\+\_\+\+I\+M\+S\+EC@{R\+T\+C\+\_\+\+A\+M\+R\+\_\+\+C\+I\+I\+R\+\_\+\+I\+M\+S\+EC}}
+\index{R\+T\+C\+\_\+\+A\+M\+R\+\_\+\+C\+I\+I\+R\+\_\+\+I\+M\+S\+EC@{R\+T\+C\+\_\+\+A\+M\+R\+\_\+\+C\+I\+I\+R\+\_\+\+I\+M\+S\+EC}!C\+H\+I\+P\+: L\+P\+C18xx/43xx Real Time Clock driver@{C\+H\+I\+P\+: L\+P\+C18xx/43xx Real Time Clock driver}}
+\subsubsection{\texorpdfstring{R\+T\+C\+\_\+\+A\+M\+R\+\_\+\+C\+I\+I\+R\+\_\+\+I\+M\+S\+EC}{RTC\_AMR\_CIIR\_IMSEC}}
+{\footnotesize\ttfamily \#define R\+T\+C\+\_\+\+A\+M\+R\+\_\+\+C\+I\+I\+R\+\_\+\+I\+M\+S\+EC~((1 $<$$<$ 0))}
+
+Counter Increment Interrupt bit for second 
+
+Definition at line 131 of file rtc\+\_\+18xx\+\_\+43xx.\+h.
+
+\mbox{\Hypertarget{group___r_t_c__18_x_x__43_x_x_ga56b312d9e291685d843f6dae171f4441}\label{group___r_t_c__18_x_x__43_x_x_ga56b312d9e291685d843f6dae171f4441}} 
+\index{C\+H\+I\+P\+: L\+P\+C18xx/43xx Real Time Clock driver@{C\+H\+I\+P\+: L\+P\+C18xx/43xx Real Time Clock driver}!R\+T\+C\+\_\+\+A\+M\+R\+\_\+\+C\+I\+I\+R\+\_\+\+I\+M\+Y\+E\+AR@{R\+T\+C\+\_\+\+A\+M\+R\+\_\+\+C\+I\+I\+R\+\_\+\+I\+M\+Y\+E\+AR}}
+\index{R\+T\+C\+\_\+\+A\+M\+R\+\_\+\+C\+I\+I\+R\+\_\+\+I\+M\+Y\+E\+AR@{R\+T\+C\+\_\+\+A\+M\+R\+\_\+\+C\+I\+I\+R\+\_\+\+I\+M\+Y\+E\+AR}!C\+H\+I\+P\+: L\+P\+C18xx/43xx Real Time Clock driver@{C\+H\+I\+P\+: L\+P\+C18xx/43xx Real Time Clock driver}}
+\subsubsection{\texorpdfstring{R\+T\+C\+\_\+\+A\+M\+R\+\_\+\+C\+I\+I\+R\+\_\+\+I\+M\+Y\+E\+AR}{RTC\_AMR\_CIIR\_IMYEAR}}
+{\footnotesize\ttfamily \#define R\+T\+C\+\_\+\+A\+M\+R\+\_\+\+C\+I\+I\+R\+\_\+\+I\+M\+Y\+E\+AR~((1 $<$$<$ 7))}
+
+Counter Increment Interrupt bit for year 
+
+Definition at line 145 of file rtc\+\_\+18xx\+\_\+43xx.\+h.
+
+\mbox{\Hypertarget{group___r_t_c__18_x_x__43_x_x_gaafb1215dfd0f9bbe198274689a1f1584}\label{group___r_t_c__18_x_x__43_x_x_gaafb1215dfd0f9bbe198274689a1f1584}} 
+\index{C\+H\+I\+P\+: L\+P\+C18xx/43xx Real Time Clock driver@{C\+H\+I\+P\+: L\+P\+C18xx/43xx Real Time Clock driver}!R\+T\+C\+\_\+\+A\+U\+X\+\_\+\+R\+T\+C\+\_\+\+O\+S\+CF@{R\+T\+C\+\_\+\+A\+U\+X\+\_\+\+R\+T\+C\+\_\+\+O\+S\+CF}}
+\index{R\+T\+C\+\_\+\+A\+U\+X\+\_\+\+R\+T\+C\+\_\+\+O\+S\+CF@{R\+T\+C\+\_\+\+A\+U\+X\+\_\+\+R\+T\+C\+\_\+\+O\+S\+CF}!C\+H\+I\+P\+: L\+P\+C18xx/43xx Real Time Clock driver@{C\+H\+I\+P\+: L\+P\+C18xx/43xx Real Time Clock driver}}
+\subsubsection{\texorpdfstring{R\+T\+C\+\_\+\+A\+U\+X\+\_\+\+R\+T\+C\+\_\+\+O\+S\+CF}{RTC\_AUX\_RTC\_OSCF}}
+{\footnotesize\ttfamily \#define R\+T\+C\+\_\+\+A\+U\+X\+\_\+\+R\+T\+C\+\_\+\+O\+S\+CF~((1 $<$$<$ 4))}
+
+R\+TC Oscillator Fail detect flag 
+
+Definition at line 153 of file rtc\+\_\+18xx\+\_\+43xx.\+h.
+
+\mbox{\Hypertarget{group___r_t_c__18_x_x__43_x_x_ga12b8af6f1d4757d19c1b09d85d3fc497}\label{group___r_t_c__18_x_x__43_x_x_ga12b8af6f1d4757d19c1b09d85d3fc497}} 
+\index{C\+H\+I\+P\+: L\+P\+C18xx/43xx Real Time Clock driver@{C\+H\+I\+P\+: L\+P\+C18xx/43xx Real Time Clock driver}!R\+T\+C\+\_\+\+A\+U\+X\+E\+N\+\_\+\+R\+T\+C\+\_\+\+O\+S\+C\+F\+EN@{R\+T\+C\+\_\+\+A\+U\+X\+E\+N\+\_\+\+R\+T\+C\+\_\+\+O\+S\+C\+F\+EN}}
+\index{R\+T\+C\+\_\+\+A\+U\+X\+E\+N\+\_\+\+R\+T\+C\+\_\+\+O\+S\+C\+F\+EN@{R\+T\+C\+\_\+\+A\+U\+X\+E\+N\+\_\+\+R\+T\+C\+\_\+\+O\+S\+C\+F\+EN}!C\+H\+I\+P\+: L\+P\+C18xx/43xx Real Time Clock driver@{C\+H\+I\+P\+: L\+P\+C18xx/43xx Real Time Clock driver}}
+\subsubsection{\texorpdfstring{R\+T\+C\+\_\+\+A\+U\+X\+E\+N\+\_\+\+R\+T\+C\+\_\+\+O\+S\+C\+F\+EN}{RTC\_AUXEN\_RTC\_OSCFEN}}
+{\footnotesize\ttfamily \#define R\+T\+C\+\_\+\+A\+U\+X\+E\+N\+\_\+\+R\+T\+C\+\_\+\+O\+S\+C\+F\+EN~((1 $<$$<$ 4))}
+
+Oscillator Fail Detect interrupt enable 
+
+Definition at line 159 of file rtc\+\_\+18xx\+\_\+43xx.\+h.
+
+\mbox{\Hypertarget{group___r_t_c__18_x_x__43_x_x_ga0a3b0243c2fd9528066365ef74c45cf4}\label{group___r_t_c__18_x_x__43_x_x_ga0a3b0243c2fd9528066365ef74c45cf4}} 
+\index{C\+H\+I\+P\+: L\+P\+C18xx/43xx Real Time Clock driver@{C\+H\+I\+P\+: L\+P\+C18xx/43xx Real Time Clock driver}!R\+T\+C\+\_\+\+C\+A\+L\+I\+B\+\_\+\+D\+I\+R\+\_\+\+B\+A\+C\+K\+W\+A\+RD@{R\+T\+C\+\_\+\+C\+A\+L\+I\+B\+\_\+\+D\+I\+R\+\_\+\+B\+A\+C\+K\+W\+A\+RD}}
+\index{R\+T\+C\+\_\+\+C\+A\+L\+I\+B\+\_\+\+D\+I\+R\+\_\+\+B\+A\+C\+K\+W\+A\+RD@{R\+T\+C\+\_\+\+C\+A\+L\+I\+B\+\_\+\+D\+I\+R\+\_\+\+B\+A\+C\+K\+W\+A\+RD}!C\+H\+I\+P\+: L\+P\+C18xx/43xx Real Time Clock driver@{C\+H\+I\+P\+: L\+P\+C18xx/43xx Real Time Clock driver}}
+\subsubsection{\texorpdfstring{R\+T\+C\+\_\+\+C\+A\+L\+I\+B\+\_\+\+D\+I\+R\+\_\+\+B\+A\+C\+K\+W\+A\+RD}{RTC\_CALIB\_DIR\_BACKWARD}}
+{\footnotesize\ttfamily \#define R\+T\+C\+\_\+\+C\+A\+L\+I\+B\+\_\+\+D\+I\+R\+\_\+\+B\+A\+C\+K\+W\+A\+RD~((uint8\+\_\+t) (1))}
+
+
+
+Definition at line 224 of file rtc\+\_\+18xx\+\_\+43xx.\+h.
+
+\mbox{\Hypertarget{group___r_t_c__18_x_x__43_x_x_ga4f53042ce8b730a4b2c6eb40b856e4e8}\label{group___r_t_c__18_x_x__43_x_x_ga4f53042ce8b730a4b2c6eb40b856e4e8}} 
+\index{C\+H\+I\+P\+: L\+P\+C18xx/43xx Real Time Clock driver@{C\+H\+I\+P\+: L\+P\+C18xx/43xx Real Time Clock driver}!R\+T\+C\+\_\+\+C\+A\+L\+I\+B\+\_\+\+D\+I\+R\+\_\+\+F\+O\+R\+W\+A\+RD@{R\+T\+C\+\_\+\+C\+A\+L\+I\+B\+\_\+\+D\+I\+R\+\_\+\+F\+O\+R\+W\+A\+RD}}
+\index{R\+T\+C\+\_\+\+C\+A\+L\+I\+B\+\_\+\+D\+I\+R\+\_\+\+F\+O\+R\+W\+A\+RD@{R\+T\+C\+\_\+\+C\+A\+L\+I\+B\+\_\+\+D\+I\+R\+\_\+\+F\+O\+R\+W\+A\+RD}!C\+H\+I\+P\+: L\+P\+C18xx/43xx Real Time Clock driver@{C\+H\+I\+P\+: L\+P\+C18xx/43xx Real Time Clock driver}}
+\subsubsection{\texorpdfstring{R\+T\+C\+\_\+\+C\+A\+L\+I\+B\+\_\+\+D\+I\+R\+\_\+\+F\+O\+R\+W\+A\+RD}{RTC\_CALIB\_DIR\_FORWARD}}
+{\footnotesize\ttfamily \#define R\+T\+C\+\_\+\+C\+A\+L\+I\+B\+\_\+\+D\+I\+R\+\_\+\+F\+O\+R\+W\+A\+RD~((uint8\+\_\+t) (0))}
+
+Calibration definitions 
+
+Definition at line 223 of file rtc\+\_\+18xx\+\_\+43xx.\+h.
+
+\mbox{\Hypertarget{group___r_t_c__18_x_x__43_x_x_gafe263620e5d0709ddf51abfdf408c770}\label{group___r_t_c__18_x_x__43_x_x_gafe263620e5d0709ddf51abfdf408c770}} 
+\index{C\+H\+I\+P\+: L\+P\+C18xx/43xx Real Time Clock driver@{C\+H\+I\+P\+: L\+P\+C18xx/43xx Real Time Clock driver}!R\+T\+C\+\_\+\+C\+A\+L\+I\+B\+R\+A\+T\+I\+O\+N\+\_\+\+C\+A\+L\+V\+A\+L\+\_\+\+M\+A\+SK@{R\+T\+C\+\_\+\+C\+A\+L\+I\+B\+R\+A\+T\+I\+O\+N\+\_\+\+C\+A\+L\+V\+A\+L\+\_\+\+M\+A\+SK}}
+\index{R\+T\+C\+\_\+\+C\+A\+L\+I\+B\+R\+A\+T\+I\+O\+N\+\_\+\+C\+A\+L\+V\+A\+L\+\_\+\+M\+A\+SK@{R\+T\+C\+\_\+\+C\+A\+L\+I\+B\+R\+A\+T\+I\+O\+N\+\_\+\+C\+A\+L\+V\+A\+L\+\_\+\+M\+A\+SK}!C\+H\+I\+P\+: L\+P\+C18xx/43xx Real Time Clock driver@{C\+H\+I\+P\+: L\+P\+C18xx/43xx Real Time Clock driver}}
+\subsubsection{\texorpdfstring{R\+T\+C\+\_\+\+C\+A\+L\+I\+B\+R\+A\+T\+I\+O\+N\+\_\+\+C\+A\+L\+V\+A\+L\+\_\+\+M\+A\+SK}{RTC\_CALIBRATION\_CALVAL\_MASK}}
+{\footnotesize\ttfamily \#define R\+T\+C\+\_\+\+C\+A\+L\+I\+B\+R\+A\+T\+I\+O\+N\+\_\+\+C\+A\+L\+V\+A\+L\+\_\+\+M\+A\+SK~((0x1\+F\+F\+F\+F))}
+
+Calibration value 
+
+Definition at line 217 of file rtc\+\_\+18xx\+\_\+43xx.\+h.
+
+\mbox{\Hypertarget{group___r_t_c__18_x_x__43_x_x_gae818a2f408ec0a1025ab3f02947d4b84}\label{group___r_t_c__18_x_x__43_x_x_gae818a2f408ec0a1025ab3f02947d4b84}} 
+\index{C\+H\+I\+P\+: L\+P\+C18xx/43xx Real Time Clock driver@{C\+H\+I\+P\+: L\+P\+C18xx/43xx Real Time Clock driver}!R\+T\+C\+\_\+\+C\+A\+L\+I\+B\+R\+A\+T\+I\+O\+N\+\_\+\+L\+I\+B\+D\+IR@{R\+T\+C\+\_\+\+C\+A\+L\+I\+B\+R\+A\+T\+I\+O\+N\+\_\+\+L\+I\+B\+D\+IR}}
+\index{R\+T\+C\+\_\+\+C\+A\+L\+I\+B\+R\+A\+T\+I\+O\+N\+\_\+\+L\+I\+B\+D\+IR@{R\+T\+C\+\_\+\+C\+A\+L\+I\+B\+R\+A\+T\+I\+O\+N\+\_\+\+L\+I\+B\+D\+IR}!C\+H\+I\+P\+: L\+P\+C18xx/43xx Real Time Clock driver@{C\+H\+I\+P\+: L\+P\+C18xx/43xx Real Time Clock driver}}
+\subsubsection{\texorpdfstring{R\+T\+C\+\_\+\+C\+A\+L\+I\+B\+R\+A\+T\+I\+O\+N\+\_\+\+L\+I\+B\+D\+IR}{RTC\_CALIBRATION\_LIBDIR}}
+{\footnotesize\ttfamily \#define R\+T\+C\+\_\+\+C\+A\+L\+I\+B\+R\+A\+T\+I\+O\+N\+\_\+\+L\+I\+B\+D\+IR~((1 $<$$<$ 17))}
+
+Calibration direction 
+
+Definition at line 219 of file rtc\+\_\+18xx\+\_\+43xx.\+h.
+
+\mbox{\Hypertarget{group___r_t_c__18_x_x__43_x_x_gaeb077cfbe5f74f3b15ff72fed96abfe6}\label{group___r_t_c__18_x_x__43_x_x_gaeb077cfbe5f74f3b15ff72fed96abfe6}} 
+\index{C\+H\+I\+P\+: L\+P\+C18xx/43xx Real Time Clock driver@{C\+H\+I\+P\+: L\+P\+C18xx/43xx Real Time Clock driver}!R\+T\+C\+\_\+\+C\+A\+L\+I\+B\+R\+A\+T\+I\+O\+N\+\_\+\+M\+AX@{R\+T\+C\+\_\+\+C\+A\+L\+I\+B\+R\+A\+T\+I\+O\+N\+\_\+\+M\+AX}}
+\index{R\+T\+C\+\_\+\+C\+A\+L\+I\+B\+R\+A\+T\+I\+O\+N\+\_\+\+M\+AX@{R\+T\+C\+\_\+\+C\+A\+L\+I\+B\+R\+A\+T\+I\+O\+N\+\_\+\+M\+AX}!C\+H\+I\+P\+: L\+P\+C18xx/43xx Real Time Clock driver@{C\+H\+I\+P\+: L\+P\+C18xx/43xx Real Time Clock driver}}
+\subsubsection{\texorpdfstring{R\+T\+C\+\_\+\+C\+A\+L\+I\+B\+R\+A\+T\+I\+O\+N\+\_\+\+M\+AX}{RTC\_CALIBRATION\_MAX}}
+{\footnotesize\ttfamily \#define R\+T\+C\+\_\+\+C\+A\+L\+I\+B\+R\+A\+T\+I\+O\+N\+\_\+\+M\+AX~((0x20000))}
+
+Calibration max value 
+
+Definition at line 221 of file rtc\+\_\+18xx\+\_\+43xx.\+h.
+
+\mbox{\Hypertarget{group___r_t_c__18_x_x__43_x_x_gadc461b6f544d66841e09499b2b9734c7}\label{group___r_t_c__18_x_x__43_x_x_gadc461b6f544d66841e09499b2b9734c7}} 
+\index{C\+H\+I\+P\+: L\+P\+C18xx/43xx Real Time Clock driver@{C\+H\+I\+P\+: L\+P\+C18xx/43xx Real Time Clock driver}!R\+T\+C\+\_\+\+C\+C\+R\+\_\+\+B\+I\+T\+M\+A\+SK@{R\+T\+C\+\_\+\+C\+C\+R\+\_\+\+B\+I\+T\+M\+A\+SK}}
+\index{R\+T\+C\+\_\+\+C\+C\+R\+\_\+\+B\+I\+T\+M\+A\+SK@{R\+T\+C\+\_\+\+C\+C\+R\+\_\+\+B\+I\+T\+M\+A\+SK}!C\+H\+I\+P\+: L\+P\+C18xx/43xx Real Time Clock driver@{C\+H\+I\+P\+: L\+P\+C18xx/43xx Real Time Clock driver}}
+\subsubsection{\texorpdfstring{R\+T\+C\+\_\+\+C\+C\+R\+\_\+\+B\+I\+T\+M\+A\+SK}{RTC\_CCR\_BITMASK}}
+{\footnotesize\ttfamily \#define R\+T\+C\+\_\+\+C\+C\+R\+\_\+\+B\+I\+T\+M\+A\+SK~((0x00000013))}
+
+C\+CR register mask 
+
+Definition at line 119 of file rtc\+\_\+18xx\+\_\+43xx.\+h.
+
+\mbox{\Hypertarget{group___r_t_c__18_x_x__43_x_x_gaeb77b2340d896fae77ea670bb70e972e}\label{group___r_t_c__18_x_x__43_x_x_gaeb77b2340d896fae77ea670bb70e972e}} 
+\index{C\+H\+I\+P\+: L\+P\+C18xx/43xx Real Time Clock driver@{C\+H\+I\+P\+: L\+P\+C18xx/43xx Real Time Clock driver}!R\+T\+C\+\_\+\+C\+C\+R\+\_\+\+C\+C\+A\+L\+EN@{R\+T\+C\+\_\+\+C\+C\+R\+\_\+\+C\+C\+A\+L\+EN}}
+\index{R\+T\+C\+\_\+\+C\+C\+R\+\_\+\+C\+C\+A\+L\+EN@{R\+T\+C\+\_\+\+C\+C\+R\+\_\+\+C\+C\+A\+L\+EN}!C\+H\+I\+P\+: L\+P\+C18xx/43xx Real Time Clock driver@{C\+H\+I\+P\+: L\+P\+C18xx/43xx Real Time Clock driver}}
+\subsubsection{\texorpdfstring{R\+T\+C\+\_\+\+C\+C\+R\+\_\+\+C\+C\+A\+L\+EN}{RTC\_CCR\_CCALEN}}
+{\footnotesize\ttfamily \#define R\+T\+C\+\_\+\+C\+C\+R\+\_\+\+C\+C\+A\+L\+EN~((1 $<$$<$ 4))}
+
+Calibration counter enable 
+
+Definition at line 125 of file rtc\+\_\+18xx\+\_\+43xx.\+h.
+
+\mbox{\Hypertarget{group___r_t_c__18_x_x__43_x_x_gad08af035635f5acd7931cb982f95e771}\label{group___r_t_c__18_x_x__43_x_x_gad08af035635f5acd7931cb982f95e771}} 
+\index{C\+H\+I\+P\+: L\+P\+C18xx/43xx Real Time Clock driver@{C\+H\+I\+P\+: L\+P\+C18xx/43xx Real Time Clock driver}!R\+T\+C\+\_\+\+C\+C\+R\+\_\+\+C\+L\+K\+EN@{R\+T\+C\+\_\+\+C\+C\+R\+\_\+\+C\+L\+K\+EN}}
+\index{R\+T\+C\+\_\+\+C\+C\+R\+\_\+\+C\+L\+K\+EN@{R\+T\+C\+\_\+\+C\+C\+R\+\_\+\+C\+L\+K\+EN}!C\+H\+I\+P\+: L\+P\+C18xx/43xx Real Time Clock driver@{C\+H\+I\+P\+: L\+P\+C18xx/43xx Real Time Clock driver}}
+\subsubsection{\texorpdfstring{R\+T\+C\+\_\+\+C\+C\+R\+\_\+\+C\+L\+K\+EN}{RTC\_CCR\_CLKEN}}
+{\footnotesize\ttfamily \#define R\+T\+C\+\_\+\+C\+C\+R\+\_\+\+C\+L\+K\+EN~((1 $<$$<$ 0))}
+
+Clock enable 
+
+Definition at line 121 of file rtc\+\_\+18xx\+\_\+43xx.\+h.
+
+\mbox{\Hypertarget{group___r_t_c__18_x_x__43_x_x_ga70900054432c82dad7d63d4598502923}\label{group___r_t_c__18_x_x__43_x_x_ga70900054432c82dad7d63d4598502923}} 
+\index{C\+H\+I\+P\+: L\+P\+C18xx/43xx Real Time Clock driver@{C\+H\+I\+P\+: L\+P\+C18xx/43xx Real Time Clock driver}!R\+T\+C\+\_\+\+C\+C\+R\+\_\+\+C\+T\+C\+R\+ST@{R\+T\+C\+\_\+\+C\+C\+R\+\_\+\+C\+T\+C\+R\+ST}}
+\index{R\+T\+C\+\_\+\+C\+C\+R\+\_\+\+C\+T\+C\+R\+ST@{R\+T\+C\+\_\+\+C\+C\+R\+\_\+\+C\+T\+C\+R\+ST}!C\+H\+I\+P\+: L\+P\+C18xx/43xx Real Time Clock driver@{C\+H\+I\+P\+: L\+P\+C18xx/43xx Real Time Clock driver}}
+\subsubsection{\texorpdfstring{R\+T\+C\+\_\+\+C\+C\+R\+\_\+\+C\+T\+C\+R\+ST}{RTC\_CCR\_CTCRST}}
+{\footnotesize\ttfamily \#define R\+T\+C\+\_\+\+C\+C\+R\+\_\+\+C\+T\+C\+R\+ST~((1 $<$$<$ 1))}
+
+Clock reset 
+
+Definition at line 123 of file rtc\+\_\+18xx\+\_\+43xx.\+h.
+
+\mbox{\Hypertarget{group___r_t_c__18_x_x__43_x_x_gaee63196753f1c3ce9621a780c2fae3c9}\label{group___r_t_c__18_x_x__43_x_x_gaee63196753f1c3ce9621a780c2fae3c9}} 
+\index{C\+H\+I\+P\+: L\+P\+C18xx/43xx Real Time Clock driver@{C\+H\+I\+P\+: L\+P\+C18xx/43xx Real Time Clock driver}!R\+T\+C\+\_\+\+C\+T\+I\+M\+E0\+\_\+\+D\+O\+W\+\_\+\+M\+A\+SK@{R\+T\+C\+\_\+\+C\+T\+I\+M\+E0\+\_\+\+D\+O\+W\+\_\+\+M\+A\+SK}}
+\index{R\+T\+C\+\_\+\+C\+T\+I\+M\+E0\+\_\+\+D\+O\+W\+\_\+\+M\+A\+SK@{R\+T\+C\+\_\+\+C\+T\+I\+M\+E0\+\_\+\+D\+O\+W\+\_\+\+M\+A\+SK}!C\+H\+I\+P\+: L\+P\+C18xx/43xx Real Time Clock driver@{C\+H\+I\+P\+: L\+P\+C18xx/43xx Real Time Clock driver}}
+\subsubsection{\texorpdfstring{R\+T\+C\+\_\+\+C\+T\+I\+M\+E0\+\_\+\+D\+O\+W\+\_\+\+M\+A\+SK}{RTC\_CTIME0\_DOW\_MASK}}
+{\footnotesize\ttfamily \#define R\+T\+C\+\_\+\+C\+T\+I\+M\+E0\+\_\+\+D\+O\+W\+\_\+\+M\+A\+SK~((0x7000000))}
+
+
+
+Definition at line 167 of file rtc\+\_\+18xx\+\_\+43xx.\+h.
+
+\mbox{\Hypertarget{group___r_t_c__18_x_x__43_x_x_ga1778d80de2c97e680394bdd8770b9119}\label{group___r_t_c__18_x_x__43_x_x_ga1778d80de2c97e680394bdd8770b9119}} 
+\index{C\+H\+I\+P\+: L\+P\+C18xx/43xx Real Time Clock driver@{C\+H\+I\+P\+: L\+P\+C18xx/43xx Real Time Clock driver}!R\+T\+C\+\_\+\+C\+T\+I\+M\+E0\+\_\+\+H\+O\+U\+R\+S\+\_\+\+M\+A\+SK@{R\+T\+C\+\_\+\+C\+T\+I\+M\+E0\+\_\+\+H\+O\+U\+R\+S\+\_\+\+M\+A\+SK}}
+\index{R\+T\+C\+\_\+\+C\+T\+I\+M\+E0\+\_\+\+H\+O\+U\+R\+S\+\_\+\+M\+A\+SK@{R\+T\+C\+\_\+\+C\+T\+I\+M\+E0\+\_\+\+H\+O\+U\+R\+S\+\_\+\+M\+A\+SK}!C\+H\+I\+P\+: L\+P\+C18xx/43xx Real Time Clock driver@{C\+H\+I\+P\+: L\+P\+C18xx/43xx Real Time Clock driver}}
+\subsubsection{\texorpdfstring{R\+T\+C\+\_\+\+C\+T\+I\+M\+E0\+\_\+\+H\+O\+U\+R\+S\+\_\+\+M\+A\+SK}{RTC\_CTIME0\_HOURS\_MASK}}
+{\footnotesize\ttfamily \#define R\+T\+C\+\_\+\+C\+T\+I\+M\+E0\+\_\+\+H\+O\+U\+R\+S\+\_\+\+M\+A\+SK~((0x1\+F0000))}
+
+
+
+Definition at line 166 of file rtc\+\_\+18xx\+\_\+43xx.\+h.
+
+\mbox{\Hypertarget{group___r_t_c__18_x_x__43_x_x_ga3b8e88e913a22b08a7b814763e4c8452}\label{group___r_t_c__18_x_x__43_x_x_ga3b8e88e913a22b08a7b814763e4c8452}} 
+\index{C\+H\+I\+P\+: L\+P\+C18xx/43xx Real Time Clock driver@{C\+H\+I\+P\+: L\+P\+C18xx/43xx Real Time Clock driver}!R\+T\+C\+\_\+\+C\+T\+I\+M\+E0\+\_\+\+M\+I\+N\+U\+T\+E\+S\+\_\+\+M\+A\+SK@{R\+T\+C\+\_\+\+C\+T\+I\+M\+E0\+\_\+\+M\+I\+N\+U\+T\+E\+S\+\_\+\+M\+A\+SK}}
+\index{R\+T\+C\+\_\+\+C\+T\+I\+M\+E0\+\_\+\+M\+I\+N\+U\+T\+E\+S\+\_\+\+M\+A\+SK@{R\+T\+C\+\_\+\+C\+T\+I\+M\+E0\+\_\+\+M\+I\+N\+U\+T\+E\+S\+\_\+\+M\+A\+SK}!C\+H\+I\+P\+: L\+P\+C18xx/43xx Real Time Clock driver@{C\+H\+I\+P\+: L\+P\+C18xx/43xx Real Time Clock driver}}
+\subsubsection{\texorpdfstring{R\+T\+C\+\_\+\+C\+T\+I\+M\+E0\+\_\+\+M\+I\+N\+U\+T\+E\+S\+\_\+\+M\+A\+SK}{RTC\_CTIME0\_MINUTES\_MASK}}
+{\footnotesize\ttfamily \#define R\+T\+C\+\_\+\+C\+T\+I\+M\+E0\+\_\+\+M\+I\+N\+U\+T\+E\+S\+\_\+\+M\+A\+SK~((0x3\+F00))}
+
+
+
+Definition at line 165 of file rtc\+\_\+18xx\+\_\+43xx.\+h.
+
+\mbox{\Hypertarget{group___r_t_c__18_x_x__43_x_x_ga913865a5d046fddddcae67fb05210d87}\label{group___r_t_c__18_x_x__43_x_x_ga913865a5d046fddddcae67fb05210d87}} 
+\index{C\+H\+I\+P\+: L\+P\+C18xx/43xx Real Time Clock driver@{C\+H\+I\+P\+: L\+P\+C18xx/43xx Real Time Clock driver}!R\+T\+C\+\_\+\+C\+T\+I\+M\+E0\+\_\+\+S\+E\+C\+O\+N\+D\+S\+\_\+\+M\+A\+SK@{R\+T\+C\+\_\+\+C\+T\+I\+M\+E0\+\_\+\+S\+E\+C\+O\+N\+D\+S\+\_\+\+M\+A\+SK}}
+\index{R\+T\+C\+\_\+\+C\+T\+I\+M\+E0\+\_\+\+S\+E\+C\+O\+N\+D\+S\+\_\+\+M\+A\+SK@{R\+T\+C\+\_\+\+C\+T\+I\+M\+E0\+\_\+\+S\+E\+C\+O\+N\+D\+S\+\_\+\+M\+A\+SK}!C\+H\+I\+P\+: L\+P\+C18xx/43xx Real Time Clock driver@{C\+H\+I\+P\+: L\+P\+C18xx/43xx Real Time Clock driver}}
+\subsubsection{\texorpdfstring{R\+T\+C\+\_\+\+C\+T\+I\+M\+E0\+\_\+\+S\+E\+C\+O\+N\+D\+S\+\_\+\+M\+A\+SK}{RTC\_CTIME0\_SECONDS\_MASK}}
+{\footnotesize\ttfamily \#define R\+T\+C\+\_\+\+C\+T\+I\+M\+E0\+\_\+\+S\+E\+C\+O\+N\+D\+S\+\_\+\+M\+A\+SK~((0x3\+F))}
+
+
+
+Definition at line 164 of file rtc\+\_\+18xx\+\_\+43xx.\+h.
+
+\mbox{\Hypertarget{group___r_t_c__18_x_x__43_x_x_gaa8d85ab9bd2feee7a013b3b422bb740d}\label{group___r_t_c__18_x_x__43_x_x_gaa8d85ab9bd2feee7a013b3b422bb740d}} 
+\index{C\+H\+I\+P\+: L\+P\+C18xx/43xx Real Time Clock driver@{C\+H\+I\+P\+: L\+P\+C18xx/43xx Real Time Clock driver}!R\+T\+C\+\_\+\+C\+T\+I\+M\+E1\+\_\+\+D\+O\+M\+\_\+\+M\+A\+SK@{R\+T\+C\+\_\+\+C\+T\+I\+M\+E1\+\_\+\+D\+O\+M\+\_\+\+M\+A\+SK}}
+\index{R\+T\+C\+\_\+\+C\+T\+I\+M\+E1\+\_\+\+D\+O\+M\+\_\+\+M\+A\+SK@{R\+T\+C\+\_\+\+C\+T\+I\+M\+E1\+\_\+\+D\+O\+M\+\_\+\+M\+A\+SK}!C\+H\+I\+P\+: L\+P\+C18xx/43xx Real Time Clock driver@{C\+H\+I\+P\+: L\+P\+C18xx/43xx Real Time Clock driver}}
+\subsubsection{\texorpdfstring{R\+T\+C\+\_\+\+C\+T\+I\+M\+E1\+\_\+\+D\+O\+M\+\_\+\+M\+A\+SK}{RTC\_CTIME1\_DOM\_MASK}}
+{\footnotesize\ttfamily \#define R\+T\+C\+\_\+\+C\+T\+I\+M\+E1\+\_\+\+D\+O\+M\+\_\+\+M\+A\+SK~((0x1\+F))}
+
+
+
+Definition at line 172 of file rtc\+\_\+18xx\+\_\+43xx.\+h.
+
+\mbox{\Hypertarget{group___r_t_c__18_x_x__43_x_x_ga9778cbc861fb273870db239e31cc6140}\label{group___r_t_c__18_x_x__43_x_x_ga9778cbc861fb273870db239e31cc6140}} 
+\index{C\+H\+I\+P\+: L\+P\+C18xx/43xx Real Time Clock driver@{C\+H\+I\+P\+: L\+P\+C18xx/43xx Real Time Clock driver}!R\+T\+C\+\_\+\+C\+T\+I\+M\+E1\+\_\+\+M\+O\+N\+T\+H\+\_\+\+M\+A\+SK@{R\+T\+C\+\_\+\+C\+T\+I\+M\+E1\+\_\+\+M\+O\+N\+T\+H\+\_\+\+M\+A\+SK}}
+\index{R\+T\+C\+\_\+\+C\+T\+I\+M\+E1\+\_\+\+M\+O\+N\+T\+H\+\_\+\+M\+A\+SK@{R\+T\+C\+\_\+\+C\+T\+I\+M\+E1\+\_\+\+M\+O\+N\+T\+H\+\_\+\+M\+A\+SK}!C\+H\+I\+P\+: L\+P\+C18xx/43xx Real Time Clock driver@{C\+H\+I\+P\+: L\+P\+C18xx/43xx Real Time Clock driver}}
+\subsubsection{\texorpdfstring{R\+T\+C\+\_\+\+C\+T\+I\+M\+E1\+\_\+\+M\+O\+N\+T\+H\+\_\+\+M\+A\+SK}{RTC\_CTIME1\_MONTH\_MASK}}
+{\footnotesize\ttfamily \#define R\+T\+C\+\_\+\+C\+T\+I\+M\+E1\+\_\+\+M\+O\+N\+T\+H\+\_\+\+M\+A\+SK~((0x\+F00))}
+
+
+
+Definition at line 173 of file rtc\+\_\+18xx\+\_\+43xx.\+h.
+
+\mbox{\Hypertarget{group___r_t_c__18_x_x__43_x_x_gae56e613fe29951a7adaa30e1a3cad8b4}\label{group___r_t_c__18_x_x__43_x_x_gae56e613fe29951a7adaa30e1a3cad8b4}} 
+\index{C\+H\+I\+P\+: L\+P\+C18xx/43xx Real Time Clock driver@{C\+H\+I\+P\+: L\+P\+C18xx/43xx Real Time Clock driver}!R\+T\+C\+\_\+\+C\+T\+I\+M\+E1\+\_\+\+Y\+E\+A\+R\+\_\+\+M\+A\+SK@{R\+T\+C\+\_\+\+C\+T\+I\+M\+E1\+\_\+\+Y\+E\+A\+R\+\_\+\+M\+A\+SK}}
+\index{R\+T\+C\+\_\+\+C\+T\+I\+M\+E1\+\_\+\+Y\+E\+A\+R\+\_\+\+M\+A\+SK@{R\+T\+C\+\_\+\+C\+T\+I\+M\+E1\+\_\+\+Y\+E\+A\+R\+\_\+\+M\+A\+SK}!C\+H\+I\+P\+: L\+P\+C18xx/43xx Real Time Clock driver@{C\+H\+I\+P\+: L\+P\+C18xx/43xx Real Time Clock driver}}
+\subsubsection{\texorpdfstring{R\+T\+C\+\_\+\+C\+T\+I\+M\+E1\+\_\+\+Y\+E\+A\+R\+\_\+\+M\+A\+SK}{RTC\_CTIME1\_YEAR\_MASK}}
+{\footnotesize\ttfamily \#define R\+T\+C\+\_\+\+C\+T\+I\+M\+E1\+\_\+\+Y\+E\+A\+R\+\_\+\+M\+A\+SK~((0x\+F\+F\+F0000))}
+
+
+
+Definition at line 174 of file rtc\+\_\+18xx\+\_\+43xx.\+h.
+
+\mbox{\Hypertarget{group___r_t_c__18_x_x__43_x_x_gaef423e0d45dc1e2a201d44f8abb1253a}\label{group___r_t_c__18_x_x__43_x_x_gaef423e0d45dc1e2a201d44f8abb1253a}} 
+\index{C\+H\+I\+P\+: L\+P\+C18xx/43xx Real Time Clock driver@{C\+H\+I\+P\+: L\+P\+C18xx/43xx Real Time Clock driver}!R\+T\+C\+\_\+\+C\+T\+I\+M\+E2\+\_\+\+D\+O\+Y\+\_\+\+M\+A\+SK@{R\+T\+C\+\_\+\+C\+T\+I\+M\+E2\+\_\+\+D\+O\+Y\+\_\+\+M\+A\+SK}}
+\index{R\+T\+C\+\_\+\+C\+T\+I\+M\+E2\+\_\+\+D\+O\+Y\+\_\+\+M\+A\+SK@{R\+T\+C\+\_\+\+C\+T\+I\+M\+E2\+\_\+\+D\+O\+Y\+\_\+\+M\+A\+SK}!C\+H\+I\+P\+: L\+P\+C18xx/43xx Real Time Clock driver@{C\+H\+I\+P\+: L\+P\+C18xx/43xx Real Time Clock driver}}
+\subsubsection{\texorpdfstring{R\+T\+C\+\_\+\+C\+T\+I\+M\+E2\+\_\+\+D\+O\+Y\+\_\+\+M\+A\+SK}{RTC\_CTIME2\_DOY\_MASK}}
+{\footnotesize\ttfamily \#define R\+T\+C\+\_\+\+C\+T\+I\+M\+E2\+\_\+\+D\+O\+Y\+\_\+\+M\+A\+SK~((0x\+F\+F\+F))}
+
+
+
+Definition at line 179 of file rtc\+\_\+18xx\+\_\+43xx.\+h.
+
+\mbox{\Hypertarget{group___r_t_c__18_x_x__43_x_x_gaddd515ae325f802e35e8202fef5f2957}\label{group___r_t_c__18_x_x__43_x_x_gaddd515ae325f802e35e8202fef5f2957}} 
+\index{C\+H\+I\+P\+: L\+P\+C18xx/43xx Real Time Clock driver@{C\+H\+I\+P\+: L\+P\+C18xx/43xx Real Time Clock driver}!R\+T\+C\+\_\+\+D\+A\+Y\+O\+F\+M\+O\+N\+T\+H\+\_\+\+M\+AX@{R\+T\+C\+\_\+\+D\+A\+Y\+O\+F\+M\+O\+N\+T\+H\+\_\+\+M\+AX}}
+\index{R\+T\+C\+\_\+\+D\+A\+Y\+O\+F\+M\+O\+N\+T\+H\+\_\+\+M\+AX@{R\+T\+C\+\_\+\+D\+A\+Y\+O\+F\+M\+O\+N\+T\+H\+\_\+\+M\+AX}!C\+H\+I\+P\+: L\+P\+C18xx/43xx Real Time Clock driver@{C\+H\+I\+P\+: L\+P\+C18xx/43xx Real Time Clock driver}}
+\subsubsection{\texorpdfstring{R\+T\+C\+\_\+\+D\+A\+Y\+O\+F\+M\+O\+N\+T\+H\+\_\+\+M\+AX}{RTC\_DAYOFMONTH\_MAX}}
+{\footnotesize\ttfamily \#define R\+T\+C\+\_\+\+D\+A\+Y\+O\+F\+M\+O\+N\+T\+H\+\_\+\+M\+AX~31}
+
+Maximum value of day of month 
+
+Definition at line 207 of file rtc\+\_\+18xx\+\_\+43xx.\+h.
+
+\mbox{\Hypertarget{group___r_t_c__18_x_x__43_x_x_gafbcf1009356ffdad8f11920167908213}\label{group___r_t_c__18_x_x__43_x_x_gafbcf1009356ffdad8f11920167908213}} 
+\index{C\+H\+I\+P\+: L\+P\+C18xx/43xx Real Time Clock driver@{C\+H\+I\+P\+: L\+P\+C18xx/43xx Real Time Clock driver}!R\+T\+C\+\_\+\+D\+A\+Y\+O\+F\+M\+O\+N\+T\+H\+\_\+\+M\+IN@{R\+T\+C\+\_\+\+D\+A\+Y\+O\+F\+M\+O\+N\+T\+H\+\_\+\+M\+IN}}
+\index{R\+T\+C\+\_\+\+D\+A\+Y\+O\+F\+M\+O\+N\+T\+H\+\_\+\+M\+IN@{R\+T\+C\+\_\+\+D\+A\+Y\+O\+F\+M\+O\+N\+T\+H\+\_\+\+M\+IN}!C\+H\+I\+P\+: L\+P\+C18xx/43xx Real Time Clock driver@{C\+H\+I\+P\+: L\+P\+C18xx/43xx Real Time Clock driver}}
+\subsubsection{\texorpdfstring{R\+T\+C\+\_\+\+D\+A\+Y\+O\+F\+M\+O\+N\+T\+H\+\_\+\+M\+IN}{RTC\_DAYOFMONTH\_MIN}}
+{\footnotesize\ttfamily \#define R\+T\+C\+\_\+\+D\+A\+Y\+O\+F\+M\+O\+N\+T\+H\+\_\+\+M\+IN~1}
+
+Minimum value of day of month 
+
+Definition at line 206 of file rtc\+\_\+18xx\+\_\+43xx.\+h.
+
+\mbox{\Hypertarget{group___r_t_c__18_x_x__43_x_x_ga83c5c53e8b56ca8d48d9c46d7e8c50fa}\label{group___r_t_c__18_x_x__43_x_x_ga83c5c53e8b56ca8d48d9c46d7e8c50fa}} 
+\index{C\+H\+I\+P\+: L\+P\+C18xx/43xx Real Time Clock driver@{C\+H\+I\+P\+: L\+P\+C18xx/43xx Real Time Clock driver}!R\+T\+C\+\_\+\+D\+A\+Y\+O\+F\+W\+E\+E\+K\+\_\+\+M\+AX@{R\+T\+C\+\_\+\+D\+A\+Y\+O\+F\+W\+E\+E\+K\+\_\+\+M\+AX}}
+\index{R\+T\+C\+\_\+\+D\+A\+Y\+O\+F\+W\+E\+E\+K\+\_\+\+M\+AX@{R\+T\+C\+\_\+\+D\+A\+Y\+O\+F\+W\+E\+E\+K\+\_\+\+M\+AX}!C\+H\+I\+P\+: L\+P\+C18xx/43xx Real Time Clock driver@{C\+H\+I\+P\+: L\+P\+C18xx/43xx Real Time Clock driver}}
+\subsubsection{\texorpdfstring{R\+T\+C\+\_\+\+D\+A\+Y\+O\+F\+W\+E\+E\+K\+\_\+\+M\+AX}{RTC\_DAYOFWEEK\_MAX}}
+{\footnotesize\ttfamily \#define R\+T\+C\+\_\+\+D\+A\+Y\+O\+F\+W\+E\+E\+K\+\_\+\+M\+AX~6}
+
+Maximum value of day of week 
+
+Definition at line 208 of file rtc\+\_\+18xx\+\_\+43xx.\+h.
+
+\mbox{\Hypertarget{group___r_t_c__18_x_x__43_x_x_ga2621bb8d69ee212101605c2e3739db4d}\label{group___r_t_c__18_x_x__43_x_x_ga2621bb8d69ee212101605c2e3739db4d}} 
+\index{C\+H\+I\+P\+: L\+P\+C18xx/43xx Real Time Clock driver@{C\+H\+I\+P\+: L\+P\+C18xx/43xx Real Time Clock driver}!R\+T\+C\+\_\+\+D\+A\+Y\+O\+F\+Y\+E\+A\+R\+\_\+\+M\+AX@{R\+T\+C\+\_\+\+D\+A\+Y\+O\+F\+Y\+E\+A\+R\+\_\+\+M\+AX}}
+\index{R\+T\+C\+\_\+\+D\+A\+Y\+O\+F\+Y\+E\+A\+R\+\_\+\+M\+AX@{R\+T\+C\+\_\+\+D\+A\+Y\+O\+F\+Y\+E\+A\+R\+\_\+\+M\+AX}!C\+H\+I\+P\+: L\+P\+C18xx/43xx Real Time Clock driver@{C\+H\+I\+P\+: L\+P\+C18xx/43xx Real Time Clock driver}}
+\subsubsection{\texorpdfstring{R\+T\+C\+\_\+\+D\+A\+Y\+O\+F\+Y\+E\+A\+R\+\_\+\+M\+AX}{RTC\_DAYOFYEAR\_MAX}}
+{\footnotesize\ttfamily \#define R\+T\+C\+\_\+\+D\+A\+Y\+O\+F\+Y\+E\+A\+R\+\_\+\+M\+AX~366}
+
+Maximum value of day of year 
+
+Definition at line 210 of file rtc\+\_\+18xx\+\_\+43xx.\+h.
+
+\mbox{\Hypertarget{group___r_t_c__18_x_x__43_x_x_ga132dcf308a59affe54749f4f11cd22a6}\label{group___r_t_c__18_x_x__43_x_x_ga132dcf308a59affe54749f4f11cd22a6}} 
+\index{C\+H\+I\+P\+: L\+P\+C18xx/43xx Real Time Clock driver@{C\+H\+I\+P\+: L\+P\+C18xx/43xx Real Time Clock driver}!R\+T\+C\+\_\+\+D\+A\+Y\+O\+F\+Y\+E\+A\+R\+\_\+\+M\+IN@{R\+T\+C\+\_\+\+D\+A\+Y\+O\+F\+Y\+E\+A\+R\+\_\+\+M\+IN}}
+\index{R\+T\+C\+\_\+\+D\+A\+Y\+O\+F\+Y\+E\+A\+R\+\_\+\+M\+IN@{R\+T\+C\+\_\+\+D\+A\+Y\+O\+F\+Y\+E\+A\+R\+\_\+\+M\+IN}!C\+H\+I\+P\+: L\+P\+C18xx/43xx Real Time Clock driver@{C\+H\+I\+P\+: L\+P\+C18xx/43xx Real Time Clock driver}}
+\subsubsection{\texorpdfstring{R\+T\+C\+\_\+\+D\+A\+Y\+O\+F\+Y\+E\+A\+R\+\_\+\+M\+IN}{RTC\_DAYOFYEAR\_MIN}}
+{\footnotesize\ttfamily \#define R\+T\+C\+\_\+\+D\+A\+Y\+O\+F\+Y\+E\+A\+R\+\_\+\+M\+IN~1}
+
+Minimum value of day of year 
+
+Definition at line 209 of file rtc\+\_\+18xx\+\_\+43xx.\+h.
+
+\mbox{\Hypertarget{group___r_t_c__18_x_x__43_x_x_ga7c4ea655a8ccf43870c672c1058a133e}\label{group___r_t_c__18_x_x__43_x_x_ga7c4ea655a8ccf43870c672c1058a133e}} 
+\index{C\+H\+I\+P\+: L\+P\+C18xx/43xx Real Time Clock driver@{C\+H\+I\+P\+: L\+P\+C18xx/43xx Real Time Clock driver}!R\+T\+C\+\_\+\+D\+O\+M\+\_\+\+M\+A\+SK@{R\+T\+C\+\_\+\+D\+O\+M\+\_\+\+M\+A\+SK}}
+\index{R\+T\+C\+\_\+\+D\+O\+M\+\_\+\+M\+A\+SK@{R\+T\+C\+\_\+\+D\+O\+M\+\_\+\+M\+A\+SK}!C\+H\+I\+P\+: L\+P\+C18xx/43xx Real Time Clock driver@{C\+H\+I\+P\+: L\+P\+C18xx/43xx Real Time Clock driver}}
+\subsubsection{\texorpdfstring{R\+T\+C\+\_\+\+D\+O\+M\+\_\+\+M\+A\+SK}{RTC\_DOM\_MASK}}
+{\footnotesize\ttfamily \#define R\+T\+C\+\_\+\+D\+O\+M\+\_\+\+M\+A\+SK~(0x0000001\+F)}
+
+D\+OM register mask 
+
+Definition at line 191 of file rtc\+\_\+18xx\+\_\+43xx.\+h.
+
+\mbox{\Hypertarget{group___r_t_c__18_x_x__43_x_x_ga6564edf565a643214a54ffac364c69ca}\label{group___r_t_c__18_x_x__43_x_x_ga6564edf565a643214a54ffac364c69ca}} 
+\index{C\+H\+I\+P\+: L\+P\+C18xx/43xx Real Time Clock driver@{C\+H\+I\+P\+: L\+P\+C18xx/43xx Real Time Clock driver}!R\+T\+C\+\_\+\+D\+O\+W\+\_\+\+M\+A\+SK@{R\+T\+C\+\_\+\+D\+O\+W\+\_\+\+M\+A\+SK}}
+\index{R\+T\+C\+\_\+\+D\+O\+W\+\_\+\+M\+A\+SK@{R\+T\+C\+\_\+\+D\+O\+W\+\_\+\+M\+A\+SK}!C\+H\+I\+P\+: L\+P\+C18xx/43xx Real Time Clock driver@{C\+H\+I\+P\+: L\+P\+C18xx/43xx Real Time Clock driver}}
+\subsubsection{\texorpdfstring{R\+T\+C\+\_\+\+D\+O\+W\+\_\+\+M\+A\+SK}{RTC\_DOW\_MASK}}
+{\footnotesize\ttfamily \#define R\+T\+C\+\_\+\+D\+O\+W\+\_\+\+M\+A\+SK~(0x00000007)}
+
+D\+OW register mask 
+
+Definition at line 193 of file rtc\+\_\+18xx\+\_\+43xx.\+h.
+
+\mbox{\Hypertarget{group___r_t_c__18_x_x__43_x_x_ga7c8c3332f827ea092523b75ef953bd8b}\label{group___r_t_c__18_x_x__43_x_x_ga7c8c3332f827ea092523b75ef953bd8b}} 
+\index{C\+H\+I\+P\+: L\+P\+C18xx/43xx Real Time Clock driver@{C\+H\+I\+P\+: L\+P\+C18xx/43xx Real Time Clock driver}!R\+T\+C\+\_\+\+D\+O\+Y\+\_\+\+M\+A\+SK@{R\+T\+C\+\_\+\+D\+O\+Y\+\_\+\+M\+A\+SK}}
+\index{R\+T\+C\+\_\+\+D\+O\+Y\+\_\+\+M\+A\+SK@{R\+T\+C\+\_\+\+D\+O\+Y\+\_\+\+M\+A\+SK}!C\+H\+I\+P\+: L\+P\+C18xx/43xx Real Time Clock driver@{C\+H\+I\+P\+: L\+P\+C18xx/43xx Real Time Clock driver}}
+\subsubsection{\texorpdfstring{R\+T\+C\+\_\+\+D\+O\+Y\+\_\+\+M\+A\+SK}{RTC\_DOY\_MASK}}
+{\footnotesize\ttfamily \#define R\+T\+C\+\_\+\+D\+O\+Y\+\_\+\+M\+A\+SK~(0x000001\+F\+F)}
+
+D\+OY register mask 
+
+Definition at line 195 of file rtc\+\_\+18xx\+\_\+43xx.\+h.
+
+\mbox{\Hypertarget{group___r_t_c__18_x_x__43_x_x_ga9a6e53010e34cbc8a4b61e96c924ff18}\label{group___r_t_c__18_x_x__43_x_x_ga9a6e53010e34cbc8a4b61e96c924ff18}} 
+\index{C\+H\+I\+P\+: L\+P\+C18xx/43xx Real Time Clock driver@{C\+H\+I\+P\+: L\+P\+C18xx/43xx Real Time Clock driver}!R\+T\+C\+\_\+\+E\+R\+\_\+\+C\+O\+U\+N\+T\+ER@{R\+T\+C\+\_\+\+E\+R\+\_\+\+C\+O\+U\+N\+T\+ER}}
+\index{R\+T\+C\+\_\+\+E\+R\+\_\+\+C\+O\+U\+N\+T\+ER@{R\+T\+C\+\_\+\+E\+R\+\_\+\+C\+O\+U\+N\+T\+ER}!C\+H\+I\+P\+: L\+P\+C18xx/43xx Real Time Clock driver@{C\+H\+I\+P\+: L\+P\+C18xx/43xx Real Time Clock driver}}
+\subsubsection{\texorpdfstring{R\+T\+C\+\_\+\+E\+R\+\_\+\+C\+O\+U\+N\+T\+ER}{RTC\_ER\_COUNTER}}
+{\footnotesize\ttfamily \#define R\+T\+C\+\_\+\+E\+R\+\_\+\+C\+O\+U\+N\+T\+ER(\begin{DoxyParamCaption}\item[{}]{ch,  }\item[{}]{n }\end{DoxyParamCaption})~((uint32\+\_\+t) ((n $>$$>$ (8 $\ast$ ch)) \& 0x07))}
+
+Value of the counter for Events occurred on a specific channel 
+
+Definition at line 267 of file rtc\+\_\+18xx\+\_\+43xx.\+h.
+
+\mbox{\Hypertarget{group___r_t_c__18_x_x__43_x_x_ga3e39b9c4bb850c2d8a2c7a3b7c599c39}\label{group___r_t_c__18_x_x__43_x_x_ga3e39b9c4bb850c2d8a2c7a3b7c599c39}} 
+\index{C\+H\+I\+P\+: L\+P\+C18xx/43xx Real Time Clock driver@{C\+H\+I\+P\+: L\+P\+C18xx/43xx Real Time Clock driver}!R\+T\+C\+\_\+\+E\+R\+\_\+\+T\+I\+M\+E\+S\+T\+A\+M\+P\+\_\+\+D\+OY@{R\+T\+C\+\_\+\+E\+R\+\_\+\+T\+I\+M\+E\+S\+T\+A\+M\+P\+\_\+\+D\+OY}}
+\index{R\+T\+C\+\_\+\+E\+R\+\_\+\+T\+I\+M\+E\+S\+T\+A\+M\+P\+\_\+\+D\+OY@{R\+T\+C\+\_\+\+E\+R\+\_\+\+T\+I\+M\+E\+S\+T\+A\+M\+P\+\_\+\+D\+OY}!C\+H\+I\+P\+: L\+P\+C18xx/43xx Real Time Clock driver@{C\+H\+I\+P\+: L\+P\+C18xx/43xx Real Time Clock driver}}
+\subsubsection{\texorpdfstring{R\+T\+C\+\_\+\+E\+R\+\_\+\+T\+I\+M\+E\+S\+T\+A\+M\+P\+\_\+\+D\+OY}{RTC\_ER\_TIMESTAMP\_DOY}}
+{\footnotesize\ttfamily \#define R\+T\+C\+\_\+\+E\+R\+\_\+\+T\+I\+M\+E\+S\+T\+A\+M\+P\+\_\+\+D\+OY(\begin{DoxyParamCaption}\item[{}]{n }\end{DoxyParamCaption})~((uint32\+\_\+t) ((n $>$$>$ 17) \& 0x1\+F\+F))}
+
+
+
+Definition at line 275 of file rtc\+\_\+18xx\+\_\+43xx.\+h.
+
+\mbox{\Hypertarget{group___r_t_c__18_x_x__43_x_x_ga54eaa9d5a1d5b3f6aad644a794e21c8c}\label{group___r_t_c__18_x_x__43_x_x_ga54eaa9d5a1d5b3f6aad644a794e21c8c}} 
+\index{C\+H\+I\+P\+: L\+P\+C18xx/43xx Real Time Clock driver@{C\+H\+I\+P\+: L\+P\+C18xx/43xx Real Time Clock driver}!R\+T\+C\+\_\+\+E\+R\+\_\+\+T\+I\+M\+E\+S\+T\+A\+M\+P\+\_\+\+H\+O\+UR@{R\+T\+C\+\_\+\+E\+R\+\_\+\+T\+I\+M\+E\+S\+T\+A\+M\+P\+\_\+\+H\+O\+UR}}
+\index{R\+T\+C\+\_\+\+E\+R\+\_\+\+T\+I\+M\+E\+S\+T\+A\+M\+P\+\_\+\+H\+O\+UR@{R\+T\+C\+\_\+\+E\+R\+\_\+\+T\+I\+M\+E\+S\+T\+A\+M\+P\+\_\+\+H\+O\+UR}!C\+H\+I\+P\+: L\+P\+C18xx/43xx Real Time Clock driver@{C\+H\+I\+P\+: L\+P\+C18xx/43xx Real Time Clock driver}}
+\subsubsection{\texorpdfstring{R\+T\+C\+\_\+\+E\+R\+\_\+\+T\+I\+M\+E\+S\+T\+A\+M\+P\+\_\+\+H\+O\+UR}{RTC\_ER\_TIMESTAMP\_HOUR}}
+{\footnotesize\ttfamily \#define R\+T\+C\+\_\+\+E\+R\+\_\+\+T\+I\+M\+E\+S\+T\+A\+M\+P\+\_\+\+H\+O\+UR(\begin{DoxyParamCaption}\item[{}]{n }\end{DoxyParamCaption})~((uint32\+\_\+t) ((n $>$$>$ 12) \& 0x1\+F))}
+
+
+
+Definition at line 274 of file rtc\+\_\+18xx\+\_\+43xx.\+h.
+
+\mbox{\Hypertarget{group___r_t_c__18_x_x__43_x_x_gaa23e4f27ac7ddd367b7b8749b63b9e33}\label{group___r_t_c__18_x_x__43_x_x_gaa23e4f27ac7ddd367b7b8749b63b9e33}} 
+\index{C\+H\+I\+P\+: L\+P\+C18xx/43xx Real Time Clock driver@{C\+H\+I\+P\+: L\+P\+C18xx/43xx Real Time Clock driver}!R\+T\+C\+\_\+\+E\+R\+\_\+\+T\+I\+M\+E\+S\+T\+A\+M\+P\+\_\+\+M\+IN@{R\+T\+C\+\_\+\+E\+R\+\_\+\+T\+I\+M\+E\+S\+T\+A\+M\+P\+\_\+\+M\+IN}}
+\index{R\+T\+C\+\_\+\+E\+R\+\_\+\+T\+I\+M\+E\+S\+T\+A\+M\+P\+\_\+\+M\+IN@{R\+T\+C\+\_\+\+E\+R\+\_\+\+T\+I\+M\+E\+S\+T\+A\+M\+P\+\_\+\+M\+IN}!C\+H\+I\+P\+: L\+P\+C18xx/43xx Real Time Clock driver@{C\+H\+I\+P\+: L\+P\+C18xx/43xx Real Time Clock driver}}
+\subsubsection{\texorpdfstring{R\+T\+C\+\_\+\+E\+R\+\_\+\+T\+I\+M\+E\+S\+T\+A\+M\+P\+\_\+\+M\+IN}{RTC\_ER\_TIMESTAMP\_MIN}}
+{\footnotesize\ttfamily \#define R\+T\+C\+\_\+\+E\+R\+\_\+\+T\+I\+M\+E\+S\+T\+A\+M\+P\+\_\+\+M\+IN(\begin{DoxyParamCaption}\item[{}]{n }\end{DoxyParamCaption})~((uint32\+\_\+t) ((n $>$$>$ 6) \& 0x3\+F))}
+
+
+
+Definition at line 273 of file rtc\+\_\+18xx\+\_\+43xx.\+h.
+
+\mbox{\Hypertarget{group___r_t_c__18_x_x__43_x_x_gaaf1c33359c54ee591723481d7f6a4a27}\label{group___r_t_c__18_x_x__43_x_x_gaaf1c33359c54ee591723481d7f6a4a27}} 
+\index{C\+H\+I\+P\+: L\+P\+C18xx/43xx Real Time Clock driver@{C\+H\+I\+P\+: L\+P\+C18xx/43xx Real Time Clock driver}!R\+T\+C\+\_\+\+E\+R\+\_\+\+T\+I\+M\+E\+S\+T\+A\+M\+P\+\_\+\+S\+EC@{R\+T\+C\+\_\+\+E\+R\+\_\+\+T\+I\+M\+E\+S\+T\+A\+M\+P\+\_\+\+S\+EC}}
+\index{R\+T\+C\+\_\+\+E\+R\+\_\+\+T\+I\+M\+E\+S\+T\+A\+M\+P\+\_\+\+S\+EC@{R\+T\+C\+\_\+\+E\+R\+\_\+\+T\+I\+M\+E\+S\+T\+A\+M\+P\+\_\+\+S\+EC}!C\+H\+I\+P\+: L\+P\+C18xx/43xx Real Time Clock driver@{C\+H\+I\+P\+: L\+P\+C18xx/43xx Real Time Clock driver}}
+\subsubsection{\texorpdfstring{R\+T\+C\+\_\+\+E\+R\+\_\+\+T\+I\+M\+E\+S\+T\+A\+M\+P\+\_\+\+S\+EC}{RTC\_ER\_TIMESTAMP\_SEC}}
+{\footnotesize\ttfamily \#define R\+T\+C\+\_\+\+E\+R\+\_\+\+T\+I\+M\+E\+S\+T\+A\+M\+P\+\_\+\+S\+EC(\begin{DoxyParamCaption}\item[{}]{n }\end{DoxyParamCaption})~((uint32\+\_\+t) (n \& 0x3\+F))}
+
+
+
+Definition at line 272 of file rtc\+\_\+18xx\+\_\+43xx.\+h.
+
+\mbox{\Hypertarget{group___r_t_c__18_x_x__43_x_x_gaad3f36ce7e197e776d91a364cac6b828}\label{group___r_t_c__18_x_x__43_x_x_gaad3f36ce7e197e776d91a364cac6b828}} 
+\index{C\+H\+I\+P\+: L\+P\+C18xx/43xx Real Time Clock driver@{C\+H\+I\+P\+: L\+P\+C18xx/43xx Real Time Clock driver}!R\+T\+C\+\_\+\+E\+R\+C\+T\+R\+L\+\_\+\+B\+I\+T\+M\+A\+SK@{R\+T\+C\+\_\+\+E\+R\+C\+T\+R\+L\+\_\+\+B\+I\+T\+M\+A\+SK}}
+\index{R\+T\+C\+\_\+\+E\+R\+C\+T\+R\+L\+\_\+\+B\+I\+T\+M\+A\+SK@{R\+T\+C\+\_\+\+E\+R\+C\+T\+R\+L\+\_\+\+B\+I\+T\+M\+A\+SK}!C\+H\+I\+P\+: L\+P\+C18xx/43xx Real Time Clock driver@{C\+H\+I\+P\+: L\+P\+C18xx/43xx Real Time Clock driver}}
+\subsubsection{\texorpdfstring{R\+T\+C\+\_\+\+E\+R\+C\+T\+R\+L\+\_\+\+B\+I\+T\+M\+A\+SK}{RTC\_ERCTRL\_BITMASK}}
+{\footnotesize\ttfamily \#define R\+T\+C\+\_\+\+E\+R\+C\+T\+R\+L\+\_\+\+B\+I\+T\+M\+A\+SK~((uint32\+\_\+t) 0x\+C0\+F03\+C0\+F)}
+
+Event Monitor/\+Recorder Control register mask 
+
+Definition at line 231 of file rtc\+\_\+18xx\+\_\+43xx.\+h.
+
+\mbox{\Hypertarget{group___r_t_c__18_x_x__43_x_x_gada99735428b58b1f2af7ed899d019e09}\label{group___r_t_c__18_x_x__43_x_x_gada99735428b58b1f2af7ed899d019e09}} 
+\index{C\+H\+I\+P\+: L\+P\+C18xx/43xx Real Time Clock driver@{C\+H\+I\+P\+: L\+P\+C18xx/43xx Real Time Clock driver}!R\+T\+C\+\_\+\+E\+R\+C\+T\+R\+L\+\_\+\+C\+H\+A\+N\+N\+E\+L\+\_\+\+C\+O\+N\+F\+IG@{R\+T\+C\+\_\+\+E\+R\+C\+T\+R\+L\+\_\+\+C\+H\+A\+N\+N\+E\+L\+\_\+\+C\+O\+N\+F\+IG}}
+\index{R\+T\+C\+\_\+\+E\+R\+C\+T\+R\+L\+\_\+\+C\+H\+A\+N\+N\+E\+L\+\_\+\+C\+O\+N\+F\+IG@{R\+T\+C\+\_\+\+E\+R\+C\+T\+R\+L\+\_\+\+C\+H\+A\+N\+N\+E\+L\+\_\+\+C\+O\+N\+F\+IG}!C\+H\+I\+P\+: L\+P\+C18xx/43xx Real Time Clock driver@{C\+H\+I\+P\+: L\+P\+C18xx/43xx Real Time Clock driver}}
+\subsubsection{\texorpdfstring{R\+T\+C\+\_\+\+E\+R\+C\+T\+R\+L\+\_\+\+C\+H\+A\+N\+N\+E\+L\+\_\+\+C\+O\+N\+F\+IG}{RTC\_ERCTRL\_CHANNEL\_CONFIG}}
+{\footnotesize\ttfamily \#define R\+T\+C\+\_\+\+E\+R\+C\+T\+R\+L\+\_\+\+C\+H\+A\+N\+N\+E\+L\+\_\+\+C\+O\+N\+F\+IG(\begin{DoxyParamCaption}\item[{}]{ch,  }\item[{}]{\hyperlink{sdio__18xx__43xx_8c_a8fac2498fe5bd106b35d43af5bc91f6f}{flag} }\end{DoxyParamCaption})~((uint32\+\_\+t) (\hyperlink{sdio__18xx__43xx_8c_a8fac2498fe5bd106b35d43af5bc91f6f}{flag} $<$$<$ (10 $\ast$ ch)))}
+
+
+
+Definition at line 243 of file rtc\+\_\+18xx\+\_\+43xx.\+h.
+
+\mbox{\Hypertarget{group___r_t_c__18_x_x__43_x_x_ga92d490ffb38a83d5087fa71de39484c6}\label{group___r_t_c__18_x_x__43_x_x_ga92d490ffb38a83d5087fa71de39484c6}} 
+\index{C\+H\+I\+P\+: L\+P\+C18xx/43xx Real Time Clock driver@{C\+H\+I\+P\+: L\+P\+C18xx/43xx Real Time Clock driver}!R\+T\+C\+\_\+\+E\+R\+C\+T\+R\+L\+\_\+\+C\+H\+A\+N\+N\+E\+L\+\_\+\+C\+O\+N\+F\+I\+G\+\_\+\+B\+I\+T\+M\+A\+SK@{R\+T\+C\+\_\+\+E\+R\+C\+T\+R\+L\+\_\+\+C\+H\+A\+N\+N\+E\+L\+\_\+\+C\+O\+N\+F\+I\+G\+\_\+\+B\+I\+T\+M\+A\+SK}}
+\index{R\+T\+C\+\_\+\+E\+R\+C\+T\+R\+L\+\_\+\+C\+H\+A\+N\+N\+E\+L\+\_\+\+C\+O\+N\+F\+I\+G\+\_\+\+B\+I\+T\+M\+A\+SK@{R\+T\+C\+\_\+\+E\+R\+C\+T\+R\+L\+\_\+\+C\+H\+A\+N\+N\+E\+L\+\_\+\+C\+O\+N\+F\+I\+G\+\_\+\+B\+I\+T\+M\+A\+SK}!C\+H\+I\+P\+: L\+P\+C18xx/43xx Real Time Clock driver@{C\+H\+I\+P\+: L\+P\+C18xx/43xx Real Time Clock driver}}
+\subsubsection{\texorpdfstring{R\+T\+C\+\_\+\+E\+R\+C\+T\+R\+L\+\_\+\+C\+H\+A\+N\+N\+E\+L\+\_\+\+C\+O\+N\+F\+I\+G\+\_\+\+B\+I\+T\+M\+A\+SK}{RTC\_ERCTRL\_CHANNEL\_CONFIG\_BITMASK}}
+{\footnotesize\ttfamily \#define R\+T\+C\+\_\+\+E\+R\+C\+T\+R\+L\+\_\+\+C\+H\+A\+N\+N\+E\+L\+\_\+\+C\+O\+N\+F\+I\+G\+\_\+\+B\+I\+T\+M\+A\+SK(\begin{DoxyParamCaption}\item[{}]{ch }\end{DoxyParamCaption})~((uint32\+\_\+t) (0x0\+F $<$$<$ (10 $\ast$ ch)))}
+
+Configure a specific channel 
+
+Definition at line 242 of file rtc\+\_\+18xx\+\_\+43xx.\+h.
+
+\mbox{\Hypertarget{group___r_t_c__18_x_x__43_x_x_gaad7422eeba094d2538ddc97144066ba0}\label{group___r_t_c__18_x_x__43_x_x_gaad7422eeba094d2538ddc97144066ba0}} 
+\index{C\+H\+I\+P\+: L\+P\+C18xx/43xx Real Time Clock driver@{C\+H\+I\+P\+: L\+P\+C18xx/43xx Real Time Clock driver}!R\+T\+C\+\_\+\+E\+R\+C\+T\+R\+L\+\_\+\+G\+P\+C\+L\+E\+A\+R\+\_\+\+EN@{R\+T\+C\+\_\+\+E\+R\+C\+T\+R\+L\+\_\+\+G\+P\+C\+L\+E\+A\+R\+\_\+\+EN}}
+\index{R\+T\+C\+\_\+\+E\+R\+C\+T\+R\+L\+\_\+\+G\+P\+C\+L\+E\+A\+R\+\_\+\+EN@{R\+T\+C\+\_\+\+E\+R\+C\+T\+R\+L\+\_\+\+G\+P\+C\+L\+E\+A\+R\+\_\+\+EN}!C\+H\+I\+P\+: L\+P\+C18xx/43xx Real Time Clock driver@{C\+H\+I\+P\+: L\+P\+C18xx/43xx Real Time Clock driver}}
+\subsubsection{\texorpdfstring{R\+T\+C\+\_\+\+E\+R\+C\+T\+R\+L\+\_\+\+G\+P\+C\+L\+E\+A\+R\+\_\+\+EN}{RTC\_ERCTRL\_GPCLEAR\_EN}}
+{\footnotesize\ttfamily \#define R\+T\+C\+\_\+\+E\+R\+C\+T\+R\+L\+\_\+\+G\+P\+C\+L\+E\+A\+R\+\_\+\+EN~((uint32\+\_\+t) (1 $<$$<$ 1))}
+
+Enables automatically clearing the R\+TC general purpose registers when an event occurs 
+
+Definition at line 235 of file rtc\+\_\+18xx\+\_\+43xx.\+h.
+
+\mbox{\Hypertarget{group___r_t_c__18_x_x__43_x_x_ga3446ab4643553dbba73e5b080827619e}\label{group___r_t_c__18_x_x__43_x_x_ga3446ab4643553dbba73e5b080827619e}} 
+\index{C\+H\+I\+P\+: L\+P\+C18xx/43xx Real Time Clock driver@{C\+H\+I\+P\+: L\+P\+C18xx/43xx Real Time Clock driver}!R\+T\+C\+\_\+\+E\+R\+C\+T\+R\+L\+\_\+\+I\+N\+P\+U\+T\+\_\+\+EN@{R\+T\+C\+\_\+\+E\+R\+C\+T\+R\+L\+\_\+\+I\+N\+P\+U\+T\+\_\+\+EN}}
+\index{R\+T\+C\+\_\+\+E\+R\+C\+T\+R\+L\+\_\+\+I\+N\+P\+U\+T\+\_\+\+EN@{R\+T\+C\+\_\+\+E\+R\+C\+T\+R\+L\+\_\+\+I\+N\+P\+U\+T\+\_\+\+EN}!C\+H\+I\+P\+: L\+P\+C18xx/43xx Real Time Clock driver@{C\+H\+I\+P\+: L\+P\+C18xx/43xx Real Time Clock driver}}
+\subsubsection{\texorpdfstring{R\+T\+C\+\_\+\+E\+R\+C\+T\+R\+L\+\_\+\+I\+N\+P\+U\+T\+\_\+\+EN}{RTC\_ERCTRL\_INPUT\_EN}}
+{\footnotesize\ttfamily \#define R\+T\+C\+\_\+\+E\+R\+C\+T\+R\+L\+\_\+\+I\+N\+P\+U\+T\+\_\+\+EN~((uint32\+\_\+t) (1 $<$$<$ 3))}
+
+Enable event input. 
+
+Definition at line 240 of file rtc\+\_\+18xx\+\_\+43xx.\+h.
+
+\mbox{\Hypertarget{group___r_t_c__18_x_x__43_x_x_ga1289a9b31c3e539c89dba3852f509580}\label{group___r_t_c__18_x_x__43_x_x_ga1289a9b31c3e539c89dba3852f509580}} 
+\index{C\+H\+I\+P\+: L\+P\+C18xx/43xx Real Time Clock driver@{C\+H\+I\+P\+: L\+P\+C18xx/43xx Real Time Clock driver}!R\+T\+C\+\_\+\+E\+R\+C\+T\+R\+L\+\_\+\+I\+N\+T\+W\+A\+K\+E\+\_\+\+EN@{R\+T\+C\+\_\+\+E\+R\+C\+T\+R\+L\+\_\+\+I\+N\+T\+W\+A\+K\+E\+\_\+\+EN}}
+\index{R\+T\+C\+\_\+\+E\+R\+C\+T\+R\+L\+\_\+\+I\+N\+T\+W\+A\+K\+E\+\_\+\+EN@{R\+T\+C\+\_\+\+E\+R\+C\+T\+R\+L\+\_\+\+I\+N\+T\+W\+A\+K\+E\+\_\+\+EN}!C\+H\+I\+P\+: L\+P\+C18xx/43xx Real Time Clock driver@{C\+H\+I\+P\+: L\+P\+C18xx/43xx Real Time Clock driver}}
+\subsubsection{\texorpdfstring{R\+T\+C\+\_\+\+E\+R\+C\+T\+R\+L\+\_\+\+I\+N\+T\+W\+A\+K\+E\+\_\+\+EN}{RTC\_ERCTRL\_INTWAKE\_EN}}
+{\footnotesize\ttfamily \#define R\+T\+C\+\_\+\+E\+R\+C\+T\+R\+L\+\_\+\+I\+N\+T\+W\+A\+K\+E\+\_\+\+EN~((uint32\+\_\+t) (1 $<$$<$ 0))}
+
+Enable event interrupt and wakeup 
+
+Definition at line 233 of file rtc\+\_\+18xx\+\_\+43xx.\+h.
+
+\mbox{\Hypertarget{group___r_t_c__18_x_x__43_x_x_ga340ba5fcf5656fde4e98fa41deb92aca}\label{group___r_t_c__18_x_x__43_x_x_ga340ba5fcf5656fde4e98fa41deb92aca}} 
+\index{C\+H\+I\+P\+: L\+P\+C18xx/43xx Real Time Clock driver@{C\+H\+I\+P\+: L\+P\+C18xx/43xx Real Time Clock driver}!R\+T\+C\+\_\+\+E\+R\+C\+T\+R\+L\+\_\+\+M\+O\+DE@{R\+T\+C\+\_\+\+E\+R\+C\+T\+R\+L\+\_\+\+M\+O\+DE}}
+\index{R\+T\+C\+\_\+\+E\+R\+C\+T\+R\+L\+\_\+\+M\+O\+DE@{R\+T\+C\+\_\+\+E\+R\+C\+T\+R\+L\+\_\+\+M\+O\+DE}!C\+H\+I\+P\+: L\+P\+C18xx/43xx Real Time Clock driver@{C\+H\+I\+P\+: L\+P\+C18xx/43xx Real Time Clock driver}}
+\subsubsection{\texorpdfstring{R\+T\+C\+\_\+\+E\+R\+C\+T\+R\+L\+\_\+\+M\+O\+DE}{RTC\_ERCTRL\_MODE}}
+{\footnotesize\ttfamily \#define R\+T\+C\+\_\+\+E\+R\+C\+T\+R\+L\+\_\+\+M\+O\+DE(\begin{DoxyParamCaption}\item[{}]{n }\end{DoxyParamCaption})~(((uint32\+\_\+t) n) $<$$<$ 30)}
+
+
+
+Definition at line 251 of file rtc\+\_\+18xx\+\_\+43xx.\+h.
+
+\mbox{\Hypertarget{group___r_t_c__18_x_x__43_x_x_ga7d2c669dd9d71998a2d7a9eb7f7db2ab}\label{group___r_t_c__18_x_x__43_x_x_ga7d2c669dd9d71998a2d7a9eb7f7db2ab}} 
+\index{C\+H\+I\+P\+: L\+P\+C18xx/43xx Real Time Clock driver@{C\+H\+I\+P\+: L\+P\+C18xx/43xx Real Time Clock driver}!R\+T\+C\+\_\+\+E\+R\+C\+T\+R\+L\+\_\+\+M\+O\+D\+E\+\_\+16\+HZ@{R\+T\+C\+\_\+\+E\+R\+C\+T\+R\+L\+\_\+\+M\+O\+D\+E\+\_\+16\+HZ}}
+\index{R\+T\+C\+\_\+\+E\+R\+C\+T\+R\+L\+\_\+\+M\+O\+D\+E\+\_\+16\+HZ@{R\+T\+C\+\_\+\+E\+R\+C\+T\+R\+L\+\_\+\+M\+O\+D\+E\+\_\+16\+HZ}!C\+H\+I\+P\+: L\+P\+C18xx/43xx Real Time Clock driver@{C\+H\+I\+P\+: L\+P\+C18xx/43xx Real Time Clock driver}}
+\subsubsection{\texorpdfstring{R\+T\+C\+\_\+\+E\+R\+C\+T\+R\+L\+\_\+\+M\+O\+D\+E\+\_\+16\+HZ}{RTC\_ERCTRL\_MODE\_16HZ}}
+{\footnotesize\ttfamily \#define R\+T\+C\+\_\+\+E\+R\+C\+T\+R\+L\+\_\+\+M\+O\+D\+E\+\_\+16\+HZ~(((uint32\+\_\+t) 1) $<$$<$ 30)}
+
+
+
+Definition at line 248 of file rtc\+\_\+18xx\+\_\+43xx.\+h.
+
+\mbox{\Hypertarget{group___r_t_c__18_x_x__43_x_x_gae2733de737c026afa2ce9b9cd65f909c}\label{group___r_t_c__18_x_x__43_x_x_gae2733de737c026afa2ce9b9cd65f909c}} 
+\index{C\+H\+I\+P\+: L\+P\+C18xx/43xx Real Time Clock driver@{C\+H\+I\+P\+: L\+P\+C18xx/43xx Real Time Clock driver}!R\+T\+C\+\_\+\+E\+R\+C\+T\+R\+L\+\_\+\+M\+O\+D\+E\+\_\+1\+K\+HZ@{R\+T\+C\+\_\+\+E\+R\+C\+T\+R\+L\+\_\+\+M\+O\+D\+E\+\_\+1\+K\+HZ}}
+\index{R\+T\+C\+\_\+\+E\+R\+C\+T\+R\+L\+\_\+\+M\+O\+D\+E\+\_\+1\+K\+HZ@{R\+T\+C\+\_\+\+E\+R\+C\+T\+R\+L\+\_\+\+M\+O\+D\+E\+\_\+1\+K\+HZ}!C\+H\+I\+P\+: L\+P\+C18xx/43xx Real Time Clock driver@{C\+H\+I\+P\+: L\+P\+C18xx/43xx Real Time Clock driver}}
+\subsubsection{\texorpdfstring{R\+T\+C\+\_\+\+E\+R\+C\+T\+R\+L\+\_\+\+M\+O\+D\+E\+\_\+1\+K\+HZ}{RTC\_ERCTRL\_MODE\_1KHZ}}
+{\footnotesize\ttfamily \#define R\+T\+C\+\_\+\+E\+R\+C\+T\+R\+L\+\_\+\+M\+O\+D\+E\+\_\+1\+K\+HZ~(((uint32\+\_\+t) 3) $<$$<$ 30)}
+
+
+
+Definition at line 250 of file rtc\+\_\+18xx\+\_\+43xx.\+h.
+
+\mbox{\Hypertarget{group___r_t_c__18_x_x__43_x_x_ga04e510f093b5f89a5603e748bb2e8394}\label{group___r_t_c__18_x_x__43_x_x_ga04e510f093b5f89a5603e748bb2e8394}} 
+\index{C\+H\+I\+P\+: L\+P\+C18xx/43xx Real Time Clock driver@{C\+H\+I\+P\+: L\+P\+C18xx/43xx Real Time Clock driver}!R\+T\+C\+\_\+\+E\+R\+C\+T\+R\+L\+\_\+\+M\+O\+D\+E\+\_\+64\+HZ@{R\+T\+C\+\_\+\+E\+R\+C\+T\+R\+L\+\_\+\+M\+O\+D\+E\+\_\+64\+HZ}}
+\index{R\+T\+C\+\_\+\+E\+R\+C\+T\+R\+L\+\_\+\+M\+O\+D\+E\+\_\+64\+HZ@{R\+T\+C\+\_\+\+E\+R\+C\+T\+R\+L\+\_\+\+M\+O\+D\+E\+\_\+64\+HZ}!C\+H\+I\+P\+: L\+P\+C18xx/43xx Real Time Clock driver@{C\+H\+I\+P\+: L\+P\+C18xx/43xx Real Time Clock driver}}
+\subsubsection{\texorpdfstring{R\+T\+C\+\_\+\+E\+R\+C\+T\+R\+L\+\_\+\+M\+O\+D\+E\+\_\+64\+HZ}{RTC\_ERCTRL\_MODE\_64HZ}}
+{\footnotesize\ttfamily \#define R\+T\+C\+\_\+\+E\+R\+C\+T\+R\+L\+\_\+\+M\+O\+D\+E\+\_\+64\+HZ~(((uint32\+\_\+t) 2) $<$$<$ 30)}
+
+
+
+Definition at line 249 of file rtc\+\_\+18xx\+\_\+43xx.\+h.
+
+\mbox{\Hypertarget{group___r_t_c__18_x_x__43_x_x_ga2d96a47a877ecf282ad30c0dce313894}\label{group___r_t_c__18_x_x__43_x_x_ga2d96a47a877ecf282ad30c0dce313894}} 
+\index{C\+H\+I\+P\+: L\+P\+C18xx/43xx Real Time Clock driver@{C\+H\+I\+P\+: L\+P\+C18xx/43xx Real Time Clock driver}!R\+T\+C\+\_\+\+E\+R\+C\+T\+R\+L\+\_\+\+M\+O\+D\+E\+\_\+\+C\+L\+K\+\_\+\+D\+I\+S\+A\+B\+LE@{R\+T\+C\+\_\+\+E\+R\+C\+T\+R\+L\+\_\+\+M\+O\+D\+E\+\_\+\+C\+L\+K\+\_\+\+D\+I\+S\+A\+B\+LE}}
+\index{R\+T\+C\+\_\+\+E\+R\+C\+T\+R\+L\+\_\+\+M\+O\+D\+E\+\_\+\+C\+L\+K\+\_\+\+D\+I\+S\+A\+B\+LE@{R\+T\+C\+\_\+\+E\+R\+C\+T\+R\+L\+\_\+\+M\+O\+D\+E\+\_\+\+C\+L\+K\+\_\+\+D\+I\+S\+A\+B\+LE}!C\+H\+I\+P\+: L\+P\+C18xx/43xx Real Time Clock driver@{C\+H\+I\+P\+: L\+P\+C18xx/43xx Real Time Clock driver}}
+\subsubsection{\texorpdfstring{R\+T\+C\+\_\+\+E\+R\+C\+T\+R\+L\+\_\+\+M\+O\+D\+E\+\_\+\+C\+L\+K\+\_\+\+D\+I\+S\+A\+B\+LE}{RTC\_ERCTRL\_MODE\_CLK\_DISABLE}}
+{\footnotesize\ttfamily \#define R\+T\+C\+\_\+\+E\+R\+C\+T\+R\+L\+\_\+\+M\+O\+D\+E\+\_\+\+C\+L\+K\+\_\+\+D\+I\+S\+A\+B\+LE~(((uint32\+\_\+t) 0) $<$$<$ 30)}
+
+
+
+Definition at line 247 of file rtc\+\_\+18xx\+\_\+43xx.\+h.
+
+\mbox{\Hypertarget{group___r_t_c__18_x_x__43_x_x_ga1d26213d7c42922f4e7d0e231e2b5ae8}\label{group___r_t_c__18_x_x__43_x_x_ga1d26213d7c42922f4e7d0e231e2b5ae8}} 
+\index{C\+H\+I\+P\+: L\+P\+C18xx/43xx Real Time Clock driver@{C\+H\+I\+P\+: L\+P\+C18xx/43xx Real Time Clock driver}!R\+T\+C\+\_\+\+E\+R\+C\+T\+R\+L\+\_\+\+M\+O\+D\+E\+\_\+\+M\+A\+SK@{R\+T\+C\+\_\+\+E\+R\+C\+T\+R\+L\+\_\+\+M\+O\+D\+E\+\_\+\+M\+A\+SK}}
+\index{R\+T\+C\+\_\+\+E\+R\+C\+T\+R\+L\+\_\+\+M\+O\+D\+E\+\_\+\+M\+A\+SK@{R\+T\+C\+\_\+\+E\+R\+C\+T\+R\+L\+\_\+\+M\+O\+D\+E\+\_\+\+M\+A\+SK}!C\+H\+I\+P\+: L\+P\+C18xx/43xx Real Time Clock driver@{C\+H\+I\+P\+: L\+P\+C18xx/43xx Real Time Clock driver}}
+\subsubsection{\texorpdfstring{R\+T\+C\+\_\+\+E\+R\+C\+T\+R\+L\+\_\+\+M\+O\+D\+E\+\_\+\+M\+A\+SK}{RTC\_ERCTRL\_MODE\_MASK}}
+{\footnotesize\ttfamily \#define R\+T\+C\+\_\+\+E\+R\+C\+T\+R\+L\+\_\+\+M\+O\+D\+E\+\_\+\+M\+A\+SK~(((uint32\+\_\+t) 3) $<$$<$ 30)}
+
+Enable Event Monitor/\+Recorder and select its operating frequency. 
+
+Definition at line 246 of file rtc\+\_\+18xx\+\_\+43xx.\+h.
+
+\mbox{\Hypertarget{group___r_t_c__18_x_x__43_x_x_ga385935dbe73607b57dc1d31793b34f74}\label{group___r_t_c__18_x_x__43_x_x_ga385935dbe73607b57dc1d31793b34f74}} 
+\index{C\+H\+I\+P\+: L\+P\+C18xx/43xx Real Time Clock driver@{C\+H\+I\+P\+: L\+P\+C18xx/43xx Real Time Clock driver}!R\+T\+C\+\_\+\+E\+R\+C\+T\+R\+L\+\_\+\+P\+O\+L\+\_\+\+N\+E\+G\+A\+T\+I\+VE@{R\+T\+C\+\_\+\+E\+R\+C\+T\+R\+L\+\_\+\+P\+O\+L\+\_\+\+N\+E\+G\+A\+T\+I\+VE}}
+\index{R\+T\+C\+\_\+\+E\+R\+C\+T\+R\+L\+\_\+\+P\+O\+L\+\_\+\+N\+E\+G\+A\+T\+I\+VE@{R\+T\+C\+\_\+\+E\+R\+C\+T\+R\+L\+\_\+\+P\+O\+L\+\_\+\+N\+E\+G\+A\+T\+I\+VE}!C\+H\+I\+P\+: L\+P\+C18xx/43xx Real Time Clock driver@{C\+H\+I\+P\+: L\+P\+C18xx/43xx Real Time Clock driver}}
+\subsubsection{\texorpdfstring{R\+T\+C\+\_\+\+E\+R\+C\+T\+R\+L\+\_\+\+P\+O\+L\+\_\+\+N\+E\+G\+A\+T\+I\+VE}{RTC\_ERCTRL\_POL\_NEGATIVE}}
+{\footnotesize\ttfamily \#define R\+T\+C\+\_\+\+E\+R\+C\+T\+R\+L\+\_\+\+P\+O\+L\+\_\+\+N\+E\+G\+A\+T\+I\+VE~(0)		/$\ast$ Event as positive edge $\ast$/}
+
+Select polarity for a channel event on the input pin. 
+
+Definition at line 237 of file rtc\+\_\+18xx\+\_\+43xx.\+h.
+
+\mbox{\Hypertarget{group___r_t_c__18_x_x__43_x_x_ga78137f50cb725cf3c51b4ac396d0cc83}\label{group___r_t_c__18_x_x__43_x_x_ga78137f50cb725cf3c51b4ac396d0cc83}} 
+\index{C\+H\+I\+P\+: L\+P\+C18xx/43xx Real Time Clock driver@{C\+H\+I\+P\+: L\+P\+C18xx/43xx Real Time Clock driver}!R\+T\+C\+\_\+\+E\+R\+C\+T\+R\+L\+\_\+\+P\+O\+L\+\_\+\+P\+O\+S\+I\+T\+I\+VE@{R\+T\+C\+\_\+\+E\+R\+C\+T\+R\+L\+\_\+\+P\+O\+L\+\_\+\+P\+O\+S\+I\+T\+I\+VE}}
+\index{R\+T\+C\+\_\+\+E\+R\+C\+T\+R\+L\+\_\+\+P\+O\+L\+\_\+\+P\+O\+S\+I\+T\+I\+VE@{R\+T\+C\+\_\+\+E\+R\+C\+T\+R\+L\+\_\+\+P\+O\+L\+\_\+\+P\+O\+S\+I\+T\+I\+VE}!C\+H\+I\+P\+: L\+P\+C18xx/43xx Real Time Clock driver@{C\+H\+I\+P\+: L\+P\+C18xx/43xx Real Time Clock driver}}
+\subsubsection{\texorpdfstring{R\+T\+C\+\_\+\+E\+R\+C\+T\+R\+L\+\_\+\+P\+O\+L\+\_\+\+P\+O\+S\+I\+T\+I\+VE}{RTC\_ERCTRL\_POL\_POSITIVE}}
+{\footnotesize\ttfamily \#define R\+T\+C\+\_\+\+E\+R\+C\+T\+R\+L\+\_\+\+P\+O\+L\+\_\+\+P\+O\+S\+I\+T\+I\+VE~((uint32\+\_\+t) (1 $<$$<$ 2))	/$\ast$ Event as negative edge $\ast$/}
+
+
+
+Definition at line 238 of file rtc\+\_\+18xx\+\_\+43xx.\+h.
+
+\mbox{\Hypertarget{group___r_t_c__18_x_x__43_x_x_ga4aa755787c9fdebd2a3a3c02b3d57007}\label{group___r_t_c__18_x_x__43_x_x_ga4aa755787c9fdebd2a3a3c02b3d57007}} 
+\index{C\+H\+I\+P\+: L\+P\+C18xx/43xx Real Time Clock driver@{C\+H\+I\+P\+: L\+P\+C18xx/43xx Real Time Clock driver}!R\+T\+C\+\_\+\+E\+R\+S\+T\+A\+T\+U\+S\+\_\+\+C\+H\+A\+N\+N\+E\+L\+\_\+\+EV@{R\+T\+C\+\_\+\+E\+R\+S\+T\+A\+T\+U\+S\+\_\+\+C\+H\+A\+N\+N\+E\+L\+\_\+\+EV}}
+\index{R\+T\+C\+\_\+\+E\+R\+S\+T\+A\+T\+U\+S\+\_\+\+C\+H\+A\+N\+N\+E\+L\+\_\+\+EV@{R\+T\+C\+\_\+\+E\+R\+S\+T\+A\+T\+U\+S\+\_\+\+C\+H\+A\+N\+N\+E\+L\+\_\+\+EV}!C\+H\+I\+P\+: L\+P\+C18xx/43xx Real Time Clock driver@{C\+H\+I\+P\+: L\+P\+C18xx/43xx Real Time Clock driver}}
+\subsubsection{\texorpdfstring{R\+T\+C\+\_\+\+E\+R\+S\+T\+A\+T\+U\+S\+\_\+\+C\+H\+A\+N\+N\+E\+L\+\_\+\+EV}{RTC\_ERSTATUS\_CHANNEL\_EV}}
+{\footnotesize\ttfamily \#define R\+T\+C\+\_\+\+E\+R\+S\+T\+A\+T\+U\+S\+\_\+\+C\+H\+A\+N\+N\+E\+L\+\_\+\+EV(\begin{DoxyParamCaption}\item[{}]{ch }\end{DoxyParamCaption})~((uint32\+\_\+t) (1 $<$$<$ ch))		/$\ast$ At least 1 \hyperlink{structevent}{event} has occurred on a specific channel $\ast$/}
+
+Event Flag for a specific channel 
+
+Definition at line 257 of file rtc\+\_\+18xx\+\_\+43xx.\+h.
+
+\mbox{\Hypertarget{group___r_t_c__18_x_x__43_x_x_gadd02a72f5a99bf2d67e3aded8e700142}\label{group___r_t_c__18_x_x__43_x_x_gadd02a72f5a99bf2d67e3aded8e700142}} 
+\index{C\+H\+I\+P\+: L\+P\+C18xx/43xx Real Time Clock driver@{C\+H\+I\+P\+: L\+P\+C18xx/43xx Real Time Clock driver}!R\+T\+C\+\_\+\+E\+R\+S\+T\+A\+T\+U\+S\+\_\+\+G\+P\+C\+L\+E\+A\+R\+ED@{R\+T\+C\+\_\+\+E\+R\+S\+T\+A\+T\+U\+S\+\_\+\+G\+P\+C\+L\+E\+A\+R\+ED}}
+\index{R\+T\+C\+\_\+\+E\+R\+S\+T\+A\+T\+U\+S\+\_\+\+G\+P\+C\+L\+E\+A\+R\+ED@{R\+T\+C\+\_\+\+E\+R\+S\+T\+A\+T\+U\+S\+\_\+\+G\+P\+C\+L\+E\+A\+R\+ED}!C\+H\+I\+P\+: L\+P\+C18xx/43xx Real Time Clock driver@{C\+H\+I\+P\+: L\+P\+C18xx/43xx Real Time Clock driver}}
+\subsubsection{\texorpdfstring{R\+T\+C\+\_\+\+E\+R\+S\+T\+A\+T\+U\+S\+\_\+\+G\+P\+C\+L\+E\+A\+R\+ED}{RTC\_ERSTATUS\_GPCLEARED}}
+{\footnotesize\ttfamily \#define R\+T\+C\+\_\+\+E\+R\+S\+T\+A\+T\+U\+S\+\_\+\+G\+P\+C\+L\+E\+A\+R\+ED~((uint32\+\_\+t) (1 $<$$<$ 3))}
+
+General purpose registers have been asynchronous cleared. 
+
+Definition at line 259 of file rtc\+\_\+18xx\+\_\+43xx.\+h.
+
+\mbox{\Hypertarget{group___r_t_c__18_x_x__43_x_x_gaad84e4ab46519c68d328db9b823c2c44}\label{group___r_t_c__18_x_x__43_x_x_gaad84e4ab46519c68d328db9b823c2c44}} 
+\index{C\+H\+I\+P\+: L\+P\+C18xx/43xx Real Time Clock driver@{C\+H\+I\+P\+: L\+P\+C18xx/43xx Real Time Clock driver}!R\+T\+C\+\_\+\+E\+R\+S\+T\+A\+T\+U\+S\+\_\+\+W\+A\+K\+E\+UP@{R\+T\+C\+\_\+\+E\+R\+S\+T\+A\+T\+U\+S\+\_\+\+W\+A\+K\+E\+UP}}
+\index{R\+T\+C\+\_\+\+E\+R\+S\+T\+A\+T\+U\+S\+\_\+\+W\+A\+K\+E\+UP@{R\+T\+C\+\_\+\+E\+R\+S\+T\+A\+T\+U\+S\+\_\+\+W\+A\+K\+E\+UP}!C\+H\+I\+P\+: L\+P\+C18xx/43xx Real Time Clock driver@{C\+H\+I\+P\+: L\+P\+C18xx/43xx Real Time Clock driver}}
+\subsubsection{\texorpdfstring{R\+T\+C\+\_\+\+E\+R\+S\+T\+A\+T\+U\+S\+\_\+\+W\+A\+K\+E\+UP}{RTC\_ERSTATUS\_WAKEUP}}
+{\footnotesize\ttfamily \#define R\+T\+C\+\_\+\+E\+R\+S\+T\+A\+T\+U\+S\+\_\+\+W\+A\+K\+E\+UP~((uint32\+\_\+t) (((uint32\+\_\+t) 1) $<$$<$ 31))}
+
+An interrupt/wakeup request is pending. 
+
+Definition at line 261 of file rtc\+\_\+18xx\+\_\+43xx.\+h.
+
+\mbox{\Hypertarget{group___r_t_c__18_x_x__43_x_x_gaeebb09cabedc374d2fd54020862be3cf}\label{group___r_t_c__18_x_x__43_x_x_gaeebb09cabedc374d2fd54020862be3cf}} 
+\index{C\+H\+I\+P\+: L\+P\+C18xx/43xx Real Time Clock driver@{C\+H\+I\+P\+: L\+P\+C18xx/43xx Real Time Clock driver}!R\+T\+C\+\_\+\+E\+V\+\_\+\+S\+U\+P\+P\+O\+RT@{R\+T\+C\+\_\+\+E\+V\+\_\+\+S\+U\+P\+P\+O\+RT}}
+\index{R\+T\+C\+\_\+\+E\+V\+\_\+\+S\+U\+P\+P\+O\+RT@{R\+T\+C\+\_\+\+E\+V\+\_\+\+S\+U\+P\+P\+O\+RT}!C\+H\+I\+P\+: L\+P\+C18xx/43xx Real Time Clock driver@{C\+H\+I\+P\+: L\+P\+C18xx/43xx Real Time Clock driver}}
+\subsubsection{\texorpdfstring{R\+T\+C\+\_\+\+E\+V\+\_\+\+S\+U\+P\+P\+O\+RT}{RTC\_EV\_SUPPORT}}
+{\footnotesize\ttfamily \#define R\+T\+C\+\_\+\+E\+V\+\_\+\+S\+U\+P\+P\+O\+RT~1				/$\ast$ Event Monitor/Recorder support $\ast$/}
+
+
+
+Definition at line 44 of file rtc\+\_\+18xx\+\_\+43xx.\+h.
+
+\mbox{\Hypertarget{group___r_t_c__18_x_x__43_x_x_ga3c6fd786e3cb5f56b71474fc2d26a8a4}\label{group___r_t_c__18_x_x__43_x_x_ga3c6fd786e3cb5f56b71474fc2d26a8a4}} 
+\index{C\+H\+I\+P\+: L\+P\+C18xx/43xx Real Time Clock driver@{C\+H\+I\+P\+: L\+P\+C18xx/43xx Real Time Clock driver}!R\+T\+C\+\_\+\+H\+O\+U\+R\+\_\+\+M\+A\+SK@{R\+T\+C\+\_\+\+H\+O\+U\+R\+\_\+\+M\+A\+SK}}
+\index{R\+T\+C\+\_\+\+H\+O\+U\+R\+\_\+\+M\+A\+SK@{R\+T\+C\+\_\+\+H\+O\+U\+R\+\_\+\+M\+A\+SK}!C\+H\+I\+P\+: L\+P\+C18xx/43xx Real Time Clock driver@{C\+H\+I\+P\+: L\+P\+C18xx/43xx Real Time Clock driver}}
+\subsubsection{\texorpdfstring{R\+T\+C\+\_\+\+H\+O\+U\+R\+\_\+\+M\+A\+SK}{RTC\_HOUR\_MASK}}
+{\footnotesize\ttfamily \#define R\+T\+C\+\_\+\+H\+O\+U\+R\+\_\+\+M\+A\+SK~(0x0000001\+F)}
+
+H\+O\+UR register mask 
+
+Definition at line 189 of file rtc\+\_\+18xx\+\_\+43xx.\+h.
+
+\mbox{\Hypertarget{group___r_t_c__18_x_x__43_x_x_ga35630c42240ce2e8f74c38e1731d7e68}\label{group___r_t_c__18_x_x__43_x_x_ga35630c42240ce2e8f74c38e1731d7e68}} 
+\index{C\+H\+I\+P\+: L\+P\+C18xx/43xx Real Time Clock driver@{C\+H\+I\+P\+: L\+P\+C18xx/43xx Real Time Clock driver}!R\+T\+C\+\_\+\+H\+O\+U\+R\+\_\+\+M\+AX@{R\+T\+C\+\_\+\+H\+O\+U\+R\+\_\+\+M\+AX}}
+\index{R\+T\+C\+\_\+\+H\+O\+U\+R\+\_\+\+M\+AX@{R\+T\+C\+\_\+\+H\+O\+U\+R\+\_\+\+M\+AX}!C\+H\+I\+P\+: L\+P\+C18xx/43xx Real Time Clock driver@{C\+H\+I\+P\+: L\+P\+C18xx/43xx Real Time Clock driver}}
+\subsubsection{\texorpdfstring{R\+T\+C\+\_\+\+H\+O\+U\+R\+\_\+\+M\+AX}{RTC\_HOUR\_MAX}}
+{\footnotesize\ttfamily \#define R\+T\+C\+\_\+\+H\+O\+U\+R\+\_\+\+M\+AX~23}
+
+Maximum value of hour 
+
+Definition at line 203 of file rtc\+\_\+18xx\+\_\+43xx.\+h.
+
+\mbox{\Hypertarget{group___r_t_c__18_x_x__43_x_x_ga9c00baff0fca4f8e747fadfe9ee12775}\label{group___r_t_c__18_x_x__43_x_x_ga9c00baff0fca4f8e747fadfe9ee12775}} 
+\index{C\+H\+I\+P\+: L\+P\+C18xx/43xx Real Time Clock driver@{C\+H\+I\+P\+: L\+P\+C18xx/43xx Real Time Clock driver}!R\+T\+C\+\_\+\+I\+L\+R\+\_\+\+B\+I\+T\+M\+A\+SK@{R\+T\+C\+\_\+\+I\+L\+R\+\_\+\+B\+I\+T\+M\+A\+SK}}
+\index{R\+T\+C\+\_\+\+I\+L\+R\+\_\+\+B\+I\+T\+M\+A\+SK@{R\+T\+C\+\_\+\+I\+L\+R\+\_\+\+B\+I\+T\+M\+A\+SK}!C\+H\+I\+P\+: L\+P\+C18xx/43xx Real Time Clock driver@{C\+H\+I\+P\+: L\+P\+C18xx/43xx Real Time Clock driver}}
+\subsubsection{\texorpdfstring{R\+T\+C\+\_\+\+I\+L\+R\+\_\+\+B\+I\+T\+M\+A\+SK}{RTC\_ILR\_BITMASK}}
+{\footnotesize\ttfamily \#define R\+T\+C\+\_\+\+I\+L\+R\+\_\+\+B\+I\+T\+M\+A\+SK~((0x00000003))}
+
+I\+LR register mask 
+
+Definition at line 109 of file rtc\+\_\+18xx\+\_\+43xx.\+h.
+
+\mbox{\Hypertarget{group___r_t_c__18_x_x__43_x_x_ga237351d2c7f08b447254eff9578eb11e}\label{group___r_t_c__18_x_x__43_x_x_ga237351d2c7f08b447254eff9578eb11e}} 
+\index{C\+H\+I\+P\+: L\+P\+C18xx/43xx Real Time Clock driver@{C\+H\+I\+P\+: L\+P\+C18xx/43xx Real Time Clock driver}!R\+T\+C\+\_\+\+I\+R\+L\+\_\+\+R\+T\+C\+A\+LF@{R\+T\+C\+\_\+\+I\+R\+L\+\_\+\+R\+T\+C\+A\+LF}}
+\index{R\+T\+C\+\_\+\+I\+R\+L\+\_\+\+R\+T\+C\+A\+LF@{R\+T\+C\+\_\+\+I\+R\+L\+\_\+\+R\+T\+C\+A\+LF}!C\+H\+I\+P\+: L\+P\+C18xx/43xx Real Time Clock driver@{C\+H\+I\+P\+: L\+P\+C18xx/43xx Real Time Clock driver}}
+\subsubsection{\texorpdfstring{R\+T\+C\+\_\+\+I\+R\+L\+\_\+\+R\+T\+C\+A\+LF}{RTC\_IRL\_RTCALF}}
+{\footnotesize\ttfamily \#define R\+T\+C\+\_\+\+I\+R\+L\+\_\+\+R\+T\+C\+A\+LF~((1 $<$$<$ 1))}
+
+Bit inform the source interrupt is alarm match 
+
+Definition at line 113 of file rtc\+\_\+18xx\+\_\+43xx.\+h.
+
+\mbox{\Hypertarget{group___r_t_c__18_x_x__43_x_x_gaf706fff68e830a082d476467fe71f297}\label{group___r_t_c__18_x_x__43_x_x_gaf706fff68e830a082d476467fe71f297}} 
+\index{C\+H\+I\+P\+: L\+P\+C18xx/43xx Real Time Clock driver@{C\+H\+I\+P\+: L\+P\+C18xx/43xx Real Time Clock driver}!R\+T\+C\+\_\+\+I\+R\+L\+\_\+\+R\+T\+C\+C\+IF@{R\+T\+C\+\_\+\+I\+R\+L\+\_\+\+R\+T\+C\+C\+IF}}
+\index{R\+T\+C\+\_\+\+I\+R\+L\+\_\+\+R\+T\+C\+C\+IF@{R\+T\+C\+\_\+\+I\+R\+L\+\_\+\+R\+T\+C\+C\+IF}!C\+H\+I\+P\+: L\+P\+C18xx/43xx Real Time Clock driver@{C\+H\+I\+P\+: L\+P\+C18xx/43xx Real Time Clock driver}}
+\subsubsection{\texorpdfstring{R\+T\+C\+\_\+\+I\+R\+L\+\_\+\+R\+T\+C\+C\+IF}{RTC\_IRL\_RTCCIF}}
+{\footnotesize\ttfamily \#define R\+T\+C\+\_\+\+I\+R\+L\+\_\+\+R\+T\+C\+C\+IF~((1 $<$$<$ 0))}
+
+Bit inform the source interrupt is counter increment 
+
+Definition at line 111 of file rtc\+\_\+18xx\+\_\+43xx.\+h.
+
+\mbox{\Hypertarget{group___r_t_c__18_x_x__43_x_x_ga9f3224adad8ed73109ee0309c3580998}\label{group___r_t_c__18_x_x__43_x_x_ga9f3224adad8ed73109ee0309c3580998}} 
+\index{C\+H\+I\+P\+: L\+P\+C18xx/43xx Real Time Clock driver@{C\+H\+I\+P\+: L\+P\+C18xx/43xx Real Time Clock driver}!R\+T\+C\+\_\+\+M\+I\+N\+\_\+\+M\+A\+SK@{R\+T\+C\+\_\+\+M\+I\+N\+\_\+\+M\+A\+SK}}
+\index{R\+T\+C\+\_\+\+M\+I\+N\+\_\+\+M\+A\+SK@{R\+T\+C\+\_\+\+M\+I\+N\+\_\+\+M\+A\+SK}!C\+H\+I\+P\+: L\+P\+C18xx/43xx Real Time Clock driver@{C\+H\+I\+P\+: L\+P\+C18xx/43xx Real Time Clock driver}}
+\subsubsection{\texorpdfstring{R\+T\+C\+\_\+\+M\+I\+N\+\_\+\+M\+A\+SK}{RTC\_MIN\_MASK}}
+{\footnotesize\ttfamily \#define R\+T\+C\+\_\+\+M\+I\+N\+\_\+\+M\+A\+SK~(0x0000003\+F)}
+
+M\+IN register mask 
+
+Definition at line 187 of file rtc\+\_\+18xx\+\_\+43xx.\+h.
+
+\mbox{\Hypertarget{group___r_t_c__18_x_x__43_x_x_gab55b557eeb5c66e94a2fda3638e3b7ee}\label{group___r_t_c__18_x_x__43_x_x_gab55b557eeb5c66e94a2fda3638e3b7ee}} 
+\index{C\+H\+I\+P\+: L\+P\+C18xx/43xx Real Time Clock driver@{C\+H\+I\+P\+: L\+P\+C18xx/43xx Real Time Clock driver}!R\+T\+C\+\_\+\+M\+I\+N\+U\+T\+E\+\_\+\+M\+AX@{R\+T\+C\+\_\+\+M\+I\+N\+U\+T\+E\+\_\+\+M\+AX}}
+\index{R\+T\+C\+\_\+\+M\+I\+N\+U\+T\+E\+\_\+\+M\+AX@{R\+T\+C\+\_\+\+M\+I\+N\+U\+T\+E\+\_\+\+M\+AX}!C\+H\+I\+P\+: L\+P\+C18xx/43xx Real Time Clock driver@{C\+H\+I\+P\+: L\+P\+C18xx/43xx Real Time Clock driver}}
+\subsubsection{\texorpdfstring{R\+T\+C\+\_\+\+M\+I\+N\+U\+T\+E\+\_\+\+M\+AX}{RTC\_MINUTE\_MAX}}
+{\footnotesize\ttfamily \#define R\+T\+C\+\_\+\+M\+I\+N\+U\+T\+E\+\_\+\+M\+AX~59}
+
+Maximum value of minute 
+
+Definition at line 202 of file rtc\+\_\+18xx\+\_\+43xx.\+h.
+
+\mbox{\Hypertarget{group___r_t_c__18_x_x__43_x_x_ga491df15fba29dd3237f7bd59a9338050}\label{group___r_t_c__18_x_x__43_x_x_ga491df15fba29dd3237f7bd59a9338050}} 
+\index{C\+H\+I\+P\+: L\+P\+C18xx/43xx Real Time Clock driver@{C\+H\+I\+P\+: L\+P\+C18xx/43xx Real Time Clock driver}!R\+T\+C\+\_\+\+M\+O\+N\+T\+H\+\_\+\+M\+A\+SK@{R\+T\+C\+\_\+\+M\+O\+N\+T\+H\+\_\+\+M\+A\+SK}}
+\index{R\+T\+C\+\_\+\+M\+O\+N\+T\+H\+\_\+\+M\+A\+SK@{R\+T\+C\+\_\+\+M\+O\+N\+T\+H\+\_\+\+M\+A\+SK}!C\+H\+I\+P\+: L\+P\+C18xx/43xx Real Time Clock driver@{C\+H\+I\+P\+: L\+P\+C18xx/43xx Real Time Clock driver}}
+\subsubsection{\texorpdfstring{R\+T\+C\+\_\+\+M\+O\+N\+T\+H\+\_\+\+M\+A\+SK}{RTC\_MONTH\_MASK}}
+{\footnotesize\ttfamily \#define R\+T\+C\+\_\+\+M\+O\+N\+T\+H\+\_\+\+M\+A\+SK~(0x0000000\+F)}
+
+M\+O\+N\+TH register mask 
+
+Definition at line 197 of file rtc\+\_\+18xx\+\_\+43xx.\+h.
+
+\mbox{\Hypertarget{group___r_t_c__18_x_x__43_x_x_gacad40d1a94fd9b6884ec6160abb07674}\label{group___r_t_c__18_x_x__43_x_x_gacad40d1a94fd9b6884ec6160abb07674}} 
+\index{C\+H\+I\+P\+: L\+P\+C18xx/43xx Real Time Clock driver@{C\+H\+I\+P\+: L\+P\+C18xx/43xx Real Time Clock driver}!R\+T\+C\+\_\+\+M\+O\+N\+T\+H\+\_\+\+M\+AX@{R\+T\+C\+\_\+\+M\+O\+N\+T\+H\+\_\+\+M\+AX}}
+\index{R\+T\+C\+\_\+\+M\+O\+N\+T\+H\+\_\+\+M\+AX@{R\+T\+C\+\_\+\+M\+O\+N\+T\+H\+\_\+\+M\+AX}!C\+H\+I\+P\+: L\+P\+C18xx/43xx Real Time Clock driver@{C\+H\+I\+P\+: L\+P\+C18xx/43xx Real Time Clock driver}}
+\subsubsection{\texorpdfstring{R\+T\+C\+\_\+\+M\+O\+N\+T\+H\+\_\+\+M\+AX}{RTC\_MONTH\_MAX}}
+{\footnotesize\ttfamily \#define R\+T\+C\+\_\+\+M\+O\+N\+T\+H\+\_\+\+M\+AX~12}
+
+Maximum value of month 
+
+Definition at line 205 of file rtc\+\_\+18xx\+\_\+43xx.\+h.
+
+\mbox{\Hypertarget{group___r_t_c__18_x_x__43_x_x_ga5002ab062a5871b7ed73c7ff0cb00e6b}\label{group___r_t_c__18_x_x__43_x_x_ga5002ab062a5871b7ed73c7ff0cb00e6b}} 
+\index{C\+H\+I\+P\+: L\+P\+C18xx/43xx Real Time Clock driver@{C\+H\+I\+P\+: L\+P\+C18xx/43xx Real Time Clock driver}!R\+T\+C\+\_\+\+M\+O\+N\+T\+H\+\_\+\+M\+IN@{R\+T\+C\+\_\+\+M\+O\+N\+T\+H\+\_\+\+M\+IN}}
+\index{R\+T\+C\+\_\+\+M\+O\+N\+T\+H\+\_\+\+M\+IN@{R\+T\+C\+\_\+\+M\+O\+N\+T\+H\+\_\+\+M\+IN}!C\+H\+I\+P\+: L\+P\+C18xx/43xx Real Time Clock driver@{C\+H\+I\+P\+: L\+P\+C18xx/43xx Real Time Clock driver}}
+\subsubsection{\texorpdfstring{R\+T\+C\+\_\+\+M\+O\+N\+T\+H\+\_\+\+M\+IN}{RTC\_MONTH\_MIN}}
+{\footnotesize\ttfamily \#define R\+T\+C\+\_\+\+M\+O\+N\+T\+H\+\_\+\+M\+IN~1}
+
+Minimum value of month 
+
+Definition at line 204 of file rtc\+\_\+18xx\+\_\+43xx.\+h.
+
+\mbox{\Hypertarget{group___r_t_c__18_x_x__43_x_x_gabc478af38e7fa3018d8449f22c51d10e}\label{group___r_t_c__18_x_x__43_x_x_gabc478af38e7fa3018d8449f22c51d10e}} 
+\index{C\+H\+I\+P\+: L\+P\+C18xx/43xx Real Time Clock driver@{C\+H\+I\+P\+: L\+P\+C18xx/43xx Real Time Clock driver}!R\+T\+C\+\_\+\+S\+E\+C\+\_\+\+M\+A\+SK@{R\+T\+C\+\_\+\+S\+E\+C\+\_\+\+M\+A\+SK}}
+\index{R\+T\+C\+\_\+\+S\+E\+C\+\_\+\+M\+A\+SK@{R\+T\+C\+\_\+\+S\+E\+C\+\_\+\+M\+A\+SK}!C\+H\+I\+P\+: L\+P\+C18xx/43xx Real Time Clock driver@{C\+H\+I\+P\+: L\+P\+C18xx/43xx Real Time Clock driver}}
+\subsubsection{\texorpdfstring{R\+T\+C\+\_\+\+S\+E\+C\+\_\+\+M\+A\+SK}{RTC\_SEC\_MASK}}
+{\footnotesize\ttfamily \#define R\+T\+C\+\_\+\+S\+E\+C\+\_\+\+M\+A\+SK~(0x0000003\+F)}
+
+S\+EC register mask 
+
+Definition at line 185 of file rtc\+\_\+18xx\+\_\+43xx.\+h.
+
+\mbox{\Hypertarget{group___r_t_c__18_x_x__43_x_x_ga60bbeee3abbb647a0daa7c2130965646}\label{group___r_t_c__18_x_x__43_x_x_ga60bbeee3abbb647a0daa7c2130965646}} 
+\index{C\+H\+I\+P\+: L\+P\+C18xx/43xx Real Time Clock driver@{C\+H\+I\+P\+: L\+P\+C18xx/43xx Real Time Clock driver}!R\+T\+C\+\_\+\+S\+E\+C\+O\+N\+D\+\_\+\+M\+AX@{R\+T\+C\+\_\+\+S\+E\+C\+O\+N\+D\+\_\+\+M\+AX}}
+\index{R\+T\+C\+\_\+\+S\+E\+C\+O\+N\+D\+\_\+\+M\+AX@{R\+T\+C\+\_\+\+S\+E\+C\+O\+N\+D\+\_\+\+M\+AX}!C\+H\+I\+P\+: L\+P\+C18xx/43xx Real Time Clock driver@{C\+H\+I\+P\+: L\+P\+C18xx/43xx Real Time Clock driver}}
+\subsubsection{\texorpdfstring{R\+T\+C\+\_\+\+S\+E\+C\+O\+N\+D\+\_\+\+M\+AX}{RTC\_SECOND\_MAX}}
+{\footnotesize\ttfamily \#define R\+T\+C\+\_\+\+S\+E\+C\+O\+N\+D\+\_\+\+M\+AX~59}
+
+Maximum value of second 
+
+Definition at line 201 of file rtc\+\_\+18xx\+\_\+43xx.\+h.
+
+\mbox{\Hypertarget{group___r_t_c__18_x_x__43_x_x_ga35a455a48ccdb557b824e87701449c76}\label{group___r_t_c__18_x_x__43_x_x_ga35a455a48ccdb557b824e87701449c76}} 
+\index{C\+H\+I\+P\+: L\+P\+C18xx/43xx Real Time Clock driver@{C\+H\+I\+P\+: L\+P\+C18xx/43xx Real Time Clock driver}!R\+T\+C\+\_\+\+Y\+E\+A\+R\+\_\+\+M\+A\+SK@{R\+T\+C\+\_\+\+Y\+E\+A\+R\+\_\+\+M\+A\+SK}}
+\index{R\+T\+C\+\_\+\+Y\+E\+A\+R\+\_\+\+M\+A\+SK@{R\+T\+C\+\_\+\+Y\+E\+A\+R\+\_\+\+M\+A\+SK}!C\+H\+I\+P\+: L\+P\+C18xx/43xx Real Time Clock driver@{C\+H\+I\+P\+: L\+P\+C18xx/43xx Real Time Clock driver}}
+\subsubsection{\texorpdfstring{R\+T\+C\+\_\+\+Y\+E\+A\+R\+\_\+\+M\+A\+SK}{RTC\_YEAR\_MASK}}
+{\footnotesize\ttfamily \#define R\+T\+C\+\_\+\+Y\+E\+A\+R\+\_\+\+M\+A\+SK~(0x00000\+F\+F\+F)}
+
+Y\+E\+AR register mask 
+
+Definition at line 199 of file rtc\+\_\+18xx\+\_\+43xx.\+h.
+
+\mbox{\Hypertarget{group___r_t_c__18_x_x__43_x_x_ga72b68660aec4a924c12a124e2ec5f852}\label{group___r_t_c__18_x_x__43_x_x_ga72b68660aec4a924c12a124e2ec5f852}} 
+\index{C\+H\+I\+P\+: L\+P\+C18xx/43xx Real Time Clock driver@{C\+H\+I\+P\+: L\+P\+C18xx/43xx Real Time Clock driver}!R\+T\+C\+\_\+\+Y\+E\+A\+R\+\_\+\+M\+AX@{R\+T\+C\+\_\+\+Y\+E\+A\+R\+\_\+\+M\+AX}}
+\index{R\+T\+C\+\_\+\+Y\+E\+A\+R\+\_\+\+M\+AX@{R\+T\+C\+\_\+\+Y\+E\+A\+R\+\_\+\+M\+AX}!C\+H\+I\+P\+: L\+P\+C18xx/43xx Real Time Clock driver@{C\+H\+I\+P\+: L\+P\+C18xx/43xx Real Time Clock driver}}
+\subsubsection{\texorpdfstring{R\+T\+C\+\_\+\+Y\+E\+A\+R\+\_\+\+M\+AX}{RTC\_YEAR\_MAX}}
+{\footnotesize\ttfamily \#define R\+T\+C\+\_\+\+Y\+E\+A\+R\+\_\+\+M\+AX~4095}
+
+Maximum value of year 
+
+Definition at line 211 of file rtc\+\_\+18xx\+\_\+43xx.\+h.
+
+
+
+\subsection{Typedef Documentation}
+\mbox{\Hypertarget{group___r_t_c__18_x_x__43_x_x_gabcbfff4a7d52791dc0b1cdcb078a2a05}\label{group___r_t_c__18_x_x__43_x_x_gabcbfff4a7d52791dc0b1cdcb078a2a05}} 
+\index{C\+H\+I\+P\+: L\+P\+C18xx/43xx Real Time Clock driver@{C\+H\+I\+P\+: L\+P\+C18xx/43xx Real Time Clock driver}!R\+T\+C\+\_\+\+E\+V\+\_\+\+M\+O\+D\+E\+\_\+T@{R\+T\+C\+\_\+\+E\+V\+\_\+\+M\+O\+D\+E\+\_\+T}}
+\index{R\+T\+C\+\_\+\+E\+V\+\_\+\+M\+O\+D\+E\+\_\+T@{R\+T\+C\+\_\+\+E\+V\+\_\+\+M\+O\+D\+E\+\_\+T}!C\+H\+I\+P\+: L\+P\+C18xx/43xx Real Time Clock driver@{C\+H\+I\+P\+: L\+P\+C18xx/43xx Real Time Clock driver}}
+\subsubsection{\texorpdfstring{R\+T\+C\+\_\+\+E\+V\+\_\+\+M\+O\+D\+E\+\_\+T}{RTC\_EV\_MODE\_T}}
+{\footnotesize\ttfamily typedef enum \hyperlink{group___r_t_c__18_x_x__43_x_x_gaefde431348a2ce3d7721a63780e9d9ba}{I\+P\+\_\+\+R\+T\+C\+\_\+\+E\+V\+\_\+\+M\+O\+DE}  \hyperlink{group___r_t_c__18_x_x__43_x_x_gabcbfff4a7d52791dc0b1cdcb078a2a05}{R\+T\+C\+\_\+\+E\+V\+\_\+\+M\+O\+D\+E\+\_\+T}}
+
+
+
+Event Monitor/\+Recorder Mode definition. 
+
+
+
+\subsection{Enumeration Type Documentation}
+\mbox{\Hypertarget{group___r_t_c__18_x_x__43_x_x_gaefde431348a2ce3d7721a63780e9d9ba}\label{group___r_t_c__18_x_x__43_x_x_gaefde431348a2ce3d7721a63780e9d9ba}} 
+\index{C\+H\+I\+P\+: L\+P\+C18xx/43xx Real Time Clock driver@{C\+H\+I\+P\+: L\+P\+C18xx/43xx Real Time Clock driver}!I\+P\+\_\+\+R\+T\+C\+\_\+\+E\+V\+\_\+\+M\+O\+DE@{I\+P\+\_\+\+R\+T\+C\+\_\+\+E\+V\+\_\+\+M\+O\+DE}}
+\index{I\+P\+\_\+\+R\+T\+C\+\_\+\+E\+V\+\_\+\+M\+O\+DE@{I\+P\+\_\+\+R\+T\+C\+\_\+\+E\+V\+\_\+\+M\+O\+DE}!C\+H\+I\+P\+: L\+P\+C18xx/43xx Real Time Clock driver@{C\+H\+I\+P\+: L\+P\+C18xx/43xx Real Time Clock driver}}
+\subsubsection{\texorpdfstring{I\+P\+\_\+\+R\+T\+C\+\_\+\+E\+V\+\_\+\+M\+O\+DE}{IP\_RTC\_EV\_MODE}}
+{\footnotesize\ttfamily enum \hyperlink{group___r_t_c__18_x_x__43_x_x_gaefde431348a2ce3d7721a63780e9d9ba}{I\+P\+\_\+\+R\+T\+C\+\_\+\+E\+V\+\_\+\+M\+O\+DE}}
+
+
+
+Event Monitor/\+Recorder Mode definition. 
+
+\begin{DoxyEnumFields}{Enumerator}
+\raisebox{\heightof{T}}[0pt][0pt]{\index{R\+T\+C\+\_\+\+E\+V\+\_\+\+M\+O\+D\+E\+\_\+\+D\+I\+S\+A\+B\+LE@{R\+T\+C\+\_\+\+E\+V\+\_\+\+M\+O\+D\+E\+\_\+\+D\+I\+S\+A\+B\+LE}!C\+H\+I\+P\+: L\+P\+C18xx/43xx Real Time Clock driver@{C\+H\+I\+P\+: L\+P\+C18xx/43xx Real Time Clock driver}}\index{C\+H\+I\+P\+: L\+P\+C18xx/43xx Real Time Clock driver@{C\+H\+I\+P\+: L\+P\+C18xx/43xx Real Time Clock driver}!R\+T\+C\+\_\+\+E\+V\+\_\+\+M\+O\+D\+E\+\_\+\+D\+I\+S\+A\+B\+LE@{R\+T\+C\+\_\+\+E\+V\+\_\+\+M\+O\+D\+E\+\_\+\+D\+I\+S\+A\+B\+LE}}}\mbox{\Hypertarget{group___r_t_c__18_x_x__43_x_x_ggaefde431348a2ce3d7721a63780e9d9baad24f32a223a364f8c097c31ed1ab3138}\label{group___r_t_c__18_x_x__43_x_x_ggaefde431348a2ce3d7721a63780e9d9baad24f32a223a364f8c097c31ed1ab3138}} 
+R\+T\+C\+\_\+\+E\+V\+\_\+\+M\+O\+D\+E\+\_\+\+D\+I\+S\+A\+B\+LE&Event Monitor/\+Recoder is disabled \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{R\+T\+C\+\_\+\+E\+V\+\_\+\+M\+O\+D\+E\+\_\+\+E\+N\+A\+B\+L\+E\+\_\+16\+HZ@{R\+T\+C\+\_\+\+E\+V\+\_\+\+M\+O\+D\+E\+\_\+\+E\+N\+A\+B\+L\+E\+\_\+16\+HZ}!C\+H\+I\+P\+: L\+P\+C18xx/43xx Real Time Clock driver@{C\+H\+I\+P\+: L\+P\+C18xx/43xx Real Time Clock driver}}\index{C\+H\+I\+P\+: L\+P\+C18xx/43xx Real Time Clock driver@{C\+H\+I\+P\+: L\+P\+C18xx/43xx Real Time Clock driver}!R\+T\+C\+\_\+\+E\+V\+\_\+\+M\+O\+D\+E\+\_\+\+E\+N\+A\+B\+L\+E\+\_\+16\+HZ@{R\+T\+C\+\_\+\+E\+V\+\_\+\+M\+O\+D\+E\+\_\+\+E\+N\+A\+B\+L\+E\+\_\+16\+HZ}}}\mbox{\Hypertarget{group___r_t_c__18_x_x__43_x_x_ggaefde431348a2ce3d7721a63780e9d9baa3e6fef6c94b90897af317e8ddb84576d}\label{group___r_t_c__18_x_x__43_x_x_ggaefde431348a2ce3d7721a63780e9d9baa3e6fef6c94b90897af317e8ddb84576d}} 
+R\+T\+C\+\_\+\+E\+V\+\_\+\+M\+O\+D\+E\+\_\+\+E\+N\+A\+B\+L\+E\+\_\+16\+HZ&Event Monitor/\+Recoder is enabled and use 16\+Hz sample clock for event input \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{R\+T\+C\+\_\+\+E\+V\+\_\+\+M\+O\+D\+E\+\_\+\+E\+N\+A\+B\+L\+E\+\_\+64\+HZ@{R\+T\+C\+\_\+\+E\+V\+\_\+\+M\+O\+D\+E\+\_\+\+E\+N\+A\+B\+L\+E\+\_\+64\+HZ}!C\+H\+I\+P\+: L\+P\+C18xx/43xx Real Time Clock driver@{C\+H\+I\+P\+: L\+P\+C18xx/43xx Real Time Clock driver}}\index{C\+H\+I\+P\+: L\+P\+C18xx/43xx Real Time Clock driver@{C\+H\+I\+P\+: L\+P\+C18xx/43xx Real Time Clock driver}!R\+T\+C\+\_\+\+E\+V\+\_\+\+M\+O\+D\+E\+\_\+\+E\+N\+A\+B\+L\+E\+\_\+64\+HZ@{R\+T\+C\+\_\+\+E\+V\+\_\+\+M\+O\+D\+E\+\_\+\+E\+N\+A\+B\+L\+E\+\_\+64\+HZ}}}\mbox{\Hypertarget{group___r_t_c__18_x_x__43_x_x_ggaefde431348a2ce3d7721a63780e9d9baac104b566ab32b4d49c505b7f9528cfbb}\label{group___r_t_c__18_x_x__43_x_x_ggaefde431348a2ce3d7721a63780e9d9baac104b566ab32b4d49c505b7f9528cfbb}} 
+R\+T\+C\+\_\+\+E\+V\+\_\+\+M\+O\+D\+E\+\_\+\+E\+N\+A\+B\+L\+E\+\_\+64\+HZ&Event Monitor/\+Recoder is enabled and use 64\+Hz sample clock for event input \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{R\+T\+C\+\_\+\+E\+V\+\_\+\+M\+O\+D\+E\+\_\+\+E\+N\+A\+B\+L\+E\+\_\+1\+K\+HZ@{R\+T\+C\+\_\+\+E\+V\+\_\+\+M\+O\+D\+E\+\_\+\+E\+N\+A\+B\+L\+E\+\_\+1\+K\+HZ}!C\+H\+I\+P\+: L\+P\+C18xx/43xx Real Time Clock driver@{C\+H\+I\+P\+: L\+P\+C18xx/43xx Real Time Clock driver}}\index{C\+H\+I\+P\+: L\+P\+C18xx/43xx Real Time Clock driver@{C\+H\+I\+P\+: L\+P\+C18xx/43xx Real Time Clock driver}!R\+T\+C\+\_\+\+E\+V\+\_\+\+M\+O\+D\+E\+\_\+\+E\+N\+A\+B\+L\+E\+\_\+1\+K\+HZ@{R\+T\+C\+\_\+\+E\+V\+\_\+\+M\+O\+D\+E\+\_\+\+E\+N\+A\+B\+L\+E\+\_\+1\+K\+HZ}}}\mbox{\Hypertarget{group___r_t_c__18_x_x__43_x_x_ggaefde431348a2ce3d7721a63780e9d9baa5a47148b47f17f5c12b30c89f40d573e}\label{group___r_t_c__18_x_x__43_x_x_ggaefde431348a2ce3d7721a63780e9d9baa5a47148b47f17f5c12b30c89f40d573e}} 
+R\+T\+C\+\_\+\+E\+V\+\_\+\+M\+O\+D\+E\+\_\+\+E\+N\+A\+B\+L\+E\+\_\+1\+K\+HZ&Event Monitor/\+Recoder is enabled and use 1k\+Hz sample clock for event input \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{R\+T\+C\+\_\+\+E\+V\+\_\+\+M\+O\+D\+E\+\_\+\+L\+A\+ST@{R\+T\+C\+\_\+\+E\+V\+\_\+\+M\+O\+D\+E\+\_\+\+L\+A\+ST}!C\+H\+I\+P\+: L\+P\+C18xx/43xx Real Time Clock driver@{C\+H\+I\+P\+: L\+P\+C18xx/43xx Real Time Clock driver}}\index{C\+H\+I\+P\+: L\+P\+C18xx/43xx Real Time Clock driver@{C\+H\+I\+P\+: L\+P\+C18xx/43xx Real Time Clock driver}!R\+T\+C\+\_\+\+E\+V\+\_\+\+M\+O\+D\+E\+\_\+\+L\+A\+ST@{R\+T\+C\+\_\+\+E\+V\+\_\+\+M\+O\+D\+E\+\_\+\+L\+A\+ST}}}\mbox{\Hypertarget{group___r_t_c__18_x_x__43_x_x_ggaefde431348a2ce3d7721a63780e9d9baab4e33e3423660ab9e4fa677f4cd438a9}\label{group___r_t_c__18_x_x__43_x_x_ggaefde431348a2ce3d7721a63780e9d9baab4e33e3423660ab9e4fa677f4cd438a9}} 
+R\+T\+C\+\_\+\+E\+V\+\_\+\+M\+O\+D\+E\+\_\+\+L\+A\+ST&\\
+\hline
+
+\end{DoxyEnumFields}
+
+
+Definition at line 280 of file rtc\+\_\+18xx\+\_\+43xx.\+h.
+
+\mbox{\Hypertarget{group___r_t_c__18_x_x__43_x_x_gaac7e8d7c66860037449fdde1bdfb657b}\label{group___r_t_c__18_x_x__43_x_x_gaac7e8d7c66860037449fdde1bdfb657b}} 
+\index{C\+H\+I\+P\+: L\+P\+C18xx/43xx Real Time Clock driver@{C\+H\+I\+P\+: L\+P\+C18xx/43xx Real Time Clock driver}!R\+T\+C\+\_\+\+E\+V\+\_\+\+C\+H\+A\+N\+N\+E\+L\+\_\+T@{R\+T\+C\+\_\+\+E\+V\+\_\+\+C\+H\+A\+N\+N\+E\+L\+\_\+T}}
+\index{R\+T\+C\+\_\+\+E\+V\+\_\+\+C\+H\+A\+N\+N\+E\+L\+\_\+T@{R\+T\+C\+\_\+\+E\+V\+\_\+\+C\+H\+A\+N\+N\+E\+L\+\_\+T}!C\+H\+I\+P\+: L\+P\+C18xx/43xx Real Time Clock driver@{C\+H\+I\+P\+: L\+P\+C18xx/43xx Real Time Clock driver}}
+\subsubsection{\texorpdfstring{R\+T\+C\+\_\+\+E\+V\+\_\+\+C\+H\+A\+N\+N\+E\+L\+\_\+T}{RTC\_EV\_CHANNEL\_T}}
+{\footnotesize\ttfamily enum \hyperlink{group___r_t_c__18_x_x__43_x_x_gaac7e8d7c66860037449fdde1bdfb657b}{R\+T\+C\+\_\+\+E\+V\+\_\+\+C\+H\+A\+N\+N\+E\+L\+\_\+T}}
+
+
+
+Event Channel Identifier definitions. 
+
+\begin{DoxyEnumFields}{Enumerator}
+\raisebox{\heightof{T}}[0pt][0pt]{\index{R\+T\+C\+\_\+\+E\+V\+\_\+\+C\+H\+A\+N\+N\+E\+L\+\_\+1@{R\+T\+C\+\_\+\+E\+V\+\_\+\+C\+H\+A\+N\+N\+E\+L\+\_\+1}!C\+H\+I\+P\+: L\+P\+C18xx/43xx Real Time Clock driver@{C\+H\+I\+P\+: L\+P\+C18xx/43xx Real Time Clock driver}}\index{C\+H\+I\+P\+: L\+P\+C18xx/43xx Real Time Clock driver@{C\+H\+I\+P\+: L\+P\+C18xx/43xx Real Time Clock driver}!R\+T\+C\+\_\+\+E\+V\+\_\+\+C\+H\+A\+N\+N\+E\+L\+\_\+1@{R\+T\+C\+\_\+\+E\+V\+\_\+\+C\+H\+A\+N\+N\+E\+L\+\_\+1}}}\mbox{\Hypertarget{group___r_t_c__18_x_x__43_x_x_ggaac7e8d7c66860037449fdde1bdfb657ba9e945d3545e1b313d7c8ab890dc98521}\label{group___r_t_c__18_x_x__43_x_x_ggaac7e8d7c66860037449fdde1bdfb657ba9e945d3545e1b313d7c8ab890dc98521}} 
+R\+T\+C\+\_\+\+E\+V\+\_\+\+C\+H\+A\+N\+N\+E\+L\+\_\+1&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{R\+T\+C\+\_\+\+E\+V\+\_\+\+C\+H\+A\+N\+N\+E\+L\+\_\+2@{R\+T\+C\+\_\+\+E\+V\+\_\+\+C\+H\+A\+N\+N\+E\+L\+\_\+2}!C\+H\+I\+P\+: L\+P\+C18xx/43xx Real Time Clock driver@{C\+H\+I\+P\+: L\+P\+C18xx/43xx Real Time Clock driver}}\index{C\+H\+I\+P\+: L\+P\+C18xx/43xx Real Time Clock driver@{C\+H\+I\+P\+: L\+P\+C18xx/43xx Real Time Clock driver}!R\+T\+C\+\_\+\+E\+V\+\_\+\+C\+H\+A\+N\+N\+E\+L\+\_\+2@{R\+T\+C\+\_\+\+E\+V\+\_\+\+C\+H\+A\+N\+N\+E\+L\+\_\+2}}}\mbox{\Hypertarget{group___r_t_c__18_x_x__43_x_x_ggaac7e8d7c66860037449fdde1bdfb657baeb2b8110c74497dcdbc0f8b6d533fb69}\label{group___r_t_c__18_x_x__43_x_x_ggaac7e8d7c66860037449fdde1bdfb657baeb2b8110c74497dcdbc0f8b6d533fb69}} 
+R\+T\+C\+\_\+\+E\+V\+\_\+\+C\+H\+A\+N\+N\+E\+L\+\_\+2&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{R\+T\+C\+\_\+\+E\+V\+\_\+\+C\+H\+A\+N\+N\+E\+L\+\_\+3@{R\+T\+C\+\_\+\+E\+V\+\_\+\+C\+H\+A\+N\+N\+E\+L\+\_\+3}!C\+H\+I\+P\+: L\+P\+C18xx/43xx Real Time Clock driver@{C\+H\+I\+P\+: L\+P\+C18xx/43xx Real Time Clock driver}}\index{C\+H\+I\+P\+: L\+P\+C18xx/43xx Real Time Clock driver@{C\+H\+I\+P\+: L\+P\+C18xx/43xx Real Time Clock driver}!R\+T\+C\+\_\+\+E\+V\+\_\+\+C\+H\+A\+N\+N\+E\+L\+\_\+3@{R\+T\+C\+\_\+\+E\+V\+\_\+\+C\+H\+A\+N\+N\+E\+L\+\_\+3}}}\mbox{\Hypertarget{group___r_t_c__18_x_x__43_x_x_ggaac7e8d7c66860037449fdde1bdfb657bab5908409b28ddbf4fd51eaf4f85aeb69}\label{group___r_t_c__18_x_x__43_x_x_ggaac7e8d7c66860037449fdde1bdfb657bab5908409b28ddbf4fd51eaf4f85aeb69}} 
+R\+T\+C\+\_\+\+E\+V\+\_\+\+C\+H\+A\+N\+N\+E\+L\+\_\+3&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{R\+T\+C\+\_\+\+E\+V\+\_\+\+C\+H\+A\+N\+N\+E\+L\+\_\+\+N\+UM@{R\+T\+C\+\_\+\+E\+V\+\_\+\+C\+H\+A\+N\+N\+E\+L\+\_\+\+N\+UM}!C\+H\+I\+P\+: L\+P\+C18xx/43xx Real Time Clock driver@{C\+H\+I\+P\+: L\+P\+C18xx/43xx Real Time Clock driver}}\index{C\+H\+I\+P\+: L\+P\+C18xx/43xx Real Time Clock driver@{C\+H\+I\+P\+: L\+P\+C18xx/43xx Real Time Clock driver}!R\+T\+C\+\_\+\+E\+V\+\_\+\+C\+H\+A\+N\+N\+E\+L\+\_\+\+N\+UM@{R\+T\+C\+\_\+\+E\+V\+\_\+\+C\+H\+A\+N\+N\+E\+L\+\_\+\+N\+UM}}}\mbox{\Hypertarget{group___r_t_c__18_x_x__43_x_x_ggaac7e8d7c66860037449fdde1bdfb657bae56aa8110b05663f96d666d4ce378c85}\label{group___r_t_c__18_x_x__43_x_x_ggaac7e8d7c66860037449fdde1bdfb657bae56aa8110b05663f96d666d4ce378c85}} 
+R\+T\+C\+\_\+\+E\+V\+\_\+\+C\+H\+A\+N\+N\+E\+L\+\_\+\+N\+UM&\\
+\hline
+
+\end{DoxyEnumFields}
+
+
+Definition at line 65 of file rtc\+\_\+18xx\+\_\+43xx.\+h.
+
+\mbox{\Hypertarget{group___r_t_c__18_x_x__43_x_x_gacbb4f3e21ac0f90878c95afe11f49161}\label{group___r_t_c__18_x_x__43_x_x_gacbb4f3e21ac0f90878c95afe11f49161}} 
+\index{C\+H\+I\+P\+: L\+P\+C18xx/43xx Real Time Clock driver@{C\+H\+I\+P\+: L\+P\+C18xx/43xx Real Time Clock driver}!R\+T\+C\+\_\+\+I\+N\+T\+\_\+\+O\+P\+T\+\_\+T@{R\+T\+C\+\_\+\+I\+N\+T\+\_\+\+O\+P\+T\+\_\+T}}
+\index{R\+T\+C\+\_\+\+I\+N\+T\+\_\+\+O\+P\+T\+\_\+T@{R\+T\+C\+\_\+\+I\+N\+T\+\_\+\+O\+P\+T\+\_\+T}!C\+H\+I\+P\+: L\+P\+C18xx/43xx Real Time Clock driver@{C\+H\+I\+P\+: L\+P\+C18xx/43xx Real Time Clock driver}}
+\subsubsection{\texorpdfstring{R\+T\+C\+\_\+\+I\+N\+T\+\_\+\+O\+P\+T\+\_\+T}{RTC\_INT\_OPT\_T}}
+{\footnotesize\ttfamily enum \hyperlink{group___r_t_c__18_x_x__43_x_x_gacbb4f3e21ac0f90878c95afe11f49161}{R\+T\+C\+\_\+\+I\+N\+T\+\_\+\+O\+P\+T\+\_\+T}}
+
+
+
+R\+TC enumeration. 
+
+R\+TC interrupt source \begin{DoxyEnumFields}{Enumerator}
+\raisebox{\heightof{T}}[0pt][0pt]{\index{R\+T\+C\+\_\+\+I\+N\+T\+\_\+\+C\+O\+U\+N\+T\+E\+R\+\_\+\+I\+N\+C\+R\+E\+A\+SE@{R\+T\+C\+\_\+\+I\+N\+T\+\_\+\+C\+O\+U\+N\+T\+E\+R\+\_\+\+I\+N\+C\+R\+E\+A\+SE}!C\+H\+I\+P\+: L\+P\+C18xx/43xx Real Time Clock driver@{C\+H\+I\+P\+: L\+P\+C18xx/43xx Real Time Clock driver}}\index{C\+H\+I\+P\+: L\+P\+C18xx/43xx Real Time Clock driver@{C\+H\+I\+P\+: L\+P\+C18xx/43xx Real Time Clock driver}!R\+T\+C\+\_\+\+I\+N\+T\+\_\+\+C\+O\+U\+N\+T\+E\+R\+\_\+\+I\+N\+C\+R\+E\+A\+SE@{R\+T\+C\+\_\+\+I\+N\+T\+\_\+\+C\+O\+U\+N\+T\+E\+R\+\_\+\+I\+N\+C\+R\+E\+A\+SE}}}\mbox{\Hypertarget{group___r_t_c__18_x_x__43_x_x_ggacbb4f3e21ac0f90878c95afe11f49161a1545f38fd2671cb7521a77e7da3bde4d}\label{group___r_t_c__18_x_x__43_x_x_ggacbb4f3e21ac0f90878c95afe11f49161a1545f38fd2671cb7521a77e7da3bde4d}} 
+R\+T\+C\+\_\+\+I\+N\+T\+\_\+\+C\+O\+U\+N\+T\+E\+R\+\_\+\+I\+N\+C\+R\+E\+A\+SE&Counter Increment Interrupt \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{R\+T\+C\+\_\+\+I\+N\+T\+\_\+\+A\+L\+A\+RM@{R\+T\+C\+\_\+\+I\+N\+T\+\_\+\+A\+L\+A\+RM}!C\+H\+I\+P\+: L\+P\+C18xx/43xx Real Time Clock driver@{C\+H\+I\+P\+: L\+P\+C18xx/43xx Real Time Clock driver}}\index{C\+H\+I\+P\+: L\+P\+C18xx/43xx Real Time Clock driver@{C\+H\+I\+P\+: L\+P\+C18xx/43xx Real Time Clock driver}!R\+T\+C\+\_\+\+I\+N\+T\+\_\+\+A\+L\+A\+RM@{R\+T\+C\+\_\+\+I\+N\+T\+\_\+\+A\+L\+A\+RM}}}\mbox{\Hypertarget{group___r_t_c__18_x_x__43_x_x_ggacbb4f3e21ac0f90878c95afe11f49161adec1af649886bf5a419d636276ca54a5}\label{group___r_t_c__18_x_x__43_x_x_ggacbb4f3e21ac0f90878c95afe11f49161adec1af649886bf5a419d636276ca54a5}} 
+R\+T\+C\+\_\+\+I\+N\+T\+\_\+\+A\+L\+A\+RM&The alarm interrupt \\
+\hline
+
+\end{DoxyEnumFields}
+
+
+Definition at line 305 of file rtc\+\_\+18xx\+\_\+43xx.\+h.
+
+\mbox{\Hypertarget{group___r_t_c__18_x_x__43_x_x_ga8144898fe628404d396db06dc8aac0e0}\label{group___r_t_c__18_x_x__43_x_x_ga8144898fe628404d396db06dc8aac0e0}} 
+\index{C\+H\+I\+P\+: L\+P\+C18xx/43xx Real Time Clock driver@{C\+H\+I\+P\+: L\+P\+C18xx/43xx Real Time Clock driver}!R\+T\+C\+\_\+\+T\+I\+M\+E\+I\+N\+D\+E\+X\+\_\+T@{R\+T\+C\+\_\+\+T\+I\+M\+E\+I\+N\+D\+E\+X\+\_\+T}}
+\index{R\+T\+C\+\_\+\+T\+I\+M\+E\+I\+N\+D\+E\+X\+\_\+T@{R\+T\+C\+\_\+\+T\+I\+M\+E\+I\+N\+D\+E\+X\+\_\+T}!C\+H\+I\+P\+: L\+P\+C18xx/43xx Real Time Clock driver@{C\+H\+I\+P\+: L\+P\+C18xx/43xx Real Time Clock driver}}
+\subsubsection{\texorpdfstring{R\+T\+C\+\_\+\+T\+I\+M\+E\+I\+N\+D\+E\+X\+\_\+T}{RTC\_TIMEINDEX\_T}}
+{\footnotesize\ttfamily enum \hyperlink{group___r_t_c__18_x_x__43_x_x_ga8144898fe628404d396db06dc8aac0e0}{R\+T\+C\+\_\+\+T\+I\+M\+E\+I\+N\+D\+E\+X\+\_\+T}}
+
+
+
+R\+TC time type option. 
+
+\begin{DoxyEnumFields}{Enumerator}
+\raisebox{\heightof{T}}[0pt][0pt]{\index{R\+T\+C\+\_\+\+T\+I\+M\+E\+T\+Y\+P\+E\+\_\+\+S\+E\+C\+O\+ND@{R\+T\+C\+\_\+\+T\+I\+M\+E\+T\+Y\+P\+E\+\_\+\+S\+E\+C\+O\+ND}!C\+H\+I\+P\+: L\+P\+C18xx/43xx Real Time Clock driver@{C\+H\+I\+P\+: L\+P\+C18xx/43xx Real Time Clock driver}}\index{C\+H\+I\+P\+: L\+P\+C18xx/43xx Real Time Clock driver@{C\+H\+I\+P\+: L\+P\+C18xx/43xx Real Time Clock driver}!R\+T\+C\+\_\+\+T\+I\+M\+E\+T\+Y\+P\+E\+\_\+\+S\+E\+C\+O\+ND@{R\+T\+C\+\_\+\+T\+I\+M\+E\+T\+Y\+P\+E\+\_\+\+S\+E\+C\+O\+ND}}}\mbox{\Hypertarget{group___r_t_c__18_x_x__43_x_x_gga8144898fe628404d396db06dc8aac0e0ac0bdc1ff011be37cfeecb77c241e7fb8}\label{group___r_t_c__18_x_x__43_x_x_gga8144898fe628404d396db06dc8aac0e0ac0bdc1ff011be37cfeecb77c241e7fb8}} 
+R\+T\+C\+\_\+\+T\+I\+M\+E\+T\+Y\+P\+E\+\_\+\+S\+E\+C\+O\+ND&Second \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{R\+T\+C\+\_\+\+T\+I\+M\+E\+T\+Y\+P\+E\+\_\+\+M\+I\+N\+U\+TE@{R\+T\+C\+\_\+\+T\+I\+M\+E\+T\+Y\+P\+E\+\_\+\+M\+I\+N\+U\+TE}!C\+H\+I\+P\+: L\+P\+C18xx/43xx Real Time Clock driver@{C\+H\+I\+P\+: L\+P\+C18xx/43xx Real Time Clock driver}}\index{C\+H\+I\+P\+: L\+P\+C18xx/43xx Real Time Clock driver@{C\+H\+I\+P\+: L\+P\+C18xx/43xx Real Time Clock driver}!R\+T\+C\+\_\+\+T\+I\+M\+E\+T\+Y\+P\+E\+\_\+\+M\+I\+N\+U\+TE@{R\+T\+C\+\_\+\+T\+I\+M\+E\+T\+Y\+P\+E\+\_\+\+M\+I\+N\+U\+TE}}}\mbox{\Hypertarget{group___r_t_c__18_x_x__43_x_x_gga8144898fe628404d396db06dc8aac0e0a11974e5996bfe6fbf0381d7ef3836964}\label{group___r_t_c__18_x_x__43_x_x_gga8144898fe628404d396db06dc8aac0e0a11974e5996bfe6fbf0381d7ef3836964}} 
+R\+T\+C\+\_\+\+T\+I\+M\+E\+T\+Y\+P\+E\+\_\+\+M\+I\+N\+U\+TE&Month \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{R\+T\+C\+\_\+\+T\+I\+M\+E\+T\+Y\+P\+E\+\_\+\+H\+O\+UR@{R\+T\+C\+\_\+\+T\+I\+M\+E\+T\+Y\+P\+E\+\_\+\+H\+O\+UR}!C\+H\+I\+P\+: L\+P\+C18xx/43xx Real Time Clock driver@{C\+H\+I\+P\+: L\+P\+C18xx/43xx Real Time Clock driver}}\index{C\+H\+I\+P\+: L\+P\+C18xx/43xx Real Time Clock driver@{C\+H\+I\+P\+: L\+P\+C18xx/43xx Real Time Clock driver}!R\+T\+C\+\_\+\+T\+I\+M\+E\+T\+Y\+P\+E\+\_\+\+H\+O\+UR@{R\+T\+C\+\_\+\+T\+I\+M\+E\+T\+Y\+P\+E\+\_\+\+H\+O\+UR}}}\mbox{\Hypertarget{group___r_t_c__18_x_x__43_x_x_gga8144898fe628404d396db06dc8aac0e0a4e88c263358395fecc19306556addacc}\label{group___r_t_c__18_x_x__43_x_x_gga8144898fe628404d396db06dc8aac0e0a4e88c263358395fecc19306556addacc}} 
+R\+T\+C\+\_\+\+T\+I\+M\+E\+T\+Y\+P\+E\+\_\+\+H\+O\+UR&Hour \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{R\+T\+C\+\_\+\+T\+I\+M\+E\+T\+Y\+P\+E\+\_\+\+D\+A\+Y\+O\+F\+M\+O\+N\+TH@{R\+T\+C\+\_\+\+T\+I\+M\+E\+T\+Y\+P\+E\+\_\+\+D\+A\+Y\+O\+F\+M\+O\+N\+TH}!C\+H\+I\+P\+: L\+P\+C18xx/43xx Real Time Clock driver@{C\+H\+I\+P\+: L\+P\+C18xx/43xx Real Time Clock driver}}\index{C\+H\+I\+P\+: L\+P\+C18xx/43xx Real Time Clock driver@{C\+H\+I\+P\+: L\+P\+C18xx/43xx Real Time Clock driver}!R\+T\+C\+\_\+\+T\+I\+M\+E\+T\+Y\+P\+E\+\_\+\+D\+A\+Y\+O\+F\+M\+O\+N\+TH@{R\+T\+C\+\_\+\+T\+I\+M\+E\+T\+Y\+P\+E\+\_\+\+D\+A\+Y\+O\+F\+M\+O\+N\+TH}}}\mbox{\Hypertarget{group___r_t_c__18_x_x__43_x_x_gga8144898fe628404d396db06dc8aac0e0a3cc8b55755f86e8a6a1a870a79122324}\label{group___r_t_c__18_x_x__43_x_x_gga8144898fe628404d396db06dc8aac0e0a3cc8b55755f86e8a6a1a870a79122324}} 
+R\+T\+C\+\_\+\+T\+I\+M\+E\+T\+Y\+P\+E\+\_\+\+D\+A\+Y\+O\+F\+M\+O\+N\+TH&Day of month \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{R\+T\+C\+\_\+\+T\+I\+M\+E\+T\+Y\+P\+E\+\_\+\+D\+A\+Y\+O\+F\+W\+E\+EK@{R\+T\+C\+\_\+\+T\+I\+M\+E\+T\+Y\+P\+E\+\_\+\+D\+A\+Y\+O\+F\+W\+E\+EK}!C\+H\+I\+P\+: L\+P\+C18xx/43xx Real Time Clock driver@{C\+H\+I\+P\+: L\+P\+C18xx/43xx Real Time Clock driver}}\index{C\+H\+I\+P\+: L\+P\+C18xx/43xx Real Time Clock driver@{C\+H\+I\+P\+: L\+P\+C18xx/43xx Real Time Clock driver}!R\+T\+C\+\_\+\+T\+I\+M\+E\+T\+Y\+P\+E\+\_\+\+D\+A\+Y\+O\+F\+W\+E\+EK@{R\+T\+C\+\_\+\+T\+I\+M\+E\+T\+Y\+P\+E\+\_\+\+D\+A\+Y\+O\+F\+W\+E\+EK}}}\mbox{\Hypertarget{group___r_t_c__18_x_x__43_x_x_gga8144898fe628404d396db06dc8aac0e0a88f328753d58927fafd45b35e0815e80}\label{group___r_t_c__18_x_x__43_x_x_gga8144898fe628404d396db06dc8aac0e0a88f328753d58927fafd45b35e0815e80}} 
+R\+T\+C\+\_\+\+T\+I\+M\+E\+T\+Y\+P\+E\+\_\+\+D\+A\+Y\+O\+F\+W\+E\+EK&Day of week \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{R\+T\+C\+\_\+\+T\+I\+M\+E\+T\+Y\+P\+E\+\_\+\+D\+A\+Y\+O\+F\+Y\+E\+AR@{R\+T\+C\+\_\+\+T\+I\+M\+E\+T\+Y\+P\+E\+\_\+\+D\+A\+Y\+O\+F\+Y\+E\+AR}!C\+H\+I\+P\+: L\+P\+C18xx/43xx Real Time Clock driver@{C\+H\+I\+P\+: L\+P\+C18xx/43xx Real Time Clock driver}}\index{C\+H\+I\+P\+: L\+P\+C18xx/43xx Real Time Clock driver@{C\+H\+I\+P\+: L\+P\+C18xx/43xx Real Time Clock driver}!R\+T\+C\+\_\+\+T\+I\+M\+E\+T\+Y\+P\+E\+\_\+\+D\+A\+Y\+O\+F\+Y\+E\+AR@{R\+T\+C\+\_\+\+T\+I\+M\+E\+T\+Y\+P\+E\+\_\+\+D\+A\+Y\+O\+F\+Y\+E\+AR}}}\mbox{\Hypertarget{group___r_t_c__18_x_x__43_x_x_gga8144898fe628404d396db06dc8aac0e0ad05ce02297b482d4fa5b6a491ff04aff}\label{group___r_t_c__18_x_x__43_x_x_gga8144898fe628404d396db06dc8aac0e0ad05ce02297b482d4fa5b6a491ff04aff}} 
+R\+T\+C\+\_\+\+T\+I\+M\+E\+T\+Y\+P\+E\+\_\+\+D\+A\+Y\+O\+F\+Y\+E\+AR&Day of year \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{R\+T\+C\+\_\+\+T\+I\+M\+E\+T\+Y\+P\+E\+\_\+\+M\+O\+N\+TH@{R\+T\+C\+\_\+\+T\+I\+M\+E\+T\+Y\+P\+E\+\_\+\+M\+O\+N\+TH}!C\+H\+I\+P\+: L\+P\+C18xx/43xx Real Time Clock driver@{C\+H\+I\+P\+: L\+P\+C18xx/43xx Real Time Clock driver}}\index{C\+H\+I\+P\+: L\+P\+C18xx/43xx Real Time Clock driver@{C\+H\+I\+P\+: L\+P\+C18xx/43xx Real Time Clock driver}!R\+T\+C\+\_\+\+T\+I\+M\+E\+T\+Y\+P\+E\+\_\+\+M\+O\+N\+TH@{R\+T\+C\+\_\+\+T\+I\+M\+E\+T\+Y\+P\+E\+\_\+\+M\+O\+N\+TH}}}\mbox{\Hypertarget{group___r_t_c__18_x_x__43_x_x_gga8144898fe628404d396db06dc8aac0e0a45d2078908fb25a714cbd01766f55fae}\label{group___r_t_c__18_x_x__43_x_x_gga8144898fe628404d396db06dc8aac0e0a45d2078908fb25a714cbd01766f55fae}} 
+R\+T\+C\+\_\+\+T\+I\+M\+E\+T\+Y\+P\+E\+\_\+\+M\+O\+N\+TH&Month \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{R\+T\+C\+\_\+\+T\+I\+M\+E\+T\+Y\+P\+E\+\_\+\+Y\+E\+AR@{R\+T\+C\+\_\+\+T\+I\+M\+E\+T\+Y\+P\+E\+\_\+\+Y\+E\+AR}!C\+H\+I\+P\+: L\+P\+C18xx/43xx Real Time Clock driver@{C\+H\+I\+P\+: L\+P\+C18xx/43xx Real Time Clock driver}}\index{C\+H\+I\+P\+: L\+P\+C18xx/43xx Real Time Clock driver@{C\+H\+I\+P\+: L\+P\+C18xx/43xx Real Time Clock driver}!R\+T\+C\+\_\+\+T\+I\+M\+E\+T\+Y\+P\+E\+\_\+\+Y\+E\+AR@{R\+T\+C\+\_\+\+T\+I\+M\+E\+T\+Y\+P\+E\+\_\+\+Y\+E\+AR}}}\mbox{\Hypertarget{group___r_t_c__18_x_x__43_x_x_gga8144898fe628404d396db06dc8aac0e0a780e93b1c505ed02ed139894566fcfe0}\label{group___r_t_c__18_x_x__43_x_x_gga8144898fe628404d396db06dc8aac0e0a780e93b1c505ed02ed139894566fcfe0}} 
+R\+T\+C\+\_\+\+T\+I\+M\+E\+T\+Y\+P\+E\+\_\+\+Y\+E\+AR&Year \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{R\+T\+C\+\_\+\+T\+I\+M\+E\+T\+Y\+P\+E\+\_\+\+L\+A\+ST@{R\+T\+C\+\_\+\+T\+I\+M\+E\+T\+Y\+P\+E\+\_\+\+L\+A\+ST}!C\+H\+I\+P\+: L\+P\+C18xx/43xx Real Time Clock driver@{C\+H\+I\+P\+: L\+P\+C18xx/43xx Real Time Clock driver}}\index{C\+H\+I\+P\+: L\+P\+C18xx/43xx Real Time Clock driver@{C\+H\+I\+P\+: L\+P\+C18xx/43xx Real Time Clock driver}!R\+T\+C\+\_\+\+T\+I\+M\+E\+T\+Y\+P\+E\+\_\+\+L\+A\+ST@{R\+T\+C\+\_\+\+T\+I\+M\+E\+T\+Y\+P\+E\+\_\+\+L\+A\+ST}}}\mbox{\Hypertarget{group___r_t_c__18_x_x__43_x_x_gga8144898fe628404d396db06dc8aac0e0a0d4fafef57b6ef363f9a0875ff339cad}\label{group___r_t_c__18_x_x__43_x_x_gga8144898fe628404d396db06dc8aac0e0a0d4fafef57b6ef363f9a0875ff339cad}} 
+R\+T\+C\+\_\+\+T\+I\+M\+E\+T\+Y\+P\+E\+\_\+\+L\+A\+ST&\\
+\hline
+
+\end{DoxyEnumFields}
+
+
+Definition at line 49 of file rtc\+\_\+18xx\+\_\+43xx.\+h.
+
+
+
+\subsection{Function Documentation}
+\mbox{\Hypertarget{group___r_t_c__18_x_x__43_x_x_gafdad7b4e551aa7e6d52b49a7a072f4ae}\label{group___r_t_c__18_x_x__43_x_x_gafdad7b4e551aa7e6d52b49a7a072f4ae}} 
+\index{C\+H\+I\+P\+: L\+P\+C18xx/43xx Real Time Clock driver@{C\+H\+I\+P\+: L\+P\+C18xx/43xx Real Time Clock driver}!Chip\+\_\+\+R\+E\+G\+F\+I\+L\+E\+\_\+\+Read@{Chip\+\_\+\+R\+E\+G\+F\+I\+L\+E\+\_\+\+Read}}
+\index{Chip\+\_\+\+R\+E\+G\+F\+I\+L\+E\+\_\+\+Read@{Chip\+\_\+\+R\+E\+G\+F\+I\+L\+E\+\_\+\+Read}!C\+H\+I\+P\+: L\+P\+C18xx/43xx Real Time Clock driver@{C\+H\+I\+P\+: L\+P\+C18xx/43xx Real Time Clock driver}}
+\subsubsection{\texorpdfstring{Chip\+\_\+\+R\+E\+G\+F\+I\+L\+E\+\_\+\+Read()}{Chip\_REGFILE\_Read()}}
+{\footnotesize\ttfamily \hyperlink{group___l_p_c___types___public___macros_ga10b2d890d871e1489bb02b7e70d9bdfb}{S\+T\+A\+T\+IC} \hyperlink{spifi__18xx__43xx_8h_a2eb6f9e0395b47b8d5e3eeae4fe0c116}{I\+N\+L\+I\+NE} uint32\+\_\+t Chip\+\_\+\+R\+E\+G\+F\+I\+L\+E\+\_\+\+Read (\begin{DoxyParamCaption}\item[{\hyperlink{struct_l_p_c___r_e_g_f_i_l_e___t}{L\+P\+C\+\_\+\+R\+E\+G\+F\+I\+L\+E\+\_\+T} $\ast$}]{p\+Reg\+File,  }\item[{uint8\+\_\+t}]{index }\end{DoxyParamCaption})}
+
+
+
+Read value from General purpose registers. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em p\+Reg\+File} & \+: Reg\+File peripheral selected \\
+\hline
+{\em index} & \+: General purpose register index \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Read Value 
+\end{DoxyReturn}
+\begin{DoxyNote}{Note}
+These General purpose registers can be used to store important information when the main power supply is off. The value in these registers is not affected by chip reset. These registers are powered in the R\+TC power domain. 
+\end{DoxyNote}
+
+
+Definition at line 453 of file rtc\+\_\+18xx\+\_\+43xx.\+h.
+
+\mbox{\Hypertarget{group___r_t_c__18_x_x__43_x_x_ga8607152173e77715f7cc42be74799b65}\label{group___r_t_c__18_x_x__43_x_x_ga8607152173e77715f7cc42be74799b65}} 
+\index{C\+H\+I\+P\+: L\+P\+C18xx/43xx Real Time Clock driver@{C\+H\+I\+P\+: L\+P\+C18xx/43xx Real Time Clock driver}!Chip\+\_\+\+R\+E\+G\+F\+I\+L\+E\+\_\+\+Write@{Chip\+\_\+\+R\+E\+G\+F\+I\+L\+E\+\_\+\+Write}}
+\index{Chip\+\_\+\+R\+E\+G\+F\+I\+L\+E\+\_\+\+Write@{Chip\+\_\+\+R\+E\+G\+F\+I\+L\+E\+\_\+\+Write}!C\+H\+I\+P\+: L\+P\+C18xx/43xx Real Time Clock driver@{C\+H\+I\+P\+: L\+P\+C18xx/43xx Real Time Clock driver}}
+\subsubsection{\texorpdfstring{Chip\+\_\+\+R\+E\+G\+F\+I\+L\+E\+\_\+\+Write()}{Chip\_REGFILE\_Write()}}
+{\footnotesize\ttfamily \hyperlink{group___l_p_c___types___public___macros_ga10b2d890d871e1489bb02b7e70d9bdfb}{S\+T\+A\+T\+IC} \hyperlink{spifi__18xx__43xx_8h_a2eb6f9e0395b47b8d5e3eeae4fe0c116}{I\+N\+L\+I\+NE} void Chip\+\_\+\+R\+E\+G\+F\+I\+L\+E\+\_\+\+Write (\begin{DoxyParamCaption}\item[{\hyperlink{struct_l_p_c___r_e_g_f_i_l_e___t}{L\+P\+C\+\_\+\+R\+E\+G\+F\+I\+L\+E\+\_\+T} $\ast$}]{p\+Reg\+File,  }\item[{uint8\+\_\+t}]{index,  }\item[{uint32\+\_\+t}]{value }\end{DoxyParamCaption})}
+
+
+
+Write value to General purpose registers. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em p\+Reg\+File} & \+: Reg\+File peripheral selected \\
+\hline
+{\em index} & \+: General purpose register index \\
+\hline
+{\em value} & \+: Value to write \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+None 
+\end{DoxyReturn}
+\begin{DoxyNote}{Note}
+These General purpose registers can be used to store important information when the main power supply is off. The value in these registers is not affected by chip reset. These registers are powered in the R\+TC power domain. 
+\end{DoxyNote}
+
+
+Definition at line 438 of file rtc\+\_\+18xx\+\_\+43xx.\+h.
+
+\mbox{\Hypertarget{group___r_t_c__18_x_x__43_x_x_ga2ecd6a555d1a1977a80a30ca21645ca4}\label{group___r_t_c__18_x_x__43_x_x_ga2ecd6a555d1a1977a80a30ca21645ca4}} 
+\index{C\+H\+I\+P\+: L\+P\+C18xx/43xx Real Time Clock driver@{C\+H\+I\+P\+: L\+P\+C18xx/43xx Real Time Clock driver}!Chip\+\_\+\+R\+T\+C\+\_\+\+Alarm\+Int\+Config@{Chip\+\_\+\+R\+T\+C\+\_\+\+Alarm\+Int\+Config}}
+\index{Chip\+\_\+\+R\+T\+C\+\_\+\+Alarm\+Int\+Config@{Chip\+\_\+\+R\+T\+C\+\_\+\+Alarm\+Int\+Config}!C\+H\+I\+P\+: L\+P\+C18xx/43xx Real Time Clock driver@{C\+H\+I\+P\+: L\+P\+C18xx/43xx Real Time Clock driver}}
+\subsubsection{\texorpdfstring{Chip\+\_\+\+R\+T\+C\+\_\+\+Alarm\+Int\+Config()}{Chip\_RTC\_AlarmIntConfig()}}
+{\footnotesize\ttfamily void Chip\+\_\+\+R\+T\+C\+\_\+\+Alarm\+Int\+Config (\begin{DoxyParamCaption}\item[{\hyperlink{struct_l_p_c___r_t_c___t}{L\+P\+C\+\_\+\+R\+T\+C\+\_\+T} $\ast$}]{p\+R\+TC,  }\item[{uint32\+\_\+t}]{alarm\+Mask,  }\item[{\hyperlink{group___l_p_c___types___public___types_gac9a7e9a35d2513ec15c3b537aaa4fba1}{Functional\+State}}]{New\+State }\end{DoxyParamCaption})}
+
+
+
+Enable/\+Disable Alarm interrupt for a time type in the R\+TC peripheral. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em p\+R\+TC} & \+: R\+TC peripheral selected \\
+\hline
+{\em alarm\+Mask} & \+: Or\textquotesingle{}ed bit values for A\+L\+A\+RM types (R\+T\+C\+\_\+\+A\+M\+R\+\_\+\+C\+I\+I\+R\+\_\+\+I\+M$\ast$) \\
+\hline
+{\em New\+State} & \+: E\+N\+A\+B\+LE or D\+I\+S\+A\+B\+LE \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+None 
+\end{DoxyReturn}
+
+
+Definition at line 120 of file rtc\+\_\+18xx\+\_\+43xx.\+c.
+
+\mbox{\Hypertarget{group___r_t_c__18_x_x__43_x_x_ga4f0a93e9a72f793b5891e2d691a1d35d}\label{group___r_t_c__18_x_x__43_x_x_ga4f0a93e9a72f793b5891e2d691a1d35d}} 
+\index{C\+H\+I\+P\+: L\+P\+C18xx/43xx Real Time Clock driver@{C\+H\+I\+P\+: L\+P\+C18xx/43xx Real Time Clock driver}!Chip\+\_\+\+R\+T\+C\+\_\+\+Calib\+Config@{Chip\+\_\+\+R\+T\+C\+\_\+\+Calib\+Config}}
+\index{Chip\+\_\+\+R\+T\+C\+\_\+\+Calib\+Config@{Chip\+\_\+\+R\+T\+C\+\_\+\+Calib\+Config}!C\+H\+I\+P\+: L\+P\+C18xx/43xx Real Time Clock driver@{C\+H\+I\+P\+: L\+P\+C18xx/43xx Real Time Clock driver}}
+\subsubsection{\texorpdfstring{Chip\+\_\+\+R\+T\+C\+\_\+\+Calib\+Config()}{Chip\_RTC\_CalibConfig()}}
+{\footnotesize\ttfamily \hyperlink{group___l_p_c___types___public___macros_ga10b2d890d871e1489bb02b7e70d9bdfb}{S\+T\+A\+T\+IC} \hyperlink{spifi__18xx__43xx_8h_a2eb6f9e0395b47b8d5e3eeae4fe0c116}{I\+N\+L\+I\+NE} void Chip\+\_\+\+R\+T\+C\+\_\+\+Calib\+Config (\begin{DoxyParamCaption}\item[{\hyperlink{struct_l_p_c___r_t_c___t}{L\+P\+C\+\_\+\+R\+T\+C\+\_\+T} $\ast$}]{p\+R\+TC,  }\item[{uint32\+\_\+t}]{Calib\+Value,  }\item[{uint8\+\_\+t}]{Calib\+Dir }\end{DoxyParamCaption})}
+
+
+
+Configures Calibration in the R\+TC peripheral. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em p\+R\+TC} & \+: R\+TC peripheral selected \\
+\hline
+{\em Calib\+Value} & \+: Calibration value, should be in range from 0 to 131,072 \\
+\hline
+{\em Calib\+Dir} & \+: Calibration Direction, should be\+:
+\begin{DoxyItemize}
+\item R\+T\+C\+\_\+\+C\+A\+L\+I\+B\+\_\+\+D\+I\+R\+\_\+\+F\+O\+R\+W\+A\+RD \+:Forward calibration
+\item R\+T\+C\+\_\+\+C\+A\+L\+I\+B\+\_\+\+D\+I\+R\+\_\+\+B\+A\+C\+K\+W\+A\+RD \+:Backward calibration 
+\end{DoxyItemize}\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+None 
+\end{DoxyReturn}
+
+
+Definition at line 477 of file rtc\+\_\+18xx\+\_\+43xx.\+h.
+
+\mbox{\Hypertarget{group___r_t_c__18_x_x__43_x_x_ga987c9ab06dc2bb157388ddf9159de813}\label{group___r_t_c__18_x_x__43_x_x_ga987c9ab06dc2bb157388ddf9159de813}} 
+\index{C\+H\+I\+P\+: L\+P\+C18xx/43xx Real Time Clock driver@{C\+H\+I\+P\+: L\+P\+C18xx/43xx Real Time Clock driver}!Chip\+\_\+\+R\+T\+C\+\_\+\+Calib\+Counter\+Cmd@{Chip\+\_\+\+R\+T\+C\+\_\+\+Calib\+Counter\+Cmd}}
+\index{Chip\+\_\+\+R\+T\+C\+\_\+\+Calib\+Counter\+Cmd@{Chip\+\_\+\+R\+T\+C\+\_\+\+Calib\+Counter\+Cmd}!C\+H\+I\+P\+: L\+P\+C18xx/43xx Real Time Clock driver@{C\+H\+I\+P\+: L\+P\+C18xx/43xx Real Time Clock driver}}
+\subsubsection{\texorpdfstring{Chip\+\_\+\+R\+T\+C\+\_\+\+Calib\+Counter\+Cmd()}{Chip\_RTC\_CalibCounterCmd()}}
+{\footnotesize\ttfamily void Chip\+\_\+\+R\+T\+C\+\_\+\+Calib\+Counter\+Cmd (\begin{DoxyParamCaption}\item[{\hyperlink{struct_l_p_c___r_t_c___t}{L\+P\+C\+\_\+\+R\+T\+C\+\_\+T} $\ast$}]{p\+R\+TC,  }\item[{\hyperlink{group___l_p_c___types___public___types_gac9a7e9a35d2513ec15c3b537aaa4fba1}{Functional\+State}}]{New\+State }\end{DoxyParamCaption})}
+
+
+
+Enable/\+Disable calibration counter in the R\+TC peripheral. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em p\+R\+TC} & \+: R\+TC peripheral selected \\
+\hline
+{\em New\+State} & \+: New State of this function, should be\+:
+\begin{DoxyItemize}
+\item E\+N\+A\+B\+LE \+:The calibration counter is enabled and counting
+\item D\+I\+S\+A\+B\+LE \+:The calibration counter is disabled and reset to zero 
+\end{DoxyItemize}\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+None 
+\end{DoxyReturn}
+
+
+Definition at line 188 of file rtc\+\_\+18xx\+\_\+43xx.\+c.
+
+\mbox{\Hypertarget{group___r_t_c__18_x_x__43_x_x_gaa43865e87cf61d579a4ee52a307b3e30}\label{group___r_t_c__18_x_x__43_x_x_gaa43865e87cf61d579a4ee52a307b3e30}} 
+\index{C\+H\+I\+P\+: L\+P\+C18xx/43xx Real Time Clock driver@{C\+H\+I\+P\+: L\+P\+C18xx/43xx Real Time Clock driver}!Chip\+\_\+\+R\+T\+C\+\_\+\+Clear\+Int\+Pending@{Chip\+\_\+\+R\+T\+C\+\_\+\+Clear\+Int\+Pending}}
+\index{Chip\+\_\+\+R\+T\+C\+\_\+\+Clear\+Int\+Pending@{Chip\+\_\+\+R\+T\+C\+\_\+\+Clear\+Int\+Pending}!C\+H\+I\+P\+: L\+P\+C18xx/43xx Real Time Clock driver@{C\+H\+I\+P\+: L\+P\+C18xx/43xx Real Time Clock driver}}
+\subsubsection{\texorpdfstring{Chip\+\_\+\+R\+T\+C\+\_\+\+Clear\+Int\+Pending()}{Chip\_RTC\_ClearIntPending()}}
+{\footnotesize\ttfamily \hyperlink{group___l_p_c___types___public___macros_ga10b2d890d871e1489bb02b7e70d9bdfb}{S\+T\+A\+T\+IC} \hyperlink{spifi__18xx__43xx_8h_a2eb6f9e0395b47b8d5e3eeae4fe0c116}{I\+N\+L\+I\+NE} void Chip\+\_\+\+R\+T\+C\+\_\+\+Clear\+Int\+Pending (\begin{DoxyParamCaption}\item[{\hyperlink{struct_l_p_c___r_t_c___t}{L\+P\+C\+\_\+\+R\+T\+C\+\_\+T} $\ast$}]{p\+R\+TC,  }\item[{uint32\+\_\+t}]{Int\+Type }\end{DoxyParamCaption})}
+
+
+
+Clear specified Location interrupt pending in the R\+TC peripheral. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em p\+R\+TC} & \+: R\+TC peripheral selected \\
+\hline
+{\em Int\+Type} & \+: Interrupt location type, should be\+:
+\begin{DoxyItemize}
+\item R\+T\+C\+\_\+\+I\+N\+T\+\_\+\+C\+O\+U\+N\+T\+E\+R\+\_\+\+I\+N\+C\+R\+E\+A\+SE \+:Clear Counter Increment Interrupt pending.
+\item R\+T\+C\+\_\+\+I\+N\+T\+\_\+\+A\+L\+A\+RM \+:Clear alarm interrupt pending 
+\end{DoxyItemize}\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+None 
+\end{DoxyReturn}
+
+
+Definition at line 491 of file rtc\+\_\+18xx\+\_\+43xx.\+h.
+
+\mbox{\Hypertarget{group___r_t_c__18_x_x__43_x_x_gaddaf7559a23df0704358128234fcb214}\label{group___r_t_c__18_x_x__43_x_x_gaddaf7559a23df0704358128234fcb214}} 
+\index{C\+H\+I\+P\+: L\+P\+C18xx/43xx Real Time Clock driver@{C\+H\+I\+P\+: L\+P\+C18xx/43xx Real Time Clock driver}!Chip\+\_\+\+R\+T\+C\+\_\+\+Cnt\+Incr\+Int\+Config@{Chip\+\_\+\+R\+T\+C\+\_\+\+Cnt\+Incr\+Int\+Config}}
+\index{Chip\+\_\+\+R\+T\+C\+\_\+\+Cnt\+Incr\+Int\+Config@{Chip\+\_\+\+R\+T\+C\+\_\+\+Cnt\+Incr\+Int\+Config}!C\+H\+I\+P\+: L\+P\+C18xx/43xx Real Time Clock driver@{C\+H\+I\+P\+: L\+P\+C18xx/43xx Real Time Clock driver}}
+\subsubsection{\texorpdfstring{Chip\+\_\+\+R\+T\+C\+\_\+\+Cnt\+Incr\+Int\+Config()}{Chip\_RTC\_CntIncrIntConfig()}}
+{\footnotesize\ttfamily void Chip\+\_\+\+R\+T\+C\+\_\+\+Cnt\+Incr\+Int\+Config (\begin{DoxyParamCaption}\item[{\hyperlink{struct_l_p_c___r_t_c___t}{L\+P\+C\+\_\+\+R\+T\+C\+\_\+T} $\ast$}]{p\+R\+TC,  }\item[{uint32\+\_\+t}]{cntr\+Mask,  }\item[{\hyperlink{group___l_p_c___types___public___types_gac9a7e9a35d2513ec15c3b537aaa4fba1}{Functional\+State}}]{New\+State }\end{DoxyParamCaption})}
+
+
+
+Enable/\+Disable Counter increment interrupt for a time type in the R\+TC peripheral. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em p\+R\+TC} & \+: R\+TC peripheral selected \\
+\hline
+{\em cntr\+Mask} & \+: Or\textquotesingle{}ed bit values for time types (R\+T\+C\+\_\+\+A\+M\+R\+\_\+\+C\+I\+I\+R\+\_\+\+I\+M$\ast$) \\
+\hline
+{\em New\+State} & \+: E\+N\+A\+B\+LE or D\+I\+S\+A\+B\+LE \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+None 
+\end{DoxyReturn}
+
+
+Definition at line 107 of file rtc\+\_\+18xx\+\_\+43xx.\+c.
+
+\mbox{\Hypertarget{group___r_t_c__18_x_x__43_x_x_ga63cc16f1c4b72523e0e67a6c651f0026}\label{group___r_t_c__18_x_x__43_x_x_ga63cc16f1c4b72523e0e67a6c651f0026}} 
+\index{C\+H\+I\+P\+: L\+P\+C18xx/43xx Real Time Clock driver@{C\+H\+I\+P\+: L\+P\+C18xx/43xx Real Time Clock driver}!Chip\+\_\+\+R\+T\+C\+\_\+\+De\+Init@{Chip\+\_\+\+R\+T\+C\+\_\+\+De\+Init}}
+\index{Chip\+\_\+\+R\+T\+C\+\_\+\+De\+Init@{Chip\+\_\+\+R\+T\+C\+\_\+\+De\+Init}!C\+H\+I\+P\+: L\+P\+C18xx/43xx Real Time Clock driver@{C\+H\+I\+P\+: L\+P\+C18xx/43xx Real Time Clock driver}}
+\subsubsection{\texorpdfstring{Chip\+\_\+\+R\+T\+C\+\_\+\+De\+Init()}{Chip\_RTC\_DeInit()}}
+{\footnotesize\ttfamily void Chip\+\_\+\+R\+T\+C\+\_\+\+De\+Init (\begin{DoxyParamCaption}\item[{\hyperlink{struct_l_p_c___r_t_c___t}{L\+P\+C\+\_\+\+R\+T\+C\+\_\+T} $\ast$}]{p\+R\+TC }\end{DoxyParamCaption})}
+
+
+
+De-\/initialize the R\+TC peripheral. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em p\+R\+TC} & \+: R\+TC peripheral selected \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+None 
+\end{DoxyReturn}
+
+
+Definition at line 79 of file rtc\+\_\+18xx\+\_\+43xx.\+c.
+
+\mbox{\Hypertarget{group___r_t_c__18_x_x__43_x_x_gaad05032c6d6c4bc5ea9e02311cdc9a18}\label{group___r_t_c__18_x_x__43_x_x_gaad05032c6d6c4bc5ea9e02311cdc9a18}} 
+\index{C\+H\+I\+P\+: L\+P\+C18xx/43xx Real Time Clock driver@{C\+H\+I\+P\+: L\+P\+C18xx/43xx Real Time Clock driver}!Chip\+\_\+\+R\+T\+C\+\_\+\+Enable@{Chip\+\_\+\+R\+T\+C\+\_\+\+Enable}}
+\index{Chip\+\_\+\+R\+T\+C\+\_\+\+Enable@{Chip\+\_\+\+R\+T\+C\+\_\+\+Enable}!C\+H\+I\+P\+: L\+P\+C18xx/43xx Real Time Clock driver@{C\+H\+I\+P\+: L\+P\+C18xx/43xx Real Time Clock driver}}
+\subsubsection{\texorpdfstring{Chip\+\_\+\+R\+T\+C\+\_\+\+Enable()}{Chip\_RTC\_Enable()}}
+{\footnotesize\ttfamily void Chip\+\_\+\+R\+T\+C\+\_\+\+Enable (\begin{DoxyParamCaption}\item[{\hyperlink{struct_l_p_c___r_t_c___t}{L\+P\+C\+\_\+\+R\+T\+C\+\_\+T} $\ast$}]{p\+R\+TC,  }\item[{\hyperlink{group___l_p_c___types___public___types_gac9a7e9a35d2513ec15c3b537aaa4fba1}{Functional\+State}}]{New\+State }\end{DoxyParamCaption})}
+
+
+
+Start/\+Stop R\+TC peripheral. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em p\+R\+TC} & \+: R\+TC peripheral selected \\
+\hline
+{\em New\+State} & \+: New State of this function, should be\+:
+\begin{DoxyItemize}
+\item E\+N\+A\+B\+LE \+:The time counters are enabled
+\item D\+I\+S\+A\+B\+LE \+:The time counters are disabled 
+\end{DoxyItemize}\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+None 
+\end{DoxyReturn}
+
+
+Definition at line 97 of file rtc\+\_\+18xx\+\_\+43xx.\+c.
+
+\mbox{\Hypertarget{group___r_t_c__18_x_x__43_x_x_ga34389a184b0362b6255d36594084be80}\label{group___r_t_c__18_x_x__43_x_x_ga34389a184b0362b6255d36594084be80}} 
+\index{C\+H\+I\+P\+: L\+P\+C18xx/43xx Real Time Clock driver@{C\+H\+I\+P\+: L\+P\+C18xx/43xx Real Time Clock driver}!Chip\+\_\+\+R\+T\+C\+\_\+\+E\+V\+\_\+\+Clear\+Channel\+Status@{Chip\+\_\+\+R\+T\+C\+\_\+\+E\+V\+\_\+\+Clear\+Channel\+Status}}
+\index{Chip\+\_\+\+R\+T\+C\+\_\+\+E\+V\+\_\+\+Clear\+Channel\+Status@{Chip\+\_\+\+R\+T\+C\+\_\+\+E\+V\+\_\+\+Clear\+Channel\+Status}!C\+H\+I\+P\+: L\+P\+C18xx/43xx Real Time Clock driver@{C\+H\+I\+P\+: L\+P\+C18xx/43xx Real Time Clock driver}}
+\subsubsection{\texorpdfstring{Chip\+\_\+\+R\+T\+C\+\_\+\+E\+V\+\_\+\+Clear\+Channel\+Status()}{Chip\_RTC\_EV\_ClearChannelStatus()}}
+{\footnotesize\ttfamily \hyperlink{group___l_p_c___types___public___macros_ga10b2d890d871e1489bb02b7e70d9bdfb}{S\+T\+A\+T\+IC} \hyperlink{spifi__18xx__43xx_8h_a2eb6f9e0395b47b8d5e3eeae4fe0c116}{I\+N\+L\+I\+NE} void Chip\+\_\+\+R\+T\+C\+\_\+\+E\+V\+\_\+\+Clear\+Channel\+Status (\begin{DoxyParamCaption}\item[{\hyperlink{struct_l_p_c___r_t_c___t}{L\+P\+C\+\_\+\+R\+T\+C\+\_\+T} $\ast$}]{p\+R\+TC,  }\item[{\hyperlink{group___r_t_c__18_x_x__43_x_x_gaac7e8d7c66860037449fdde1bdfb657b}{R\+T\+C\+\_\+\+E\+V\+\_\+\+C\+H\+A\+N\+N\+E\+L\+\_\+T}}]{ch }\end{DoxyParamCaption})}
+
+
+
+Clear status of a specific event channel. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em p\+R\+TC} & \+: R\+TC peripheral selected \\
+\hline
+{\em ch} & \+: Channel number \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Nothing. 
+\end{DoxyReturn}
+
+
+Definition at line 580 of file rtc\+\_\+18xx\+\_\+43xx.\+h.
+
+\mbox{\Hypertarget{group___r_t_c__18_x_x__43_x_x_gaa8609e2618eb4c011a8d8741cebc94c0}\label{group___r_t_c__18_x_x__43_x_x_gaa8609e2618eb4c011a8d8741cebc94c0}} 
+\index{C\+H\+I\+P\+: L\+P\+C18xx/43xx Real Time Clock driver@{C\+H\+I\+P\+: L\+P\+C18xx/43xx Real Time Clock driver}!Chip\+\_\+\+R\+T\+C\+\_\+\+E\+V\+\_\+\+Clear\+Status@{Chip\+\_\+\+R\+T\+C\+\_\+\+E\+V\+\_\+\+Clear\+Status}}
+\index{Chip\+\_\+\+R\+T\+C\+\_\+\+E\+V\+\_\+\+Clear\+Status@{Chip\+\_\+\+R\+T\+C\+\_\+\+E\+V\+\_\+\+Clear\+Status}!C\+H\+I\+P\+: L\+P\+C18xx/43xx Real Time Clock driver@{C\+H\+I\+P\+: L\+P\+C18xx/43xx Real Time Clock driver}}
+\subsubsection{\texorpdfstring{Chip\+\_\+\+R\+T\+C\+\_\+\+E\+V\+\_\+\+Clear\+Status()}{Chip\_RTC\_EV\_ClearStatus()}}
+{\footnotesize\ttfamily \hyperlink{group___l_p_c___types___public___macros_ga10b2d890d871e1489bb02b7e70d9bdfb}{S\+T\+A\+T\+IC} \hyperlink{spifi__18xx__43xx_8h_a2eb6f9e0395b47b8d5e3eeae4fe0c116}{I\+N\+L\+I\+NE} void Chip\+\_\+\+R\+T\+C\+\_\+\+E\+V\+\_\+\+Clear\+Status (\begin{DoxyParamCaption}\item[{\hyperlink{struct_l_p_c___r_t_c___t}{L\+P\+C\+\_\+\+R\+T\+C\+\_\+T} $\ast$}]{p\+R\+TC,  }\item[{uint32\+\_\+t}]{flag }\end{DoxyParamCaption})}
+
+
+
+Clear Event Monitor/\+Recorder Status. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em p\+R\+TC} & \+: R\+TC peripheral selected \\
+\hline
+{\em flag} & \+: Or-\/ed bit value of R\+T\+C\+\_\+\+E\+R\+S\+T\+A\+T\+U\+S\+\_\+\+G\+P\+C\+L\+E\+A\+R\+ED and R\+T\+C\+\_\+\+E\+R\+S\+T\+A\+T\+U\+S\+\_\+\+W\+A\+K\+E\+UP \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Nothing 
+\end{DoxyReturn}
+
+
+Definition at line 558 of file rtc\+\_\+18xx\+\_\+43xx.\+h.
+
+\mbox{\Hypertarget{group___r_t_c__18_x_x__43_x_x_ga522a16f061cbc11f00e2a6681da07ad2}\label{group___r_t_c__18_x_x__43_x_x_ga522a16f061cbc11f00e2a6681da07ad2}} 
+\index{C\+H\+I\+P\+: L\+P\+C18xx/43xx Real Time Clock driver@{C\+H\+I\+P\+: L\+P\+C18xx/43xx Real Time Clock driver}!Chip\+\_\+\+R\+T\+C\+\_\+\+E\+V\+\_\+\+Config@{Chip\+\_\+\+R\+T\+C\+\_\+\+E\+V\+\_\+\+Config}}
+\index{Chip\+\_\+\+R\+T\+C\+\_\+\+E\+V\+\_\+\+Config@{Chip\+\_\+\+R\+T\+C\+\_\+\+E\+V\+\_\+\+Config}!C\+H\+I\+P\+: L\+P\+C18xx/43xx Real Time Clock driver@{C\+H\+I\+P\+: L\+P\+C18xx/43xx Real Time Clock driver}}
+\subsubsection{\texorpdfstring{Chip\+\_\+\+R\+T\+C\+\_\+\+E\+V\+\_\+\+Config()}{Chip\_RTC\_EV\_Config()}}
+{\footnotesize\ttfamily \hyperlink{group___l_p_c___types___public___macros_ga10b2d890d871e1489bb02b7e70d9bdfb}{S\+T\+A\+T\+IC} \hyperlink{spifi__18xx__43xx_8h_a2eb6f9e0395b47b8d5e3eeae4fe0c116}{I\+N\+L\+I\+NE} void Chip\+\_\+\+R\+T\+C\+\_\+\+E\+V\+\_\+\+Config (\begin{DoxyParamCaption}\item[{\hyperlink{struct_l_p_c___r_t_c___t}{L\+P\+C\+\_\+\+R\+T\+C\+\_\+T} $\ast$}]{p\+R\+TC,  }\item[{\hyperlink{group___r_t_c__18_x_x__43_x_x_gaac7e8d7c66860037449fdde1bdfb657b}{R\+T\+C\+\_\+\+E\+V\+\_\+\+C\+H\+A\+N\+N\+E\+L\+\_\+T}}]{ch,  }\item[{uint32\+\_\+t}]{flag }\end{DoxyParamCaption})}
+
+
+
+Configure a specific event channel. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em p\+R\+TC} & \+: R\+TC peripheral selected \\
+\hline
+{\em ch} & \+: Channel number \\
+\hline
+{\em flag} & \+: Configuration flag \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+None 
+\end{DoxyReturn}
+\begin{DoxyNote}{Note}
+flag is or-\/ed bit value of R\+T\+C\+\_\+\+E\+R\+C\+T\+R\+L\+\_\+\+I\+N\+T\+W\+A\+K\+E\+\_\+\+EN,R\+T\+C\+\_\+\+E\+R\+C\+T\+R\+L\+\_\+\+G\+P\+C\+L\+E\+A\+R\+\_\+\+EN, R\+T\+C\+\_\+\+E\+R\+C\+T\+R\+L\+\_\+\+P\+O\+L\+\_\+\+P\+O\+S\+I\+T\+I\+VE and R\+T\+C\+\_\+\+E\+R\+C\+T\+R\+L\+\_\+\+I\+N\+P\+U\+T\+\_\+\+EN. 
+\end{DoxyNote}
+
+
+Definition at line 520 of file rtc\+\_\+18xx\+\_\+43xx.\+h.
+
+\mbox{\Hypertarget{group___r_t_c__18_x_x__43_x_x_gada3039d4961d4e849cba1785a61c9915}\label{group___r_t_c__18_x_x__43_x_x_gada3039d4961d4e849cba1785a61c9915}} 
+\index{C\+H\+I\+P\+: L\+P\+C18xx/43xx Real Time Clock driver@{C\+H\+I\+P\+: L\+P\+C18xx/43xx Real Time Clock driver}!Chip\+\_\+\+R\+T\+C\+\_\+\+E\+V\+\_\+\+Get\+Channel\+Status@{Chip\+\_\+\+R\+T\+C\+\_\+\+E\+V\+\_\+\+Get\+Channel\+Status}}
+\index{Chip\+\_\+\+R\+T\+C\+\_\+\+E\+V\+\_\+\+Get\+Channel\+Status@{Chip\+\_\+\+R\+T\+C\+\_\+\+E\+V\+\_\+\+Get\+Channel\+Status}!C\+H\+I\+P\+: L\+P\+C18xx/43xx Real Time Clock driver@{C\+H\+I\+P\+: L\+P\+C18xx/43xx Real Time Clock driver}}
+\subsubsection{\texorpdfstring{Chip\+\_\+\+R\+T\+C\+\_\+\+E\+V\+\_\+\+Get\+Channel\+Status()}{Chip\_RTC\_EV\_GetChannelStatus()}}
+{\footnotesize\ttfamily \hyperlink{group___l_p_c___types___public___macros_ga10b2d890d871e1489bb02b7e70d9bdfb}{S\+T\+A\+T\+IC} \hyperlink{spifi__18xx__43xx_8h_a2eb6f9e0395b47b8d5e3eeae4fe0c116}{I\+N\+L\+I\+NE} \hyperlink{group___l_p_c___types___public___types_ga89136caac2e14c55151f527ac02daaff}{Flag\+Status} Chip\+\_\+\+R\+T\+C\+\_\+\+E\+V\+\_\+\+Get\+Channel\+Status (\begin{DoxyParamCaption}\item[{\hyperlink{struct_l_p_c___r_t_c___t}{L\+P\+C\+\_\+\+R\+T\+C\+\_\+T} $\ast$}]{p\+R\+TC,  }\item[{\hyperlink{group___r_t_c__18_x_x__43_x_x_gaac7e8d7c66860037449fdde1bdfb657b}{R\+T\+C\+\_\+\+E\+V\+\_\+\+C\+H\+A\+N\+N\+E\+L\+\_\+T}}]{ch }\end{DoxyParamCaption})}
+
+
+
+Get status of a specific event channel. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em p\+R\+TC} & \+: R\+TC peripheral selected \\
+\hline
+{\em ch} & \+: Channel number \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+S\+ET (At least 1 event occurred on the channel), R\+E\+S\+ET\+: no event occured. 
+\end{DoxyReturn}
+
+
+Definition at line 569 of file rtc\+\_\+18xx\+\_\+43xx.\+h.
+
+\mbox{\Hypertarget{group___r_t_c__18_x_x__43_x_x_ga5e03e0be6371bbd1e778f7e10653f045}\label{group___r_t_c__18_x_x__43_x_x_ga5e03e0be6371bbd1e778f7e10653f045}} 
+\index{C\+H\+I\+P\+: L\+P\+C18xx/43xx Real Time Clock driver@{C\+H\+I\+P\+: L\+P\+C18xx/43xx Real Time Clock driver}!Chip\+\_\+\+R\+T\+C\+\_\+\+E\+V\+\_\+\+Get\+Counter@{Chip\+\_\+\+R\+T\+C\+\_\+\+E\+V\+\_\+\+Get\+Counter}}
+\index{Chip\+\_\+\+R\+T\+C\+\_\+\+E\+V\+\_\+\+Get\+Counter@{Chip\+\_\+\+R\+T\+C\+\_\+\+E\+V\+\_\+\+Get\+Counter}!C\+H\+I\+P\+: L\+P\+C18xx/43xx Real Time Clock driver@{C\+H\+I\+P\+: L\+P\+C18xx/43xx Real Time Clock driver}}
+\subsubsection{\texorpdfstring{Chip\+\_\+\+R\+T\+C\+\_\+\+E\+V\+\_\+\+Get\+Counter()}{Chip\_RTC\_EV\_GetCounter()}}
+{\footnotesize\ttfamily \hyperlink{group___l_p_c___types___public___macros_ga10b2d890d871e1489bb02b7e70d9bdfb}{S\+T\+A\+T\+IC} \hyperlink{spifi__18xx__43xx_8h_a2eb6f9e0395b47b8d5e3eeae4fe0c116}{I\+N\+L\+I\+NE} uint8\+\_\+t Chip\+\_\+\+R\+T\+C\+\_\+\+E\+V\+\_\+\+Get\+Counter (\begin{DoxyParamCaption}\item[{\hyperlink{struct_l_p_c___r_t_c___t}{L\+P\+C\+\_\+\+R\+T\+C\+\_\+T} $\ast$}]{p\+R\+TC,  }\item[{\hyperlink{group___r_t_c__18_x_x__43_x_x_gaac7e8d7c66860037449fdde1bdfb657b}{R\+T\+C\+\_\+\+E\+V\+\_\+\+C\+H\+A\+N\+N\+E\+L\+\_\+T}}]{ch }\end{DoxyParamCaption})}
+
+
+
+Get counter value of a specific event channel. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em p\+R\+TC} & \+: R\+TC peripheral selected \\
+\hline
+{\em ch} & \+: Channel number \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+counter value 
+\end{DoxyReturn}
+
+
+Definition at line 591 of file rtc\+\_\+18xx\+\_\+43xx.\+h.
+
+\mbox{\Hypertarget{group___r_t_c__18_x_x__43_x_x_ga7e3af0c85e9683474f034b2e370181ef}\label{group___r_t_c__18_x_x__43_x_x_ga7e3af0c85e9683474f034b2e370181ef}} 
+\index{C\+H\+I\+P\+: L\+P\+C18xx/43xx Real Time Clock driver@{C\+H\+I\+P\+: L\+P\+C18xx/43xx Real Time Clock driver}!Chip\+\_\+\+R\+T\+C\+\_\+\+E\+V\+\_\+\+Get\+First\+Time\+Stamp@{Chip\+\_\+\+R\+T\+C\+\_\+\+E\+V\+\_\+\+Get\+First\+Time\+Stamp}}
+\index{Chip\+\_\+\+R\+T\+C\+\_\+\+E\+V\+\_\+\+Get\+First\+Time\+Stamp@{Chip\+\_\+\+R\+T\+C\+\_\+\+E\+V\+\_\+\+Get\+First\+Time\+Stamp}!C\+H\+I\+P\+: L\+P\+C18xx/43xx Real Time Clock driver@{C\+H\+I\+P\+: L\+P\+C18xx/43xx Real Time Clock driver}}
+\subsubsection{\texorpdfstring{Chip\+\_\+\+R\+T\+C\+\_\+\+E\+V\+\_\+\+Get\+First\+Time\+Stamp()}{Chip\_RTC\_EV\_GetFirstTimeStamp()}}
+{\footnotesize\ttfamily void Chip\+\_\+\+R\+T\+C\+\_\+\+E\+V\+\_\+\+Get\+First\+Time\+Stamp (\begin{DoxyParamCaption}\item[{\hyperlink{struct_l_p_c___r_t_c___t}{L\+P\+C\+\_\+\+R\+T\+C\+\_\+T} $\ast$}]{p\+R\+TC,  }\item[{\hyperlink{group___r_t_c__18_x_x__43_x_x_gaac7e8d7c66860037449fdde1bdfb657b}{R\+T\+C\+\_\+\+E\+V\+\_\+\+C\+H\+A\+N\+N\+E\+L\+\_\+T}}]{ch,  }\item[{\hyperlink{struct_r_t_c___e_v___t_i_m_e_s_t_a_m_p___t}{R\+T\+C\+\_\+\+E\+V\+\_\+\+T\+I\+M\+E\+S\+T\+A\+M\+P\+\_\+T} $\ast$}]{p\+Time\+Stamp }\end{DoxyParamCaption})}
+
+
+
+Get first time stamp of a specific event channel. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em p\+R\+TC} & \+: R\+TC peripheral selected \\
+\hline
+{\em ch} & \+: Channel number \\
+\hline
+{\em p\+Time\+Stamp} & \+: pointer to Timestamp buffer \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Nothing. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{group___r_t_c__18_x_x__43_x_x_gab32567fa96fb9be16d3596b6ab64116a}\label{group___r_t_c__18_x_x__43_x_x_gab32567fa96fb9be16d3596b6ab64116a}} 
+\index{C\+H\+I\+P\+: L\+P\+C18xx/43xx Real Time Clock driver@{C\+H\+I\+P\+: L\+P\+C18xx/43xx Real Time Clock driver}!Chip\+\_\+\+R\+T\+C\+\_\+\+E\+V\+\_\+\+Get\+Last\+Time\+Stamp@{Chip\+\_\+\+R\+T\+C\+\_\+\+E\+V\+\_\+\+Get\+Last\+Time\+Stamp}}
+\index{Chip\+\_\+\+R\+T\+C\+\_\+\+E\+V\+\_\+\+Get\+Last\+Time\+Stamp@{Chip\+\_\+\+R\+T\+C\+\_\+\+E\+V\+\_\+\+Get\+Last\+Time\+Stamp}!C\+H\+I\+P\+: L\+P\+C18xx/43xx Real Time Clock driver@{C\+H\+I\+P\+: L\+P\+C18xx/43xx Real Time Clock driver}}
+\subsubsection{\texorpdfstring{Chip\+\_\+\+R\+T\+C\+\_\+\+E\+V\+\_\+\+Get\+Last\+Time\+Stamp()}{Chip\_RTC\_EV\_GetLastTimeStamp()}}
+{\footnotesize\ttfamily void Chip\+\_\+\+R\+T\+C\+\_\+\+E\+V\+\_\+\+Get\+Last\+Time\+Stamp (\begin{DoxyParamCaption}\item[{\hyperlink{struct_l_p_c___r_t_c___t}{L\+P\+C\+\_\+\+R\+T\+C\+\_\+T} $\ast$}]{p\+R\+TC,  }\item[{\hyperlink{group___r_t_c__18_x_x__43_x_x_gaac7e8d7c66860037449fdde1bdfb657b}{R\+T\+C\+\_\+\+E\+V\+\_\+\+C\+H\+A\+N\+N\+E\+L\+\_\+T}}]{ch,  }\item[{\hyperlink{struct_r_t_c___e_v___t_i_m_e_s_t_a_m_p___t}{R\+T\+C\+\_\+\+E\+V\+\_\+\+T\+I\+M\+E\+S\+T\+A\+M\+P\+\_\+T} $\ast$}]{p\+Time\+Stamp }\end{DoxyParamCaption})}
+
+
+
+Get last time stamp of a specific event channel. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em p\+R\+TC} & \+: R\+TC peripheral selected \\
+\hline
+{\em ch} & \+: Channel number \\
+\hline
+{\em p\+Time\+Stamp} & \+: pointer to Timestamp buffer \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Nothing. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{group___r_t_c__18_x_x__43_x_x_gaee85196612badea27e318e8b0b8eaf0b}\label{group___r_t_c__18_x_x__43_x_x_gaee85196612badea27e318e8b0b8eaf0b}} 
+\index{C\+H\+I\+P\+: L\+P\+C18xx/43xx Real Time Clock driver@{C\+H\+I\+P\+: L\+P\+C18xx/43xx Real Time Clock driver}!Chip\+\_\+\+R\+T\+C\+\_\+\+E\+V\+\_\+\+Get\+Status@{Chip\+\_\+\+R\+T\+C\+\_\+\+E\+V\+\_\+\+Get\+Status}}
+\index{Chip\+\_\+\+R\+T\+C\+\_\+\+E\+V\+\_\+\+Get\+Status@{Chip\+\_\+\+R\+T\+C\+\_\+\+E\+V\+\_\+\+Get\+Status}!C\+H\+I\+P\+: L\+P\+C18xx/43xx Real Time Clock driver@{C\+H\+I\+P\+: L\+P\+C18xx/43xx Real Time Clock driver}}
+\subsubsection{\texorpdfstring{Chip\+\_\+\+R\+T\+C\+\_\+\+E\+V\+\_\+\+Get\+Status()}{Chip\_RTC\_EV\_GetStatus()}}
+{\footnotesize\ttfamily \hyperlink{group___l_p_c___types___public___macros_ga10b2d890d871e1489bb02b7e70d9bdfb}{S\+T\+A\+T\+IC} \hyperlink{spifi__18xx__43xx_8h_a2eb6f9e0395b47b8d5e3eeae4fe0c116}{I\+N\+L\+I\+NE} uint8\+\_\+t Chip\+\_\+\+R\+T\+C\+\_\+\+E\+V\+\_\+\+Get\+Status (\begin{DoxyParamCaption}\item[{\hyperlink{struct_l_p_c___r_t_c___t}{L\+P\+C\+\_\+\+R\+T\+C\+\_\+T} $\ast$}]{p\+R\+TC }\end{DoxyParamCaption})}
+
+
+
+Get Event Monitor/\+Recorder Status. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em p\+R\+TC} & \+: R\+TC peripheral selected \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Or-\/ed bit value of R\+T\+C\+\_\+\+E\+R\+S\+T\+A\+T\+U\+S\+\_\+\+G\+P\+C\+L\+E\+A\+R\+ED and R\+T\+C\+\_\+\+E\+R\+S\+T\+A\+T\+U\+S\+\_\+\+W\+A\+K\+E\+UP 
+\end{DoxyReturn}
+
+
+Definition at line 547 of file rtc\+\_\+18xx\+\_\+43xx.\+h.
+
+\mbox{\Hypertarget{group___r_t_c__18_x_x__43_x_x_ga6b1011cc2afb90d24e7b63eccea42564}\label{group___r_t_c__18_x_x__43_x_x_ga6b1011cc2afb90d24e7b63eccea42564}} 
+\index{C\+H\+I\+P\+: L\+P\+C18xx/43xx Real Time Clock driver@{C\+H\+I\+P\+: L\+P\+C18xx/43xx Real Time Clock driver}!Chip\+\_\+\+R\+T\+C\+\_\+\+E\+V\+\_\+\+Set\+Mode@{Chip\+\_\+\+R\+T\+C\+\_\+\+E\+V\+\_\+\+Set\+Mode}}
+\index{Chip\+\_\+\+R\+T\+C\+\_\+\+E\+V\+\_\+\+Set\+Mode@{Chip\+\_\+\+R\+T\+C\+\_\+\+E\+V\+\_\+\+Set\+Mode}!C\+H\+I\+P\+: L\+P\+C18xx/43xx Real Time Clock driver@{C\+H\+I\+P\+: L\+P\+C18xx/43xx Real Time Clock driver}}
+\subsubsection{\texorpdfstring{Chip\+\_\+\+R\+T\+C\+\_\+\+E\+V\+\_\+\+Set\+Mode()}{Chip\_RTC\_EV\_SetMode()}}
+{\footnotesize\ttfamily \hyperlink{group___l_p_c___types___public___macros_ga10b2d890d871e1489bb02b7e70d9bdfb}{S\+T\+A\+T\+IC} \hyperlink{spifi__18xx__43xx_8h_a2eb6f9e0395b47b8d5e3eeae4fe0c116}{I\+N\+L\+I\+NE} void Chip\+\_\+\+R\+T\+C\+\_\+\+E\+V\+\_\+\+Set\+Mode (\begin{DoxyParamCaption}\item[{\hyperlink{struct_l_p_c___r_t_c___t}{L\+P\+C\+\_\+\+R\+T\+C\+\_\+T} $\ast$}]{p\+R\+TC,  }\item[{\hyperlink{group___r_t_c__18_x_x__43_x_x_gabcbfff4a7d52791dc0b1cdcb078a2a05}{R\+T\+C\+\_\+\+E\+V\+\_\+\+M\+O\+D\+E\+\_\+T}}]{mode }\end{DoxyParamCaption})}
+
+
+
+Enable/\+Disable and select clock frequency for Event Monitor/\+Recorder. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em p\+R\+TC} & \+: R\+TC peripheral selected \\
+\hline
+{\em mode} & \+: selected mode \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+None 
+\end{DoxyReturn}
+
+
+Definition at line 534 of file rtc\+\_\+18xx\+\_\+43xx.\+h.
+
+\mbox{\Hypertarget{group___r_t_c__18_x_x__43_x_x_gaf094ef7c4ff7295c74be8ab77e39a967}\label{group___r_t_c__18_x_x__43_x_x_gaf094ef7c4ff7295c74be8ab77e39a967}} 
+\index{C\+H\+I\+P\+: L\+P\+C18xx/43xx Real Time Clock driver@{C\+H\+I\+P\+: L\+P\+C18xx/43xx Real Time Clock driver}!Chip\+\_\+\+R\+T\+C\+\_\+\+Get\+Alarm\+Time@{Chip\+\_\+\+R\+T\+C\+\_\+\+Get\+Alarm\+Time}}
+\index{Chip\+\_\+\+R\+T\+C\+\_\+\+Get\+Alarm\+Time@{Chip\+\_\+\+R\+T\+C\+\_\+\+Get\+Alarm\+Time}!C\+H\+I\+P\+: L\+P\+C18xx/43xx Real Time Clock driver@{C\+H\+I\+P\+: L\+P\+C18xx/43xx Real Time Clock driver}}
+\subsubsection{\texorpdfstring{Chip\+\_\+\+R\+T\+C\+\_\+\+Get\+Alarm\+Time()}{Chip\_RTC\_GetAlarmTime()}}
+{\footnotesize\ttfamily \hyperlink{group___l_p_c___types___public___macros_ga10b2d890d871e1489bb02b7e70d9bdfb}{S\+T\+A\+T\+IC} \hyperlink{spifi__18xx__43xx_8h_a2eb6f9e0395b47b8d5e3eeae4fe0c116}{I\+N\+L\+I\+NE} uint32\+\_\+t Chip\+\_\+\+R\+T\+C\+\_\+\+Get\+Alarm\+Time (\begin{DoxyParamCaption}\item[{\hyperlink{struct_l_p_c___r_t_c___t}{L\+P\+C\+\_\+\+R\+T\+C\+\_\+T} $\ast$}]{p\+R\+TC,  }\item[{\hyperlink{group___r_t_c__18_x_x__43_x_x_ga8144898fe628404d396db06dc8aac0e0}{R\+T\+C\+\_\+\+T\+I\+M\+E\+I\+N\+D\+E\+X\+\_\+T}}]{Timetype }\end{DoxyParamCaption})}
+
+
+
+Get alarm time value for a time type. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em p\+R\+TC} & \+: R\+TC peripheral selected \\
+\hline
+{\em Timetype} & \+: Time index field to get \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Value of Alarm time according to specified time type 
+\end{DoxyReturn}
+
+
+Definition at line 406 of file rtc\+\_\+18xx\+\_\+43xx.\+h.
+
+\mbox{\Hypertarget{group___r_t_c__18_x_x__43_x_x_ga21b9a7c640870482b47deda15ff0a01b}\label{group___r_t_c__18_x_x__43_x_x_ga21b9a7c640870482b47deda15ff0a01b}} 
+\index{C\+H\+I\+P\+: L\+P\+C18xx/43xx Real Time Clock driver@{C\+H\+I\+P\+: L\+P\+C18xx/43xx Real Time Clock driver}!Chip\+\_\+\+R\+T\+C\+\_\+\+Get\+Full\+Alarm\+Time@{Chip\+\_\+\+R\+T\+C\+\_\+\+Get\+Full\+Alarm\+Time}}
+\index{Chip\+\_\+\+R\+T\+C\+\_\+\+Get\+Full\+Alarm\+Time@{Chip\+\_\+\+R\+T\+C\+\_\+\+Get\+Full\+Alarm\+Time}!C\+H\+I\+P\+: L\+P\+C18xx/43xx Real Time Clock driver@{C\+H\+I\+P\+: L\+P\+C18xx/43xx Real Time Clock driver}}
+\subsubsection{\texorpdfstring{Chip\+\_\+\+R\+T\+C\+\_\+\+Get\+Full\+Alarm\+Time()}{Chip\_RTC\_GetFullAlarmTime()}}
+{\footnotesize\ttfamily void Chip\+\_\+\+R\+T\+C\+\_\+\+Get\+Full\+Alarm\+Time (\begin{DoxyParamCaption}\item[{\hyperlink{struct_l_p_c___r_t_c___t}{L\+P\+C\+\_\+\+R\+T\+C\+\_\+T} $\ast$}]{p\+R\+TC,  }\item[{\hyperlink{struct_r_t_c___t_i_m_e___t}{R\+T\+C\+\_\+\+T\+I\+M\+E\+\_\+T} $\ast$}]{p\+Full\+Time }\end{DoxyParamCaption})}
+
+
+
+Get full alarm time in the R\+TC peripheral. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em p\+R\+TC} & \+: R\+TC peripheral selected \\
+\hline
+{\em p\+Full\+Time} & \+: Pointer to full time record to fill \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+None 
+\end{DoxyReturn}
+
+
+Definition at line 178 of file rtc\+\_\+18xx\+\_\+43xx.\+c.
+
+\mbox{\Hypertarget{group___r_t_c__18_x_x__43_x_x_gab03d971e0b77ba907f414cdc00acce3b}\label{group___r_t_c__18_x_x__43_x_x_gab03d971e0b77ba907f414cdc00acce3b}} 
+\index{C\+H\+I\+P\+: L\+P\+C18xx/43xx Real Time Clock driver@{C\+H\+I\+P\+: L\+P\+C18xx/43xx Real Time Clock driver}!Chip\+\_\+\+R\+T\+C\+\_\+\+Get\+Full\+Time@{Chip\+\_\+\+R\+T\+C\+\_\+\+Get\+Full\+Time}}
+\index{Chip\+\_\+\+R\+T\+C\+\_\+\+Get\+Full\+Time@{Chip\+\_\+\+R\+T\+C\+\_\+\+Get\+Full\+Time}!C\+H\+I\+P\+: L\+P\+C18xx/43xx Real Time Clock driver@{C\+H\+I\+P\+: L\+P\+C18xx/43xx Real Time Clock driver}}
+\subsubsection{\texorpdfstring{Chip\+\_\+\+R\+T\+C\+\_\+\+Get\+Full\+Time()}{Chip\_RTC\_GetFullTime()}}
+{\footnotesize\ttfamily void Chip\+\_\+\+R\+T\+C\+\_\+\+Get\+Full\+Time (\begin{DoxyParamCaption}\item[{\hyperlink{struct_l_p_c___r_t_c___t}{L\+P\+C\+\_\+\+R\+T\+C\+\_\+T} $\ast$}]{p\+R\+TC,  }\item[{\hyperlink{struct_r_t_c___t_i_m_e___t}{R\+T\+C\+\_\+\+T\+I\+M\+E\+\_\+T} $\ast$}]{p\+Full\+Time }\end{DoxyParamCaption})}
+
+
+
+Get full time from the R\+TC peripheral. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em p\+R\+TC} & \+: R\+TC peripheral selected \\
+\hline
+{\em p\+Full\+Time} & \+: Pointer to full time record to fill \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+None 
+\end{DoxyReturn}
+
+
+Definition at line 152 of file rtc\+\_\+18xx\+\_\+43xx.\+c.
+
+\mbox{\Hypertarget{group___r_t_c__18_x_x__43_x_x_gaab21524984ac344d4f508d2dfd6c5098}\label{group___r_t_c__18_x_x__43_x_x_gaab21524984ac344d4f508d2dfd6c5098}} 
+\index{C\+H\+I\+P\+: L\+P\+C18xx/43xx Real Time Clock driver@{C\+H\+I\+P\+: L\+P\+C18xx/43xx Real Time Clock driver}!Chip\+\_\+\+R\+T\+C\+\_\+\+Get\+Int\+Pending@{Chip\+\_\+\+R\+T\+C\+\_\+\+Get\+Int\+Pending}}
+\index{Chip\+\_\+\+R\+T\+C\+\_\+\+Get\+Int\+Pending@{Chip\+\_\+\+R\+T\+C\+\_\+\+Get\+Int\+Pending}!C\+H\+I\+P\+: L\+P\+C18xx/43xx Real Time Clock driver@{C\+H\+I\+P\+: L\+P\+C18xx/43xx Real Time Clock driver}}
+\subsubsection{\texorpdfstring{Chip\+\_\+\+R\+T\+C\+\_\+\+Get\+Int\+Pending()}{Chip\_RTC\_GetIntPending()}}
+{\footnotesize\ttfamily \hyperlink{group___l_p_c___types___public___macros_ga10b2d890d871e1489bb02b7e70d9bdfb}{S\+T\+A\+T\+IC} \hyperlink{spifi__18xx__43xx_8h_a2eb6f9e0395b47b8d5e3eeae4fe0c116}{I\+N\+L\+I\+NE} \hyperlink{group___l_p_c___types___public___types_gab7d263072f745b4f3913fb0afc434c4e}{Int\+Status} Chip\+\_\+\+R\+T\+C\+\_\+\+Get\+Int\+Pending (\begin{DoxyParamCaption}\item[{\hyperlink{struct_l_p_c___r_t_c___t}{L\+P\+C\+\_\+\+R\+T\+C\+\_\+T} $\ast$}]{p\+R\+TC,  }\item[{uint32\+\_\+t}]{Int\+Type }\end{DoxyParamCaption})}
+
+
+
+Check whether if specified location interrupt in the R\+TC peripheral is set or not. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em p\+R\+TC} & \+: R\+TC peripheral selected \\
+\hline
+{\em Int\+Type} & \+: Interrupt location type, should be\+:
+\begin{DoxyItemize}
+\item R\+T\+C\+\_\+\+I\+N\+T\+\_\+\+C\+O\+U\+N\+T\+E\+R\+\_\+\+I\+N\+C\+R\+E\+A\+SE\+: Counter Increment Interrupt block generated an interrupt.
+\item R\+T\+C\+\_\+\+I\+N\+T\+\_\+\+A\+L\+A\+RM\+: Alarm generated an interrupt. 
+\end{DoxyItemize}\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+New state of specified Location interrupt in R\+TC peripheral, S\+ET OR R\+E\+S\+ET 
+\end{DoxyReturn}
+
+
+Definition at line 504 of file rtc\+\_\+18xx\+\_\+43xx.\+h.
+
+\mbox{\Hypertarget{group___r_t_c__18_x_x__43_x_x_ga661c73c8fce7243b30a207ad7cbee59b}\label{group___r_t_c__18_x_x__43_x_x_ga661c73c8fce7243b30a207ad7cbee59b}} 
+\index{C\+H\+I\+P\+: L\+P\+C18xx/43xx Real Time Clock driver@{C\+H\+I\+P\+: L\+P\+C18xx/43xx Real Time Clock driver}!Chip\+\_\+\+R\+T\+C\+\_\+\+Get\+Time@{Chip\+\_\+\+R\+T\+C\+\_\+\+Get\+Time}}
+\index{Chip\+\_\+\+R\+T\+C\+\_\+\+Get\+Time@{Chip\+\_\+\+R\+T\+C\+\_\+\+Get\+Time}!C\+H\+I\+P\+: L\+P\+C18xx/43xx Real Time Clock driver@{C\+H\+I\+P\+: L\+P\+C18xx/43xx Real Time Clock driver}}
+\subsubsection{\texorpdfstring{Chip\+\_\+\+R\+T\+C\+\_\+\+Get\+Time()}{Chip\_RTC\_GetTime()}}
+{\footnotesize\ttfamily \hyperlink{group___l_p_c___types___public___macros_ga10b2d890d871e1489bb02b7e70d9bdfb}{S\+T\+A\+T\+IC} \hyperlink{spifi__18xx__43xx_8h_a2eb6f9e0395b47b8d5e3eeae4fe0c116}{I\+N\+L\+I\+NE} uint32\+\_\+t Chip\+\_\+\+R\+T\+C\+\_\+\+Get\+Time (\begin{DoxyParamCaption}\item[{\hyperlink{struct_l_p_c___r_t_c___t}{L\+P\+C\+\_\+\+R\+T\+C\+\_\+T} $\ast$}]{p\+R\+TC,  }\item[{\hyperlink{group___r_t_c__18_x_x__43_x_x_ga8144898fe628404d396db06dc8aac0e0}{R\+T\+C\+\_\+\+T\+I\+M\+E\+I\+N\+D\+E\+X\+\_\+T}}]{Timetype }\end{DoxyParamCaption})}
+
+
+
+Get current time value for a type time type. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em p\+R\+TC} & \+: R\+TC peripheral selected \\
+\hline
+{\em Timetype} & \+: Time field index type to get \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Value of time field according to specified time type 
+\end{DoxyReturn}
+
+
+Definition at line 367 of file rtc\+\_\+18xx\+\_\+43xx.\+h.
+
+\mbox{\Hypertarget{group___r_t_c__18_x_x__43_x_x_gac37fe41fed088f1336797e05674125ff}\label{group___r_t_c__18_x_x__43_x_x_gac37fe41fed088f1336797e05674125ff}} 
+\index{C\+H\+I\+P\+: L\+P\+C18xx/43xx Real Time Clock driver@{C\+H\+I\+P\+: L\+P\+C18xx/43xx Real Time Clock driver}!Chip\+\_\+\+R\+T\+C\+\_\+\+Init@{Chip\+\_\+\+R\+T\+C\+\_\+\+Init}}
+\index{Chip\+\_\+\+R\+T\+C\+\_\+\+Init@{Chip\+\_\+\+R\+T\+C\+\_\+\+Init}!C\+H\+I\+P\+: L\+P\+C18xx/43xx Real Time Clock driver@{C\+H\+I\+P\+: L\+P\+C18xx/43xx Real Time Clock driver}}
+\subsubsection{\texorpdfstring{Chip\+\_\+\+R\+T\+C\+\_\+\+Init()}{Chip\_RTC\_Init()}}
+{\footnotesize\ttfamily void Chip\+\_\+\+R\+T\+C\+\_\+\+Init (\begin{DoxyParamCaption}\item[{\hyperlink{struct_l_p_c___r_t_c___t}{L\+P\+C\+\_\+\+R\+T\+C\+\_\+T} $\ast$}]{p\+R\+TC }\end{DoxyParamCaption})}
+
+
+
+Initialize the R\+TC peripheral. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em p\+R\+TC} & \+: R\+TC peripheral selected \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+None 
+\end{DoxyReturn}
+
+
+Definition at line 51 of file rtc\+\_\+18xx\+\_\+43xx.\+c.
+
+\mbox{\Hypertarget{group___r_t_c__18_x_x__43_x_x_ga1d569e8d5d570f6c79d2d1f803bb5f7c}\label{group___r_t_c__18_x_x__43_x_x_ga1d569e8d5d570f6c79d2d1f803bb5f7c}} 
+\index{C\+H\+I\+P\+: L\+P\+C18xx/43xx Real Time Clock driver@{C\+H\+I\+P\+: L\+P\+C18xx/43xx Real Time Clock driver}!Chip\+\_\+\+R\+T\+C\+\_\+\+Reset\+Clock\+Tick\+Counter@{Chip\+\_\+\+R\+T\+C\+\_\+\+Reset\+Clock\+Tick\+Counter}}
+\index{Chip\+\_\+\+R\+T\+C\+\_\+\+Reset\+Clock\+Tick\+Counter@{Chip\+\_\+\+R\+T\+C\+\_\+\+Reset\+Clock\+Tick\+Counter}!C\+H\+I\+P\+: L\+P\+C18xx/43xx Real Time Clock driver@{C\+H\+I\+P\+: L\+P\+C18xx/43xx Real Time Clock driver}}
+\subsubsection{\texorpdfstring{Chip\+\_\+\+R\+T\+C\+\_\+\+Reset\+Clock\+Tick\+Counter()}{Chip\_RTC\_ResetClockTickCounter()}}
+{\footnotesize\ttfamily void Chip\+\_\+\+R\+T\+C\+\_\+\+Reset\+Clock\+Tick\+Counter (\begin{DoxyParamCaption}\item[{\hyperlink{struct_l_p_c___r_t_c___t}{L\+P\+C\+\_\+\+R\+T\+C\+\_\+T} $\ast$}]{p\+R\+TC }\end{DoxyParamCaption})}
+
+
+
+Reset clock tick counter in the R\+TC peripheral. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em p\+R\+TC} & \+: R\+TC peripheral selected \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+None 
+\end{DoxyReturn}
+
+
+Definition at line 85 of file rtc\+\_\+18xx\+\_\+43xx.\+c.
+
+\mbox{\Hypertarget{group___r_t_c__18_x_x__43_x_x_ga7ac6a9a813f710e8e93c4b598a14a795}\label{group___r_t_c__18_x_x__43_x_x_ga7ac6a9a813f710e8e93c4b598a14a795}} 
+\index{C\+H\+I\+P\+: L\+P\+C18xx/43xx Real Time Clock driver@{C\+H\+I\+P\+: L\+P\+C18xx/43xx Real Time Clock driver}!Chip\+\_\+\+R\+T\+C\+\_\+\+Set\+Alarm\+Time@{Chip\+\_\+\+R\+T\+C\+\_\+\+Set\+Alarm\+Time}}
+\index{Chip\+\_\+\+R\+T\+C\+\_\+\+Set\+Alarm\+Time@{Chip\+\_\+\+R\+T\+C\+\_\+\+Set\+Alarm\+Time}!C\+H\+I\+P\+: L\+P\+C18xx/43xx Real Time Clock driver@{C\+H\+I\+P\+: L\+P\+C18xx/43xx Real Time Clock driver}}
+\subsubsection{\texorpdfstring{Chip\+\_\+\+R\+T\+C\+\_\+\+Set\+Alarm\+Time()}{Chip\_RTC\_SetAlarmTime()}}
+{\footnotesize\ttfamily \hyperlink{group___l_p_c___types___public___macros_ga10b2d890d871e1489bb02b7e70d9bdfb}{S\+T\+A\+T\+IC} \hyperlink{spifi__18xx__43xx_8h_a2eb6f9e0395b47b8d5e3eeae4fe0c116}{I\+N\+L\+I\+NE} void Chip\+\_\+\+R\+T\+C\+\_\+\+Set\+Alarm\+Time (\begin{DoxyParamCaption}\item[{\hyperlink{struct_l_p_c___r_t_c___t}{L\+P\+C\+\_\+\+R\+T\+C\+\_\+T} $\ast$}]{p\+R\+TC,  }\item[{\hyperlink{group___r_t_c__18_x_x__43_x_x_ga8144898fe628404d396db06dc8aac0e0}{R\+T\+C\+\_\+\+T\+I\+M\+E\+I\+N\+D\+E\+X\+\_\+T}}]{Timetype,  }\item[{uint32\+\_\+t}]{A\+L\+Value }\end{DoxyParamCaption})}
+
+
+
+Set alarm time value for a time type. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em p\+R\+TC} & \+: R\+TC peripheral selected \\
+\hline
+{\em Timetype} & \+: Time index field to set \\
+\hline
+{\em A\+L\+Value} & \+: Alarm time value to set \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+None 
+\end{DoxyReturn}
+
+
+Definition at line 395 of file rtc\+\_\+18xx\+\_\+43xx.\+h.
+
+\mbox{\Hypertarget{group___r_t_c__18_x_x__43_x_x_ga7ad6b4d1d2aaaf093ddde0cef9023ba0}\label{group___r_t_c__18_x_x__43_x_x_ga7ad6b4d1d2aaaf093ddde0cef9023ba0}} 
+\index{C\+H\+I\+P\+: L\+P\+C18xx/43xx Real Time Clock driver@{C\+H\+I\+P\+: L\+P\+C18xx/43xx Real Time Clock driver}!Chip\+\_\+\+R\+T\+C\+\_\+\+Set\+Full\+Alarm\+Time@{Chip\+\_\+\+R\+T\+C\+\_\+\+Set\+Full\+Alarm\+Time}}
+\index{Chip\+\_\+\+R\+T\+C\+\_\+\+Set\+Full\+Alarm\+Time@{Chip\+\_\+\+R\+T\+C\+\_\+\+Set\+Full\+Alarm\+Time}!C\+H\+I\+P\+: L\+P\+C18xx/43xx Real Time Clock driver@{C\+H\+I\+P\+: L\+P\+C18xx/43xx Real Time Clock driver}}
+\subsubsection{\texorpdfstring{Chip\+\_\+\+R\+T\+C\+\_\+\+Set\+Full\+Alarm\+Time()}{Chip\_RTC\_SetFullAlarmTime()}}
+{\footnotesize\ttfamily void Chip\+\_\+\+R\+T\+C\+\_\+\+Set\+Full\+Alarm\+Time (\begin{DoxyParamCaption}\item[{\hyperlink{struct_l_p_c___r_t_c___t}{L\+P\+C\+\_\+\+R\+T\+C\+\_\+T} $\ast$}]{p\+R\+TC,  }\item[{\hyperlink{struct_r_t_c___t_i_m_e___t}{R\+T\+C\+\_\+\+T\+I\+M\+E\+\_\+T} $\ast$}]{p\+Full\+Time }\end{DoxyParamCaption})}
+
+
+
+Set full alarm time in the R\+TC peripheral. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em p\+R\+TC} & \+: R\+TC peripheral selected \\
+\hline
+{\em p\+Full\+Time} & \+: Pointer to full time record to set alarm \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+None 
+\end{DoxyReturn}
+
+
+Definition at line 168 of file rtc\+\_\+18xx\+\_\+43xx.\+c.
+
+\mbox{\Hypertarget{group___r_t_c__18_x_x__43_x_x_ga501471295a030ca2dc2872577367073e}\label{group___r_t_c__18_x_x__43_x_x_ga501471295a030ca2dc2872577367073e}} 
+\index{C\+H\+I\+P\+: L\+P\+C18xx/43xx Real Time Clock driver@{C\+H\+I\+P\+: L\+P\+C18xx/43xx Real Time Clock driver}!Chip\+\_\+\+R\+T\+C\+\_\+\+Set\+Full\+Time@{Chip\+\_\+\+R\+T\+C\+\_\+\+Set\+Full\+Time}}
+\index{Chip\+\_\+\+R\+T\+C\+\_\+\+Set\+Full\+Time@{Chip\+\_\+\+R\+T\+C\+\_\+\+Set\+Full\+Time}!C\+H\+I\+P\+: L\+P\+C18xx/43xx Real Time Clock driver@{C\+H\+I\+P\+: L\+P\+C18xx/43xx Real Time Clock driver}}
+\subsubsection{\texorpdfstring{Chip\+\_\+\+R\+T\+C\+\_\+\+Set\+Full\+Time()}{Chip\_RTC\_SetFullTime()}}
+{\footnotesize\ttfamily void Chip\+\_\+\+R\+T\+C\+\_\+\+Set\+Full\+Time (\begin{DoxyParamCaption}\item[{\hyperlink{struct_l_p_c___r_t_c___t}{L\+P\+C\+\_\+\+R\+T\+C\+\_\+T} $\ast$}]{p\+R\+TC,  }\item[{\hyperlink{struct_r_t_c___t_i_m_e___t}{R\+T\+C\+\_\+\+T\+I\+M\+E\+\_\+T} $\ast$}]{p\+Full\+Time }\end{DoxyParamCaption})}
+
+
+
+Set full time in the R\+TC peripheral. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em p\+R\+TC} & \+: R\+TC peripheral selected \\
+\hline
+{\em p\+Full\+Time} & \+: Pointer to full time data \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+None 
+\end{DoxyReturn}
+
+
+Definition at line 132 of file rtc\+\_\+18xx\+\_\+43xx.\+c.
+
+\mbox{\Hypertarget{group___r_t_c__18_x_x__43_x_x_ga8104b580aeb00a3d5a9e325b3162b1bb}\label{group___r_t_c__18_x_x__43_x_x_ga8104b580aeb00a3d5a9e325b3162b1bb}} 
+\index{C\+H\+I\+P\+: L\+P\+C18xx/43xx Real Time Clock driver@{C\+H\+I\+P\+: L\+P\+C18xx/43xx Real Time Clock driver}!Chip\+\_\+\+R\+T\+C\+\_\+\+Set\+Time@{Chip\+\_\+\+R\+T\+C\+\_\+\+Set\+Time}}
+\index{Chip\+\_\+\+R\+T\+C\+\_\+\+Set\+Time@{Chip\+\_\+\+R\+T\+C\+\_\+\+Set\+Time}!C\+H\+I\+P\+: L\+P\+C18xx/43xx Real Time Clock driver@{C\+H\+I\+P\+: L\+P\+C18xx/43xx Real Time Clock driver}}
+\subsubsection{\texorpdfstring{Chip\+\_\+\+R\+T\+C\+\_\+\+Set\+Time()}{Chip\_RTC\_SetTime()}}
+{\footnotesize\ttfamily \hyperlink{group___l_p_c___types___public___macros_ga10b2d890d871e1489bb02b7e70d9bdfb}{S\+T\+A\+T\+IC} \hyperlink{spifi__18xx__43xx_8h_a2eb6f9e0395b47b8d5e3eeae4fe0c116}{I\+N\+L\+I\+NE} void Chip\+\_\+\+R\+T\+C\+\_\+\+Set\+Time (\begin{DoxyParamCaption}\item[{\hyperlink{struct_l_p_c___r_t_c___t}{L\+P\+C\+\_\+\+R\+T\+C\+\_\+T} $\ast$}]{p\+R\+TC,  }\item[{\hyperlink{group___r_t_c__18_x_x__43_x_x_ga8144898fe628404d396db06dc8aac0e0}{R\+T\+C\+\_\+\+T\+I\+M\+E\+I\+N\+D\+E\+X\+\_\+T}}]{Timetype,  }\item[{uint32\+\_\+t}]{Time\+Value }\end{DoxyParamCaption})}
+
+
+
+Set current time value for a time type in the R\+TC peripheral. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em p\+R\+TC} & \+: R\+TC peripheral selected \\
+\hline
+{\em Timetype} & \+: time field index type to set \\
+\hline
+{\em Time\+Value} & \+: Value to palce in time field \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+None 
+\end{DoxyReturn}
+
+
+Definition at line 356 of file rtc\+\_\+18xx\+\_\+43xx.\+h.
+

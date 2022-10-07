@@ -1,0 +1,589 @@
+\hypertarget{group___e_e_p_r_o_m__18_x_x__43_x_x}{}\section{C\+H\+IP\+: L\+P\+C18xx/43xx E\+E\+P\+R\+OM driver}
+\label{group___e_e_p_r_o_m__18_x_x__43_x_x}\index{C\+H\+I\+P\+: L\+P\+C18xx/43xx E\+E\+P\+R\+O\+M driver@{C\+H\+I\+P\+: L\+P\+C18xx/43xx E\+E\+P\+R\+O\+M driver}}
+\subsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+struct \hyperlink{struct_l_p_c___e_e_p_r_o_m___t}{L\+P\+C\+\_\+\+E\+E\+P\+R\+O\+M\+\_\+T}
+\begin{DoxyCompactList}\small\item\em E\+E\+P\+R\+OM register block structure. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#define \hyperlink{group___e_e_p_r_o_m__18_x_x__43_x_x_ga19220ff77b3f420a71eddcfcb2534a52}{E\+E\+P\+R\+O\+M\+\_\+\+S\+T\+A\+RT}~(0x20040000)
+\item 
+\#define \hyperlink{group___e_e_p_r_o_m__18_x_x__43_x_x_gaddfda15f5f3ec6f8f325f48be50c548a}{E\+E\+P\+R\+O\+M\+\_\+\+P\+A\+G\+E\+\_\+\+S\+I\+ZE}~(128)
+\item 
+\#define \hyperlink{group___e_e_p_r_o_m__18_x_x__43_x_x_gafb110eded8c7e52bf0826c2bedfd90cd}{E\+E\+P\+R\+O\+M\+\_\+\+P\+A\+G\+E\+\_\+\+N\+UM}~(128)
+\item 
+\#define \hyperlink{group___e_e_p_r_o_m__18_x_x__43_x_x_ga7ee5cba0bfcfb004dfba1245a977c216}{E\+E\+P\+R\+O\+M\+\_\+\+A\+D\+D\+R\+E\+SS}(page,  offset)~(\hyperlink{group___e_e_p_r_o_m__18_x_x__43_x_x_ga19220ff77b3f420a71eddcfcb2534a52}{E\+E\+P\+R\+O\+M\+\_\+\+S\+T\+A\+RT} + (\hyperlink{group___e_e_p_r_o_m__18_x_x__43_x_x_gaddfda15f5f3ec6f8f325f48be50c548a}{E\+E\+P\+R\+O\+M\+\_\+\+P\+A\+G\+E\+\_\+\+S\+I\+ZE} $\ast$ (page)) + offset)
+\item 
+\#define \hyperlink{group___e_e_p_r_o_m__18_x_x__43_x_x_gad60e60fac4934de0ea5ad45fc6035fbc}{E\+E\+P\+R\+O\+M\+\_\+\+C\+L\+O\+C\+K\+\_\+\+D\+IV}~1500000
+\item 
+\#define \hyperlink{group___e_e_p_r_o_m__18_x_x__43_x_x_gae7c4f0b2db03d7cd7a036158e88346b8}{E\+E\+P\+R\+O\+M\+\_\+\+R\+E\+A\+D\+\_\+\+W\+A\+I\+T\+\_\+\+S\+T\+A\+T\+E\+\_\+\+V\+AL}~0x58
+\item 
+\#define \hyperlink{group___e_e_p_r_o_m__18_x_x__43_x_x_ga33a1933987e17e85216abe94ff29e4d3}{E\+E\+P\+R\+O\+M\+\_\+\+W\+A\+I\+T\+\_\+\+S\+T\+A\+T\+E\+\_\+\+V\+AL}~0x232
+\item 
+\#define \hyperlink{group___e_e_p_r_o_m__18_x_x__43_x_x_ga6d6a26f6d387d9bc636c56c07994f0b6}{E\+E\+P\+R\+O\+M\+\_\+\+C\+M\+D\+\_\+\+E\+R\+A\+S\+E\+\_\+\+P\+R\+G\+\_\+\+P\+A\+GE}~(6)
+\item 
+\#define \hyperlink{group___e_e_p_r_o_m__18_x_x__43_x_x_ga3b420badc39c2adf9780d44a74faa45a}{E\+E\+P\+R\+O\+M\+\_\+\+A\+U\+T\+O\+P\+R\+O\+G\+\_\+\+O\+FF}~(0)
+\item 
+\#define \hyperlink{group___e_e_p_r_o_m__18_x_x__43_x_x_ga707dd1e49eb23a4e804d58d2d19bba52}{E\+E\+P\+R\+O\+M\+\_\+\+A\+U\+T\+O\+P\+R\+O\+G\+\_\+\+A\+F\+T\+\_\+1\+W\+O\+R\+D\+W\+R\+I\+T\+T\+EN}~(1)
+\item 
+\#define \hyperlink{group___e_e_p_r_o_m__18_x_x__43_x_x_ga6c353fc9ef8b0be089c548ccd58c6388}{E\+E\+P\+R\+O\+M\+\_\+\+A\+U\+T\+O\+P\+R\+O\+G\+\_\+\+A\+F\+T\+\_\+\+L\+A\+S\+T\+W\+O\+R\+D\+W\+R\+I\+T\+T\+EN}~(2)
+\item 
+\#define \hyperlink{group___e_e_p_r_o_m__18_x_x__43_x_x_ga71f23d0464d767653aad1e73d30a14dc}{E\+E\+P\+R\+O\+M\+\_\+\+P\+W\+R\+D\+WN}~(1 $<$$<$ 0)
+\item 
+\#define \hyperlink{group___e_e_p_r_o_m__18_x_x__43_x_x_ga6cbd8a7a267a151c2d6d324d2bac4eea}{E\+E\+P\+R\+O\+M\+\_\+\+I\+N\+T\+\_\+\+E\+N\+D\+O\+F\+P\+R\+OG}~(1 $<$$<$ 2)
+\end{DoxyCompactItemize}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{group___l_p_c___types___public___macros_ga10b2d890d871e1489bb02b7e70d9bdfb}{S\+T\+A\+T\+IC} \hyperlink{spifi__18xx__43xx_8h_a2eb6f9e0395b47b8d5e3eeae4fe0c116}{I\+N\+L\+I\+NE} void \hyperlink{group___e_e_p_r_o_m__18_x_x__43_x_x_gacce700347262d143041848308f8f3f6f}{Chip\+\_\+\+E\+E\+P\+R\+O\+M\+\_\+\+Enable\+Power\+Down} (\hyperlink{struct_l_p_c___e_e_p_r_o_m___t}{L\+P\+C\+\_\+\+E\+E\+P\+R\+O\+M\+\_\+T} $\ast$p\+E\+E\+P\+R\+OM)
+\begin{DoxyCompactList}\small\item\em Put E\+E\+P\+R\+OM device in power down mode. \end{DoxyCompactList}\item 
+\hyperlink{group___l_p_c___types___public___macros_ga10b2d890d871e1489bb02b7e70d9bdfb}{S\+T\+A\+T\+IC} \hyperlink{spifi__18xx__43xx_8h_a2eb6f9e0395b47b8d5e3eeae4fe0c116}{I\+N\+L\+I\+NE} void \hyperlink{group___e_e_p_r_o_m__18_x_x__43_x_x_ga6cf4052474abe94b3c47ce09b67bb03f}{Chip\+\_\+\+E\+E\+P\+R\+O\+M\+\_\+\+Disable\+Power\+Down} (\hyperlink{struct_l_p_c___e_e_p_r_o_m___t}{L\+P\+C\+\_\+\+E\+E\+P\+R\+O\+M\+\_\+T} $\ast$p\+E\+E\+P\+R\+OM)
+\begin{DoxyCompactList}\small\item\em Bring E\+E\+P\+R\+OM device out of power down mode. \end{DoxyCompactList}\item 
+void \hyperlink{group___e_e_p_r_o_m__18_x_x__43_x_x_ga6f3f3f16f0e24eaa45bbfd7089ed43bb}{Chip\+\_\+\+E\+E\+P\+R\+O\+M\+\_\+\+Init} (\hyperlink{struct_l_p_c___e_e_p_r_o_m___t}{L\+P\+C\+\_\+\+E\+E\+P\+R\+O\+M\+\_\+T} $\ast$p\+E\+E\+P\+R\+OM)
+\begin{DoxyCompactList}\small\item\em Initializes E\+E\+P\+R\+OM. \end{DoxyCompactList}\item 
+\hyperlink{group___l_p_c___types___public___macros_ga10b2d890d871e1489bb02b7e70d9bdfb}{S\+T\+A\+T\+IC} \hyperlink{spifi__18xx__43xx_8h_a2eb6f9e0395b47b8d5e3eeae4fe0c116}{I\+N\+L\+I\+NE} void \hyperlink{group___e_e_p_r_o_m__18_x_x__43_x_x_ga8b179a01d2c806ab4797712c3fc47098}{Chip\+\_\+\+E\+E\+P\+R\+O\+M\+\_\+\+De\+Init} (\hyperlink{struct_l_p_c___e_e_p_r_o_m___t}{L\+P\+C\+\_\+\+E\+E\+P\+R\+O\+M\+\_\+T} $\ast$p\+E\+E\+P\+R\+OM)
+\begin{DoxyCompactList}\small\item\em De-\/initializes E\+E\+P\+R\+OM. \end{DoxyCompactList}\item 
+\hyperlink{group___l_p_c___types___public___macros_ga10b2d890d871e1489bb02b7e70d9bdfb}{S\+T\+A\+T\+IC} \hyperlink{spifi__18xx__43xx_8h_a2eb6f9e0395b47b8d5e3eeae4fe0c116}{I\+N\+L\+I\+NE} void \hyperlink{group___e_e_p_r_o_m__18_x_x__43_x_x_ga7a562f00e3404a06569a4b7c61ade80f}{Chip\+\_\+\+E\+E\+P\+R\+O\+M\+\_\+\+Set\+Auto\+Prog} (\hyperlink{struct_l_p_c___e_e_p_r_o_m___t}{L\+P\+C\+\_\+\+E\+E\+P\+R\+O\+M\+\_\+T} $\ast$p\+E\+E\+P\+R\+OM, uint32\+\_\+t mode)
+\begin{DoxyCompactList}\small\item\em Set Auto program mode. \end{DoxyCompactList}\item 
+\hyperlink{group___l_p_c___types___public___macros_ga10b2d890d871e1489bb02b7e70d9bdfb}{S\+T\+A\+T\+IC} \hyperlink{spifi__18xx__43xx_8h_a2eb6f9e0395b47b8d5e3eeae4fe0c116}{I\+N\+L\+I\+NE} void \hyperlink{group___e_e_p_r_o_m__18_x_x__43_x_x_gaebadf781a37193e0cc84746da5c96b12}{Chip\+\_\+\+E\+E\+P\+R\+O\+M\+\_\+\+Set\+Read\+Wait\+State} (\hyperlink{struct_l_p_c___e_e_p_r_o_m___t}{L\+P\+C\+\_\+\+E\+E\+P\+R\+O\+M\+\_\+T} $\ast$p\+E\+E\+P\+R\+OM, uint32\+\_\+t ws)
+\begin{DoxyCompactList}\small\item\em Set E\+E\+P\+R\+OM Read Wait State. \end{DoxyCompactList}\item 
+\hyperlink{group___l_p_c___types___public___macros_ga10b2d890d871e1489bb02b7e70d9bdfb}{S\+T\+A\+T\+IC} \hyperlink{spifi__18xx__43xx_8h_a2eb6f9e0395b47b8d5e3eeae4fe0c116}{I\+N\+L\+I\+NE} void \hyperlink{group___e_e_p_r_o_m__18_x_x__43_x_x_ga2288ea4bc7ca2c7802c0880e5e347952}{Chip\+\_\+\+E\+E\+P\+R\+O\+M\+\_\+\+Set\+Wait\+State} (\hyperlink{struct_l_p_c___e_e_p_r_o_m___t}{L\+P\+C\+\_\+\+E\+E\+P\+R\+O\+M\+\_\+T} $\ast$p\+E\+E\+P\+R\+OM, uint32\+\_\+t ws)
+\begin{DoxyCompactList}\small\item\em Set E\+E\+P\+R\+OM wait state. \end{DoxyCompactList}\item 
+\hyperlink{group___l_p_c___types___public___macros_ga10b2d890d871e1489bb02b7e70d9bdfb}{S\+T\+A\+T\+IC} \hyperlink{spifi__18xx__43xx_8h_a2eb6f9e0395b47b8d5e3eeae4fe0c116}{I\+N\+L\+I\+NE} void \hyperlink{group___e_e_p_r_o_m__18_x_x__43_x_x_gaf8f467bf5d3c7141bbad5244a15a889e}{Chip\+\_\+\+E\+E\+P\+R\+O\+M\+\_\+\+Set\+Cmd} (\hyperlink{struct_l_p_c___e_e_p_r_o_m___t}{L\+P\+C\+\_\+\+E\+E\+P\+R\+O\+M\+\_\+T} $\ast$p\+E\+E\+P\+R\+OM, uint32\+\_\+t cmd)
+\begin{DoxyCompactList}\small\item\em Select an E\+E\+P\+R\+OM command. \end{DoxyCompactList}\item 
+void \hyperlink{group___e_e_p_r_o_m__18_x_x__43_x_x_ga9bd675e4d0579705d04c2948cc22cfe0}{Chip\+\_\+\+E\+E\+P\+R\+O\+M\+\_\+\+Erase\+Program\+Page} (\hyperlink{struct_l_p_c___e_e_p_r_o_m___t}{L\+P\+C\+\_\+\+E\+E\+P\+R\+O\+M\+\_\+T} $\ast$p\+E\+E\+P\+R\+OM)
+\begin{DoxyCompactList}\small\item\em Erase/\+Program an E\+E\+P\+R\+OM page. \end{DoxyCompactList}\item 
+void \hyperlink{group___e_e_p_r_o_m__18_x_x__43_x_x_ga9bf344a5bd3a2035573b2d080f11c484}{Chip\+\_\+\+E\+E\+P\+R\+O\+M\+\_\+\+Wait\+For\+Int\+Status} (\hyperlink{struct_l_p_c___e_e_p_r_o_m___t}{L\+P\+C\+\_\+\+E\+E\+P\+R\+O\+M\+\_\+T} $\ast$p\+E\+E\+P\+R\+OM, uint32\+\_\+t mask)
+\begin{DoxyCompactList}\small\item\em Wait for interrupt occurs. \end{DoxyCompactList}\item 
+\hyperlink{group___l_p_c___types___public___macros_ga10b2d890d871e1489bb02b7e70d9bdfb}{S\+T\+A\+T\+IC} \hyperlink{spifi__18xx__43xx_8h_a2eb6f9e0395b47b8d5e3eeae4fe0c116}{I\+N\+L\+I\+NE} void \hyperlink{group___e_e_p_r_o_m__18_x_x__43_x_x_gad2c0da142f469adc4467b4d230b5532b}{Chip\+\_\+\+E\+E\+P\+R\+O\+M\+\_\+\+Enable\+Int} (\hyperlink{struct_l_p_c___e_e_p_r_o_m___t}{L\+P\+C\+\_\+\+E\+E\+P\+R\+O\+M\+\_\+T} $\ast$p\+E\+E\+P\+R\+OM, uint32\+\_\+t mask)
+\begin{DoxyCompactList}\small\item\em Enable E\+E\+P\+R\+OM interrupt. \end{DoxyCompactList}\item 
+\hyperlink{group___l_p_c___types___public___macros_ga10b2d890d871e1489bb02b7e70d9bdfb}{S\+T\+A\+T\+IC} \hyperlink{spifi__18xx__43xx_8h_a2eb6f9e0395b47b8d5e3eeae4fe0c116}{I\+N\+L\+I\+NE} void \hyperlink{group___e_e_p_r_o_m__18_x_x__43_x_x_gac506ec65d1c63a4f2f8bfc7175bea68c}{Chip\+\_\+\+E\+E\+P\+R\+O\+M\+\_\+\+Disable\+Int} (\hyperlink{struct_l_p_c___e_e_p_r_o_m___t}{L\+P\+C\+\_\+\+E\+E\+P\+R\+O\+M\+\_\+T} $\ast$p\+E\+E\+P\+R\+OM, uint32\+\_\+t mask)
+\begin{DoxyCompactList}\small\item\em Disable E\+E\+P\+R\+OM interrupt. \end{DoxyCompactList}\item 
+\hyperlink{group___l_p_c___types___public___macros_ga10b2d890d871e1489bb02b7e70d9bdfb}{S\+T\+A\+T\+IC} \hyperlink{spifi__18xx__43xx_8h_a2eb6f9e0395b47b8d5e3eeae4fe0c116}{I\+N\+L\+I\+NE} uint32\+\_\+t \hyperlink{group___e_e_p_r_o_m__18_x_x__43_x_x_gabc5dffbf26c343bfccd25bface186de0}{Chip\+\_\+\+E\+E\+P\+R\+O\+M\+\_\+\+Get\+Int\+Enable} (\hyperlink{struct_l_p_c___e_e_p_r_o_m___t}{L\+P\+C\+\_\+\+E\+E\+P\+R\+O\+M\+\_\+T} $\ast$p\+E\+E\+P\+R\+OM)
+\begin{DoxyCompactList}\small\item\em Get the value of the E\+E\+P\+R\+OM interrupt enable register. \end{DoxyCompactList}\item 
+\hyperlink{group___l_p_c___types___public___macros_ga10b2d890d871e1489bb02b7e70d9bdfb}{S\+T\+A\+T\+IC} \hyperlink{spifi__18xx__43xx_8h_a2eb6f9e0395b47b8d5e3eeae4fe0c116}{I\+N\+L\+I\+NE} uint32\+\_\+t \hyperlink{group___e_e_p_r_o_m__18_x_x__43_x_x_ga19e670ed83dcab5cc21237a3150ff082}{Chip\+\_\+\+E\+E\+P\+R\+O\+M\+\_\+\+Get\+Int\+Status} (\hyperlink{struct_l_p_c___e_e_p_r_o_m___t}{L\+P\+C\+\_\+\+E\+E\+P\+R\+O\+M\+\_\+T} $\ast$p\+E\+E\+P\+R\+OM)
+\begin{DoxyCompactList}\small\item\em Get E\+E\+P\+R\+OM interrupt status. \end{DoxyCompactList}\item 
+\hyperlink{group___l_p_c___types___public___macros_ga10b2d890d871e1489bb02b7e70d9bdfb}{S\+T\+A\+T\+IC} \hyperlink{spifi__18xx__43xx_8h_a2eb6f9e0395b47b8d5e3eeae4fe0c116}{I\+N\+L\+I\+NE} void \hyperlink{group___e_e_p_r_o_m__18_x_x__43_x_x_gacebf288107d6f4a68f805a063205cf8e}{Chip\+\_\+\+E\+E\+P\+R\+O\+M\+\_\+\+Set\+Int\+Status} (\hyperlink{struct_l_p_c___e_e_p_r_o_m___t}{L\+P\+C\+\_\+\+E\+E\+P\+R\+O\+M\+\_\+T} $\ast$p\+E\+E\+P\+R\+OM, uint32\+\_\+t mask)
+\begin{DoxyCompactList}\small\item\em Set E\+E\+P\+R\+OM interrupt status. \end{DoxyCompactList}\item 
+\hyperlink{group___l_p_c___types___public___macros_ga10b2d890d871e1489bb02b7e70d9bdfb}{S\+T\+A\+T\+IC} \hyperlink{spifi__18xx__43xx_8h_a2eb6f9e0395b47b8d5e3eeae4fe0c116}{I\+N\+L\+I\+NE} void \hyperlink{group___e_e_p_r_o_m__18_x_x__43_x_x_gae551204eb5e0c647ea853bc3a19aa33c}{Chip\+\_\+\+E\+E\+P\+R\+O\+M\+\_\+\+Clear\+Int\+Status} (\hyperlink{struct_l_p_c___e_e_p_r_o_m___t}{L\+P\+C\+\_\+\+E\+E\+P\+R\+O\+M\+\_\+T} $\ast$p\+E\+E\+P\+R\+OM, uint32\+\_\+t mask)
+\begin{DoxyCompactList}\small\item\em Clear E\+E\+P\+R\+OM interrupt status. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+
+
+\subsection{Macro Definition Documentation}
+\mbox{\Hypertarget{group___e_e_p_r_o_m__18_x_x__43_x_x_ga7ee5cba0bfcfb004dfba1245a977c216}\label{group___e_e_p_r_o_m__18_x_x__43_x_x_ga7ee5cba0bfcfb004dfba1245a977c216}} 
+\index{C\+H\+I\+P\+: L\+P\+C18xx/43xx E\+E\+P\+R\+O\+M driver@{C\+H\+I\+P\+: L\+P\+C18xx/43xx E\+E\+P\+R\+O\+M driver}!E\+E\+P\+R\+O\+M\+\_\+\+A\+D\+D\+R\+E\+SS@{E\+E\+P\+R\+O\+M\+\_\+\+A\+D\+D\+R\+E\+SS}}
+\index{E\+E\+P\+R\+O\+M\+\_\+\+A\+D\+D\+R\+E\+SS@{E\+E\+P\+R\+O\+M\+\_\+\+A\+D\+D\+R\+E\+SS}!C\+H\+I\+P\+: L\+P\+C18xx/43xx E\+E\+P\+R\+O\+M driver@{C\+H\+I\+P\+: L\+P\+C18xx/43xx E\+E\+P\+R\+O\+M driver}}
+\subsubsection{\texorpdfstring{E\+E\+P\+R\+O\+M\+\_\+\+A\+D\+D\+R\+E\+SS}{EEPROM\_ADDRESS}}
+{\footnotesize\ttfamily \#define E\+E\+P\+R\+O\+M\+\_\+\+A\+D\+D\+R\+E\+SS(\begin{DoxyParamCaption}\item[{}]{page,  }\item[{}]{offset }\end{DoxyParamCaption})~(\hyperlink{group___e_e_p_r_o_m__18_x_x__43_x_x_ga19220ff77b3f420a71eddcfcb2534a52}{E\+E\+P\+R\+O\+M\+\_\+\+S\+T\+A\+RT} + (\hyperlink{group___e_e_p_r_o_m__18_x_x__43_x_x_gaddfda15f5f3ec6f8f325f48be50c548a}{E\+E\+P\+R\+O\+M\+\_\+\+P\+A\+G\+E\+\_\+\+S\+I\+ZE} $\ast$ (page)) + offset)}
+
+Get the eeprom address 
+
+Definition at line 52 of file eeprom\+\_\+18xx\+\_\+43xx.\+h.
+
+\mbox{\Hypertarget{group___e_e_p_r_o_m__18_x_x__43_x_x_ga707dd1e49eb23a4e804d58d2d19bba52}\label{group___e_e_p_r_o_m__18_x_x__43_x_x_ga707dd1e49eb23a4e804d58d2d19bba52}} 
+\index{C\+H\+I\+P\+: L\+P\+C18xx/43xx E\+E\+P\+R\+O\+M driver@{C\+H\+I\+P\+: L\+P\+C18xx/43xx E\+E\+P\+R\+O\+M driver}!E\+E\+P\+R\+O\+M\+\_\+\+A\+U\+T\+O\+P\+R\+O\+G\+\_\+\+A\+F\+T\+\_\+1\+W\+O\+R\+D\+W\+R\+I\+T\+T\+EN@{E\+E\+P\+R\+O\+M\+\_\+\+A\+U\+T\+O\+P\+R\+O\+G\+\_\+\+A\+F\+T\+\_\+1\+W\+O\+R\+D\+W\+R\+I\+T\+T\+EN}}
+\index{E\+E\+P\+R\+O\+M\+\_\+\+A\+U\+T\+O\+P\+R\+O\+G\+\_\+\+A\+F\+T\+\_\+1\+W\+O\+R\+D\+W\+R\+I\+T\+T\+EN@{E\+E\+P\+R\+O\+M\+\_\+\+A\+U\+T\+O\+P\+R\+O\+G\+\_\+\+A\+F\+T\+\_\+1\+W\+O\+R\+D\+W\+R\+I\+T\+T\+EN}!C\+H\+I\+P\+: L\+P\+C18xx/43xx E\+E\+P\+R\+O\+M driver@{C\+H\+I\+P\+: L\+P\+C18xx/43xx E\+E\+P\+R\+O\+M driver}}
+\subsubsection{\texorpdfstring{E\+E\+P\+R\+O\+M\+\_\+\+A\+U\+T\+O\+P\+R\+O\+G\+\_\+\+A\+F\+T\+\_\+1\+W\+O\+R\+D\+W\+R\+I\+T\+T\+EN}{EEPROM\_AUTOPROG\_AFT\_1WORDWRITTEN}}
+{\footnotesize\ttfamily \#define E\+E\+P\+R\+O\+M\+\_\+\+A\+U\+T\+O\+P\+R\+O\+G\+\_\+\+A\+F\+T\+\_\+1\+W\+O\+R\+D\+W\+R\+I\+T\+T\+EN~(1)}
+
+Erase/program cycle is triggered after 1 word is written 
+
+Definition at line 86 of file eeprom\+\_\+18xx\+\_\+43xx.\+h.
+
+\mbox{\Hypertarget{group___e_e_p_r_o_m__18_x_x__43_x_x_ga6c353fc9ef8b0be089c548ccd58c6388}\label{group___e_e_p_r_o_m__18_x_x__43_x_x_ga6c353fc9ef8b0be089c548ccd58c6388}} 
+\index{C\+H\+I\+P\+: L\+P\+C18xx/43xx E\+E\+P\+R\+O\+M driver@{C\+H\+I\+P\+: L\+P\+C18xx/43xx E\+E\+P\+R\+O\+M driver}!E\+E\+P\+R\+O\+M\+\_\+\+A\+U\+T\+O\+P\+R\+O\+G\+\_\+\+A\+F\+T\+\_\+\+L\+A\+S\+T\+W\+O\+R\+D\+W\+R\+I\+T\+T\+EN@{E\+E\+P\+R\+O\+M\+\_\+\+A\+U\+T\+O\+P\+R\+O\+G\+\_\+\+A\+F\+T\+\_\+\+L\+A\+S\+T\+W\+O\+R\+D\+W\+R\+I\+T\+T\+EN}}
+\index{E\+E\+P\+R\+O\+M\+\_\+\+A\+U\+T\+O\+P\+R\+O\+G\+\_\+\+A\+F\+T\+\_\+\+L\+A\+S\+T\+W\+O\+R\+D\+W\+R\+I\+T\+T\+EN@{E\+E\+P\+R\+O\+M\+\_\+\+A\+U\+T\+O\+P\+R\+O\+G\+\_\+\+A\+F\+T\+\_\+\+L\+A\+S\+T\+W\+O\+R\+D\+W\+R\+I\+T\+T\+EN}!C\+H\+I\+P\+: L\+P\+C18xx/43xx E\+E\+P\+R\+O\+M driver@{C\+H\+I\+P\+: L\+P\+C18xx/43xx E\+E\+P\+R\+O\+M driver}}
+\subsubsection{\texorpdfstring{E\+E\+P\+R\+O\+M\+\_\+\+A\+U\+T\+O\+P\+R\+O\+G\+\_\+\+A\+F\+T\+\_\+\+L\+A\+S\+T\+W\+O\+R\+D\+W\+R\+I\+T\+T\+EN}{EEPROM\_AUTOPROG\_AFT\_LASTWORDWRITTEN}}
+{\footnotesize\ttfamily \#define E\+E\+P\+R\+O\+M\+\_\+\+A\+U\+T\+O\+P\+R\+O\+G\+\_\+\+A\+F\+T\+\_\+\+L\+A\+S\+T\+W\+O\+R\+D\+W\+R\+I\+T\+T\+EN~(2)}
+
+Erase/program cycle is triggered after a write to A\+HB address ending with ......1111100 (last word of a page) 
+
+Definition at line 87 of file eeprom\+\_\+18xx\+\_\+43xx.\+h.
+
+\mbox{\Hypertarget{group___e_e_p_r_o_m__18_x_x__43_x_x_ga3b420badc39c2adf9780d44a74faa45a}\label{group___e_e_p_r_o_m__18_x_x__43_x_x_ga3b420badc39c2adf9780d44a74faa45a}} 
+\index{C\+H\+I\+P\+: L\+P\+C18xx/43xx E\+E\+P\+R\+O\+M driver@{C\+H\+I\+P\+: L\+P\+C18xx/43xx E\+E\+P\+R\+O\+M driver}!E\+E\+P\+R\+O\+M\+\_\+\+A\+U\+T\+O\+P\+R\+O\+G\+\_\+\+O\+FF@{E\+E\+P\+R\+O\+M\+\_\+\+A\+U\+T\+O\+P\+R\+O\+G\+\_\+\+O\+FF}}
+\index{E\+E\+P\+R\+O\+M\+\_\+\+A\+U\+T\+O\+P\+R\+O\+G\+\_\+\+O\+FF@{E\+E\+P\+R\+O\+M\+\_\+\+A\+U\+T\+O\+P\+R\+O\+G\+\_\+\+O\+FF}!C\+H\+I\+P\+: L\+P\+C18xx/43xx E\+E\+P\+R\+O\+M driver@{C\+H\+I\+P\+: L\+P\+C18xx/43xx E\+E\+P\+R\+O\+M driver}}
+\subsubsection{\texorpdfstring{E\+E\+P\+R\+O\+M\+\_\+\+A\+U\+T\+O\+P\+R\+O\+G\+\_\+\+O\+FF}{EEPROM\_AUTOPROG\_OFF}}
+{\footnotesize\ttfamily \#define E\+E\+P\+R\+O\+M\+\_\+\+A\+U\+T\+O\+P\+R\+O\+G\+\_\+\+O\+FF~(0)}
+
+Auto programming off 
+
+Definition at line 85 of file eeprom\+\_\+18xx\+\_\+43xx.\+h.
+
+\mbox{\Hypertarget{group___e_e_p_r_o_m__18_x_x__43_x_x_gad60e60fac4934de0ea5ad45fc6035fbc}\label{group___e_e_p_r_o_m__18_x_x__43_x_x_gad60e60fac4934de0ea5ad45fc6035fbc}} 
+\index{C\+H\+I\+P\+: L\+P\+C18xx/43xx E\+E\+P\+R\+O\+M driver@{C\+H\+I\+P\+: L\+P\+C18xx/43xx E\+E\+P\+R\+O\+M driver}!E\+E\+P\+R\+O\+M\+\_\+\+C\+L\+O\+C\+K\+\_\+\+D\+IV@{E\+E\+P\+R\+O\+M\+\_\+\+C\+L\+O\+C\+K\+\_\+\+D\+IV}}
+\index{E\+E\+P\+R\+O\+M\+\_\+\+C\+L\+O\+C\+K\+\_\+\+D\+IV@{E\+E\+P\+R\+O\+M\+\_\+\+C\+L\+O\+C\+K\+\_\+\+D\+IV}!C\+H\+I\+P\+: L\+P\+C18xx/43xx E\+E\+P\+R\+O\+M driver@{C\+H\+I\+P\+: L\+P\+C18xx/43xx E\+E\+P\+R\+O\+M driver}}
+\subsubsection{\texorpdfstring{E\+E\+P\+R\+O\+M\+\_\+\+C\+L\+O\+C\+K\+\_\+\+D\+IV}{EEPROM\_CLOCK\_DIV}}
+{\footnotesize\ttfamily \#define E\+E\+P\+R\+O\+M\+\_\+\+C\+L\+O\+C\+K\+\_\+\+D\+IV~1500000}
+
+
+
+Definition at line 53 of file eeprom\+\_\+18xx\+\_\+43xx.\+h.
+
+\mbox{\Hypertarget{group___e_e_p_r_o_m__18_x_x__43_x_x_ga6d6a26f6d387d9bc636c56c07994f0b6}\label{group___e_e_p_r_o_m__18_x_x__43_x_x_ga6d6a26f6d387d9bc636c56c07994f0b6}} 
+\index{C\+H\+I\+P\+: L\+P\+C18xx/43xx E\+E\+P\+R\+O\+M driver@{C\+H\+I\+P\+: L\+P\+C18xx/43xx E\+E\+P\+R\+O\+M driver}!E\+E\+P\+R\+O\+M\+\_\+\+C\+M\+D\+\_\+\+E\+R\+A\+S\+E\+\_\+\+P\+R\+G\+\_\+\+P\+A\+GE@{E\+E\+P\+R\+O\+M\+\_\+\+C\+M\+D\+\_\+\+E\+R\+A\+S\+E\+\_\+\+P\+R\+G\+\_\+\+P\+A\+GE}}
+\index{E\+E\+P\+R\+O\+M\+\_\+\+C\+M\+D\+\_\+\+E\+R\+A\+S\+E\+\_\+\+P\+R\+G\+\_\+\+P\+A\+GE@{E\+E\+P\+R\+O\+M\+\_\+\+C\+M\+D\+\_\+\+E\+R\+A\+S\+E\+\_\+\+P\+R\+G\+\_\+\+P\+A\+GE}!C\+H\+I\+P\+: L\+P\+C18xx/43xx E\+E\+P\+R\+O\+M driver@{C\+H\+I\+P\+: L\+P\+C18xx/43xx E\+E\+P\+R\+O\+M driver}}
+\subsubsection{\texorpdfstring{E\+E\+P\+R\+O\+M\+\_\+\+C\+M\+D\+\_\+\+E\+R\+A\+S\+E\+\_\+\+P\+R\+G\+\_\+\+P\+A\+GE}{EEPROM\_CMD\_ERASE\_PRG\_PAGE}}
+{\footnotesize\ttfamily \#define E\+E\+P\+R\+O\+M\+\_\+\+C\+M\+D\+\_\+\+E\+R\+A\+S\+E\+\_\+\+P\+R\+G\+\_\+\+P\+A\+GE~(6)}
+
+E\+E\+P\+R\+OM erase/program command 
+
+Definition at line 80 of file eeprom\+\_\+18xx\+\_\+43xx.\+h.
+
+\mbox{\Hypertarget{group___e_e_p_r_o_m__18_x_x__43_x_x_ga6cbd8a7a267a151c2d6d324d2bac4eea}\label{group___e_e_p_r_o_m__18_x_x__43_x_x_ga6cbd8a7a267a151c2d6d324d2bac4eea}} 
+\index{C\+H\+I\+P\+: L\+P\+C18xx/43xx E\+E\+P\+R\+O\+M driver@{C\+H\+I\+P\+: L\+P\+C18xx/43xx E\+E\+P\+R\+O\+M driver}!E\+E\+P\+R\+O\+M\+\_\+\+I\+N\+T\+\_\+\+E\+N\+D\+O\+F\+P\+R\+OG@{E\+E\+P\+R\+O\+M\+\_\+\+I\+N\+T\+\_\+\+E\+N\+D\+O\+F\+P\+R\+OG}}
+\index{E\+E\+P\+R\+O\+M\+\_\+\+I\+N\+T\+\_\+\+E\+N\+D\+O\+F\+P\+R\+OG@{E\+E\+P\+R\+O\+M\+\_\+\+I\+N\+T\+\_\+\+E\+N\+D\+O\+F\+P\+R\+OG}!C\+H\+I\+P\+: L\+P\+C18xx/43xx E\+E\+P\+R\+O\+M driver@{C\+H\+I\+P\+: L\+P\+C18xx/43xx E\+E\+P\+R\+O\+M driver}}
+\subsubsection{\texorpdfstring{E\+E\+P\+R\+O\+M\+\_\+\+I\+N\+T\+\_\+\+E\+N\+D\+O\+F\+P\+R\+OG}{EEPROM\_INT\_ENDOFPROG}}
+{\footnotesize\ttfamily \#define E\+E\+P\+R\+O\+M\+\_\+\+I\+N\+T\+\_\+\+E\+N\+D\+O\+F\+P\+R\+OG~(1 $<$$<$ 2)}
+
+
+
+Definition at line 99 of file eeprom\+\_\+18xx\+\_\+43xx.\+h.
+
+\mbox{\Hypertarget{group___e_e_p_r_o_m__18_x_x__43_x_x_gafb110eded8c7e52bf0826c2bedfd90cd}\label{group___e_e_p_r_o_m__18_x_x__43_x_x_gafb110eded8c7e52bf0826c2bedfd90cd}} 
+\index{C\+H\+I\+P\+: L\+P\+C18xx/43xx E\+E\+P\+R\+O\+M driver@{C\+H\+I\+P\+: L\+P\+C18xx/43xx E\+E\+P\+R\+O\+M driver}!E\+E\+P\+R\+O\+M\+\_\+\+P\+A\+G\+E\+\_\+\+N\+UM@{E\+E\+P\+R\+O\+M\+\_\+\+P\+A\+G\+E\+\_\+\+N\+UM}}
+\index{E\+E\+P\+R\+O\+M\+\_\+\+P\+A\+G\+E\+\_\+\+N\+UM@{E\+E\+P\+R\+O\+M\+\_\+\+P\+A\+G\+E\+\_\+\+N\+UM}!C\+H\+I\+P\+: L\+P\+C18xx/43xx E\+E\+P\+R\+O\+M driver@{C\+H\+I\+P\+: L\+P\+C18xx/43xx E\+E\+P\+R\+O\+M driver}}
+\subsubsection{\texorpdfstring{E\+E\+P\+R\+O\+M\+\_\+\+P\+A\+G\+E\+\_\+\+N\+UM}{EEPROM\_PAGE\_NUM}}
+{\footnotesize\ttfamily \#define E\+E\+P\+R\+O\+M\+\_\+\+P\+A\+G\+E\+\_\+\+N\+UM~(128)}
+
+The number of E\+E\+P\+R\+OM pages. The last page is not writable. 
+
+Definition at line 50 of file eeprom\+\_\+18xx\+\_\+43xx.\+h.
+
+\mbox{\Hypertarget{group___e_e_p_r_o_m__18_x_x__43_x_x_gaddfda15f5f3ec6f8f325f48be50c548a}\label{group___e_e_p_r_o_m__18_x_x__43_x_x_gaddfda15f5f3ec6f8f325f48be50c548a}} 
+\index{C\+H\+I\+P\+: L\+P\+C18xx/43xx E\+E\+P\+R\+O\+M driver@{C\+H\+I\+P\+: L\+P\+C18xx/43xx E\+E\+P\+R\+O\+M driver}!E\+E\+P\+R\+O\+M\+\_\+\+P\+A\+G\+E\+\_\+\+S\+I\+ZE@{E\+E\+P\+R\+O\+M\+\_\+\+P\+A\+G\+E\+\_\+\+S\+I\+ZE}}
+\index{E\+E\+P\+R\+O\+M\+\_\+\+P\+A\+G\+E\+\_\+\+S\+I\+ZE@{E\+E\+P\+R\+O\+M\+\_\+\+P\+A\+G\+E\+\_\+\+S\+I\+ZE}!C\+H\+I\+P\+: L\+P\+C18xx/43xx E\+E\+P\+R\+O\+M driver@{C\+H\+I\+P\+: L\+P\+C18xx/43xx E\+E\+P\+R\+O\+M driver}}
+\subsubsection{\texorpdfstring{E\+E\+P\+R\+O\+M\+\_\+\+P\+A\+G\+E\+\_\+\+S\+I\+ZE}{EEPROM\_PAGE\_SIZE}}
+{\footnotesize\ttfamily \#define E\+E\+P\+R\+O\+M\+\_\+\+P\+A\+G\+E\+\_\+\+S\+I\+ZE~(128)}
+
+E\+E\+P\+R\+OM byes per page 
+
+Definition at line 48 of file eeprom\+\_\+18xx\+\_\+43xx.\+h.
+
+\mbox{\Hypertarget{group___e_e_p_r_o_m__18_x_x__43_x_x_ga71f23d0464d767653aad1e73d30a14dc}\label{group___e_e_p_r_o_m__18_x_x__43_x_x_ga71f23d0464d767653aad1e73d30a14dc}} 
+\index{C\+H\+I\+P\+: L\+P\+C18xx/43xx E\+E\+P\+R\+O\+M driver@{C\+H\+I\+P\+: L\+P\+C18xx/43xx E\+E\+P\+R\+O\+M driver}!E\+E\+P\+R\+O\+M\+\_\+\+P\+W\+R\+D\+WN@{E\+E\+P\+R\+O\+M\+\_\+\+P\+W\+R\+D\+WN}}
+\index{E\+E\+P\+R\+O\+M\+\_\+\+P\+W\+R\+D\+WN@{E\+E\+P\+R\+O\+M\+\_\+\+P\+W\+R\+D\+WN}!C\+H\+I\+P\+: L\+P\+C18xx/43xx E\+E\+P\+R\+O\+M driver@{C\+H\+I\+P\+: L\+P\+C18xx/43xx E\+E\+P\+R\+O\+M driver}}
+\subsubsection{\texorpdfstring{E\+E\+P\+R\+O\+M\+\_\+\+P\+W\+R\+D\+WN}{EEPROM\_PWRDWN}}
+{\footnotesize\ttfamily \#define E\+E\+P\+R\+O\+M\+\_\+\+P\+W\+R\+D\+WN~(1 $<$$<$ 0)}
+
+
+
+Definition at line 94 of file eeprom\+\_\+18xx\+\_\+43xx.\+h.
+
+\mbox{\Hypertarget{group___e_e_p_r_o_m__18_x_x__43_x_x_gae7c4f0b2db03d7cd7a036158e88346b8}\label{group___e_e_p_r_o_m__18_x_x__43_x_x_gae7c4f0b2db03d7cd7a036158e88346b8}} 
+\index{C\+H\+I\+P\+: L\+P\+C18xx/43xx E\+E\+P\+R\+O\+M driver@{C\+H\+I\+P\+: L\+P\+C18xx/43xx E\+E\+P\+R\+O\+M driver}!E\+E\+P\+R\+O\+M\+\_\+\+R\+E\+A\+D\+\_\+\+W\+A\+I\+T\+\_\+\+S\+T\+A\+T\+E\+\_\+\+V\+AL@{E\+E\+P\+R\+O\+M\+\_\+\+R\+E\+A\+D\+\_\+\+W\+A\+I\+T\+\_\+\+S\+T\+A\+T\+E\+\_\+\+V\+AL}}
+\index{E\+E\+P\+R\+O\+M\+\_\+\+R\+E\+A\+D\+\_\+\+W\+A\+I\+T\+\_\+\+S\+T\+A\+T\+E\+\_\+\+V\+AL@{E\+E\+P\+R\+O\+M\+\_\+\+R\+E\+A\+D\+\_\+\+W\+A\+I\+T\+\_\+\+S\+T\+A\+T\+E\+\_\+\+V\+AL}!C\+H\+I\+P\+: L\+P\+C18xx/43xx E\+E\+P\+R\+O\+M driver@{C\+H\+I\+P\+: L\+P\+C18xx/43xx E\+E\+P\+R\+O\+M driver}}
+\subsubsection{\texorpdfstring{E\+E\+P\+R\+O\+M\+\_\+\+R\+E\+A\+D\+\_\+\+W\+A\+I\+T\+\_\+\+S\+T\+A\+T\+E\+\_\+\+V\+AL}{EEPROM\_READ\_WAIT\_STATE\_VAL}}
+{\footnotesize\ttfamily \#define E\+E\+P\+R\+O\+M\+\_\+\+R\+E\+A\+D\+\_\+\+W\+A\+I\+T\+\_\+\+S\+T\+A\+T\+E\+\_\+\+V\+AL~0x58}
+
+
+
+Definition at line 54 of file eeprom\+\_\+18xx\+\_\+43xx.\+h.
+
+\mbox{\Hypertarget{group___e_e_p_r_o_m__18_x_x__43_x_x_ga19220ff77b3f420a71eddcfcb2534a52}\label{group___e_e_p_r_o_m__18_x_x__43_x_x_ga19220ff77b3f420a71eddcfcb2534a52}} 
+\index{C\+H\+I\+P\+: L\+P\+C18xx/43xx E\+E\+P\+R\+O\+M driver@{C\+H\+I\+P\+: L\+P\+C18xx/43xx E\+E\+P\+R\+O\+M driver}!E\+E\+P\+R\+O\+M\+\_\+\+S\+T\+A\+RT@{E\+E\+P\+R\+O\+M\+\_\+\+S\+T\+A\+RT}}
+\index{E\+E\+P\+R\+O\+M\+\_\+\+S\+T\+A\+RT@{E\+E\+P\+R\+O\+M\+\_\+\+S\+T\+A\+RT}!C\+H\+I\+P\+: L\+P\+C18xx/43xx E\+E\+P\+R\+O\+M driver@{C\+H\+I\+P\+: L\+P\+C18xx/43xx E\+E\+P\+R\+O\+M driver}}
+\subsubsection{\texorpdfstring{E\+E\+P\+R\+O\+M\+\_\+\+S\+T\+A\+RT}{EEPROM\_START}}
+{\footnotesize\ttfamily \#define E\+E\+P\+R\+O\+M\+\_\+\+S\+T\+A\+RT~(0x20040000)}
+
+E\+E\+P\+R\+OM start address 
+
+Definition at line 46 of file eeprom\+\_\+18xx\+\_\+43xx.\+h.
+
+\mbox{\Hypertarget{group___e_e_p_r_o_m__18_x_x__43_x_x_ga33a1933987e17e85216abe94ff29e4d3}\label{group___e_e_p_r_o_m__18_x_x__43_x_x_ga33a1933987e17e85216abe94ff29e4d3}} 
+\index{C\+H\+I\+P\+: L\+P\+C18xx/43xx E\+E\+P\+R\+O\+M driver@{C\+H\+I\+P\+: L\+P\+C18xx/43xx E\+E\+P\+R\+O\+M driver}!E\+E\+P\+R\+O\+M\+\_\+\+W\+A\+I\+T\+\_\+\+S\+T\+A\+T\+E\+\_\+\+V\+AL@{E\+E\+P\+R\+O\+M\+\_\+\+W\+A\+I\+T\+\_\+\+S\+T\+A\+T\+E\+\_\+\+V\+AL}}
+\index{E\+E\+P\+R\+O\+M\+\_\+\+W\+A\+I\+T\+\_\+\+S\+T\+A\+T\+E\+\_\+\+V\+AL@{E\+E\+P\+R\+O\+M\+\_\+\+W\+A\+I\+T\+\_\+\+S\+T\+A\+T\+E\+\_\+\+V\+AL}!C\+H\+I\+P\+: L\+P\+C18xx/43xx E\+E\+P\+R\+O\+M driver@{C\+H\+I\+P\+: L\+P\+C18xx/43xx E\+E\+P\+R\+O\+M driver}}
+\subsubsection{\texorpdfstring{E\+E\+P\+R\+O\+M\+\_\+\+W\+A\+I\+T\+\_\+\+S\+T\+A\+T\+E\+\_\+\+V\+AL}{EEPROM\_WAIT\_STATE\_VAL}}
+{\footnotesize\ttfamily \#define E\+E\+P\+R\+O\+M\+\_\+\+W\+A\+I\+T\+\_\+\+S\+T\+A\+T\+E\+\_\+\+V\+AL~0x232}
+
+
+
+Definition at line 55 of file eeprom\+\_\+18xx\+\_\+43xx.\+h.
+
+
+
+\subsection{Function Documentation}
+\mbox{\Hypertarget{group___e_e_p_r_o_m__18_x_x__43_x_x_gae551204eb5e0c647ea853bc3a19aa33c}\label{group___e_e_p_r_o_m__18_x_x__43_x_x_gae551204eb5e0c647ea853bc3a19aa33c}} 
+\index{C\+H\+I\+P\+: L\+P\+C18xx/43xx E\+E\+P\+R\+O\+M driver@{C\+H\+I\+P\+: L\+P\+C18xx/43xx E\+E\+P\+R\+O\+M driver}!Chip\+\_\+\+E\+E\+P\+R\+O\+M\+\_\+\+Clear\+Int\+Status@{Chip\+\_\+\+E\+E\+P\+R\+O\+M\+\_\+\+Clear\+Int\+Status}}
+\index{Chip\+\_\+\+E\+E\+P\+R\+O\+M\+\_\+\+Clear\+Int\+Status@{Chip\+\_\+\+E\+E\+P\+R\+O\+M\+\_\+\+Clear\+Int\+Status}!C\+H\+I\+P\+: L\+P\+C18xx/43xx E\+E\+P\+R\+O\+M driver@{C\+H\+I\+P\+: L\+P\+C18xx/43xx E\+E\+P\+R\+O\+M driver}}
+\subsubsection{\texorpdfstring{Chip\+\_\+\+E\+E\+P\+R\+O\+M\+\_\+\+Clear\+Int\+Status()}{Chip\_EEPROM\_ClearIntStatus()}}
+{\footnotesize\ttfamily \hyperlink{group___l_p_c___types___public___macros_ga10b2d890d871e1489bb02b7e70d9bdfb}{S\+T\+A\+T\+IC} \hyperlink{spifi__18xx__43xx_8h_a2eb6f9e0395b47b8d5e3eeae4fe0c116}{I\+N\+L\+I\+NE} void Chip\+\_\+\+E\+E\+P\+R\+O\+M\+\_\+\+Clear\+Int\+Status (\begin{DoxyParamCaption}\item[{\hyperlink{struct_l_p_c___e_e_p_r_o_m___t}{L\+P\+C\+\_\+\+E\+E\+P\+R\+O\+M\+\_\+T} $\ast$}]{p\+E\+E\+P\+R\+OM,  }\item[{uint32\+\_\+t}]{mask }\end{DoxyParamCaption})}
+
+
+
+Clear E\+E\+P\+R\+OM interrupt status. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em p\+E\+E\+P\+R\+OM} & \+: Pointer to E\+E\+P\+R\+OM peripheral block structure \\
+\hline
+{\em mask} & \+: Interrupt mask (or-\/ed bits value of E\+E\+P\+R\+O\+M\+\_\+\+I\+N\+T\+\_\+$\ast$) \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Nothing 
+\end{DoxyReturn}
+
+
+Definition at line 263 of file eeprom\+\_\+18xx\+\_\+43xx.\+h.
+
+\mbox{\Hypertarget{group___e_e_p_r_o_m__18_x_x__43_x_x_ga8b179a01d2c806ab4797712c3fc47098}\label{group___e_e_p_r_o_m__18_x_x__43_x_x_ga8b179a01d2c806ab4797712c3fc47098}} 
+\index{C\+H\+I\+P\+: L\+P\+C18xx/43xx E\+E\+P\+R\+O\+M driver@{C\+H\+I\+P\+: L\+P\+C18xx/43xx E\+E\+P\+R\+O\+M driver}!Chip\+\_\+\+E\+E\+P\+R\+O\+M\+\_\+\+De\+Init@{Chip\+\_\+\+E\+E\+P\+R\+O\+M\+\_\+\+De\+Init}}
+\index{Chip\+\_\+\+E\+E\+P\+R\+O\+M\+\_\+\+De\+Init@{Chip\+\_\+\+E\+E\+P\+R\+O\+M\+\_\+\+De\+Init}!C\+H\+I\+P\+: L\+P\+C18xx/43xx E\+E\+P\+R\+O\+M driver@{C\+H\+I\+P\+: L\+P\+C18xx/43xx E\+E\+P\+R\+O\+M driver}}
+\subsubsection{\texorpdfstring{Chip\+\_\+\+E\+E\+P\+R\+O\+M\+\_\+\+De\+Init()}{Chip\_EEPROM\_DeInit()}}
+{\footnotesize\ttfamily \hyperlink{group___l_p_c___types___public___macros_ga10b2d890d871e1489bb02b7e70d9bdfb}{S\+T\+A\+T\+IC} \hyperlink{spifi__18xx__43xx_8h_a2eb6f9e0395b47b8d5e3eeae4fe0c116}{I\+N\+L\+I\+NE} void Chip\+\_\+\+E\+E\+P\+R\+O\+M\+\_\+\+De\+Init (\begin{DoxyParamCaption}\item[{\hyperlink{struct_l_p_c___e_e_p_r_o_m___t}{L\+P\+C\+\_\+\+E\+E\+P\+R\+O\+M\+\_\+T} $\ast$}]{p\+E\+E\+P\+R\+OM }\end{DoxyParamCaption})}
+
+
+
+De-\/initializes E\+E\+P\+R\+OM. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em p\+E\+E\+P\+R\+OM} & \+: Pointer to E\+E\+P\+R\+OM peripheral block structure \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Nothing 
+\end{DoxyReturn}
+
+
+Definition at line 133 of file eeprom\+\_\+18xx\+\_\+43xx.\+h.
+
+\mbox{\Hypertarget{group___e_e_p_r_o_m__18_x_x__43_x_x_gac506ec65d1c63a4f2f8bfc7175bea68c}\label{group___e_e_p_r_o_m__18_x_x__43_x_x_gac506ec65d1c63a4f2f8bfc7175bea68c}} 
+\index{C\+H\+I\+P\+: L\+P\+C18xx/43xx E\+E\+P\+R\+O\+M driver@{C\+H\+I\+P\+: L\+P\+C18xx/43xx E\+E\+P\+R\+O\+M driver}!Chip\+\_\+\+E\+E\+P\+R\+O\+M\+\_\+\+Disable\+Int@{Chip\+\_\+\+E\+E\+P\+R\+O\+M\+\_\+\+Disable\+Int}}
+\index{Chip\+\_\+\+E\+E\+P\+R\+O\+M\+\_\+\+Disable\+Int@{Chip\+\_\+\+E\+E\+P\+R\+O\+M\+\_\+\+Disable\+Int}!C\+H\+I\+P\+: L\+P\+C18xx/43xx E\+E\+P\+R\+O\+M driver@{C\+H\+I\+P\+: L\+P\+C18xx/43xx E\+E\+P\+R\+O\+M driver}}
+\subsubsection{\texorpdfstring{Chip\+\_\+\+E\+E\+P\+R\+O\+M\+\_\+\+Disable\+Int()}{Chip\_EEPROM\_DisableInt()}}
+{\footnotesize\ttfamily \hyperlink{group___l_p_c___types___public___macros_ga10b2d890d871e1489bb02b7e70d9bdfb}{S\+T\+A\+T\+IC} \hyperlink{spifi__18xx__43xx_8h_a2eb6f9e0395b47b8d5e3eeae4fe0c116}{I\+N\+L\+I\+NE} void Chip\+\_\+\+E\+E\+P\+R\+O\+M\+\_\+\+Disable\+Int (\begin{DoxyParamCaption}\item[{\hyperlink{struct_l_p_c___e_e_p_r_o_m___t}{L\+P\+C\+\_\+\+E\+E\+P\+R\+O\+M\+\_\+T} $\ast$}]{p\+E\+E\+P\+R\+OM,  }\item[{uint32\+\_\+t}]{mask }\end{DoxyParamCaption})}
+
+
+
+Disable E\+E\+P\+R\+OM interrupt. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em p\+E\+E\+P\+R\+OM} & \+: Pointer to E\+E\+P\+R\+OM peripheral block structure \\
+\hline
+{\em mask} & \+: Interrupt mask (or-\/ed bits value of E\+E\+P\+R\+O\+M\+\_\+\+I\+N\+T\+\_\+$\ast$) \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Nothing 
+\end{DoxyReturn}
+
+
+Definition at line 221 of file eeprom\+\_\+18xx\+\_\+43xx.\+h.
+
+\mbox{\Hypertarget{group___e_e_p_r_o_m__18_x_x__43_x_x_ga6cf4052474abe94b3c47ce09b67bb03f}\label{group___e_e_p_r_o_m__18_x_x__43_x_x_ga6cf4052474abe94b3c47ce09b67bb03f}} 
+\index{C\+H\+I\+P\+: L\+P\+C18xx/43xx E\+E\+P\+R\+O\+M driver@{C\+H\+I\+P\+: L\+P\+C18xx/43xx E\+E\+P\+R\+O\+M driver}!Chip\+\_\+\+E\+E\+P\+R\+O\+M\+\_\+\+Disable\+Power\+Down@{Chip\+\_\+\+E\+E\+P\+R\+O\+M\+\_\+\+Disable\+Power\+Down}}
+\index{Chip\+\_\+\+E\+E\+P\+R\+O\+M\+\_\+\+Disable\+Power\+Down@{Chip\+\_\+\+E\+E\+P\+R\+O\+M\+\_\+\+Disable\+Power\+Down}!C\+H\+I\+P\+: L\+P\+C18xx/43xx E\+E\+P\+R\+O\+M driver@{C\+H\+I\+P\+: L\+P\+C18xx/43xx E\+E\+P\+R\+O\+M driver}}
+\subsubsection{\texorpdfstring{Chip\+\_\+\+E\+E\+P\+R\+O\+M\+\_\+\+Disable\+Power\+Down()}{Chip\_EEPROM\_DisablePowerDown()}}
+{\footnotesize\ttfamily \hyperlink{group___l_p_c___types___public___macros_ga10b2d890d871e1489bb02b7e70d9bdfb}{S\+T\+A\+T\+IC} \hyperlink{spifi__18xx__43xx_8h_a2eb6f9e0395b47b8d5e3eeae4fe0c116}{I\+N\+L\+I\+NE} void Chip\+\_\+\+E\+E\+P\+R\+O\+M\+\_\+\+Disable\+Power\+Down (\begin{DoxyParamCaption}\item[{\hyperlink{struct_l_p_c___e_e_p_r_o_m___t}{L\+P\+C\+\_\+\+E\+E\+P\+R\+O\+M\+\_\+T} $\ast$}]{p\+E\+E\+P\+R\+OM }\end{DoxyParamCaption})}
+
+
+
+Bring E\+E\+P\+R\+OM device out of power down mode. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em p\+E\+E\+P\+R\+OM} & \+: Pointer to E\+E\+P\+R\+OM peripheral block structure \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Nothing 
+\end{DoxyReturn}
+
+
+Definition at line 116 of file eeprom\+\_\+18xx\+\_\+43xx.\+h.
+
+\mbox{\Hypertarget{group___e_e_p_r_o_m__18_x_x__43_x_x_gad2c0da142f469adc4467b4d230b5532b}\label{group___e_e_p_r_o_m__18_x_x__43_x_x_gad2c0da142f469adc4467b4d230b5532b}} 
+\index{C\+H\+I\+P\+: L\+P\+C18xx/43xx E\+E\+P\+R\+O\+M driver@{C\+H\+I\+P\+: L\+P\+C18xx/43xx E\+E\+P\+R\+O\+M driver}!Chip\+\_\+\+E\+E\+P\+R\+O\+M\+\_\+\+Enable\+Int@{Chip\+\_\+\+E\+E\+P\+R\+O\+M\+\_\+\+Enable\+Int}}
+\index{Chip\+\_\+\+E\+E\+P\+R\+O\+M\+\_\+\+Enable\+Int@{Chip\+\_\+\+E\+E\+P\+R\+O\+M\+\_\+\+Enable\+Int}!C\+H\+I\+P\+: L\+P\+C18xx/43xx E\+E\+P\+R\+O\+M driver@{C\+H\+I\+P\+: L\+P\+C18xx/43xx E\+E\+P\+R\+O\+M driver}}
+\subsubsection{\texorpdfstring{Chip\+\_\+\+E\+E\+P\+R\+O\+M\+\_\+\+Enable\+Int()}{Chip\_EEPROM\_EnableInt()}}
+{\footnotesize\ttfamily \hyperlink{group___l_p_c___types___public___macros_ga10b2d890d871e1489bb02b7e70d9bdfb}{S\+T\+A\+T\+IC} \hyperlink{spifi__18xx__43xx_8h_a2eb6f9e0395b47b8d5e3eeae4fe0c116}{I\+N\+L\+I\+NE} void Chip\+\_\+\+E\+E\+P\+R\+O\+M\+\_\+\+Enable\+Int (\begin{DoxyParamCaption}\item[{\hyperlink{struct_l_p_c___e_e_p_r_o_m___t}{L\+P\+C\+\_\+\+E\+E\+P\+R\+O\+M\+\_\+T} $\ast$}]{p\+E\+E\+P\+R\+OM,  }\item[{uint32\+\_\+t}]{mask }\end{DoxyParamCaption})}
+
+
+
+Enable E\+E\+P\+R\+OM interrupt. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em p\+E\+E\+P\+R\+OM} & \+: Pointer to E\+E\+P\+R\+OM peripheral block structure \\
+\hline
+{\em mask} & \+: Interrupt mask (or-\/ed bits value of E\+E\+P\+R\+O\+M\+\_\+\+I\+N\+T\+\_\+$\ast$) \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Nothing 
+\end{DoxyReturn}
+
+
+Definition at line 210 of file eeprom\+\_\+18xx\+\_\+43xx.\+h.
+
+\mbox{\Hypertarget{group___e_e_p_r_o_m__18_x_x__43_x_x_gacce700347262d143041848308f8f3f6f}\label{group___e_e_p_r_o_m__18_x_x__43_x_x_gacce700347262d143041848308f8f3f6f}} 
+\index{C\+H\+I\+P\+: L\+P\+C18xx/43xx E\+E\+P\+R\+O\+M driver@{C\+H\+I\+P\+: L\+P\+C18xx/43xx E\+E\+P\+R\+O\+M driver}!Chip\+\_\+\+E\+E\+P\+R\+O\+M\+\_\+\+Enable\+Power\+Down@{Chip\+\_\+\+E\+E\+P\+R\+O\+M\+\_\+\+Enable\+Power\+Down}}
+\index{Chip\+\_\+\+E\+E\+P\+R\+O\+M\+\_\+\+Enable\+Power\+Down@{Chip\+\_\+\+E\+E\+P\+R\+O\+M\+\_\+\+Enable\+Power\+Down}!C\+H\+I\+P\+: L\+P\+C18xx/43xx E\+E\+P\+R\+O\+M driver@{C\+H\+I\+P\+: L\+P\+C18xx/43xx E\+E\+P\+R\+O\+M driver}}
+\subsubsection{\texorpdfstring{Chip\+\_\+\+E\+E\+P\+R\+O\+M\+\_\+\+Enable\+Power\+Down()}{Chip\_EEPROM\_EnablePowerDown()}}
+{\footnotesize\ttfamily \hyperlink{group___l_p_c___types___public___macros_ga10b2d890d871e1489bb02b7e70d9bdfb}{S\+T\+A\+T\+IC} \hyperlink{spifi__18xx__43xx_8h_a2eb6f9e0395b47b8d5e3eeae4fe0c116}{I\+N\+L\+I\+NE} void Chip\+\_\+\+E\+E\+P\+R\+O\+M\+\_\+\+Enable\+Power\+Down (\begin{DoxyParamCaption}\item[{\hyperlink{struct_l_p_c___e_e_p_r_o_m___t}{L\+P\+C\+\_\+\+E\+E\+P\+R\+O\+M\+\_\+T} $\ast$}]{p\+E\+E\+P\+R\+OM }\end{DoxyParamCaption})}
+
+
+
+Put E\+E\+P\+R\+OM device in power down mode. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em p\+E\+E\+P\+R\+OM} & \+: Pointer to E\+E\+P\+R\+OM peripheral block structure \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Nothing 
+\end{DoxyReturn}
+
+
+Definition at line 106 of file eeprom\+\_\+18xx\+\_\+43xx.\+h.
+
+\mbox{\Hypertarget{group___e_e_p_r_o_m__18_x_x__43_x_x_ga9bd675e4d0579705d04c2948cc22cfe0}\label{group___e_e_p_r_o_m__18_x_x__43_x_x_ga9bd675e4d0579705d04c2948cc22cfe0}} 
+\index{C\+H\+I\+P\+: L\+P\+C18xx/43xx E\+E\+P\+R\+O\+M driver@{C\+H\+I\+P\+: L\+P\+C18xx/43xx E\+E\+P\+R\+O\+M driver}!Chip\+\_\+\+E\+E\+P\+R\+O\+M\+\_\+\+Erase\+Program\+Page@{Chip\+\_\+\+E\+E\+P\+R\+O\+M\+\_\+\+Erase\+Program\+Page}}
+\index{Chip\+\_\+\+E\+E\+P\+R\+O\+M\+\_\+\+Erase\+Program\+Page@{Chip\+\_\+\+E\+E\+P\+R\+O\+M\+\_\+\+Erase\+Program\+Page}!C\+H\+I\+P\+: L\+P\+C18xx/43xx E\+E\+P\+R\+O\+M driver@{C\+H\+I\+P\+: L\+P\+C18xx/43xx E\+E\+P\+R\+O\+M driver}}
+\subsubsection{\texorpdfstring{Chip\+\_\+\+E\+E\+P\+R\+O\+M\+\_\+\+Erase\+Program\+Page()}{Chip\_EEPROM\_EraseProgramPage()}}
+{\footnotesize\ttfamily void Chip\+\_\+\+E\+E\+P\+R\+O\+M\+\_\+\+Erase\+Program\+Page (\begin{DoxyParamCaption}\item[{\hyperlink{struct_l_p_c___e_e_p_r_o_m___t}{L\+P\+C\+\_\+\+E\+E\+P\+R\+O\+M\+\_\+T} $\ast$}]{p\+E\+E\+P\+R\+OM }\end{DoxyParamCaption})}
+
+
+
+Erase/\+Program an E\+E\+P\+R\+OM page. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em p\+E\+E\+P\+R\+OM} & \+: Pointer to E\+E\+P\+R\+OM peripheral block structure \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Nothing 
+\end{DoxyReturn}
+
+
+Definition at line 81 of file eeprom\+\_\+18xx\+\_\+43xx.\+c.
+
+\mbox{\Hypertarget{group___e_e_p_r_o_m__18_x_x__43_x_x_gabc5dffbf26c343bfccd25bface186de0}\label{group___e_e_p_r_o_m__18_x_x__43_x_x_gabc5dffbf26c343bfccd25bface186de0}} 
+\index{C\+H\+I\+P\+: L\+P\+C18xx/43xx E\+E\+P\+R\+O\+M driver@{C\+H\+I\+P\+: L\+P\+C18xx/43xx E\+E\+P\+R\+O\+M driver}!Chip\+\_\+\+E\+E\+P\+R\+O\+M\+\_\+\+Get\+Int\+Enable@{Chip\+\_\+\+E\+E\+P\+R\+O\+M\+\_\+\+Get\+Int\+Enable}}
+\index{Chip\+\_\+\+E\+E\+P\+R\+O\+M\+\_\+\+Get\+Int\+Enable@{Chip\+\_\+\+E\+E\+P\+R\+O\+M\+\_\+\+Get\+Int\+Enable}!C\+H\+I\+P\+: L\+P\+C18xx/43xx E\+E\+P\+R\+O\+M driver@{C\+H\+I\+P\+: L\+P\+C18xx/43xx E\+E\+P\+R\+O\+M driver}}
+\subsubsection{\texorpdfstring{Chip\+\_\+\+E\+E\+P\+R\+O\+M\+\_\+\+Get\+Int\+Enable()}{Chip\_EEPROM\_GetIntEnable()}}
+{\footnotesize\ttfamily \hyperlink{group___l_p_c___types___public___macros_ga10b2d890d871e1489bb02b7e70d9bdfb}{S\+T\+A\+T\+IC} \hyperlink{spifi__18xx__43xx_8h_a2eb6f9e0395b47b8d5e3eeae4fe0c116}{I\+N\+L\+I\+NE} uint32\+\_\+t Chip\+\_\+\+E\+E\+P\+R\+O\+M\+\_\+\+Get\+Int\+Enable (\begin{DoxyParamCaption}\item[{\hyperlink{struct_l_p_c___e_e_p_r_o_m___t}{L\+P\+C\+\_\+\+E\+E\+P\+R\+O\+M\+\_\+T} $\ast$}]{p\+E\+E\+P\+R\+OM }\end{DoxyParamCaption})}
+
+
+
+Get the value of the E\+E\+P\+R\+OM interrupt enable register. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em p\+E\+E\+P\+R\+OM} & \+: Pointer to E\+E\+P\+R\+OM peripheral block structure \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+O\+R-\/ed bits value of E\+E\+P\+R\+O\+M\+\_\+\+I\+N\+T\+\_\+$\ast$ 
+\end{DoxyReturn}
+
+
+Definition at line 231 of file eeprom\+\_\+18xx\+\_\+43xx.\+h.
+
+\mbox{\Hypertarget{group___e_e_p_r_o_m__18_x_x__43_x_x_ga19e670ed83dcab5cc21237a3150ff082}\label{group___e_e_p_r_o_m__18_x_x__43_x_x_ga19e670ed83dcab5cc21237a3150ff082}} 
+\index{C\+H\+I\+P\+: L\+P\+C18xx/43xx E\+E\+P\+R\+O\+M driver@{C\+H\+I\+P\+: L\+P\+C18xx/43xx E\+E\+P\+R\+O\+M driver}!Chip\+\_\+\+E\+E\+P\+R\+O\+M\+\_\+\+Get\+Int\+Status@{Chip\+\_\+\+E\+E\+P\+R\+O\+M\+\_\+\+Get\+Int\+Status}}
+\index{Chip\+\_\+\+E\+E\+P\+R\+O\+M\+\_\+\+Get\+Int\+Status@{Chip\+\_\+\+E\+E\+P\+R\+O\+M\+\_\+\+Get\+Int\+Status}!C\+H\+I\+P\+: L\+P\+C18xx/43xx E\+E\+P\+R\+O\+M driver@{C\+H\+I\+P\+: L\+P\+C18xx/43xx E\+E\+P\+R\+O\+M driver}}
+\subsubsection{\texorpdfstring{Chip\+\_\+\+E\+E\+P\+R\+O\+M\+\_\+\+Get\+Int\+Status()}{Chip\_EEPROM\_GetIntStatus()}}
+{\footnotesize\ttfamily \hyperlink{group___l_p_c___types___public___macros_ga10b2d890d871e1489bb02b7e70d9bdfb}{S\+T\+A\+T\+IC} \hyperlink{spifi__18xx__43xx_8h_a2eb6f9e0395b47b8d5e3eeae4fe0c116}{I\+N\+L\+I\+NE} uint32\+\_\+t Chip\+\_\+\+E\+E\+P\+R\+O\+M\+\_\+\+Get\+Int\+Status (\begin{DoxyParamCaption}\item[{\hyperlink{struct_l_p_c___e_e_p_r_o_m___t}{L\+P\+C\+\_\+\+E\+E\+P\+R\+O\+M\+\_\+T} $\ast$}]{p\+E\+E\+P\+R\+OM }\end{DoxyParamCaption})}
+
+
+
+Get E\+E\+P\+R\+OM interrupt status. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em p\+E\+E\+P\+R\+OM} & \+: Pointer to E\+E\+P\+R\+OM peripheral block structure \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+O\+R-\/ed bits value of E\+E\+P\+R\+O\+M\+\_\+\+I\+N\+T\+\_\+$\ast$ 
+\end{DoxyReturn}
+
+
+Definition at line 241 of file eeprom\+\_\+18xx\+\_\+43xx.\+h.
+
+\mbox{\Hypertarget{group___e_e_p_r_o_m__18_x_x__43_x_x_ga6f3f3f16f0e24eaa45bbfd7089ed43bb}\label{group___e_e_p_r_o_m__18_x_x__43_x_x_ga6f3f3f16f0e24eaa45bbfd7089ed43bb}} 
+\index{C\+H\+I\+P\+: L\+P\+C18xx/43xx E\+E\+P\+R\+O\+M driver@{C\+H\+I\+P\+: L\+P\+C18xx/43xx E\+E\+P\+R\+O\+M driver}!Chip\+\_\+\+E\+E\+P\+R\+O\+M\+\_\+\+Init@{Chip\+\_\+\+E\+E\+P\+R\+O\+M\+\_\+\+Init}}
+\index{Chip\+\_\+\+E\+E\+P\+R\+O\+M\+\_\+\+Init@{Chip\+\_\+\+E\+E\+P\+R\+O\+M\+\_\+\+Init}!C\+H\+I\+P\+: L\+P\+C18xx/43xx E\+E\+P\+R\+O\+M driver@{C\+H\+I\+P\+: L\+P\+C18xx/43xx E\+E\+P\+R\+O\+M driver}}
+\subsubsection{\texorpdfstring{Chip\+\_\+\+E\+E\+P\+R\+O\+M\+\_\+\+Init()}{Chip\_EEPROM\_Init()}}
+{\footnotesize\ttfamily void Chip\+\_\+\+E\+E\+P\+R\+O\+M\+\_\+\+Init (\begin{DoxyParamCaption}\item[{\hyperlink{struct_l_p_c___e_e_p_r_o_m___t}{L\+P\+C\+\_\+\+E\+E\+P\+R\+O\+M\+\_\+T} $\ast$}]{p\+E\+E\+P\+R\+OM }\end{DoxyParamCaption})}
+
+
+
+Initializes E\+E\+P\+R\+OM. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em p\+E\+E\+P\+R\+OM} & \+: Pointer to E\+E\+P\+R\+OM peripheral block structure \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Nothing 
+\end{DoxyReturn}
+
+
+Definition at line 72 of file eeprom\+\_\+18xx\+\_\+43xx.\+c.
+
+\mbox{\Hypertarget{group___e_e_p_r_o_m__18_x_x__43_x_x_ga7a562f00e3404a06569a4b7c61ade80f}\label{group___e_e_p_r_o_m__18_x_x__43_x_x_ga7a562f00e3404a06569a4b7c61ade80f}} 
+\index{C\+H\+I\+P\+: L\+P\+C18xx/43xx E\+E\+P\+R\+O\+M driver@{C\+H\+I\+P\+: L\+P\+C18xx/43xx E\+E\+P\+R\+O\+M driver}!Chip\+\_\+\+E\+E\+P\+R\+O\+M\+\_\+\+Set\+Auto\+Prog@{Chip\+\_\+\+E\+E\+P\+R\+O\+M\+\_\+\+Set\+Auto\+Prog}}
+\index{Chip\+\_\+\+E\+E\+P\+R\+O\+M\+\_\+\+Set\+Auto\+Prog@{Chip\+\_\+\+E\+E\+P\+R\+O\+M\+\_\+\+Set\+Auto\+Prog}!C\+H\+I\+P\+: L\+P\+C18xx/43xx E\+E\+P\+R\+O\+M driver@{C\+H\+I\+P\+: L\+P\+C18xx/43xx E\+E\+P\+R\+O\+M driver}}
+\subsubsection{\texorpdfstring{Chip\+\_\+\+E\+E\+P\+R\+O\+M\+\_\+\+Set\+Auto\+Prog()}{Chip\_EEPROM\_SetAutoProg()}}
+{\footnotesize\ttfamily \hyperlink{group___l_p_c___types___public___macros_ga10b2d890d871e1489bb02b7e70d9bdfb}{S\+T\+A\+T\+IC} \hyperlink{spifi__18xx__43xx_8h_a2eb6f9e0395b47b8d5e3eeae4fe0c116}{I\+N\+L\+I\+NE} void Chip\+\_\+\+E\+E\+P\+R\+O\+M\+\_\+\+Set\+Auto\+Prog (\begin{DoxyParamCaption}\item[{\hyperlink{struct_l_p_c___e_e_p_r_o_m___t}{L\+P\+C\+\_\+\+E\+E\+P\+R\+O\+M\+\_\+T} $\ast$}]{p\+E\+E\+P\+R\+OM,  }\item[{uint32\+\_\+t}]{mode }\end{DoxyParamCaption})}
+
+
+
+Set Auto program mode. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em p\+E\+E\+P\+R\+OM} & \+: Pointer to E\+E\+P\+R\+OM peripheral block structure \\
+\hline
+{\em mode} & \+: Auto Program Mode (One of E\+E\+P\+R\+O\+M\+\_\+\+A\+U\+T\+O\+P\+R\+O\+G\+\_\+$\ast$ value) \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Nothing 
+\end{DoxyReturn}
+
+
+Definition at line 145 of file eeprom\+\_\+18xx\+\_\+43xx.\+h.
+
+\mbox{\Hypertarget{group___e_e_p_r_o_m__18_x_x__43_x_x_gaf8f467bf5d3c7141bbad5244a15a889e}\label{group___e_e_p_r_o_m__18_x_x__43_x_x_gaf8f467bf5d3c7141bbad5244a15a889e}} 
+\index{C\+H\+I\+P\+: L\+P\+C18xx/43xx E\+E\+P\+R\+O\+M driver@{C\+H\+I\+P\+: L\+P\+C18xx/43xx E\+E\+P\+R\+O\+M driver}!Chip\+\_\+\+E\+E\+P\+R\+O\+M\+\_\+\+Set\+Cmd@{Chip\+\_\+\+E\+E\+P\+R\+O\+M\+\_\+\+Set\+Cmd}}
+\index{Chip\+\_\+\+E\+E\+P\+R\+O\+M\+\_\+\+Set\+Cmd@{Chip\+\_\+\+E\+E\+P\+R\+O\+M\+\_\+\+Set\+Cmd}!C\+H\+I\+P\+: L\+P\+C18xx/43xx E\+E\+P\+R\+O\+M driver@{C\+H\+I\+P\+: L\+P\+C18xx/43xx E\+E\+P\+R\+O\+M driver}}
+\subsubsection{\texorpdfstring{Chip\+\_\+\+E\+E\+P\+R\+O\+M\+\_\+\+Set\+Cmd()}{Chip\_EEPROM\_SetCmd()}}
+{\footnotesize\ttfamily \hyperlink{group___l_p_c___types___public___macros_ga10b2d890d871e1489bb02b7e70d9bdfb}{S\+T\+A\+T\+IC} \hyperlink{spifi__18xx__43xx_8h_a2eb6f9e0395b47b8d5e3eeae4fe0c116}{I\+N\+L\+I\+NE} void Chip\+\_\+\+E\+E\+P\+R\+O\+M\+\_\+\+Set\+Cmd (\begin{DoxyParamCaption}\item[{\hyperlink{struct_l_p_c___e_e_p_r_o_m___t}{L\+P\+C\+\_\+\+E\+E\+P\+R\+O\+M\+\_\+T} $\ast$}]{p\+E\+E\+P\+R\+OM,  }\item[{uint32\+\_\+t}]{cmd }\end{DoxyParamCaption})}
+
+
+
+Select an E\+E\+P\+R\+OM command. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em p\+E\+E\+P\+R\+OM} & \+: Pointer to E\+E\+P\+R\+OM peripheral block structure \\
+\hline
+{\em cmd} & \+: E\+E\+P\+R\+OM command \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Nothing 
+\end{DoxyReturn}
+\begin{DoxyNote}{Note}
+The cmd is O\+R-\/ed bits value of E\+E\+P\+R\+O\+M\+\_\+\+C\+M\+D\+\_\+$\ast$ 
+\end{DoxyNote}
+
+
+Definition at line 184 of file eeprom\+\_\+18xx\+\_\+43xx.\+h.
+
+\mbox{\Hypertarget{group___e_e_p_r_o_m__18_x_x__43_x_x_gacebf288107d6f4a68f805a063205cf8e}\label{group___e_e_p_r_o_m__18_x_x__43_x_x_gacebf288107d6f4a68f805a063205cf8e}} 
+\index{C\+H\+I\+P\+: L\+P\+C18xx/43xx E\+E\+P\+R\+O\+M driver@{C\+H\+I\+P\+: L\+P\+C18xx/43xx E\+E\+P\+R\+O\+M driver}!Chip\+\_\+\+E\+E\+P\+R\+O\+M\+\_\+\+Set\+Int\+Status@{Chip\+\_\+\+E\+E\+P\+R\+O\+M\+\_\+\+Set\+Int\+Status}}
+\index{Chip\+\_\+\+E\+E\+P\+R\+O\+M\+\_\+\+Set\+Int\+Status@{Chip\+\_\+\+E\+E\+P\+R\+O\+M\+\_\+\+Set\+Int\+Status}!C\+H\+I\+P\+: L\+P\+C18xx/43xx E\+E\+P\+R\+O\+M driver@{C\+H\+I\+P\+: L\+P\+C18xx/43xx E\+E\+P\+R\+O\+M driver}}
+\subsubsection{\texorpdfstring{Chip\+\_\+\+E\+E\+P\+R\+O\+M\+\_\+\+Set\+Int\+Status()}{Chip\_EEPROM\_SetIntStatus()}}
+{\footnotesize\ttfamily \hyperlink{group___l_p_c___types___public___macros_ga10b2d890d871e1489bb02b7e70d9bdfb}{S\+T\+A\+T\+IC} \hyperlink{spifi__18xx__43xx_8h_a2eb6f9e0395b47b8d5e3eeae4fe0c116}{I\+N\+L\+I\+NE} void Chip\+\_\+\+E\+E\+P\+R\+O\+M\+\_\+\+Set\+Int\+Status (\begin{DoxyParamCaption}\item[{\hyperlink{struct_l_p_c___e_e_p_r_o_m___t}{L\+P\+C\+\_\+\+E\+E\+P\+R\+O\+M\+\_\+T} $\ast$}]{p\+E\+E\+P\+R\+OM,  }\item[{uint32\+\_\+t}]{mask }\end{DoxyParamCaption})}
+
+
+
+Set E\+E\+P\+R\+OM interrupt status. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em p\+E\+E\+P\+R\+OM} & \+: Pointer to E\+E\+P\+R\+OM peripheral block structure \\
+\hline
+{\em mask} & \+: Interrupt mask (or-\/ed bits value of E\+E\+P\+R\+O\+M\+\_\+\+I\+N\+T\+\_\+$\ast$) \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Nothing 
+\end{DoxyReturn}
+
+
+Definition at line 252 of file eeprom\+\_\+18xx\+\_\+43xx.\+h.
+
+\mbox{\Hypertarget{group___e_e_p_r_o_m__18_x_x__43_x_x_gaebadf781a37193e0cc84746da5c96b12}\label{group___e_e_p_r_o_m__18_x_x__43_x_x_gaebadf781a37193e0cc84746da5c96b12}} 
+\index{C\+H\+I\+P\+: L\+P\+C18xx/43xx E\+E\+P\+R\+O\+M driver@{C\+H\+I\+P\+: L\+P\+C18xx/43xx E\+E\+P\+R\+O\+M driver}!Chip\+\_\+\+E\+E\+P\+R\+O\+M\+\_\+\+Set\+Read\+Wait\+State@{Chip\+\_\+\+E\+E\+P\+R\+O\+M\+\_\+\+Set\+Read\+Wait\+State}}
+\index{Chip\+\_\+\+E\+E\+P\+R\+O\+M\+\_\+\+Set\+Read\+Wait\+State@{Chip\+\_\+\+E\+E\+P\+R\+O\+M\+\_\+\+Set\+Read\+Wait\+State}!C\+H\+I\+P\+: L\+P\+C18xx/43xx E\+E\+P\+R\+O\+M driver@{C\+H\+I\+P\+: L\+P\+C18xx/43xx E\+E\+P\+R\+O\+M driver}}
+\subsubsection{\texorpdfstring{Chip\+\_\+\+E\+E\+P\+R\+O\+M\+\_\+\+Set\+Read\+Wait\+State()}{Chip\_EEPROM\_SetReadWaitState()}}
+{\footnotesize\ttfamily \hyperlink{group___l_p_c___types___public___macros_ga10b2d890d871e1489bb02b7e70d9bdfb}{S\+T\+A\+T\+IC} \hyperlink{spifi__18xx__43xx_8h_a2eb6f9e0395b47b8d5e3eeae4fe0c116}{I\+N\+L\+I\+NE} void Chip\+\_\+\+E\+E\+P\+R\+O\+M\+\_\+\+Set\+Read\+Wait\+State (\begin{DoxyParamCaption}\item[{\hyperlink{struct_l_p_c___e_e_p_r_o_m___t}{L\+P\+C\+\_\+\+E\+E\+P\+R\+O\+M\+\_\+T} $\ast$}]{p\+E\+E\+P\+R\+OM,  }\item[{uint32\+\_\+t}]{ws }\end{DoxyParamCaption})}
+
+
+
+Set E\+E\+P\+R\+OM Read Wait State. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em p\+E\+E\+P\+R\+OM} & \+: Pointer to E\+E\+P\+R\+OM peripheral block structure \\
+\hline
+{\em ws} & \+: Wait State value \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Nothing 
+\end{DoxyReturn}
+\begin{DoxyNote}{Note}
+Bits 7\+:0 represents wait state for Read Phase 2 and Bits 15\+:8 represents wait state for Read Phase1 
+\end{DoxyNote}
+
+
+Definition at line 158 of file eeprom\+\_\+18xx\+\_\+43xx.\+h.
+
+\mbox{\Hypertarget{group___e_e_p_r_o_m__18_x_x__43_x_x_ga2288ea4bc7ca2c7802c0880e5e347952}\label{group___e_e_p_r_o_m__18_x_x__43_x_x_ga2288ea4bc7ca2c7802c0880e5e347952}} 
+\index{C\+H\+I\+P\+: L\+P\+C18xx/43xx E\+E\+P\+R\+O\+M driver@{C\+H\+I\+P\+: L\+P\+C18xx/43xx E\+E\+P\+R\+O\+M driver}!Chip\+\_\+\+E\+E\+P\+R\+O\+M\+\_\+\+Set\+Wait\+State@{Chip\+\_\+\+E\+E\+P\+R\+O\+M\+\_\+\+Set\+Wait\+State}}
+\index{Chip\+\_\+\+E\+E\+P\+R\+O\+M\+\_\+\+Set\+Wait\+State@{Chip\+\_\+\+E\+E\+P\+R\+O\+M\+\_\+\+Set\+Wait\+State}!C\+H\+I\+P\+: L\+P\+C18xx/43xx E\+E\+P\+R\+O\+M driver@{C\+H\+I\+P\+: L\+P\+C18xx/43xx E\+E\+P\+R\+O\+M driver}}
+\subsubsection{\texorpdfstring{Chip\+\_\+\+E\+E\+P\+R\+O\+M\+\_\+\+Set\+Wait\+State()}{Chip\_EEPROM\_SetWaitState()}}
+{\footnotesize\ttfamily \hyperlink{group___l_p_c___types___public___macros_ga10b2d890d871e1489bb02b7e70d9bdfb}{S\+T\+A\+T\+IC} \hyperlink{spifi__18xx__43xx_8h_a2eb6f9e0395b47b8d5e3eeae4fe0c116}{I\+N\+L\+I\+NE} void Chip\+\_\+\+E\+E\+P\+R\+O\+M\+\_\+\+Set\+Wait\+State (\begin{DoxyParamCaption}\item[{\hyperlink{struct_l_p_c___e_e_p_r_o_m___t}{L\+P\+C\+\_\+\+E\+E\+P\+R\+O\+M\+\_\+T} $\ast$}]{p\+E\+E\+P\+R\+OM,  }\item[{uint32\+\_\+t}]{ws }\end{DoxyParamCaption})}
+
+
+
+Set E\+E\+P\+R\+OM wait state. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em p\+E\+E\+P\+R\+OM} & \+: Pointer to E\+E\+P\+R\+OM peripheral block structure \\
+\hline
+{\em ws} & \+: Wait State value \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Nothing 
+\end{DoxyReturn}
+\begin{DoxyNote}{Note}
+Bits 7\+:0 represents wait state for Phase 3, Bits 15\+:8 represents wait state for Phase2, and Bits 23\+:16 represents wait state for Phase1 
+\end{DoxyNote}
+
+
+Definition at line 172 of file eeprom\+\_\+18xx\+\_\+43xx.\+h.
+
+\mbox{\Hypertarget{group___e_e_p_r_o_m__18_x_x__43_x_x_ga9bf344a5bd3a2035573b2d080f11c484}\label{group___e_e_p_r_o_m__18_x_x__43_x_x_ga9bf344a5bd3a2035573b2d080f11c484}} 
+\index{C\+H\+I\+P\+: L\+P\+C18xx/43xx E\+E\+P\+R\+O\+M driver@{C\+H\+I\+P\+: L\+P\+C18xx/43xx E\+E\+P\+R\+O\+M driver}!Chip\+\_\+\+E\+E\+P\+R\+O\+M\+\_\+\+Wait\+For\+Int\+Status@{Chip\+\_\+\+E\+E\+P\+R\+O\+M\+\_\+\+Wait\+For\+Int\+Status}}
+\index{Chip\+\_\+\+E\+E\+P\+R\+O\+M\+\_\+\+Wait\+For\+Int\+Status@{Chip\+\_\+\+E\+E\+P\+R\+O\+M\+\_\+\+Wait\+For\+Int\+Status}!C\+H\+I\+P\+: L\+P\+C18xx/43xx E\+E\+P\+R\+O\+M driver@{C\+H\+I\+P\+: L\+P\+C18xx/43xx E\+E\+P\+R\+O\+M driver}}
+\subsubsection{\texorpdfstring{Chip\+\_\+\+E\+E\+P\+R\+O\+M\+\_\+\+Wait\+For\+Int\+Status()}{Chip\_EEPROM\_WaitForIntStatus()}}
+{\footnotesize\ttfamily void Chip\+\_\+\+E\+E\+P\+R\+O\+M\+\_\+\+Wait\+For\+Int\+Status (\begin{DoxyParamCaption}\item[{\hyperlink{struct_l_p_c___e_e_p_r_o_m___t}{L\+P\+C\+\_\+\+E\+E\+P\+R\+O\+M\+\_\+T} $\ast$}]{p\+E\+E\+P\+R\+OM,  }\item[{uint32\+\_\+t}]{mask }\end{DoxyParamCaption})}
+
+
+
+Wait for interrupt occurs. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em p\+E\+E\+P\+R\+OM} & \+: Pointer to E\+E\+P\+R\+OM peripheral block structure \\
+\hline
+{\em mask} & \+: Expected interrupt \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Nothing 
+\end{DoxyReturn}
+
+
+Definition at line 89 of file eeprom\+\_\+18xx\+\_\+43xx.\+c.
+

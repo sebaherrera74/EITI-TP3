@@ -1,0 +1,188 @@
+\hypertarget{group___s_u_p_p_o_r_t__18_x_x__43_x_x___f_u_n_c}{}\section{C\+H\+IP\+: L\+P\+C18xx/43xx support functions}
+\label{group___s_u_p_p_o_r_t__18_x_x__43_x_x___f_u_n_c}\index{C\+H\+I\+P\+: L\+P\+C18xx/43xx support functions@{C\+H\+I\+P\+: L\+P\+C18xx/43xx support functions}}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \hyperlink{group___s_u_p_p_o_r_t__18_x_x__43_x_x___f_u_n_c_gae0c36a9591fe6e9c45ecb21a794f0f0f}{System\+Core\+Clock\+Update} (void)
+\begin{DoxyCompactList}\small\item\em Update system core clock rate, should be called if the system has a clock rate change. \end{DoxyCompactList}\item 
+void \hyperlink{group___s_u_p_p_o_r_t__18_x_x__43_x_x___f_u_n_c_ga3d92558011a1b37fdc6a0687691127c4}{Chip\+\_\+\+U\+S\+B0\+\_\+\+Init} (void)
+\begin{DoxyCompactList}\small\item\em U\+S\+B0 Pin and clock initialization Calling this function will initialize the U\+S\+B0 pins and the clock. \end{DoxyCompactList}\item 
+void \hyperlink{group___s_u_p_p_o_r_t__18_x_x__43_x_x___f_u_n_c_ga89df58e269eb3a9001c3eeafbbc95473}{Chip\+\_\+\+U\+S\+B1\+\_\+\+Init} (void)
+\begin{DoxyCompactList}\small\item\em U\+S\+B1 Pin and clock initialization Calling this function will initialize the U\+S\+B0 pins and the clock. \end{DoxyCompactList}\item 
+void \hyperlink{group___s_u_p_p_o_r_t__18_x_x__43_x_x___f_u_n_c_ga3450fa020f6b569cc2deb69c11e11b7c}{Chip\+\_\+\+System\+Init} (void)
+\begin{DoxyCompactList}\small\item\em Set up and initialize hardware prior to call to \hyperlink{group__samples_ga840291bc02cba5474a4cb46a9b9566fe}{main()} \end{DoxyCompactList}\item 
+void \hyperlink{group___s_u_p_p_o_r_t__18_x_x__43_x_x___f_u_n_c_ga54251628aeac543524d98d4db12c39f9}{Chip\+\_\+\+Setup\+Core\+Clock} (\hyperlink{group___c_l_o_c_k__18_x_x__43_x_x_ga0975326707efebf2b074283e6c602f18}{C\+H\+I\+P\+\_\+\+C\+G\+U\+\_\+\+C\+L\+K\+I\+N\+\_\+T} clkin, uint32\+\_\+t core\+\_\+freq, bool setbase)
+\begin{DoxyCompactList}\small\item\em Clock and P\+LL initialization based input given in {\itshape clkin}. \end{DoxyCompactList}\item 
+void \hyperlink{group___s_u_p_p_o_r_t__18_x_x__43_x_x___f_u_n_c_ga18737e4a022570724c77c5cdea9c0258}{Chip\+\_\+\+Setup\+Xtal\+Clocking} (void)
+\begin{DoxyCompactList}\small\item\em Clock and P\+LL initialization based on the external oscillator. \end{DoxyCompactList}\item 
+void \hyperlink{group___s_u_p_p_o_r_t__18_x_x__43_x_x___f_u_n_c_ga6eff97a8da15798119eada6c5f000404}{Chip\+\_\+\+Setup\+Irc\+Clocking} (void)
+\begin{DoxyCompactList}\small\item\em Clock and P\+LL initialization based on the internal oscillator. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+uint32\+\_\+t \hyperlink{group___s_u_p_p_o_r_t__18_x_x__43_x_x___f_u_n_c_gaa3cd3e43291e81e795d642b79b6088e6}{System\+Core\+Clock}
+\begin{DoxyCompactList}\small\item\em Current system clock rate, mainly used for sys\+Tick. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+
+
+\subsection{Function Documentation}
+\mbox{\Hypertarget{group___s_u_p_p_o_r_t__18_x_x__43_x_x___f_u_n_c_ga54251628aeac543524d98d4db12c39f9}\label{group___s_u_p_p_o_r_t__18_x_x__43_x_x___f_u_n_c_ga54251628aeac543524d98d4db12c39f9}} 
+\index{C\+H\+I\+P\+: L\+P\+C18xx/43xx support functions@{C\+H\+I\+P\+: L\+P\+C18xx/43xx support functions}!Chip\+\_\+\+Setup\+Core\+Clock@{Chip\+\_\+\+Setup\+Core\+Clock}}
+\index{Chip\+\_\+\+Setup\+Core\+Clock@{Chip\+\_\+\+Setup\+Core\+Clock}!C\+H\+I\+P\+: L\+P\+C18xx/43xx support functions@{C\+H\+I\+P\+: L\+P\+C18xx/43xx support functions}}
+\subsubsection{\texorpdfstring{Chip\+\_\+\+Setup\+Core\+Clock()}{Chip\_SetupCoreClock()}}
+{\footnotesize\ttfamily void Chip\+\_\+\+Setup\+Core\+Clock (\begin{DoxyParamCaption}\item[{\hyperlink{group___c_l_o_c_k__18_x_x__43_x_x_ga0975326707efebf2b074283e6c602f18}{C\+H\+I\+P\+\_\+\+C\+G\+U\+\_\+\+C\+L\+K\+I\+N\+\_\+T}}]{clkin,  }\item[{uint32\+\_\+t}]{core\+\_\+freq,  }\item[{bool}]{setbase }\end{DoxyParamCaption})}
+
+
+
+Clock and P\+LL initialization based input given in {\itshape clkin}. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em clkin} & \+: Input reference clock to P\+L\+L1 (M\+A\+I\+N\+P\+LL) see \hyperlink{group___c_l_o_c_k__18_x_x__43_x_x_ga0975326707efebf2b074283e6c602f18}{C\+H\+I\+P\+\_\+\+C\+G\+U\+\_\+\+C\+L\+K\+I\+N\+\_\+T} \\
+\hline
+{\em core\+\_\+freq} & \+: Desired output frequency of the P\+L\+L1 (Base clock to C\+PU Core) \\
+\hline
+{\em setbase} & \+: Setup default base clock of peripherals (see notes) \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+None 
+\end{DoxyReturn}
+\begin{DoxyNote}{Note}
+This A\+PI will initialize the M\+A\+I\+N\+P\+LL (P\+L\+L1) to the frequency given by {\itshape core\+\_\+freq}, and will use this P\+LL\textquotesingle{}s output as the base clock for C\+PU Core. If {\itshape clkin} is \hyperlink{group___c_l_o_c_k__18_x_x__43_x_x_gga419aa2b9970dcf4930eb44871da9e377a8819337e544d58840b02418ab417f8d0}{C\+L\+K\+I\+N\+\_\+\+C\+R\+Y\+S\+T\+AL} then External Crystal Oscillator of frequency 12\+M\+Hz will be used as the input reference clock to P\+L\+L1.~\newline
+ Parameter {\itshape setbase} if true will set A\+PB\mbox{[}1,3\mbox{]}, S\+SP\mbox{[}0,1\mbox{]}, U\+A\+RT\mbox{[}0,1,2,3\mbox{]}, S\+PI base clocks to M\+A\+I\+N\+P\+LL\textquotesingle{}s output clock. If {\itshape setbase} is false then the base clock settings for the peripherals will not be modified, only C\+PU Core\textquotesingle{}s base clock will be updated to use clock generated by P\+L\+L1. 
+\end{DoxyNote}
+
+
+Definition at line 81 of file sysinit\+\_\+18xx\+\_\+43xx.\+c.
+
+\mbox{\Hypertarget{group___s_u_p_p_o_r_t__18_x_x__43_x_x___f_u_n_c_ga6eff97a8da15798119eada6c5f000404}\label{group___s_u_p_p_o_r_t__18_x_x__43_x_x___f_u_n_c_ga6eff97a8da15798119eada6c5f000404}} 
+\index{C\+H\+I\+P\+: L\+P\+C18xx/43xx support functions@{C\+H\+I\+P\+: L\+P\+C18xx/43xx support functions}!Chip\+\_\+\+Setup\+Irc\+Clocking@{Chip\+\_\+\+Setup\+Irc\+Clocking}}
+\index{Chip\+\_\+\+Setup\+Irc\+Clocking@{Chip\+\_\+\+Setup\+Irc\+Clocking}!C\+H\+I\+P\+: L\+P\+C18xx/43xx support functions@{C\+H\+I\+P\+: L\+P\+C18xx/43xx support functions}}
+\subsubsection{\texorpdfstring{Chip\+\_\+\+Setup\+Irc\+Clocking()}{Chip\_SetupIrcClocking()}}
+{\footnotesize\ttfamily void Chip\+\_\+\+Setup\+Irc\+Clocking (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+
+
+
+Clock and P\+LL initialization based on the internal oscillator. 
+
+\begin{DoxyReturn}{Returns}
+None 
+\end{DoxyReturn}
+\begin{DoxyNote}{Note}
+This A\+PI will initialize the M\+A\+I\+N\+P\+LL (P\+L\+L1) to the maximum frequency (180\+M\+Hz\mbox{[}L\+P\+C18xx\mbox{]} or 204\+M\+Hz\mbox{[}L\+P\+C43xx\mbox{]}) and uses this P\+LL\textquotesingle{}s output as the base clock for C\+PU Core. Internal RC Oscillator will be used as the input reference clock to P\+L\+L1. 
+\end{DoxyNote}
+
+
+Definition at line 150 of file sysinit\+\_\+18xx\+\_\+43xx.\+c.
+
+\mbox{\Hypertarget{group___s_u_p_p_o_r_t__18_x_x__43_x_x___f_u_n_c_ga18737e4a022570724c77c5cdea9c0258}\label{group___s_u_p_p_o_r_t__18_x_x__43_x_x___f_u_n_c_ga18737e4a022570724c77c5cdea9c0258}} 
+\index{C\+H\+I\+P\+: L\+P\+C18xx/43xx support functions@{C\+H\+I\+P\+: L\+P\+C18xx/43xx support functions}!Chip\+\_\+\+Setup\+Xtal\+Clocking@{Chip\+\_\+\+Setup\+Xtal\+Clocking}}
+\index{Chip\+\_\+\+Setup\+Xtal\+Clocking@{Chip\+\_\+\+Setup\+Xtal\+Clocking}!C\+H\+I\+P\+: L\+P\+C18xx/43xx support functions@{C\+H\+I\+P\+: L\+P\+C18xx/43xx support functions}}
+\subsubsection{\texorpdfstring{Chip\+\_\+\+Setup\+Xtal\+Clocking()}{Chip\_SetupXtalClocking()}}
+{\footnotesize\ttfamily void Chip\+\_\+\+Setup\+Xtal\+Clocking (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+
+
+
+Clock and P\+LL initialization based on the external oscillator. 
+
+\begin{DoxyReturn}{Returns}
+None 
+\end{DoxyReturn}
+\begin{DoxyNote}{Note}
+This A\+PI will initialize the M\+A\+I\+N\+P\+LL (P\+L\+L1) to the maximum frequency (180\+M\+Hz\mbox{[}L\+P\+C18xx\mbox{]} or 204\+M\+Hz\mbox{[}L\+P\+C43xx\mbox{]}) and uses this P\+LL\textquotesingle{}s output as the base clock for C\+PU Core. External Crystal Oscillator of frequency 12\+M\+Hz will be used as the input reference clock to P\+L\+L1. 
+\end{DoxyNote}
+
+
+Definition at line 144 of file sysinit\+\_\+18xx\+\_\+43xx.\+c.
+
+\mbox{\Hypertarget{group___s_u_p_p_o_r_t__18_x_x__43_x_x___f_u_n_c_ga3450fa020f6b569cc2deb69c11e11b7c}\label{group___s_u_p_p_o_r_t__18_x_x__43_x_x___f_u_n_c_ga3450fa020f6b569cc2deb69c11e11b7c}} 
+\index{C\+H\+I\+P\+: L\+P\+C18xx/43xx support functions@{C\+H\+I\+P\+: L\+P\+C18xx/43xx support functions}!Chip\+\_\+\+System\+Init@{Chip\+\_\+\+System\+Init}}
+\index{Chip\+\_\+\+System\+Init@{Chip\+\_\+\+System\+Init}!C\+H\+I\+P\+: L\+P\+C18xx/43xx support functions@{C\+H\+I\+P\+: L\+P\+C18xx/43xx support functions}}
+\subsubsection{\texorpdfstring{Chip\+\_\+\+System\+Init()}{Chip\_SystemInit()}}
+{\footnotesize\ttfamily void Chip\+\_\+\+System\+Init (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+
+
+
+Set up and initialize hardware prior to call to \hyperlink{group__samples_ga840291bc02cba5474a4cb46a9b9566fe}{main()} 
+
+\begin{DoxyReturn}{Returns}
+None 
+\end{DoxyReturn}
+\begin{DoxyNote}{Note}
+\hyperlink{group___s_u_p_p_o_r_t__18_x_x__43_x_x___f_u_n_c_ga3450fa020f6b569cc2deb69c11e11b7c}{Chip\+\_\+\+System\+Init()} is called prior to the application and sets up system clocking prior to the application starting. 
+\end{DoxyNote}
+
+
+Definition at line 156 of file sysinit\+\_\+18xx\+\_\+43xx.\+c.
+
+\mbox{\Hypertarget{group___s_u_p_p_o_r_t__18_x_x__43_x_x___f_u_n_c_ga3d92558011a1b37fdc6a0687691127c4}\label{group___s_u_p_p_o_r_t__18_x_x__43_x_x___f_u_n_c_ga3d92558011a1b37fdc6a0687691127c4}} 
+\index{C\+H\+I\+P\+: L\+P\+C18xx/43xx support functions@{C\+H\+I\+P\+: L\+P\+C18xx/43xx support functions}!Chip\+\_\+\+U\+S\+B0\+\_\+\+Init@{Chip\+\_\+\+U\+S\+B0\+\_\+\+Init}}
+\index{Chip\+\_\+\+U\+S\+B0\+\_\+\+Init@{Chip\+\_\+\+U\+S\+B0\+\_\+\+Init}!C\+H\+I\+P\+: L\+P\+C18xx/43xx support functions@{C\+H\+I\+P\+: L\+P\+C18xx/43xx support functions}}
+\subsubsection{\texorpdfstring{Chip\+\_\+\+U\+S\+B0\+\_\+\+Init()}{Chip\_USB0\_Init()}}
+{\footnotesize\ttfamily void Chip\+\_\+\+U\+S\+B0\+\_\+\+Init (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+
+
+
+U\+S\+B0 Pin and clock initialization Calling this function will initialize the U\+S\+B0 pins and the clock. 
+
+\begin{DoxyNote}{Note}
+This function will assume that the chip is clocked by an external crystal oscillator of frequency 12\+M\+Hz 
+\end{DoxyNote}
+
+
+Definition at line 76 of file chip\+\_\+18xx\+\_\+43xx.\+c.
+
+\mbox{\Hypertarget{group___s_u_p_p_o_r_t__18_x_x__43_x_x___f_u_n_c_ga89df58e269eb3a9001c3eeafbbc95473}\label{group___s_u_p_p_o_r_t__18_x_x__43_x_x___f_u_n_c_ga89df58e269eb3a9001c3eeafbbc95473}} 
+\index{C\+H\+I\+P\+: L\+P\+C18xx/43xx support functions@{C\+H\+I\+P\+: L\+P\+C18xx/43xx support functions}!Chip\+\_\+\+U\+S\+B1\+\_\+\+Init@{Chip\+\_\+\+U\+S\+B1\+\_\+\+Init}}
+\index{Chip\+\_\+\+U\+S\+B1\+\_\+\+Init@{Chip\+\_\+\+U\+S\+B1\+\_\+\+Init}!C\+H\+I\+P\+: L\+P\+C18xx/43xx support functions@{C\+H\+I\+P\+: L\+P\+C18xx/43xx support functions}}
+\subsubsection{\texorpdfstring{Chip\+\_\+\+U\+S\+B1\+\_\+\+Init()}{Chip\_USB1\_Init()}}
+{\footnotesize\ttfamily void Chip\+\_\+\+U\+S\+B1\+\_\+\+Init (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+
+
+
+U\+S\+B1 Pin and clock initialization Calling this function will initialize the U\+S\+B0 pins and the clock. 
+
+\begin{DoxyNote}{Note}
+This function will assume that the chip is clocked by an external crystal oscillator of frequency 12\+M\+Hz 
+\end{DoxyNote}
+
+
+Definition at line 91 of file chip\+\_\+18xx\+\_\+43xx.\+c.
+
+\mbox{\Hypertarget{group___s_u_p_p_o_r_t__18_x_x__43_x_x___f_u_n_c_gae0c36a9591fe6e9c45ecb21a794f0f0f}\label{group___s_u_p_p_o_r_t__18_x_x__43_x_x___f_u_n_c_gae0c36a9591fe6e9c45ecb21a794f0f0f}} 
+\index{C\+H\+I\+P\+: L\+P\+C18xx/43xx support functions@{C\+H\+I\+P\+: L\+P\+C18xx/43xx support functions}!System\+Core\+Clock\+Update@{System\+Core\+Clock\+Update}}
+\index{System\+Core\+Clock\+Update@{System\+Core\+Clock\+Update}!C\+H\+I\+P\+: L\+P\+C18xx/43xx support functions@{C\+H\+I\+P\+: L\+P\+C18xx/43xx support functions}}
+\subsubsection{\texorpdfstring{System\+Core\+Clock\+Update()}{SystemCoreClockUpdate()}}
+{\footnotesize\ttfamily void System\+Core\+Clock\+Update (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+
+
+
+Update system core clock rate, should be called if the system has a clock rate change. 
+
+\begin{DoxyReturn}{Returns}
+None 
+\end{DoxyReturn}
+
+
+Definition at line 113 of file chip\+\_\+18xx\+\_\+43xx.\+c.
+
+
+
+\subsection{Variable Documentation}
+\mbox{\Hypertarget{group___s_u_p_p_o_r_t__18_x_x__43_x_x___f_u_n_c_gaa3cd3e43291e81e795d642b79b6088e6}\label{group___s_u_p_p_o_r_t__18_x_x__43_x_x___f_u_n_c_gaa3cd3e43291e81e795d642b79b6088e6}} 
+\index{C\+H\+I\+P\+: L\+P\+C18xx/43xx support functions@{C\+H\+I\+P\+: L\+P\+C18xx/43xx support functions}!System\+Core\+Clock@{System\+Core\+Clock}}
+\index{System\+Core\+Clock@{System\+Core\+Clock}!C\+H\+I\+P\+: L\+P\+C18xx/43xx support functions@{C\+H\+I\+P\+: L\+P\+C18xx/43xx support functions}}
+\subsubsection{\texorpdfstring{System\+Core\+Clock}{SystemCoreClock}}
+{\footnotesize\ttfamily uint32\+\_\+t System\+Core\+Clock}
+
+
+
+Current system clock rate, mainly used for sys\+Tick. 
+
+
+
+Definition at line 50 of file chip\+\_\+18xx\+\_\+43xx.\+c.
+

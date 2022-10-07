@@ -1,0 +1,52 @@
+\hypertarget{muju_2modules_2hal_2inc_2digital_8h}{}\section{muju/modules/hal/inc/digital.h File Reference}
+\label{muju_2modules_2hal_2inc_2digital_8h}\index{muju/modules/hal/inc/digital.\+h@{muju/modules/hal/inc/digital.\+h}}
+{\ttfamily \#include \char`\"{}terminal.\+h\char`\"{}}\newline
+{\ttfamily \#include $<$stdint.\+h$>$}\newline
+{\ttfamily \#include $<$stdbool.\+h$>$}\newline
+Include dependency graph for digital.\+h\+:
+% FIG 0
+This graph shows which files directly or indirectly include this file\+:
+% FIG 1
+\subsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+struct \hyperlink{structdigital__input__atributes__s}{digital\+\_\+input\+\_\+atributes\+\_\+s}
+\item 
+struct \hyperlink{structdigital__output__atributes__s}{digital\+\_\+output\+\_\+atributes\+\_\+s}
+\end{DoxyCompactItemize}
+\subsection*{Typedefs}
+\begin{DoxyCompactItemize}
+\item 
+typedef struct \hyperlink{structdigital__input__atributes__s}{digital\+\_\+input\+\_\+atributes\+\_\+s} $\ast$ \hyperlink{group__hal_ga425db4b2c52be0608edec9a314976335}{digital\+\_\+input\+\_\+atributes\+\_\+t}
+\item 
+typedef struct \hyperlink{structdigital__input__s}{digital\+\_\+input\+\_\+s} $\ast$ \hyperlink{group__hal_gaa88780f43e331bbd1d6069d75ad68fcf}{digital\+\_\+input\+\_\+t}
+\item 
+typedef struct \hyperlink{structdigital__output__atributes__s}{digital\+\_\+output\+\_\+atributes\+\_\+s} $\ast$ \hyperlink{group__hal_ga52de0d94c690b3251abf626bc86dfed9}{digital\+\_\+output\+\_\+atributes\+\_\+t}
+\item 
+typedef struct \hyperlink{structdigital__output__s}{digital\+\_\+output\+\_\+s} $\ast$ \hyperlink{group__hal_ga3e63b19d3d0dbfbfb2c50b3ac1f69aa0}{digital\+\_\+output\+\_\+t}
+\end{DoxyCompactItemize}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{group__hal_gaa88780f43e331bbd1d6069d75ad68fcf}{digital\+\_\+input\+\_\+t} \hyperlink{group__hal_gab97f7c0af35e98c5f29ca3083b743d34}{Digital\+Input\+Create} (\hyperlink{group__hal_ga64d2a4cb83c256a6ace36ce64935997f}{terminal\+\_\+t} terminal, \hyperlink{group__hal_ga425db4b2c52be0608edec9a314976335}{digital\+\_\+input\+\_\+atributes\+\_\+t} atributes)
+\item 
+bool \hyperlink{group__hal_ga2ed2289f4350106d999d17788643f909}{Digital\+Input\+Get\+State} (\hyperlink{group__hal_gaa88780f43e331bbd1d6069d75ad68fcf}{digital\+\_\+input\+\_\+t} output)
+\item 
+bool \hyperlink{group__hal_gae975bb8941430b6bb04bd11b7714bed5}{Digital\+Input\+Has\+Changed} (\hyperlink{group__hal_gaa88780f43e331bbd1d6069d75ad68fcf}{digital\+\_\+input\+\_\+t} input)
+\item 
+bool \hyperlink{group__hal_ga811e1a571c3e6e539b3b61bae5698047}{Digital\+Input\+Has\+Activated} (\hyperlink{group__hal_gaa88780f43e331bbd1d6069d75ad68fcf}{digital\+\_\+input\+\_\+t} input)
+\item 
+bool \hyperlink{group__hal_gac75e3db7f366d04bbdaa6589a92d580c}{Digital\+Input\+Has\+Deactivated} (\hyperlink{group__hal_gaa88780f43e331bbd1d6069d75ad68fcf}{digital\+\_\+input\+\_\+t} input)
+\item 
+\hyperlink{group___plantilla_ga3e63b19d3d0dbfbfb2c50b3ac1f69aa0}{digital\+\_\+output\+\_\+t} \hyperlink{group__hal_ga594d436025e4739b9629e91e8e356206}{Digital\+Output\+Create} (\hyperlink{group__hal_ga64d2a4cb83c256a6ace36ce64935997f}{terminal\+\_\+t} terminal, \hyperlink{group__hal_ga52de0d94c690b3251abf626bc86dfed9}{digital\+\_\+output\+\_\+atributes\+\_\+t} atributes)
+\item 
+bool \hyperlink{group__hal_gaba02fd1cdd0a19d04cd5d24aa148193e}{Digital\+Ouput\+Get\+State} (\hyperlink{group___plantilla_ga3e63b19d3d0dbfbfb2c50b3ac1f69aa0}{digital\+\_\+output\+\_\+t} output)
+\item 
+void \hyperlink{group__hal_ga0483a65cba06b635483c4c7749552dd1}{Digital\+Ouput\+Set\+State} (\hyperlink{group___plantilla_ga3e63b19d3d0dbfbfb2c50b3ac1f69aa0}{digital\+\_\+output\+\_\+t} output, bool state)
+\item 
+void \hyperlink{group__hal_gab19a43c015776dc20c406c14e0d3d481}{Digital\+Ouput\+Activate} (\hyperlink{group___plantilla_ga3e63b19d3d0dbfbfb2c50b3ac1f69aa0}{digital\+\_\+output\+\_\+t} output)
+\item 
+void \hyperlink{group__hal_gafddace812c99bbfd8455f7a9a2d9e6f9}{Digital\+Ouput\+Deactivate} (\hyperlink{group___plantilla_ga3e63b19d3d0dbfbfb2c50b3ac1f69aa0}{digital\+\_\+output\+\_\+t} output)
+\item 
+void \hyperlink{group__hal_gaa8e0bc6b2e09229fad9a738b32208e9f}{Digital\+Ouput\+Toggle} (\hyperlink{group___plantilla_ga3e63b19d3d0dbfbfb2c50b3ac1f69aa0}{digital\+\_\+output\+\_\+t} output)
+\end{DoxyCompactItemize}

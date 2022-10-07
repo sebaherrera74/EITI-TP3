@@ -1,0 +1,113 @@
+\hypertarget{struct_i2_c_m___x_f_e_r___t}{}\section{I2\+C\+M\+\_\+\+X\+F\+E\+R\+\_\+T Struct Reference}
+\label{struct_i2_c_m___x_f_e_r___t}\index{I2\+C\+M\+\_\+\+X\+F\+E\+R\+\_\+T@{I2\+C\+M\+\_\+\+X\+F\+E\+R\+\_\+T}}
+
+
+Master transfer data structure definitions.  
+
+
+
+
+{\ttfamily \#include $<$i2cm\+\_\+18xx\+\_\+43xx.\+h$>$}
+
+\subsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+uint8\+\_\+t \hyperlink{struct_i2_c_m___x_f_e_r___t_a674496757553522628b725c4de372c59}{slave\+Addr}
+\item 
+uint8\+\_\+t \hyperlink{struct_i2_c_m___x_f_e_r___t_a266448d1d714cc74663c25e1eaa8b91b}{options}
+\item 
+uint16\+\_\+t \hyperlink{struct_i2_c_m___x_f_e_r___t_ac8151ea4555b8a05bbc2808f7b418076}{status}
+\item 
+uint16\+\_\+t \hyperlink{struct_i2_c_m___x_f_e_r___t_ac5cf574f3cfeade1ff3618a1dcd516e0}{tx\+Sz}
+\item 
+uint16\+\_\+t \hyperlink{struct_i2_c_m___x_f_e_r___t_a3258d00dfd77755e7d2b397d87746733}{rx\+Sz}
+\item 
+const uint8\+\_\+t $\ast$ \hyperlink{struct_i2_c_m___x_f_e_r___t_a14a9cf03095629facbeee4863399f31f}{tx\+Buff}
+\item 
+uint8\+\_\+t $\ast$ \hyperlink{struct_i2_c_m___x_f_e_r___t_a8005cf7efb0ff7ed4d7951c963b0eaa5}{rx\+Buff}
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Master transfer data structure definitions. 
+
+Definition at line 92 of file i2cm\+\_\+18xx\+\_\+43xx.\+h.
+
+
+
+\subsection{Member Data Documentation}
+\mbox{\Hypertarget{struct_i2_c_m___x_f_e_r___t_a266448d1d714cc74663c25e1eaa8b91b}\label{struct_i2_c_m___x_f_e_r___t_a266448d1d714cc74663c25e1eaa8b91b}} 
+\index{I2\+C\+M\+\_\+\+X\+F\+E\+R\+\_\+T@{I2\+C\+M\+\_\+\+X\+F\+E\+R\+\_\+T}!options@{options}}
+\index{options@{options}!I2\+C\+M\+\_\+\+X\+F\+E\+R\+\_\+T@{I2\+C\+M\+\_\+\+X\+F\+E\+R\+\_\+T}}
+\subsubsection{\texorpdfstring{options}{options}}
+{\footnotesize\ttfamily uint8\+\_\+t I2\+C\+M\+\_\+\+X\+F\+E\+R\+\_\+\+T\+::options}
+
+Options for transfer 
+
+Definition at line 94 of file i2cm\+\_\+18xx\+\_\+43xx.\+h.
+
+\mbox{\Hypertarget{struct_i2_c_m___x_f_e_r___t_a8005cf7efb0ff7ed4d7951c963b0eaa5}\label{struct_i2_c_m___x_f_e_r___t_a8005cf7efb0ff7ed4d7951c963b0eaa5}} 
+\index{I2\+C\+M\+\_\+\+X\+F\+E\+R\+\_\+T@{I2\+C\+M\+\_\+\+X\+F\+E\+R\+\_\+T}!rx\+Buff@{rx\+Buff}}
+\index{rx\+Buff@{rx\+Buff}!I2\+C\+M\+\_\+\+X\+F\+E\+R\+\_\+T@{I2\+C\+M\+\_\+\+X\+F\+E\+R\+\_\+T}}
+\subsubsection{\texorpdfstring{rx\+Buff}{rxBuff}}
+{\footnotesize\ttfamily uint8\+\_\+t$\ast$ I2\+C\+M\+\_\+\+X\+F\+E\+R\+\_\+\+T\+::rx\+Buff}
+
+Pointer memory where bytes received from I2C be stored 
+
+Definition at line 101 of file i2cm\+\_\+18xx\+\_\+43xx.\+h.
+
+\mbox{\Hypertarget{struct_i2_c_m___x_f_e_r___t_a3258d00dfd77755e7d2b397d87746733}\label{struct_i2_c_m___x_f_e_r___t_a3258d00dfd77755e7d2b397d87746733}} 
+\index{I2\+C\+M\+\_\+\+X\+F\+E\+R\+\_\+T@{I2\+C\+M\+\_\+\+X\+F\+E\+R\+\_\+T}!rx\+Sz@{rx\+Sz}}
+\index{rx\+Sz@{rx\+Sz}!I2\+C\+M\+\_\+\+X\+F\+E\+R\+\_\+T@{I2\+C\+M\+\_\+\+X\+F\+E\+R\+\_\+T}}
+\subsubsection{\texorpdfstring{rx\+Sz}{rxSz}}
+{\footnotesize\ttfamily uint16\+\_\+t I2\+C\+M\+\_\+\+X\+F\+E\+R\+\_\+\+T\+::rx\+Sz}
+
+Number of bytes to received, if 0 only transmission we be carried on 
+
+Definition at line 98 of file i2cm\+\_\+18xx\+\_\+43xx.\+h.
+
+\mbox{\Hypertarget{struct_i2_c_m___x_f_e_r___t_a674496757553522628b725c4de372c59}\label{struct_i2_c_m___x_f_e_r___t_a674496757553522628b725c4de372c59}} 
+\index{I2\+C\+M\+\_\+\+X\+F\+E\+R\+\_\+T@{I2\+C\+M\+\_\+\+X\+F\+E\+R\+\_\+T}!slave\+Addr@{slave\+Addr}}
+\index{slave\+Addr@{slave\+Addr}!I2\+C\+M\+\_\+\+X\+F\+E\+R\+\_\+T@{I2\+C\+M\+\_\+\+X\+F\+E\+R\+\_\+T}}
+\subsubsection{\texorpdfstring{slave\+Addr}{slaveAddr}}
+{\footnotesize\ttfamily uint8\+\_\+t I2\+C\+M\+\_\+\+X\+F\+E\+R\+\_\+\+T\+::slave\+Addr}
+
+7-\/bit I2C Slave address 
+
+Definition at line 93 of file i2cm\+\_\+18xx\+\_\+43xx.\+h.
+
+\mbox{\Hypertarget{struct_i2_c_m___x_f_e_r___t_ac8151ea4555b8a05bbc2808f7b418076}\label{struct_i2_c_m___x_f_e_r___t_ac8151ea4555b8a05bbc2808f7b418076}} 
+\index{I2\+C\+M\+\_\+\+X\+F\+E\+R\+\_\+T@{I2\+C\+M\+\_\+\+X\+F\+E\+R\+\_\+T}!status@{status}}
+\index{status@{status}!I2\+C\+M\+\_\+\+X\+F\+E\+R\+\_\+T@{I2\+C\+M\+\_\+\+X\+F\+E\+R\+\_\+T}}
+\subsubsection{\texorpdfstring{status}{status}}
+{\footnotesize\ttfamily uint16\+\_\+t I2\+C\+M\+\_\+\+X\+F\+E\+R\+\_\+\+T\+::status}
+
+Status of the current I2C transfer 
+
+Definition at line 95 of file i2cm\+\_\+18xx\+\_\+43xx.\+h.
+
+\mbox{\Hypertarget{struct_i2_c_m___x_f_e_r___t_a14a9cf03095629facbeee4863399f31f}\label{struct_i2_c_m___x_f_e_r___t_a14a9cf03095629facbeee4863399f31f}} 
+\index{I2\+C\+M\+\_\+\+X\+F\+E\+R\+\_\+T@{I2\+C\+M\+\_\+\+X\+F\+E\+R\+\_\+T}!tx\+Buff@{tx\+Buff}}
+\index{tx\+Buff@{tx\+Buff}!I2\+C\+M\+\_\+\+X\+F\+E\+R\+\_\+T@{I2\+C\+M\+\_\+\+X\+F\+E\+R\+\_\+T}}
+\subsubsection{\texorpdfstring{tx\+Buff}{txBuff}}
+{\footnotesize\ttfamily const uint8\+\_\+t$\ast$ I2\+C\+M\+\_\+\+X\+F\+E\+R\+\_\+\+T\+::tx\+Buff}
+
+Pointer to array of bytes to be transmitted 
+
+Definition at line 100 of file i2cm\+\_\+18xx\+\_\+43xx.\+h.
+
+\mbox{\Hypertarget{struct_i2_c_m___x_f_e_r___t_ac5cf574f3cfeade1ff3618a1dcd516e0}\label{struct_i2_c_m___x_f_e_r___t_ac5cf574f3cfeade1ff3618a1dcd516e0}} 
+\index{I2\+C\+M\+\_\+\+X\+F\+E\+R\+\_\+T@{I2\+C\+M\+\_\+\+X\+F\+E\+R\+\_\+T}!tx\+Sz@{tx\+Sz}}
+\index{tx\+Sz@{tx\+Sz}!I2\+C\+M\+\_\+\+X\+F\+E\+R\+\_\+T@{I2\+C\+M\+\_\+\+X\+F\+E\+R\+\_\+T}}
+\subsubsection{\texorpdfstring{tx\+Sz}{txSz}}
+{\footnotesize\ttfamily uint16\+\_\+t I2\+C\+M\+\_\+\+X\+F\+E\+R\+\_\+\+T\+::tx\+Sz}
+
+Number of bytes in transmit array, if 0 only receive transfer will be carried on 
+
+Definition at line 96 of file i2cm\+\_\+18xx\+\_\+43xx.\+h.
+
+
+
+The documentation for this struct was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+muju/externals/base/soc/lpc43xx/lpc\+\_\+chip\+\_\+43xx/inc/\hyperlink{i2cm__18xx__43xx_8h}{i2cm\+\_\+18xx\+\_\+43xx.\+h}\end{DoxyCompactItemize}

@@ -1,0 +1,113 @@
+\hypertarget{struct_l_p_c___w_w_d_t___t}{}\section{L\+P\+C\+\_\+\+W\+W\+D\+T\+\_\+T Struct Reference}
+\label{struct_l_p_c___w_w_d_t___t}\index{L\+P\+C\+\_\+\+W\+W\+D\+T\+\_\+T@{L\+P\+C\+\_\+\+W\+W\+D\+T\+\_\+T}}
+
+
+Windowed Watchdog register block structure.  
+
+
+
+
+{\ttfamily \#include $<$wwdt\+\_\+18xx\+\_\+43xx.\+h$>$}
+
+\subsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{core__sc300_8h_aec43007d9998a0a0e01faede4133d6be}{\+\_\+\+\_\+\+IO} uint32\+\_\+t \hyperlink{struct_l_p_c___w_w_d_t___t_a92ea6cd2032ed81f7c5f626b48c4c772}{M\+OD}
+\item 
+\hyperlink{core__sc300_8h_aec43007d9998a0a0e01faede4133d6be}{\+\_\+\+\_\+\+IO} uint32\+\_\+t \hyperlink{struct_l_p_c___w_w_d_t___t_a8390ac91aea3330b363ad2fd5dc97f98}{TC}
+\item 
+\hyperlink{core__sc300_8h_a7e25d9380f9ef903923964322e71f2f6}{\+\_\+\+\_\+O} uint32\+\_\+t \hyperlink{struct_l_p_c___w_w_d_t___t_a80b357a30f90ba82fd46ff1faa8fe4b8}{F\+E\+ED}
+\item 
+\hyperlink{core__sc300_8h_af63697ed9952cc71e1225efe205f6cd3}{\+\_\+\+\_\+I} uint32\+\_\+t \hyperlink{struct_l_p_c___w_w_d_t___t_a8257032e074282d5242e1d2a07537db1}{TV}
+\item 
+\hyperlink{core__sc300_8h_af63697ed9952cc71e1225efe205f6cd3}{\+\_\+\+\_\+I} uint32\+\_\+t \hyperlink{struct_l_p_c___w_w_d_t___t_af47cdcbd1ae7b068bf6b66566a140aa6}{R\+E\+S\+E\+R\+V\+E\+D0}
+\item 
+\hyperlink{core__sc300_8h_aec43007d9998a0a0e01faede4133d6be}{\+\_\+\+\_\+\+IO} uint32\+\_\+t \hyperlink{struct_l_p_c___w_w_d_t___t_a6efaed3716fc4661ef3a7a52bcc9028a}{W\+A\+R\+N\+I\+NT}
+\item 
+\hyperlink{core__sc300_8h_aec43007d9998a0a0e01faede4133d6be}{\+\_\+\+\_\+\+IO} uint32\+\_\+t \hyperlink{struct_l_p_c___w_w_d_t___t_abcc1eca1d9cc366b693a5333fb75d1e0}{W\+I\+N\+D\+OW}
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Windowed Watchdog register block structure. 
+
+Definition at line 52 of file wwdt\+\_\+18xx\+\_\+43xx.\+h.
+
+
+
+\subsection{Member Data Documentation}
+\mbox{\Hypertarget{struct_l_p_c___w_w_d_t___t_a80b357a30f90ba82fd46ff1faa8fe4b8}\label{struct_l_p_c___w_w_d_t___t_a80b357a30f90ba82fd46ff1faa8fe4b8}} 
+\index{L\+P\+C\+\_\+\+W\+W\+D\+T\+\_\+T@{L\+P\+C\+\_\+\+W\+W\+D\+T\+\_\+T}!F\+E\+ED@{F\+E\+ED}}
+\index{F\+E\+ED@{F\+E\+ED}!L\+P\+C\+\_\+\+W\+W\+D\+T\+\_\+T@{L\+P\+C\+\_\+\+W\+W\+D\+T\+\_\+T}}
+\subsubsection{\texorpdfstring{F\+E\+ED}{FEED}}
+{\footnotesize\ttfamily \hyperlink{core__sc300_8h_a7e25d9380f9ef903923964322e71f2f6}{\+\_\+\+\_\+O} uint32\+\_\+t L\+P\+C\+\_\+\+W\+W\+D\+T\+\_\+\+T\+::\+F\+E\+ED}
+
+Watchdog feed sequence register. Writing 0x\+AA followed by 0x55 to this register reloads the Watchdog timer with the value contained in W\+D\+TC. 
+
+Definition at line 55 of file wwdt\+\_\+18xx\+\_\+43xx.\+h.
+
+\mbox{\Hypertarget{struct_l_p_c___w_w_d_t___t_a92ea6cd2032ed81f7c5f626b48c4c772}\label{struct_l_p_c___w_w_d_t___t_a92ea6cd2032ed81f7c5f626b48c4c772}} 
+\index{L\+P\+C\+\_\+\+W\+W\+D\+T\+\_\+T@{L\+P\+C\+\_\+\+W\+W\+D\+T\+\_\+T}!M\+OD@{M\+OD}}
+\index{M\+OD@{M\+OD}!L\+P\+C\+\_\+\+W\+W\+D\+T\+\_\+T@{L\+P\+C\+\_\+\+W\+W\+D\+T\+\_\+T}}
+\subsubsection{\texorpdfstring{M\+OD}{MOD}}
+{\footnotesize\ttfamily \hyperlink{core__sc300_8h_aec43007d9998a0a0e01faede4133d6be}{\+\_\+\+\_\+\+IO} uint32\+\_\+t L\+P\+C\+\_\+\+W\+W\+D\+T\+\_\+\+T\+::\+M\+OD}
+
+$<$ W\+W\+DT Structure Watchdog mode register. This register contains the basic mode and status of the Watchdog Timer. 
+
+Definition at line 53 of file wwdt\+\_\+18xx\+\_\+43xx.\+h.
+
+\mbox{\Hypertarget{struct_l_p_c___w_w_d_t___t_af47cdcbd1ae7b068bf6b66566a140aa6}\label{struct_l_p_c___w_w_d_t___t_af47cdcbd1ae7b068bf6b66566a140aa6}} 
+\index{L\+P\+C\+\_\+\+W\+W\+D\+T\+\_\+T@{L\+P\+C\+\_\+\+W\+W\+D\+T\+\_\+T}!R\+E\+S\+E\+R\+V\+E\+D0@{R\+E\+S\+E\+R\+V\+E\+D0}}
+\index{R\+E\+S\+E\+R\+V\+E\+D0@{R\+E\+S\+E\+R\+V\+E\+D0}!L\+P\+C\+\_\+\+W\+W\+D\+T\+\_\+T@{L\+P\+C\+\_\+\+W\+W\+D\+T\+\_\+T}}
+\subsubsection{\texorpdfstring{R\+E\+S\+E\+R\+V\+E\+D0}{RESERVED0}}
+{\footnotesize\ttfamily \hyperlink{core__sc300_8h_af63697ed9952cc71e1225efe205f6cd3}{\+\_\+\+\_\+I} uint32\+\_\+t L\+P\+C\+\_\+\+W\+W\+D\+T\+\_\+\+T\+::\+R\+E\+S\+E\+R\+V\+E\+D0}
+
+
+
+Definition at line 57 of file wwdt\+\_\+18xx\+\_\+43xx.\+h.
+
+\mbox{\Hypertarget{struct_l_p_c___w_w_d_t___t_a8390ac91aea3330b363ad2fd5dc97f98}\label{struct_l_p_c___w_w_d_t___t_a8390ac91aea3330b363ad2fd5dc97f98}} 
+\index{L\+P\+C\+\_\+\+W\+W\+D\+T\+\_\+T@{L\+P\+C\+\_\+\+W\+W\+D\+T\+\_\+T}!TC@{TC}}
+\index{TC@{TC}!L\+P\+C\+\_\+\+W\+W\+D\+T\+\_\+T@{L\+P\+C\+\_\+\+W\+W\+D\+T\+\_\+T}}
+\subsubsection{\texorpdfstring{TC}{TC}}
+{\footnotesize\ttfamily \hyperlink{core__sc300_8h_aec43007d9998a0a0e01faede4133d6be}{\+\_\+\+\_\+\+IO} uint32\+\_\+t L\+P\+C\+\_\+\+W\+W\+D\+T\+\_\+\+T\+::\+TC}
+
+Watchdog timer constant register. This register determines the time-\/out value. 
+
+Definition at line 54 of file wwdt\+\_\+18xx\+\_\+43xx.\+h.
+
+\mbox{\Hypertarget{struct_l_p_c___w_w_d_t___t_a8257032e074282d5242e1d2a07537db1}\label{struct_l_p_c___w_w_d_t___t_a8257032e074282d5242e1d2a07537db1}} 
+\index{L\+P\+C\+\_\+\+W\+W\+D\+T\+\_\+T@{L\+P\+C\+\_\+\+W\+W\+D\+T\+\_\+T}!TV@{TV}}
+\index{TV@{TV}!L\+P\+C\+\_\+\+W\+W\+D\+T\+\_\+T@{L\+P\+C\+\_\+\+W\+W\+D\+T\+\_\+T}}
+\subsubsection{\texorpdfstring{TV}{TV}}
+{\footnotesize\ttfamily \hyperlink{core__sc300_8h_af63697ed9952cc71e1225efe205f6cd3}{\+\_\+\+\_\+I} uint32\+\_\+t L\+P\+C\+\_\+\+W\+W\+D\+T\+\_\+\+T\+::\+TV}
+
+Watchdog timer value register. This register reads out the current value of the Watchdog timer. 
+
+Definition at line 56 of file wwdt\+\_\+18xx\+\_\+43xx.\+h.
+
+\mbox{\Hypertarget{struct_l_p_c___w_w_d_t___t_a6efaed3716fc4661ef3a7a52bcc9028a}\label{struct_l_p_c___w_w_d_t___t_a6efaed3716fc4661ef3a7a52bcc9028a}} 
+\index{L\+P\+C\+\_\+\+W\+W\+D\+T\+\_\+T@{L\+P\+C\+\_\+\+W\+W\+D\+T\+\_\+T}!W\+A\+R\+N\+I\+NT@{W\+A\+R\+N\+I\+NT}}
+\index{W\+A\+R\+N\+I\+NT@{W\+A\+R\+N\+I\+NT}!L\+P\+C\+\_\+\+W\+W\+D\+T\+\_\+T@{L\+P\+C\+\_\+\+W\+W\+D\+T\+\_\+T}}
+\subsubsection{\texorpdfstring{W\+A\+R\+N\+I\+NT}{WARNINT}}
+{\footnotesize\ttfamily \hyperlink{core__sc300_8h_aec43007d9998a0a0e01faede4133d6be}{\+\_\+\+\_\+\+IO} uint32\+\_\+t L\+P\+C\+\_\+\+W\+W\+D\+T\+\_\+\+T\+::\+W\+A\+R\+N\+I\+NT}
+
+Watchdog warning interrupt register. This register contains the Watchdog warning interrupt compare value. 
+
+Definition at line 59 of file wwdt\+\_\+18xx\+\_\+43xx.\+h.
+
+\mbox{\Hypertarget{struct_l_p_c___w_w_d_t___t_abcc1eca1d9cc366b693a5333fb75d1e0}\label{struct_l_p_c___w_w_d_t___t_abcc1eca1d9cc366b693a5333fb75d1e0}} 
+\index{L\+P\+C\+\_\+\+W\+W\+D\+T\+\_\+T@{L\+P\+C\+\_\+\+W\+W\+D\+T\+\_\+T}!W\+I\+N\+D\+OW@{W\+I\+N\+D\+OW}}
+\index{W\+I\+N\+D\+OW@{W\+I\+N\+D\+OW}!L\+P\+C\+\_\+\+W\+W\+D\+T\+\_\+T@{L\+P\+C\+\_\+\+W\+W\+D\+T\+\_\+T}}
+\subsubsection{\texorpdfstring{W\+I\+N\+D\+OW}{WINDOW}}
+{\footnotesize\ttfamily \hyperlink{core__sc300_8h_aec43007d9998a0a0e01faede4133d6be}{\+\_\+\+\_\+\+IO} uint32\+\_\+t L\+P\+C\+\_\+\+W\+W\+D\+T\+\_\+\+T\+::\+W\+I\+N\+D\+OW}
+
+Watchdog timer window register. This register contains the Watchdog window value. 
+
+Definition at line 60 of file wwdt\+\_\+18xx\+\_\+43xx.\+h.
+
+
+
+The documentation for this struct was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+muju/externals/base/soc/lpc43xx/lpc\+\_\+chip\+\_\+43xx/inc/\hyperlink{wwdt__18xx__43xx_8h}{wwdt\+\_\+18xx\+\_\+43xx.\+h}\end{DoxyCompactItemize}

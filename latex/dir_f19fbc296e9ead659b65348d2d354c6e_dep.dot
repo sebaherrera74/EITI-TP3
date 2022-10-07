@@ -1,0 +1,11 @@
+digraph "muju/projects/baremetal" {
+  compound=true
+  node [ fontsize="10", fontname="Helvetica"];
+  edge [ labelfontsize="10", labelfontname="Helvetica"];
+  subgraph clusterdir_63fcc5e612deee2d4743056c2a80dc82 {
+    graph [ bgcolor="#ddddee", pencolor="black", label="projects" fontname="Helvetica", fontsize="10", URL="dir_63fcc5e612deee2d4743056c2a80dc82.html"]
+  dir_f19fbc296e9ead659b65348d2d354c6e [shape=box, label="baremetal", style="filled", fillcolor="#eeeeff", pencolor="black", URL="dir_f19fbc296e9ead659b65348d2d354c6e.html"];
+  }
+  dir_05ce73a3381df79db5ec1287846eaba2 [shape=box label="externals" fillcolor="white" style="filled" color="red" URL="dir_05ce73a3381df79db5ec1287846eaba2.html"];
+  dir_f19fbc296e9ead659b65348d2d354c6e->dir_05ce73a3381df79db5ec1287846eaba2 [headlabel="1", labeldistance=1.5 headhref="dir_000106_000035.html"];
+}

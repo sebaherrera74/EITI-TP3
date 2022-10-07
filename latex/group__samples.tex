@@ -1,0 +1,1262 @@
+\hypertarget{group__samples}{}\section{Sample projects}
+\label{group__samples}\index{Sample projects@{Sample projects}}
+
+
+Simple sample of use L\+PC H\+AL gpio functions.  
+
+
+\subsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#define \hyperlink{group__samples_ga5a11a7cbc215e25401541277460113a4}{L\+E\+D\+\_\+\+R\+\_\+\+P\+O\+RT}~2
+\item 
+\#define \hyperlink{group__samples_ga22f3cf4ef9dadad8d78d5c59999100b6}{L\+E\+D\+\_\+\+R\+\_\+\+P\+IN}~0
+\item 
+\#define \hyperlink{group__samples_ga55748801f9d61d2cdab4665b61f73147}{L\+E\+D\+\_\+\+R\+\_\+\+F\+U\+NC}~\hyperlink{group___s_c_u__18_x_x__43_x_x_gaf1b58bdd83fd9b8331aaa1d54420a656}{S\+C\+U\+\_\+\+M\+O\+D\+E\+\_\+\+F\+U\+N\+C4}
+\item 
+\#define \hyperlink{group__samples_ga938c5edc31fe4ba21d42ac85c739bc9b}{L\+E\+D\+\_\+\+R\+\_\+\+G\+P\+IO}~5
+\item 
+\#define \hyperlink{group__samples_ga770cf8cc93e5ceb6b347f655d5425f03}{L\+E\+D\+\_\+\+R\+\_\+\+B\+IT}~0
+\item 
+\#define \hyperlink{group__samples_ga1ef377b425c83109ec7998dc6fa71345}{L\+E\+D\+\_\+\+G\+\_\+\+P\+O\+RT}~2
+\item 
+\#define \hyperlink{group__samples_ga3d793023ce3cf36a952b0b68ab1a389a}{L\+E\+D\+\_\+\+G\+\_\+\+P\+IN}~1
+\item 
+\#define \hyperlink{group__samples_ga5a49819d3be4ff9d93877a0cacb232f3}{L\+E\+D\+\_\+\+G\+\_\+\+F\+U\+NC}~\hyperlink{group___s_c_u__18_x_x__43_x_x_gaf1b58bdd83fd9b8331aaa1d54420a656}{S\+C\+U\+\_\+\+M\+O\+D\+E\+\_\+\+F\+U\+N\+C4}
+\item 
+\#define \hyperlink{group__samples_gab4f388402d4d678445fee6617f96128d}{L\+E\+D\+\_\+\+G\+\_\+\+G\+P\+IO}~5
+\item 
+\#define \hyperlink{group__samples_gae425f2df67fc802fcf8a442a57a92c81}{L\+E\+D\+\_\+\+G\+\_\+\+B\+IT}~1
+\item 
+\#define \hyperlink{group__samples_ga24baefd05a8dea1a7241e288a735c17c}{L\+E\+D\+\_\+\+B\+\_\+\+P\+O\+RT}~2
+\item 
+\#define \hyperlink{group__samples_gac210a43d7fede956117cfb90baff9511}{L\+E\+D\+\_\+\+B\+\_\+\+P\+IN}~2
+\item 
+\#define \hyperlink{group__samples_ga9e3fbcc848cb89567f5a0a217030ddff}{L\+E\+D\+\_\+\+B\+\_\+\+F\+U\+NC}~\hyperlink{group___s_c_u__18_x_x__43_x_x_gaf1b58bdd83fd9b8331aaa1d54420a656}{S\+C\+U\+\_\+\+M\+O\+D\+E\+\_\+\+F\+U\+N\+C4}
+\item 
+\#define \hyperlink{group__samples_ga91901ef42fb89387a433e685cb3f8745}{L\+E\+D\+\_\+\+B\+\_\+\+G\+P\+IO}~5
+\item 
+\#define \hyperlink{group__samples_ga50b5b18af7a51f83133cb0ad51380c7d}{L\+E\+D\+\_\+\+B\+\_\+\+B\+IT}~2
+\item 
+\#define \hyperlink{group__samples_ga2367ab7af33710f8502250e8bd2c1dc0}{L\+E\+D\+\_\+1\+\_\+\+P\+O\+RT}~2
+\item 
+\#define \hyperlink{group__samples_ga620741f492787e04779bab21e6658113}{L\+E\+D\+\_\+1\+\_\+\+P\+IN}~10
+\item 
+\#define \hyperlink{group__samples_gaf4e0ca171c51b5c66dd6249d767bac5e}{L\+E\+D\+\_\+1\+\_\+\+F\+U\+NC}~\hyperlink{group___s_c_u__18_x_x__43_x_x_gaec79b551b98008d8986e719926f254bc}{S\+C\+U\+\_\+\+M\+O\+D\+E\+\_\+\+F\+U\+N\+C0}
+\item 
+\#define \hyperlink{group__samples_ga37154c806d85fb9f9158f86bb55e9ee0}{L\+E\+D\+\_\+1\+\_\+\+G\+P\+IO}~0
+\item 
+\#define \hyperlink{group__samples_ga3fe9954e37c14ff0232f26822e5df035}{L\+E\+D\+\_\+1\+\_\+\+B\+IT}~14
+\item 
+\#define \hyperlink{group__samples_ga41f8586c0d98e483bba52f73e1a183b2}{L\+E\+D\+\_\+2\+\_\+\+P\+O\+RT}~2
+\item 
+\#define \hyperlink{group__samples_ga78579f743b58c20ec8d10120d8381148}{L\+E\+D\+\_\+2\+\_\+\+P\+IN}~11
+\item 
+\#define \hyperlink{group__samples_gaf7a6713ffe71577e7b394f5456b6dcea}{L\+E\+D\+\_\+2\+\_\+\+F\+U\+NC}~\hyperlink{group___s_c_u__18_x_x__43_x_x_gaec79b551b98008d8986e719926f254bc}{S\+C\+U\+\_\+\+M\+O\+D\+E\+\_\+\+F\+U\+N\+C0}
+\item 
+\#define \hyperlink{group__samples_ga4285bdd58098064c3bab3976a78b26fa}{L\+E\+D\+\_\+2\+\_\+\+G\+P\+IO}~1
+\item 
+\#define \hyperlink{group__samples_gaef7b45a64de5055d117ed11ec76ee9f5}{L\+E\+D\+\_\+2\+\_\+\+B\+IT}~11
+\item 
+\#define \hyperlink{group__samples_gaaa65a4a427142f3ecdc5f1fe415d190c}{L\+E\+D\+\_\+3\+\_\+\+P\+O\+RT}~2
+\item 
+\#define \hyperlink{group__samples_ga5ea98da36d05b171b54c342bcf4a35f7}{L\+E\+D\+\_\+3\+\_\+\+P\+IN}~12
+\item 
+\#define \hyperlink{group__samples_gab0622590a012697e9e5d95cff50cad26}{L\+E\+D\+\_\+3\+\_\+\+F\+U\+NC}~\hyperlink{group___s_c_u__18_x_x__43_x_x_gaec79b551b98008d8986e719926f254bc}{S\+C\+U\+\_\+\+M\+O\+D\+E\+\_\+\+F\+U\+N\+C0}
+\item 
+\#define \hyperlink{group__samples_gadd2d323f8eb544f1ab84762f94e44bd4}{L\+E\+D\+\_\+3\+\_\+\+G\+P\+IO}~1
+\item 
+\#define \hyperlink{group__samples_gab9b4d582a53ac2329ac4b7527561fa80}{L\+E\+D\+\_\+3\+\_\+\+B\+IT}~12
+\item 
+\#define \hyperlink{group__samples_ga8646ae3b4a7ad2be7610ff81e3d73c0f}{T\+E\+C\+\_\+1\+\_\+\+P\+O\+RT}~1
+\item 
+\#define \hyperlink{group__samples_gabbb083565fd13306450dfc5fdcf934c0}{T\+E\+C\+\_\+1\+\_\+\+P\+IN}~0
+\item 
+\#define \hyperlink{group__samples_ga8ae57a649603bf7f33d0e896b034bd41}{T\+E\+C\+\_\+1\+\_\+\+F\+U\+NC}~\hyperlink{group___s_c_u__18_x_x__43_x_x_gaec79b551b98008d8986e719926f254bc}{S\+C\+U\+\_\+\+M\+O\+D\+E\+\_\+\+F\+U\+N\+C0}
+\item 
+\#define \hyperlink{group__samples_ga8731b2048404c4c819291bebfc6a1e6a}{T\+E\+C\+\_\+1\+\_\+\+G\+P\+IO}~0
+\item 
+\#define \hyperlink{group__samples_ga0f27cf5eeffd9d5f04a6a4c57bbdbae7}{T\+E\+C\+\_\+1\+\_\+\+B\+IT}~4
+\item 
+\#define \hyperlink{group__samples_ga6dd94a0728943a6bb0706bae78aa529f}{T\+E\+C\+\_\+2\+\_\+\+P\+O\+RT}~1
+\item 
+\#define \hyperlink{group__samples_gae23ce57ac09e13a68a782d5bb61c8a30}{T\+E\+C\+\_\+2\+\_\+\+P\+IN}~1
+\item 
+\#define \hyperlink{group__samples_gae81d46d99322159370646c09d852af70}{T\+E\+C\+\_\+2\+\_\+\+F\+U\+NC}~\hyperlink{group___s_c_u__18_x_x__43_x_x_gaec79b551b98008d8986e719926f254bc}{S\+C\+U\+\_\+\+M\+O\+D\+E\+\_\+\+F\+U\+N\+C0}
+\item 
+\#define \hyperlink{group__samples_ga83ce1f0ab51ee7b4df55e629cdfc52d9}{T\+E\+C\+\_\+2\+\_\+\+G\+P\+IO}~0
+\item 
+\#define \hyperlink{group__samples_gaed7549a304721e36693036c8a289ff4c}{T\+E\+C\+\_\+2\+\_\+\+B\+IT}~8
+\item 
+\#define \hyperlink{group__samples_gac948c6a2caf0ef5cde7fa2c2e94fddb0}{T\+E\+C\+\_\+3\+\_\+\+P\+O\+RT}~1
+\item 
+\#define \hyperlink{group__samples_gab976c4177676c5c89497cb89480e5dfe}{T\+E\+C\+\_\+3\+\_\+\+P\+IN}~2
+\item 
+\#define \hyperlink{group__samples_ga0d28555b6255cd5bd89f5618626f044e}{T\+E\+C\+\_\+3\+\_\+\+F\+U\+NC}~\hyperlink{group___s_c_u__18_x_x__43_x_x_gaec79b551b98008d8986e719926f254bc}{S\+C\+U\+\_\+\+M\+O\+D\+E\+\_\+\+F\+U\+N\+C0}
+\item 
+\#define \hyperlink{group__samples_gae8728c8f2e4279383925ff93a183b407}{T\+E\+C\+\_\+3\+\_\+\+G\+P\+IO}~0
+\item 
+\#define \hyperlink{group__samples_ga64392cf03fba776f8a9dc238e25ec184}{T\+E\+C\+\_\+3\+\_\+\+B\+IT}~9
+\item 
+\#define \hyperlink{group__samples_gadd513c832f5c617281c5df0dc67ae80c}{T\+E\+C\+\_\+4\+\_\+\+P\+O\+RT}~1
+\item 
+\#define \hyperlink{group__samples_ga0b2447cd531de479b88f58f819566522}{T\+E\+C\+\_\+4\+\_\+\+P\+IN}~6
+\item 
+\#define \hyperlink{group__samples_ga75840b109439b1e90546485e16247097}{T\+E\+C\+\_\+4\+\_\+\+F\+U\+NC}~\hyperlink{group___s_c_u__18_x_x__43_x_x_gaec79b551b98008d8986e719926f254bc}{S\+C\+U\+\_\+\+M\+O\+D\+E\+\_\+\+F\+U\+N\+C0}
+\item 
+\#define \hyperlink{group__samples_gaa5418f15596d7ada110c4105aa70e561}{T\+E\+C\+\_\+4\+\_\+\+G\+P\+IO}~1
+\item 
+\#define \hyperlink{group__samples_gac7c8a49f0602d0aeee33923ce8708a4b}{T\+E\+C\+\_\+4\+\_\+\+B\+IT}~9
+\item 
+\#define \hyperlink{group__samples_ga446e415fc7a5645de4a012cf8a3cdf90}{W\+A\+I\+T\+\_\+\+C\+O\+U\+NT}~1000000
+\item 
+\#define \hyperlink{group__samples_ga5a11a7cbc215e25401541277460113a4}{L\+E\+D\+\_\+\+R\+\_\+\+P\+O\+RT}~2
+\item 
+\#define \hyperlink{group__samples_ga22f3cf4ef9dadad8d78d5c59999100b6}{L\+E\+D\+\_\+\+R\+\_\+\+P\+IN}~0
+\item 
+\#define \hyperlink{group__samples_ga55748801f9d61d2cdab4665b61f73147}{L\+E\+D\+\_\+\+R\+\_\+\+F\+U\+NC}~\hyperlink{group___s_c_u__18_x_x__43_x_x_gaf1b58bdd83fd9b8331aaa1d54420a656}{S\+C\+U\+\_\+\+M\+O\+D\+E\+\_\+\+F\+U\+N\+C4}
+\item 
+\#define \hyperlink{group__samples_ga938c5edc31fe4ba21d42ac85c739bc9b}{L\+E\+D\+\_\+\+R\+\_\+\+G\+P\+IO}~5
+\item 
+\#define \hyperlink{group__samples_ga770cf8cc93e5ceb6b347f655d5425f03}{L\+E\+D\+\_\+\+R\+\_\+\+B\+IT}~0
+\item 
+\#define \hyperlink{group__samples_ga1ef377b425c83109ec7998dc6fa71345}{L\+E\+D\+\_\+\+G\+\_\+\+P\+O\+RT}~2
+\item 
+\#define \hyperlink{group__samples_ga3d793023ce3cf36a952b0b68ab1a389a}{L\+E\+D\+\_\+\+G\+\_\+\+P\+IN}~1
+\item 
+\#define \hyperlink{group__samples_ga5a49819d3be4ff9d93877a0cacb232f3}{L\+E\+D\+\_\+\+G\+\_\+\+F\+U\+NC}~\hyperlink{group___s_c_u__18_x_x__43_x_x_gaf1b58bdd83fd9b8331aaa1d54420a656}{S\+C\+U\+\_\+\+M\+O\+D\+E\+\_\+\+F\+U\+N\+C4}
+\item 
+\#define \hyperlink{group__samples_gab4f388402d4d678445fee6617f96128d}{L\+E\+D\+\_\+\+G\+\_\+\+G\+P\+IO}~5
+\item 
+\#define \hyperlink{group__samples_gae425f2df67fc802fcf8a442a57a92c81}{L\+E\+D\+\_\+\+G\+\_\+\+B\+IT}~1
+\item 
+\#define \hyperlink{group__samples_ga24baefd05a8dea1a7241e288a735c17c}{L\+E\+D\+\_\+\+B\+\_\+\+P\+O\+RT}~2
+\item 
+\#define \hyperlink{group__samples_gac210a43d7fede956117cfb90baff9511}{L\+E\+D\+\_\+\+B\+\_\+\+P\+IN}~2
+\item 
+\#define \hyperlink{group__samples_ga9e3fbcc848cb89567f5a0a217030ddff}{L\+E\+D\+\_\+\+B\+\_\+\+F\+U\+NC}~\hyperlink{group___s_c_u__18_x_x__43_x_x_gaf1b58bdd83fd9b8331aaa1d54420a656}{S\+C\+U\+\_\+\+M\+O\+D\+E\+\_\+\+F\+U\+N\+C4}
+\item 
+\#define \hyperlink{group__samples_ga91901ef42fb89387a433e685cb3f8745}{L\+E\+D\+\_\+\+B\+\_\+\+G\+P\+IO}~5
+\item 
+\#define \hyperlink{group__samples_ga50b5b18af7a51f83133cb0ad51380c7d}{L\+E\+D\+\_\+\+B\+\_\+\+B\+IT}~2
+\item 
+\#define \hyperlink{group__samples_ga2367ab7af33710f8502250e8bd2c1dc0}{L\+E\+D\+\_\+1\+\_\+\+P\+O\+RT}~2
+\item 
+\#define \hyperlink{group__samples_ga620741f492787e04779bab21e6658113}{L\+E\+D\+\_\+1\+\_\+\+P\+IN}~10
+\item 
+\#define \hyperlink{group__samples_gaf4e0ca171c51b5c66dd6249d767bac5e}{L\+E\+D\+\_\+1\+\_\+\+F\+U\+NC}~\hyperlink{group___s_c_u__18_x_x__43_x_x_gaec79b551b98008d8986e719926f254bc}{S\+C\+U\+\_\+\+M\+O\+D\+E\+\_\+\+F\+U\+N\+C0}
+\item 
+\#define \hyperlink{group__samples_ga37154c806d85fb9f9158f86bb55e9ee0}{L\+E\+D\+\_\+1\+\_\+\+G\+P\+IO}~0
+\item 
+\#define \hyperlink{group__samples_ga3fe9954e37c14ff0232f26822e5df035}{L\+E\+D\+\_\+1\+\_\+\+B\+IT}~14
+\item 
+\#define \hyperlink{group__samples_ga41f8586c0d98e483bba52f73e1a183b2}{L\+E\+D\+\_\+2\+\_\+\+P\+O\+RT}~2
+\item 
+\#define \hyperlink{group__samples_ga78579f743b58c20ec8d10120d8381148}{L\+E\+D\+\_\+2\+\_\+\+P\+IN}~11
+\item 
+\#define \hyperlink{group__samples_gaf7a6713ffe71577e7b394f5456b6dcea}{L\+E\+D\+\_\+2\+\_\+\+F\+U\+NC}~\hyperlink{group___s_c_u__18_x_x__43_x_x_gaec79b551b98008d8986e719926f254bc}{S\+C\+U\+\_\+\+M\+O\+D\+E\+\_\+\+F\+U\+N\+C0}
+\item 
+\#define \hyperlink{group__samples_ga4285bdd58098064c3bab3976a78b26fa}{L\+E\+D\+\_\+2\+\_\+\+G\+P\+IO}~1
+\item 
+\#define \hyperlink{group__samples_gaef7b45a64de5055d117ed11ec76ee9f5}{L\+E\+D\+\_\+2\+\_\+\+B\+IT}~11
+\item 
+\#define \hyperlink{group__samples_gaaa65a4a427142f3ecdc5f1fe415d190c}{L\+E\+D\+\_\+3\+\_\+\+P\+O\+RT}~2
+\item 
+\#define \hyperlink{group__samples_ga5ea98da36d05b171b54c342bcf4a35f7}{L\+E\+D\+\_\+3\+\_\+\+P\+IN}~12
+\item 
+\#define \hyperlink{group__samples_gab0622590a012697e9e5d95cff50cad26}{L\+E\+D\+\_\+3\+\_\+\+F\+U\+NC}~\hyperlink{group___s_c_u__18_x_x__43_x_x_gaec79b551b98008d8986e719926f254bc}{S\+C\+U\+\_\+\+M\+O\+D\+E\+\_\+\+F\+U\+N\+C0}
+\item 
+\#define \hyperlink{group__samples_gadd2d323f8eb544f1ab84762f94e44bd4}{L\+E\+D\+\_\+3\+\_\+\+G\+P\+IO}~1
+\item 
+\#define \hyperlink{group__samples_gab9b4d582a53ac2329ac4b7527561fa80}{L\+E\+D\+\_\+3\+\_\+\+B\+IT}~12
+\item 
+\#define \hyperlink{group__samples_ga8646ae3b4a7ad2be7610ff81e3d73c0f}{T\+E\+C\+\_\+1\+\_\+\+P\+O\+RT}~1
+\item 
+\#define \hyperlink{group__samples_gabbb083565fd13306450dfc5fdcf934c0}{T\+E\+C\+\_\+1\+\_\+\+P\+IN}~0
+\item 
+\#define \hyperlink{group__samples_ga8ae57a649603bf7f33d0e896b034bd41}{T\+E\+C\+\_\+1\+\_\+\+F\+U\+NC}~\hyperlink{group___s_c_u__18_x_x__43_x_x_gaec79b551b98008d8986e719926f254bc}{S\+C\+U\+\_\+\+M\+O\+D\+E\+\_\+\+F\+U\+N\+C0}
+\item 
+\#define \hyperlink{group__samples_ga8731b2048404c4c819291bebfc6a1e6a}{T\+E\+C\+\_\+1\+\_\+\+G\+P\+IO}~0
+\item 
+\#define \hyperlink{group__samples_ga0f27cf5eeffd9d5f04a6a4c57bbdbae7}{T\+E\+C\+\_\+1\+\_\+\+B\+IT}~4
+\item 
+\#define \hyperlink{group__samples_ga6dd94a0728943a6bb0706bae78aa529f}{T\+E\+C\+\_\+2\+\_\+\+P\+O\+RT}~1
+\item 
+\#define \hyperlink{group__samples_gae23ce57ac09e13a68a782d5bb61c8a30}{T\+E\+C\+\_\+2\+\_\+\+P\+IN}~1
+\item 
+\#define \hyperlink{group__samples_gae81d46d99322159370646c09d852af70}{T\+E\+C\+\_\+2\+\_\+\+F\+U\+NC}~\hyperlink{group___s_c_u__18_x_x__43_x_x_gaec79b551b98008d8986e719926f254bc}{S\+C\+U\+\_\+\+M\+O\+D\+E\+\_\+\+F\+U\+N\+C0}
+\item 
+\#define \hyperlink{group__samples_ga83ce1f0ab51ee7b4df55e629cdfc52d9}{T\+E\+C\+\_\+2\+\_\+\+G\+P\+IO}~0
+\item 
+\#define \hyperlink{group__samples_gaed7549a304721e36693036c8a289ff4c}{T\+E\+C\+\_\+2\+\_\+\+B\+IT}~8
+\item 
+\#define \hyperlink{group__samples_gac948c6a2caf0ef5cde7fa2c2e94fddb0}{T\+E\+C\+\_\+3\+\_\+\+P\+O\+RT}~1
+\item 
+\#define \hyperlink{group__samples_gab976c4177676c5c89497cb89480e5dfe}{T\+E\+C\+\_\+3\+\_\+\+P\+IN}~2
+\item 
+\#define \hyperlink{group__samples_ga0d28555b6255cd5bd89f5618626f044e}{T\+E\+C\+\_\+3\+\_\+\+F\+U\+NC}~\hyperlink{group___s_c_u__18_x_x__43_x_x_gaec79b551b98008d8986e719926f254bc}{S\+C\+U\+\_\+\+M\+O\+D\+E\+\_\+\+F\+U\+N\+C0}
+\item 
+\#define \hyperlink{group__samples_gae8728c8f2e4279383925ff93a183b407}{T\+E\+C\+\_\+3\+\_\+\+G\+P\+IO}~0
+\item 
+\#define \hyperlink{group__samples_ga64392cf03fba776f8a9dc238e25ec184}{T\+E\+C\+\_\+3\+\_\+\+B\+IT}~9
+\item 
+\#define \hyperlink{group__samples_gadd513c832f5c617281c5df0dc67ae80c}{T\+E\+C\+\_\+4\+\_\+\+P\+O\+RT}~1
+\item 
+\#define \hyperlink{group__samples_ga0b2447cd531de479b88f58f819566522}{T\+E\+C\+\_\+4\+\_\+\+P\+IN}~6
+\item 
+\#define \hyperlink{group__samples_ga75840b109439b1e90546485e16247097}{T\+E\+C\+\_\+4\+\_\+\+F\+U\+NC}~\hyperlink{group___s_c_u__18_x_x__43_x_x_gaec79b551b98008d8986e719926f254bc}{S\+C\+U\+\_\+\+M\+O\+D\+E\+\_\+\+F\+U\+N\+C0}
+\item 
+\#define \hyperlink{group__samples_gaa5418f15596d7ada110c4105aa70e561}{T\+E\+C\+\_\+4\+\_\+\+G\+P\+IO}~1
+\item 
+\#define \hyperlink{group__samples_gac7c8a49f0602d0aeee33923ce8708a4b}{T\+E\+C\+\_\+4\+\_\+\+B\+IT}~9
+\end{DoxyCompactItemize}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+int \hyperlink{group__samples_ga840291bc02cba5474a4cb46a9b9566fe}{main} (void)
+\begin{DoxyCompactList}\small\item\em Función principal del programa. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Simple sample of use L\+PC H\+AL gpio functions. 
+
+Blinking sample project.
+
+Sample projects to use as a starting point
+
+Sample projects 
+
+\subsection{Macro Definition Documentation}
+\mbox{\Hypertarget{group__samples_ga3fe9954e37c14ff0232f26822e5df035}\label{group__samples_ga3fe9954e37c14ff0232f26822e5df035}} 
+\index{Sample projects@{Sample projects}!L\+E\+D\+\_\+1\+\_\+\+B\+IT@{L\+E\+D\+\_\+1\+\_\+\+B\+IT}}
+\index{L\+E\+D\+\_\+1\+\_\+\+B\+IT@{L\+E\+D\+\_\+1\+\_\+\+B\+IT}!Sample projects@{Sample projects}}
+\subsubsection{\texorpdfstring{L\+E\+D\+\_\+1\+\_\+\+B\+IT}{LED\_1\_BIT}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily \#define L\+E\+D\+\_\+1\+\_\+\+B\+IT~14}
+
+
+
+Definition at line 68 of file main.\+c.
+
+\mbox{\Hypertarget{group__samples_ga3fe9954e37c14ff0232f26822e5df035}\label{group__samples_ga3fe9954e37c14ff0232f26822e5df035}} 
+\index{Sample projects@{Sample projects}!L\+E\+D\+\_\+1\+\_\+\+B\+IT@{L\+E\+D\+\_\+1\+\_\+\+B\+IT}}
+\index{L\+E\+D\+\_\+1\+\_\+\+B\+IT@{L\+E\+D\+\_\+1\+\_\+\+B\+IT}!Sample projects@{Sample projects}}
+\subsubsection{\texorpdfstring{L\+E\+D\+\_\+1\+\_\+\+B\+IT}{LED\_1\_BIT}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily \#define L\+E\+D\+\_\+1\+\_\+\+B\+IT~14}
+
+
+
+Definition at line 70 of file baremetal.\+c.
+
+\mbox{\Hypertarget{group__samples_gaf4e0ca171c51b5c66dd6249d767bac5e}\label{group__samples_gaf4e0ca171c51b5c66dd6249d767bac5e}} 
+\index{Sample projects@{Sample projects}!L\+E\+D\+\_\+1\+\_\+\+F\+U\+NC@{L\+E\+D\+\_\+1\+\_\+\+F\+U\+NC}}
+\index{L\+E\+D\+\_\+1\+\_\+\+F\+U\+NC@{L\+E\+D\+\_\+1\+\_\+\+F\+U\+NC}!Sample projects@{Sample projects}}
+\subsubsection{\texorpdfstring{L\+E\+D\+\_\+1\+\_\+\+F\+U\+NC}{LED\_1\_FUNC}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily \#define L\+E\+D\+\_\+1\+\_\+\+F\+U\+NC~\hyperlink{group___s_c_u__18_x_x__43_x_x_gaec79b551b98008d8986e719926f254bc}{S\+C\+U\+\_\+\+M\+O\+D\+E\+\_\+\+F\+U\+N\+C0}}
+
+
+
+Definition at line 66 of file main.\+c.
+
+\mbox{\Hypertarget{group__samples_gaf4e0ca171c51b5c66dd6249d767bac5e}\label{group__samples_gaf4e0ca171c51b5c66dd6249d767bac5e}} 
+\index{Sample projects@{Sample projects}!L\+E\+D\+\_\+1\+\_\+\+F\+U\+NC@{L\+E\+D\+\_\+1\+\_\+\+F\+U\+NC}}
+\index{L\+E\+D\+\_\+1\+\_\+\+F\+U\+NC@{L\+E\+D\+\_\+1\+\_\+\+F\+U\+NC}!Sample projects@{Sample projects}}
+\subsubsection{\texorpdfstring{L\+E\+D\+\_\+1\+\_\+\+F\+U\+NC}{LED\_1\_FUNC}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily \#define L\+E\+D\+\_\+1\+\_\+\+F\+U\+NC~\hyperlink{group___s_c_u__18_x_x__43_x_x_gaec79b551b98008d8986e719926f254bc}{S\+C\+U\+\_\+\+M\+O\+D\+E\+\_\+\+F\+U\+N\+C0}}
+
+
+
+Definition at line 68 of file baremetal.\+c.
+
+\mbox{\Hypertarget{group__samples_ga37154c806d85fb9f9158f86bb55e9ee0}\label{group__samples_ga37154c806d85fb9f9158f86bb55e9ee0}} 
+\index{Sample projects@{Sample projects}!L\+E\+D\+\_\+1\+\_\+\+G\+P\+IO@{L\+E\+D\+\_\+1\+\_\+\+G\+P\+IO}}
+\index{L\+E\+D\+\_\+1\+\_\+\+G\+P\+IO@{L\+E\+D\+\_\+1\+\_\+\+G\+P\+IO}!Sample projects@{Sample projects}}
+\subsubsection{\texorpdfstring{L\+E\+D\+\_\+1\+\_\+\+G\+P\+IO}{LED\_1\_GPIO}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily \#define L\+E\+D\+\_\+1\+\_\+\+G\+P\+IO~0}
+
+
+
+Definition at line 67 of file main.\+c.
+
+\mbox{\Hypertarget{group__samples_ga37154c806d85fb9f9158f86bb55e9ee0}\label{group__samples_ga37154c806d85fb9f9158f86bb55e9ee0}} 
+\index{Sample projects@{Sample projects}!L\+E\+D\+\_\+1\+\_\+\+G\+P\+IO@{L\+E\+D\+\_\+1\+\_\+\+G\+P\+IO}}
+\index{L\+E\+D\+\_\+1\+\_\+\+G\+P\+IO@{L\+E\+D\+\_\+1\+\_\+\+G\+P\+IO}!Sample projects@{Sample projects}}
+\subsubsection{\texorpdfstring{L\+E\+D\+\_\+1\+\_\+\+G\+P\+IO}{LED\_1\_GPIO}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily \#define L\+E\+D\+\_\+1\+\_\+\+G\+P\+IO~0}
+
+
+
+Definition at line 69 of file baremetal.\+c.
+
+\mbox{\Hypertarget{group__samples_ga620741f492787e04779bab21e6658113}\label{group__samples_ga620741f492787e04779bab21e6658113}} 
+\index{Sample projects@{Sample projects}!L\+E\+D\+\_\+1\+\_\+\+P\+IN@{L\+E\+D\+\_\+1\+\_\+\+P\+IN}}
+\index{L\+E\+D\+\_\+1\+\_\+\+P\+IN@{L\+E\+D\+\_\+1\+\_\+\+P\+IN}!Sample projects@{Sample projects}}
+\subsubsection{\texorpdfstring{L\+E\+D\+\_\+1\+\_\+\+P\+IN}{LED\_1\_PIN}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily \#define L\+E\+D\+\_\+1\+\_\+\+P\+IN~10}
+
+
+
+Definition at line 65 of file main.\+c.
+
+\mbox{\Hypertarget{group__samples_ga620741f492787e04779bab21e6658113}\label{group__samples_ga620741f492787e04779bab21e6658113}} 
+\index{Sample projects@{Sample projects}!L\+E\+D\+\_\+1\+\_\+\+P\+IN@{L\+E\+D\+\_\+1\+\_\+\+P\+IN}}
+\index{L\+E\+D\+\_\+1\+\_\+\+P\+IN@{L\+E\+D\+\_\+1\+\_\+\+P\+IN}!Sample projects@{Sample projects}}
+\subsubsection{\texorpdfstring{L\+E\+D\+\_\+1\+\_\+\+P\+IN}{LED\_1\_PIN}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily \#define L\+E\+D\+\_\+1\+\_\+\+P\+IN~10}
+
+
+
+Definition at line 67 of file baremetal.\+c.
+
+\mbox{\Hypertarget{group__samples_ga2367ab7af33710f8502250e8bd2c1dc0}\label{group__samples_ga2367ab7af33710f8502250e8bd2c1dc0}} 
+\index{Sample projects@{Sample projects}!L\+E\+D\+\_\+1\+\_\+\+P\+O\+RT@{L\+E\+D\+\_\+1\+\_\+\+P\+O\+RT}}
+\index{L\+E\+D\+\_\+1\+\_\+\+P\+O\+RT@{L\+E\+D\+\_\+1\+\_\+\+P\+O\+RT}!Sample projects@{Sample projects}}
+\subsubsection{\texorpdfstring{L\+E\+D\+\_\+1\+\_\+\+P\+O\+RT}{LED\_1\_PORT}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily \#define L\+E\+D\+\_\+1\+\_\+\+P\+O\+RT~2}
+
+
+
+Definition at line 64 of file main.\+c.
+
+\mbox{\Hypertarget{group__samples_ga2367ab7af33710f8502250e8bd2c1dc0}\label{group__samples_ga2367ab7af33710f8502250e8bd2c1dc0}} 
+\index{Sample projects@{Sample projects}!L\+E\+D\+\_\+1\+\_\+\+P\+O\+RT@{L\+E\+D\+\_\+1\+\_\+\+P\+O\+RT}}
+\index{L\+E\+D\+\_\+1\+\_\+\+P\+O\+RT@{L\+E\+D\+\_\+1\+\_\+\+P\+O\+RT}!Sample projects@{Sample projects}}
+\subsubsection{\texorpdfstring{L\+E\+D\+\_\+1\+\_\+\+P\+O\+RT}{LED\_1\_PORT}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily \#define L\+E\+D\+\_\+1\+\_\+\+P\+O\+RT~2}
+
+
+
+Definition at line 66 of file baremetal.\+c.
+
+\mbox{\Hypertarget{group__samples_gaef7b45a64de5055d117ed11ec76ee9f5}\label{group__samples_gaef7b45a64de5055d117ed11ec76ee9f5}} 
+\index{Sample projects@{Sample projects}!L\+E\+D\+\_\+2\+\_\+\+B\+IT@{L\+E\+D\+\_\+2\+\_\+\+B\+IT}}
+\index{L\+E\+D\+\_\+2\+\_\+\+B\+IT@{L\+E\+D\+\_\+2\+\_\+\+B\+IT}!Sample projects@{Sample projects}}
+\subsubsection{\texorpdfstring{L\+E\+D\+\_\+2\+\_\+\+B\+IT}{LED\_2\_BIT}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily \#define L\+E\+D\+\_\+2\+\_\+\+B\+IT~11}
+
+
+
+Definition at line 74 of file main.\+c.
+
+\mbox{\Hypertarget{group__samples_gaef7b45a64de5055d117ed11ec76ee9f5}\label{group__samples_gaef7b45a64de5055d117ed11ec76ee9f5}} 
+\index{Sample projects@{Sample projects}!L\+E\+D\+\_\+2\+\_\+\+B\+IT@{L\+E\+D\+\_\+2\+\_\+\+B\+IT}}
+\index{L\+E\+D\+\_\+2\+\_\+\+B\+IT@{L\+E\+D\+\_\+2\+\_\+\+B\+IT}!Sample projects@{Sample projects}}
+\subsubsection{\texorpdfstring{L\+E\+D\+\_\+2\+\_\+\+B\+IT}{LED\_2\_BIT}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily \#define L\+E\+D\+\_\+2\+\_\+\+B\+IT~11}
+
+
+
+Definition at line 76 of file baremetal.\+c.
+
+\mbox{\Hypertarget{group__samples_gaf7a6713ffe71577e7b394f5456b6dcea}\label{group__samples_gaf7a6713ffe71577e7b394f5456b6dcea}} 
+\index{Sample projects@{Sample projects}!L\+E\+D\+\_\+2\+\_\+\+F\+U\+NC@{L\+E\+D\+\_\+2\+\_\+\+F\+U\+NC}}
+\index{L\+E\+D\+\_\+2\+\_\+\+F\+U\+NC@{L\+E\+D\+\_\+2\+\_\+\+F\+U\+NC}!Sample projects@{Sample projects}}
+\subsubsection{\texorpdfstring{L\+E\+D\+\_\+2\+\_\+\+F\+U\+NC}{LED\_2\_FUNC}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily \#define L\+E\+D\+\_\+2\+\_\+\+F\+U\+NC~\hyperlink{group___s_c_u__18_x_x__43_x_x_gaec79b551b98008d8986e719926f254bc}{S\+C\+U\+\_\+\+M\+O\+D\+E\+\_\+\+F\+U\+N\+C0}}
+
+
+
+Definition at line 72 of file main.\+c.
+
+\mbox{\Hypertarget{group__samples_gaf7a6713ffe71577e7b394f5456b6dcea}\label{group__samples_gaf7a6713ffe71577e7b394f5456b6dcea}} 
+\index{Sample projects@{Sample projects}!L\+E\+D\+\_\+2\+\_\+\+F\+U\+NC@{L\+E\+D\+\_\+2\+\_\+\+F\+U\+NC}}
+\index{L\+E\+D\+\_\+2\+\_\+\+F\+U\+NC@{L\+E\+D\+\_\+2\+\_\+\+F\+U\+NC}!Sample projects@{Sample projects}}
+\subsubsection{\texorpdfstring{L\+E\+D\+\_\+2\+\_\+\+F\+U\+NC}{LED\_2\_FUNC}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily \#define L\+E\+D\+\_\+2\+\_\+\+F\+U\+NC~\hyperlink{group___s_c_u__18_x_x__43_x_x_gaec79b551b98008d8986e719926f254bc}{S\+C\+U\+\_\+\+M\+O\+D\+E\+\_\+\+F\+U\+N\+C0}}
+
+
+
+Definition at line 74 of file baremetal.\+c.
+
+\mbox{\Hypertarget{group__samples_ga4285bdd58098064c3bab3976a78b26fa}\label{group__samples_ga4285bdd58098064c3bab3976a78b26fa}} 
+\index{Sample projects@{Sample projects}!L\+E\+D\+\_\+2\+\_\+\+G\+P\+IO@{L\+E\+D\+\_\+2\+\_\+\+G\+P\+IO}}
+\index{L\+E\+D\+\_\+2\+\_\+\+G\+P\+IO@{L\+E\+D\+\_\+2\+\_\+\+G\+P\+IO}!Sample projects@{Sample projects}}
+\subsubsection{\texorpdfstring{L\+E\+D\+\_\+2\+\_\+\+G\+P\+IO}{LED\_2\_GPIO}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily \#define L\+E\+D\+\_\+2\+\_\+\+G\+P\+IO~1}
+
+
+
+Definition at line 73 of file main.\+c.
+
+\mbox{\Hypertarget{group__samples_ga4285bdd58098064c3bab3976a78b26fa}\label{group__samples_ga4285bdd58098064c3bab3976a78b26fa}} 
+\index{Sample projects@{Sample projects}!L\+E\+D\+\_\+2\+\_\+\+G\+P\+IO@{L\+E\+D\+\_\+2\+\_\+\+G\+P\+IO}}
+\index{L\+E\+D\+\_\+2\+\_\+\+G\+P\+IO@{L\+E\+D\+\_\+2\+\_\+\+G\+P\+IO}!Sample projects@{Sample projects}}
+\subsubsection{\texorpdfstring{L\+E\+D\+\_\+2\+\_\+\+G\+P\+IO}{LED\_2\_GPIO}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily \#define L\+E\+D\+\_\+2\+\_\+\+G\+P\+IO~1}
+
+
+
+Definition at line 75 of file baremetal.\+c.
+
+\mbox{\Hypertarget{group__samples_ga78579f743b58c20ec8d10120d8381148}\label{group__samples_ga78579f743b58c20ec8d10120d8381148}} 
+\index{Sample projects@{Sample projects}!L\+E\+D\+\_\+2\+\_\+\+P\+IN@{L\+E\+D\+\_\+2\+\_\+\+P\+IN}}
+\index{L\+E\+D\+\_\+2\+\_\+\+P\+IN@{L\+E\+D\+\_\+2\+\_\+\+P\+IN}!Sample projects@{Sample projects}}
+\subsubsection{\texorpdfstring{L\+E\+D\+\_\+2\+\_\+\+P\+IN}{LED\_2\_PIN}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily \#define L\+E\+D\+\_\+2\+\_\+\+P\+IN~11}
+
+
+
+Definition at line 71 of file main.\+c.
+
+\mbox{\Hypertarget{group__samples_ga78579f743b58c20ec8d10120d8381148}\label{group__samples_ga78579f743b58c20ec8d10120d8381148}} 
+\index{Sample projects@{Sample projects}!L\+E\+D\+\_\+2\+\_\+\+P\+IN@{L\+E\+D\+\_\+2\+\_\+\+P\+IN}}
+\index{L\+E\+D\+\_\+2\+\_\+\+P\+IN@{L\+E\+D\+\_\+2\+\_\+\+P\+IN}!Sample projects@{Sample projects}}
+\subsubsection{\texorpdfstring{L\+E\+D\+\_\+2\+\_\+\+P\+IN}{LED\_2\_PIN}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily \#define L\+E\+D\+\_\+2\+\_\+\+P\+IN~11}
+
+
+
+Definition at line 73 of file baremetal.\+c.
+
+\mbox{\Hypertarget{group__samples_ga41f8586c0d98e483bba52f73e1a183b2}\label{group__samples_ga41f8586c0d98e483bba52f73e1a183b2}} 
+\index{Sample projects@{Sample projects}!L\+E\+D\+\_\+2\+\_\+\+P\+O\+RT@{L\+E\+D\+\_\+2\+\_\+\+P\+O\+RT}}
+\index{L\+E\+D\+\_\+2\+\_\+\+P\+O\+RT@{L\+E\+D\+\_\+2\+\_\+\+P\+O\+RT}!Sample projects@{Sample projects}}
+\subsubsection{\texorpdfstring{L\+E\+D\+\_\+2\+\_\+\+P\+O\+RT}{LED\_2\_PORT}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily \#define L\+E\+D\+\_\+2\+\_\+\+P\+O\+RT~2}
+
+
+
+Definition at line 70 of file main.\+c.
+
+\mbox{\Hypertarget{group__samples_ga41f8586c0d98e483bba52f73e1a183b2}\label{group__samples_ga41f8586c0d98e483bba52f73e1a183b2}} 
+\index{Sample projects@{Sample projects}!L\+E\+D\+\_\+2\+\_\+\+P\+O\+RT@{L\+E\+D\+\_\+2\+\_\+\+P\+O\+RT}}
+\index{L\+E\+D\+\_\+2\+\_\+\+P\+O\+RT@{L\+E\+D\+\_\+2\+\_\+\+P\+O\+RT}!Sample projects@{Sample projects}}
+\subsubsection{\texorpdfstring{L\+E\+D\+\_\+2\+\_\+\+P\+O\+RT}{LED\_2\_PORT}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily \#define L\+E\+D\+\_\+2\+\_\+\+P\+O\+RT~2}
+
+
+
+Definition at line 72 of file baremetal.\+c.
+
+\mbox{\Hypertarget{group__samples_gab9b4d582a53ac2329ac4b7527561fa80}\label{group__samples_gab9b4d582a53ac2329ac4b7527561fa80}} 
+\index{Sample projects@{Sample projects}!L\+E\+D\+\_\+3\+\_\+\+B\+IT@{L\+E\+D\+\_\+3\+\_\+\+B\+IT}}
+\index{L\+E\+D\+\_\+3\+\_\+\+B\+IT@{L\+E\+D\+\_\+3\+\_\+\+B\+IT}!Sample projects@{Sample projects}}
+\subsubsection{\texorpdfstring{L\+E\+D\+\_\+3\+\_\+\+B\+IT}{LED\_3\_BIT}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily \#define L\+E\+D\+\_\+3\+\_\+\+B\+IT~12}
+
+
+
+Definition at line 80 of file main.\+c.
+
+\mbox{\Hypertarget{group__samples_gab9b4d582a53ac2329ac4b7527561fa80}\label{group__samples_gab9b4d582a53ac2329ac4b7527561fa80}} 
+\index{Sample projects@{Sample projects}!L\+E\+D\+\_\+3\+\_\+\+B\+IT@{L\+E\+D\+\_\+3\+\_\+\+B\+IT}}
+\index{L\+E\+D\+\_\+3\+\_\+\+B\+IT@{L\+E\+D\+\_\+3\+\_\+\+B\+IT}!Sample projects@{Sample projects}}
+\subsubsection{\texorpdfstring{L\+E\+D\+\_\+3\+\_\+\+B\+IT}{LED\_3\_BIT}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily \#define L\+E\+D\+\_\+3\+\_\+\+B\+IT~12}
+
+
+
+Definition at line 82 of file baremetal.\+c.
+
+\mbox{\Hypertarget{group__samples_gab0622590a012697e9e5d95cff50cad26}\label{group__samples_gab0622590a012697e9e5d95cff50cad26}} 
+\index{Sample projects@{Sample projects}!L\+E\+D\+\_\+3\+\_\+\+F\+U\+NC@{L\+E\+D\+\_\+3\+\_\+\+F\+U\+NC}}
+\index{L\+E\+D\+\_\+3\+\_\+\+F\+U\+NC@{L\+E\+D\+\_\+3\+\_\+\+F\+U\+NC}!Sample projects@{Sample projects}}
+\subsubsection{\texorpdfstring{L\+E\+D\+\_\+3\+\_\+\+F\+U\+NC}{LED\_3\_FUNC}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily \#define L\+E\+D\+\_\+3\+\_\+\+F\+U\+NC~\hyperlink{group___s_c_u__18_x_x__43_x_x_gaec79b551b98008d8986e719926f254bc}{S\+C\+U\+\_\+\+M\+O\+D\+E\+\_\+\+F\+U\+N\+C0}}
+
+
+
+Definition at line 78 of file main.\+c.
+
+\mbox{\Hypertarget{group__samples_gab0622590a012697e9e5d95cff50cad26}\label{group__samples_gab0622590a012697e9e5d95cff50cad26}} 
+\index{Sample projects@{Sample projects}!L\+E\+D\+\_\+3\+\_\+\+F\+U\+NC@{L\+E\+D\+\_\+3\+\_\+\+F\+U\+NC}}
+\index{L\+E\+D\+\_\+3\+\_\+\+F\+U\+NC@{L\+E\+D\+\_\+3\+\_\+\+F\+U\+NC}!Sample projects@{Sample projects}}
+\subsubsection{\texorpdfstring{L\+E\+D\+\_\+3\+\_\+\+F\+U\+NC}{LED\_3\_FUNC}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily \#define L\+E\+D\+\_\+3\+\_\+\+F\+U\+NC~\hyperlink{group___s_c_u__18_x_x__43_x_x_gaec79b551b98008d8986e719926f254bc}{S\+C\+U\+\_\+\+M\+O\+D\+E\+\_\+\+F\+U\+N\+C0}}
+
+
+
+Definition at line 80 of file baremetal.\+c.
+
+\mbox{\Hypertarget{group__samples_gadd2d323f8eb544f1ab84762f94e44bd4}\label{group__samples_gadd2d323f8eb544f1ab84762f94e44bd4}} 
+\index{Sample projects@{Sample projects}!L\+E\+D\+\_\+3\+\_\+\+G\+P\+IO@{L\+E\+D\+\_\+3\+\_\+\+G\+P\+IO}}
+\index{L\+E\+D\+\_\+3\+\_\+\+G\+P\+IO@{L\+E\+D\+\_\+3\+\_\+\+G\+P\+IO}!Sample projects@{Sample projects}}
+\subsubsection{\texorpdfstring{L\+E\+D\+\_\+3\+\_\+\+G\+P\+IO}{LED\_3\_GPIO}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily \#define L\+E\+D\+\_\+3\+\_\+\+G\+P\+IO~1}
+
+
+
+Definition at line 79 of file main.\+c.
+
+\mbox{\Hypertarget{group__samples_gadd2d323f8eb544f1ab84762f94e44bd4}\label{group__samples_gadd2d323f8eb544f1ab84762f94e44bd4}} 
+\index{Sample projects@{Sample projects}!L\+E\+D\+\_\+3\+\_\+\+G\+P\+IO@{L\+E\+D\+\_\+3\+\_\+\+G\+P\+IO}}
+\index{L\+E\+D\+\_\+3\+\_\+\+G\+P\+IO@{L\+E\+D\+\_\+3\+\_\+\+G\+P\+IO}!Sample projects@{Sample projects}}
+\subsubsection{\texorpdfstring{L\+E\+D\+\_\+3\+\_\+\+G\+P\+IO}{LED\_3\_GPIO}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily \#define L\+E\+D\+\_\+3\+\_\+\+G\+P\+IO~1}
+
+
+
+Definition at line 81 of file baremetal.\+c.
+
+\mbox{\Hypertarget{group__samples_ga5ea98da36d05b171b54c342bcf4a35f7}\label{group__samples_ga5ea98da36d05b171b54c342bcf4a35f7}} 
+\index{Sample projects@{Sample projects}!L\+E\+D\+\_\+3\+\_\+\+P\+IN@{L\+E\+D\+\_\+3\+\_\+\+P\+IN}}
+\index{L\+E\+D\+\_\+3\+\_\+\+P\+IN@{L\+E\+D\+\_\+3\+\_\+\+P\+IN}!Sample projects@{Sample projects}}
+\subsubsection{\texorpdfstring{L\+E\+D\+\_\+3\+\_\+\+P\+IN}{LED\_3\_PIN}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily \#define L\+E\+D\+\_\+3\+\_\+\+P\+IN~12}
+
+
+
+Definition at line 77 of file main.\+c.
+
+\mbox{\Hypertarget{group__samples_ga5ea98da36d05b171b54c342bcf4a35f7}\label{group__samples_ga5ea98da36d05b171b54c342bcf4a35f7}} 
+\index{Sample projects@{Sample projects}!L\+E\+D\+\_\+3\+\_\+\+P\+IN@{L\+E\+D\+\_\+3\+\_\+\+P\+IN}}
+\index{L\+E\+D\+\_\+3\+\_\+\+P\+IN@{L\+E\+D\+\_\+3\+\_\+\+P\+IN}!Sample projects@{Sample projects}}
+\subsubsection{\texorpdfstring{L\+E\+D\+\_\+3\+\_\+\+P\+IN}{LED\_3\_PIN}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily \#define L\+E\+D\+\_\+3\+\_\+\+P\+IN~12}
+
+
+
+Definition at line 79 of file baremetal.\+c.
+
+\mbox{\Hypertarget{group__samples_gaaa65a4a427142f3ecdc5f1fe415d190c}\label{group__samples_gaaa65a4a427142f3ecdc5f1fe415d190c}} 
+\index{Sample projects@{Sample projects}!L\+E\+D\+\_\+3\+\_\+\+P\+O\+RT@{L\+E\+D\+\_\+3\+\_\+\+P\+O\+RT}}
+\index{L\+E\+D\+\_\+3\+\_\+\+P\+O\+RT@{L\+E\+D\+\_\+3\+\_\+\+P\+O\+RT}!Sample projects@{Sample projects}}
+\subsubsection{\texorpdfstring{L\+E\+D\+\_\+3\+\_\+\+P\+O\+RT}{LED\_3\_PORT}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily \#define L\+E\+D\+\_\+3\+\_\+\+P\+O\+RT~2}
+
+
+
+Definition at line 76 of file main.\+c.
+
+\mbox{\Hypertarget{group__samples_gaaa65a4a427142f3ecdc5f1fe415d190c}\label{group__samples_gaaa65a4a427142f3ecdc5f1fe415d190c}} 
+\index{Sample projects@{Sample projects}!L\+E\+D\+\_\+3\+\_\+\+P\+O\+RT@{L\+E\+D\+\_\+3\+\_\+\+P\+O\+RT}}
+\index{L\+E\+D\+\_\+3\+\_\+\+P\+O\+RT@{L\+E\+D\+\_\+3\+\_\+\+P\+O\+RT}!Sample projects@{Sample projects}}
+\subsubsection{\texorpdfstring{L\+E\+D\+\_\+3\+\_\+\+P\+O\+RT}{LED\_3\_PORT}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily \#define L\+E\+D\+\_\+3\+\_\+\+P\+O\+RT~2}
+
+
+
+Definition at line 78 of file baremetal.\+c.
+
+\mbox{\Hypertarget{group__samples_ga50b5b18af7a51f83133cb0ad51380c7d}\label{group__samples_ga50b5b18af7a51f83133cb0ad51380c7d}} 
+\index{Sample projects@{Sample projects}!L\+E\+D\+\_\+\+B\+\_\+\+B\+IT@{L\+E\+D\+\_\+\+B\+\_\+\+B\+IT}}
+\index{L\+E\+D\+\_\+\+B\+\_\+\+B\+IT@{L\+E\+D\+\_\+\+B\+\_\+\+B\+IT}!Sample projects@{Sample projects}}
+\subsubsection{\texorpdfstring{L\+E\+D\+\_\+\+B\+\_\+\+B\+IT}{LED\_B\_BIT}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily \#define L\+E\+D\+\_\+\+B\+\_\+\+B\+IT~2}
+
+
+
+Definition at line 62 of file main.\+c.
+
+\mbox{\Hypertarget{group__samples_ga50b5b18af7a51f83133cb0ad51380c7d}\label{group__samples_ga50b5b18af7a51f83133cb0ad51380c7d}} 
+\index{Sample projects@{Sample projects}!L\+E\+D\+\_\+\+B\+\_\+\+B\+IT@{L\+E\+D\+\_\+\+B\+\_\+\+B\+IT}}
+\index{L\+E\+D\+\_\+\+B\+\_\+\+B\+IT@{L\+E\+D\+\_\+\+B\+\_\+\+B\+IT}!Sample projects@{Sample projects}}
+\subsubsection{\texorpdfstring{L\+E\+D\+\_\+\+B\+\_\+\+B\+IT}{LED\_B\_BIT}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily \#define L\+E\+D\+\_\+\+B\+\_\+\+B\+IT~2}
+
+
+
+Definition at line 64 of file baremetal.\+c.
+
+\mbox{\Hypertarget{group__samples_ga9e3fbcc848cb89567f5a0a217030ddff}\label{group__samples_ga9e3fbcc848cb89567f5a0a217030ddff}} 
+\index{Sample projects@{Sample projects}!L\+E\+D\+\_\+\+B\+\_\+\+F\+U\+NC@{L\+E\+D\+\_\+\+B\+\_\+\+F\+U\+NC}}
+\index{L\+E\+D\+\_\+\+B\+\_\+\+F\+U\+NC@{L\+E\+D\+\_\+\+B\+\_\+\+F\+U\+NC}!Sample projects@{Sample projects}}
+\subsubsection{\texorpdfstring{L\+E\+D\+\_\+\+B\+\_\+\+F\+U\+NC}{LED\_B\_FUNC}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily \#define L\+E\+D\+\_\+\+B\+\_\+\+F\+U\+NC~\hyperlink{group___s_c_u__18_x_x__43_x_x_gaf1b58bdd83fd9b8331aaa1d54420a656}{S\+C\+U\+\_\+\+M\+O\+D\+E\+\_\+\+F\+U\+N\+C4}}
+
+
+
+Definition at line 60 of file main.\+c.
+
+\mbox{\Hypertarget{group__samples_ga9e3fbcc848cb89567f5a0a217030ddff}\label{group__samples_ga9e3fbcc848cb89567f5a0a217030ddff}} 
+\index{Sample projects@{Sample projects}!L\+E\+D\+\_\+\+B\+\_\+\+F\+U\+NC@{L\+E\+D\+\_\+\+B\+\_\+\+F\+U\+NC}}
+\index{L\+E\+D\+\_\+\+B\+\_\+\+F\+U\+NC@{L\+E\+D\+\_\+\+B\+\_\+\+F\+U\+NC}!Sample projects@{Sample projects}}
+\subsubsection{\texorpdfstring{L\+E\+D\+\_\+\+B\+\_\+\+F\+U\+NC}{LED\_B\_FUNC}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily \#define L\+E\+D\+\_\+\+B\+\_\+\+F\+U\+NC~\hyperlink{group___s_c_u__18_x_x__43_x_x_gaf1b58bdd83fd9b8331aaa1d54420a656}{S\+C\+U\+\_\+\+M\+O\+D\+E\+\_\+\+F\+U\+N\+C4}}
+
+
+
+Definition at line 62 of file baremetal.\+c.
+
+\mbox{\Hypertarget{group__samples_ga91901ef42fb89387a433e685cb3f8745}\label{group__samples_ga91901ef42fb89387a433e685cb3f8745}} 
+\index{Sample projects@{Sample projects}!L\+E\+D\+\_\+\+B\+\_\+\+G\+P\+IO@{L\+E\+D\+\_\+\+B\+\_\+\+G\+P\+IO}}
+\index{L\+E\+D\+\_\+\+B\+\_\+\+G\+P\+IO@{L\+E\+D\+\_\+\+B\+\_\+\+G\+P\+IO}!Sample projects@{Sample projects}}
+\subsubsection{\texorpdfstring{L\+E\+D\+\_\+\+B\+\_\+\+G\+P\+IO}{LED\_B\_GPIO}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily \#define L\+E\+D\+\_\+\+B\+\_\+\+G\+P\+IO~5}
+
+
+
+Definition at line 61 of file main.\+c.
+
+\mbox{\Hypertarget{group__samples_ga91901ef42fb89387a433e685cb3f8745}\label{group__samples_ga91901ef42fb89387a433e685cb3f8745}} 
+\index{Sample projects@{Sample projects}!L\+E\+D\+\_\+\+B\+\_\+\+G\+P\+IO@{L\+E\+D\+\_\+\+B\+\_\+\+G\+P\+IO}}
+\index{L\+E\+D\+\_\+\+B\+\_\+\+G\+P\+IO@{L\+E\+D\+\_\+\+B\+\_\+\+G\+P\+IO}!Sample projects@{Sample projects}}
+\subsubsection{\texorpdfstring{L\+E\+D\+\_\+\+B\+\_\+\+G\+P\+IO}{LED\_B\_GPIO}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily \#define L\+E\+D\+\_\+\+B\+\_\+\+G\+P\+IO~5}
+
+
+
+Definition at line 63 of file baremetal.\+c.
+
+\mbox{\Hypertarget{group__samples_gac210a43d7fede956117cfb90baff9511}\label{group__samples_gac210a43d7fede956117cfb90baff9511}} 
+\index{Sample projects@{Sample projects}!L\+E\+D\+\_\+\+B\+\_\+\+P\+IN@{L\+E\+D\+\_\+\+B\+\_\+\+P\+IN}}
+\index{L\+E\+D\+\_\+\+B\+\_\+\+P\+IN@{L\+E\+D\+\_\+\+B\+\_\+\+P\+IN}!Sample projects@{Sample projects}}
+\subsubsection{\texorpdfstring{L\+E\+D\+\_\+\+B\+\_\+\+P\+IN}{LED\_B\_PIN}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily \#define L\+E\+D\+\_\+\+B\+\_\+\+P\+IN~2}
+
+
+
+Definition at line 59 of file main.\+c.
+
+\mbox{\Hypertarget{group__samples_gac210a43d7fede956117cfb90baff9511}\label{group__samples_gac210a43d7fede956117cfb90baff9511}} 
+\index{Sample projects@{Sample projects}!L\+E\+D\+\_\+\+B\+\_\+\+P\+IN@{L\+E\+D\+\_\+\+B\+\_\+\+P\+IN}}
+\index{L\+E\+D\+\_\+\+B\+\_\+\+P\+IN@{L\+E\+D\+\_\+\+B\+\_\+\+P\+IN}!Sample projects@{Sample projects}}
+\subsubsection{\texorpdfstring{L\+E\+D\+\_\+\+B\+\_\+\+P\+IN}{LED\_B\_PIN}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily \#define L\+E\+D\+\_\+\+B\+\_\+\+P\+IN~2}
+
+
+
+Definition at line 61 of file baremetal.\+c.
+
+\mbox{\Hypertarget{group__samples_ga24baefd05a8dea1a7241e288a735c17c}\label{group__samples_ga24baefd05a8dea1a7241e288a735c17c}} 
+\index{Sample projects@{Sample projects}!L\+E\+D\+\_\+\+B\+\_\+\+P\+O\+RT@{L\+E\+D\+\_\+\+B\+\_\+\+P\+O\+RT}}
+\index{L\+E\+D\+\_\+\+B\+\_\+\+P\+O\+RT@{L\+E\+D\+\_\+\+B\+\_\+\+P\+O\+RT}!Sample projects@{Sample projects}}
+\subsubsection{\texorpdfstring{L\+E\+D\+\_\+\+B\+\_\+\+P\+O\+RT}{LED\_B\_PORT}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily \#define L\+E\+D\+\_\+\+B\+\_\+\+P\+O\+RT~2}
+
+
+
+Definition at line 58 of file main.\+c.
+
+\mbox{\Hypertarget{group__samples_ga24baefd05a8dea1a7241e288a735c17c}\label{group__samples_ga24baefd05a8dea1a7241e288a735c17c}} 
+\index{Sample projects@{Sample projects}!L\+E\+D\+\_\+\+B\+\_\+\+P\+O\+RT@{L\+E\+D\+\_\+\+B\+\_\+\+P\+O\+RT}}
+\index{L\+E\+D\+\_\+\+B\+\_\+\+P\+O\+RT@{L\+E\+D\+\_\+\+B\+\_\+\+P\+O\+RT}!Sample projects@{Sample projects}}
+\subsubsection{\texorpdfstring{L\+E\+D\+\_\+\+B\+\_\+\+P\+O\+RT}{LED\_B\_PORT}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily \#define L\+E\+D\+\_\+\+B\+\_\+\+P\+O\+RT~2}
+
+
+
+Definition at line 60 of file baremetal.\+c.
+
+\mbox{\Hypertarget{group__samples_gae425f2df67fc802fcf8a442a57a92c81}\label{group__samples_gae425f2df67fc802fcf8a442a57a92c81}} 
+\index{Sample projects@{Sample projects}!L\+E\+D\+\_\+\+G\+\_\+\+B\+IT@{L\+E\+D\+\_\+\+G\+\_\+\+B\+IT}}
+\index{L\+E\+D\+\_\+\+G\+\_\+\+B\+IT@{L\+E\+D\+\_\+\+G\+\_\+\+B\+IT}!Sample projects@{Sample projects}}
+\subsubsection{\texorpdfstring{L\+E\+D\+\_\+\+G\+\_\+\+B\+IT}{LED\_G\_BIT}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily \#define L\+E\+D\+\_\+\+G\+\_\+\+B\+IT~1}
+
+
+
+Definition at line 56 of file main.\+c.
+
+\mbox{\Hypertarget{group__samples_gae425f2df67fc802fcf8a442a57a92c81}\label{group__samples_gae425f2df67fc802fcf8a442a57a92c81}} 
+\index{Sample projects@{Sample projects}!L\+E\+D\+\_\+\+G\+\_\+\+B\+IT@{L\+E\+D\+\_\+\+G\+\_\+\+B\+IT}}
+\index{L\+E\+D\+\_\+\+G\+\_\+\+B\+IT@{L\+E\+D\+\_\+\+G\+\_\+\+B\+IT}!Sample projects@{Sample projects}}
+\subsubsection{\texorpdfstring{L\+E\+D\+\_\+\+G\+\_\+\+B\+IT}{LED\_G\_BIT}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily \#define L\+E\+D\+\_\+\+G\+\_\+\+B\+IT~1}
+
+
+
+Definition at line 58 of file baremetal.\+c.
+
+\mbox{\Hypertarget{group__samples_ga5a49819d3be4ff9d93877a0cacb232f3}\label{group__samples_ga5a49819d3be4ff9d93877a0cacb232f3}} 
+\index{Sample projects@{Sample projects}!L\+E\+D\+\_\+\+G\+\_\+\+F\+U\+NC@{L\+E\+D\+\_\+\+G\+\_\+\+F\+U\+NC}}
+\index{L\+E\+D\+\_\+\+G\+\_\+\+F\+U\+NC@{L\+E\+D\+\_\+\+G\+\_\+\+F\+U\+NC}!Sample projects@{Sample projects}}
+\subsubsection{\texorpdfstring{L\+E\+D\+\_\+\+G\+\_\+\+F\+U\+NC}{LED\_G\_FUNC}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily \#define L\+E\+D\+\_\+\+G\+\_\+\+F\+U\+NC~\hyperlink{group___s_c_u__18_x_x__43_x_x_gaf1b58bdd83fd9b8331aaa1d54420a656}{S\+C\+U\+\_\+\+M\+O\+D\+E\+\_\+\+F\+U\+N\+C4}}
+
+
+
+Definition at line 54 of file main.\+c.
+
+\mbox{\Hypertarget{group__samples_ga5a49819d3be4ff9d93877a0cacb232f3}\label{group__samples_ga5a49819d3be4ff9d93877a0cacb232f3}} 
+\index{Sample projects@{Sample projects}!L\+E\+D\+\_\+\+G\+\_\+\+F\+U\+NC@{L\+E\+D\+\_\+\+G\+\_\+\+F\+U\+NC}}
+\index{L\+E\+D\+\_\+\+G\+\_\+\+F\+U\+NC@{L\+E\+D\+\_\+\+G\+\_\+\+F\+U\+NC}!Sample projects@{Sample projects}}
+\subsubsection{\texorpdfstring{L\+E\+D\+\_\+\+G\+\_\+\+F\+U\+NC}{LED\_G\_FUNC}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily \#define L\+E\+D\+\_\+\+G\+\_\+\+F\+U\+NC~\hyperlink{group___s_c_u__18_x_x__43_x_x_gaf1b58bdd83fd9b8331aaa1d54420a656}{S\+C\+U\+\_\+\+M\+O\+D\+E\+\_\+\+F\+U\+N\+C4}}
+
+
+
+Definition at line 56 of file baremetal.\+c.
+
+\mbox{\Hypertarget{group__samples_gab4f388402d4d678445fee6617f96128d}\label{group__samples_gab4f388402d4d678445fee6617f96128d}} 
+\index{Sample projects@{Sample projects}!L\+E\+D\+\_\+\+G\+\_\+\+G\+P\+IO@{L\+E\+D\+\_\+\+G\+\_\+\+G\+P\+IO}}
+\index{L\+E\+D\+\_\+\+G\+\_\+\+G\+P\+IO@{L\+E\+D\+\_\+\+G\+\_\+\+G\+P\+IO}!Sample projects@{Sample projects}}
+\subsubsection{\texorpdfstring{L\+E\+D\+\_\+\+G\+\_\+\+G\+P\+IO}{LED\_G\_GPIO}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily \#define L\+E\+D\+\_\+\+G\+\_\+\+G\+P\+IO~5}
+
+
+
+Definition at line 55 of file main.\+c.
+
+\mbox{\Hypertarget{group__samples_gab4f388402d4d678445fee6617f96128d}\label{group__samples_gab4f388402d4d678445fee6617f96128d}} 
+\index{Sample projects@{Sample projects}!L\+E\+D\+\_\+\+G\+\_\+\+G\+P\+IO@{L\+E\+D\+\_\+\+G\+\_\+\+G\+P\+IO}}
+\index{L\+E\+D\+\_\+\+G\+\_\+\+G\+P\+IO@{L\+E\+D\+\_\+\+G\+\_\+\+G\+P\+IO}!Sample projects@{Sample projects}}
+\subsubsection{\texorpdfstring{L\+E\+D\+\_\+\+G\+\_\+\+G\+P\+IO}{LED\_G\_GPIO}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily \#define L\+E\+D\+\_\+\+G\+\_\+\+G\+P\+IO~5}
+
+
+
+Definition at line 57 of file baremetal.\+c.
+
+\mbox{\Hypertarget{group__samples_ga3d793023ce3cf36a952b0b68ab1a389a}\label{group__samples_ga3d793023ce3cf36a952b0b68ab1a389a}} 
+\index{Sample projects@{Sample projects}!L\+E\+D\+\_\+\+G\+\_\+\+P\+IN@{L\+E\+D\+\_\+\+G\+\_\+\+P\+IN}}
+\index{L\+E\+D\+\_\+\+G\+\_\+\+P\+IN@{L\+E\+D\+\_\+\+G\+\_\+\+P\+IN}!Sample projects@{Sample projects}}
+\subsubsection{\texorpdfstring{L\+E\+D\+\_\+\+G\+\_\+\+P\+IN}{LED\_G\_PIN}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily \#define L\+E\+D\+\_\+\+G\+\_\+\+P\+IN~1}
+
+
+
+Definition at line 53 of file main.\+c.
+
+\mbox{\Hypertarget{group__samples_ga3d793023ce3cf36a952b0b68ab1a389a}\label{group__samples_ga3d793023ce3cf36a952b0b68ab1a389a}} 
+\index{Sample projects@{Sample projects}!L\+E\+D\+\_\+\+G\+\_\+\+P\+IN@{L\+E\+D\+\_\+\+G\+\_\+\+P\+IN}}
+\index{L\+E\+D\+\_\+\+G\+\_\+\+P\+IN@{L\+E\+D\+\_\+\+G\+\_\+\+P\+IN}!Sample projects@{Sample projects}}
+\subsubsection{\texorpdfstring{L\+E\+D\+\_\+\+G\+\_\+\+P\+IN}{LED\_G\_PIN}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily \#define L\+E\+D\+\_\+\+G\+\_\+\+P\+IN~1}
+
+
+
+Definition at line 55 of file baremetal.\+c.
+
+\mbox{\Hypertarget{group__samples_ga1ef377b425c83109ec7998dc6fa71345}\label{group__samples_ga1ef377b425c83109ec7998dc6fa71345}} 
+\index{Sample projects@{Sample projects}!L\+E\+D\+\_\+\+G\+\_\+\+P\+O\+RT@{L\+E\+D\+\_\+\+G\+\_\+\+P\+O\+RT}}
+\index{L\+E\+D\+\_\+\+G\+\_\+\+P\+O\+RT@{L\+E\+D\+\_\+\+G\+\_\+\+P\+O\+RT}!Sample projects@{Sample projects}}
+\subsubsection{\texorpdfstring{L\+E\+D\+\_\+\+G\+\_\+\+P\+O\+RT}{LED\_G\_PORT}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily \#define L\+E\+D\+\_\+\+G\+\_\+\+P\+O\+RT~2}
+
+
+
+Definition at line 52 of file main.\+c.
+
+\mbox{\Hypertarget{group__samples_ga1ef377b425c83109ec7998dc6fa71345}\label{group__samples_ga1ef377b425c83109ec7998dc6fa71345}} 
+\index{Sample projects@{Sample projects}!L\+E\+D\+\_\+\+G\+\_\+\+P\+O\+RT@{L\+E\+D\+\_\+\+G\+\_\+\+P\+O\+RT}}
+\index{L\+E\+D\+\_\+\+G\+\_\+\+P\+O\+RT@{L\+E\+D\+\_\+\+G\+\_\+\+P\+O\+RT}!Sample projects@{Sample projects}}
+\subsubsection{\texorpdfstring{L\+E\+D\+\_\+\+G\+\_\+\+P\+O\+RT}{LED\_G\_PORT}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily \#define L\+E\+D\+\_\+\+G\+\_\+\+P\+O\+RT~2}
+
+
+
+Definition at line 54 of file baremetal.\+c.
+
+\mbox{\Hypertarget{group__samples_ga770cf8cc93e5ceb6b347f655d5425f03}\label{group__samples_ga770cf8cc93e5ceb6b347f655d5425f03}} 
+\index{Sample projects@{Sample projects}!L\+E\+D\+\_\+\+R\+\_\+\+B\+IT@{L\+E\+D\+\_\+\+R\+\_\+\+B\+IT}}
+\index{L\+E\+D\+\_\+\+R\+\_\+\+B\+IT@{L\+E\+D\+\_\+\+R\+\_\+\+B\+IT}!Sample projects@{Sample projects}}
+\subsubsection{\texorpdfstring{L\+E\+D\+\_\+\+R\+\_\+\+B\+IT}{LED\_R\_BIT}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily \#define L\+E\+D\+\_\+\+R\+\_\+\+B\+IT~0}
+
+
+
+Definition at line 50 of file main.\+c.
+
+\mbox{\Hypertarget{group__samples_ga770cf8cc93e5ceb6b347f655d5425f03}\label{group__samples_ga770cf8cc93e5ceb6b347f655d5425f03}} 
+\index{Sample projects@{Sample projects}!L\+E\+D\+\_\+\+R\+\_\+\+B\+IT@{L\+E\+D\+\_\+\+R\+\_\+\+B\+IT}}
+\index{L\+E\+D\+\_\+\+R\+\_\+\+B\+IT@{L\+E\+D\+\_\+\+R\+\_\+\+B\+IT}!Sample projects@{Sample projects}}
+\subsubsection{\texorpdfstring{L\+E\+D\+\_\+\+R\+\_\+\+B\+IT}{LED\_R\_BIT}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily \#define L\+E\+D\+\_\+\+R\+\_\+\+B\+IT~0}
+
+
+
+Definition at line 52 of file baremetal.\+c.
+
+\mbox{\Hypertarget{group__samples_ga55748801f9d61d2cdab4665b61f73147}\label{group__samples_ga55748801f9d61d2cdab4665b61f73147}} 
+\index{Sample projects@{Sample projects}!L\+E\+D\+\_\+\+R\+\_\+\+F\+U\+NC@{L\+E\+D\+\_\+\+R\+\_\+\+F\+U\+NC}}
+\index{L\+E\+D\+\_\+\+R\+\_\+\+F\+U\+NC@{L\+E\+D\+\_\+\+R\+\_\+\+F\+U\+NC}!Sample projects@{Sample projects}}
+\subsubsection{\texorpdfstring{L\+E\+D\+\_\+\+R\+\_\+\+F\+U\+NC}{LED\_R\_FUNC}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily \#define L\+E\+D\+\_\+\+R\+\_\+\+F\+U\+NC~\hyperlink{group___s_c_u__18_x_x__43_x_x_gaf1b58bdd83fd9b8331aaa1d54420a656}{S\+C\+U\+\_\+\+M\+O\+D\+E\+\_\+\+F\+U\+N\+C4}}
+
+
+
+Definition at line 48 of file main.\+c.
+
+\mbox{\Hypertarget{group__samples_ga55748801f9d61d2cdab4665b61f73147}\label{group__samples_ga55748801f9d61d2cdab4665b61f73147}} 
+\index{Sample projects@{Sample projects}!L\+E\+D\+\_\+\+R\+\_\+\+F\+U\+NC@{L\+E\+D\+\_\+\+R\+\_\+\+F\+U\+NC}}
+\index{L\+E\+D\+\_\+\+R\+\_\+\+F\+U\+NC@{L\+E\+D\+\_\+\+R\+\_\+\+F\+U\+NC}!Sample projects@{Sample projects}}
+\subsubsection{\texorpdfstring{L\+E\+D\+\_\+\+R\+\_\+\+F\+U\+NC}{LED\_R\_FUNC}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily \#define L\+E\+D\+\_\+\+R\+\_\+\+F\+U\+NC~\hyperlink{group___s_c_u__18_x_x__43_x_x_gaf1b58bdd83fd9b8331aaa1d54420a656}{S\+C\+U\+\_\+\+M\+O\+D\+E\+\_\+\+F\+U\+N\+C4}}
+
+
+
+Definition at line 50 of file baremetal.\+c.
+
+\mbox{\Hypertarget{group__samples_ga938c5edc31fe4ba21d42ac85c739bc9b}\label{group__samples_ga938c5edc31fe4ba21d42ac85c739bc9b}} 
+\index{Sample projects@{Sample projects}!L\+E\+D\+\_\+\+R\+\_\+\+G\+P\+IO@{L\+E\+D\+\_\+\+R\+\_\+\+G\+P\+IO}}
+\index{L\+E\+D\+\_\+\+R\+\_\+\+G\+P\+IO@{L\+E\+D\+\_\+\+R\+\_\+\+G\+P\+IO}!Sample projects@{Sample projects}}
+\subsubsection{\texorpdfstring{L\+E\+D\+\_\+\+R\+\_\+\+G\+P\+IO}{LED\_R\_GPIO}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily \#define L\+E\+D\+\_\+\+R\+\_\+\+G\+P\+IO~5}
+
+
+
+Definition at line 49 of file main.\+c.
+
+\mbox{\Hypertarget{group__samples_ga938c5edc31fe4ba21d42ac85c739bc9b}\label{group__samples_ga938c5edc31fe4ba21d42ac85c739bc9b}} 
+\index{Sample projects@{Sample projects}!L\+E\+D\+\_\+\+R\+\_\+\+G\+P\+IO@{L\+E\+D\+\_\+\+R\+\_\+\+G\+P\+IO}}
+\index{L\+E\+D\+\_\+\+R\+\_\+\+G\+P\+IO@{L\+E\+D\+\_\+\+R\+\_\+\+G\+P\+IO}!Sample projects@{Sample projects}}
+\subsubsection{\texorpdfstring{L\+E\+D\+\_\+\+R\+\_\+\+G\+P\+IO}{LED\_R\_GPIO}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily \#define L\+E\+D\+\_\+\+R\+\_\+\+G\+P\+IO~5}
+
+
+
+Definition at line 51 of file baremetal.\+c.
+
+\mbox{\Hypertarget{group__samples_ga22f3cf4ef9dadad8d78d5c59999100b6}\label{group__samples_ga22f3cf4ef9dadad8d78d5c59999100b6}} 
+\index{Sample projects@{Sample projects}!L\+E\+D\+\_\+\+R\+\_\+\+P\+IN@{L\+E\+D\+\_\+\+R\+\_\+\+P\+IN}}
+\index{L\+E\+D\+\_\+\+R\+\_\+\+P\+IN@{L\+E\+D\+\_\+\+R\+\_\+\+P\+IN}!Sample projects@{Sample projects}}
+\subsubsection{\texorpdfstring{L\+E\+D\+\_\+\+R\+\_\+\+P\+IN}{LED\_R\_PIN}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily \#define L\+E\+D\+\_\+\+R\+\_\+\+P\+IN~0}
+
+
+
+Definition at line 47 of file main.\+c.
+
+\mbox{\Hypertarget{group__samples_ga22f3cf4ef9dadad8d78d5c59999100b6}\label{group__samples_ga22f3cf4ef9dadad8d78d5c59999100b6}} 
+\index{Sample projects@{Sample projects}!L\+E\+D\+\_\+\+R\+\_\+\+P\+IN@{L\+E\+D\+\_\+\+R\+\_\+\+P\+IN}}
+\index{L\+E\+D\+\_\+\+R\+\_\+\+P\+IN@{L\+E\+D\+\_\+\+R\+\_\+\+P\+IN}!Sample projects@{Sample projects}}
+\subsubsection{\texorpdfstring{L\+E\+D\+\_\+\+R\+\_\+\+P\+IN}{LED\_R\_PIN}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily \#define L\+E\+D\+\_\+\+R\+\_\+\+P\+IN~0}
+
+
+
+Definition at line 49 of file baremetal.\+c.
+
+\mbox{\Hypertarget{group__samples_ga5a11a7cbc215e25401541277460113a4}\label{group__samples_ga5a11a7cbc215e25401541277460113a4}} 
+\index{Sample projects@{Sample projects}!L\+E\+D\+\_\+\+R\+\_\+\+P\+O\+RT@{L\+E\+D\+\_\+\+R\+\_\+\+P\+O\+RT}}
+\index{L\+E\+D\+\_\+\+R\+\_\+\+P\+O\+RT@{L\+E\+D\+\_\+\+R\+\_\+\+P\+O\+RT}!Sample projects@{Sample projects}}
+\subsubsection{\texorpdfstring{L\+E\+D\+\_\+\+R\+\_\+\+P\+O\+RT}{LED\_R\_PORT}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily \#define L\+E\+D\+\_\+\+R\+\_\+\+P\+O\+RT~2}
+
+
+
+Definition at line 46 of file main.\+c.
+
+\mbox{\Hypertarget{group__samples_ga5a11a7cbc215e25401541277460113a4}\label{group__samples_ga5a11a7cbc215e25401541277460113a4}} 
+\index{Sample projects@{Sample projects}!L\+E\+D\+\_\+\+R\+\_\+\+P\+O\+RT@{L\+E\+D\+\_\+\+R\+\_\+\+P\+O\+RT}}
+\index{L\+E\+D\+\_\+\+R\+\_\+\+P\+O\+RT@{L\+E\+D\+\_\+\+R\+\_\+\+P\+O\+RT}!Sample projects@{Sample projects}}
+\subsubsection{\texorpdfstring{L\+E\+D\+\_\+\+R\+\_\+\+P\+O\+RT}{LED\_R\_PORT}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily \#define L\+E\+D\+\_\+\+R\+\_\+\+P\+O\+RT~2}
+
+
+
+Definition at line 48 of file baremetal.\+c.
+
+\mbox{\Hypertarget{group__samples_ga0f27cf5eeffd9d5f04a6a4c57bbdbae7}\label{group__samples_ga0f27cf5eeffd9d5f04a6a4c57bbdbae7}} 
+\index{Sample projects@{Sample projects}!T\+E\+C\+\_\+1\+\_\+\+B\+IT@{T\+E\+C\+\_\+1\+\_\+\+B\+IT}}
+\index{T\+E\+C\+\_\+1\+\_\+\+B\+IT@{T\+E\+C\+\_\+1\+\_\+\+B\+IT}!Sample projects@{Sample projects}}
+\subsubsection{\texorpdfstring{T\+E\+C\+\_\+1\+\_\+\+B\+IT}{TEC\_1\_BIT}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily \#define T\+E\+C\+\_\+1\+\_\+\+B\+IT~4}
+
+
+
+Definition at line 86 of file main.\+c.
+
+\mbox{\Hypertarget{group__samples_ga0f27cf5eeffd9d5f04a6a4c57bbdbae7}\label{group__samples_ga0f27cf5eeffd9d5f04a6a4c57bbdbae7}} 
+\index{Sample projects@{Sample projects}!T\+E\+C\+\_\+1\+\_\+\+B\+IT@{T\+E\+C\+\_\+1\+\_\+\+B\+IT}}
+\index{T\+E\+C\+\_\+1\+\_\+\+B\+IT@{T\+E\+C\+\_\+1\+\_\+\+B\+IT}!Sample projects@{Sample projects}}
+\subsubsection{\texorpdfstring{T\+E\+C\+\_\+1\+\_\+\+B\+IT}{TEC\_1\_BIT}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily \#define T\+E\+C\+\_\+1\+\_\+\+B\+IT~4}
+
+
+
+Definition at line 88 of file baremetal.\+c.
+
+\mbox{\Hypertarget{group__samples_ga8ae57a649603bf7f33d0e896b034bd41}\label{group__samples_ga8ae57a649603bf7f33d0e896b034bd41}} 
+\index{Sample projects@{Sample projects}!T\+E\+C\+\_\+1\+\_\+\+F\+U\+NC@{T\+E\+C\+\_\+1\+\_\+\+F\+U\+NC}}
+\index{T\+E\+C\+\_\+1\+\_\+\+F\+U\+NC@{T\+E\+C\+\_\+1\+\_\+\+F\+U\+NC}!Sample projects@{Sample projects}}
+\subsubsection{\texorpdfstring{T\+E\+C\+\_\+1\+\_\+\+F\+U\+NC}{TEC\_1\_FUNC}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily \#define T\+E\+C\+\_\+1\+\_\+\+F\+U\+NC~\hyperlink{group___s_c_u__18_x_x__43_x_x_gaec79b551b98008d8986e719926f254bc}{S\+C\+U\+\_\+\+M\+O\+D\+E\+\_\+\+F\+U\+N\+C0}}
+
+
+
+Definition at line 84 of file main.\+c.
+
+\mbox{\Hypertarget{group__samples_ga8ae57a649603bf7f33d0e896b034bd41}\label{group__samples_ga8ae57a649603bf7f33d0e896b034bd41}} 
+\index{Sample projects@{Sample projects}!T\+E\+C\+\_\+1\+\_\+\+F\+U\+NC@{T\+E\+C\+\_\+1\+\_\+\+F\+U\+NC}}
+\index{T\+E\+C\+\_\+1\+\_\+\+F\+U\+NC@{T\+E\+C\+\_\+1\+\_\+\+F\+U\+NC}!Sample projects@{Sample projects}}
+\subsubsection{\texorpdfstring{T\+E\+C\+\_\+1\+\_\+\+F\+U\+NC}{TEC\_1\_FUNC}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily \#define T\+E\+C\+\_\+1\+\_\+\+F\+U\+NC~\hyperlink{group___s_c_u__18_x_x__43_x_x_gaec79b551b98008d8986e719926f254bc}{S\+C\+U\+\_\+\+M\+O\+D\+E\+\_\+\+F\+U\+N\+C0}}
+
+
+
+Definition at line 86 of file baremetal.\+c.
+
+\mbox{\Hypertarget{group__samples_ga8731b2048404c4c819291bebfc6a1e6a}\label{group__samples_ga8731b2048404c4c819291bebfc6a1e6a}} 
+\index{Sample projects@{Sample projects}!T\+E\+C\+\_\+1\+\_\+\+G\+P\+IO@{T\+E\+C\+\_\+1\+\_\+\+G\+P\+IO}}
+\index{T\+E\+C\+\_\+1\+\_\+\+G\+P\+IO@{T\+E\+C\+\_\+1\+\_\+\+G\+P\+IO}!Sample projects@{Sample projects}}
+\subsubsection{\texorpdfstring{T\+E\+C\+\_\+1\+\_\+\+G\+P\+IO}{TEC\_1\_GPIO}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily \#define T\+E\+C\+\_\+1\+\_\+\+G\+P\+IO~0}
+
+
+
+Definition at line 85 of file main.\+c.
+
+\mbox{\Hypertarget{group__samples_ga8731b2048404c4c819291bebfc6a1e6a}\label{group__samples_ga8731b2048404c4c819291bebfc6a1e6a}} 
+\index{Sample projects@{Sample projects}!T\+E\+C\+\_\+1\+\_\+\+G\+P\+IO@{T\+E\+C\+\_\+1\+\_\+\+G\+P\+IO}}
+\index{T\+E\+C\+\_\+1\+\_\+\+G\+P\+IO@{T\+E\+C\+\_\+1\+\_\+\+G\+P\+IO}!Sample projects@{Sample projects}}
+\subsubsection{\texorpdfstring{T\+E\+C\+\_\+1\+\_\+\+G\+P\+IO}{TEC\_1\_GPIO}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily \#define T\+E\+C\+\_\+1\+\_\+\+G\+P\+IO~0}
+
+
+
+Definition at line 87 of file baremetal.\+c.
+
+\mbox{\Hypertarget{group__samples_gabbb083565fd13306450dfc5fdcf934c0}\label{group__samples_gabbb083565fd13306450dfc5fdcf934c0}} 
+\index{Sample projects@{Sample projects}!T\+E\+C\+\_\+1\+\_\+\+P\+IN@{T\+E\+C\+\_\+1\+\_\+\+P\+IN}}
+\index{T\+E\+C\+\_\+1\+\_\+\+P\+IN@{T\+E\+C\+\_\+1\+\_\+\+P\+IN}!Sample projects@{Sample projects}}
+\subsubsection{\texorpdfstring{T\+E\+C\+\_\+1\+\_\+\+P\+IN}{TEC\_1\_PIN}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily \#define T\+E\+C\+\_\+1\+\_\+\+P\+IN~0}
+
+
+
+Definition at line 83 of file main.\+c.
+
+\mbox{\Hypertarget{group__samples_gabbb083565fd13306450dfc5fdcf934c0}\label{group__samples_gabbb083565fd13306450dfc5fdcf934c0}} 
+\index{Sample projects@{Sample projects}!T\+E\+C\+\_\+1\+\_\+\+P\+IN@{T\+E\+C\+\_\+1\+\_\+\+P\+IN}}
+\index{T\+E\+C\+\_\+1\+\_\+\+P\+IN@{T\+E\+C\+\_\+1\+\_\+\+P\+IN}!Sample projects@{Sample projects}}
+\subsubsection{\texorpdfstring{T\+E\+C\+\_\+1\+\_\+\+P\+IN}{TEC\_1\_PIN}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily \#define T\+E\+C\+\_\+1\+\_\+\+P\+IN~0}
+
+
+
+Definition at line 85 of file baremetal.\+c.
+
+\mbox{\Hypertarget{group__samples_ga8646ae3b4a7ad2be7610ff81e3d73c0f}\label{group__samples_ga8646ae3b4a7ad2be7610ff81e3d73c0f}} 
+\index{Sample projects@{Sample projects}!T\+E\+C\+\_\+1\+\_\+\+P\+O\+RT@{T\+E\+C\+\_\+1\+\_\+\+P\+O\+RT}}
+\index{T\+E\+C\+\_\+1\+\_\+\+P\+O\+RT@{T\+E\+C\+\_\+1\+\_\+\+P\+O\+RT}!Sample projects@{Sample projects}}
+\subsubsection{\texorpdfstring{T\+E\+C\+\_\+1\+\_\+\+P\+O\+RT}{TEC\_1\_PORT}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily \#define T\+E\+C\+\_\+1\+\_\+\+P\+O\+RT~1}
+
+
+
+Definition at line 82 of file main.\+c.
+
+\mbox{\Hypertarget{group__samples_ga8646ae3b4a7ad2be7610ff81e3d73c0f}\label{group__samples_ga8646ae3b4a7ad2be7610ff81e3d73c0f}} 
+\index{Sample projects@{Sample projects}!T\+E\+C\+\_\+1\+\_\+\+P\+O\+RT@{T\+E\+C\+\_\+1\+\_\+\+P\+O\+RT}}
+\index{T\+E\+C\+\_\+1\+\_\+\+P\+O\+RT@{T\+E\+C\+\_\+1\+\_\+\+P\+O\+RT}!Sample projects@{Sample projects}}
+\subsubsection{\texorpdfstring{T\+E\+C\+\_\+1\+\_\+\+P\+O\+RT}{TEC\_1\_PORT}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily \#define T\+E\+C\+\_\+1\+\_\+\+P\+O\+RT~1}
+
+
+
+Definition at line 84 of file baremetal.\+c.
+
+\mbox{\Hypertarget{group__samples_gaed7549a304721e36693036c8a289ff4c}\label{group__samples_gaed7549a304721e36693036c8a289ff4c}} 
+\index{Sample projects@{Sample projects}!T\+E\+C\+\_\+2\+\_\+\+B\+IT@{T\+E\+C\+\_\+2\+\_\+\+B\+IT}}
+\index{T\+E\+C\+\_\+2\+\_\+\+B\+IT@{T\+E\+C\+\_\+2\+\_\+\+B\+IT}!Sample projects@{Sample projects}}
+\subsubsection{\texorpdfstring{T\+E\+C\+\_\+2\+\_\+\+B\+IT}{TEC\_2\_BIT}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily \#define T\+E\+C\+\_\+2\+\_\+\+B\+IT~8}
+
+
+
+Definition at line 92 of file main.\+c.
+
+\mbox{\Hypertarget{group__samples_gaed7549a304721e36693036c8a289ff4c}\label{group__samples_gaed7549a304721e36693036c8a289ff4c}} 
+\index{Sample projects@{Sample projects}!T\+E\+C\+\_\+2\+\_\+\+B\+IT@{T\+E\+C\+\_\+2\+\_\+\+B\+IT}}
+\index{T\+E\+C\+\_\+2\+\_\+\+B\+IT@{T\+E\+C\+\_\+2\+\_\+\+B\+IT}!Sample projects@{Sample projects}}
+\subsubsection{\texorpdfstring{T\+E\+C\+\_\+2\+\_\+\+B\+IT}{TEC\_2\_BIT}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily \#define T\+E\+C\+\_\+2\+\_\+\+B\+IT~8}
+
+
+
+Definition at line 94 of file baremetal.\+c.
+
+\mbox{\Hypertarget{group__samples_gae81d46d99322159370646c09d852af70}\label{group__samples_gae81d46d99322159370646c09d852af70}} 
+\index{Sample projects@{Sample projects}!T\+E\+C\+\_\+2\+\_\+\+F\+U\+NC@{T\+E\+C\+\_\+2\+\_\+\+F\+U\+NC}}
+\index{T\+E\+C\+\_\+2\+\_\+\+F\+U\+NC@{T\+E\+C\+\_\+2\+\_\+\+F\+U\+NC}!Sample projects@{Sample projects}}
+\subsubsection{\texorpdfstring{T\+E\+C\+\_\+2\+\_\+\+F\+U\+NC}{TEC\_2\_FUNC}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily \#define T\+E\+C\+\_\+2\+\_\+\+F\+U\+NC~\hyperlink{group___s_c_u__18_x_x__43_x_x_gaec79b551b98008d8986e719926f254bc}{S\+C\+U\+\_\+\+M\+O\+D\+E\+\_\+\+F\+U\+N\+C0}}
+
+
+
+Definition at line 90 of file main.\+c.
+
+\mbox{\Hypertarget{group__samples_gae81d46d99322159370646c09d852af70}\label{group__samples_gae81d46d99322159370646c09d852af70}} 
+\index{Sample projects@{Sample projects}!T\+E\+C\+\_\+2\+\_\+\+F\+U\+NC@{T\+E\+C\+\_\+2\+\_\+\+F\+U\+NC}}
+\index{T\+E\+C\+\_\+2\+\_\+\+F\+U\+NC@{T\+E\+C\+\_\+2\+\_\+\+F\+U\+NC}!Sample projects@{Sample projects}}
+\subsubsection{\texorpdfstring{T\+E\+C\+\_\+2\+\_\+\+F\+U\+NC}{TEC\_2\_FUNC}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily \#define T\+E\+C\+\_\+2\+\_\+\+F\+U\+NC~\hyperlink{group___s_c_u__18_x_x__43_x_x_gaec79b551b98008d8986e719926f254bc}{S\+C\+U\+\_\+\+M\+O\+D\+E\+\_\+\+F\+U\+N\+C0}}
+
+
+
+Definition at line 92 of file baremetal.\+c.
+
+\mbox{\Hypertarget{group__samples_ga83ce1f0ab51ee7b4df55e629cdfc52d9}\label{group__samples_ga83ce1f0ab51ee7b4df55e629cdfc52d9}} 
+\index{Sample projects@{Sample projects}!T\+E\+C\+\_\+2\+\_\+\+G\+P\+IO@{T\+E\+C\+\_\+2\+\_\+\+G\+P\+IO}}
+\index{T\+E\+C\+\_\+2\+\_\+\+G\+P\+IO@{T\+E\+C\+\_\+2\+\_\+\+G\+P\+IO}!Sample projects@{Sample projects}}
+\subsubsection{\texorpdfstring{T\+E\+C\+\_\+2\+\_\+\+G\+P\+IO}{TEC\_2\_GPIO}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily \#define T\+E\+C\+\_\+2\+\_\+\+G\+P\+IO~0}
+
+
+
+Definition at line 91 of file main.\+c.
+
+\mbox{\Hypertarget{group__samples_ga83ce1f0ab51ee7b4df55e629cdfc52d9}\label{group__samples_ga83ce1f0ab51ee7b4df55e629cdfc52d9}} 
+\index{Sample projects@{Sample projects}!T\+E\+C\+\_\+2\+\_\+\+G\+P\+IO@{T\+E\+C\+\_\+2\+\_\+\+G\+P\+IO}}
+\index{T\+E\+C\+\_\+2\+\_\+\+G\+P\+IO@{T\+E\+C\+\_\+2\+\_\+\+G\+P\+IO}!Sample projects@{Sample projects}}
+\subsubsection{\texorpdfstring{T\+E\+C\+\_\+2\+\_\+\+G\+P\+IO}{TEC\_2\_GPIO}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily \#define T\+E\+C\+\_\+2\+\_\+\+G\+P\+IO~0}
+
+
+
+Definition at line 93 of file baremetal.\+c.
+
+\mbox{\Hypertarget{group__samples_gae23ce57ac09e13a68a782d5bb61c8a30}\label{group__samples_gae23ce57ac09e13a68a782d5bb61c8a30}} 
+\index{Sample projects@{Sample projects}!T\+E\+C\+\_\+2\+\_\+\+P\+IN@{T\+E\+C\+\_\+2\+\_\+\+P\+IN}}
+\index{T\+E\+C\+\_\+2\+\_\+\+P\+IN@{T\+E\+C\+\_\+2\+\_\+\+P\+IN}!Sample projects@{Sample projects}}
+\subsubsection{\texorpdfstring{T\+E\+C\+\_\+2\+\_\+\+P\+IN}{TEC\_2\_PIN}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily \#define T\+E\+C\+\_\+2\+\_\+\+P\+IN~1}
+
+
+
+Definition at line 89 of file main.\+c.
+
+\mbox{\Hypertarget{group__samples_gae23ce57ac09e13a68a782d5bb61c8a30}\label{group__samples_gae23ce57ac09e13a68a782d5bb61c8a30}} 
+\index{Sample projects@{Sample projects}!T\+E\+C\+\_\+2\+\_\+\+P\+IN@{T\+E\+C\+\_\+2\+\_\+\+P\+IN}}
+\index{T\+E\+C\+\_\+2\+\_\+\+P\+IN@{T\+E\+C\+\_\+2\+\_\+\+P\+IN}!Sample projects@{Sample projects}}
+\subsubsection{\texorpdfstring{T\+E\+C\+\_\+2\+\_\+\+P\+IN}{TEC\_2\_PIN}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily \#define T\+E\+C\+\_\+2\+\_\+\+P\+IN~1}
+
+
+
+Definition at line 91 of file baremetal.\+c.
+
+\mbox{\Hypertarget{group__samples_ga6dd94a0728943a6bb0706bae78aa529f}\label{group__samples_ga6dd94a0728943a6bb0706bae78aa529f}} 
+\index{Sample projects@{Sample projects}!T\+E\+C\+\_\+2\+\_\+\+P\+O\+RT@{T\+E\+C\+\_\+2\+\_\+\+P\+O\+RT}}
+\index{T\+E\+C\+\_\+2\+\_\+\+P\+O\+RT@{T\+E\+C\+\_\+2\+\_\+\+P\+O\+RT}!Sample projects@{Sample projects}}
+\subsubsection{\texorpdfstring{T\+E\+C\+\_\+2\+\_\+\+P\+O\+RT}{TEC\_2\_PORT}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily \#define T\+E\+C\+\_\+2\+\_\+\+P\+O\+RT~1}
+
+
+
+Definition at line 88 of file main.\+c.
+
+\mbox{\Hypertarget{group__samples_ga6dd94a0728943a6bb0706bae78aa529f}\label{group__samples_ga6dd94a0728943a6bb0706bae78aa529f}} 
+\index{Sample projects@{Sample projects}!T\+E\+C\+\_\+2\+\_\+\+P\+O\+RT@{T\+E\+C\+\_\+2\+\_\+\+P\+O\+RT}}
+\index{T\+E\+C\+\_\+2\+\_\+\+P\+O\+RT@{T\+E\+C\+\_\+2\+\_\+\+P\+O\+RT}!Sample projects@{Sample projects}}
+\subsubsection{\texorpdfstring{T\+E\+C\+\_\+2\+\_\+\+P\+O\+RT}{TEC\_2\_PORT}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily \#define T\+E\+C\+\_\+2\+\_\+\+P\+O\+RT~1}
+
+
+
+Definition at line 90 of file baremetal.\+c.
+
+\mbox{\Hypertarget{group__samples_ga64392cf03fba776f8a9dc238e25ec184}\label{group__samples_ga64392cf03fba776f8a9dc238e25ec184}} 
+\index{Sample projects@{Sample projects}!T\+E\+C\+\_\+3\+\_\+\+B\+IT@{T\+E\+C\+\_\+3\+\_\+\+B\+IT}}
+\index{T\+E\+C\+\_\+3\+\_\+\+B\+IT@{T\+E\+C\+\_\+3\+\_\+\+B\+IT}!Sample projects@{Sample projects}}
+\subsubsection{\texorpdfstring{T\+E\+C\+\_\+3\+\_\+\+B\+IT}{TEC\_3\_BIT}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily \#define T\+E\+C\+\_\+3\+\_\+\+B\+IT~9}
+
+
+
+Definition at line 98 of file main.\+c.
+
+\mbox{\Hypertarget{group__samples_ga64392cf03fba776f8a9dc238e25ec184}\label{group__samples_ga64392cf03fba776f8a9dc238e25ec184}} 
+\index{Sample projects@{Sample projects}!T\+E\+C\+\_\+3\+\_\+\+B\+IT@{T\+E\+C\+\_\+3\+\_\+\+B\+IT}}
+\index{T\+E\+C\+\_\+3\+\_\+\+B\+IT@{T\+E\+C\+\_\+3\+\_\+\+B\+IT}!Sample projects@{Sample projects}}
+\subsubsection{\texorpdfstring{T\+E\+C\+\_\+3\+\_\+\+B\+IT}{TEC\_3\_BIT}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily \#define T\+E\+C\+\_\+3\+\_\+\+B\+IT~9}
+
+
+
+Definition at line 100 of file baremetal.\+c.
+
+\mbox{\Hypertarget{group__samples_ga0d28555b6255cd5bd89f5618626f044e}\label{group__samples_ga0d28555b6255cd5bd89f5618626f044e}} 
+\index{Sample projects@{Sample projects}!T\+E\+C\+\_\+3\+\_\+\+F\+U\+NC@{T\+E\+C\+\_\+3\+\_\+\+F\+U\+NC}}
+\index{T\+E\+C\+\_\+3\+\_\+\+F\+U\+NC@{T\+E\+C\+\_\+3\+\_\+\+F\+U\+NC}!Sample projects@{Sample projects}}
+\subsubsection{\texorpdfstring{T\+E\+C\+\_\+3\+\_\+\+F\+U\+NC}{TEC\_3\_FUNC}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily \#define T\+E\+C\+\_\+3\+\_\+\+F\+U\+NC~\hyperlink{group___s_c_u__18_x_x__43_x_x_gaec79b551b98008d8986e719926f254bc}{S\+C\+U\+\_\+\+M\+O\+D\+E\+\_\+\+F\+U\+N\+C0}}
+
+
+
+Definition at line 96 of file main.\+c.
+
+\mbox{\Hypertarget{group__samples_ga0d28555b6255cd5bd89f5618626f044e}\label{group__samples_ga0d28555b6255cd5bd89f5618626f044e}} 
+\index{Sample projects@{Sample projects}!T\+E\+C\+\_\+3\+\_\+\+F\+U\+NC@{T\+E\+C\+\_\+3\+\_\+\+F\+U\+NC}}
+\index{T\+E\+C\+\_\+3\+\_\+\+F\+U\+NC@{T\+E\+C\+\_\+3\+\_\+\+F\+U\+NC}!Sample projects@{Sample projects}}
+\subsubsection{\texorpdfstring{T\+E\+C\+\_\+3\+\_\+\+F\+U\+NC}{TEC\_3\_FUNC}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily \#define T\+E\+C\+\_\+3\+\_\+\+F\+U\+NC~\hyperlink{group___s_c_u__18_x_x__43_x_x_gaec79b551b98008d8986e719926f254bc}{S\+C\+U\+\_\+\+M\+O\+D\+E\+\_\+\+F\+U\+N\+C0}}
+
+
+
+Definition at line 98 of file baremetal.\+c.
+
+\mbox{\Hypertarget{group__samples_gae8728c8f2e4279383925ff93a183b407}\label{group__samples_gae8728c8f2e4279383925ff93a183b407}} 
+\index{Sample projects@{Sample projects}!T\+E\+C\+\_\+3\+\_\+\+G\+P\+IO@{T\+E\+C\+\_\+3\+\_\+\+G\+P\+IO}}
+\index{T\+E\+C\+\_\+3\+\_\+\+G\+P\+IO@{T\+E\+C\+\_\+3\+\_\+\+G\+P\+IO}!Sample projects@{Sample projects}}
+\subsubsection{\texorpdfstring{T\+E\+C\+\_\+3\+\_\+\+G\+P\+IO}{TEC\_3\_GPIO}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily \#define T\+E\+C\+\_\+3\+\_\+\+G\+P\+IO~0}
+
+
+
+Definition at line 97 of file main.\+c.
+
+\mbox{\Hypertarget{group__samples_gae8728c8f2e4279383925ff93a183b407}\label{group__samples_gae8728c8f2e4279383925ff93a183b407}} 
+\index{Sample projects@{Sample projects}!T\+E\+C\+\_\+3\+\_\+\+G\+P\+IO@{T\+E\+C\+\_\+3\+\_\+\+G\+P\+IO}}
+\index{T\+E\+C\+\_\+3\+\_\+\+G\+P\+IO@{T\+E\+C\+\_\+3\+\_\+\+G\+P\+IO}!Sample projects@{Sample projects}}
+\subsubsection{\texorpdfstring{T\+E\+C\+\_\+3\+\_\+\+G\+P\+IO}{TEC\_3\_GPIO}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily \#define T\+E\+C\+\_\+3\+\_\+\+G\+P\+IO~0}
+
+
+
+Definition at line 99 of file baremetal.\+c.
+
+\mbox{\Hypertarget{group__samples_gab976c4177676c5c89497cb89480e5dfe}\label{group__samples_gab976c4177676c5c89497cb89480e5dfe}} 
+\index{Sample projects@{Sample projects}!T\+E\+C\+\_\+3\+\_\+\+P\+IN@{T\+E\+C\+\_\+3\+\_\+\+P\+IN}}
+\index{T\+E\+C\+\_\+3\+\_\+\+P\+IN@{T\+E\+C\+\_\+3\+\_\+\+P\+IN}!Sample projects@{Sample projects}}
+\subsubsection{\texorpdfstring{T\+E\+C\+\_\+3\+\_\+\+P\+IN}{TEC\_3\_PIN}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily \#define T\+E\+C\+\_\+3\+\_\+\+P\+IN~2}
+
+
+
+Definition at line 95 of file main.\+c.
+
+\mbox{\Hypertarget{group__samples_gab976c4177676c5c89497cb89480e5dfe}\label{group__samples_gab976c4177676c5c89497cb89480e5dfe}} 
+\index{Sample projects@{Sample projects}!T\+E\+C\+\_\+3\+\_\+\+P\+IN@{T\+E\+C\+\_\+3\+\_\+\+P\+IN}}
+\index{T\+E\+C\+\_\+3\+\_\+\+P\+IN@{T\+E\+C\+\_\+3\+\_\+\+P\+IN}!Sample projects@{Sample projects}}
+\subsubsection{\texorpdfstring{T\+E\+C\+\_\+3\+\_\+\+P\+IN}{TEC\_3\_PIN}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily \#define T\+E\+C\+\_\+3\+\_\+\+P\+IN~2}
+
+
+
+Definition at line 97 of file baremetal.\+c.
+
+\mbox{\Hypertarget{group__samples_gac948c6a2caf0ef5cde7fa2c2e94fddb0}\label{group__samples_gac948c6a2caf0ef5cde7fa2c2e94fddb0}} 
+\index{Sample projects@{Sample projects}!T\+E\+C\+\_\+3\+\_\+\+P\+O\+RT@{T\+E\+C\+\_\+3\+\_\+\+P\+O\+RT}}
+\index{T\+E\+C\+\_\+3\+\_\+\+P\+O\+RT@{T\+E\+C\+\_\+3\+\_\+\+P\+O\+RT}!Sample projects@{Sample projects}}
+\subsubsection{\texorpdfstring{T\+E\+C\+\_\+3\+\_\+\+P\+O\+RT}{TEC\_3\_PORT}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily \#define T\+E\+C\+\_\+3\+\_\+\+P\+O\+RT~1}
+
+
+
+Definition at line 94 of file main.\+c.
+
+\mbox{\Hypertarget{group__samples_gac948c6a2caf0ef5cde7fa2c2e94fddb0}\label{group__samples_gac948c6a2caf0ef5cde7fa2c2e94fddb0}} 
+\index{Sample projects@{Sample projects}!T\+E\+C\+\_\+3\+\_\+\+P\+O\+RT@{T\+E\+C\+\_\+3\+\_\+\+P\+O\+RT}}
+\index{T\+E\+C\+\_\+3\+\_\+\+P\+O\+RT@{T\+E\+C\+\_\+3\+\_\+\+P\+O\+RT}!Sample projects@{Sample projects}}
+\subsubsection{\texorpdfstring{T\+E\+C\+\_\+3\+\_\+\+P\+O\+RT}{TEC\_3\_PORT}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily \#define T\+E\+C\+\_\+3\+\_\+\+P\+O\+RT~1}
+
+
+
+Definition at line 96 of file baremetal.\+c.
+
+\mbox{\Hypertarget{group__samples_gac7c8a49f0602d0aeee33923ce8708a4b}\label{group__samples_gac7c8a49f0602d0aeee33923ce8708a4b}} 
+\index{Sample projects@{Sample projects}!T\+E\+C\+\_\+4\+\_\+\+B\+IT@{T\+E\+C\+\_\+4\+\_\+\+B\+IT}}
+\index{T\+E\+C\+\_\+4\+\_\+\+B\+IT@{T\+E\+C\+\_\+4\+\_\+\+B\+IT}!Sample projects@{Sample projects}}
+\subsubsection{\texorpdfstring{T\+E\+C\+\_\+4\+\_\+\+B\+IT}{TEC\_4\_BIT}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily \#define T\+E\+C\+\_\+4\+\_\+\+B\+IT~9}
+
+
+
+Definition at line 104 of file main.\+c.
+
+\mbox{\Hypertarget{group__samples_gac7c8a49f0602d0aeee33923ce8708a4b}\label{group__samples_gac7c8a49f0602d0aeee33923ce8708a4b}} 
+\index{Sample projects@{Sample projects}!T\+E\+C\+\_\+4\+\_\+\+B\+IT@{T\+E\+C\+\_\+4\+\_\+\+B\+IT}}
+\index{T\+E\+C\+\_\+4\+\_\+\+B\+IT@{T\+E\+C\+\_\+4\+\_\+\+B\+IT}!Sample projects@{Sample projects}}
+\subsubsection{\texorpdfstring{T\+E\+C\+\_\+4\+\_\+\+B\+IT}{TEC\_4\_BIT}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily \#define T\+E\+C\+\_\+4\+\_\+\+B\+IT~9}
+
+
+
+Definition at line 106 of file baremetal.\+c.
+
+\mbox{\Hypertarget{group__samples_ga75840b109439b1e90546485e16247097}\label{group__samples_ga75840b109439b1e90546485e16247097}} 
+\index{Sample projects@{Sample projects}!T\+E\+C\+\_\+4\+\_\+\+F\+U\+NC@{T\+E\+C\+\_\+4\+\_\+\+F\+U\+NC}}
+\index{T\+E\+C\+\_\+4\+\_\+\+F\+U\+NC@{T\+E\+C\+\_\+4\+\_\+\+F\+U\+NC}!Sample projects@{Sample projects}}
+\subsubsection{\texorpdfstring{T\+E\+C\+\_\+4\+\_\+\+F\+U\+NC}{TEC\_4\_FUNC}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily \#define T\+E\+C\+\_\+4\+\_\+\+F\+U\+NC~\hyperlink{group___s_c_u__18_x_x__43_x_x_gaec79b551b98008d8986e719926f254bc}{S\+C\+U\+\_\+\+M\+O\+D\+E\+\_\+\+F\+U\+N\+C0}}
+
+
+
+Definition at line 102 of file main.\+c.
+
+\mbox{\Hypertarget{group__samples_ga75840b109439b1e90546485e16247097}\label{group__samples_ga75840b109439b1e90546485e16247097}} 
+\index{Sample projects@{Sample projects}!T\+E\+C\+\_\+4\+\_\+\+F\+U\+NC@{T\+E\+C\+\_\+4\+\_\+\+F\+U\+NC}}
+\index{T\+E\+C\+\_\+4\+\_\+\+F\+U\+NC@{T\+E\+C\+\_\+4\+\_\+\+F\+U\+NC}!Sample projects@{Sample projects}}
+\subsubsection{\texorpdfstring{T\+E\+C\+\_\+4\+\_\+\+F\+U\+NC}{TEC\_4\_FUNC}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily \#define T\+E\+C\+\_\+4\+\_\+\+F\+U\+NC~\hyperlink{group___s_c_u__18_x_x__43_x_x_gaec79b551b98008d8986e719926f254bc}{S\+C\+U\+\_\+\+M\+O\+D\+E\+\_\+\+F\+U\+N\+C0}}
+
+
+
+Definition at line 104 of file baremetal.\+c.
+
+\mbox{\Hypertarget{group__samples_gaa5418f15596d7ada110c4105aa70e561}\label{group__samples_gaa5418f15596d7ada110c4105aa70e561}} 
+\index{Sample projects@{Sample projects}!T\+E\+C\+\_\+4\+\_\+\+G\+P\+IO@{T\+E\+C\+\_\+4\+\_\+\+G\+P\+IO}}
+\index{T\+E\+C\+\_\+4\+\_\+\+G\+P\+IO@{T\+E\+C\+\_\+4\+\_\+\+G\+P\+IO}!Sample projects@{Sample projects}}
+\subsubsection{\texorpdfstring{T\+E\+C\+\_\+4\+\_\+\+G\+P\+IO}{TEC\_4\_GPIO}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily \#define T\+E\+C\+\_\+4\+\_\+\+G\+P\+IO~1}
+
+
+
+Definition at line 103 of file main.\+c.
+
+\mbox{\Hypertarget{group__samples_gaa5418f15596d7ada110c4105aa70e561}\label{group__samples_gaa5418f15596d7ada110c4105aa70e561}} 
+\index{Sample projects@{Sample projects}!T\+E\+C\+\_\+4\+\_\+\+G\+P\+IO@{T\+E\+C\+\_\+4\+\_\+\+G\+P\+IO}}
+\index{T\+E\+C\+\_\+4\+\_\+\+G\+P\+IO@{T\+E\+C\+\_\+4\+\_\+\+G\+P\+IO}!Sample projects@{Sample projects}}
+\subsubsection{\texorpdfstring{T\+E\+C\+\_\+4\+\_\+\+G\+P\+IO}{TEC\_4\_GPIO}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily \#define T\+E\+C\+\_\+4\+\_\+\+G\+P\+IO~1}
+
+
+
+Definition at line 105 of file baremetal.\+c.
+
+\mbox{\Hypertarget{group__samples_ga0b2447cd531de479b88f58f819566522}\label{group__samples_ga0b2447cd531de479b88f58f819566522}} 
+\index{Sample projects@{Sample projects}!T\+E\+C\+\_\+4\+\_\+\+P\+IN@{T\+E\+C\+\_\+4\+\_\+\+P\+IN}}
+\index{T\+E\+C\+\_\+4\+\_\+\+P\+IN@{T\+E\+C\+\_\+4\+\_\+\+P\+IN}!Sample projects@{Sample projects}}
+\subsubsection{\texorpdfstring{T\+E\+C\+\_\+4\+\_\+\+P\+IN}{TEC\_4\_PIN}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily \#define T\+E\+C\+\_\+4\+\_\+\+P\+IN~6}
+
+
+
+Definition at line 101 of file main.\+c.
+
+\mbox{\Hypertarget{group__samples_ga0b2447cd531de479b88f58f819566522}\label{group__samples_ga0b2447cd531de479b88f58f819566522}} 
+\index{Sample projects@{Sample projects}!T\+E\+C\+\_\+4\+\_\+\+P\+IN@{T\+E\+C\+\_\+4\+\_\+\+P\+IN}}
+\index{T\+E\+C\+\_\+4\+\_\+\+P\+IN@{T\+E\+C\+\_\+4\+\_\+\+P\+IN}!Sample projects@{Sample projects}}
+\subsubsection{\texorpdfstring{T\+E\+C\+\_\+4\+\_\+\+P\+IN}{TEC\_4\_PIN}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily \#define T\+E\+C\+\_\+4\+\_\+\+P\+IN~6}
+
+
+
+Definition at line 103 of file baremetal.\+c.
+
+\mbox{\Hypertarget{group__samples_gadd513c832f5c617281c5df0dc67ae80c}\label{group__samples_gadd513c832f5c617281c5df0dc67ae80c}} 
+\index{Sample projects@{Sample projects}!T\+E\+C\+\_\+4\+\_\+\+P\+O\+RT@{T\+E\+C\+\_\+4\+\_\+\+P\+O\+RT}}
+\index{T\+E\+C\+\_\+4\+\_\+\+P\+O\+RT@{T\+E\+C\+\_\+4\+\_\+\+P\+O\+RT}!Sample projects@{Sample projects}}
+\subsubsection{\texorpdfstring{T\+E\+C\+\_\+4\+\_\+\+P\+O\+RT}{TEC\_4\_PORT}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily \#define T\+E\+C\+\_\+4\+\_\+\+P\+O\+RT~1}
+
+
+
+Definition at line 100 of file main.\+c.
+
+\mbox{\Hypertarget{group__samples_gadd513c832f5c617281c5df0dc67ae80c}\label{group__samples_gadd513c832f5c617281c5df0dc67ae80c}} 
+\index{Sample projects@{Sample projects}!T\+E\+C\+\_\+4\+\_\+\+P\+O\+RT@{T\+E\+C\+\_\+4\+\_\+\+P\+O\+RT}}
+\index{T\+E\+C\+\_\+4\+\_\+\+P\+O\+RT@{T\+E\+C\+\_\+4\+\_\+\+P\+O\+RT}!Sample projects@{Sample projects}}
+\subsubsection{\texorpdfstring{T\+E\+C\+\_\+4\+\_\+\+P\+O\+RT}{TEC\_4\_PORT}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily \#define T\+E\+C\+\_\+4\+\_\+\+P\+O\+RT~1}
+
+
+
+Definition at line 102 of file baremetal.\+c.
+
+\mbox{\Hypertarget{group__samples_ga446e415fc7a5645de4a012cf8a3cdf90}\label{group__samples_ga446e415fc7a5645de4a012cf8a3cdf90}} 
+\index{Sample projects@{Sample projects}!W\+A\+I\+T\+\_\+\+C\+O\+U\+NT@{W\+A\+I\+T\+\_\+\+C\+O\+U\+NT}}
+\index{W\+A\+I\+T\+\_\+\+C\+O\+U\+NT@{W\+A\+I\+T\+\_\+\+C\+O\+U\+NT}!Sample projects@{Sample projects}}
+\subsubsection{\texorpdfstring{W\+A\+I\+T\+\_\+\+C\+O\+U\+NT}{WAIT\_COUNT}}
+{\footnotesize\ttfamily \#define W\+A\+I\+T\+\_\+\+C\+O\+U\+NT~1000000}
+
+
+
+Definition at line 49 of file main.\+c.
+
+
+
+\subsection{Function Documentation}
+\mbox{\Hypertarget{group__samples_ga840291bc02cba5474a4cb46a9b9566fe}\label{group__samples_ga840291bc02cba5474a4cb46a9b9566fe}} 
+\index{Sample projects@{Sample projects}!main@{main}}
+\index{main@{main}!Sample projects@{Sample projects}}
+\subsubsection{\texorpdfstring{main()}{main()}}
+{\footnotesize\ttfamily int main (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+
+
+
+Función principal del programa. 
+
+\begin{DoxyReturn}{Returns}
+0 La función nunca debería termina
+\end{DoxyReturn}
+\begin{DoxyRemark}{Remarks}
+En un sistema embebido la función \hyperlink{group__samples_ga840291bc02cba5474a4cb46a9b9566fe}{main()} nunca debe terminar. El valor de retorno 0 es para evitar un error en el compilador. 
+\end{DoxyRemark}
+
+
+Definition at line 122 of file baremetal.\+c.
+

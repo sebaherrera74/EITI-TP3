@@ -1,0 +1,156 @@
+\hypertarget{board__lpcopen_8c}{}\section{muju/boards/edu-\/ciaa-\/nxp/src/board\+\_\+lpcopen.c File Reference}
+\label{board__lpcopen_8c}\index{muju/boards/edu-\/ciaa-\/nxp/src/board\+\_\+lpcopen.\+c@{muju/boards/edu-\/ciaa-\/nxp/src/board\+\_\+lpcopen.\+c}}
+{\ttfamily \#include \char`\"{}board.\+h\char`\"{}}\newline
+Include dependency graph for board\+\_\+lpcopen.\+c\+:
+% FIG 0
+\subsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+struct \hyperlink{structgpio__t}{gpio\+\_\+t}
+\end{DoxyCompactItemize}
+\subsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#define \hyperlink{board__lpcopen_8c_ac5116c2838508c090d8fa24360800a32}{G\+P\+I\+O\+\_\+\+L\+E\+D\+S\+\_\+\+S\+I\+ZE}~(sizeof(Gpio\+Leds) / sizeof(struct \hyperlink{structgpio__t}{gpio\+\_\+t}))
+\item 
+\#define \hyperlink{board__lpcopen_8c_a80e5a6770421ebbe12b2d85354e1a7c5}{G\+P\+I\+O\+\_\+\+B\+U\+T\+T\+O\+N\+S\+\_\+\+S\+I\+ZE}~(sizeof(Gpio\+Buttons) / sizeof(struct \hyperlink{structgpio__t}{gpio\+\_\+t}))
+\item 
+\#define \hyperlink{board__lpcopen_8c_a8dfd02b6cfa8595d9a77f8805e962cfc}{G\+P\+I\+O\+\_\+\+P\+O\+R\+T\+S\+\_\+\+S\+I\+ZE}~(sizeof(Gpio\+Ports) / sizeof(struct \hyperlink{structgpio__t}{gpio\+\_\+t}))
+\end{DoxyCompactItemize}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \hyperlink{group___b_o_a_r_d___c_o_m_m_o_n___a_p_i_gabcba073f50ad637ee6bc852f64ea2ce6}{Board\+\_\+\+Debug\+\_\+\+Init} (void)
+\begin{DoxyCompactList}\small\item\em Initializes board U\+A\+RT for output, required for printf redirection. \end{DoxyCompactList}\item 
+void \hyperlink{group___b_o_a_r_d___c_o_m_m_o_n___a_p_i_gada2a79f4fcd7cd730317fc34291bf08e}{Board\+\_\+\+U\+A\+R\+T\+Put\+Char} (char ch)
+\begin{DoxyCompactList}\small\item\em Sends a single character on the U\+A\+RT, required for printf redirection. \end{DoxyCompactList}\item 
+int \hyperlink{group___b_o_a_r_d___c_o_m_m_o_n___a_p_i_ga4cffd2ff35f970b7dfad4fdf6419ecf6}{Board\+\_\+\+U\+A\+R\+T\+Get\+Char} (void)
+\begin{DoxyCompactList}\small\item\em Get a single character from the U\+A\+RT, required for scanf input. \end{DoxyCompactList}\item 
+void \hyperlink{group___b_o_a_r_d___c_o_m_m_o_n___a_p_i_gadaf1c6682fad416564e3113b628bb327}{Board\+\_\+\+U\+A\+R\+T\+Put\+S\+TR} (const char $\ast$str)
+\begin{DoxyCompactList}\small\item\em Prints a string to the U\+A\+RT. \end{DoxyCompactList}\item 
+void \hyperlink{group___b_o_a_r_d___c_o_m_m_o_n___a_p_i_ga4beb63d516764b260e9798642fab0047}{Board\+\_\+\+L\+E\+D\+\_\+\+Set} (uint8\+\_\+t L\+E\+D\+Number, bool On)
+\begin{DoxyCompactList}\small\item\em Sets the state of a board L\+ED to on or off. \end{DoxyCompactList}\item 
+bool \hyperlink{group___b_o_a_r_d___c_o_m_m_o_n___a_p_i_ga8e79f51947703de384c34bc86908bd9e}{Board\+\_\+\+L\+E\+D\+\_\+\+Test} (uint8\+\_\+t L\+E\+D\+Number)
+\begin{DoxyCompactList}\small\item\em Returns the current state of a board L\+ED. \end{DoxyCompactList}\item 
+void \hyperlink{group___b_o_a_r_d___c_o_m_m_o_n___a_p_i_ga39c663f67913226d0f29e11c0d0fd523}{Board\+\_\+\+L\+E\+D\+\_\+\+Toggle} (uint8\+\_\+t L\+E\+D\+Number)
+\begin{DoxyCompactList}\small\item\em Toggles the current state of a board L\+ED. \end{DoxyCompactList}\item 
+void \hyperlink{group___b_o_a_r_d___c_o_m_m_o_n___a_p_i_gae8d2d761b984f48c3dbb27dd32a8c119}{Board\+\_\+\+Init} (void)
+\begin{DoxyCompactList}\small\item\em Set up and initialize all required blocks and functions related to the board hardware. \end{DoxyCompactList}\item 
+bool \hyperlink{group__hal_ga872de86244ed2e3b86c2bf26b9c64733}{Board\+\_\+\+T\+E\+C\+\_\+\+Get\+Status} (uint8\+\_\+t button)
+\item 
+void \hyperlink{group__hal_ga8cc33a8b61c622ac85ae3740a121100b}{Board\+\_\+\+A\+D\+C\+\_\+\+Read\+Begin} (\hyperlink{group___a_d_c__18_x_x__43_x_x_ga30ee7058bc7cc1daff718b29b42bed4e}{A\+D\+C\+\_\+\+C\+H\+A\+N\+N\+E\+L\+\_\+T} channel)
+\item 
+bool \hyperlink{group__hal_ga0e575f815466079643b007d0279f28bf}{Board\+\_\+\+A\+D\+C\+\_\+\+Read\+Wait} ()
+\item 
+uint16\+\_\+t \hyperlink{group__hal_ga51147ea5d2ae45e50453fbdd4e2c590d}{Board\+\_\+\+A\+D\+C\+\_\+\+Read\+End} ()
+\item 
+void \hyperlink{board__lpcopen_8c_a6cd8c59acd471bc438122f4351c7e2ba}{\+\_\+\+\_\+stdio\+\_\+putchar} (int c)
+\item 
+int \hyperlink{board__lpcopen_8c_a9ad213a50cb9f9d41ebde10d425752fe}{\+\_\+\+\_\+stdio\+\_\+getchar} ()
+\item 
+void \hyperlink{board__lpcopen_8c_ace3cecd207fe69a092fd6739d7c6fe26}{\+\_\+\+\_\+stdio\+\_\+init} ()
+\end{DoxyCompactItemize}
+\subsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+const uint32\+\_\+t \hyperlink{board__lpcopen_8c_a74ceed751e84a920be263a7fe3da67f0}{Ext\+Rate\+In} = 0
+\begin{DoxyCompactList}\small\item\em Clock rate on the C\+L\+K\+IN pin This value is defined externally to the chip layer and contains the value in Hz for the C\+L\+K\+IN pin for the board. If this pin isn\textquotesingle{}t used, this rate can be 0. \end{DoxyCompactList}\item 
+const uint32\+\_\+t \hyperlink{board__lpcopen_8c_a2e84f0502f9a7fdd271b97c588696e6f}{Osc\+Rate\+In} = 12000000
+\begin{DoxyCompactList}\small\item\em System oscillator rate This value is defined externally to the chip layer and contains the value in Hz for the external oscillator for the board. If using the internal oscillator, this rate can be 0. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Macro Definition Documentation}
+\mbox{\Hypertarget{board__lpcopen_8c_a80e5a6770421ebbe12b2d85354e1a7c5}\label{board__lpcopen_8c_a80e5a6770421ebbe12b2d85354e1a7c5}} 
+\index{board\+\_\+lpcopen.\+c@{board\+\_\+lpcopen.\+c}!G\+P\+I\+O\+\_\+\+B\+U\+T\+T\+O\+N\+S\+\_\+\+S\+I\+ZE@{G\+P\+I\+O\+\_\+\+B\+U\+T\+T\+O\+N\+S\+\_\+\+S\+I\+ZE}}
+\index{G\+P\+I\+O\+\_\+\+B\+U\+T\+T\+O\+N\+S\+\_\+\+S\+I\+ZE@{G\+P\+I\+O\+\_\+\+B\+U\+T\+T\+O\+N\+S\+\_\+\+S\+I\+ZE}!board\+\_\+lpcopen.\+c@{board\+\_\+lpcopen.\+c}}
+\subsubsection{\texorpdfstring{G\+P\+I\+O\+\_\+\+B\+U\+T\+T\+O\+N\+S\+\_\+\+S\+I\+ZE}{GPIO\_BUTTONS\_SIZE}}
+{\footnotesize\ttfamily \#define G\+P\+I\+O\+\_\+\+B\+U\+T\+T\+O\+N\+S\+\_\+\+S\+I\+ZE~(sizeof(Gpio\+Buttons) / sizeof(struct \hyperlink{structgpio__t}{gpio\+\_\+t}))}
+
+
+
+Definition at line 105 of file board\+\_\+lpcopen.\+c.
+
+\mbox{\Hypertarget{board__lpcopen_8c_ac5116c2838508c090d8fa24360800a32}\label{board__lpcopen_8c_ac5116c2838508c090d8fa24360800a32}} 
+\index{board\+\_\+lpcopen.\+c@{board\+\_\+lpcopen.\+c}!G\+P\+I\+O\+\_\+\+L\+E\+D\+S\+\_\+\+S\+I\+ZE@{G\+P\+I\+O\+\_\+\+L\+E\+D\+S\+\_\+\+S\+I\+ZE}}
+\index{G\+P\+I\+O\+\_\+\+L\+E\+D\+S\+\_\+\+S\+I\+ZE@{G\+P\+I\+O\+\_\+\+L\+E\+D\+S\+\_\+\+S\+I\+ZE}!board\+\_\+lpcopen.\+c@{board\+\_\+lpcopen.\+c}}
+\subsubsection{\texorpdfstring{G\+P\+I\+O\+\_\+\+L\+E\+D\+S\+\_\+\+S\+I\+ZE}{GPIO\_LEDS\_SIZE}}
+{\footnotesize\ttfamily \#define G\+P\+I\+O\+\_\+\+L\+E\+D\+S\+\_\+\+S\+I\+ZE~(sizeof(Gpio\+Leds) / sizeof(struct \hyperlink{structgpio__t}{gpio\+\_\+t}))}
+
+
+
+Definition at line 104 of file board\+\_\+lpcopen.\+c.
+
+\mbox{\Hypertarget{board__lpcopen_8c_a8dfd02b6cfa8595d9a77f8805e962cfc}\label{board__lpcopen_8c_a8dfd02b6cfa8595d9a77f8805e962cfc}} 
+\index{board\+\_\+lpcopen.\+c@{board\+\_\+lpcopen.\+c}!G\+P\+I\+O\+\_\+\+P\+O\+R\+T\+S\+\_\+\+S\+I\+ZE@{G\+P\+I\+O\+\_\+\+P\+O\+R\+T\+S\+\_\+\+S\+I\+ZE}}
+\index{G\+P\+I\+O\+\_\+\+P\+O\+R\+T\+S\+\_\+\+S\+I\+ZE@{G\+P\+I\+O\+\_\+\+P\+O\+R\+T\+S\+\_\+\+S\+I\+ZE}!board\+\_\+lpcopen.\+c@{board\+\_\+lpcopen.\+c}}
+\subsubsection{\texorpdfstring{G\+P\+I\+O\+\_\+\+P\+O\+R\+T\+S\+\_\+\+S\+I\+ZE}{GPIO\_PORTS\_SIZE}}
+{\footnotesize\ttfamily \#define G\+P\+I\+O\+\_\+\+P\+O\+R\+T\+S\+\_\+\+S\+I\+ZE~(sizeof(Gpio\+Ports) / sizeof(struct \hyperlink{structgpio__t}{gpio\+\_\+t}))}
+
+
+
+Definition at line 106 of file board\+\_\+lpcopen.\+c.
+
+
+
+\subsection{Function Documentation}
+\mbox{\Hypertarget{board__lpcopen_8c_a9ad213a50cb9f9d41ebde10d425752fe}\label{board__lpcopen_8c_a9ad213a50cb9f9d41ebde10d425752fe}} 
+\index{board\+\_\+lpcopen.\+c@{board\+\_\+lpcopen.\+c}!\+\_\+\+\_\+stdio\+\_\+getchar@{\+\_\+\+\_\+stdio\+\_\+getchar}}
+\index{\+\_\+\+\_\+stdio\+\_\+getchar@{\+\_\+\+\_\+stdio\+\_\+getchar}!board\+\_\+lpcopen.\+c@{board\+\_\+lpcopen.\+c}}
+\subsubsection{\texorpdfstring{\+\_\+\+\_\+stdio\+\_\+getchar()}{\_\_stdio\_getchar()}}
+{\footnotesize\ttfamily int \+\_\+\+\_\+stdio\+\_\+getchar (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Definition at line 294 of file board\+\_\+lpcopen.\+c.
+
+\mbox{\Hypertarget{board__lpcopen_8c_ace3cecd207fe69a092fd6739d7c6fe26}\label{board__lpcopen_8c_ace3cecd207fe69a092fd6739d7c6fe26}} 
+\index{board\+\_\+lpcopen.\+c@{board\+\_\+lpcopen.\+c}!\+\_\+\+\_\+stdio\+\_\+init@{\+\_\+\+\_\+stdio\+\_\+init}}
+\index{\+\_\+\+\_\+stdio\+\_\+init@{\+\_\+\+\_\+stdio\+\_\+init}!board\+\_\+lpcopen.\+c@{board\+\_\+lpcopen.\+c}}
+\subsubsection{\texorpdfstring{\+\_\+\+\_\+stdio\+\_\+init()}{\_\_stdio\_init()}}
+{\footnotesize\ttfamily void \+\_\+\+\_\+stdio\+\_\+init (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Definition at line 300 of file board\+\_\+lpcopen.\+c.
+
+\mbox{\Hypertarget{board__lpcopen_8c_a6cd8c59acd471bc438122f4351c7e2ba}\label{board__lpcopen_8c_a6cd8c59acd471bc438122f4351c7e2ba}} 
+\index{board\+\_\+lpcopen.\+c@{board\+\_\+lpcopen.\+c}!\+\_\+\+\_\+stdio\+\_\+putchar@{\+\_\+\+\_\+stdio\+\_\+putchar}}
+\index{\+\_\+\+\_\+stdio\+\_\+putchar@{\+\_\+\+\_\+stdio\+\_\+putchar}!board\+\_\+lpcopen.\+c@{board\+\_\+lpcopen.\+c}}
+\subsubsection{\texorpdfstring{\+\_\+\+\_\+stdio\+\_\+putchar()}{\_\_stdio\_putchar()}}
+{\footnotesize\ttfamily void \+\_\+\+\_\+stdio\+\_\+putchar (\begin{DoxyParamCaption}\item[{int}]{c }\end{DoxyParamCaption})}
+
+
+
+Definition at line 289 of file board\+\_\+lpcopen.\+c.
+
+
+
+\subsection{Variable Documentation}
+\mbox{\Hypertarget{board__lpcopen_8c_a74ceed751e84a920be263a7fe3da67f0}\label{board__lpcopen_8c_a74ceed751e84a920be263a7fe3da67f0}} 
+\index{board\+\_\+lpcopen.\+c@{board\+\_\+lpcopen.\+c}!Ext\+Rate\+In@{Ext\+Rate\+In}}
+\index{Ext\+Rate\+In@{Ext\+Rate\+In}!board\+\_\+lpcopen.\+c@{board\+\_\+lpcopen.\+c}}
+\subsubsection{\texorpdfstring{Ext\+Rate\+In}{ExtRateIn}}
+{\footnotesize\ttfamily const uint32\+\_\+t Ext\+Rate\+In = 0}
+
+
+
+Clock rate on the C\+L\+K\+IN pin This value is defined externally to the chip layer and contains the value in Hz for the C\+L\+K\+IN pin for the board. If this pin isn\textquotesingle{}t used, this rate can be 0. 
+
+
+
+Definition at line 84 of file board\+\_\+lpcopen.\+c.
+
+\mbox{\Hypertarget{board__lpcopen_8c_a2e84f0502f9a7fdd271b97c588696e6f}\label{board__lpcopen_8c_a2e84f0502f9a7fdd271b97c588696e6f}} 
+\index{board\+\_\+lpcopen.\+c@{board\+\_\+lpcopen.\+c}!Osc\+Rate\+In@{Osc\+Rate\+In}}
+\index{Osc\+Rate\+In@{Osc\+Rate\+In}!board\+\_\+lpcopen.\+c@{board\+\_\+lpcopen.\+c}}
+\subsubsection{\texorpdfstring{Osc\+Rate\+In}{OscRateIn}}
+{\footnotesize\ttfamily const uint32\+\_\+t Osc\+Rate\+In = 12000000}
+
+
+
+System oscillator rate This value is defined externally to the chip layer and contains the value in Hz for the external oscillator for the board. If using the internal oscillator, this rate can be 0. 
+
+
+
+Definition at line 85 of file board\+\_\+lpcopen.\+c.
+

@@ -1,0 +1,274 @@
+\hypertarget{vendor_2ceedling_2plugins_2freertos_2vendor_2freertos_2portable_2_g_c_c_2_p_o_s_i_x_2port_8c}{}\section{muju/vendor/ceedling/plugins/freertos/vendor/freertos/portable/\+G\+C\+C/\+P\+O\+S\+I\+X/port.c File Reference}
+\label{vendor_2ceedling_2plugins_2freertos_2vendor_2freertos_2portable_2_g_c_c_2_p_o_s_i_x_2port_8c}\index{muju/vendor/ceedling/plugins/freertos/vendor/freertos/portable/\+G\+C\+C/\+P\+O\+S\+I\+X/port.\+c@{muju/vendor/ceedling/plugins/freertos/vendor/freertos/portable/\+G\+C\+C/\+P\+O\+S\+I\+X/port.\+c}}
+{\ttfamily \#include $<$pthread.\+h$>$}\newline
+{\ttfamily \#include $<$sched.\+h$>$}\newline
+{\ttfamily \#include $<$signal.\+h$>$}\newline
+{\ttfamily \#include $<$errno.\+h$>$}\newline
+{\ttfamily \#include $<$sys/time.\+h$>$}\newline
+{\ttfamily \#include $<$time.\+h$>$}\newline
+{\ttfamily \#include $<$sys/times.\+h$>$}\newline
+{\ttfamily \#include $<$stdlib.\+h$>$}\newline
+{\ttfamily \#include $<$stdio.\+h$>$}\newline
+{\ttfamily \#include $<$unistd.\+h$>$}\newline
+{\ttfamily \#include $<$limits.\+h$>$}\newline
+{\ttfamily \#include \char`\"{}Free\+R\+T\+O\+S.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}task.\+h\char`\"{}}\newline
+Include dependency graph for port.\+c\+:
+% FIG 0
+\subsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+struct \hyperlink{struct_x_p_a_r_a_m_s}{X\+P\+A\+R\+A\+MS}
+\item 
+struct \hyperlink{struct_t_h_r_e_a_d___s_u_s_p_e_n_s_i_o_n_s}{T\+H\+R\+E\+A\+D\+\_\+\+S\+U\+S\+P\+E\+N\+S\+I\+O\+NS}
+\end{DoxyCompactItemize}
+\subsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#define \hyperlink{vendor_2ceedling_2plugins_2freertos_2vendor_2freertos_2portable_2_g_c_c_2_p_o_s_i_x_2port_8c_ae429fe1a9a03040b1a337048275f8540}{M\+A\+X\+\_\+\+N\+U\+M\+B\+E\+R\+\_\+\+O\+F\+\_\+\+T\+A\+S\+KS}~( \+\_\+\+P\+O\+S\+I\+X\+\_\+\+T\+H\+R\+E\+A\+D\+\_\+\+T\+H\+R\+E\+A\+D\+S\+\_\+\+M\+AX )
+\end{DoxyCompactItemize}
+\subsection*{Typedefs}
+\begin{DoxyCompactItemize}
+\item 
+typedef struct \hyperlink{struct_x_p_a_r_a_m_s}{X\+P\+A\+R\+A\+MS} \hyperlink{vendor_2ceedling_2plugins_2freertos_2vendor_2freertos_2portable_2_g_c_c_2_p_o_s_i_x_2port_8c_ac722d940aea2dc26b97464a1dbd63b21}{x\+Params}
+\item 
+typedef struct \hyperlink{struct_t_h_r_e_a_d___s_u_s_p_e_n_s_i_o_n_s}{T\+H\+R\+E\+A\+D\+\_\+\+S\+U\+S\+P\+E\+N\+S\+I\+O\+NS} \hyperlink{vendor_2ceedling_2plugins_2freertos_2vendor_2freertos_2portable_2_g_c_c_2_p_o_s_i_x_2port_8c_a4e7bff5d8a720a47276b1f687f370df6}{x\+Thread\+State}
+\end{DoxyCompactItemize}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \hyperlink{vendor_2ceedling_2plugins_2freertos_2vendor_2freertos_2portable_2_g_c_c_2_p_o_s_i_x_2port_8c_add01c927fb689f7ec170e42d47d27927}{v\+Port\+Yield} (void)
+\item 
+void \hyperlink{vendor_2ceedling_2plugins_2freertos_2vendor_2freertos_2portable_2_g_c_c_2_p_o_s_i_x_2port_8c_af4576b8a51329ade55e290866f7dc8ec}{v\+Port\+System\+Tick\+Handler} (int sig)
+\item 
+void \hyperlink{vendor_2ceedling_2plugins_2freertos_2vendor_2freertos_2portable_2_g_c_c_2_p_o_s_i_x_2port_8c_a5cfc38319f17c8e804020ec247b6325d}{v\+Port\+Start\+First\+Task} (void)
+\item 
+\hyperlink{vendor_2ceedling_2plugins_2freertos_2vendor_2freertos_2portable_2_g_c_c_2_p_o_s_i_x_2portmacro_8h_ab0a294066ac7369b8f59a52d9491a92c}{port\+S\+T\+A\+C\+K\+\_\+\+T\+Y\+PE} $\ast$ \hyperlink{vendor_2ceedling_2plugins_2freertos_2vendor_2freertos_2portable_2_g_c_c_2_p_o_s_i_x_2port_8c_a4a439f783d47636cea978a4c8669f258}{px\+Port\+Initialise\+Stack} (\hyperlink{vendor_2ceedling_2plugins_2freertos_2vendor_2freertos_2portable_2_g_c_c_2_p_o_s_i_x_2portmacro_8h_ab0a294066ac7369b8f59a52d9491a92c}{port\+S\+T\+A\+C\+K\+\_\+\+T\+Y\+PE} $\ast$px\+Top\+Of\+Stack, \hyperlink{vendor_2ceedling_2plugins_2freertos_2vendor_2freertos_2include_2_free_r_t_o_s_8h_a74cee96c96792dab96bdc57ba9007b24}{pd\+T\+A\+S\+K\+\_\+\+C\+O\+DE} px\+Code, void $\ast$pv\+Parameters)
+\item 
+\hyperlink{vendor_2ceedling_2plugins_2freertos_2vendor_2freertos_2portable_2_g_c_c_2_p_o_s_i_x_2portmacro_8h_a1ebe82d24d764ae4e352f7c3a9f92c01}{port\+B\+A\+S\+E\+\_\+\+T\+Y\+PE} \hyperlink{vendor_2ceedling_2plugins_2freertos_2vendor_2freertos_2portable_2_g_c_c_2_p_o_s_i_x_2port_8c_a53fbb684e09a643c56b7508f1ef97ad3}{x\+Port\+Start\+Scheduler} (void)
+\item 
+void \hyperlink{vendor_2ceedling_2plugins_2freertos_2vendor_2freertos_2portable_2_g_c_c_2_p_o_s_i_x_2port_8c_af76f3c0b44c5b5c06fc046a4ee1a6423}{v\+Port\+End\+Scheduler} (void)
+\item 
+void \hyperlink{vendor_2ceedling_2plugins_2freertos_2vendor_2freertos_2portable_2_g_c_c_2_p_o_s_i_x_2port_8c_afdcc79704f1ce3c8790268b732b7911d}{v\+Port\+Yield\+From\+I\+SR} (void)
+\item 
+void \hyperlink{vendor_2ceedling_2plugins_2freertos_2vendor_2freertos_2portable_2_g_c_c_2_p_o_s_i_x_2port_8c_a2ed3554a3de09a3bd09d396ee081ab69}{v\+Port\+Enter\+Critical} (void)
+\item 
+void \hyperlink{vendor_2ceedling_2plugins_2freertos_2vendor_2freertos_2portable_2_g_c_c_2_p_o_s_i_x_2port_8c_aed20ada05b957181a0de042802a82a5b}{v\+Port\+Exit\+Critical} (void)
+\item 
+void \hyperlink{vendor_2ceedling_2plugins_2freertos_2vendor_2freertos_2portable_2_g_c_c_2_p_o_s_i_x_2port_8c_a6efcba81026ff6f2920ea53804bc6bdf}{v\+Port\+Disable\+Interrupts} (void)
+\item 
+void \hyperlink{vendor_2ceedling_2plugins_2freertos_2vendor_2freertos_2portable_2_g_c_c_2_p_o_s_i_x_2port_8c_af329f3280e39011c4d9efbca3d5dd329}{v\+Port\+Enable\+Interrupts} (void)
+\item 
+\hyperlink{vendor_2ceedling_2plugins_2freertos_2vendor_2freertos_2portable_2_g_c_c_2_p_o_s_i_x_2portmacro_8h_a1ebe82d24d764ae4e352f7c3a9f92c01}{port\+B\+A\+S\+E\+\_\+\+T\+Y\+PE} \hyperlink{vendor_2ceedling_2plugins_2freertos_2vendor_2freertos_2portable_2_g_c_c_2_p_o_s_i_x_2port_8c_a74874880bc92942127e3a07be5571822}{x\+Port\+Set\+Interrupt\+Mask} (void)
+\item 
+void \hyperlink{vendor_2ceedling_2plugins_2freertos_2vendor_2freertos_2portable_2_g_c_c_2_p_o_s_i_x_2port_8c_ae909be125cc9a2220ed8ee1acbf28874}{v\+Port\+Clear\+Interrupt\+Mask} (\hyperlink{vendor_2ceedling_2plugins_2freertos_2vendor_2freertos_2portable_2_g_c_c_2_p_o_s_i_x_2portmacro_8h_a1ebe82d24d764ae4e352f7c3a9f92c01}{port\+B\+A\+S\+E\+\_\+\+T\+Y\+PE} x\+Mask)
+\item 
+void \hyperlink{vendor_2ceedling_2plugins_2freertos_2vendor_2freertos_2portable_2_g_c_c_2_p_o_s_i_x_2port_8c_ab5abb38fd2477d71d71d21e81f6f0206}{v\+Port\+Forcibly\+End\+Thread} (void $\ast$px\+Task\+To\+Delete)
+\item 
+void \hyperlink{vendor_2ceedling_2plugins_2freertos_2vendor_2freertos_2portable_2_g_c_c_2_p_o_s_i_x_2port_8c_a88c7620356047aea8d55bb5c4fa51ac5}{v\+Port\+Add\+Task\+Handle} (void $\ast$px\+Task\+Handle)
+\item 
+void \hyperlink{vendor_2ceedling_2plugins_2freertos_2vendor_2freertos_2portable_2_g_c_c_2_p_o_s_i_x_2port_8c_ac407473e70202ce8c914854a8edad969}{v\+Port\+Find\+Ticks\+Per\+Second} (void)
+\item 
+unsigned long \hyperlink{vendor_2ceedling_2plugins_2freertos_2vendor_2freertos_2portable_2_g_c_c_2_p_o_s_i_x_2port_8c_abbd3994df98343a0a306ca8cd7d6e53b}{ul\+Port\+Get\+Timer\+Value} (void)
+\end{DoxyCompactItemize}
+
+
+\subsection{Macro Definition Documentation}
+\mbox{\Hypertarget{vendor_2ceedling_2plugins_2freertos_2vendor_2freertos_2portable_2_g_c_c_2_p_o_s_i_x_2port_8c_ae429fe1a9a03040b1a337048275f8540}\label{vendor_2ceedling_2plugins_2freertos_2vendor_2freertos_2portable_2_g_c_c_2_p_o_s_i_x_2port_8c_ae429fe1a9a03040b1a337048275f8540}} 
+\index{vendor/ceedling/plugins/freertos/vendor/freertos/portable/\+G\+C\+C/\+P\+O\+S\+I\+X/port.\+c@{vendor/ceedling/plugins/freertos/vendor/freertos/portable/\+G\+C\+C/\+P\+O\+S\+I\+X/port.\+c}!M\+A\+X\+\_\+\+N\+U\+M\+B\+E\+R\+\_\+\+O\+F\+\_\+\+T\+A\+S\+KS@{M\+A\+X\+\_\+\+N\+U\+M\+B\+E\+R\+\_\+\+O\+F\+\_\+\+T\+A\+S\+KS}}
+\index{M\+A\+X\+\_\+\+N\+U\+M\+B\+E\+R\+\_\+\+O\+F\+\_\+\+T\+A\+S\+KS@{M\+A\+X\+\_\+\+N\+U\+M\+B\+E\+R\+\_\+\+O\+F\+\_\+\+T\+A\+S\+KS}!vendor/ceedling/plugins/freertos/vendor/freertos/portable/\+G\+C\+C/\+P\+O\+S\+I\+X/port.\+c@{vendor/ceedling/plugins/freertos/vendor/freertos/portable/\+G\+C\+C/\+P\+O\+S\+I\+X/port.\+c}}
+\subsubsection{\texorpdfstring{M\+A\+X\+\_\+\+N\+U\+M\+B\+E\+R\+\_\+\+O\+F\+\_\+\+T\+A\+S\+KS}{MAX\_NUMBER\_OF\_TASKS}}
+{\footnotesize\ttfamily \#define M\+A\+X\+\_\+\+N\+U\+M\+B\+E\+R\+\_\+\+O\+F\+\_\+\+T\+A\+S\+KS~( \+\_\+\+P\+O\+S\+I\+X\+\_\+\+T\+H\+R\+E\+A\+D\+\_\+\+T\+H\+R\+E\+A\+D\+S\+\_\+\+M\+AX )}
+
+
+
+Definition at line 74 of file port.\+c.
+
+
+
+\subsection{Typedef Documentation}
+\mbox{\Hypertarget{vendor_2ceedling_2plugins_2freertos_2vendor_2freertos_2portable_2_g_c_c_2_p_o_s_i_x_2port_8c_ac722d940aea2dc26b97464a1dbd63b21}\label{vendor_2ceedling_2plugins_2freertos_2vendor_2freertos_2portable_2_g_c_c_2_p_o_s_i_x_2port_8c_ac722d940aea2dc26b97464a1dbd63b21}} 
+\index{vendor/ceedling/plugins/freertos/vendor/freertos/portable/\+G\+C\+C/\+P\+O\+S\+I\+X/port.\+c@{vendor/ceedling/plugins/freertos/vendor/freertos/portable/\+G\+C\+C/\+P\+O\+S\+I\+X/port.\+c}!x\+Params@{x\+Params}}
+\index{x\+Params@{x\+Params}!vendor/ceedling/plugins/freertos/vendor/freertos/portable/\+G\+C\+C/\+P\+O\+S\+I\+X/port.\+c@{vendor/ceedling/plugins/freertos/vendor/freertos/portable/\+G\+C\+C/\+P\+O\+S\+I\+X/port.\+c}}
+\subsubsection{\texorpdfstring{x\+Params}{xParams}}
+{\footnotesize\ttfamily typedef struct \hyperlink{struct_x_p_a_r_a_m_s}{X\+P\+A\+R\+A\+MS}  \hyperlink{vendor_2ceedling_2plugins_2freertos_2src_2freertos_2portable_2_g_c_c_2_p_o_s_i_x_2port_8c_ac722d940aea2dc26b97464a1dbd63b21}{x\+Params}}
+
+\mbox{\Hypertarget{vendor_2ceedling_2plugins_2freertos_2vendor_2freertos_2portable_2_g_c_c_2_p_o_s_i_x_2port_8c_a4e7bff5d8a720a47276b1f687f370df6}\label{vendor_2ceedling_2plugins_2freertos_2vendor_2freertos_2portable_2_g_c_c_2_p_o_s_i_x_2port_8c_a4e7bff5d8a720a47276b1f687f370df6}} 
+\index{vendor/ceedling/plugins/freertos/vendor/freertos/portable/\+G\+C\+C/\+P\+O\+S\+I\+X/port.\+c@{vendor/ceedling/plugins/freertos/vendor/freertos/portable/\+G\+C\+C/\+P\+O\+S\+I\+X/port.\+c}!x\+Thread\+State@{x\+Thread\+State}}
+\index{x\+Thread\+State@{x\+Thread\+State}!vendor/ceedling/plugins/freertos/vendor/freertos/portable/\+G\+C\+C/\+P\+O\+S\+I\+X/port.\+c@{vendor/ceedling/plugins/freertos/vendor/freertos/portable/\+G\+C\+C/\+P\+O\+S\+I\+X/port.\+c}}
+\subsubsection{\texorpdfstring{x\+Thread\+State}{xThreadState}}
+{\footnotesize\ttfamily typedef struct \hyperlink{struct_t_h_r_e_a_d___s_u_s_p_e_n_s_i_o_n_s}{T\+H\+R\+E\+A\+D\+\_\+\+S\+U\+S\+P\+E\+N\+S\+I\+O\+NS}  \hyperlink{vendor_2ceedling_2plugins_2freertos_2src_2freertos_2portable_2_g_c_c_2_p_o_s_i_x_2port_8c_a4e7bff5d8a720a47276b1f687f370df6}{x\+Thread\+State}}
+
+
+
+\subsection{Function Documentation}
+\mbox{\Hypertarget{vendor_2ceedling_2plugins_2freertos_2vendor_2freertos_2portable_2_g_c_c_2_p_o_s_i_x_2port_8c_a4a439f783d47636cea978a4c8669f258}\label{vendor_2ceedling_2plugins_2freertos_2vendor_2freertos_2portable_2_g_c_c_2_p_o_s_i_x_2port_8c_a4a439f783d47636cea978a4c8669f258}} 
+\index{vendor/ceedling/plugins/freertos/vendor/freertos/portable/\+G\+C\+C/\+P\+O\+S\+I\+X/port.\+c@{vendor/ceedling/plugins/freertos/vendor/freertos/portable/\+G\+C\+C/\+P\+O\+S\+I\+X/port.\+c}!px\+Port\+Initialise\+Stack@{px\+Port\+Initialise\+Stack}}
+\index{px\+Port\+Initialise\+Stack@{px\+Port\+Initialise\+Stack}!vendor/ceedling/plugins/freertos/vendor/freertos/portable/\+G\+C\+C/\+P\+O\+S\+I\+X/port.\+c@{vendor/ceedling/plugins/freertos/vendor/freertos/portable/\+G\+C\+C/\+P\+O\+S\+I\+X/port.\+c}}
+\subsubsection{\texorpdfstring{px\+Port\+Initialise\+Stack()}{pxPortInitialiseStack()}}
+{\footnotesize\ttfamily \hyperlink{vendor_2ceedling_2plugins_2freertos_2vendor_2freertos_2portable_2_g_c_c_2_p_o_s_i_x_2portmacro_8h_ab0a294066ac7369b8f59a52d9491a92c}{port\+S\+T\+A\+C\+K\+\_\+\+T\+Y\+PE}$\ast$ px\+Port\+Initialise\+Stack (\begin{DoxyParamCaption}\item[{\hyperlink{vendor_2ceedling_2plugins_2freertos_2vendor_2freertos_2portable_2_g_c_c_2_p_o_s_i_x_2portmacro_8h_ab0a294066ac7369b8f59a52d9491a92c}{port\+S\+T\+A\+C\+K\+\_\+\+T\+Y\+PE} $\ast$}]{px\+Top\+Of\+Stack,  }\item[{\hyperlink{vendor_2ceedling_2plugins_2freertos_2vendor_2freertos_2include_2_free_r_t_o_s_8h_a74cee96c96792dab96bdc57ba9007b24}{pd\+T\+A\+S\+K\+\_\+\+C\+O\+DE}}]{px\+Code,  }\item[{void $\ast$}]{pv\+Parameters }\end{DoxyParamCaption})}
+
+
+
+Definition at line 143 of file port.\+c.
+
+\mbox{\Hypertarget{vendor_2ceedling_2plugins_2freertos_2vendor_2freertos_2portable_2_g_c_c_2_p_o_s_i_x_2port_8c_abbd3994df98343a0a306ca8cd7d6e53b}\label{vendor_2ceedling_2plugins_2freertos_2vendor_2freertos_2portable_2_g_c_c_2_p_o_s_i_x_2port_8c_abbd3994df98343a0a306ca8cd7d6e53b}} 
+\index{vendor/ceedling/plugins/freertos/vendor/freertos/portable/\+G\+C\+C/\+P\+O\+S\+I\+X/port.\+c@{vendor/ceedling/plugins/freertos/vendor/freertos/portable/\+G\+C\+C/\+P\+O\+S\+I\+X/port.\+c}!ul\+Port\+Get\+Timer\+Value@{ul\+Port\+Get\+Timer\+Value}}
+\index{ul\+Port\+Get\+Timer\+Value@{ul\+Port\+Get\+Timer\+Value}!vendor/ceedling/plugins/freertos/vendor/freertos/portable/\+G\+C\+C/\+P\+O\+S\+I\+X/port.\+c@{vendor/ceedling/plugins/freertos/vendor/freertos/portable/\+G\+C\+C/\+P\+O\+S\+I\+X/port.\+c}}
+\subsubsection{\texorpdfstring{ul\+Port\+Get\+Timer\+Value()}{ulPortGetTimerValue()}}
+{\footnotesize\ttfamily unsigned long ul\+Port\+Get\+Timer\+Value (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+
+
+
+Definition at line 774 of file port.\+c.
+
+\mbox{\Hypertarget{vendor_2ceedling_2plugins_2freertos_2vendor_2freertos_2portable_2_g_c_c_2_p_o_s_i_x_2port_8c_a88c7620356047aea8d55bb5c4fa51ac5}\label{vendor_2ceedling_2plugins_2freertos_2vendor_2freertos_2portable_2_g_c_c_2_p_o_s_i_x_2port_8c_a88c7620356047aea8d55bb5c4fa51ac5}} 
+\index{vendor/ceedling/plugins/freertos/vendor/freertos/portable/\+G\+C\+C/\+P\+O\+S\+I\+X/port.\+c@{vendor/ceedling/plugins/freertos/vendor/freertos/portable/\+G\+C\+C/\+P\+O\+S\+I\+X/port.\+c}!v\+Port\+Add\+Task\+Handle@{v\+Port\+Add\+Task\+Handle}}
+\index{v\+Port\+Add\+Task\+Handle@{v\+Port\+Add\+Task\+Handle}!vendor/ceedling/plugins/freertos/vendor/freertos/portable/\+G\+C\+C/\+P\+O\+S\+I\+X/port.\+c@{vendor/ceedling/plugins/freertos/vendor/freertos/portable/\+G\+C\+C/\+P\+O\+S\+I\+X/port.\+c}}
+\subsubsection{\texorpdfstring{v\+Port\+Add\+Task\+Handle()}{vPortAddTaskHandle()}}
+{\footnotesize\ttfamily void v\+Port\+Add\+Task\+Handle (\begin{DoxyParamCaption}\item[{void $\ast$}]{px\+Task\+Handle }\end{DoxyParamCaption})}
+
+
+
+Definition at line 746 of file port.\+c.
+
+\mbox{\Hypertarget{vendor_2ceedling_2plugins_2freertos_2vendor_2freertos_2portable_2_g_c_c_2_p_o_s_i_x_2port_8c_ae909be125cc9a2220ed8ee1acbf28874}\label{vendor_2ceedling_2plugins_2freertos_2vendor_2freertos_2portable_2_g_c_c_2_p_o_s_i_x_2port_8c_ae909be125cc9a2220ed8ee1acbf28874}} 
+\index{vendor/ceedling/plugins/freertos/vendor/freertos/portable/\+G\+C\+C/\+P\+O\+S\+I\+X/port.\+c@{vendor/ceedling/plugins/freertos/vendor/freertos/portable/\+G\+C\+C/\+P\+O\+S\+I\+X/port.\+c}!v\+Port\+Clear\+Interrupt\+Mask@{v\+Port\+Clear\+Interrupt\+Mask}}
+\index{v\+Port\+Clear\+Interrupt\+Mask@{v\+Port\+Clear\+Interrupt\+Mask}!vendor/ceedling/plugins/freertos/vendor/freertos/portable/\+G\+C\+C/\+P\+O\+S\+I\+X/port.\+c@{vendor/ceedling/plugins/freertos/vendor/freertos/portable/\+G\+C\+C/\+P\+O\+S\+I\+X/port.\+c}}
+\subsubsection{\texorpdfstring{v\+Port\+Clear\+Interrupt\+Mask()}{vPortClearInterruptMask()}}
+{\footnotesize\ttfamily void v\+Port\+Clear\+Interrupt\+Mask (\begin{DoxyParamCaption}\item[{\hyperlink{vendor_2ceedling_2plugins_2freertos_2vendor_2freertos_2portable_2_g_c_c_2_p_o_s_i_x_2portmacro_8h_a1ebe82d24d764ae4e352f7c3a9f92c01}{port\+B\+A\+S\+E\+\_\+\+T\+Y\+PE}}]{x\+Mask }\end{DoxyParamCaption})}
+
+
+
+Definition at line 363 of file port.\+c.
+
+\mbox{\Hypertarget{vendor_2ceedling_2plugins_2freertos_2vendor_2freertos_2portable_2_g_c_c_2_p_o_s_i_x_2port_8c_a6efcba81026ff6f2920ea53804bc6bdf}\label{vendor_2ceedling_2plugins_2freertos_2vendor_2freertos_2portable_2_g_c_c_2_p_o_s_i_x_2port_8c_a6efcba81026ff6f2920ea53804bc6bdf}} 
+\index{vendor/ceedling/plugins/freertos/vendor/freertos/portable/\+G\+C\+C/\+P\+O\+S\+I\+X/port.\+c@{vendor/ceedling/plugins/freertos/vendor/freertos/portable/\+G\+C\+C/\+P\+O\+S\+I\+X/port.\+c}!v\+Port\+Disable\+Interrupts@{v\+Port\+Disable\+Interrupts}}
+\index{v\+Port\+Disable\+Interrupts@{v\+Port\+Disable\+Interrupts}!vendor/ceedling/plugins/freertos/vendor/freertos/portable/\+G\+C\+C/\+P\+O\+S\+I\+X/port.\+c@{vendor/ceedling/plugins/freertos/vendor/freertos/portable/\+G\+C\+C/\+P\+O\+S\+I\+X/port.\+c}}
+\subsubsection{\texorpdfstring{v\+Port\+Disable\+Interrupts()}{vPortDisableInterrupts()}}
+{\footnotesize\ttfamily void v\+Port\+Disable\+Interrupts (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+
+
+
+Definition at line 343 of file port.\+c.
+
+\mbox{\Hypertarget{vendor_2ceedling_2plugins_2freertos_2vendor_2freertos_2portable_2_g_c_c_2_p_o_s_i_x_2port_8c_af329f3280e39011c4d9efbca3d5dd329}\label{vendor_2ceedling_2plugins_2freertos_2vendor_2freertos_2portable_2_g_c_c_2_p_o_s_i_x_2port_8c_af329f3280e39011c4d9efbca3d5dd329}} 
+\index{vendor/ceedling/plugins/freertos/vendor/freertos/portable/\+G\+C\+C/\+P\+O\+S\+I\+X/port.\+c@{vendor/ceedling/plugins/freertos/vendor/freertos/portable/\+G\+C\+C/\+P\+O\+S\+I\+X/port.\+c}!v\+Port\+Enable\+Interrupts@{v\+Port\+Enable\+Interrupts}}
+\index{v\+Port\+Enable\+Interrupts@{v\+Port\+Enable\+Interrupts}!vendor/ceedling/plugins/freertos/vendor/freertos/portable/\+G\+C\+C/\+P\+O\+S\+I\+X/port.\+c@{vendor/ceedling/plugins/freertos/vendor/freertos/portable/\+G\+C\+C/\+P\+O\+S\+I\+X/port.\+c}}
+\subsubsection{\texorpdfstring{v\+Port\+Enable\+Interrupts()}{vPortEnableInterrupts()}}
+{\footnotesize\ttfamily void v\+Port\+Enable\+Interrupts (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+
+
+
+Definition at line 349 of file port.\+c.
+
+\mbox{\Hypertarget{vendor_2ceedling_2plugins_2freertos_2vendor_2freertos_2portable_2_g_c_c_2_p_o_s_i_x_2port_8c_af76f3c0b44c5b5c06fc046a4ee1a6423}\label{vendor_2ceedling_2plugins_2freertos_2vendor_2freertos_2portable_2_g_c_c_2_p_o_s_i_x_2port_8c_af76f3c0b44c5b5c06fc046a4ee1a6423}} 
+\index{vendor/ceedling/plugins/freertos/vendor/freertos/portable/\+G\+C\+C/\+P\+O\+S\+I\+X/port.\+c@{vendor/ceedling/plugins/freertos/vendor/freertos/portable/\+G\+C\+C/\+P\+O\+S\+I\+X/port.\+c}!v\+Port\+End\+Scheduler@{v\+Port\+End\+Scheduler}}
+\index{v\+Port\+End\+Scheduler@{v\+Port\+End\+Scheduler}!vendor/ceedling/plugins/freertos/vendor/freertos/portable/\+G\+C\+C/\+P\+O\+S\+I\+X/port.\+c@{vendor/ceedling/plugins/freertos/vendor/freertos/portable/\+G\+C\+C/\+P\+O\+S\+I\+X/port.\+c}}
+\subsubsection{\texorpdfstring{v\+Port\+End\+Scheduler()}{vPortEndScheduler()}}
+{\footnotesize\ttfamily void v\+Port\+End\+Scheduler (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+
+
+
+Definition at line 253 of file port.\+c.
+
+\mbox{\Hypertarget{vendor_2ceedling_2plugins_2freertos_2vendor_2freertos_2portable_2_g_c_c_2_p_o_s_i_x_2port_8c_a2ed3554a3de09a3bd09d396ee081ab69}\label{vendor_2ceedling_2plugins_2freertos_2vendor_2freertos_2portable_2_g_c_c_2_p_o_s_i_x_2port_8c_a2ed3554a3de09a3bd09d396ee081ab69}} 
+\index{vendor/ceedling/plugins/freertos/vendor/freertos/portable/\+G\+C\+C/\+P\+O\+S\+I\+X/port.\+c@{vendor/ceedling/plugins/freertos/vendor/freertos/portable/\+G\+C\+C/\+P\+O\+S\+I\+X/port.\+c}!v\+Port\+Enter\+Critical@{v\+Port\+Enter\+Critical}}
+\index{v\+Port\+Enter\+Critical@{v\+Port\+Enter\+Critical}!vendor/ceedling/plugins/freertos/vendor/freertos/portable/\+G\+C\+C/\+P\+O\+S\+I\+X/port.\+c@{vendor/ceedling/plugins/freertos/vendor/freertos/portable/\+G\+C\+C/\+P\+O\+S\+I\+X/port.\+c}}
+\subsubsection{\texorpdfstring{v\+Port\+Enter\+Critical()}{vPortEnterCritical()}}
+{\footnotesize\ttfamily void v\+Port\+Enter\+Critical (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+
+
+
+Definition at line 284 of file port.\+c.
+
+\mbox{\Hypertarget{vendor_2ceedling_2plugins_2freertos_2vendor_2freertos_2portable_2_g_c_c_2_p_o_s_i_x_2port_8c_aed20ada05b957181a0de042802a82a5b}\label{vendor_2ceedling_2plugins_2freertos_2vendor_2freertos_2portable_2_g_c_c_2_p_o_s_i_x_2port_8c_aed20ada05b957181a0de042802a82a5b}} 
+\index{vendor/ceedling/plugins/freertos/vendor/freertos/portable/\+G\+C\+C/\+P\+O\+S\+I\+X/port.\+c@{vendor/ceedling/plugins/freertos/vendor/freertos/portable/\+G\+C\+C/\+P\+O\+S\+I\+X/port.\+c}!v\+Port\+Exit\+Critical@{v\+Port\+Exit\+Critical}}
+\index{v\+Port\+Exit\+Critical@{v\+Port\+Exit\+Critical}!vendor/ceedling/plugins/freertos/vendor/freertos/portable/\+G\+C\+C/\+P\+O\+S\+I\+X/port.\+c@{vendor/ceedling/plugins/freertos/vendor/freertos/portable/\+G\+C\+C/\+P\+O\+S\+I\+X/port.\+c}}
+\subsubsection{\texorpdfstring{v\+Port\+Exit\+Critical()}{vPortExitCritical()}}
+{\footnotesize\ttfamily void v\+Port\+Exit\+Critical (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+
+
+
+Definition at line 291 of file port.\+c.
+
+\mbox{\Hypertarget{vendor_2ceedling_2plugins_2freertos_2vendor_2freertos_2portable_2_g_c_c_2_p_o_s_i_x_2port_8c_ac407473e70202ce8c914854a8edad969}\label{vendor_2ceedling_2plugins_2freertos_2vendor_2freertos_2portable_2_g_c_c_2_p_o_s_i_x_2port_8c_ac407473e70202ce8c914854a8edad969}} 
+\index{vendor/ceedling/plugins/freertos/vendor/freertos/portable/\+G\+C\+C/\+P\+O\+S\+I\+X/port.\+c@{vendor/ceedling/plugins/freertos/vendor/freertos/portable/\+G\+C\+C/\+P\+O\+S\+I\+X/port.\+c}!v\+Port\+Find\+Ticks\+Per\+Second@{v\+Port\+Find\+Ticks\+Per\+Second}}
+\index{v\+Port\+Find\+Ticks\+Per\+Second@{v\+Port\+Find\+Ticks\+Per\+Second}!vendor/ceedling/plugins/freertos/vendor/freertos/portable/\+G\+C\+C/\+P\+O\+S\+I\+X/port.\+c@{vendor/ceedling/plugins/freertos/vendor/freertos/portable/\+G\+C\+C/\+P\+O\+S\+I\+X/port.\+c}}
+\subsubsection{\texorpdfstring{v\+Port\+Find\+Ticks\+Per\+Second()}{vPortFindTicksPerSecond()}}
+{\footnotesize\ttfamily void v\+Port\+Find\+Ticks\+Per\+Second (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+
+
+
+Definition at line 766 of file port.\+c.
+
+\mbox{\Hypertarget{vendor_2ceedling_2plugins_2freertos_2vendor_2freertos_2portable_2_g_c_c_2_p_o_s_i_x_2port_8c_ab5abb38fd2477d71d71d21e81f6f0206}\label{vendor_2ceedling_2plugins_2freertos_2vendor_2freertos_2portable_2_g_c_c_2_p_o_s_i_x_2port_8c_ab5abb38fd2477d71d71d21e81f6f0206}} 
+\index{vendor/ceedling/plugins/freertos/vendor/freertos/portable/\+G\+C\+C/\+P\+O\+S\+I\+X/port.\+c@{vendor/ceedling/plugins/freertos/vendor/freertos/portable/\+G\+C\+C/\+P\+O\+S\+I\+X/port.\+c}!v\+Port\+Forcibly\+End\+Thread@{v\+Port\+Forcibly\+End\+Thread}}
+\index{v\+Port\+Forcibly\+End\+Thread@{v\+Port\+Forcibly\+End\+Thread}!vendor/ceedling/plugins/freertos/vendor/freertos/portable/\+G\+C\+C/\+P\+O\+S\+I\+X/port.\+c@{vendor/ceedling/plugins/freertos/vendor/freertos/portable/\+G\+C\+C/\+P\+O\+S\+I\+X/port.\+c}}
+\subsubsection{\texorpdfstring{v\+Port\+Forcibly\+End\+Thread()}{vPortForciblyEndThread()}}
+{\footnotesize\ttfamily void v\+Port\+Forcibly\+End\+Thread (\begin{DoxyParamCaption}\item[{void $\ast$}]{px\+Task\+To\+Delete }\end{DoxyParamCaption})}
+
+
+
+Definition at line 454 of file port.\+c.
+
+\mbox{\Hypertarget{vendor_2ceedling_2plugins_2freertos_2vendor_2freertos_2portable_2_g_c_c_2_p_o_s_i_x_2port_8c_a5cfc38319f17c8e804020ec247b6325d}\label{vendor_2ceedling_2plugins_2freertos_2vendor_2freertos_2portable_2_g_c_c_2_p_o_s_i_x_2port_8c_a5cfc38319f17c8e804020ec247b6325d}} 
+\index{vendor/ceedling/plugins/freertos/vendor/freertos/portable/\+G\+C\+C/\+P\+O\+S\+I\+X/port.\+c@{vendor/ceedling/plugins/freertos/vendor/freertos/portable/\+G\+C\+C/\+P\+O\+S\+I\+X/port.\+c}!v\+Port\+Start\+First\+Task@{v\+Port\+Start\+First\+Task}}
+\index{v\+Port\+Start\+First\+Task@{v\+Port\+Start\+First\+Task}!vendor/ceedling/plugins/freertos/vendor/freertos/portable/\+G\+C\+C/\+P\+O\+S\+I\+X/port.\+c@{vendor/ceedling/plugins/freertos/vendor/freertos/portable/\+G\+C\+C/\+P\+O\+S\+I\+X/port.\+c}}
+\subsubsection{\texorpdfstring{v\+Port\+Start\+First\+Task()}{vPortStartFirstTask()}}
+{\footnotesize\ttfamily void v\+Port\+Start\+First\+Task (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+
+
+
+Definition at line 187 of file port.\+c.
+
+\mbox{\Hypertarget{vendor_2ceedling_2plugins_2freertos_2vendor_2freertos_2portable_2_g_c_c_2_p_o_s_i_x_2port_8c_af4576b8a51329ade55e290866f7dc8ec}\label{vendor_2ceedling_2plugins_2freertos_2vendor_2freertos_2portable_2_g_c_c_2_p_o_s_i_x_2port_8c_af4576b8a51329ade55e290866f7dc8ec}} 
+\index{vendor/ceedling/plugins/freertos/vendor/freertos/portable/\+G\+C\+C/\+P\+O\+S\+I\+X/port.\+c@{vendor/ceedling/plugins/freertos/vendor/freertos/portable/\+G\+C\+C/\+P\+O\+S\+I\+X/port.\+c}!v\+Port\+System\+Tick\+Handler@{v\+Port\+System\+Tick\+Handler}}
+\index{v\+Port\+System\+Tick\+Handler@{v\+Port\+System\+Tick\+Handler}!vendor/ceedling/plugins/freertos/vendor/freertos/portable/\+G\+C\+C/\+P\+O\+S\+I\+X/port.\+c@{vendor/ceedling/plugins/freertos/vendor/freertos/portable/\+G\+C\+C/\+P\+O\+S\+I\+X/port.\+c}}
+\subsubsection{\texorpdfstring{v\+Port\+System\+Tick\+Handler()}{vPortSystemTickHandler()}}
+{\footnotesize\ttfamily void v\+Port\+System\+Tick\+Handler (\begin{DoxyParamCaption}\item[{int}]{sig }\end{DoxyParamCaption})}
+
+
+
+Definition at line 402 of file port.\+c.
+
+\mbox{\Hypertarget{vendor_2ceedling_2plugins_2freertos_2vendor_2freertos_2portable_2_g_c_c_2_p_o_s_i_x_2port_8c_add01c927fb689f7ec170e42d47d27927}\label{vendor_2ceedling_2plugins_2freertos_2vendor_2freertos_2portable_2_g_c_c_2_p_o_s_i_x_2port_8c_add01c927fb689f7ec170e42d47d27927}} 
+\index{vendor/ceedling/plugins/freertos/vendor/freertos/portable/\+G\+C\+C/\+P\+O\+S\+I\+X/port.\+c@{vendor/ceedling/plugins/freertos/vendor/freertos/portable/\+G\+C\+C/\+P\+O\+S\+I\+X/port.\+c}!v\+Port\+Yield@{v\+Port\+Yield}}
+\index{v\+Port\+Yield@{v\+Port\+Yield}!vendor/ceedling/plugins/freertos/vendor/freertos/portable/\+G\+C\+C/\+P\+O\+S\+I\+X/port.\+c@{vendor/ceedling/plugins/freertos/vendor/freertos/portable/\+G\+C\+C/\+P\+O\+S\+I\+X/port.\+c}}
+\subsubsection{\texorpdfstring{v\+Port\+Yield()}{vPortYield()}}
+{\footnotesize\ttfamily void v\+Port\+Yield (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+
+
+
+Definition at line 313 of file port.\+c.
+
+\mbox{\Hypertarget{vendor_2ceedling_2plugins_2freertos_2vendor_2freertos_2portable_2_g_c_c_2_p_o_s_i_x_2port_8c_afdcc79704f1ce3c8790268b732b7911d}\label{vendor_2ceedling_2plugins_2freertos_2vendor_2freertos_2portable_2_g_c_c_2_p_o_s_i_x_2port_8c_afdcc79704f1ce3c8790268b732b7911d}} 
+\index{vendor/ceedling/plugins/freertos/vendor/freertos/portable/\+G\+C\+C/\+P\+O\+S\+I\+X/port.\+c@{vendor/ceedling/plugins/freertos/vendor/freertos/portable/\+G\+C\+C/\+P\+O\+S\+I\+X/port.\+c}!v\+Port\+Yield\+From\+I\+SR@{v\+Port\+Yield\+From\+I\+SR}}
+\index{v\+Port\+Yield\+From\+I\+SR@{v\+Port\+Yield\+From\+I\+SR}!vendor/ceedling/plugins/freertos/vendor/freertos/portable/\+G\+C\+C/\+P\+O\+S\+I\+X/port.\+c@{vendor/ceedling/plugins/freertos/vendor/freertos/portable/\+G\+C\+C/\+P\+O\+S\+I\+X/port.\+c}}
+\subsubsection{\texorpdfstring{v\+Port\+Yield\+From\+I\+S\+R()}{vPortYieldFromISR()}}
+{\footnotesize\ttfamily void v\+Port\+Yield\+From\+I\+SR (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+
+
+
+Definition at line 274 of file port.\+c.
+
+\mbox{\Hypertarget{vendor_2ceedling_2plugins_2freertos_2vendor_2freertos_2portable_2_g_c_c_2_p_o_s_i_x_2port_8c_a74874880bc92942127e3a07be5571822}\label{vendor_2ceedling_2plugins_2freertos_2vendor_2freertos_2portable_2_g_c_c_2_p_o_s_i_x_2port_8c_a74874880bc92942127e3a07be5571822}} 
+\index{vendor/ceedling/plugins/freertos/vendor/freertos/portable/\+G\+C\+C/\+P\+O\+S\+I\+X/port.\+c@{vendor/ceedling/plugins/freertos/vendor/freertos/portable/\+G\+C\+C/\+P\+O\+S\+I\+X/port.\+c}!x\+Port\+Set\+Interrupt\+Mask@{x\+Port\+Set\+Interrupt\+Mask}}
+\index{x\+Port\+Set\+Interrupt\+Mask@{x\+Port\+Set\+Interrupt\+Mask}!vendor/ceedling/plugins/freertos/vendor/freertos/portable/\+G\+C\+C/\+P\+O\+S\+I\+X/port.\+c@{vendor/ceedling/plugins/freertos/vendor/freertos/portable/\+G\+C\+C/\+P\+O\+S\+I\+X/port.\+c}}
+\subsubsection{\texorpdfstring{x\+Port\+Set\+Interrupt\+Mask()}{xPortSetInterruptMask()}}
+{\footnotesize\ttfamily \hyperlink{vendor_2ceedling_2plugins_2freertos_2vendor_2freertos_2portable_2_g_c_c_2_p_o_s_i_x_2portmacro_8h_a1ebe82d24d764ae4e352f7c3a9f92c01}{port\+B\+A\+S\+E\+\_\+\+T\+Y\+PE} x\+Port\+Set\+Interrupt\+Mask (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+
+
+
+Definition at line 355 of file port.\+c.
+
+\mbox{\Hypertarget{vendor_2ceedling_2plugins_2freertos_2vendor_2freertos_2portable_2_g_c_c_2_p_o_s_i_x_2port_8c_a53fbb684e09a643c56b7508f1ef97ad3}\label{vendor_2ceedling_2plugins_2freertos_2vendor_2freertos_2portable_2_g_c_c_2_p_o_s_i_x_2port_8c_a53fbb684e09a643c56b7508f1ef97ad3}} 
+\index{vendor/ceedling/plugins/freertos/vendor/freertos/portable/\+G\+C\+C/\+P\+O\+S\+I\+X/port.\+c@{vendor/ceedling/plugins/freertos/vendor/freertos/portable/\+G\+C\+C/\+P\+O\+S\+I\+X/port.\+c}!x\+Port\+Start\+Scheduler@{x\+Port\+Start\+Scheduler}}
+\index{x\+Port\+Start\+Scheduler@{x\+Port\+Start\+Scheduler}!vendor/ceedling/plugins/freertos/vendor/freertos/portable/\+G\+C\+C/\+P\+O\+S\+I\+X/port.\+c@{vendor/ceedling/plugins/freertos/vendor/freertos/portable/\+G\+C\+C/\+P\+O\+S\+I\+X/port.\+c}}
+\subsubsection{\texorpdfstring{x\+Port\+Start\+Scheduler()}{xPortStartScheduler()}}
+{\footnotesize\ttfamily \hyperlink{vendor_2ceedling_2plugins_2freertos_2vendor_2freertos_2portable_2_g_c_c_2_p_o_s_i_x_2portmacro_8h_a1ebe82d24d764ae4e352f7c3a9f92c01}{port\+B\+A\+S\+E\+\_\+\+T\+Y\+PE} x\+Port\+Start\+Scheduler (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+
+
+
+Definition at line 203 of file port.\+c.
+

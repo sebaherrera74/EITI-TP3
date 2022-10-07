@@ -1,0 +1,11 @@
+digraph "muju/boards/poncho-unt/inc" {
+  compound=true
+  node [ fontsize="10", fontname="Helvetica"];
+  edge [ labelfontsize="10", labelfontname="Helvetica"];
+  subgraph clusterdir_a17491b3cc3539c4a87dcb66a7073675 {
+    graph [ bgcolor="#ddddee", pencolor="black", label="poncho-unt" fontname="Helvetica", fontsize="10", URL="dir_a17491b3cc3539c4a87dcb66a7073675.html"]
+  dir_22704cef930c1ffcd7dd46dbeffe504a [shape=box, label="inc", style="filled", fillcolor="#eeeeff", pencolor="black", URL="dir_22704cef930c1ffcd7dd46dbeffe504a.html"];
+  }
+  dir_05ce73a3381df79db5ec1287846eaba2 [shape=box label="externals" fillcolor="white" style="filled" color="red" URL="dir_05ce73a3381df79db5ec1287846eaba2.html"];
+  dir_22704cef930c1ffcd7dd46dbeffe504a->dir_05ce73a3381df79db5ec1287846eaba2 [headlabel="2", labeldistance=1.5 headhref="dir_000029_000035.html"];
+}

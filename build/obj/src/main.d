@@ -60,4 +60,5 @@ build/obj/src/main.o: /home/sebastian/proyectos/eititp3/src/main.c \
  /home/sebastian/proyectos/muju/externals/base/soc/lpc43xx/lpc_chip_43xx/inc/romapi_18xx_43xx.h \
  /home/sebastian/proyectos/muju/externals/base/soc/lpc43xx/lpc_chip_43xx/inc/iap_18xx_43xx.h \
  /home/sebastian/proyectos/muju/externals/base/soc/lpc43xx/lpc_chip_43xx/inc/error.h \
- /home/sebastian/proyectos/muju/externals/base/soc/lpc43xx/lpc_chip_43xx/inc/i2cm_18xx_43xx.h
+ /home/sebastian/proyectos/muju/externals/base/soc/lpc43xx/lpc_chip_43xx/inc/i2cm_18xx_43xx.h \
+ /home/sebastian/proyectos/eititp3/inc/digital.h

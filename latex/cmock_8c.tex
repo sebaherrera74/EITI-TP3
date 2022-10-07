@@ -1,0 +1,269 @@
+\hypertarget{cmock_8c}{}\section{muju/vendor/ceedling/vendor/cmock/src/cmock.c File Reference}
+\label{cmock_8c}\index{muju/vendor/ceedling/vendor/cmock/src/cmock.\+c@{muju/vendor/ceedling/vendor/cmock/src/cmock.\+c}}
+{\ttfamily \#include \char`\"{}cmock.\+h\char`\"{}}\newline
+Include dependency graph for cmock.\+c\+:
+% FIG 0
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{cmock_8h_aaf866fd7ef9bf9fe6f36d2d4e6abe041}{C\+M\+O\+C\+K\+\_\+\+M\+E\+M\+\_\+\+I\+N\+D\+E\+X\+\_\+\+T\+Y\+PE} \hyperlink{cmock_8c_a70143d967ec301bbce3efb6b59a90e5e}{C\+Mock\+\_\+\+Guts\+\_\+\+Mem\+New} (\hyperlink{cmock_8h_aaf866fd7ef9bf9fe6f36d2d4e6abe041}{C\+M\+O\+C\+K\+\_\+\+M\+E\+M\+\_\+\+I\+N\+D\+E\+X\+\_\+\+T\+Y\+PE} size)
+\item 
+\hyperlink{cmock_8h_aaf866fd7ef9bf9fe6f36d2d4e6abe041}{C\+M\+O\+C\+K\+\_\+\+M\+E\+M\+\_\+\+I\+N\+D\+E\+X\+\_\+\+T\+Y\+PE} \hyperlink{cmock_8c_a15d51ffb4affbacc256f9569f46b7371}{C\+Mock\+\_\+\+Guts\+\_\+\+Mem\+Chain} (\hyperlink{cmock_8h_aaf866fd7ef9bf9fe6f36d2d4e6abe041}{C\+M\+O\+C\+K\+\_\+\+M\+E\+M\+\_\+\+I\+N\+D\+E\+X\+\_\+\+T\+Y\+PE} root\+\_\+index, \hyperlink{cmock_8h_aaf866fd7ef9bf9fe6f36d2d4e6abe041}{C\+M\+O\+C\+K\+\_\+\+M\+E\+M\+\_\+\+I\+N\+D\+E\+X\+\_\+\+T\+Y\+PE} obj\+\_\+index)
+\item 
+\hyperlink{cmock_8h_aaf866fd7ef9bf9fe6f36d2d4e6abe041}{C\+M\+O\+C\+K\+\_\+\+M\+E\+M\+\_\+\+I\+N\+D\+E\+X\+\_\+\+T\+Y\+PE} \hyperlink{cmock_8c_a24a222978890f2650776c474a757ced9}{C\+Mock\+\_\+\+Guts\+\_\+\+Mem\+Next} (\hyperlink{cmock_8h_aaf866fd7ef9bf9fe6f36d2d4e6abe041}{C\+M\+O\+C\+K\+\_\+\+M\+E\+M\+\_\+\+I\+N\+D\+E\+X\+\_\+\+T\+Y\+PE} previous\+\_\+item\+\_\+index)
+\item 
+\hyperlink{cmock_8h_aaf866fd7ef9bf9fe6f36d2d4e6abe041}{C\+M\+O\+C\+K\+\_\+\+M\+E\+M\+\_\+\+I\+N\+D\+E\+X\+\_\+\+T\+Y\+PE} \hyperlink{cmock_8c_a7a60479d86c12fa24499c516365f5c71}{C\+Mock\+\_\+\+Guts\+\_\+\+Mem\+End\+Of\+Chain} (\hyperlink{cmock_8h_aaf866fd7ef9bf9fe6f36d2d4e6abe041}{C\+M\+O\+C\+K\+\_\+\+M\+E\+M\+\_\+\+I\+N\+D\+E\+X\+\_\+\+T\+Y\+PE} root\+\_\+index)
+\item 
+void $\ast$ \hyperlink{cmock_8c_a5dcac496617e39c664d8921903953d64}{C\+Mock\+\_\+\+Guts\+\_\+\+Get\+Address\+For} (\hyperlink{cmock_8h_aaf866fd7ef9bf9fe6f36d2d4e6abe041}{C\+M\+O\+C\+K\+\_\+\+M\+E\+M\+\_\+\+I\+N\+D\+E\+X\+\_\+\+T\+Y\+PE} index)
+\item 
+\hyperlink{cmock_8h_aaf866fd7ef9bf9fe6f36d2d4e6abe041}{C\+M\+O\+C\+K\+\_\+\+M\+E\+M\+\_\+\+I\+N\+D\+E\+X\+\_\+\+T\+Y\+PE} \hyperlink{cmock_8c_a3e78365b5bb3418708b1d87520740c8f}{C\+Mock\+\_\+\+Guts\+\_\+\+Mem\+Bytes\+Capacity} (void)
+\item 
+\hyperlink{cmock_8h_aaf866fd7ef9bf9fe6f36d2d4e6abe041}{C\+M\+O\+C\+K\+\_\+\+M\+E\+M\+\_\+\+I\+N\+D\+E\+X\+\_\+\+T\+Y\+PE} \hyperlink{cmock_8c_a6fa3015b0f3c2ffeb3f5063fbef14278}{C\+Mock\+\_\+\+Guts\+\_\+\+Mem\+Bytes\+Free} (void)
+\item 
+\hyperlink{cmock_8h_aaf866fd7ef9bf9fe6f36d2d4e6abe041}{C\+M\+O\+C\+K\+\_\+\+M\+E\+M\+\_\+\+I\+N\+D\+E\+X\+\_\+\+T\+Y\+PE} \hyperlink{cmock_8c_aba717672271fef7bf017b85053c00c58}{C\+Mock\+\_\+\+Guts\+\_\+\+Mem\+Bytes\+Used} (void)
+\item 
+void \hyperlink{cmock_8c_a348bc07d37efc57ac52128cd99ee7c72}{C\+Mock\+\_\+\+Guts\+\_\+\+Mem\+Free\+All} (void)
+\item 
+void \hyperlink{cmock_8c_aa8a20fa157f61e9e1379170847287cc9}{C\+Mock\+\_\+\+Guts\+\_\+\+Mem\+Free\+Final} (void)
+\end{DoxyCompactItemize}
+\subsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+const char $\ast$ \hyperlink{cmock_8c_ac00a03c1e594c9e1d9ff3ce4873642a0}{C\+Mock\+String\+Out\+Of\+Memory} = \char`\"{}C\+Mock has run out of memory. Please allocate more.\char`\"{}
+\item 
+const char $\ast$ \hyperlink{cmock_8c_a797fd9415cd8d0655c68e007f845d020}{C\+Mock\+String\+Called\+More} = \char`\"{}Called more times than expected.\char`\"{}
+\item 
+const char $\ast$ \hyperlink{cmock_8c_a6ac9ca0995f1b325857c4bdb5a898102}{C\+Mock\+String\+Called\+Less} = \char`\"{}Called fewer times than expected.\char`\"{}
+\item 
+const char $\ast$ \hyperlink{cmock_8c_a16b2f46d690a118d6ca14abb35543481}{C\+Mock\+String\+Called\+Early} = \char`\"{}Called earlier than expected.\char`\"{}
+\item 
+const char $\ast$ \hyperlink{cmock_8c_aed2166361988847f5f63d13994f5de40}{C\+Mock\+String\+Called\+Late} = \char`\"{}Called later than expected.\char`\"{}
+\item 
+const char $\ast$ \hyperlink{cmock_8c_acf9d38dd7d2872139cc1bc1bf1b19e70}{C\+Mock\+String\+Call\+Order} = \char`\"{}Called out of order.\char`\"{}
+\item 
+const char $\ast$ \hyperlink{cmock_8c_aa04f7531196fa48793136231a0468971}{C\+Mock\+String\+Ign\+Pre\+Exp} = \char`\"{}Ignore\+Arg called before Expect.\char`\"{}
+\item 
+const char $\ast$ \hyperlink{cmock_8c_a784237bba66acd6aa8f05424ab203e50}{C\+Mock\+String\+Ptr\+Pre\+Exp} = \char`\"{}Return\+Thru\+Ptr called before Expect.\char`\"{}
+\item 
+const char $\ast$ \hyperlink{cmock_8c_af6f94581b839661ce82bfd01f1c937a1}{C\+Mock\+String\+Ptr\+Is\+N\+U\+LL} = \char`\"{}Pointer is N\+U\+L\+L.\char`\"{}
+\item 
+const char $\ast$ \hyperlink{cmock_8c_aeda885bf7d07126d0e1638f265d7514c}{C\+Mock\+String\+Exp\+N\+U\+LL} = \char`\"{}Expected N\+U\+L\+L.\char`\"{}
+\item 
+const char $\ast$ \hyperlink{cmock_8c_a89c88e09ebf68dff96e71a417b8733a5}{C\+Mock\+String\+Mismatch} = \char`\"{}Function called with unexpected argument value.\char`\"{}
+\end{DoxyCompactItemize}
+
+
+\subsection{Function Documentation}
+\mbox{\Hypertarget{cmock_8c_a5dcac496617e39c664d8921903953d64}\label{cmock_8c_a5dcac496617e39c664d8921903953d64}} 
+\index{cmock.\+c@{cmock.\+c}!C\+Mock\+\_\+\+Guts\+\_\+\+Get\+Address\+For@{C\+Mock\+\_\+\+Guts\+\_\+\+Get\+Address\+For}}
+\index{C\+Mock\+\_\+\+Guts\+\_\+\+Get\+Address\+For@{C\+Mock\+\_\+\+Guts\+\_\+\+Get\+Address\+For}!cmock.\+c@{cmock.\+c}}
+\subsubsection{\texorpdfstring{C\+Mock\+\_\+\+Guts\+\_\+\+Get\+Address\+For()}{CMock\_Guts\_GetAddressFor()}}
+{\footnotesize\ttfamily void$\ast$ C\+Mock\+\_\+\+Guts\+\_\+\+Get\+Address\+For (\begin{DoxyParamCaption}\item[{\hyperlink{cmock_8h_aaf866fd7ef9bf9fe6f36d2d4e6abe041}{C\+M\+O\+C\+K\+\_\+\+M\+E\+M\+\_\+\+I\+N\+D\+E\+X\+\_\+\+T\+Y\+PE}}]{index }\end{DoxyParamCaption})}
+
+
+
+Definition at line 158 of file cmock.\+c.
+
+\mbox{\Hypertarget{cmock_8c_a3e78365b5bb3418708b1d87520740c8f}\label{cmock_8c_a3e78365b5bb3418708b1d87520740c8f}} 
+\index{cmock.\+c@{cmock.\+c}!C\+Mock\+\_\+\+Guts\+\_\+\+Mem\+Bytes\+Capacity@{C\+Mock\+\_\+\+Guts\+\_\+\+Mem\+Bytes\+Capacity}}
+\index{C\+Mock\+\_\+\+Guts\+\_\+\+Mem\+Bytes\+Capacity@{C\+Mock\+\_\+\+Guts\+\_\+\+Mem\+Bytes\+Capacity}!cmock.\+c@{cmock.\+c}}
+\subsubsection{\texorpdfstring{C\+Mock\+\_\+\+Guts\+\_\+\+Mem\+Bytes\+Capacity()}{CMock\_Guts\_MemBytesCapacity()}}
+{\footnotesize\ttfamily \hyperlink{cmock_8h_aaf866fd7ef9bf9fe6f36d2d4e6abe041}{C\+M\+O\+C\+K\+\_\+\+M\+E\+M\+\_\+\+I\+N\+D\+E\+X\+\_\+\+T\+Y\+PE} C\+Mock\+\_\+\+Guts\+\_\+\+Mem\+Bytes\+Capacity (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+
+
+
+Definition at line 173 of file cmock.\+c.
+
+\mbox{\Hypertarget{cmock_8c_a6fa3015b0f3c2ffeb3f5063fbef14278}\label{cmock_8c_a6fa3015b0f3c2ffeb3f5063fbef14278}} 
+\index{cmock.\+c@{cmock.\+c}!C\+Mock\+\_\+\+Guts\+\_\+\+Mem\+Bytes\+Free@{C\+Mock\+\_\+\+Guts\+\_\+\+Mem\+Bytes\+Free}}
+\index{C\+Mock\+\_\+\+Guts\+\_\+\+Mem\+Bytes\+Free@{C\+Mock\+\_\+\+Guts\+\_\+\+Mem\+Bytes\+Free}!cmock.\+c@{cmock.\+c}}
+\subsubsection{\texorpdfstring{C\+Mock\+\_\+\+Guts\+\_\+\+Mem\+Bytes\+Free()}{CMock\_Guts\_MemBytesFree()}}
+{\footnotesize\ttfamily \hyperlink{cmock_8h_aaf866fd7ef9bf9fe6f36d2d4e6abe041}{C\+M\+O\+C\+K\+\_\+\+M\+E\+M\+\_\+\+I\+N\+D\+E\+X\+\_\+\+T\+Y\+PE} C\+Mock\+\_\+\+Guts\+\_\+\+Mem\+Bytes\+Free (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+
+
+
+Definition at line 181 of file cmock.\+c.
+
+\mbox{\Hypertarget{cmock_8c_aba717672271fef7bf017b85053c00c58}\label{cmock_8c_aba717672271fef7bf017b85053c00c58}} 
+\index{cmock.\+c@{cmock.\+c}!C\+Mock\+\_\+\+Guts\+\_\+\+Mem\+Bytes\+Used@{C\+Mock\+\_\+\+Guts\+\_\+\+Mem\+Bytes\+Used}}
+\index{C\+Mock\+\_\+\+Guts\+\_\+\+Mem\+Bytes\+Used@{C\+Mock\+\_\+\+Guts\+\_\+\+Mem\+Bytes\+Used}!cmock.\+c@{cmock.\+c}}
+\subsubsection{\texorpdfstring{C\+Mock\+\_\+\+Guts\+\_\+\+Mem\+Bytes\+Used()}{CMock\_Guts\_MemBytesUsed()}}
+{\footnotesize\ttfamily \hyperlink{cmock_8h_aaf866fd7ef9bf9fe6f36d2d4e6abe041}{C\+M\+O\+C\+K\+\_\+\+M\+E\+M\+\_\+\+I\+N\+D\+E\+X\+\_\+\+T\+Y\+PE} C\+Mock\+\_\+\+Guts\+\_\+\+Mem\+Bytes\+Used (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+
+
+
+Definition at line 189 of file cmock.\+c.
+
+\mbox{\Hypertarget{cmock_8c_a15d51ffb4affbacc256f9569f46b7371}\label{cmock_8c_a15d51ffb4affbacc256f9569f46b7371}} 
+\index{cmock.\+c@{cmock.\+c}!C\+Mock\+\_\+\+Guts\+\_\+\+Mem\+Chain@{C\+Mock\+\_\+\+Guts\+\_\+\+Mem\+Chain}}
+\index{C\+Mock\+\_\+\+Guts\+\_\+\+Mem\+Chain@{C\+Mock\+\_\+\+Guts\+\_\+\+Mem\+Chain}!cmock.\+c@{cmock.\+c}}
+\subsubsection{\texorpdfstring{C\+Mock\+\_\+\+Guts\+\_\+\+Mem\+Chain()}{CMock\_Guts\_MemChain()}}
+{\footnotesize\ttfamily \hyperlink{cmock_8h_aaf866fd7ef9bf9fe6f36d2d4e6abe041}{C\+M\+O\+C\+K\+\_\+\+M\+E\+M\+\_\+\+I\+N\+D\+E\+X\+\_\+\+T\+Y\+PE} C\+Mock\+\_\+\+Guts\+\_\+\+Mem\+Chain (\begin{DoxyParamCaption}\item[{\hyperlink{cmock_8h_aaf866fd7ef9bf9fe6f36d2d4e6abe041}{C\+M\+O\+C\+K\+\_\+\+M\+E\+M\+\_\+\+I\+N\+D\+E\+X\+\_\+\+T\+Y\+PE}}]{root\+\_\+index,  }\item[{\hyperlink{cmock_8h_aaf866fd7ef9bf9fe6f36d2d4e6abe041}{C\+M\+O\+C\+K\+\_\+\+M\+E\+M\+\_\+\+I\+N\+D\+E\+X\+\_\+\+T\+Y\+PE}}]{obj\+\_\+index }\end{DoxyParamCaption})}
+
+
+
+Definition at line 74 of file cmock.\+c.
+
+\mbox{\Hypertarget{cmock_8c_a7a60479d86c12fa24499c516365f5c71}\label{cmock_8c_a7a60479d86c12fa24499c516365f5c71}} 
+\index{cmock.\+c@{cmock.\+c}!C\+Mock\+\_\+\+Guts\+\_\+\+Mem\+End\+Of\+Chain@{C\+Mock\+\_\+\+Guts\+\_\+\+Mem\+End\+Of\+Chain}}
+\index{C\+Mock\+\_\+\+Guts\+\_\+\+Mem\+End\+Of\+Chain@{C\+Mock\+\_\+\+Guts\+\_\+\+Mem\+End\+Of\+Chain}!cmock.\+c@{cmock.\+c}}
+\subsubsection{\texorpdfstring{C\+Mock\+\_\+\+Guts\+\_\+\+Mem\+End\+Of\+Chain()}{CMock\_Guts\_MemEndOfChain()}}
+{\footnotesize\ttfamily \hyperlink{cmock_8h_aaf866fd7ef9bf9fe6f36d2d4e6abe041}{C\+M\+O\+C\+K\+\_\+\+M\+E\+M\+\_\+\+I\+N\+D\+E\+X\+\_\+\+T\+Y\+PE} C\+Mock\+\_\+\+Guts\+\_\+\+Mem\+End\+Of\+Chain (\begin{DoxyParamCaption}\item[{\hyperlink{cmock_8h_aaf866fd7ef9bf9fe6f36d2d4e6abe041}{C\+M\+O\+C\+K\+\_\+\+M\+E\+M\+\_\+\+I\+N\+D\+E\+X\+\_\+\+T\+Y\+PE}}]{root\+\_\+index }\end{DoxyParamCaption})}
+
+
+
+Definition at line 140 of file cmock.\+c.
+
+\mbox{\Hypertarget{cmock_8c_a348bc07d37efc57ac52128cd99ee7c72}\label{cmock_8c_a348bc07d37efc57ac52128cd99ee7c72}} 
+\index{cmock.\+c@{cmock.\+c}!C\+Mock\+\_\+\+Guts\+\_\+\+Mem\+Free\+All@{C\+Mock\+\_\+\+Guts\+\_\+\+Mem\+Free\+All}}
+\index{C\+Mock\+\_\+\+Guts\+\_\+\+Mem\+Free\+All@{C\+Mock\+\_\+\+Guts\+\_\+\+Mem\+Free\+All}!cmock.\+c@{cmock.\+c}}
+\subsubsection{\texorpdfstring{C\+Mock\+\_\+\+Guts\+\_\+\+Mem\+Free\+All()}{CMock\_Guts\_MemFreeAll()}}
+{\footnotesize\ttfamily void C\+Mock\+\_\+\+Guts\+\_\+\+Mem\+Free\+All (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+
+
+
+Definition at line 197 of file cmock.\+c.
+
+\mbox{\Hypertarget{cmock_8c_aa8a20fa157f61e9e1379170847287cc9}\label{cmock_8c_aa8a20fa157f61e9e1379170847287cc9}} 
+\index{cmock.\+c@{cmock.\+c}!C\+Mock\+\_\+\+Guts\+\_\+\+Mem\+Free\+Final@{C\+Mock\+\_\+\+Guts\+\_\+\+Mem\+Free\+Final}}
+\index{C\+Mock\+\_\+\+Guts\+\_\+\+Mem\+Free\+Final@{C\+Mock\+\_\+\+Guts\+\_\+\+Mem\+Free\+Final}!cmock.\+c@{cmock.\+c}}
+\subsubsection{\texorpdfstring{C\+Mock\+\_\+\+Guts\+\_\+\+Mem\+Free\+Final()}{CMock\_Guts\_MemFreeFinal()}}
+{\footnotesize\ttfamily void C\+Mock\+\_\+\+Guts\+\_\+\+Mem\+Free\+Final (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+
+
+
+Definition at line 205 of file cmock.\+c.
+
+\mbox{\Hypertarget{cmock_8c_a70143d967ec301bbce3efb6b59a90e5e}\label{cmock_8c_a70143d967ec301bbce3efb6b59a90e5e}} 
+\index{cmock.\+c@{cmock.\+c}!C\+Mock\+\_\+\+Guts\+\_\+\+Mem\+New@{C\+Mock\+\_\+\+Guts\+\_\+\+Mem\+New}}
+\index{C\+Mock\+\_\+\+Guts\+\_\+\+Mem\+New@{C\+Mock\+\_\+\+Guts\+\_\+\+Mem\+New}!cmock.\+c@{cmock.\+c}}
+\subsubsection{\texorpdfstring{C\+Mock\+\_\+\+Guts\+\_\+\+Mem\+New()}{CMock\_Guts\_MemNew()}}
+{\footnotesize\ttfamily \hyperlink{cmock_8h_aaf866fd7ef9bf9fe6f36d2d4e6abe041}{C\+M\+O\+C\+K\+\_\+\+M\+E\+M\+\_\+\+I\+N\+D\+E\+X\+\_\+\+T\+Y\+PE} C\+Mock\+\_\+\+Guts\+\_\+\+Mem\+New (\begin{DoxyParamCaption}\item[{\hyperlink{cmock_8h_aaf866fd7ef9bf9fe6f36d2d4e6abe041}{C\+M\+O\+C\+K\+\_\+\+M\+E\+M\+\_\+\+I\+N\+D\+E\+X\+\_\+\+T\+Y\+PE}}]{size }\end{DoxyParamCaption})}
+
+
+
+Definition at line 36 of file cmock.\+c.
+
+\mbox{\Hypertarget{cmock_8c_a24a222978890f2650776c474a757ced9}\label{cmock_8c_a24a222978890f2650776c474a757ced9}} 
+\index{cmock.\+c@{cmock.\+c}!C\+Mock\+\_\+\+Guts\+\_\+\+Mem\+Next@{C\+Mock\+\_\+\+Guts\+\_\+\+Mem\+Next}}
+\index{C\+Mock\+\_\+\+Guts\+\_\+\+Mem\+Next@{C\+Mock\+\_\+\+Guts\+\_\+\+Mem\+Next}!cmock.\+c@{cmock.\+c}}
+\subsubsection{\texorpdfstring{C\+Mock\+\_\+\+Guts\+\_\+\+Mem\+Next()}{CMock\_Guts\_MemNext()}}
+{\footnotesize\ttfamily \hyperlink{cmock_8h_aaf866fd7ef9bf9fe6f36d2d4e6abe041}{C\+M\+O\+C\+K\+\_\+\+M\+E\+M\+\_\+\+I\+N\+D\+E\+X\+\_\+\+T\+Y\+PE} C\+Mock\+\_\+\+Guts\+\_\+\+Mem\+Next (\begin{DoxyParamCaption}\item[{\hyperlink{cmock_8h_aaf866fd7ef9bf9fe6f36d2d4e6abe041}{C\+M\+O\+C\+K\+\_\+\+M\+E\+M\+\_\+\+I\+N\+D\+E\+X\+\_\+\+T\+Y\+PE}}]{previous\+\_\+item\+\_\+index }\end{DoxyParamCaption})}
+
+
+
+Definition at line 118 of file cmock.\+c.
+
+
+
+\subsection{Variable Documentation}
+\mbox{\Hypertarget{cmock_8c_a16b2f46d690a118d6ca14abb35543481}\label{cmock_8c_a16b2f46d690a118d6ca14abb35543481}} 
+\index{cmock.\+c@{cmock.\+c}!C\+Mock\+String\+Called\+Early@{C\+Mock\+String\+Called\+Early}}
+\index{C\+Mock\+String\+Called\+Early@{C\+Mock\+String\+Called\+Early}!cmock.\+c@{cmock.\+c}}
+\subsubsection{\texorpdfstring{C\+Mock\+String\+Called\+Early}{CMockStringCalledEarly}}
+{\footnotesize\ttfamily const char$\ast$ C\+Mock\+String\+Called\+Early = \char`\"{}Called earlier than expected.\char`\"{}}
+
+
+
+Definition at line 13 of file cmock.\+c.
+
+\mbox{\Hypertarget{cmock_8c_aed2166361988847f5f63d13994f5de40}\label{cmock_8c_aed2166361988847f5f63d13994f5de40}} 
+\index{cmock.\+c@{cmock.\+c}!C\+Mock\+String\+Called\+Late@{C\+Mock\+String\+Called\+Late}}
+\index{C\+Mock\+String\+Called\+Late@{C\+Mock\+String\+Called\+Late}!cmock.\+c@{cmock.\+c}}
+\subsubsection{\texorpdfstring{C\+Mock\+String\+Called\+Late}{CMockStringCalledLate}}
+{\footnotesize\ttfamily const char$\ast$ C\+Mock\+String\+Called\+Late = \char`\"{}Called later than expected.\char`\"{}}
+
+
+
+Definition at line 14 of file cmock.\+c.
+
+\mbox{\Hypertarget{cmock_8c_a6ac9ca0995f1b325857c4bdb5a898102}\label{cmock_8c_a6ac9ca0995f1b325857c4bdb5a898102}} 
+\index{cmock.\+c@{cmock.\+c}!C\+Mock\+String\+Called\+Less@{C\+Mock\+String\+Called\+Less}}
+\index{C\+Mock\+String\+Called\+Less@{C\+Mock\+String\+Called\+Less}!cmock.\+c@{cmock.\+c}}
+\subsubsection{\texorpdfstring{C\+Mock\+String\+Called\+Less}{CMockStringCalledLess}}
+{\footnotesize\ttfamily const char$\ast$ C\+Mock\+String\+Called\+Less = \char`\"{}Called fewer times than expected.\char`\"{}}
+
+
+
+Definition at line 12 of file cmock.\+c.
+
+\mbox{\Hypertarget{cmock_8c_a797fd9415cd8d0655c68e007f845d020}\label{cmock_8c_a797fd9415cd8d0655c68e007f845d020}} 
+\index{cmock.\+c@{cmock.\+c}!C\+Mock\+String\+Called\+More@{C\+Mock\+String\+Called\+More}}
+\index{C\+Mock\+String\+Called\+More@{C\+Mock\+String\+Called\+More}!cmock.\+c@{cmock.\+c}}
+\subsubsection{\texorpdfstring{C\+Mock\+String\+Called\+More}{CMockStringCalledMore}}
+{\footnotesize\ttfamily const char$\ast$ C\+Mock\+String\+Called\+More = \char`\"{}Called more times than expected.\char`\"{}}
+
+
+
+Definition at line 11 of file cmock.\+c.
+
+\mbox{\Hypertarget{cmock_8c_acf9d38dd7d2872139cc1bc1bf1b19e70}\label{cmock_8c_acf9d38dd7d2872139cc1bc1bf1b19e70}} 
+\index{cmock.\+c@{cmock.\+c}!C\+Mock\+String\+Call\+Order@{C\+Mock\+String\+Call\+Order}}
+\index{C\+Mock\+String\+Call\+Order@{C\+Mock\+String\+Call\+Order}!cmock.\+c@{cmock.\+c}}
+\subsubsection{\texorpdfstring{C\+Mock\+String\+Call\+Order}{CMockStringCallOrder}}
+{\footnotesize\ttfamily const char$\ast$ C\+Mock\+String\+Call\+Order = \char`\"{}Called out of order.\char`\"{}}
+
+
+
+Definition at line 15 of file cmock.\+c.
+
+\mbox{\Hypertarget{cmock_8c_aeda885bf7d07126d0e1638f265d7514c}\label{cmock_8c_aeda885bf7d07126d0e1638f265d7514c}} 
+\index{cmock.\+c@{cmock.\+c}!C\+Mock\+String\+Exp\+N\+U\+LL@{C\+Mock\+String\+Exp\+N\+U\+LL}}
+\index{C\+Mock\+String\+Exp\+N\+U\+LL@{C\+Mock\+String\+Exp\+N\+U\+LL}!cmock.\+c@{cmock.\+c}}
+\subsubsection{\texorpdfstring{C\+Mock\+String\+Exp\+N\+U\+LL}{CMockStringExpNULL}}
+{\footnotesize\ttfamily const char$\ast$ C\+Mock\+String\+Exp\+N\+U\+LL = \char`\"{}Expected N\+U\+L\+L.\char`\"{}}
+
+
+
+Definition at line 19 of file cmock.\+c.
+
+\mbox{\Hypertarget{cmock_8c_aa04f7531196fa48793136231a0468971}\label{cmock_8c_aa04f7531196fa48793136231a0468971}} 
+\index{cmock.\+c@{cmock.\+c}!C\+Mock\+String\+Ign\+Pre\+Exp@{C\+Mock\+String\+Ign\+Pre\+Exp}}
+\index{C\+Mock\+String\+Ign\+Pre\+Exp@{C\+Mock\+String\+Ign\+Pre\+Exp}!cmock.\+c@{cmock.\+c}}
+\subsubsection{\texorpdfstring{C\+Mock\+String\+Ign\+Pre\+Exp}{CMockStringIgnPreExp}}
+{\footnotesize\ttfamily const char$\ast$ C\+Mock\+String\+Ign\+Pre\+Exp = \char`\"{}Ignore\+Arg called before Expect.\char`\"{}}
+
+
+
+Definition at line 16 of file cmock.\+c.
+
+\mbox{\Hypertarget{cmock_8c_a89c88e09ebf68dff96e71a417b8733a5}\label{cmock_8c_a89c88e09ebf68dff96e71a417b8733a5}} 
+\index{cmock.\+c@{cmock.\+c}!C\+Mock\+String\+Mismatch@{C\+Mock\+String\+Mismatch}}
+\index{C\+Mock\+String\+Mismatch@{C\+Mock\+String\+Mismatch}!cmock.\+c@{cmock.\+c}}
+\subsubsection{\texorpdfstring{C\+Mock\+String\+Mismatch}{CMockStringMismatch}}
+{\footnotesize\ttfamily const char$\ast$ C\+Mock\+String\+Mismatch = \char`\"{}Function called with unexpected argument value.\char`\"{}}
+
+
+
+Definition at line 20 of file cmock.\+c.
+
+\mbox{\Hypertarget{cmock_8c_ac00a03c1e594c9e1d9ff3ce4873642a0}\label{cmock_8c_ac00a03c1e594c9e1d9ff3ce4873642a0}} 
+\index{cmock.\+c@{cmock.\+c}!C\+Mock\+String\+Out\+Of\+Memory@{C\+Mock\+String\+Out\+Of\+Memory}}
+\index{C\+Mock\+String\+Out\+Of\+Memory@{C\+Mock\+String\+Out\+Of\+Memory}!cmock.\+c@{cmock.\+c}}
+\subsubsection{\texorpdfstring{C\+Mock\+String\+Out\+Of\+Memory}{CMockStringOutOfMemory}}
+{\footnotesize\ttfamily const char$\ast$ C\+Mock\+String\+Out\+Of\+Memory = \char`\"{}C\+Mock has run out of memory. Please allocate more.\char`\"{}}
+
+
+
+Definition at line 10 of file cmock.\+c.
+
+\mbox{\Hypertarget{cmock_8c_af6f94581b839661ce82bfd01f1c937a1}\label{cmock_8c_af6f94581b839661ce82bfd01f1c937a1}} 
+\index{cmock.\+c@{cmock.\+c}!C\+Mock\+String\+Ptr\+Is\+N\+U\+LL@{C\+Mock\+String\+Ptr\+Is\+N\+U\+LL}}
+\index{C\+Mock\+String\+Ptr\+Is\+N\+U\+LL@{C\+Mock\+String\+Ptr\+Is\+N\+U\+LL}!cmock.\+c@{cmock.\+c}}
+\subsubsection{\texorpdfstring{C\+Mock\+String\+Ptr\+Is\+N\+U\+LL}{CMockStringPtrIsNULL}}
+{\footnotesize\ttfamily const char$\ast$ C\+Mock\+String\+Ptr\+Is\+N\+U\+LL = \char`\"{}Pointer is N\+U\+L\+L.\char`\"{}}
+
+
+
+Definition at line 18 of file cmock.\+c.
+
+\mbox{\Hypertarget{cmock_8c_a784237bba66acd6aa8f05424ab203e50}\label{cmock_8c_a784237bba66acd6aa8f05424ab203e50}} 
+\index{cmock.\+c@{cmock.\+c}!C\+Mock\+String\+Ptr\+Pre\+Exp@{C\+Mock\+String\+Ptr\+Pre\+Exp}}
+\index{C\+Mock\+String\+Ptr\+Pre\+Exp@{C\+Mock\+String\+Ptr\+Pre\+Exp}!cmock.\+c@{cmock.\+c}}
+\subsubsection{\texorpdfstring{C\+Mock\+String\+Ptr\+Pre\+Exp}{CMockStringPtrPreExp}}
+{\footnotesize\ttfamily const char$\ast$ C\+Mock\+String\+Ptr\+Pre\+Exp = \char`\"{}Return\+Thru\+Ptr called before Expect.\char`\"{}}
+
+
+
+Definition at line 17 of file cmock.\+c.
+

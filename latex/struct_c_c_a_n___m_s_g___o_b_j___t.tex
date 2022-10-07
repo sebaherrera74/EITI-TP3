@@ -1,0 +1,65 @@
+\hypertarget{struct_c_c_a_n___m_s_g___o_b_j___t}{}\section{C\+C\+A\+N\+\_\+\+M\+S\+G\+\_\+\+O\+B\+J\+\_\+T Struct Reference}
+\label{struct_c_c_a_n___m_s_g___o_b_j___t}\index{C\+C\+A\+N\+\_\+\+M\+S\+G\+\_\+\+O\+B\+J\+\_\+T@{C\+C\+A\+N\+\_\+\+M\+S\+G\+\_\+\+O\+B\+J\+\_\+T}}
+
+
+C\+AN message object structure.  
+
+
+
+
+{\ttfamily \#include $<$ccan\+\_\+18xx\+\_\+43xx.\+h$>$}
+
+\subsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+uint32\+\_\+t \hyperlink{struct_c_c_a_n___m_s_g___o_b_j___t_a84856f0c1c7f3dc0cc77cabc5c944ec2}{id}
+\item 
+uint32\+\_\+t \hyperlink{struct_c_c_a_n___m_s_g___o_b_j___t_aab1a8e17e19a96cc7491561a2f2b9b76}{dlc}
+\item 
+uint8\+\_\+t \hyperlink{struct_c_c_a_n___m_s_g___o_b_j___t_a240ade50b29e35fd72231b1a7d0686f0}{data} \mbox{[}8\mbox{]}
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+C\+AN message object structure. 
+
+Definition at line 328 of file ccan\+\_\+18xx\+\_\+43xx.\+h.
+
+
+
+\subsection{Member Data Documentation}
+\mbox{\Hypertarget{struct_c_c_a_n___m_s_g___o_b_j___t_a240ade50b29e35fd72231b1a7d0686f0}\label{struct_c_c_a_n___m_s_g___o_b_j___t_a240ade50b29e35fd72231b1a7d0686f0}} 
+\index{C\+C\+A\+N\+\_\+\+M\+S\+G\+\_\+\+O\+B\+J\+\_\+T@{C\+C\+A\+N\+\_\+\+M\+S\+G\+\_\+\+O\+B\+J\+\_\+T}!data@{data}}
+\index{data@{data}!C\+C\+A\+N\+\_\+\+M\+S\+G\+\_\+\+O\+B\+J\+\_\+T@{C\+C\+A\+N\+\_\+\+M\+S\+G\+\_\+\+O\+B\+J\+\_\+T}}
+\subsubsection{\texorpdfstring{data}{data}}
+{\footnotesize\ttfamily uint8\+\_\+t C\+C\+A\+N\+\_\+\+M\+S\+G\+\_\+\+O\+B\+J\+\_\+\+T\+::data\mbox{[}8\mbox{]}}
+
+Message data 
+
+Definition at line 331 of file ccan\+\_\+18xx\+\_\+43xx.\+h.
+
+\mbox{\Hypertarget{struct_c_c_a_n___m_s_g___o_b_j___t_aab1a8e17e19a96cc7491561a2f2b9b76}\label{struct_c_c_a_n___m_s_g___o_b_j___t_aab1a8e17e19a96cc7491561a2f2b9b76}} 
+\index{C\+C\+A\+N\+\_\+\+M\+S\+G\+\_\+\+O\+B\+J\+\_\+T@{C\+C\+A\+N\+\_\+\+M\+S\+G\+\_\+\+O\+B\+J\+\_\+T}!dlc@{dlc}}
+\index{dlc@{dlc}!C\+C\+A\+N\+\_\+\+M\+S\+G\+\_\+\+O\+B\+J\+\_\+T@{C\+C\+A\+N\+\_\+\+M\+S\+G\+\_\+\+O\+B\+J\+\_\+T}}
+\subsubsection{\texorpdfstring{dlc}{dlc}}
+{\footnotesize\ttfamily uint32\+\_\+t C\+C\+A\+N\+\_\+\+M\+S\+G\+\_\+\+O\+B\+J\+\_\+\+T\+::dlc}
+
+Message data length 
+
+Definition at line 330 of file ccan\+\_\+18xx\+\_\+43xx.\+h.
+
+\mbox{\Hypertarget{struct_c_c_a_n___m_s_g___o_b_j___t_a84856f0c1c7f3dc0cc77cabc5c944ec2}\label{struct_c_c_a_n___m_s_g___o_b_j___t_a84856f0c1c7f3dc0cc77cabc5c944ec2}} 
+\index{C\+C\+A\+N\+\_\+\+M\+S\+G\+\_\+\+O\+B\+J\+\_\+T@{C\+C\+A\+N\+\_\+\+M\+S\+G\+\_\+\+O\+B\+J\+\_\+T}!id@{id}}
+\index{id@{id}!C\+C\+A\+N\+\_\+\+M\+S\+G\+\_\+\+O\+B\+J\+\_\+T@{C\+C\+A\+N\+\_\+\+M\+S\+G\+\_\+\+O\+B\+J\+\_\+T}}
+\subsubsection{\texorpdfstring{id}{id}}
+{\footnotesize\ttfamily uint32\+\_\+t C\+C\+A\+N\+\_\+\+M\+S\+G\+\_\+\+O\+B\+J\+\_\+\+T\+::id}
+
+ID of message, if bit 30 is set then this is extended frame 
+
+Definition at line 329 of file ccan\+\_\+18xx\+\_\+43xx.\+h.
+
+
+
+The documentation for this struct was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+muju/externals/base/soc/lpc43xx/lpc\+\_\+chip\+\_\+43xx/inc/\hyperlink{ccan__18xx__43xx_8h}{ccan\+\_\+18xx\+\_\+43xx.\+h}\end{DoxyCompactItemize}

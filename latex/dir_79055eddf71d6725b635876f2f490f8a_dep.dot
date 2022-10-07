@@ -1,0 +1,17 @@
+digraph "muju/boards/edu-ciaa-nxp" {
+  compound=true
+  node [ fontsize="10", fontname="Helvetica"];
+  edge [ labelfontsize="10", labelfontname="Helvetica"];
+  subgraph clusterdir_aebf6dc1e60bc6b04d3e131e1b2fb2c6 {
+    graph [ bgcolor="#ddddee", pencolor="black", label="boards" fontname="Helvetica", fontsize="10", URL="dir_aebf6dc1e60bc6b04d3e131e1b2fb2c6.html"]
+  subgraph clusterdir_79055eddf71d6725b635876f2f490f8a {
+    graph [ bgcolor="#eeeeff", pencolor="black", label="" URL="dir_79055eddf71d6725b635876f2f490f8a.html"];
+    dir_79055eddf71d6725b635876f2f490f8a [shape=plaintext label="edu-ciaa-nxp"];
+    dir_472958918058f5c398daeb26fb9ad3b0 [shape=box label="inc" color="black" fillcolor="white" style="filled" URL="dir_472958918058f5c398daeb26fb9ad3b0.html"];
+    dir_f200de6ae71486a3fc818749abea175a [shape=box label="src" color="black" fillcolor="white" style="filled" URL="dir_f200de6ae71486a3fc818749abea175a.html"];
+  }
+  }
+  dir_05ce73a3381df79db5ec1287846eaba2 [shape=box label="externals" fillcolor="white" style="filled" color="red" URL="dir_05ce73a3381df79db5ec1287846eaba2.html"];
+  dir_472958918058f5c398daeb26fb9ad3b0->dir_05ce73a3381df79db5ec1287846eaba2 [headlabel="2", labeldistance=1.5 headhref="dir_000027_000035.html"];
+  dir_f200de6ae71486a3fc818749abea175a->dir_05ce73a3381df79db5ec1287846eaba2 [headlabel="1", labeldistance=1.5 headhref="dir_000032_000035.html"];
+}

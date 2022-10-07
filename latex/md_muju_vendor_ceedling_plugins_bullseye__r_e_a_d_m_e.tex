@@ -1,0 +1,73 @@
+\section*{Plugin Overview}
+
+Plugin for integrating Bullseye code coverage tool into Ceedling projects. This plugin requires a working license to Bullseye code coverage tools. The tools must be within the path or the path should be added to the environment in the {\ttfamily project.\+yml file}.
+
+\subsection*{Configuration}
+
+The bullseye plugin supports configuration options via your {\ttfamily project.\+yml} provided by Ceedling. The following is a typical configuration example\+:
+
+
+\begin{DoxyCode}
+:bullseye:
+  :auto\_license: TRUE
+:plugins:
+  :bullseye\_lib\_path: []
+:paths:
+  :bullseye\_toolchain\_include: []
+
+:tools:
+  :bullseye\_instrumentation:
+    :executable: covc
+    :arguments:
+      - '--file $': ENVIRONMENT\_COVFILE
+      - -q
+      - $\{1\}
+  :bullseye\_compiler:
+    :executable: gcc
+    :arguments:
+      - -g
+      - -I"$": COLLECTION\_PATHS\_TEST\_SUPPORT\_SOURCE\_INCLUDE\_VENDOR
+      - -I"$": COLLECTION\_PATHS\_BULLSEYE\_TOOLCHAIN\_INCLUDE
+      - -D$: COLLECTION\_DEFINES\_TEST\_AND\_VENDOR
+      - -DBULLSEYE\_COMPILER
+      - -c "$\{1\}"
+      - -o "$\{2\}"
+  :bullseye\_linker:
+    :executable: gcc
+    :arguments:
+      - $\{1\}
+      - -o $\{2\}
+      - -L$: PLUGINS\_BULLSEYE\_LIB\_PATH
+      - -lcov
+  :bullseye\_fixture:
+    :executable: $\{1\}
+  :bullseye\_report\_covsrc:
+    :executable: covsrc
+    :arguments:
+      - '--file $': ENVIRONMENT\_COVFILE
+      - -q
+      - -w140
+  :bullseye\_report\_covfn:
+    :executable: covfn
+    :stderr\_redirect: :auto
+    :arguments:
+      - '--file $': ENVIRONMENT\_COVFILE
+      - --width 120
+      - --no-source
+      - '"$\{1\}"'
+  :bullseye\_browser:
+    :executable: CoverageBrowser
+    :background\_exec: :auto
+    :optional: TRUE
+    :arguments:
+      - '"$"': ENVIRONMENT\_COVFILE
+\end{DoxyCode}
+
+
+\subsection*{Example Usage}
+
+
+\begin{DoxyCode}
+ceedling bullseye:all utils:bullseye
+\end{DoxyCode}
+ 

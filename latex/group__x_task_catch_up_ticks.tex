@@ -1,0 +1,20 @@
+\hypertarget{group__x_task_catch_up_ticks}{}\section{x\+Task\+Catch\+Up\+Ticks}
+\label{group__x_task_catch_up_ticks}\index{x\+Task\+Catch\+Up\+Ticks@{x\+Task\+Catch\+Up\+Ticks}}
+task.\+h 
+\begin{DoxyPre}
+BaseType\_t \hyperlink{externals_2freertos_2include_2task_8h_a399bcc59c77ed9f1cb2bf3eac55bdf02}{xTaskCatchUpTicks( TickType\_t xTicksToCatchUp )};
+\end{DoxyPre}
+
+
+This function corrects the tick count value after the application code has held interrupts disabled for an extended period resulting in tick interrupts having been missed.
+
+This function is similar to \hyperlink{externals_2freertos_2include_2task_8h_a8dda6cb26bb158dd9636873135e63912}{v\+Task\+Step\+Tick()}, however, unlike \hyperlink{externals_2freertos_2include_2task_8h_a8dda6cb26bb158dd9636873135e63912}{v\+Task\+Step\+Tick()}, \hyperlink{externals_2freertos_2include_2task_8h_a399bcc59c77ed9f1cb2bf3eac55bdf02}{x\+Task\+Catch\+Up\+Ticks()} may move the tick count forward past a time at which a task should be removed from the blocked state. That means tasks may have to be removed from the blocked state as the tick count is moved.
+
+
+\begin{DoxyParams}{Parameters}
+{\em x\+Ticks\+To\+Catch\+Up} & The number of tick interrupts that have been missed due to interrupts being disabled. Its value is not computed automatically, so must be computed by the application writer.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+pd\+T\+R\+UE if moving the tick count forward resulted in a task leaving the blocked state and a context switch being performed. Otherwise pd\+F\+A\+L\+SE. 
+\end{DoxyReturn}

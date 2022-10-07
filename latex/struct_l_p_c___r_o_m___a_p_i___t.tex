@@ -1,0 +1,117 @@
+\hypertarget{struct_l_p_c___r_o_m___a_p_i___t}{}\section{L\+P\+C\+\_\+\+R\+O\+M\+\_\+\+A\+P\+I\+\_\+T Struct Reference}
+\label{struct_l_p_c___r_o_m___a_p_i___t}\index{L\+P\+C\+\_\+\+R\+O\+M\+\_\+\+A\+P\+I\+\_\+T@{L\+P\+C\+\_\+\+R\+O\+M\+\_\+\+A\+P\+I\+\_\+T}}
+
+
+L\+P\+C18\+XX High level R\+OM A\+PI structure.  
+
+
+
+
+{\ttfamily \#include $<$romapi\+\_\+18xx\+\_\+43xx.\+h$>$}
+
+
+
+Collaboration diagram for L\+P\+C\+\_\+\+R\+O\+M\+\_\+\+A\+P\+I\+\_\+T\+:
+% FIG 0
+\subsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+void($\ast$const \hyperlink{struct_l_p_c___r_o_m___a_p_i___t_ab4e3fc4457ad9c1d44585bbeb5ac4c7d}{iap\+\_\+entry} )(uint32\+\_\+t $\ast$, uint32\+\_\+t $\ast$)
+\item 
+const \hyperlink{struct_o_t_p___a_p_i___t}{O\+T\+P\+\_\+\+A\+P\+I\+\_\+T} $\ast$ \hyperlink{struct_l_p_c___r_o_m___a_p_i___t_a471135c558880b77c29a47775cb44bd4}{p\+Otp}
+\item 
+const \hyperlink{struct_a_e_s___a_p_i___t}{A\+E\+S\+\_\+\+A\+P\+I\+\_\+T} $\ast$ \hyperlink{struct_l_p_c___r_o_m___a_p_i___t_a680d175a28398434faec95ca257a0884}{p\+Aes}
+\item 
+uint32\+\_\+t \hyperlink{struct_l_p_c___r_o_m___a_p_i___t_af595b72d7ab107c40c293c537e60ddd2}{reserved} \mbox{[}3\mbox{]}
+\item 
+const uint32\+\_\+t \hyperlink{struct_l_p_c___r_o_m___a_p_i___t_a80394f1400f6fb04175f5d7fe2aa9f14}{spifi\+Api\+Base}
+\item 
+const uint32\+\_\+t \hyperlink{struct_l_p_c___r_o_m___a_p_i___t_a94bc8146ba697eeadc992d4985971550}{usbd\+Api\+Base}
+\item 
+const uint32\+\_\+t \hyperlink{struct_l_p_c___r_o_m___a_p_i___t_acf7fbdd0e99ee19a0fb377cabaf4d59b}{end\+Marker}
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+L\+P\+C18\+XX High level R\+OM A\+PI structure. 
+
+Definition at line 87 of file romapi\+\_\+18xx\+\_\+43xx.\+h.
+
+
+
+\subsection{Member Data Documentation}
+\mbox{\Hypertarget{struct_l_p_c___r_o_m___a_p_i___t_acf7fbdd0e99ee19a0fb377cabaf4d59b}\label{struct_l_p_c___r_o_m___a_p_i___t_acf7fbdd0e99ee19a0fb377cabaf4d59b}} 
+\index{L\+P\+C\+\_\+\+R\+O\+M\+\_\+\+A\+P\+I\+\_\+T@{L\+P\+C\+\_\+\+R\+O\+M\+\_\+\+A\+P\+I\+\_\+T}!end\+Marker@{end\+Marker}}
+\index{end\+Marker@{end\+Marker}!L\+P\+C\+\_\+\+R\+O\+M\+\_\+\+A\+P\+I\+\_\+T@{L\+P\+C\+\_\+\+R\+O\+M\+\_\+\+A\+P\+I\+\_\+T}}
+\subsubsection{\texorpdfstring{end\+Marker}{endMarker}}
+{\footnotesize\ttfamily const uint32\+\_\+t L\+P\+C\+\_\+\+R\+O\+M\+\_\+\+A\+P\+I\+\_\+\+T\+::end\+Marker}
+
+A\+PI table end marker = 0x87654321 
+
+Definition at line 94 of file romapi\+\_\+18xx\+\_\+43xx.\+h.
+
+\mbox{\Hypertarget{struct_l_p_c___r_o_m___a_p_i___t_ab4e3fc4457ad9c1d44585bbeb5ac4c7d}\label{struct_l_p_c___r_o_m___a_p_i___t_ab4e3fc4457ad9c1d44585bbeb5ac4c7d}} 
+\index{L\+P\+C\+\_\+\+R\+O\+M\+\_\+\+A\+P\+I\+\_\+T@{L\+P\+C\+\_\+\+R\+O\+M\+\_\+\+A\+P\+I\+\_\+T}!iap\+\_\+entry@{iap\+\_\+entry}}
+\index{iap\+\_\+entry@{iap\+\_\+entry}!L\+P\+C\+\_\+\+R\+O\+M\+\_\+\+A\+P\+I\+\_\+T@{L\+P\+C\+\_\+\+R\+O\+M\+\_\+\+A\+P\+I\+\_\+T}}
+\subsubsection{\texorpdfstring{iap\+\_\+entry}{iap\_entry}}
+{\footnotesize\ttfamily void($\ast$const L\+P\+C\+\_\+\+R\+O\+M\+\_\+\+A\+P\+I\+\_\+\+T\+::iap\+\_\+entry) (uint32\+\_\+t $\ast$, uint32\+\_\+t $\ast$)}
+
+I\+AP A\+PI entry function available on Flash parts only 
+
+Definition at line 88 of file romapi\+\_\+18xx\+\_\+43xx.\+h.
+
+\mbox{\Hypertarget{struct_l_p_c___r_o_m___a_p_i___t_a680d175a28398434faec95ca257a0884}\label{struct_l_p_c___r_o_m___a_p_i___t_a680d175a28398434faec95ca257a0884}} 
+\index{L\+P\+C\+\_\+\+R\+O\+M\+\_\+\+A\+P\+I\+\_\+T@{L\+P\+C\+\_\+\+R\+O\+M\+\_\+\+A\+P\+I\+\_\+T}!p\+Aes@{p\+Aes}}
+\index{p\+Aes@{p\+Aes}!L\+P\+C\+\_\+\+R\+O\+M\+\_\+\+A\+P\+I\+\_\+T@{L\+P\+C\+\_\+\+R\+O\+M\+\_\+\+A\+P\+I\+\_\+T}}
+\subsubsection{\texorpdfstring{p\+Aes}{pAes}}
+{\footnotesize\ttfamily const \hyperlink{struct_a_e_s___a_p_i___t}{A\+E\+S\+\_\+\+A\+P\+I\+\_\+T}$\ast$ L\+P\+C\+\_\+\+R\+O\+M\+\_\+\+A\+P\+I\+\_\+\+T\+::p\+Aes}
+
+
+
+Definition at line 90 of file romapi\+\_\+18xx\+\_\+43xx.\+h.
+
+\mbox{\Hypertarget{struct_l_p_c___r_o_m___a_p_i___t_a471135c558880b77c29a47775cb44bd4}\label{struct_l_p_c___r_o_m___a_p_i___t_a471135c558880b77c29a47775cb44bd4}} 
+\index{L\+P\+C\+\_\+\+R\+O\+M\+\_\+\+A\+P\+I\+\_\+T@{L\+P\+C\+\_\+\+R\+O\+M\+\_\+\+A\+P\+I\+\_\+T}!p\+Otp@{p\+Otp}}
+\index{p\+Otp@{p\+Otp}!L\+P\+C\+\_\+\+R\+O\+M\+\_\+\+A\+P\+I\+\_\+T@{L\+P\+C\+\_\+\+R\+O\+M\+\_\+\+A\+P\+I\+\_\+T}}
+\subsubsection{\texorpdfstring{p\+Otp}{pOtp}}
+{\footnotesize\ttfamily const \hyperlink{struct_o_t_p___a_p_i___t}{O\+T\+P\+\_\+\+A\+P\+I\+\_\+T}$\ast$ L\+P\+C\+\_\+\+R\+O\+M\+\_\+\+A\+P\+I\+\_\+\+T\+::p\+Otp}
+
+
+
+Definition at line 89 of file romapi\+\_\+18xx\+\_\+43xx.\+h.
+
+\mbox{\Hypertarget{struct_l_p_c___r_o_m___a_p_i___t_af595b72d7ab107c40c293c537e60ddd2}\label{struct_l_p_c___r_o_m___a_p_i___t_af595b72d7ab107c40c293c537e60ddd2}} 
+\index{L\+P\+C\+\_\+\+R\+O\+M\+\_\+\+A\+P\+I\+\_\+T@{L\+P\+C\+\_\+\+R\+O\+M\+\_\+\+A\+P\+I\+\_\+T}!reserved@{reserved}}
+\index{reserved@{reserved}!L\+P\+C\+\_\+\+R\+O\+M\+\_\+\+A\+P\+I\+\_\+T@{L\+P\+C\+\_\+\+R\+O\+M\+\_\+\+A\+P\+I\+\_\+T}}
+\subsubsection{\texorpdfstring{reserved}{reserved}}
+{\footnotesize\ttfamily uint32\+\_\+t L\+P\+C\+\_\+\+R\+O\+M\+\_\+\+A\+P\+I\+\_\+\+T\+::reserved\mbox{[}3\mbox{]}}
+
+
+
+Definition at line 91 of file romapi\+\_\+18xx\+\_\+43xx.\+h.
+
+\mbox{\Hypertarget{struct_l_p_c___r_o_m___a_p_i___t_a80394f1400f6fb04175f5d7fe2aa9f14}\label{struct_l_p_c___r_o_m___a_p_i___t_a80394f1400f6fb04175f5d7fe2aa9f14}} 
+\index{L\+P\+C\+\_\+\+R\+O\+M\+\_\+\+A\+P\+I\+\_\+T@{L\+P\+C\+\_\+\+R\+O\+M\+\_\+\+A\+P\+I\+\_\+T}!spifi\+Api\+Base@{spifi\+Api\+Base}}
+\index{spifi\+Api\+Base@{spifi\+Api\+Base}!L\+P\+C\+\_\+\+R\+O\+M\+\_\+\+A\+P\+I\+\_\+T@{L\+P\+C\+\_\+\+R\+O\+M\+\_\+\+A\+P\+I\+\_\+T}}
+\subsubsection{\texorpdfstring{spifi\+Api\+Base}{spifiApiBase}}
+{\footnotesize\ttfamily const uint32\+\_\+t L\+P\+C\+\_\+\+R\+O\+M\+\_\+\+A\+P\+I\+\_\+\+T\+::spifi\+Api\+Base}
+
+S\+P\+I\+FI A\+PI function table base address 
+
+Definition at line 92 of file romapi\+\_\+18xx\+\_\+43xx.\+h.
+
+\mbox{\Hypertarget{struct_l_p_c___r_o_m___a_p_i___t_a94bc8146ba697eeadc992d4985971550}\label{struct_l_p_c___r_o_m___a_p_i___t_a94bc8146ba697eeadc992d4985971550}} 
+\index{L\+P\+C\+\_\+\+R\+O\+M\+\_\+\+A\+P\+I\+\_\+T@{L\+P\+C\+\_\+\+R\+O\+M\+\_\+\+A\+P\+I\+\_\+T}!usbd\+Api\+Base@{usbd\+Api\+Base}}
+\index{usbd\+Api\+Base@{usbd\+Api\+Base}!L\+P\+C\+\_\+\+R\+O\+M\+\_\+\+A\+P\+I\+\_\+T@{L\+P\+C\+\_\+\+R\+O\+M\+\_\+\+A\+P\+I\+\_\+T}}
+\subsubsection{\texorpdfstring{usbd\+Api\+Base}{usbdApiBase}}
+{\footnotesize\ttfamily const uint32\+\_\+t L\+P\+C\+\_\+\+R\+O\+M\+\_\+\+A\+P\+I\+\_\+\+T\+::usbd\+Api\+Base}
+
+U\+S\+BD A\+PI function table base address 
+
+Definition at line 93 of file romapi\+\_\+18xx\+\_\+43xx.\+h.
+
+
+
+The documentation for this struct was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+muju/externals/base/soc/lpc43xx/lpc\+\_\+chip\+\_\+43xx/inc/\hyperlink{romapi__18xx__43xx_8h}{romapi\+\_\+18xx\+\_\+43xx.\+h}\end{DoxyCompactItemize}

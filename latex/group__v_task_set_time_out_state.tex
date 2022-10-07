@@ -1,0 +1,15 @@
+\hypertarget{group__v_task_set_time_out_state}{}\section{v\+Task\+Set\+Time\+Out\+State}
+\label{group__v_task_set_time_out_state}\index{v\+Task\+Set\+Time\+Out\+State@{v\+Task\+Set\+Time\+Out\+State}}
+task.\+h 
+\begin{DoxyPre}
+void \hyperlink{externals_2freertos_2include_2task_8h_a67155ad4ea2482b5f4597a69f2152be0}{vTaskSetTimeOutState( TimeOut\_t * const pxTimeOut )};
+\end{DoxyPre}
+
+
+Capture the current time for future use with \hyperlink{externals_2freertos_2include_2task_8h_a3b018a85d339e536a6c05748dd666a3a}{x\+Task\+Check\+For\+Time\+Out()}.
+
+
+\begin{DoxyParams}{Parameters}
+{\em px\+Time\+Out} & Pointer to a timeout object into which the current time is to be captured. The captured time includes the tick count and the number of times the tick count has overflowed since the system first booted. \\
+\hline
+\end{DoxyParams}

@@ -1,0 +1,70 @@
+\hypertarget{vendor__interrupt_8c}{}\section{muju/externals/base/soc/lpc43xx/lpc\+\_\+startup/src/vendor\+\_\+interrupt.c File Reference}
+\label{vendor__interrupt_8c}\index{muju/externals/base/soc/lpc43xx/lpc\+\_\+startup/src/vendor\+\_\+interrupt.\+c@{muju/externals/base/soc/lpc43xx/lpc\+\_\+startup/src/vendor\+\_\+interrupt.\+c}}
+\subsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#define \hyperlink{vendor__interrupt_8c_ad1480e9557edcc543498ca259cee6c7d}{W\+E\+AK}~\hyperlink{externals_2freertos_2portable_2_g_c_c_2_a_r_m___c_m4_f_2portmacro_8h_ac864e333c11a6614eab8e8542ba01ed0}{\+\_\+\+\_\+attribute\+\_\+\+\_\+} ((weak))
+\item 
+\#define \hyperlink{vendor__interrupt_8c_a0bcadbfb9fcd175b07b4d0463e54397f}{A\+L\+I\+AS}(\hyperlink{unity_8c_af900396d7b72ff2a7002e8befe8cf8f1}{f})~\hyperlink{externals_2freertos_2portable_2_g_c_c_2_a_r_m___c_m4_f_2portmacro_8h_ac864e333c11a6614eab8e8542ba01ed0}{\+\_\+\+\_\+attribute\+\_\+\+\_\+} ((weak, alias (\#\hyperlink{unity_8c_af900396d7b72ff2a7002e8befe8cf8f1}{f})))
+\end{DoxyCompactItemize}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{vendor__interrupt_8c_ad1480e9557edcc543498ca259cee6c7d}{W\+E\+AK} void \hyperlink{vendor__interrupt_8c_abf37bc77b79673bf5babd3ac42291616}{Int\+Default\+Handler} (void)
+\item 
+void \hyperlink{vendor__interrupt_8c_af437555fea86331560efa4304a8a6afc}{D\+A\+C\+\_\+\+I\+R\+Q\+Handler} (void M0\+A\+P\+P\+\_\+\+I\+R\+Q\+Handler() \hyperlink{vendor__interrupt_8c_a0bcadbfb9fcd175b07b4d0463e54397f}{A\+L\+I\+AS}(\hyperlink{vendor__interrupt_8c_abf37bc77b79673bf5babd3ac42291616}{Int\+Default\+Handler}) void)
+\item 
+\hyperlink{vendor__interrupt_8c_adce420b900676fa0caed5a713cac82fb}{\+\_\+\+\_\+attribute\+\_\+\+\_\+} ((section(\char`\"{}.after\+\_\+vectors\char`\"{})))
+\end{DoxyCompactItemize}
+
+
+\subsection{Macro Definition Documentation}
+\mbox{\Hypertarget{vendor__interrupt_8c_a0bcadbfb9fcd175b07b4d0463e54397f}\label{vendor__interrupt_8c_a0bcadbfb9fcd175b07b4d0463e54397f}} 
+\index{vendor\+\_\+interrupt.\+c@{vendor\+\_\+interrupt.\+c}!A\+L\+I\+AS@{A\+L\+I\+AS}}
+\index{A\+L\+I\+AS@{A\+L\+I\+AS}!vendor\+\_\+interrupt.\+c@{vendor\+\_\+interrupt.\+c}}
+\subsubsection{\texorpdfstring{A\+L\+I\+AS}{ALIAS}}
+{\footnotesize\ttfamily \#define A\+L\+I\+AS(\begin{DoxyParamCaption}\item[{}]{\hyperlink{unity_8c_af900396d7b72ff2a7002e8befe8cf8f1}{f} }\end{DoxyParamCaption})~\hyperlink{externals_2freertos_2portable_2_g_c_c_2_a_r_m___c_m4_f_2portmacro_8h_ac864e333c11a6614eab8e8542ba01ed0}{\+\_\+\+\_\+attribute\+\_\+\+\_\+} ((weak, alias (\#\hyperlink{unity_8c_af900396d7b72ff2a7002e8befe8cf8f1}{f})))}
+
+
+
+Definition at line 2 of file vendor\+\_\+interrupt.\+c.
+
+\mbox{\Hypertarget{vendor__interrupt_8c_ad1480e9557edcc543498ca259cee6c7d}\label{vendor__interrupt_8c_ad1480e9557edcc543498ca259cee6c7d}} 
+\index{vendor\+\_\+interrupt.\+c@{vendor\+\_\+interrupt.\+c}!W\+E\+AK@{W\+E\+AK}}
+\index{W\+E\+AK@{W\+E\+AK}!vendor\+\_\+interrupt.\+c@{vendor\+\_\+interrupt.\+c}}
+\subsubsection{\texorpdfstring{W\+E\+AK}{WEAK}}
+{\footnotesize\ttfamily \#define W\+E\+AK~\hyperlink{externals_2freertos_2portable_2_g_c_c_2_a_r_m___c_m4_f_2portmacro_8h_ac864e333c11a6614eab8e8542ba01ed0}{\+\_\+\+\_\+attribute\+\_\+\+\_\+} ((weak))}
+
+
+
+Definition at line 1 of file vendor\+\_\+interrupt.\+c.
+
+
+
+\subsection{Function Documentation}
+\mbox{\Hypertarget{vendor__interrupt_8c_adce420b900676fa0caed5a713cac82fb}\label{vendor__interrupt_8c_adce420b900676fa0caed5a713cac82fb}} 
+\index{vendor\+\_\+interrupt.\+c@{vendor\+\_\+interrupt.\+c}!\+\_\+\+\_\+attribute\+\_\+\+\_\+@{\+\_\+\+\_\+attribute\+\_\+\+\_\+}}
+\index{\+\_\+\+\_\+attribute\+\_\+\+\_\+@{\+\_\+\+\_\+attribute\+\_\+\+\_\+}!vendor\+\_\+interrupt.\+c@{vendor\+\_\+interrupt.\+c}}
+\subsubsection{\texorpdfstring{\+\_\+\+\_\+attribute\+\_\+\+\_\+()}{\_\_attribute\_\_()}}
+{\footnotesize\ttfamily \+\_\+\+\_\+attribute\+\_\+\+\_\+ (\begin{DoxyParamCaption}\item[{(section(\char`\"{}.after\+\_\+vectors\char`\"{}))}]{ }\end{DoxyParamCaption})}
+
+
+
+Definition at line 115 of file vendor\+\_\+interrupt.\+c.
+
+\mbox{\Hypertarget{vendor__interrupt_8c_af437555fea86331560efa4304a8a6afc}\label{vendor__interrupt_8c_af437555fea86331560efa4304a8a6afc}} 
+\index{vendor\+\_\+interrupt.\+c@{vendor\+\_\+interrupt.\+c}!D\+A\+C\+\_\+\+I\+R\+Q\+Handler@{D\+A\+C\+\_\+\+I\+R\+Q\+Handler}}
+\index{D\+A\+C\+\_\+\+I\+R\+Q\+Handler@{D\+A\+C\+\_\+\+I\+R\+Q\+Handler}!vendor\+\_\+interrupt.\+c@{vendor\+\_\+interrupt.\+c}}
+\subsubsection{\texorpdfstring{D\+A\+C\+\_\+\+I\+R\+Q\+Handler()}{DAC\_IRQHandler()}}
+{\footnotesize\ttfamily void D\+A\+C\+\_\+\+I\+R\+Q\+Handler (\begin{DoxyParamCaption}\item[{void M0\+A\+P\+P\+\_\+\+I\+R\+Q\+Handler() \hyperlink{vendor__interrupt_8c_a0bcadbfb9fcd175b07b4d0463e54397f}{A\+L\+I\+AS}(\hyperlink{vendor__interrupt_8c_abf37bc77b79673bf5babd3ac42291616}{Int\+Default\+Handler})}]{void }\end{DoxyParamCaption})}
+
+
+
+Definition at line 6 of file vendor\+\_\+interrupt.\+c.
+
+\mbox{\Hypertarget{vendor__interrupt_8c_abf37bc77b79673bf5babd3ac42291616}\label{vendor__interrupt_8c_abf37bc77b79673bf5babd3ac42291616}} 
+\index{vendor\+\_\+interrupt.\+c@{vendor\+\_\+interrupt.\+c}!Int\+Default\+Handler@{Int\+Default\+Handler}}
+\index{Int\+Default\+Handler@{Int\+Default\+Handler}!vendor\+\_\+interrupt.\+c@{vendor\+\_\+interrupt.\+c}}
+\subsubsection{\texorpdfstring{Int\+Default\+Handler()}{IntDefaultHandler()}}
+{\footnotesize\ttfamily \hyperlink{vendor__interrupt_8c_ad1480e9557edcc543498ca259cee6c7d}{W\+E\+AK} void Int\+Default\+Handler (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+

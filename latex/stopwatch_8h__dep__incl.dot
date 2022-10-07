@@ -1,0 +1,8 @@
+digraph "muju/externals/base/soc/lpc43xx/lpc_chip_43xx/inc/stopwatch.h"
+{
+  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
+  node [fontname="Helvetica",fontsize="10",shape=record];
+  Node6 [label="muju/externals/base\l/soc/lpc43xx/lpc_chip\l_43xx/inc/stopwatch.h",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black"];
+  Node6 -> Node7 [dir="back",color="midnightblue",fontsize="10",style="solid"];
+  Node7 [label="muju/externals/base\l/soc/lpc43xx/lpc_chip\l_43xx/src/stopwatch_18xx\l_43xx.c",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$stopwatch__18xx__43xx_8c.html"];
+}

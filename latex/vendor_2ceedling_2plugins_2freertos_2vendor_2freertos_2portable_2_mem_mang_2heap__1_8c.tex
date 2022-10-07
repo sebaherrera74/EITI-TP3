@@ -1,0 +1,91 @@
+\hypertarget{vendor_2ceedling_2plugins_2freertos_2vendor_2freertos_2portable_2_mem_mang_2heap__1_8c}{}\section{muju/vendor/ceedling/plugins/freertos/vendor/freertos/portable/\+Mem\+Mang/heap\+\_\+1.c File Reference}
+\label{vendor_2ceedling_2plugins_2freertos_2vendor_2freertos_2portable_2_mem_mang_2heap__1_8c}\index{muju/vendor/ceedling/plugins/freertos/vendor/freertos/portable/\+Mem\+Mang/heap\+\_\+1.\+c@{muju/vendor/ceedling/plugins/freertos/vendor/freertos/portable/\+Mem\+Mang/heap\+\_\+1.\+c}}
+{\ttfamily \#include $<$stdlib.\+h$>$}\newline
+{\ttfamily \#include \char`\"{}Free\+R\+T\+O\+S.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}task.\+h\char`\"{}}\newline
+Include dependency graph for heap\+\_\+1.\+c\+:
+% FIG 0
+\subsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#define \hyperlink{vendor_2ceedling_2plugins_2freertos_2vendor_2freertos_2portable_2_mem_mang_2heap__1_8c_ab622d8c674f2a417a666a7ed89109e79}{M\+P\+U\+\_\+\+W\+R\+A\+P\+P\+E\+R\+S\+\_\+\+I\+N\+C\+L\+U\+D\+E\+D\+\_\+\+F\+R\+O\+M\+\_\+\+A\+P\+I\+\_\+\+F\+I\+LE}
+\item 
+\#define \hyperlink{vendor_2ceedling_2plugins_2freertos_2vendor_2freertos_2portable_2_mem_mang_2heap__1_8c_a3e68bebe7509a99550e1358cbca8e23f}{config\+A\+D\+J\+U\+S\+T\+E\+D\+\_\+\+H\+E\+A\+P\+\_\+\+S\+I\+ZE}~( \hyperlink{vendor_2ceedling_2plugins_2freertos_2src_2_free_r_t_o_s_config_8h_a9f213227674effff0122a75d94d87938}{config\+T\+O\+T\+A\+L\+\_\+\+H\+E\+A\+P\+\_\+\+S\+I\+ZE} -\/ \hyperlink{vendor_2ceedling_2plugins_2freertos_2vendor_2freertos_2portable_2_g_c_c_2_p_o_s_i_x_2portmacro_8h_ab9091ce3940d8bd93ec850122a2c6a1c}{port\+B\+Y\+T\+E\+\_\+\+A\+L\+I\+G\+N\+M\+E\+NT} )
+\end{DoxyCompactItemize}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+void $\ast$ \hyperlink{vendor_2ceedling_2plugins_2freertos_2vendor_2freertos_2portable_2_mem_mang_2heap__1_8c_a0379669d07d76cc81e3028123113b271}{pv\+Port\+Malloc} (size\+\_\+t x\+Wanted\+Size)
+\item 
+void \hyperlink{vendor_2ceedling_2plugins_2freertos_2vendor_2freertos_2portable_2_mem_mang_2heap__1_8c_a1e7cea2fd1bc894ea3b5f5e8179d259b}{v\+Port\+Free} (void $\ast$pv)
+\item 
+void \hyperlink{vendor_2ceedling_2plugins_2freertos_2vendor_2freertos_2portable_2_mem_mang_2heap__1_8c_a8bf103ce32ce8473574e9920af8b4eec}{v\+Port\+Initialise\+Blocks} (void)
+\item 
+size\+\_\+t \hyperlink{vendor_2ceedling_2plugins_2freertos_2vendor_2freertos_2portable_2_mem_mang_2heap__1_8c_a0c28a12b313bc248be0cb7a37ed81bb7}{x\+Port\+Get\+Free\+Heap\+Size} (void)
+\end{DoxyCompactItemize}
+
+
+\subsection{Macro Definition Documentation}
+\mbox{\Hypertarget{vendor_2ceedling_2plugins_2freertos_2vendor_2freertos_2portable_2_mem_mang_2heap__1_8c_a3e68bebe7509a99550e1358cbca8e23f}\label{vendor_2ceedling_2plugins_2freertos_2vendor_2freertos_2portable_2_mem_mang_2heap__1_8c_a3e68bebe7509a99550e1358cbca8e23f}} 
+\index{vendor/ceedling/plugins/freertos/vendor/freertos/portable/\+Mem\+Mang/heap\+\_\+1.\+c@{vendor/ceedling/plugins/freertos/vendor/freertos/portable/\+Mem\+Mang/heap\+\_\+1.\+c}!config\+A\+D\+J\+U\+S\+T\+E\+D\+\_\+\+H\+E\+A\+P\+\_\+\+S\+I\+ZE@{config\+A\+D\+J\+U\+S\+T\+E\+D\+\_\+\+H\+E\+A\+P\+\_\+\+S\+I\+ZE}}
+\index{config\+A\+D\+J\+U\+S\+T\+E\+D\+\_\+\+H\+E\+A\+P\+\_\+\+S\+I\+ZE@{config\+A\+D\+J\+U\+S\+T\+E\+D\+\_\+\+H\+E\+A\+P\+\_\+\+S\+I\+ZE}!vendor/ceedling/plugins/freertos/vendor/freertos/portable/\+Mem\+Mang/heap\+\_\+1.\+c@{vendor/ceedling/plugins/freertos/vendor/freertos/portable/\+Mem\+Mang/heap\+\_\+1.\+c}}
+\subsubsection{\texorpdfstring{config\+A\+D\+J\+U\+S\+T\+E\+D\+\_\+\+H\+E\+A\+P\+\_\+\+S\+I\+ZE}{configADJUSTED\_HEAP\_SIZE}}
+{\footnotesize\ttfamily \#define config\+A\+D\+J\+U\+S\+T\+E\+D\+\_\+\+H\+E\+A\+P\+\_\+\+S\+I\+ZE~( \hyperlink{vendor_2ceedling_2plugins_2freertos_2src_2_free_r_t_o_s_config_8h_a9f213227674effff0122a75d94d87938}{config\+T\+O\+T\+A\+L\+\_\+\+H\+E\+A\+P\+\_\+\+S\+I\+ZE} -\/ \hyperlink{vendor_2ceedling_2plugins_2freertos_2vendor_2freertos_2portable_2_g_c_c_2_p_o_s_i_x_2portmacro_8h_ab9091ce3940d8bd93ec850122a2c6a1c}{port\+B\+Y\+T\+E\+\_\+\+A\+L\+I\+G\+N\+M\+E\+NT} )}
+
+
+
+Definition at line 91 of file heap\+\_\+1.\+c.
+
+\mbox{\Hypertarget{vendor_2ceedling_2plugins_2freertos_2vendor_2freertos_2portable_2_mem_mang_2heap__1_8c_ab622d8c674f2a417a666a7ed89109e79}\label{vendor_2ceedling_2plugins_2freertos_2vendor_2freertos_2portable_2_mem_mang_2heap__1_8c_ab622d8c674f2a417a666a7ed89109e79}} 
+\index{vendor/ceedling/plugins/freertos/vendor/freertos/portable/\+Mem\+Mang/heap\+\_\+1.\+c@{vendor/ceedling/plugins/freertos/vendor/freertos/portable/\+Mem\+Mang/heap\+\_\+1.\+c}!M\+P\+U\+\_\+\+W\+R\+A\+P\+P\+E\+R\+S\+\_\+\+I\+N\+C\+L\+U\+D\+E\+D\+\_\+\+F\+R\+O\+M\+\_\+\+A\+P\+I\+\_\+\+F\+I\+LE@{M\+P\+U\+\_\+\+W\+R\+A\+P\+P\+E\+R\+S\+\_\+\+I\+N\+C\+L\+U\+D\+E\+D\+\_\+\+F\+R\+O\+M\+\_\+\+A\+P\+I\+\_\+\+F\+I\+LE}}
+\index{M\+P\+U\+\_\+\+W\+R\+A\+P\+P\+E\+R\+S\+\_\+\+I\+N\+C\+L\+U\+D\+E\+D\+\_\+\+F\+R\+O\+M\+\_\+\+A\+P\+I\+\_\+\+F\+I\+LE@{M\+P\+U\+\_\+\+W\+R\+A\+P\+P\+E\+R\+S\+\_\+\+I\+N\+C\+L\+U\+D\+E\+D\+\_\+\+F\+R\+O\+M\+\_\+\+A\+P\+I\+\_\+\+F\+I\+LE}!vendor/ceedling/plugins/freertos/vendor/freertos/portable/\+Mem\+Mang/heap\+\_\+1.\+c@{vendor/ceedling/plugins/freertos/vendor/freertos/portable/\+Mem\+Mang/heap\+\_\+1.\+c}}
+\subsubsection{\texorpdfstring{M\+P\+U\+\_\+\+W\+R\+A\+P\+P\+E\+R\+S\+\_\+\+I\+N\+C\+L\+U\+D\+E\+D\+\_\+\+F\+R\+O\+M\+\_\+\+A\+P\+I\+\_\+\+F\+I\+LE}{MPU\_WRAPPERS\_INCLUDED\_FROM\_API\_FILE}}
+{\footnotesize\ttfamily \#define M\+P\+U\+\_\+\+W\+R\+A\+P\+P\+E\+R\+S\+\_\+\+I\+N\+C\+L\+U\+D\+E\+D\+\_\+\+F\+R\+O\+M\+\_\+\+A\+P\+I\+\_\+\+F\+I\+LE}
+
+
+
+Definition at line 83 of file heap\+\_\+1.\+c.
+
+
+
+\subsection{Function Documentation}
+\mbox{\Hypertarget{vendor_2ceedling_2plugins_2freertos_2vendor_2freertos_2portable_2_mem_mang_2heap__1_8c_a0379669d07d76cc81e3028123113b271}\label{vendor_2ceedling_2plugins_2freertos_2vendor_2freertos_2portable_2_mem_mang_2heap__1_8c_a0379669d07d76cc81e3028123113b271}} 
+\index{vendor/ceedling/plugins/freertos/vendor/freertos/portable/\+Mem\+Mang/heap\+\_\+1.\+c@{vendor/ceedling/plugins/freertos/vendor/freertos/portable/\+Mem\+Mang/heap\+\_\+1.\+c}!pv\+Port\+Malloc@{pv\+Port\+Malloc}}
+\index{pv\+Port\+Malloc@{pv\+Port\+Malloc}!vendor/ceedling/plugins/freertos/vendor/freertos/portable/\+Mem\+Mang/heap\+\_\+1.\+c@{vendor/ceedling/plugins/freertos/vendor/freertos/portable/\+Mem\+Mang/heap\+\_\+1.\+c}}
+\subsubsection{\texorpdfstring{pv\+Port\+Malloc()}{pvPortMalloc()}}
+{\footnotesize\ttfamily void$\ast$ pv\+Port\+Malloc (\begin{DoxyParamCaption}\item[{size\+\_\+t}]{x\+Wanted\+Size }\end{DoxyParamCaption})}
+
+
+
+Definition at line 99 of file heap\+\_\+1.\+c.
+
+\mbox{\Hypertarget{vendor_2ceedling_2plugins_2freertos_2vendor_2freertos_2portable_2_mem_mang_2heap__1_8c_a1e7cea2fd1bc894ea3b5f5e8179d259b}\label{vendor_2ceedling_2plugins_2freertos_2vendor_2freertos_2portable_2_mem_mang_2heap__1_8c_a1e7cea2fd1bc894ea3b5f5e8179d259b}} 
+\index{vendor/ceedling/plugins/freertos/vendor/freertos/portable/\+Mem\+Mang/heap\+\_\+1.\+c@{vendor/ceedling/plugins/freertos/vendor/freertos/portable/\+Mem\+Mang/heap\+\_\+1.\+c}!v\+Port\+Free@{v\+Port\+Free}}
+\index{v\+Port\+Free@{v\+Port\+Free}!vendor/ceedling/plugins/freertos/vendor/freertos/portable/\+Mem\+Mang/heap\+\_\+1.\+c@{vendor/ceedling/plugins/freertos/vendor/freertos/portable/\+Mem\+Mang/heap\+\_\+1.\+c}}
+\subsubsection{\texorpdfstring{v\+Port\+Free()}{vPortFree()}}
+{\footnotesize\ttfamily void v\+Port\+Free (\begin{DoxyParamCaption}\item[{void $\ast$}]{pv }\end{DoxyParamCaption})}
+
+
+
+Definition at line 149 of file heap\+\_\+1.\+c.
+
+\mbox{\Hypertarget{vendor_2ceedling_2plugins_2freertos_2vendor_2freertos_2portable_2_mem_mang_2heap__1_8c_a8bf103ce32ce8473574e9920af8b4eec}\label{vendor_2ceedling_2plugins_2freertos_2vendor_2freertos_2portable_2_mem_mang_2heap__1_8c_a8bf103ce32ce8473574e9920af8b4eec}} 
+\index{vendor/ceedling/plugins/freertos/vendor/freertos/portable/\+Mem\+Mang/heap\+\_\+1.\+c@{vendor/ceedling/plugins/freertos/vendor/freertos/portable/\+Mem\+Mang/heap\+\_\+1.\+c}!v\+Port\+Initialise\+Blocks@{v\+Port\+Initialise\+Blocks}}
+\index{v\+Port\+Initialise\+Blocks@{v\+Port\+Initialise\+Blocks}!vendor/ceedling/plugins/freertos/vendor/freertos/portable/\+Mem\+Mang/heap\+\_\+1.\+c@{vendor/ceedling/plugins/freertos/vendor/freertos/portable/\+Mem\+Mang/heap\+\_\+1.\+c}}
+\subsubsection{\texorpdfstring{v\+Port\+Initialise\+Blocks()}{vPortInitialiseBlocks()}}
+{\footnotesize\ttfamily void v\+Port\+Initialise\+Blocks (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+
+
+
+Definition at line 161 of file heap\+\_\+1.\+c.
+
+\mbox{\Hypertarget{vendor_2ceedling_2plugins_2freertos_2vendor_2freertos_2portable_2_mem_mang_2heap__1_8c_a0c28a12b313bc248be0cb7a37ed81bb7}\label{vendor_2ceedling_2plugins_2freertos_2vendor_2freertos_2portable_2_mem_mang_2heap__1_8c_a0c28a12b313bc248be0cb7a37ed81bb7}} 
+\index{vendor/ceedling/plugins/freertos/vendor/freertos/portable/\+Mem\+Mang/heap\+\_\+1.\+c@{vendor/ceedling/plugins/freertos/vendor/freertos/portable/\+Mem\+Mang/heap\+\_\+1.\+c}!x\+Port\+Get\+Free\+Heap\+Size@{x\+Port\+Get\+Free\+Heap\+Size}}
+\index{x\+Port\+Get\+Free\+Heap\+Size@{x\+Port\+Get\+Free\+Heap\+Size}!vendor/ceedling/plugins/freertos/vendor/freertos/portable/\+Mem\+Mang/heap\+\_\+1.\+c@{vendor/ceedling/plugins/freertos/vendor/freertos/portable/\+Mem\+Mang/heap\+\_\+1.\+c}}
+\subsubsection{\texorpdfstring{x\+Port\+Get\+Free\+Heap\+Size()}{xPortGetFreeHeapSize()}}
+{\footnotesize\ttfamily size\+\_\+t x\+Port\+Get\+Free\+Heap\+Size (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+
+
+
+Definition at line 168 of file heap\+\_\+1.\+c.
+

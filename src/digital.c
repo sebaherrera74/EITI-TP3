@@ -1,8 +1,4 @@
-/* Copyright 2022, Laboratorio de Microprocesadores 
- * Facultad de Ciencias Exactas y Tecnología 
- * Universidad Nacional de Tucuman
- * http://www.microprocesadores.unt.edu.ar/
- * Copyright 2022, Esteban Volentini <evolentini@herrera.unt.edu.ar>
+/* Copyright 2022, Sebastian Herrera <sebaherrera152@gmail.com>
  * All rights reserved.
  *
  * Redistribution and use in source and binary forms, with or without
@@ -44,16 +40,25 @@
 
 #include "digital.h"
 #include "chip.h"
+#include "stdbool.h"
 
 /* === Macros definitions ====================================================================== */
+//Defino mas saldias
+#ifndef OUTPUT_INSTANCES
+        # define OUTPUT_INSTANCES 4
+#endif
+
 
 /* === Private data type declarations ========================================================== */
 struct digital_output_s{
-	uint8_t port;
-	uint8_t pin;
+	uint8_t gpio;
+	uint8_t bit;
+	bool allocated;
 
 };
 /* === Private variable declarations =========================================================== */
+
+
 
 /* === Private function declarations =========================================================== */
 
@@ -61,23 +66,47 @@ struct digital_output_s{
 
 /* === Private variable definitions ============================================================ */
 
-static struct digital_output_s instance;
+static struct digital_output_s instance[OUTPUT_INSTANCES]={0};
 
 /* === Private function implementation ========================================================= */
 
-/* === Public function implementation ========================================================= */
-digital_output_t DigitalOutputCreate(uint8_t port, uint8_t bit){
-	instance.port=port;
-    instance.pin=bit;
-	return &instance;
+digital_output_t DigitalOutputAllocate(void){
+	digital_output_t output=NULL;
+
+	for (int index=0;index<OUTPUT_INSTANCES;index++){
+		if (instance[index].allocated==false){
+			instance[index].allocated=true;
+			output=&instance[index];
+			break;
+		}
+	}
+     return output;
 }
+
+
+/* === Public function implementation ========================================================= */
+digital_output_t DigitalOutputCreate(uint8_t gpio, uint8_t bit){
+	digital_output_t output=DigitalOutputAllocate();
+
+	if (output){
+		output->gpio=gpio;
+		output->bit=bit;
+        Chip_GPIO_SetPinState(LPC_GPIO_PORT, output->gpio,output->bit, false);
+        Chip_GPIO_SetPinDIR(LPC_GPIO_PORT, output->gpio,output->bit, true);
+	}
+	return output;
+}
+
 void DigitalOutputActivate(digital_output_t output){
+	Chip_GPIO_SetPinState(LPC_GPIO_PORT, output->gpio, output->bit, true);
 
 }
 void DigitalOutputDeactivate(digital_output_t output){
+	Chip_GPIO_SetPinState(LPC_GPIO_PORT,output->gpio, output->bit, false);
 
 }
 void DigitalOutputToogle(digital_output_t output){
+	Chip_GPIO_SetPinToggle(LPC_GPIO_PORT,output->gpio ,  output->bit);
 
 }
 

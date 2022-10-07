@@ -1,0 +1,17 @@
+digraph "muju/boards/poncho-unt" {
+  compound=true
+  node [ fontsize="10", fontname="Helvetica"];
+  edge [ labelfontsize="10", labelfontname="Helvetica"];
+  subgraph clusterdir_aebf6dc1e60bc6b04d3e131e1b2fb2c6 {
+    graph [ bgcolor="#ddddee", pencolor="black", label="boards" fontname="Helvetica", fontsize="10", URL="dir_aebf6dc1e60bc6b04d3e131e1b2fb2c6.html"]
+  subgraph clusterdir_a17491b3cc3539c4a87dcb66a7073675 {
+    graph [ bgcolor="#eeeeff", pencolor="black", label="" URL="dir_a17491b3cc3539c4a87dcb66a7073675.html"];
+    dir_a17491b3cc3539c4a87dcb66a7073675 [shape=plaintext label="poncho-unt"];
+    dir_22704cef930c1ffcd7dd46dbeffe504a [shape=box label="inc" color="black" fillcolor="white" style="filled" URL="dir_22704cef930c1ffcd7dd46dbeffe504a.html"];
+    dir_de73356edced9e194aed2ae3fe7c1b6b [shape=box label="src" color="black" fillcolor="white" style="filled" URL="dir_de73356edced9e194aed2ae3fe7c1b6b.html"];
+  }
+  }
+  dir_05ce73a3381df79db5ec1287846eaba2 [shape=box label="externals" fillcolor="white" style="filled" color="red" URL="dir_05ce73a3381df79db5ec1287846eaba2.html"];
+  dir_22704cef930c1ffcd7dd46dbeffe504a->dir_05ce73a3381df79db5ec1287846eaba2 [headlabel="2", labeldistance=1.5 headhref="dir_000029_000035.html"];
+  dir_de73356edced9e194aed2ae3fe7c1b6b->dir_05ce73a3381df79db5ec1287846eaba2 [headlabel="1", labeldistance=1.5 headhref="dir_000033_000035.html"];
+}

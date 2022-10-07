@@ -1,0 +1,101 @@
+\hypertarget{struct_l_p_c___a_d_c___t}{}\section{L\+P\+C\+\_\+\+A\+D\+C\+\_\+T Struct Reference}
+\label{struct_l_p_c___a_d_c___t}\index{L\+P\+C\+\_\+\+A\+D\+C\+\_\+T@{L\+P\+C\+\_\+\+A\+D\+C\+\_\+T}}
+
+
+10 or 12-\/bit A\+DC register block structure  
+
+
+
+
+{\ttfamily \#include $<$adc\+\_\+18xx\+\_\+43xx.\+h$>$}
+
+\subsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{core__sc300_8h_aec43007d9998a0a0e01faede4133d6be}{\+\_\+\+\_\+\+IO} uint32\+\_\+t \hyperlink{struct_l_p_c___a_d_c___t_a751f1cbdd3d5242aea596dc18113fedc}{CR}
+\item 
+\hyperlink{core__sc300_8h_af63697ed9952cc71e1225efe205f6cd3}{\+\_\+\+\_\+I} uint32\+\_\+t \hyperlink{struct_l_p_c___a_d_c___t_a063e42ec8fcdcf5590579a8d1a888ca0}{G\+DR}
+\item 
+\hyperlink{core__sc300_8h_af63697ed9952cc71e1225efe205f6cd3}{\+\_\+\+\_\+I} uint32\+\_\+t \hyperlink{struct_l_p_c___a_d_c___t_afeba3e59f72b009dfb03377557ddcd60}{R\+E\+S\+E\+R\+V\+E\+D0}
+\item 
+\hyperlink{core__sc300_8h_aec43007d9998a0a0e01faede4133d6be}{\+\_\+\+\_\+\+IO} uint32\+\_\+t \hyperlink{struct_l_p_c___a_d_c___t_a3ed883c378f817342d10cb7ed29a05ae}{I\+N\+T\+EN}
+\item 
+\hyperlink{core__sc300_8h_af63697ed9952cc71e1225efe205f6cd3}{\+\_\+\+\_\+I} uint32\+\_\+t \hyperlink{struct_l_p_c___a_d_c___t_a10f521f172d10766bb189be671f8bd57}{DR} \mbox{[}8\mbox{]}
+\item 
+\hyperlink{core__sc300_8h_af63697ed9952cc71e1225efe205f6cd3}{\+\_\+\+\_\+I} uint32\+\_\+t \hyperlink{struct_l_p_c___a_d_c___t_a6fd64c9a5717b2adc106721eb9ab190b}{S\+T\+AT}
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+10 or 12-\/bit A\+DC register block structure 
+
+Definition at line 51 of file adc\+\_\+18xx\+\_\+43xx.\+h.
+
+
+
+\subsection{Member Data Documentation}
+\mbox{\Hypertarget{struct_l_p_c___a_d_c___t_a751f1cbdd3d5242aea596dc18113fedc}\label{struct_l_p_c___a_d_c___t_a751f1cbdd3d5242aea596dc18113fedc}} 
+\index{L\+P\+C\+\_\+\+A\+D\+C\+\_\+T@{L\+P\+C\+\_\+\+A\+D\+C\+\_\+T}!CR@{CR}}
+\index{CR@{CR}!L\+P\+C\+\_\+\+A\+D\+C\+\_\+T@{L\+P\+C\+\_\+\+A\+D\+C\+\_\+T}}
+\subsubsection{\texorpdfstring{CR}{CR}}
+{\footnotesize\ttfamily \hyperlink{core__sc300_8h_aec43007d9998a0a0e01faede4133d6be}{\+\_\+\+\_\+\+IO} uint32\+\_\+t L\+P\+C\+\_\+\+A\+D\+C\+\_\+\+T\+::\+CR}
+
+$<$ A\+D\+Cn Structure A/D Control Register. The A\+D0\+CR register must be written to select the operating mode before A/D conversion can occur. 
+
+Definition at line 52 of file adc\+\_\+18xx\+\_\+43xx.\+h.
+
+\mbox{\Hypertarget{struct_l_p_c___a_d_c___t_a10f521f172d10766bb189be671f8bd57}\label{struct_l_p_c___a_d_c___t_a10f521f172d10766bb189be671f8bd57}} 
+\index{L\+P\+C\+\_\+\+A\+D\+C\+\_\+T@{L\+P\+C\+\_\+\+A\+D\+C\+\_\+T}!DR@{DR}}
+\index{DR@{DR}!L\+P\+C\+\_\+\+A\+D\+C\+\_\+T@{L\+P\+C\+\_\+\+A\+D\+C\+\_\+T}}
+\subsubsection{\texorpdfstring{DR}{DR}}
+{\footnotesize\ttfamily \hyperlink{core__sc300_8h_af63697ed9952cc71e1225efe205f6cd3}{\+\_\+\+\_\+I} uint32\+\_\+t L\+P\+C\+\_\+\+A\+D\+C\+\_\+\+T\+::\+DR\mbox{[}8\mbox{]}}
+
+A/D Channel Data Register. This register contains the result of the most recent conversion completed on channel n. 
+
+Definition at line 56 of file adc\+\_\+18xx\+\_\+43xx.\+h.
+
+\mbox{\Hypertarget{struct_l_p_c___a_d_c___t_a063e42ec8fcdcf5590579a8d1a888ca0}\label{struct_l_p_c___a_d_c___t_a063e42ec8fcdcf5590579a8d1a888ca0}} 
+\index{L\+P\+C\+\_\+\+A\+D\+C\+\_\+T@{L\+P\+C\+\_\+\+A\+D\+C\+\_\+T}!G\+DR@{G\+DR}}
+\index{G\+DR@{G\+DR}!L\+P\+C\+\_\+\+A\+D\+C\+\_\+T@{L\+P\+C\+\_\+\+A\+D\+C\+\_\+T}}
+\subsubsection{\texorpdfstring{G\+DR}{GDR}}
+{\footnotesize\ttfamily \hyperlink{core__sc300_8h_af63697ed9952cc71e1225efe205f6cd3}{\+\_\+\+\_\+I} uint32\+\_\+t L\+P\+C\+\_\+\+A\+D\+C\+\_\+\+T\+::\+G\+DR}
+
+A/D Global Data Register. Contains the result of the most recent A/D conversion. 
+
+Definition at line 53 of file adc\+\_\+18xx\+\_\+43xx.\+h.
+
+\mbox{\Hypertarget{struct_l_p_c___a_d_c___t_a3ed883c378f817342d10cb7ed29a05ae}\label{struct_l_p_c___a_d_c___t_a3ed883c378f817342d10cb7ed29a05ae}} 
+\index{L\+P\+C\+\_\+\+A\+D\+C\+\_\+T@{L\+P\+C\+\_\+\+A\+D\+C\+\_\+T}!I\+N\+T\+EN@{I\+N\+T\+EN}}
+\index{I\+N\+T\+EN@{I\+N\+T\+EN}!L\+P\+C\+\_\+\+A\+D\+C\+\_\+T@{L\+P\+C\+\_\+\+A\+D\+C\+\_\+T}}
+\subsubsection{\texorpdfstring{I\+N\+T\+EN}{INTEN}}
+{\footnotesize\ttfamily \hyperlink{core__sc300_8h_aec43007d9998a0a0e01faede4133d6be}{\+\_\+\+\_\+\+IO} uint32\+\_\+t L\+P\+C\+\_\+\+A\+D\+C\+\_\+\+T\+::\+I\+N\+T\+EN}
+
+A/D Interrupt Enable Register. This register contains enable bits that allow the D\+O\+NE flag of each A/D channel to be included or excluded from contributing to the generation of an A/D interrupt. 
+
+Definition at line 55 of file adc\+\_\+18xx\+\_\+43xx.\+h.
+
+\mbox{\Hypertarget{struct_l_p_c___a_d_c___t_afeba3e59f72b009dfb03377557ddcd60}\label{struct_l_p_c___a_d_c___t_afeba3e59f72b009dfb03377557ddcd60}} 
+\index{L\+P\+C\+\_\+\+A\+D\+C\+\_\+T@{L\+P\+C\+\_\+\+A\+D\+C\+\_\+T}!R\+E\+S\+E\+R\+V\+E\+D0@{R\+E\+S\+E\+R\+V\+E\+D0}}
+\index{R\+E\+S\+E\+R\+V\+E\+D0@{R\+E\+S\+E\+R\+V\+E\+D0}!L\+P\+C\+\_\+\+A\+D\+C\+\_\+T@{L\+P\+C\+\_\+\+A\+D\+C\+\_\+T}}
+\subsubsection{\texorpdfstring{R\+E\+S\+E\+R\+V\+E\+D0}{RESERVED0}}
+{\footnotesize\ttfamily \hyperlink{core__sc300_8h_af63697ed9952cc71e1225efe205f6cd3}{\+\_\+\+\_\+I} uint32\+\_\+t L\+P\+C\+\_\+\+A\+D\+C\+\_\+\+T\+::\+R\+E\+S\+E\+R\+V\+E\+D0}
+
+
+
+Definition at line 54 of file adc\+\_\+18xx\+\_\+43xx.\+h.
+
+\mbox{\Hypertarget{struct_l_p_c___a_d_c___t_a6fd64c9a5717b2adc106721eb9ab190b}\label{struct_l_p_c___a_d_c___t_a6fd64c9a5717b2adc106721eb9ab190b}} 
+\index{L\+P\+C\+\_\+\+A\+D\+C\+\_\+T@{L\+P\+C\+\_\+\+A\+D\+C\+\_\+T}!S\+T\+AT@{S\+T\+AT}}
+\index{S\+T\+AT@{S\+T\+AT}!L\+P\+C\+\_\+\+A\+D\+C\+\_\+T@{L\+P\+C\+\_\+\+A\+D\+C\+\_\+T}}
+\subsubsection{\texorpdfstring{S\+T\+AT}{STAT}}
+{\footnotesize\ttfamily \hyperlink{core__sc300_8h_af63697ed9952cc71e1225efe205f6cd3}{\+\_\+\+\_\+I} uint32\+\_\+t L\+P\+C\+\_\+\+A\+D\+C\+\_\+\+T\+::\+S\+T\+AT}
+
+A/D Status Register. This register contains D\+O\+NE and O\+V\+E\+R\+R\+UN flags for all of the A/D channels, as well as the A/D interrupt flag. 
+
+Definition at line 57 of file adc\+\_\+18xx\+\_\+43xx.\+h.
+
+
+
+The documentation for this struct was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+muju/externals/base/soc/lpc43xx/lpc\+\_\+chip\+\_\+43xx/inc/\hyperlink{adc__18xx__43xx_8h}{adc\+\_\+18xx\+\_\+43xx.\+h}\end{DoxyCompactItemize}

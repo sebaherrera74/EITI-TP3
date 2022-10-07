@@ -1,0 +1,14 @@
+digraph "muju/externals/freertos/portable/ThirdParty/GCC/Posix" {
+  compound=true
+  node [ fontsize="10", fontname="Helvetica"];
+  edge [ labelfontsize="10", labelfontname="Helvetica"];
+  subgraph clusterdir_c5c03cf7ac94db428b1cbb136b42a3fc {
+    graph [ bgcolor="#ddddee", pencolor="black", label="GCC" fontname="Helvetica", fontsize="10", URL="dir_c5c03cf7ac94db428b1cbb136b42a3fc.html"]
+  subgraph clusterdir_0e3bf88cd69a5be1252edb89a4cfd651 {
+    graph [ bgcolor="#eeeeff", pencolor="black", label="" URL="dir_0e3bf88cd69a5be1252edb89a4cfd651.html"];
+    dir_0e3bf88cd69a5be1252edb89a4cfd651 [shape=plaintext label="Posix"];
+    dir_4f8f42a540113ba916563f3669c2003f [shape=box label="utils" color="black" fillcolor="white" style="filled" URL="dir_4f8f42a540113ba916563f3669c2003f.html"];
+  }
+  }
+  dir_0e3bf88cd69a5be1252edb89a4cfd651->dir_4f8f42a540113ba916563f3669c2003f [headlabel="1", labeldistance=1.5 headhref="dir_000076_000089.html"];
+}

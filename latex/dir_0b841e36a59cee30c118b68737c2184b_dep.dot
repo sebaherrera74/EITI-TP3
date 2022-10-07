@@ -1,0 +1,15 @@
+digraph "muju/externals/base/soc" {
+  compound=true
+  node [ fontsize="10", fontname="Helvetica"];
+  edge [ labelfontsize="10", labelfontname="Helvetica"];
+  subgraph clusterdir_e97c52e681601d0de72ddf50829b8425 {
+    graph [ bgcolor="#ddddee", pencolor="black", label="base" fontname="Helvetica", fontsize="10", URL="dir_e97c52e681601d0de72ddf50829b8425.html"]
+  subgraph clusterdir_0b841e36a59cee30c118b68737c2184b {
+    graph [ bgcolor="#eeeeff", pencolor="black", label="" URL="dir_0b841e36a59cee30c118b68737c2184b.html"];
+    dir_0b841e36a59cee30c118b68737c2184b [shape=plaintext label="soc"];
+    dir_dfec0b345460144aed1519f795ee1f52 [shape=box label="lpc43xx" color="red" fillcolor="white" style="filled" URL="dir_dfec0b345460144aed1519f795ee1f52.html"];
+  }
+  }
+  dir_5605cd359a4e69632ec7c4a9a45cc4b2 [shape=box label="cpu" fillcolor="white" style="filled" color="red" URL="dir_5605cd359a4e69632ec7c4a9a45cc4b2.html"];
+  dir_dfec0b345460144aed1519f795ee1f52->dir_5605cd359a4e69632ec7c4a9a45cc4b2 [headlabel="4", labeldistance=1.5 headhref="dir_000045_000037.html"];
+}

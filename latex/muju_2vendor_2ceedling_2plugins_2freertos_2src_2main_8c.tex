@@ -1,0 +1,184 @@
+\hypertarget{muju_2vendor_2ceedling_2plugins_2freertos_2src_2main_8c}{}\section{muju/vendor/ceedling/plugins/freertos/src/main.c File Reference}
+\label{muju_2vendor_2ceedling_2plugins_2freertos_2src_2main_8c}\index{muju/vendor/ceedling/plugins/freertos/src/main.\+c@{muju/vendor/ceedling/plugins/freertos/src/main.\+c}}
+{\ttfamily \#include $<$stdio.\+h$>$}\newline
+{\ttfamily \#include $<$stdlib.\+h$>$}\newline
+{\ttfamily \#include \char`\"{}Free\+R\+T\+O\+S.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}task.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}croutine.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}Block\+Q.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}blocktim.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}countsem.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}crflash.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}crhook.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}death.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}dynamic.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}file\+I\+O.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}flop.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}Gen\+Q\+Test.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}integer.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}mevents.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}Poll\+Q.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}print.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}Q\+Peek.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}recmutex.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}semtest.\+h\char`\"{}}\newline
+Include dependency graph for main.\+c\+:
+% FIG 0
+\subsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#define \hyperlink{muju_2vendor_2ceedling_2plugins_2freertos_2src_2main_8c_ad1776ca98c5dc452bed0bfa17e20fd01}{main\+L\+E\+D\+\_\+\+T\+A\+S\+K\+\_\+\+P\+R\+I\+O\+R\+I\+TY}~( \hyperlink{vendor_2ceedling_2plugins_2freertos_2vendor_2freertos_2include_2task_8h_a94ed0b9b3b4e8ccc859c322f18583e67}{tsk\+I\+D\+L\+E\+\_\+\+P\+R\+I\+O\+R\+I\+TY} + 1 )
+\item 
+\#define \hyperlink{muju_2vendor_2ceedling_2plugins_2freertos_2src_2main_8c_a1d12ac49385856e62f3a16e0fda8f0f3}{main\+C\+R\+E\+A\+T\+O\+R\+\_\+\+T\+A\+S\+K\+\_\+\+P\+R\+I\+O\+R\+I\+TY}~( \hyperlink{vendor_2ceedling_2plugins_2freertos_2vendor_2freertos_2include_2task_8h_a94ed0b9b3b4e8ccc859c322f18583e67}{tsk\+I\+D\+L\+E\+\_\+\+P\+R\+I\+O\+R\+I\+TY} + 3 )
+\item 
+\#define \hyperlink{muju_2vendor_2ceedling_2plugins_2freertos_2src_2main_8c_a1c891b42c2e6c5607c423423fed8ce2e}{main\+P\+R\+I\+N\+T\+\_\+\+T\+A\+S\+K\+\_\+\+P\+R\+I\+O\+R\+I\+TY}~( \hyperlink{vendor_2ceedling_2plugins_2freertos_2vendor_2freertos_2include_2task_8h_a94ed0b9b3b4e8ccc859c322f18583e67}{tsk\+I\+D\+L\+E\+\_\+\+P\+R\+I\+O\+R\+I\+TY} + 4 )
+\item 
+\#define \hyperlink{muju_2vendor_2ceedling_2plugins_2freertos_2src_2main_8c_a9b905ec830f503b3df8ac3f782dad53d}{main\+Q\+U\+E\+U\+E\+\_\+\+P\+O\+L\+L\+\_\+\+P\+R\+I\+O\+R\+I\+TY}~( \hyperlink{vendor_2ceedling_2plugins_2freertos_2vendor_2freertos_2include_2task_8h_a94ed0b9b3b4e8ccc859c322f18583e67}{tsk\+I\+D\+L\+E\+\_\+\+P\+R\+I\+O\+R\+I\+TY} + 2 )
+\item 
+\#define \hyperlink{muju_2vendor_2ceedling_2plugins_2freertos_2src_2main_8c_ab115f5f60467bd3bec30f405e9d17205}{main\+Q\+U\+E\+U\+E\+\_\+\+B\+L\+O\+C\+K\+\_\+\+P\+R\+I\+O\+R\+I\+TY}~( \hyperlink{vendor_2ceedling_2plugins_2freertos_2vendor_2freertos_2include_2task_8h_a94ed0b9b3b4e8ccc859c322f18583e67}{tsk\+I\+D\+L\+E\+\_\+\+P\+R\+I\+O\+R\+I\+TY} + 3 )
+\item 
+\#define \hyperlink{muju_2vendor_2ceedling_2plugins_2freertos_2src_2main_8c_ab2e3dea18298004f668ba53f68e06f31}{main\+S\+E\+M\+A\+P\+H\+O\+R\+E\+\_\+\+T\+A\+S\+K\+\_\+\+P\+R\+I\+O\+R\+I\+TY}~( \hyperlink{vendor_2ceedling_2plugins_2freertos_2vendor_2freertos_2include_2task_8h_a94ed0b9b3b4e8ccc859c322f18583e67}{tsk\+I\+D\+L\+E\+\_\+\+P\+R\+I\+O\+R\+I\+TY} + 1 )
+\item 
+\#define \hyperlink{muju_2vendor_2ceedling_2plugins_2freertos_2src_2main_8c_ad43a08b22e268e56451f25d613054ac7}{main\+G\+E\+N\+E\+R\+I\+C\+\_\+\+Q\+U\+E\+U\+E\+\_\+\+P\+R\+I\+O\+R\+I\+TY}~( \hyperlink{vendor_2ceedling_2plugins_2freertos_2vendor_2freertos_2include_2task_8h_a94ed0b9b3b4e8ccc859c322f18583e67}{tsk\+I\+D\+L\+E\+\_\+\+P\+R\+I\+O\+R\+I\+TY} )
+\item 
+\#define \hyperlink{muju_2vendor_2ceedling_2plugins_2freertos_2src_2main_8c_a9a883b6aa71931885776ce3e2ca37605}{main\+P\+R\+I\+N\+T\+\_\+\+S\+T\+A\+C\+K\+\_\+\+S\+I\+ZE}~( ( unsigned short ) 512 )
+\item 
+\#define \hyperlink{muju_2vendor_2ceedling_2plugins_2freertos_2src_2main_8c_a8b144f410853f62bcb5df6b051ea1939}{main\+D\+E\+B\+U\+G\+\_\+\+L\+O\+G\+\_\+\+B\+U\+F\+F\+E\+R\+\_\+\+S\+I\+ZE}~( ( unsigned short ) 20480 )
+\item 
+\#define \hyperlink{muju_2vendor_2ceedling_2plugins_2freertos_2src_2main_8c_a323d071e683b56747f3032c90d08ab2b}{main\+N\+U\+M\+\_\+\+F\+L\+A\+S\+H\+\_\+\+C\+O\+\_\+\+R\+O\+U\+T\+I\+N\+ES}~( 8 )
+\end{DoxyCompactItemize}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \hyperlink{muju_2vendor_2ceedling_2plugins_2freertos_2src_2main_8c_a97fd430f36f8b065226e2bff9bad1de5}{v\+Application\+Idle\+Hook} (void)
+\item 
+int \hyperlink{group__samples_ga840291bc02cba5474a4cb46a9b9566fe}{main} (void)
+\begin{DoxyCompactList}\small\item\em Función principal del programa. \end{DoxyCompactList}\item 
+void \hyperlink{muju_2vendor_2ceedling_2plugins_2freertos_2src_2main_8c_a839641b339c62dcdf8d0bed297551e3e}{v\+Main\+Queue\+Send\+Passed} (void)
+\end{DoxyCompactItemize}
+
+
+\subsection{Macro Definition Documentation}
+\mbox{\Hypertarget{muju_2vendor_2ceedling_2plugins_2freertos_2src_2main_8c_a1d12ac49385856e62f3a16e0fda8f0f3}\label{muju_2vendor_2ceedling_2plugins_2freertos_2src_2main_8c_a1d12ac49385856e62f3a16e0fda8f0f3}} 
+\index{muju/vendor/ceedling/plugins/freertos/src/main.\+c@{muju/vendor/ceedling/plugins/freertos/src/main.\+c}!main\+C\+R\+E\+A\+T\+O\+R\+\_\+\+T\+A\+S\+K\+\_\+\+P\+R\+I\+O\+R\+I\+TY@{main\+C\+R\+E\+A\+T\+O\+R\+\_\+\+T\+A\+S\+K\+\_\+\+P\+R\+I\+O\+R\+I\+TY}}
+\index{main\+C\+R\+E\+A\+T\+O\+R\+\_\+\+T\+A\+S\+K\+\_\+\+P\+R\+I\+O\+R\+I\+TY@{main\+C\+R\+E\+A\+T\+O\+R\+\_\+\+T\+A\+S\+K\+\_\+\+P\+R\+I\+O\+R\+I\+TY}!muju/vendor/ceedling/plugins/freertos/src/main.\+c@{muju/vendor/ceedling/plugins/freertos/src/main.\+c}}
+\subsubsection{\texorpdfstring{main\+C\+R\+E\+A\+T\+O\+R\+\_\+\+T\+A\+S\+K\+\_\+\+P\+R\+I\+O\+R\+I\+TY}{mainCREATOR\_TASK\_PRIORITY}}
+{\footnotesize\ttfamily \#define main\+C\+R\+E\+A\+T\+O\+R\+\_\+\+T\+A\+S\+K\+\_\+\+P\+R\+I\+O\+R\+I\+TY~( \hyperlink{vendor_2ceedling_2plugins_2freertos_2vendor_2freertos_2include_2task_8h_a94ed0b9b3b4e8ccc859c322f18583e67}{tsk\+I\+D\+L\+E\+\_\+\+P\+R\+I\+O\+R\+I\+TY} + 3 )}
+
+
+
+Definition at line 127 of file main.\+c.
+
+\mbox{\Hypertarget{muju_2vendor_2ceedling_2plugins_2freertos_2src_2main_8c_a8b144f410853f62bcb5df6b051ea1939}\label{muju_2vendor_2ceedling_2plugins_2freertos_2src_2main_8c_a8b144f410853f62bcb5df6b051ea1939}} 
+\index{muju/vendor/ceedling/plugins/freertos/src/main.\+c@{muju/vendor/ceedling/plugins/freertos/src/main.\+c}!main\+D\+E\+B\+U\+G\+\_\+\+L\+O\+G\+\_\+\+B\+U\+F\+F\+E\+R\+\_\+\+S\+I\+ZE@{main\+D\+E\+B\+U\+G\+\_\+\+L\+O\+G\+\_\+\+B\+U\+F\+F\+E\+R\+\_\+\+S\+I\+ZE}}
+\index{main\+D\+E\+B\+U\+G\+\_\+\+L\+O\+G\+\_\+\+B\+U\+F\+F\+E\+R\+\_\+\+S\+I\+ZE@{main\+D\+E\+B\+U\+G\+\_\+\+L\+O\+G\+\_\+\+B\+U\+F\+F\+E\+R\+\_\+\+S\+I\+ZE}!muju/vendor/ceedling/plugins/freertos/src/main.\+c@{muju/vendor/ceedling/plugins/freertos/src/main.\+c}}
+\subsubsection{\texorpdfstring{main\+D\+E\+B\+U\+G\+\_\+\+L\+O\+G\+\_\+\+B\+U\+F\+F\+E\+R\+\_\+\+S\+I\+ZE}{mainDEBUG\_LOG\_BUFFER\_SIZE}}
+{\footnotesize\ttfamily \#define main\+D\+E\+B\+U\+G\+\_\+\+L\+O\+G\+\_\+\+B\+U\+F\+F\+E\+R\+\_\+\+S\+I\+ZE~( ( unsigned short ) 20480 )}
+
+
+
+Definition at line 135 of file main.\+c.
+
+\mbox{\Hypertarget{muju_2vendor_2ceedling_2plugins_2freertos_2src_2main_8c_ad43a08b22e268e56451f25d613054ac7}\label{muju_2vendor_2ceedling_2plugins_2freertos_2src_2main_8c_ad43a08b22e268e56451f25d613054ac7}} 
+\index{muju/vendor/ceedling/plugins/freertos/src/main.\+c@{muju/vendor/ceedling/plugins/freertos/src/main.\+c}!main\+G\+E\+N\+E\+R\+I\+C\+\_\+\+Q\+U\+E\+U\+E\+\_\+\+P\+R\+I\+O\+R\+I\+TY@{main\+G\+E\+N\+E\+R\+I\+C\+\_\+\+Q\+U\+E\+U\+E\+\_\+\+P\+R\+I\+O\+R\+I\+TY}}
+\index{main\+G\+E\+N\+E\+R\+I\+C\+\_\+\+Q\+U\+E\+U\+E\+\_\+\+P\+R\+I\+O\+R\+I\+TY@{main\+G\+E\+N\+E\+R\+I\+C\+\_\+\+Q\+U\+E\+U\+E\+\_\+\+P\+R\+I\+O\+R\+I\+TY}!muju/vendor/ceedling/plugins/freertos/src/main.\+c@{muju/vendor/ceedling/plugins/freertos/src/main.\+c}}
+\subsubsection{\texorpdfstring{main\+G\+E\+N\+E\+R\+I\+C\+\_\+\+Q\+U\+E\+U\+E\+\_\+\+P\+R\+I\+O\+R\+I\+TY}{mainGENERIC\_QUEUE\_PRIORITY}}
+{\footnotesize\ttfamily \#define main\+G\+E\+N\+E\+R\+I\+C\+\_\+\+Q\+U\+E\+U\+E\+\_\+\+P\+R\+I\+O\+R\+I\+TY~( \hyperlink{vendor_2ceedling_2plugins_2freertos_2vendor_2freertos_2include_2task_8h_a94ed0b9b3b4e8ccc859c322f18583e67}{tsk\+I\+D\+L\+E\+\_\+\+P\+R\+I\+O\+R\+I\+TY} )}
+
+
+
+Definition at line 132 of file main.\+c.
+
+\mbox{\Hypertarget{muju_2vendor_2ceedling_2plugins_2freertos_2src_2main_8c_ad1776ca98c5dc452bed0bfa17e20fd01}\label{muju_2vendor_2ceedling_2plugins_2freertos_2src_2main_8c_ad1776ca98c5dc452bed0bfa17e20fd01}} 
+\index{muju/vendor/ceedling/plugins/freertos/src/main.\+c@{muju/vendor/ceedling/plugins/freertos/src/main.\+c}!main\+L\+E\+D\+\_\+\+T\+A\+S\+K\+\_\+\+P\+R\+I\+O\+R\+I\+TY@{main\+L\+E\+D\+\_\+\+T\+A\+S\+K\+\_\+\+P\+R\+I\+O\+R\+I\+TY}}
+\index{main\+L\+E\+D\+\_\+\+T\+A\+S\+K\+\_\+\+P\+R\+I\+O\+R\+I\+TY@{main\+L\+E\+D\+\_\+\+T\+A\+S\+K\+\_\+\+P\+R\+I\+O\+R\+I\+TY}!muju/vendor/ceedling/plugins/freertos/src/main.\+c@{muju/vendor/ceedling/plugins/freertos/src/main.\+c}}
+\subsubsection{\texorpdfstring{main\+L\+E\+D\+\_\+\+T\+A\+S\+K\+\_\+\+P\+R\+I\+O\+R\+I\+TY}{mainLED\_TASK\_PRIORITY}}
+{\footnotesize\ttfamily \#define main\+L\+E\+D\+\_\+\+T\+A\+S\+K\+\_\+\+P\+R\+I\+O\+R\+I\+TY~( \hyperlink{vendor_2ceedling_2plugins_2freertos_2vendor_2freertos_2include_2task_8h_a94ed0b9b3b4e8ccc859c322f18583e67}{tsk\+I\+D\+L\+E\+\_\+\+P\+R\+I\+O\+R\+I\+TY} + 1 )}
+
+
+
+Definition at line 126 of file main.\+c.
+
+\mbox{\Hypertarget{muju_2vendor_2ceedling_2plugins_2freertos_2src_2main_8c_a323d071e683b56747f3032c90d08ab2b}\label{muju_2vendor_2ceedling_2plugins_2freertos_2src_2main_8c_a323d071e683b56747f3032c90d08ab2b}} 
+\index{muju/vendor/ceedling/plugins/freertos/src/main.\+c@{muju/vendor/ceedling/plugins/freertos/src/main.\+c}!main\+N\+U\+M\+\_\+\+F\+L\+A\+S\+H\+\_\+\+C\+O\+\_\+\+R\+O\+U\+T\+I\+N\+ES@{main\+N\+U\+M\+\_\+\+F\+L\+A\+S\+H\+\_\+\+C\+O\+\_\+\+R\+O\+U\+T\+I\+N\+ES}}
+\index{main\+N\+U\+M\+\_\+\+F\+L\+A\+S\+H\+\_\+\+C\+O\+\_\+\+R\+O\+U\+T\+I\+N\+ES@{main\+N\+U\+M\+\_\+\+F\+L\+A\+S\+H\+\_\+\+C\+O\+\_\+\+R\+O\+U\+T\+I\+N\+ES}!muju/vendor/ceedling/plugins/freertos/src/main.\+c@{muju/vendor/ceedling/plugins/freertos/src/main.\+c}}
+\subsubsection{\texorpdfstring{main\+N\+U\+M\+\_\+\+F\+L\+A\+S\+H\+\_\+\+C\+O\+\_\+\+R\+O\+U\+T\+I\+N\+ES}{mainNUM\_FLASH\_CO\_ROUTINES}}
+{\footnotesize\ttfamily \#define main\+N\+U\+M\+\_\+\+F\+L\+A\+S\+H\+\_\+\+C\+O\+\_\+\+R\+O\+U\+T\+I\+N\+ES~( 8 )}
+
+
+
+Definition at line 138 of file main.\+c.
+
+\mbox{\Hypertarget{muju_2vendor_2ceedling_2plugins_2freertos_2src_2main_8c_a9a883b6aa71931885776ce3e2ca37605}\label{muju_2vendor_2ceedling_2plugins_2freertos_2src_2main_8c_a9a883b6aa71931885776ce3e2ca37605}} 
+\index{muju/vendor/ceedling/plugins/freertos/src/main.\+c@{muju/vendor/ceedling/plugins/freertos/src/main.\+c}!main\+P\+R\+I\+N\+T\+\_\+\+S\+T\+A\+C\+K\+\_\+\+S\+I\+ZE@{main\+P\+R\+I\+N\+T\+\_\+\+S\+T\+A\+C\+K\+\_\+\+S\+I\+ZE}}
+\index{main\+P\+R\+I\+N\+T\+\_\+\+S\+T\+A\+C\+K\+\_\+\+S\+I\+ZE@{main\+P\+R\+I\+N\+T\+\_\+\+S\+T\+A\+C\+K\+\_\+\+S\+I\+ZE}!muju/vendor/ceedling/plugins/freertos/src/main.\+c@{muju/vendor/ceedling/plugins/freertos/src/main.\+c}}
+\subsubsection{\texorpdfstring{main\+P\+R\+I\+N\+T\+\_\+\+S\+T\+A\+C\+K\+\_\+\+S\+I\+ZE}{mainPRINT\_STACK\_SIZE}}
+{\footnotesize\ttfamily \#define main\+P\+R\+I\+N\+T\+\_\+\+S\+T\+A\+C\+K\+\_\+\+S\+I\+ZE~( ( unsigned short ) 512 )}
+
+
+
+Definition at line 134 of file main.\+c.
+
+\mbox{\Hypertarget{muju_2vendor_2ceedling_2plugins_2freertos_2src_2main_8c_a1c891b42c2e6c5607c423423fed8ce2e}\label{muju_2vendor_2ceedling_2plugins_2freertos_2src_2main_8c_a1c891b42c2e6c5607c423423fed8ce2e}} 
+\index{muju/vendor/ceedling/plugins/freertos/src/main.\+c@{muju/vendor/ceedling/plugins/freertos/src/main.\+c}!main\+P\+R\+I\+N\+T\+\_\+\+T\+A\+S\+K\+\_\+\+P\+R\+I\+O\+R\+I\+TY@{main\+P\+R\+I\+N\+T\+\_\+\+T\+A\+S\+K\+\_\+\+P\+R\+I\+O\+R\+I\+TY}}
+\index{main\+P\+R\+I\+N\+T\+\_\+\+T\+A\+S\+K\+\_\+\+P\+R\+I\+O\+R\+I\+TY@{main\+P\+R\+I\+N\+T\+\_\+\+T\+A\+S\+K\+\_\+\+P\+R\+I\+O\+R\+I\+TY}!muju/vendor/ceedling/plugins/freertos/src/main.\+c@{muju/vendor/ceedling/plugins/freertos/src/main.\+c}}
+\subsubsection{\texorpdfstring{main\+P\+R\+I\+N\+T\+\_\+\+T\+A\+S\+K\+\_\+\+P\+R\+I\+O\+R\+I\+TY}{mainPRINT\_TASK\_PRIORITY}}
+{\footnotesize\ttfamily \#define main\+P\+R\+I\+N\+T\+\_\+\+T\+A\+S\+K\+\_\+\+P\+R\+I\+O\+R\+I\+TY~( \hyperlink{vendor_2ceedling_2plugins_2freertos_2vendor_2freertos_2include_2task_8h_a94ed0b9b3b4e8ccc859c322f18583e67}{tsk\+I\+D\+L\+E\+\_\+\+P\+R\+I\+O\+R\+I\+TY} + 4 )}
+
+
+
+Definition at line 128 of file main.\+c.
+
+\mbox{\Hypertarget{muju_2vendor_2ceedling_2plugins_2freertos_2src_2main_8c_ab115f5f60467bd3bec30f405e9d17205}\label{muju_2vendor_2ceedling_2plugins_2freertos_2src_2main_8c_ab115f5f60467bd3bec30f405e9d17205}} 
+\index{muju/vendor/ceedling/plugins/freertos/src/main.\+c@{muju/vendor/ceedling/plugins/freertos/src/main.\+c}!main\+Q\+U\+E\+U\+E\+\_\+\+B\+L\+O\+C\+K\+\_\+\+P\+R\+I\+O\+R\+I\+TY@{main\+Q\+U\+E\+U\+E\+\_\+\+B\+L\+O\+C\+K\+\_\+\+P\+R\+I\+O\+R\+I\+TY}}
+\index{main\+Q\+U\+E\+U\+E\+\_\+\+B\+L\+O\+C\+K\+\_\+\+P\+R\+I\+O\+R\+I\+TY@{main\+Q\+U\+E\+U\+E\+\_\+\+B\+L\+O\+C\+K\+\_\+\+P\+R\+I\+O\+R\+I\+TY}!muju/vendor/ceedling/plugins/freertos/src/main.\+c@{muju/vendor/ceedling/plugins/freertos/src/main.\+c}}
+\subsubsection{\texorpdfstring{main\+Q\+U\+E\+U\+E\+\_\+\+B\+L\+O\+C\+K\+\_\+\+P\+R\+I\+O\+R\+I\+TY}{mainQUEUE\_BLOCK\_PRIORITY}}
+{\footnotesize\ttfamily \#define main\+Q\+U\+E\+U\+E\+\_\+\+B\+L\+O\+C\+K\+\_\+\+P\+R\+I\+O\+R\+I\+TY~( \hyperlink{vendor_2ceedling_2plugins_2freertos_2vendor_2freertos_2include_2task_8h_a94ed0b9b3b4e8ccc859c322f18583e67}{tsk\+I\+D\+L\+E\+\_\+\+P\+R\+I\+O\+R\+I\+TY} + 3 )}
+
+
+
+Definition at line 130 of file main.\+c.
+
+\mbox{\Hypertarget{muju_2vendor_2ceedling_2plugins_2freertos_2src_2main_8c_a9b905ec830f503b3df8ac3f782dad53d}\label{muju_2vendor_2ceedling_2plugins_2freertos_2src_2main_8c_a9b905ec830f503b3df8ac3f782dad53d}} 
+\index{muju/vendor/ceedling/plugins/freertos/src/main.\+c@{muju/vendor/ceedling/plugins/freertos/src/main.\+c}!main\+Q\+U\+E\+U\+E\+\_\+\+P\+O\+L\+L\+\_\+\+P\+R\+I\+O\+R\+I\+TY@{main\+Q\+U\+E\+U\+E\+\_\+\+P\+O\+L\+L\+\_\+\+P\+R\+I\+O\+R\+I\+TY}}
+\index{main\+Q\+U\+E\+U\+E\+\_\+\+P\+O\+L\+L\+\_\+\+P\+R\+I\+O\+R\+I\+TY@{main\+Q\+U\+E\+U\+E\+\_\+\+P\+O\+L\+L\+\_\+\+P\+R\+I\+O\+R\+I\+TY}!muju/vendor/ceedling/plugins/freertos/src/main.\+c@{muju/vendor/ceedling/plugins/freertos/src/main.\+c}}
+\subsubsection{\texorpdfstring{main\+Q\+U\+E\+U\+E\+\_\+\+P\+O\+L\+L\+\_\+\+P\+R\+I\+O\+R\+I\+TY}{mainQUEUE\_POLL\_PRIORITY}}
+{\footnotesize\ttfamily \#define main\+Q\+U\+E\+U\+E\+\_\+\+P\+O\+L\+L\+\_\+\+P\+R\+I\+O\+R\+I\+TY~( \hyperlink{vendor_2ceedling_2plugins_2freertos_2vendor_2freertos_2include_2task_8h_a94ed0b9b3b4e8ccc859c322f18583e67}{tsk\+I\+D\+L\+E\+\_\+\+P\+R\+I\+O\+R\+I\+TY} + 2 )}
+
+
+
+Definition at line 129 of file main.\+c.
+
+\mbox{\Hypertarget{muju_2vendor_2ceedling_2plugins_2freertos_2src_2main_8c_ab2e3dea18298004f668ba53f68e06f31}\label{muju_2vendor_2ceedling_2plugins_2freertos_2src_2main_8c_ab2e3dea18298004f668ba53f68e06f31}} 
+\index{muju/vendor/ceedling/plugins/freertos/src/main.\+c@{muju/vendor/ceedling/plugins/freertos/src/main.\+c}!main\+S\+E\+M\+A\+P\+H\+O\+R\+E\+\_\+\+T\+A\+S\+K\+\_\+\+P\+R\+I\+O\+R\+I\+TY@{main\+S\+E\+M\+A\+P\+H\+O\+R\+E\+\_\+\+T\+A\+S\+K\+\_\+\+P\+R\+I\+O\+R\+I\+TY}}
+\index{main\+S\+E\+M\+A\+P\+H\+O\+R\+E\+\_\+\+T\+A\+S\+K\+\_\+\+P\+R\+I\+O\+R\+I\+TY@{main\+S\+E\+M\+A\+P\+H\+O\+R\+E\+\_\+\+T\+A\+S\+K\+\_\+\+P\+R\+I\+O\+R\+I\+TY}!muju/vendor/ceedling/plugins/freertos/src/main.\+c@{muju/vendor/ceedling/plugins/freertos/src/main.\+c}}
+\subsubsection{\texorpdfstring{main\+S\+E\+M\+A\+P\+H\+O\+R\+E\+\_\+\+T\+A\+S\+K\+\_\+\+P\+R\+I\+O\+R\+I\+TY}{mainSEMAPHORE\_TASK\_PRIORITY}}
+{\footnotesize\ttfamily \#define main\+S\+E\+M\+A\+P\+H\+O\+R\+E\+\_\+\+T\+A\+S\+K\+\_\+\+P\+R\+I\+O\+R\+I\+TY~( \hyperlink{vendor_2ceedling_2plugins_2freertos_2vendor_2freertos_2include_2task_8h_a94ed0b9b3b4e8ccc859c322f18583e67}{tsk\+I\+D\+L\+E\+\_\+\+P\+R\+I\+O\+R\+I\+TY} + 1 )}
+
+
+
+Definition at line 131 of file main.\+c.
+
+
+
+\subsection{Function Documentation}
+\mbox{\Hypertarget{muju_2vendor_2ceedling_2plugins_2freertos_2src_2main_8c_a97fd430f36f8b065226e2bff9bad1de5}\label{muju_2vendor_2ceedling_2plugins_2freertos_2src_2main_8c_a97fd430f36f8b065226e2bff9bad1de5}} 
+\index{muju/vendor/ceedling/plugins/freertos/src/main.\+c@{muju/vendor/ceedling/plugins/freertos/src/main.\+c}!v\+Application\+Idle\+Hook@{v\+Application\+Idle\+Hook}}
+\index{v\+Application\+Idle\+Hook@{v\+Application\+Idle\+Hook}!muju/vendor/ceedling/plugins/freertos/src/main.\+c@{muju/vendor/ceedling/plugins/freertos/src/main.\+c}}
+\subsubsection{\texorpdfstring{v\+Application\+Idle\+Hook()}{vApplicationIdleHook()}}
+{\footnotesize\ttfamily void v\+Application\+Idle\+Hook (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+
+
+
+Definition at line 434 of file main.\+c.
+
+\mbox{\Hypertarget{muju_2vendor_2ceedling_2plugins_2freertos_2src_2main_8c_a839641b339c62dcdf8d0bed297551e3e}\label{muju_2vendor_2ceedling_2plugins_2freertos_2src_2main_8c_a839641b339c62dcdf8d0bed297551e3e}} 
+\index{muju/vendor/ceedling/plugins/freertos/src/main.\+c@{muju/vendor/ceedling/plugins/freertos/src/main.\+c}!v\+Main\+Queue\+Send\+Passed@{v\+Main\+Queue\+Send\+Passed}}
+\index{v\+Main\+Queue\+Send\+Passed@{v\+Main\+Queue\+Send\+Passed}!muju/vendor/ceedling/plugins/freertos/src/main.\+c@{muju/vendor/ceedling/plugins/freertos/src/main.\+c}}
+\subsubsection{\texorpdfstring{v\+Main\+Queue\+Send\+Passed()}{vMainQueueSendPassed()}}
+{\footnotesize\ttfamily void v\+Main\+Queue\+Send\+Passed (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+
+
+
+Definition at line 220 of file main.\+c.
+

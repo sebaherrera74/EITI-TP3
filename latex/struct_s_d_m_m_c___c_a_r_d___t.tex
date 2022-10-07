@@ -1,0 +1,197 @@
+\hypertarget{struct_s_d_m_m_c___c_a_r_d___t}{}\section{S\+D\+M\+M\+C\+\_\+\+C\+A\+R\+D\+\_\+T Struct Reference}
+\label{struct_s_d_m_m_c___c_a_r_d___t}\index{S\+D\+M\+M\+C\+\_\+\+C\+A\+R\+D\+\_\+T@{S\+D\+M\+M\+C\+\_\+\+C\+A\+R\+D\+\_\+T}}
+
+
+S\+D/\+M\+MC Card specific setup data structure.  
+
+
+
+
+{\ttfamily \#include $<$sdmmc.\+h$>$}
+
+\subsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+uint32\+\_\+t \hyperlink{struct_s_d_m_m_c___c_a_r_d___t_a35685aedeea24641fb1cb80a0a99314f}{response} \mbox{[}4\mbox{]}
+\item 
+uint32\+\_\+t \hyperlink{struct_s_d_m_m_c___c_a_r_d___t_a3e61ef8fe006f0d7f2e30910a565d9a0}{cid} \mbox{[}4\mbox{]}
+\item 
+uint32\+\_\+t \hyperlink{struct_s_d_m_m_c___c_a_r_d___t_afd44604509f49e67bdb3a5cf5db54eea}{csd} \mbox{[}4\mbox{]}
+\item 
+uint32\+\_\+t \hyperlink{struct_s_d_m_m_c___c_a_r_d___t_abce2d2420c62821bc583f3a89744ddf4}{ext\+\_\+csd} \mbox{[}512/4\mbox{]}
+\item 
+uint32\+\_\+t \hyperlink{struct_s_d_m_m_c___c_a_r_d___t_a0fdfec88d2df16adf835030f44cf47c0}{card\+\_\+type}
+\item 
+uint16\+\_\+t \hyperlink{struct_s_d_m_m_c___c_a_r_d___t_a3fbcc47f5e1dca1ed9b824dcb9f788ac}{rca}
+\item 
+uint32\+\_\+t \hyperlink{struct_s_d_m_m_c___c_a_r_d___t_a09a93494390a261b42e4b3d733ad3a05}{speed}
+\item 
+uint32\+\_\+t \hyperlink{struct_s_d_m_m_c___c_a_r_d___t_a5e6e7086556a130e250c3732878528bc}{block\+\_\+len}
+\item 
+uint64\+\_\+t \hyperlink{struct_s_d_m_m_c___c_a_r_d___t_a51ceefe761fde7515e078e14a112acd3}{device\+\_\+size}
+\item 
+uint32\+\_\+t \hyperlink{struct_s_d_m_m_c___c_a_r_d___t_af634111acb673198465718eec3ec1b67}{blocknr}
+\item 
+uint32\+\_\+t \hyperlink{struct_s_d_m_m_c___c_a_r_d___t_abedfed1bfea3d043b5e8fda33b4c7480}{clk\+\_\+rate}
+\item 
+\hyperlink{group___c_h_i_p___s_d_m_m_c___definitions_gad8f6b6485a8de8a55a8cdee88788a64c}{S\+D\+M\+M\+C\+\_\+\+E\+V\+S\+E\+T\+U\+P\+\_\+\+F\+U\+N\+C\+\_\+T} \hyperlink{struct_s_d_m_m_c___c_a_r_d___t_a0124bd3f8f2cfc307a229f98a0852874}{evsetup\+\_\+cb}
+\item 
+\hyperlink{group___c_h_i_p___s_d_m_m_c___definitions_ga3379c3596d02e20e0531dc1287df505f}{S\+D\+M\+M\+C\+\_\+\+E\+V\+W\+A\+I\+T\+\_\+\+F\+U\+N\+C\+\_\+T} \hyperlink{struct_s_d_m_m_c___c_a_r_d___t_a2ab1facd01f231799381db807f204de2}{waitfunc\+\_\+cb}
+\item 
+\hyperlink{group___c_h_i_p___s_d_m_m_c___definitions_ga910711513843f370e9b251ec60b245e7}{S\+D\+M\+M\+C\+\_\+\+M\+S\+D\+E\+L\+A\+Y\+\_\+\+F\+U\+N\+C\+\_\+T} \hyperlink{struct_s_d_m_m_c___c_a_r_d___t_a10bb6418c66c7794c18a890b031f1fa2}{msdelay\+\_\+func}
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+S\+D/\+M\+MC Card specific setup data structure. 
+
+Definition at line 193 of file sdmmc.\+h.
+
+
+
+\subsection{Member Data Documentation}
+\mbox{\Hypertarget{struct_s_d_m_m_c___c_a_r_d___t_a5e6e7086556a130e250c3732878528bc}\label{struct_s_d_m_m_c___c_a_r_d___t_a5e6e7086556a130e250c3732878528bc}} 
+\index{S\+D\+M\+M\+C\+\_\+\+C\+A\+R\+D\+\_\+T@{S\+D\+M\+M\+C\+\_\+\+C\+A\+R\+D\+\_\+T}!block\+\_\+len@{block\+\_\+len}}
+\index{block\+\_\+len@{block\+\_\+len}!S\+D\+M\+M\+C\+\_\+\+C\+A\+R\+D\+\_\+T@{S\+D\+M\+M\+C\+\_\+\+C\+A\+R\+D\+\_\+T}}
+\subsubsection{\texorpdfstring{block\+\_\+len}{block\_len}}
+{\footnotesize\ttfamily uint32\+\_\+t S\+D\+M\+M\+C\+\_\+\+C\+A\+R\+D\+\_\+\+T\+::block\+\_\+len}
+
+Card sector size 
+
+Definition at line 201 of file sdmmc.\+h.
+
+\mbox{\Hypertarget{struct_s_d_m_m_c___c_a_r_d___t_af634111acb673198465718eec3ec1b67}\label{struct_s_d_m_m_c___c_a_r_d___t_af634111acb673198465718eec3ec1b67}} 
+\index{S\+D\+M\+M\+C\+\_\+\+C\+A\+R\+D\+\_\+T@{S\+D\+M\+M\+C\+\_\+\+C\+A\+R\+D\+\_\+T}!blocknr@{blocknr}}
+\index{blocknr@{blocknr}!S\+D\+M\+M\+C\+\_\+\+C\+A\+R\+D\+\_\+T@{S\+D\+M\+M\+C\+\_\+\+C\+A\+R\+D\+\_\+T}}
+\subsubsection{\texorpdfstring{blocknr}{blocknr}}
+{\footnotesize\ttfamily uint32\+\_\+t S\+D\+M\+M\+C\+\_\+\+C\+A\+R\+D\+\_\+\+T\+::blocknr}
+
+Block Number 
+
+Definition at line 203 of file sdmmc.\+h.
+
+\mbox{\Hypertarget{struct_s_d_m_m_c___c_a_r_d___t_a0fdfec88d2df16adf835030f44cf47c0}\label{struct_s_d_m_m_c___c_a_r_d___t_a0fdfec88d2df16adf835030f44cf47c0}} 
+\index{S\+D\+M\+M\+C\+\_\+\+C\+A\+R\+D\+\_\+T@{S\+D\+M\+M\+C\+\_\+\+C\+A\+R\+D\+\_\+T}!card\+\_\+type@{card\+\_\+type}}
+\index{card\+\_\+type@{card\+\_\+type}!S\+D\+M\+M\+C\+\_\+\+C\+A\+R\+D\+\_\+T@{S\+D\+M\+M\+C\+\_\+\+C\+A\+R\+D\+\_\+T}}
+\subsubsection{\texorpdfstring{card\+\_\+type}{card\_type}}
+{\footnotesize\ttfamily uint32\+\_\+t S\+D\+M\+M\+C\+\_\+\+C\+A\+R\+D\+\_\+\+T\+::card\+\_\+type}
+
+Card Type 
+
+Definition at line 198 of file sdmmc.\+h.
+
+\mbox{\Hypertarget{struct_s_d_m_m_c___c_a_r_d___t_a3e61ef8fe006f0d7f2e30910a565d9a0}\label{struct_s_d_m_m_c___c_a_r_d___t_a3e61ef8fe006f0d7f2e30910a565d9a0}} 
+\index{S\+D\+M\+M\+C\+\_\+\+C\+A\+R\+D\+\_\+T@{S\+D\+M\+M\+C\+\_\+\+C\+A\+R\+D\+\_\+T}!cid@{cid}}
+\index{cid@{cid}!S\+D\+M\+M\+C\+\_\+\+C\+A\+R\+D\+\_\+T@{S\+D\+M\+M\+C\+\_\+\+C\+A\+R\+D\+\_\+T}}
+\subsubsection{\texorpdfstring{cid}{cid}}
+{\footnotesize\ttfamily uint32\+\_\+t S\+D\+M\+M\+C\+\_\+\+C\+A\+R\+D\+\_\+\+T\+::cid\mbox{[}4\mbox{]}}
+
+C\+ID of acquired card 
+
+Definition at line 195 of file sdmmc.\+h.
+
+\mbox{\Hypertarget{struct_s_d_m_m_c___c_a_r_d___t_abedfed1bfea3d043b5e8fda33b4c7480}\label{struct_s_d_m_m_c___c_a_r_d___t_abedfed1bfea3d043b5e8fda33b4c7480}} 
+\index{S\+D\+M\+M\+C\+\_\+\+C\+A\+R\+D\+\_\+T@{S\+D\+M\+M\+C\+\_\+\+C\+A\+R\+D\+\_\+T}!clk\+\_\+rate@{clk\+\_\+rate}}
+\index{clk\+\_\+rate@{clk\+\_\+rate}!S\+D\+M\+M\+C\+\_\+\+C\+A\+R\+D\+\_\+T@{S\+D\+M\+M\+C\+\_\+\+C\+A\+R\+D\+\_\+T}}
+\subsubsection{\texorpdfstring{clk\+\_\+rate}{clk\_rate}}
+{\footnotesize\ttfamily uint32\+\_\+t S\+D\+M\+M\+C\+\_\+\+C\+A\+R\+D\+\_\+\+T\+::clk\+\_\+rate}
+
+
+
+Definition at line 204 of file sdmmc.\+h.
+
+\mbox{\Hypertarget{struct_s_d_m_m_c___c_a_r_d___t_afd44604509f49e67bdb3a5cf5db54eea}\label{struct_s_d_m_m_c___c_a_r_d___t_afd44604509f49e67bdb3a5cf5db54eea}} 
+\index{S\+D\+M\+M\+C\+\_\+\+C\+A\+R\+D\+\_\+T@{S\+D\+M\+M\+C\+\_\+\+C\+A\+R\+D\+\_\+T}!csd@{csd}}
+\index{csd@{csd}!S\+D\+M\+M\+C\+\_\+\+C\+A\+R\+D\+\_\+T@{S\+D\+M\+M\+C\+\_\+\+C\+A\+R\+D\+\_\+T}}
+\subsubsection{\texorpdfstring{csd}{csd}}
+{\footnotesize\ttfamily uint32\+\_\+t S\+D\+M\+M\+C\+\_\+\+C\+A\+R\+D\+\_\+\+T\+::csd\mbox{[}4\mbox{]}}
+
+C\+SD of acquired card 
+
+Definition at line 196 of file sdmmc.\+h.
+
+\mbox{\Hypertarget{struct_s_d_m_m_c___c_a_r_d___t_a51ceefe761fde7515e078e14a112acd3}\label{struct_s_d_m_m_c___c_a_r_d___t_a51ceefe761fde7515e078e14a112acd3}} 
+\index{S\+D\+M\+M\+C\+\_\+\+C\+A\+R\+D\+\_\+T@{S\+D\+M\+M\+C\+\_\+\+C\+A\+R\+D\+\_\+T}!device\+\_\+size@{device\+\_\+size}}
+\index{device\+\_\+size@{device\+\_\+size}!S\+D\+M\+M\+C\+\_\+\+C\+A\+R\+D\+\_\+T@{S\+D\+M\+M\+C\+\_\+\+C\+A\+R\+D\+\_\+T}}
+\subsubsection{\texorpdfstring{device\+\_\+size}{device\_size}}
+{\footnotesize\ttfamily uint64\+\_\+t S\+D\+M\+M\+C\+\_\+\+C\+A\+R\+D\+\_\+\+T\+::device\+\_\+size}
+
+Device Size 
+
+Definition at line 202 of file sdmmc.\+h.
+
+\mbox{\Hypertarget{struct_s_d_m_m_c___c_a_r_d___t_a0124bd3f8f2cfc307a229f98a0852874}\label{struct_s_d_m_m_c___c_a_r_d___t_a0124bd3f8f2cfc307a229f98a0852874}} 
+\index{S\+D\+M\+M\+C\+\_\+\+C\+A\+R\+D\+\_\+T@{S\+D\+M\+M\+C\+\_\+\+C\+A\+R\+D\+\_\+T}!evsetup\+\_\+cb@{evsetup\+\_\+cb}}
+\index{evsetup\+\_\+cb@{evsetup\+\_\+cb}!S\+D\+M\+M\+C\+\_\+\+C\+A\+R\+D\+\_\+T@{S\+D\+M\+M\+C\+\_\+\+C\+A\+R\+D\+\_\+T}}
+\subsubsection{\texorpdfstring{evsetup\+\_\+cb}{evsetup\_cb}}
+{\footnotesize\ttfamily \hyperlink{group___c_h_i_p___s_d_m_m_c___definitions_gad8f6b6485a8de8a55a8cdee88788a64c}{S\+D\+M\+M\+C\+\_\+\+E\+V\+S\+E\+T\+U\+P\+\_\+\+F\+U\+N\+C\+\_\+T} S\+D\+M\+M\+C\+\_\+\+C\+A\+R\+D\+\_\+\+T\+::evsetup\+\_\+cb}
+
+Clock rate Function to setup event information 
+
+Definition at line 205 of file sdmmc.\+h.
+
+\mbox{\Hypertarget{struct_s_d_m_m_c___c_a_r_d___t_abce2d2420c62821bc583f3a89744ddf4}\label{struct_s_d_m_m_c___c_a_r_d___t_abce2d2420c62821bc583f3a89744ddf4}} 
+\index{S\+D\+M\+M\+C\+\_\+\+C\+A\+R\+D\+\_\+T@{S\+D\+M\+M\+C\+\_\+\+C\+A\+R\+D\+\_\+T}!ext\+\_\+csd@{ext\+\_\+csd}}
+\index{ext\+\_\+csd@{ext\+\_\+csd}!S\+D\+M\+M\+C\+\_\+\+C\+A\+R\+D\+\_\+T@{S\+D\+M\+M\+C\+\_\+\+C\+A\+R\+D\+\_\+T}}
+\subsubsection{\texorpdfstring{ext\+\_\+csd}{ext\_csd}}
+{\footnotesize\ttfamily uint32\+\_\+t S\+D\+M\+M\+C\+\_\+\+C\+A\+R\+D\+\_\+\+T\+::ext\+\_\+csd\mbox{[}512/4\mbox{]}}
+
+Ext C\+SD 
+
+Definition at line 197 of file sdmmc.\+h.
+
+\mbox{\Hypertarget{struct_s_d_m_m_c___c_a_r_d___t_a10bb6418c66c7794c18a890b031f1fa2}\label{struct_s_d_m_m_c___c_a_r_d___t_a10bb6418c66c7794c18a890b031f1fa2}} 
+\index{S\+D\+M\+M\+C\+\_\+\+C\+A\+R\+D\+\_\+T@{S\+D\+M\+M\+C\+\_\+\+C\+A\+R\+D\+\_\+T}!msdelay\+\_\+func@{msdelay\+\_\+func}}
+\index{msdelay\+\_\+func@{msdelay\+\_\+func}!S\+D\+M\+M\+C\+\_\+\+C\+A\+R\+D\+\_\+T@{S\+D\+M\+M\+C\+\_\+\+C\+A\+R\+D\+\_\+T}}
+\subsubsection{\texorpdfstring{msdelay\+\_\+func}{msdelay\_func}}
+{\footnotesize\ttfamily \hyperlink{group___c_h_i_p___s_d_m_m_c___definitions_ga910711513843f370e9b251ec60b245e7}{S\+D\+M\+M\+C\+\_\+\+M\+S\+D\+E\+L\+A\+Y\+\_\+\+F\+U\+N\+C\+\_\+T} S\+D\+M\+M\+C\+\_\+\+C\+A\+R\+D\+\_\+\+T\+::msdelay\+\_\+func}
+
+Function to sleep in ms 
+
+Definition at line 207 of file sdmmc.\+h.
+
+\mbox{\Hypertarget{struct_s_d_m_m_c___c_a_r_d___t_a3fbcc47f5e1dca1ed9b824dcb9f788ac}\label{struct_s_d_m_m_c___c_a_r_d___t_a3fbcc47f5e1dca1ed9b824dcb9f788ac}} 
+\index{S\+D\+M\+M\+C\+\_\+\+C\+A\+R\+D\+\_\+T@{S\+D\+M\+M\+C\+\_\+\+C\+A\+R\+D\+\_\+T}!rca@{rca}}
+\index{rca@{rca}!S\+D\+M\+M\+C\+\_\+\+C\+A\+R\+D\+\_\+T@{S\+D\+M\+M\+C\+\_\+\+C\+A\+R\+D\+\_\+T}}
+\subsubsection{\texorpdfstring{rca}{rca}}
+{\footnotesize\ttfamily uint16\+\_\+t S\+D\+M\+M\+C\+\_\+\+C\+A\+R\+D\+\_\+\+T\+::rca}
+
+Relative address assigned to card 
+
+Definition at line 199 of file sdmmc.\+h.
+
+\mbox{\Hypertarget{struct_s_d_m_m_c___c_a_r_d___t_a35685aedeea24641fb1cb80a0a99314f}\label{struct_s_d_m_m_c___c_a_r_d___t_a35685aedeea24641fb1cb80a0a99314f}} 
+\index{S\+D\+M\+M\+C\+\_\+\+C\+A\+R\+D\+\_\+T@{S\+D\+M\+M\+C\+\_\+\+C\+A\+R\+D\+\_\+T}!response@{response}}
+\index{response@{response}!S\+D\+M\+M\+C\+\_\+\+C\+A\+R\+D\+\_\+T@{S\+D\+M\+M\+C\+\_\+\+C\+A\+R\+D\+\_\+T}}
+\subsubsection{\texorpdfstring{response}{response}}
+{\footnotesize\ttfamily uint32\+\_\+t S\+D\+M\+M\+C\+\_\+\+C\+A\+R\+D\+\_\+\+T\+::response\mbox{[}4\mbox{]}}
+
+Most recent response 
+
+Definition at line 194 of file sdmmc.\+h.
+
+\mbox{\Hypertarget{struct_s_d_m_m_c___c_a_r_d___t_a09a93494390a261b42e4b3d733ad3a05}\label{struct_s_d_m_m_c___c_a_r_d___t_a09a93494390a261b42e4b3d733ad3a05}} 
+\index{S\+D\+M\+M\+C\+\_\+\+C\+A\+R\+D\+\_\+T@{S\+D\+M\+M\+C\+\_\+\+C\+A\+R\+D\+\_\+T}!speed@{speed}}
+\index{speed@{speed}!S\+D\+M\+M\+C\+\_\+\+C\+A\+R\+D\+\_\+T@{S\+D\+M\+M\+C\+\_\+\+C\+A\+R\+D\+\_\+T}}
+\subsubsection{\texorpdfstring{speed}{speed}}
+{\footnotesize\ttfamily uint32\+\_\+t S\+D\+M\+M\+C\+\_\+\+C\+A\+R\+D\+\_\+\+T\+::speed}
+
+Speed 
+
+Definition at line 200 of file sdmmc.\+h.
+
+\mbox{\Hypertarget{struct_s_d_m_m_c___c_a_r_d___t_a2ab1facd01f231799381db807f204de2}\label{struct_s_d_m_m_c___c_a_r_d___t_a2ab1facd01f231799381db807f204de2}} 
+\index{S\+D\+M\+M\+C\+\_\+\+C\+A\+R\+D\+\_\+T@{S\+D\+M\+M\+C\+\_\+\+C\+A\+R\+D\+\_\+T}!waitfunc\+\_\+cb@{waitfunc\+\_\+cb}}
+\index{waitfunc\+\_\+cb@{waitfunc\+\_\+cb}!S\+D\+M\+M\+C\+\_\+\+C\+A\+R\+D\+\_\+T@{S\+D\+M\+M\+C\+\_\+\+C\+A\+R\+D\+\_\+T}}
+\subsubsection{\texorpdfstring{waitfunc\+\_\+cb}{waitfunc\_cb}}
+{\footnotesize\ttfamily \hyperlink{group___c_h_i_p___s_d_m_m_c___definitions_ga3379c3596d02e20e0531dc1287df505f}{S\+D\+M\+M\+C\+\_\+\+E\+V\+W\+A\+I\+T\+\_\+\+F\+U\+N\+C\+\_\+T} S\+D\+M\+M\+C\+\_\+\+C\+A\+R\+D\+\_\+\+T\+::waitfunc\+\_\+cb}
+
+Function to wait for event 
+
+Definition at line 206 of file sdmmc.\+h.
+
+
+
+The documentation for this struct was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+muju/externals/base/soc/lpc43xx/lpc\+\_\+chip\+\_\+43xx/inc/\hyperlink{sdmmc_8h}{sdmmc.\+h}\end{DoxyCompactItemize}

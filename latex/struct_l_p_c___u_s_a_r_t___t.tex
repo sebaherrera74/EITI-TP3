@@ -1,0 +1,384 @@
+\hypertarget{struct_l_p_c___u_s_a_r_t___t}{}\section{L\+P\+C\+\_\+\+U\+S\+A\+R\+T\+\_\+T Struct Reference}
+\label{struct_l_p_c___u_s_a_r_t___t}\index{L\+P\+C\+\_\+\+U\+S\+A\+R\+T\+\_\+T@{L\+P\+C\+\_\+\+U\+S\+A\+R\+T\+\_\+T}}
+
+
+U\+S\+A\+RT register block structure.  
+
+
+
+
+{\ttfamily \#include $<$uart\+\_\+18xx\+\_\+43xx.\+h$>$}
+
+\subsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\begin{tabbing}
+xx\=xx\=xx\=xx\=xx\=xx\=xx\=xx\=xx\=\kill
+union \{\\
+\>\hyperlink{core__sc300_8h_aec43007d9998a0a0e01faede4133d6be}{\_\_IO} uint32\_t \hyperlink{struct_l_p_c___u_s_a_r_t___t_ac2e91646e820b1527747154d82778e48}{DLL}\\
+\>\hyperlink{core__sc300_8h_a7e25d9380f9ef903923964322e71f2f6}{\_\_O} uint32\_t \hyperlink{struct_l_p_c___u_s_a_r_t___t_ae93392fb8e6c40f5b340ec0cf145ee1b}{THR}\\
+\>\hyperlink{core__sc300_8h_af63697ed9952cc71e1225efe205f6cd3}{\_\_I} uint32\_t \hyperlink{struct_l_p_c___u_s_a_r_t___t_a39191d418ae7de55f62202f25fd29083}{RBR}\\
+\}; \\
+
+\end{tabbing}\item 
+\begin{tabbing}
+xx\=xx\=xx\=xx\=xx\=xx\=xx\=xx\=xx\=\kill
+union \{\\
+\>\hyperlink{core__sc300_8h_aec43007d9998a0a0e01faede4133d6be}{\_\_IO} uint32\_t \hyperlink{struct_l_p_c___u_s_a_r_t___t_a832413236bebfb6e6495c1055b9a85ae}{IER}\\
+\>\hyperlink{core__sc300_8h_aec43007d9998a0a0e01faede4133d6be}{\_\_IO} uint32\_t \hyperlink{struct_l_p_c___u_s_a_r_t___t_a3e9b4b467fbbf43e57e261fd826e5e97}{DLM}\\
+\}; \\
+
+\end{tabbing}\item 
+\begin{tabbing}
+xx\=xx\=xx\=xx\=xx\=xx\=xx\=xx\=xx\=\kill
+union \{\\
+\>\hyperlink{core__sc300_8h_a7e25d9380f9ef903923964322e71f2f6}{\_\_O} uint32\_t \hyperlink{struct_l_p_c___u_s_a_r_t___t_a01d439a681b9a7a486ad75c91a2f91c8}{FCR}\\
+\>\hyperlink{core__sc300_8h_af63697ed9952cc71e1225efe205f6cd3}{\_\_I} uint32\_t \hyperlink{struct_l_p_c___u_s_a_r_t___t_a470cdb18abc446a9768f404314c4a556}{IIR}\\
+\}; \\
+
+\end{tabbing}\item 
+\hyperlink{core__sc300_8h_aec43007d9998a0a0e01faede4133d6be}{\+\_\+\+\_\+\+IO} uint32\+\_\+t \hyperlink{struct_l_p_c___u_s_a_r_t___t_aee4d95152fdd5222436368295e4307c2}{L\+CR}
+\item 
+\hyperlink{core__sc300_8h_aec43007d9998a0a0e01faede4133d6be}{\+\_\+\+\_\+\+IO} uint32\+\_\+t \hyperlink{struct_l_p_c___u_s_a_r_t___t_a3fca7faf2cc9ec38e5a8566538cadf48}{M\+CR}
+\item 
+\hyperlink{core__sc300_8h_af63697ed9952cc71e1225efe205f6cd3}{\+\_\+\+\_\+I} uint32\+\_\+t \hyperlink{struct_l_p_c___u_s_a_r_t___t_a71f711aab2dc24f42d183abd449ce829}{L\+SR}
+\item 
+\hyperlink{core__sc300_8h_af63697ed9952cc71e1225efe205f6cd3}{\+\_\+\+\_\+I} uint32\+\_\+t \hyperlink{struct_l_p_c___u_s_a_r_t___t_ac4372e0a659dc1f4b5503a8825ed1971}{M\+SR}
+\item 
+\hyperlink{core__sc300_8h_aec43007d9998a0a0e01faede4133d6be}{\+\_\+\+\_\+\+IO} uint32\+\_\+t \hyperlink{struct_l_p_c___u_s_a_r_t___t_a28417e4b3d19fcbb6c6ef116376ed58b}{S\+CR}
+\item 
+\hyperlink{core__sc300_8h_aec43007d9998a0a0e01faede4133d6be}{\+\_\+\+\_\+\+IO} uint32\+\_\+t \hyperlink{struct_l_p_c___u_s_a_r_t___t_a443bb067899c7f269dc903a26522f44b}{A\+CR}
+\item 
+\hyperlink{core__sc300_8h_aec43007d9998a0a0e01faede4133d6be}{\+\_\+\+\_\+\+IO} uint32\+\_\+t \hyperlink{struct_l_p_c___u_s_a_r_t___t_a85c78774fcee5d86f82a4bd497db2b00}{I\+CR}
+\item 
+\hyperlink{core__sc300_8h_aec43007d9998a0a0e01faede4133d6be}{\+\_\+\+\_\+\+IO} uint32\+\_\+t \hyperlink{struct_l_p_c___u_s_a_r_t___t_ae35ac03aeeafd5a54f2c2c675b6dca4f}{F\+DR}
+\item 
+\hyperlink{core__sc300_8h_aec43007d9998a0a0e01faede4133d6be}{\+\_\+\+\_\+\+IO} uint32\+\_\+t \hyperlink{struct_l_p_c___u_s_a_r_t___t_abd99c522dd0ccec4b7c7b1c08cc3c1fb}{O\+SR}
+\item 
+\hyperlink{core__sc300_8h_aec43007d9998a0a0e01faede4133d6be}{\+\_\+\+\_\+\+IO} uint32\+\_\+t \hyperlink{struct_l_p_c___u_s_a_r_t___t_afa3989925f4b5c3edd74531748ccccb2}{T\+E\+R1}
+\item 
+uint32\+\_\+t \hyperlink{struct_l_p_c___u_s_a_r_t___t_af3789f39fe00cc53f3055507eb9eb52c}{R\+E\+S\+E\+R\+V\+E\+D0} \mbox{[}3\mbox{]}
+\item 
+\hyperlink{core__sc300_8h_aec43007d9998a0a0e01faede4133d6be}{\+\_\+\+\_\+\+IO} uint32\+\_\+t \hyperlink{struct_l_p_c___u_s_a_r_t___t_aedc3d854bf59c2f0999a8ae22e3e7bb4}{H\+D\+EN}
+\item 
+\hyperlink{core__sc300_8h_af63697ed9952cc71e1225efe205f6cd3}{\+\_\+\+\_\+I} uint32\+\_\+t \hyperlink{struct_l_p_c___u_s_a_r_t___t_a56453758b5fec0a80c808f746e3db741}{R\+E\+S\+E\+R\+V\+E\+D1} \mbox{[}1\mbox{]}
+\item 
+\hyperlink{core__sc300_8h_aec43007d9998a0a0e01faede4133d6be}{\+\_\+\+\_\+\+IO} uint32\+\_\+t \hyperlink{struct_l_p_c___u_s_a_r_t___t_aa8ad1461441995d0b618ff7f5b0e42be}{S\+C\+I\+C\+T\+RL}
+\item 
+\hyperlink{core__sc300_8h_aec43007d9998a0a0e01faede4133d6be}{\+\_\+\+\_\+\+IO} uint32\+\_\+t \hyperlink{struct_l_p_c___u_s_a_r_t___t_a6a7e49f50f49efbe8e11befcf6e7d6b4}{R\+S485\+C\+T\+RL}
+\item 
+\hyperlink{core__sc300_8h_aec43007d9998a0a0e01faede4133d6be}{\+\_\+\+\_\+\+IO} uint32\+\_\+t \hyperlink{struct_l_p_c___u_s_a_r_t___t_adfc2810503e8eb5f4d9bc4622500295e}{R\+S485\+A\+D\+R\+M\+A\+T\+CH}
+\item 
+\hyperlink{core__sc300_8h_aec43007d9998a0a0e01faede4133d6be}{\+\_\+\+\_\+\+IO} uint32\+\_\+t \hyperlink{struct_l_p_c___u_s_a_r_t___t_a6e9fc8109a269820386a36c81dc943ab}{R\+S485\+D\+LY}
+\item 
+\begin{tabbing}
+xx\=xx\=xx\=xx\=xx\=xx\=xx\=xx\=xx\=\kill
+union \{\\
+\>\hyperlink{core__sc300_8h_aec43007d9998a0a0e01faede4133d6be}{\_\_IO} uint32\_t \hyperlink{struct_l_p_c___u_s_a_r_t___t_a799433e27ab7a1b61ba215ff1766a3e0}{SYNCCTRL}\\
+\>\hyperlink{core__sc300_8h_af63697ed9952cc71e1225efe205f6cd3}{\_\_I} uint32\_t \hyperlink{struct_l_p_c___u_s_a_r_t___t_a1e5a80261f84a375eda3b575bea8074a}{FIFOLVL}\\
+\}; \\
+
+\end{tabbing}\item 
+\hyperlink{core__sc300_8h_aec43007d9998a0a0e01faede4133d6be}{\+\_\+\+\_\+\+IO} uint32\+\_\+t \hyperlink{struct_l_p_c___u_s_a_r_t___t_afc422e0333356dc62b23d404bfdbd1de}{T\+E\+R2}
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+U\+S\+A\+RT register block structure. 
+
+Definition at line 49 of file uart\+\_\+18xx\+\_\+43xx.\+h.
+
+
+
+\subsection{Member Data Documentation}
+\mbox{\Hypertarget{struct_l_p_c___u_s_a_r_t___t_a42d72c6ffc8cf715cc2e5b56119da0c4}\label{struct_l_p_c___u_s_a_r_t___t_a42d72c6ffc8cf715cc2e5b56119da0c4}} 
+\subsubsection{\texorpdfstring{"@100}{@100}}
+{\footnotesize\ttfamily union \{ ... \} }
+
+\mbox{\Hypertarget{struct_l_p_c___u_s_a_r_t___t_acc0fef84d5db12519e1b0bce5dd4a4ee}\label{struct_l_p_c___u_s_a_r_t___t_acc0fef84d5db12519e1b0bce5dd4a4ee}} 
+\subsubsection{\texorpdfstring{"@102}{@102}}
+{\footnotesize\ttfamily union \{ ... \} }
+
+\mbox{\Hypertarget{struct_l_p_c___u_s_a_r_t___t_ab5e184b063dc5bf88dfafbdd8a7590a1}\label{struct_l_p_c___u_s_a_r_t___t_ab5e184b063dc5bf88dfafbdd8a7590a1}} 
+\subsubsection{\texorpdfstring{"@96}{@96}}
+{\footnotesize\ttfamily union \{ ... \} }
+
+$<$ U\+S\+A\+R\+Tn Structure \mbox{\Hypertarget{struct_l_p_c___u_s_a_r_t___t_a99f0a7fe6ecce9ffd7287570957b90f9}\label{struct_l_p_c___u_s_a_r_t___t_a99f0a7fe6ecce9ffd7287570957b90f9}} 
+\subsubsection{\texorpdfstring{"@98}{@98}}
+{\footnotesize\ttfamily union \{ ... \} }
+
+\mbox{\Hypertarget{struct_l_p_c___u_s_a_r_t___t_a443bb067899c7f269dc903a26522f44b}\label{struct_l_p_c___u_s_a_r_t___t_a443bb067899c7f269dc903a26522f44b}} 
+\index{L\+P\+C\+\_\+\+U\+S\+A\+R\+T\+\_\+T@{L\+P\+C\+\_\+\+U\+S\+A\+R\+T\+\_\+T}!A\+CR@{A\+CR}}
+\index{A\+CR@{A\+CR}!L\+P\+C\+\_\+\+U\+S\+A\+R\+T\+\_\+T@{L\+P\+C\+\_\+\+U\+S\+A\+R\+T\+\_\+T}}
+\subsubsection{\texorpdfstring{A\+CR}{ACR}}
+{\footnotesize\ttfamily \hyperlink{core__sc300_8h_aec43007d9998a0a0e01faede4133d6be}{\+\_\+\+\_\+\+IO} uint32\+\_\+t L\+P\+C\+\_\+\+U\+S\+A\+R\+T\+\_\+\+T\+::\+A\+CR}
+
+Auto-\/baud Control Register. Contains controls for the auto-\/baud feature. 
+
+Definition at line 72 of file uart\+\_\+18xx\+\_\+43xx.\+h.
+
+\mbox{\Hypertarget{struct_l_p_c___u_s_a_r_t___t_ac2e91646e820b1527747154d82778e48}\label{struct_l_p_c___u_s_a_r_t___t_ac2e91646e820b1527747154d82778e48}} 
+\index{L\+P\+C\+\_\+\+U\+S\+A\+R\+T\+\_\+T@{L\+P\+C\+\_\+\+U\+S\+A\+R\+T\+\_\+T}!D\+LL@{D\+LL}}
+\index{D\+LL@{D\+LL}!L\+P\+C\+\_\+\+U\+S\+A\+R\+T\+\_\+T@{L\+P\+C\+\_\+\+U\+S\+A\+R\+T\+\_\+T}}
+\subsubsection{\texorpdfstring{D\+LL}{DLL}}
+{\footnotesize\ttfamily \hyperlink{core__sc300_8h_aec43007d9998a0a0e01faede4133d6be}{\+\_\+\+\_\+\+IO} uint32\+\_\+t L\+P\+C\+\_\+\+U\+S\+A\+R\+T\+\_\+\+T\+::\+D\+LL}
+
+Divisor Latch L\+SB. Least significant byte of the baud rate divisor value. The full divisor is used to generate a baud rate from the fractional rate divider (D\+L\+AB = 1). 
+
+Definition at line 52 of file uart\+\_\+18xx\+\_\+43xx.\+h.
+
+\mbox{\Hypertarget{struct_l_p_c___u_s_a_r_t___t_a3e9b4b467fbbf43e57e261fd826e5e97}\label{struct_l_p_c___u_s_a_r_t___t_a3e9b4b467fbbf43e57e261fd826e5e97}} 
+\index{L\+P\+C\+\_\+\+U\+S\+A\+R\+T\+\_\+T@{L\+P\+C\+\_\+\+U\+S\+A\+R\+T\+\_\+T}!D\+LM@{D\+LM}}
+\index{D\+LM@{D\+LM}!L\+P\+C\+\_\+\+U\+S\+A\+R\+T\+\_\+T@{L\+P\+C\+\_\+\+U\+S\+A\+R\+T\+\_\+T}}
+\subsubsection{\texorpdfstring{D\+LM}{DLM}}
+{\footnotesize\ttfamily \hyperlink{core__sc300_8h_aec43007d9998a0a0e01faede4133d6be}{\+\_\+\+\_\+\+IO} uint32\+\_\+t L\+P\+C\+\_\+\+U\+S\+A\+R\+T\+\_\+\+T\+::\+D\+LM}
+
+Divisor Latch M\+SB. Most significant byte of the baud rate divisor value. The full divisor is used to generate a baud rate from the fractional rate divider (D\+L\+AB = 1). 
+
+Definition at line 59 of file uart\+\_\+18xx\+\_\+43xx.\+h.
+
+\mbox{\Hypertarget{struct_l_p_c___u_s_a_r_t___t_a01d439a681b9a7a486ad75c91a2f91c8}\label{struct_l_p_c___u_s_a_r_t___t_a01d439a681b9a7a486ad75c91a2f91c8}} 
+\index{L\+P\+C\+\_\+\+U\+S\+A\+R\+T\+\_\+T@{L\+P\+C\+\_\+\+U\+S\+A\+R\+T\+\_\+T}!F\+CR@{F\+CR}}
+\index{F\+CR@{F\+CR}!L\+P\+C\+\_\+\+U\+S\+A\+R\+T\+\_\+T@{L\+P\+C\+\_\+\+U\+S\+A\+R\+T\+\_\+T}}
+\subsubsection{\texorpdfstring{F\+CR}{FCR}}
+{\footnotesize\ttfamily \hyperlink{core__sc300_8h_a7e25d9380f9ef903923964322e71f2f6}{\+\_\+\+\_\+O} uint32\+\_\+t L\+P\+C\+\_\+\+U\+S\+A\+R\+T\+\_\+\+T\+::\+F\+CR}
+
+F\+I\+FO Control Register. Controls U\+A\+RT F\+I\+FO usage and modes. 
+
+Definition at line 63 of file uart\+\_\+18xx\+\_\+43xx.\+h.
+
+\mbox{\Hypertarget{struct_l_p_c___u_s_a_r_t___t_ae35ac03aeeafd5a54f2c2c675b6dca4f}\label{struct_l_p_c___u_s_a_r_t___t_ae35ac03aeeafd5a54f2c2c675b6dca4f}} 
+\index{L\+P\+C\+\_\+\+U\+S\+A\+R\+T\+\_\+T@{L\+P\+C\+\_\+\+U\+S\+A\+R\+T\+\_\+T}!F\+DR@{F\+DR}}
+\index{F\+DR@{F\+DR}!L\+P\+C\+\_\+\+U\+S\+A\+R\+T\+\_\+T@{L\+P\+C\+\_\+\+U\+S\+A\+R\+T\+\_\+T}}
+\subsubsection{\texorpdfstring{F\+DR}{FDR}}
+{\footnotesize\ttfamily \hyperlink{core__sc300_8h_aec43007d9998a0a0e01faede4133d6be}{\+\_\+\+\_\+\+IO} uint32\+\_\+t L\+P\+C\+\_\+\+U\+S\+A\+R\+T\+\_\+\+T\+::\+F\+DR}
+
+Fractional Divider Register. Generates a clock input for the baud rate divider. 
+
+Definition at line 74 of file uart\+\_\+18xx\+\_\+43xx.\+h.
+
+\mbox{\Hypertarget{struct_l_p_c___u_s_a_r_t___t_a1e5a80261f84a375eda3b575bea8074a}\label{struct_l_p_c___u_s_a_r_t___t_a1e5a80261f84a375eda3b575bea8074a}} 
+\index{L\+P\+C\+\_\+\+U\+S\+A\+R\+T\+\_\+T@{L\+P\+C\+\_\+\+U\+S\+A\+R\+T\+\_\+T}!F\+I\+F\+O\+L\+VL@{F\+I\+F\+O\+L\+VL}}
+\index{F\+I\+F\+O\+L\+VL@{F\+I\+F\+O\+L\+VL}!L\+P\+C\+\_\+\+U\+S\+A\+R\+T\+\_\+T@{L\+P\+C\+\_\+\+U\+S\+A\+R\+T\+\_\+T}}
+\subsubsection{\texorpdfstring{F\+I\+F\+O\+L\+VL}{FIFOLVL}}
+{\footnotesize\ttfamily \hyperlink{core__sc300_8h_af63697ed9952cc71e1225efe205f6cd3}{\+\_\+\+\_\+I} uint32\+\_\+t L\+P\+C\+\_\+\+U\+S\+A\+R\+T\+\_\+\+T\+::\+F\+I\+F\+O\+L\+VL}
+
+F\+I\+FO Level register. Provides the current fill levels of the transmit and receive F\+I\+F\+Os. 
+
+Definition at line 88 of file uart\+\_\+18xx\+\_\+43xx.\+h.
+
+\mbox{\Hypertarget{struct_l_p_c___u_s_a_r_t___t_aedc3d854bf59c2f0999a8ae22e3e7bb4}\label{struct_l_p_c___u_s_a_r_t___t_aedc3d854bf59c2f0999a8ae22e3e7bb4}} 
+\index{L\+P\+C\+\_\+\+U\+S\+A\+R\+T\+\_\+T@{L\+P\+C\+\_\+\+U\+S\+A\+R\+T\+\_\+T}!H\+D\+EN@{H\+D\+EN}}
+\index{H\+D\+EN@{H\+D\+EN}!L\+P\+C\+\_\+\+U\+S\+A\+R\+T\+\_\+T@{L\+P\+C\+\_\+\+U\+S\+A\+R\+T\+\_\+T}}
+\subsubsection{\texorpdfstring{H\+D\+EN}{HDEN}}
+{\footnotesize\ttfamily \hyperlink{core__sc300_8h_aec43007d9998a0a0e01faede4133d6be}{\+\_\+\+\_\+\+IO} uint32\+\_\+t L\+P\+C\+\_\+\+U\+S\+A\+R\+T\+\_\+\+T\+::\+H\+D\+EN}
+
+Half-\/duplex enable Register-\/ only on some U\+A\+R\+Ts 
+
+Definition at line 78 of file uart\+\_\+18xx\+\_\+43xx.\+h.
+
+\mbox{\Hypertarget{struct_l_p_c___u_s_a_r_t___t_a85c78774fcee5d86f82a4bd497db2b00}\label{struct_l_p_c___u_s_a_r_t___t_a85c78774fcee5d86f82a4bd497db2b00}} 
+\index{L\+P\+C\+\_\+\+U\+S\+A\+R\+T\+\_\+T@{L\+P\+C\+\_\+\+U\+S\+A\+R\+T\+\_\+T}!I\+CR@{I\+CR}}
+\index{I\+CR@{I\+CR}!L\+P\+C\+\_\+\+U\+S\+A\+R\+T\+\_\+T@{L\+P\+C\+\_\+\+U\+S\+A\+R\+T\+\_\+T}}
+\subsubsection{\texorpdfstring{I\+CR}{ICR}}
+{\footnotesize\ttfamily \hyperlink{core__sc300_8h_aec43007d9998a0a0e01faede4133d6be}{\+\_\+\+\_\+\+IO} uint32\+\_\+t L\+P\+C\+\_\+\+U\+S\+A\+R\+T\+\_\+\+T\+::\+I\+CR}
+
+Ir\+DA control register (not all U\+A\+R\+TS) 
+
+Definition at line 73 of file uart\+\_\+18xx\+\_\+43xx.\+h.
+
+\mbox{\Hypertarget{struct_l_p_c___u_s_a_r_t___t_a832413236bebfb6e6495c1055b9a85ae}\label{struct_l_p_c___u_s_a_r_t___t_a832413236bebfb6e6495c1055b9a85ae}} 
+\index{L\+P\+C\+\_\+\+U\+S\+A\+R\+T\+\_\+T@{L\+P\+C\+\_\+\+U\+S\+A\+R\+T\+\_\+T}!I\+ER@{I\+ER}}
+\index{I\+ER@{I\+ER}!L\+P\+C\+\_\+\+U\+S\+A\+R\+T\+\_\+T@{L\+P\+C\+\_\+\+U\+S\+A\+R\+T\+\_\+T}}
+\subsubsection{\texorpdfstring{I\+ER}{IER}}
+{\footnotesize\ttfamily \hyperlink{core__sc300_8h_aec43007d9998a0a0e01faede4133d6be}{\+\_\+\+\_\+\+IO} uint32\+\_\+t L\+P\+C\+\_\+\+U\+S\+A\+R\+T\+\_\+\+T\+::\+I\+ER}
+
+Interrupt Enable Register. Contains individual interrupt enable bits for the 7 potential U\+A\+RT interrupts (D\+L\+AB = 0). 
+
+Definition at line 58 of file uart\+\_\+18xx\+\_\+43xx.\+h.
+
+\mbox{\Hypertarget{struct_l_p_c___u_s_a_r_t___t_a470cdb18abc446a9768f404314c4a556}\label{struct_l_p_c___u_s_a_r_t___t_a470cdb18abc446a9768f404314c4a556}} 
+\index{L\+P\+C\+\_\+\+U\+S\+A\+R\+T\+\_\+T@{L\+P\+C\+\_\+\+U\+S\+A\+R\+T\+\_\+T}!I\+IR@{I\+IR}}
+\index{I\+IR@{I\+IR}!L\+P\+C\+\_\+\+U\+S\+A\+R\+T\+\_\+T@{L\+P\+C\+\_\+\+U\+S\+A\+R\+T\+\_\+T}}
+\subsubsection{\texorpdfstring{I\+IR}{IIR}}
+{\footnotesize\ttfamily \hyperlink{core__sc300_8h_af63697ed9952cc71e1225efe205f6cd3}{\+\_\+\+\_\+I} uint32\+\_\+t L\+P\+C\+\_\+\+U\+S\+A\+R\+T\+\_\+\+T\+::\+I\+IR}
+
+Interrupt ID Register. Identifies which interrupt(s) are pending. 
+
+Definition at line 64 of file uart\+\_\+18xx\+\_\+43xx.\+h.
+
+\mbox{\Hypertarget{struct_l_p_c___u_s_a_r_t___t_aee4d95152fdd5222436368295e4307c2}\label{struct_l_p_c___u_s_a_r_t___t_aee4d95152fdd5222436368295e4307c2}} 
+\index{L\+P\+C\+\_\+\+U\+S\+A\+R\+T\+\_\+T@{L\+P\+C\+\_\+\+U\+S\+A\+R\+T\+\_\+T}!L\+CR@{L\+CR}}
+\index{L\+CR@{L\+CR}!L\+P\+C\+\_\+\+U\+S\+A\+R\+T\+\_\+T@{L\+P\+C\+\_\+\+U\+S\+A\+R\+T\+\_\+T}}
+\subsubsection{\texorpdfstring{L\+CR}{LCR}}
+{\footnotesize\ttfamily \hyperlink{core__sc300_8h_aec43007d9998a0a0e01faede4133d6be}{\+\_\+\+\_\+\+IO} uint32\+\_\+t L\+P\+C\+\_\+\+U\+S\+A\+R\+T\+\_\+\+T\+::\+L\+CR}
+
+Line Control Register. Contains controls for frame formatting and break generation. 
+
+Definition at line 67 of file uart\+\_\+18xx\+\_\+43xx.\+h.
+
+\mbox{\Hypertarget{struct_l_p_c___u_s_a_r_t___t_a71f711aab2dc24f42d183abd449ce829}\label{struct_l_p_c___u_s_a_r_t___t_a71f711aab2dc24f42d183abd449ce829}} 
+\index{L\+P\+C\+\_\+\+U\+S\+A\+R\+T\+\_\+T@{L\+P\+C\+\_\+\+U\+S\+A\+R\+T\+\_\+T}!L\+SR@{L\+SR}}
+\index{L\+SR@{L\+SR}!L\+P\+C\+\_\+\+U\+S\+A\+R\+T\+\_\+T@{L\+P\+C\+\_\+\+U\+S\+A\+R\+T\+\_\+T}}
+\subsubsection{\texorpdfstring{L\+SR}{LSR}}
+{\footnotesize\ttfamily \hyperlink{core__sc300_8h_af63697ed9952cc71e1225efe205f6cd3}{\+\_\+\+\_\+I} uint32\+\_\+t L\+P\+C\+\_\+\+U\+S\+A\+R\+T\+\_\+\+T\+::\+L\+SR}
+
+Line Status Register. Contains flags for transmit and receive status, including line errors. 
+
+Definition at line 69 of file uart\+\_\+18xx\+\_\+43xx.\+h.
+
+\mbox{\Hypertarget{struct_l_p_c___u_s_a_r_t___t_a3fca7faf2cc9ec38e5a8566538cadf48}\label{struct_l_p_c___u_s_a_r_t___t_a3fca7faf2cc9ec38e5a8566538cadf48}} 
+\index{L\+P\+C\+\_\+\+U\+S\+A\+R\+T\+\_\+T@{L\+P\+C\+\_\+\+U\+S\+A\+R\+T\+\_\+T}!M\+CR@{M\+CR}}
+\index{M\+CR@{M\+CR}!L\+P\+C\+\_\+\+U\+S\+A\+R\+T\+\_\+T@{L\+P\+C\+\_\+\+U\+S\+A\+R\+T\+\_\+T}}
+\subsubsection{\texorpdfstring{M\+CR}{MCR}}
+{\footnotesize\ttfamily \hyperlink{core__sc300_8h_aec43007d9998a0a0e01faede4133d6be}{\+\_\+\+\_\+\+IO} uint32\+\_\+t L\+P\+C\+\_\+\+U\+S\+A\+R\+T\+\_\+\+T\+::\+M\+CR}
+
+Modem Control Register. Only present on U\+S\+A\+RT ports with full modem support. 
+
+Definition at line 68 of file uart\+\_\+18xx\+\_\+43xx.\+h.
+
+\mbox{\Hypertarget{struct_l_p_c___u_s_a_r_t___t_ac4372e0a659dc1f4b5503a8825ed1971}\label{struct_l_p_c___u_s_a_r_t___t_ac4372e0a659dc1f4b5503a8825ed1971}} 
+\index{L\+P\+C\+\_\+\+U\+S\+A\+R\+T\+\_\+T@{L\+P\+C\+\_\+\+U\+S\+A\+R\+T\+\_\+T}!M\+SR@{M\+SR}}
+\index{M\+SR@{M\+SR}!L\+P\+C\+\_\+\+U\+S\+A\+R\+T\+\_\+T@{L\+P\+C\+\_\+\+U\+S\+A\+R\+T\+\_\+T}}
+\subsubsection{\texorpdfstring{M\+SR}{MSR}}
+{\footnotesize\ttfamily \hyperlink{core__sc300_8h_af63697ed9952cc71e1225efe205f6cd3}{\+\_\+\+\_\+I} uint32\+\_\+t L\+P\+C\+\_\+\+U\+S\+A\+R\+T\+\_\+\+T\+::\+M\+SR}
+
+Modem Status Register. Only present on U\+S\+A\+RT ports with full modem support. 
+
+Definition at line 70 of file uart\+\_\+18xx\+\_\+43xx.\+h.
+
+\mbox{\Hypertarget{struct_l_p_c___u_s_a_r_t___t_abd99c522dd0ccec4b7c7b1c08cc3c1fb}\label{struct_l_p_c___u_s_a_r_t___t_abd99c522dd0ccec4b7c7b1c08cc3c1fb}} 
+\index{L\+P\+C\+\_\+\+U\+S\+A\+R\+T\+\_\+T@{L\+P\+C\+\_\+\+U\+S\+A\+R\+T\+\_\+T}!O\+SR@{O\+SR}}
+\index{O\+SR@{O\+SR}!L\+P\+C\+\_\+\+U\+S\+A\+R\+T\+\_\+T@{L\+P\+C\+\_\+\+U\+S\+A\+R\+T\+\_\+T}}
+\subsubsection{\texorpdfstring{O\+SR}{OSR}}
+{\footnotesize\ttfamily \hyperlink{core__sc300_8h_aec43007d9998a0a0e01faede4133d6be}{\+\_\+\+\_\+\+IO} uint32\+\_\+t L\+P\+C\+\_\+\+U\+S\+A\+R\+T\+\_\+\+T\+::\+O\+SR}
+
+Oversampling Register. Controls the degree of oversampling during each bit time. Only on some U\+A\+R\+TS. 
+
+Definition at line 75 of file uart\+\_\+18xx\+\_\+43xx.\+h.
+
+\mbox{\Hypertarget{struct_l_p_c___u_s_a_r_t___t_a39191d418ae7de55f62202f25fd29083}\label{struct_l_p_c___u_s_a_r_t___t_a39191d418ae7de55f62202f25fd29083}} 
+\index{L\+P\+C\+\_\+\+U\+S\+A\+R\+T\+\_\+T@{L\+P\+C\+\_\+\+U\+S\+A\+R\+T\+\_\+T}!R\+BR@{R\+BR}}
+\index{R\+BR@{R\+BR}!L\+P\+C\+\_\+\+U\+S\+A\+R\+T\+\_\+T@{L\+P\+C\+\_\+\+U\+S\+A\+R\+T\+\_\+T}}
+\subsubsection{\texorpdfstring{R\+BR}{RBR}}
+{\footnotesize\ttfamily \hyperlink{core__sc300_8h_af63697ed9952cc71e1225efe205f6cd3}{\+\_\+\+\_\+I} uint32\+\_\+t L\+P\+C\+\_\+\+U\+S\+A\+R\+T\+\_\+\+T\+::\+R\+BR}
+
+Receiver Buffer Register. Contains the next received character to be read (D\+L\+AB = 0). 
+
+Definition at line 54 of file uart\+\_\+18xx\+\_\+43xx.\+h.
+
+\mbox{\Hypertarget{struct_l_p_c___u_s_a_r_t___t_af3789f39fe00cc53f3055507eb9eb52c}\label{struct_l_p_c___u_s_a_r_t___t_af3789f39fe00cc53f3055507eb9eb52c}} 
+\index{L\+P\+C\+\_\+\+U\+S\+A\+R\+T\+\_\+T@{L\+P\+C\+\_\+\+U\+S\+A\+R\+T\+\_\+T}!R\+E\+S\+E\+R\+V\+E\+D0@{R\+E\+S\+E\+R\+V\+E\+D0}}
+\index{R\+E\+S\+E\+R\+V\+E\+D0@{R\+E\+S\+E\+R\+V\+E\+D0}!L\+P\+C\+\_\+\+U\+S\+A\+R\+T\+\_\+T@{L\+P\+C\+\_\+\+U\+S\+A\+R\+T\+\_\+T}}
+\subsubsection{\texorpdfstring{R\+E\+S\+E\+R\+V\+E\+D0}{RESERVED0}}
+{\footnotesize\ttfamily uint32\+\_\+t L\+P\+C\+\_\+\+U\+S\+A\+R\+T\+\_\+\+T\+::\+R\+E\+S\+E\+R\+V\+E\+D0\mbox{[}3\mbox{]}}
+
+
+
+Definition at line 77 of file uart\+\_\+18xx\+\_\+43xx.\+h.
+
+\mbox{\Hypertarget{struct_l_p_c___u_s_a_r_t___t_a56453758b5fec0a80c808f746e3db741}\label{struct_l_p_c___u_s_a_r_t___t_a56453758b5fec0a80c808f746e3db741}} 
+\index{L\+P\+C\+\_\+\+U\+S\+A\+R\+T\+\_\+T@{L\+P\+C\+\_\+\+U\+S\+A\+R\+T\+\_\+T}!R\+E\+S\+E\+R\+V\+E\+D1@{R\+E\+S\+E\+R\+V\+E\+D1}}
+\index{R\+E\+S\+E\+R\+V\+E\+D1@{R\+E\+S\+E\+R\+V\+E\+D1}!L\+P\+C\+\_\+\+U\+S\+A\+R\+T\+\_\+T@{L\+P\+C\+\_\+\+U\+S\+A\+R\+T\+\_\+T}}
+\subsubsection{\texorpdfstring{R\+E\+S\+E\+R\+V\+E\+D1}{RESERVED1}}
+{\footnotesize\ttfamily \hyperlink{core__sc300_8h_af63697ed9952cc71e1225efe205f6cd3}{\+\_\+\+\_\+I} uint32\+\_\+t L\+P\+C\+\_\+\+U\+S\+A\+R\+T\+\_\+\+T\+::\+R\+E\+S\+E\+R\+V\+E\+D1\mbox{[}1\mbox{]}}
+
+
+
+Definition at line 79 of file uart\+\_\+18xx\+\_\+43xx.\+h.
+
+\mbox{\Hypertarget{struct_l_p_c___u_s_a_r_t___t_adfc2810503e8eb5f4d9bc4622500295e}\label{struct_l_p_c___u_s_a_r_t___t_adfc2810503e8eb5f4d9bc4622500295e}} 
+\index{L\+P\+C\+\_\+\+U\+S\+A\+R\+T\+\_\+T@{L\+P\+C\+\_\+\+U\+S\+A\+R\+T\+\_\+T}!R\+S485\+A\+D\+R\+M\+A\+T\+CH@{R\+S485\+A\+D\+R\+M\+A\+T\+CH}}
+\index{R\+S485\+A\+D\+R\+M\+A\+T\+CH@{R\+S485\+A\+D\+R\+M\+A\+T\+CH}!L\+P\+C\+\_\+\+U\+S\+A\+R\+T\+\_\+T@{L\+P\+C\+\_\+\+U\+S\+A\+R\+T\+\_\+T}}
+\subsubsection{\texorpdfstring{R\+S485\+A\+D\+R\+M\+A\+T\+CH}{RS485ADRMATCH}}
+{\footnotesize\ttfamily \hyperlink{core__sc300_8h_aec43007d9998a0a0e01faede4133d6be}{\+\_\+\+\_\+\+IO} uint32\+\_\+t L\+P\+C\+\_\+\+U\+S\+A\+R\+T\+\_\+\+T\+::\+R\+S485\+A\+D\+R\+M\+A\+T\+CH}
+
+R\+S-\/485/\+E\+I\+A-\/485 address match. Contains the address match value for R\+S-\/485/\+E\+I\+A-\/485 mode. 
+
+Definition at line 83 of file uart\+\_\+18xx\+\_\+43xx.\+h.
+
+\mbox{\Hypertarget{struct_l_p_c___u_s_a_r_t___t_a6a7e49f50f49efbe8e11befcf6e7d6b4}\label{struct_l_p_c___u_s_a_r_t___t_a6a7e49f50f49efbe8e11befcf6e7d6b4}} 
+\index{L\+P\+C\+\_\+\+U\+S\+A\+R\+T\+\_\+T@{L\+P\+C\+\_\+\+U\+S\+A\+R\+T\+\_\+T}!R\+S485\+C\+T\+RL@{R\+S485\+C\+T\+RL}}
+\index{R\+S485\+C\+T\+RL@{R\+S485\+C\+T\+RL}!L\+P\+C\+\_\+\+U\+S\+A\+R\+T\+\_\+T@{L\+P\+C\+\_\+\+U\+S\+A\+R\+T\+\_\+T}}
+\subsubsection{\texorpdfstring{R\+S485\+C\+T\+RL}{RS485CTRL}}
+{\footnotesize\ttfamily \hyperlink{core__sc300_8h_aec43007d9998a0a0e01faede4133d6be}{\+\_\+\+\_\+\+IO} uint32\+\_\+t L\+P\+C\+\_\+\+U\+S\+A\+R\+T\+\_\+\+T\+::\+R\+S485\+C\+T\+RL}
+
+R\+S-\/485/\+E\+I\+A-\/485 Control. Contains controls to configure various aspects of R\+S-\/485/\+E\+I\+A-\/485 modes. 
+
+Definition at line 82 of file uart\+\_\+18xx\+\_\+43xx.\+h.
+
+\mbox{\Hypertarget{struct_l_p_c___u_s_a_r_t___t_a6e9fc8109a269820386a36c81dc943ab}\label{struct_l_p_c___u_s_a_r_t___t_a6e9fc8109a269820386a36c81dc943ab}} 
+\index{L\+P\+C\+\_\+\+U\+S\+A\+R\+T\+\_\+T@{L\+P\+C\+\_\+\+U\+S\+A\+R\+T\+\_\+T}!R\+S485\+D\+LY@{R\+S485\+D\+LY}}
+\index{R\+S485\+D\+LY@{R\+S485\+D\+LY}!L\+P\+C\+\_\+\+U\+S\+A\+R\+T\+\_\+T@{L\+P\+C\+\_\+\+U\+S\+A\+R\+T\+\_\+T}}
+\subsubsection{\texorpdfstring{R\+S485\+D\+LY}{RS485DLY}}
+{\footnotesize\ttfamily \hyperlink{core__sc300_8h_aec43007d9998a0a0e01faede4133d6be}{\+\_\+\+\_\+\+IO} uint32\+\_\+t L\+P\+C\+\_\+\+U\+S\+A\+R\+T\+\_\+\+T\+::\+R\+S485\+D\+LY}
+
+R\+S-\/485/\+E\+I\+A-\/485 direction control delay. 
+
+Definition at line 84 of file uart\+\_\+18xx\+\_\+43xx.\+h.
+
+\mbox{\Hypertarget{struct_l_p_c___u_s_a_r_t___t_aa8ad1461441995d0b618ff7f5b0e42be}\label{struct_l_p_c___u_s_a_r_t___t_aa8ad1461441995d0b618ff7f5b0e42be}} 
+\index{L\+P\+C\+\_\+\+U\+S\+A\+R\+T\+\_\+T@{L\+P\+C\+\_\+\+U\+S\+A\+R\+T\+\_\+T}!S\+C\+I\+C\+T\+RL@{S\+C\+I\+C\+T\+RL}}
+\index{S\+C\+I\+C\+T\+RL@{S\+C\+I\+C\+T\+RL}!L\+P\+C\+\_\+\+U\+S\+A\+R\+T\+\_\+T@{L\+P\+C\+\_\+\+U\+S\+A\+R\+T\+\_\+T}}
+\subsubsection{\texorpdfstring{S\+C\+I\+C\+T\+RL}{SCICTRL}}
+{\footnotesize\ttfamily \hyperlink{core__sc300_8h_aec43007d9998a0a0e01faede4133d6be}{\+\_\+\+\_\+\+IO} uint32\+\_\+t L\+P\+C\+\_\+\+U\+S\+A\+R\+T\+\_\+\+T\+::\+S\+C\+I\+C\+T\+RL}
+
+Smart card interface control register-\/ only on some U\+A\+R\+Ts 
+
+Definition at line 80 of file uart\+\_\+18xx\+\_\+43xx.\+h.
+
+\mbox{\Hypertarget{struct_l_p_c___u_s_a_r_t___t_a28417e4b3d19fcbb6c6ef116376ed58b}\label{struct_l_p_c___u_s_a_r_t___t_a28417e4b3d19fcbb6c6ef116376ed58b}} 
+\index{L\+P\+C\+\_\+\+U\+S\+A\+R\+T\+\_\+T@{L\+P\+C\+\_\+\+U\+S\+A\+R\+T\+\_\+T}!S\+CR@{S\+CR}}
+\index{S\+CR@{S\+CR}!L\+P\+C\+\_\+\+U\+S\+A\+R\+T\+\_\+T@{L\+P\+C\+\_\+\+U\+S\+A\+R\+T\+\_\+T}}
+\subsubsection{\texorpdfstring{S\+CR}{SCR}}
+{\footnotesize\ttfamily \hyperlink{core__sc300_8h_aec43007d9998a0a0e01faede4133d6be}{\+\_\+\+\_\+\+IO} uint32\+\_\+t L\+P\+C\+\_\+\+U\+S\+A\+R\+T\+\_\+\+T\+::\+S\+CR}
+
+Scratch Pad Register. Eight-\/bit temporary storage for software. 
+
+Definition at line 71 of file uart\+\_\+18xx\+\_\+43xx.\+h.
+
+\mbox{\Hypertarget{struct_l_p_c___u_s_a_r_t___t_a799433e27ab7a1b61ba215ff1766a3e0}\label{struct_l_p_c___u_s_a_r_t___t_a799433e27ab7a1b61ba215ff1766a3e0}} 
+\index{L\+P\+C\+\_\+\+U\+S\+A\+R\+T\+\_\+T@{L\+P\+C\+\_\+\+U\+S\+A\+R\+T\+\_\+T}!S\+Y\+N\+C\+C\+T\+RL@{S\+Y\+N\+C\+C\+T\+RL}}
+\index{S\+Y\+N\+C\+C\+T\+RL@{S\+Y\+N\+C\+C\+T\+RL}!L\+P\+C\+\_\+\+U\+S\+A\+R\+T\+\_\+T@{L\+P\+C\+\_\+\+U\+S\+A\+R\+T\+\_\+T}}
+\subsubsection{\texorpdfstring{S\+Y\+N\+C\+C\+T\+RL}{SYNCCTRL}}
+{\footnotesize\ttfamily \hyperlink{core__sc300_8h_aec43007d9998a0a0e01faede4133d6be}{\+\_\+\+\_\+\+IO} uint32\+\_\+t L\+P\+C\+\_\+\+U\+S\+A\+R\+T\+\_\+\+T\+::\+S\+Y\+N\+C\+C\+T\+RL}
+
+Synchronous mode control register. Only on U\+S\+A\+R\+Ts. 
+
+Definition at line 87 of file uart\+\_\+18xx\+\_\+43xx.\+h.
+
+\mbox{\Hypertarget{struct_l_p_c___u_s_a_r_t___t_afa3989925f4b5c3edd74531748ccccb2}\label{struct_l_p_c___u_s_a_r_t___t_afa3989925f4b5c3edd74531748ccccb2}} 
+\index{L\+P\+C\+\_\+\+U\+S\+A\+R\+T\+\_\+T@{L\+P\+C\+\_\+\+U\+S\+A\+R\+T\+\_\+T}!T\+E\+R1@{T\+E\+R1}}
+\index{T\+E\+R1@{T\+E\+R1}!L\+P\+C\+\_\+\+U\+S\+A\+R\+T\+\_\+T@{L\+P\+C\+\_\+\+U\+S\+A\+R\+T\+\_\+T}}
+\subsubsection{\texorpdfstring{T\+E\+R1}{TER1}}
+{\footnotesize\ttfamily \hyperlink{core__sc300_8h_aec43007d9998a0a0e01faede4133d6be}{\+\_\+\+\_\+\+IO} uint32\+\_\+t L\+P\+C\+\_\+\+U\+S\+A\+R\+T\+\_\+\+T\+::\+T\+E\+R1}
+
+Transmit Enable Register. Turns off U\+S\+A\+RT transmitter for use with software flow control. 
+
+Definition at line 76 of file uart\+\_\+18xx\+\_\+43xx.\+h.
+
+\mbox{\Hypertarget{struct_l_p_c___u_s_a_r_t___t_afc422e0333356dc62b23d404bfdbd1de}\label{struct_l_p_c___u_s_a_r_t___t_afc422e0333356dc62b23d404bfdbd1de}} 
+\index{L\+P\+C\+\_\+\+U\+S\+A\+R\+T\+\_\+T@{L\+P\+C\+\_\+\+U\+S\+A\+R\+T\+\_\+T}!T\+E\+R2@{T\+E\+R2}}
+\index{T\+E\+R2@{T\+E\+R2}!L\+P\+C\+\_\+\+U\+S\+A\+R\+T\+\_\+T@{L\+P\+C\+\_\+\+U\+S\+A\+R\+T\+\_\+T}}
+\subsubsection{\texorpdfstring{T\+E\+R2}{TER2}}
+{\footnotesize\ttfamily \hyperlink{core__sc300_8h_aec43007d9998a0a0e01faede4133d6be}{\+\_\+\+\_\+\+IO} uint32\+\_\+t L\+P\+C\+\_\+\+U\+S\+A\+R\+T\+\_\+\+T\+::\+T\+E\+R2}
+
+Transmit Enable Register. Only on L\+P\+C177\+X\+\_\+8X U\+A\+R\+T4 and L\+P\+C18\+X\+X/43\+XX U\+S\+A\+R\+T0/2/3. 
+
+Definition at line 91 of file uart\+\_\+18xx\+\_\+43xx.\+h.
+
+\mbox{\Hypertarget{struct_l_p_c___u_s_a_r_t___t_ae93392fb8e6c40f5b340ec0cf145ee1b}\label{struct_l_p_c___u_s_a_r_t___t_ae93392fb8e6c40f5b340ec0cf145ee1b}} 
+\index{L\+P\+C\+\_\+\+U\+S\+A\+R\+T\+\_\+T@{L\+P\+C\+\_\+\+U\+S\+A\+R\+T\+\_\+T}!T\+HR@{T\+HR}}
+\index{T\+HR@{T\+HR}!L\+P\+C\+\_\+\+U\+S\+A\+R\+T\+\_\+T@{L\+P\+C\+\_\+\+U\+S\+A\+R\+T\+\_\+T}}
+\subsubsection{\texorpdfstring{T\+HR}{THR}}
+{\footnotesize\ttfamily \hyperlink{core__sc300_8h_a7e25d9380f9ef903923964322e71f2f6}{\+\_\+\+\_\+O} uint32\+\_\+t L\+P\+C\+\_\+\+U\+S\+A\+R\+T\+\_\+\+T\+::\+T\+HR}
+
+Transmit Holding Register. The next character to be transmitted is written here (D\+L\+AB = 0). 
+
+Definition at line 53 of file uart\+\_\+18xx\+\_\+43xx.\+h.
+
+
+
+The documentation for this struct was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+muju/externals/base/soc/lpc43xx/lpc\+\_\+chip\+\_\+43xx/inc/\hyperlink{uart__18xx__43xx_8h}{uart\+\_\+18xx\+\_\+43xx.\+h}\end{DoxyCompactItemize}

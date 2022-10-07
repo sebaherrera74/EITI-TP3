@@ -1,0 +1,15 @@
+digraph "muju/vendor/ceedling" {
+  compound=true
+  node [ fontsize="10", fontname="Helvetica"];
+  edge [ labelfontsize="10", labelfontname="Helvetica"];
+  subgraph clusterdir_d6715300d9ce30cd4c80680ad64ac6e8 {
+    graph [ bgcolor="#ddddee", pencolor="black", label="vendor" fontname="Helvetica", fontsize="10", URL="dir_d6715300d9ce30cd4c80680ad64ac6e8.html"]
+  subgraph clusterdir_1692786e1ed7274e5adeb7199a5c4d23 {
+    graph [ bgcolor="#eeeeff", pencolor="black", label="" URL="dir_1692786e1ed7274e5adeb7199a5c4d23.html"];
+    dir_1692786e1ed7274e5adeb7199a5c4d23 [shape=plaintext label="ceedling"];
+    dir_d36ba63104026e8301a719ebeb8241f7 [shape=box label="plugins" color="red" fillcolor="white" style="filled" URL="dir_d36ba63104026e8301a719ebeb8241f7.html"];
+    dir_dee195845ab3b7fc5359b8f8ad33bf1d [shape=box label="vendor" color="red" fillcolor="white" style="filled" URL="dir_dee195845ab3b7fc5359b8f8ad33bf1d.html"];
+  }
+  }
+  dir_d36ba63104026e8301a719ebeb8241f7->dir_dee195845ab3b7fc5359b8f8ad33bf1d [headlabel="2", labeldistance=1.5 headhref="dir_000057_000125.html"];
+}

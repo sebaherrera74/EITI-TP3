@@ -1,0 +1,90 @@
+\hypertarget{externals_2freertos_2portable_2_g_c_c_2_r_i_s_c-_v_2port_8c}{}\section{muju/externals/freertos/portable/\+G\+C\+C/\+R\+I\+S\+C-\/\+V/port.c File Reference}
+\label{externals_2freertos_2portable_2_g_c_c_2_r_i_s_c-_v_2port_8c}\index{muju/externals/freertos/portable/\+G\+C\+C/\+R\+I\+S\+C-\/\+V/port.\+c@{muju/externals/freertos/portable/\+G\+C\+C/\+R\+I\+S\+C-\/\+V/port.\+c}}
+{\ttfamily \#include \char`\"{}Free\+R\+T\+O\+S.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}task.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}portmacro.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}string.\+h\char`\"{}}\newline
+Include dependency graph for port.\+c\+:
+% FIG 0
+\subsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#define \hyperlink{externals_2freertos_2portable_2_g_c_c_2_r_i_s_c-_v_2port_8c_a254a1ddd7499c6ec36b38e2fc3486b80}{port\+T\+A\+S\+K\+\_\+\+R\+E\+T\+U\+R\+N\+\_\+\+A\+D\+D\+R\+E\+SS}~prv\+Task\+Exit\+Error
+\item 
+\#define \hyperlink{externals_2freertos_2portable_2_g_c_c_2_r_i_s_c-_v_2port_8c_a675a9ea33bf706283cbc295bfff06335}{port\+C\+H\+E\+C\+K\+\_\+\+I\+S\+R\+\_\+\+S\+T\+A\+CK}()
+\end{DoxyCompactItemize}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \hyperlink{externals_2freertos_2portable_2_g_c_c_2_r_i_s_c-_v_2port_8c_a4649001ea4d29b80759e6eca4bba58eb}{v\+Port\+Setup\+Timer\+Interrupt} (void)
+\item 
+void \hyperlink{externals_2freertos_2portable_2_g_c_c_2_r_i_s_c-_v_2port_8c_af76f3c0b44c5b5c06fc046a4ee1a6423}{v\+Port\+End\+Scheduler} (void)
+\end{DoxyCompactItemize}
+\subsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+const uint32\+\_\+t \hyperlink{externals_2freertos_2portable_2_g_c_c_2_r_i_s_c-_v_2port_8c_a79855bf4f17a0196e1168d58bf49f525}{\+\_\+\+\_\+freertos\+\_\+irq\+\_\+stack\+\_\+top} \mbox{[}$\,$\mbox{]}
+\item 
+const \hyperlink{externals_2freertos_2portable_2_g_c_c_2_a_r_m___c_m0_2portmacro_8h_a84e9a8ba132feed0b2401c1f4e2ac63c}{Stack\+Type\+\_\+t} \hyperlink{externals_2freertos_2portable_2_g_c_c_2_r_i_s_c-_v_2port_8c_a9e56109acb5aa444fc39ac7f8e9b6719}{x\+I\+S\+R\+Stack\+Top} = ( \hyperlink{externals_2freertos_2portable_2_g_c_c_2_a_r_m___c_m0_2portmacro_8h_a84e9a8ba132feed0b2401c1f4e2ac63c}{Stack\+Type\+\_\+t} ) \hyperlink{externals_2freertos_2portable_2_g_c_c_2_r_i_s_c-_v_2port_8c_a79855bf4f17a0196e1168d58bf49f525}{\+\_\+\+\_\+freertos\+\_\+irq\+\_\+stack\+\_\+top}
+\end{DoxyCompactItemize}
+
+
+\subsection{Macro Definition Documentation}
+\mbox{\Hypertarget{externals_2freertos_2portable_2_g_c_c_2_r_i_s_c-_v_2port_8c_a675a9ea33bf706283cbc295bfff06335}\label{externals_2freertos_2portable_2_g_c_c_2_r_i_s_c-_v_2port_8c_a675a9ea33bf706283cbc295bfff06335}} 
+\index{externals/freertos/portable/\+G\+C\+C/\+R\+I\+S\+C-\/\+V/port.\+c@{externals/freertos/portable/\+G\+C\+C/\+R\+I\+S\+C-\/\+V/port.\+c}!port\+C\+H\+E\+C\+K\+\_\+\+I\+S\+R\+\_\+\+S\+T\+A\+CK@{port\+C\+H\+E\+C\+K\+\_\+\+I\+S\+R\+\_\+\+S\+T\+A\+CK}}
+\index{port\+C\+H\+E\+C\+K\+\_\+\+I\+S\+R\+\_\+\+S\+T\+A\+CK@{port\+C\+H\+E\+C\+K\+\_\+\+I\+S\+R\+\_\+\+S\+T\+A\+CK}!externals/freertos/portable/\+G\+C\+C/\+R\+I\+S\+C-\/\+V/port.\+c@{externals/freertos/portable/\+G\+C\+C/\+R\+I\+S\+C-\/\+V/port.\+c}}
+\subsubsection{\texorpdfstring{port\+C\+H\+E\+C\+K\+\_\+\+I\+S\+R\+\_\+\+S\+T\+A\+CK}{portCHECK\_ISR\_STACK}}
+{\footnotesize\ttfamily \#define port\+C\+H\+E\+C\+K\+\_\+\+I\+S\+R\+\_\+\+S\+T\+A\+CK(\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{externals_2freertos_2portable_2_g_c_c_2_r_i_s_c-_v_2port_8c_a254a1ddd7499c6ec36b38e2fc3486b80}\label{externals_2freertos_2portable_2_g_c_c_2_r_i_s_c-_v_2port_8c_a254a1ddd7499c6ec36b38e2fc3486b80}} 
+\index{externals/freertos/portable/\+G\+C\+C/\+R\+I\+S\+C-\/\+V/port.\+c@{externals/freertos/portable/\+G\+C\+C/\+R\+I\+S\+C-\/\+V/port.\+c}!port\+T\+A\+S\+K\+\_\+\+R\+E\+T\+U\+R\+N\+\_\+\+A\+D\+D\+R\+E\+SS@{port\+T\+A\+S\+K\+\_\+\+R\+E\+T\+U\+R\+N\+\_\+\+A\+D\+D\+R\+E\+SS}}
+\index{port\+T\+A\+S\+K\+\_\+\+R\+E\+T\+U\+R\+N\+\_\+\+A\+D\+D\+R\+E\+SS@{port\+T\+A\+S\+K\+\_\+\+R\+E\+T\+U\+R\+N\+\_\+\+A\+D\+D\+R\+E\+SS}!externals/freertos/portable/\+G\+C\+C/\+R\+I\+S\+C-\/\+V/port.\+c@{externals/freertos/portable/\+G\+C\+C/\+R\+I\+S\+C-\/\+V/port.\+c}}
+\subsubsection{\texorpdfstring{port\+T\+A\+S\+K\+\_\+\+R\+E\+T\+U\+R\+N\+\_\+\+A\+D\+D\+R\+E\+SS}{portTASK\_RETURN\_ADDRESS}}
+{\footnotesize\ttfamily \#define port\+T\+A\+S\+K\+\_\+\+R\+E\+T\+U\+R\+N\+\_\+\+A\+D\+D\+R\+E\+SS~prv\+Task\+Exit\+Error}
+
+
+
+Definition at line 58 of file port.\+c.
+
+
+
+\subsection{Function Documentation}
+\mbox{\Hypertarget{externals_2freertos_2portable_2_g_c_c_2_r_i_s_c-_v_2port_8c_af76f3c0b44c5b5c06fc046a4ee1a6423}\label{externals_2freertos_2portable_2_g_c_c_2_r_i_s_c-_v_2port_8c_af76f3c0b44c5b5c06fc046a4ee1a6423}} 
+\index{externals/freertos/portable/\+G\+C\+C/\+R\+I\+S\+C-\/\+V/port.\+c@{externals/freertos/portable/\+G\+C\+C/\+R\+I\+S\+C-\/\+V/port.\+c}!v\+Port\+End\+Scheduler@{v\+Port\+End\+Scheduler}}
+\index{v\+Port\+End\+Scheduler@{v\+Port\+End\+Scheduler}!externals/freertos/portable/\+G\+C\+C/\+R\+I\+S\+C-\/\+V/port.\+c@{externals/freertos/portable/\+G\+C\+C/\+R\+I\+S\+C-\/\+V/port.\+c}}
+\subsubsection{\texorpdfstring{v\+Port\+End\+Scheduler()}{vPortEndScheduler()}}
+{\footnotesize\ttfamily void v\+Port\+End\+Scheduler (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+
+
+
+Definition at line 203 of file port.\+c.
+
+\mbox{\Hypertarget{externals_2freertos_2portable_2_g_c_c_2_r_i_s_c-_v_2port_8c_a4649001ea4d29b80759e6eca4bba58eb}\label{externals_2freertos_2portable_2_g_c_c_2_r_i_s_c-_v_2port_8c_a4649001ea4d29b80759e6eca4bba58eb}} 
+\index{externals/freertos/portable/\+G\+C\+C/\+R\+I\+S\+C-\/\+V/port.\+c@{externals/freertos/portable/\+G\+C\+C/\+R\+I\+S\+C-\/\+V/port.\+c}!v\+Port\+Setup\+Timer\+Interrupt@{v\+Port\+Setup\+Timer\+Interrupt}}
+\index{v\+Port\+Setup\+Timer\+Interrupt@{v\+Port\+Setup\+Timer\+Interrupt}!externals/freertos/portable/\+G\+C\+C/\+R\+I\+S\+C-\/\+V/port.\+c@{externals/freertos/portable/\+G\+C\+C/\+R\+I\+S\+C-\/\+V/port.\+c}}
+\subsubsection{\texorpdfstring{v\+Port\+Setup\+Timer\+Interrupt()}{vPortSetupTimerInterrupt()}}
+{\footnotesize\ttfamily void v\+Port\+Setup\+Timer\+Interrupt (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+
+
+
+Definition at line 86 of file port.\+c.
+
+
+
+\subsection{Variable Documentation}
+\mbox{\Hypertarget{externals_2freertos_2portable_2_g_c_c_2_r_i_s_c-_v_2port_8c_a79855bf4f17a0196e1168d58bf49f525}\label{externals_2freertos_2portable_2_g_c_c_2_r_i_s_c-_v_2port_8c_a79855bf4f17a0196e1168d58bf49f525}} 
+\index{externals/freertos/portable/\+G\+C\+C/\+R\+I\+S\+C-\/\+V/port.\+c@{externals/freertos/portable/\+G\+C\+C/\+R\+I\+S\+C-\/\+V/port.\+c}!\+\_\+\+\_\+freertos\+\_\+irq\+\_\+stack\+\_\+top@{\+\_\+\+\_\+freertos\+\_\+irq\+\_\+stack\+\_\+top}}
+\index{\+\_\+\+\_\+freertos\+\_\+irq\+\_\+stack\+\_\+top@{\+\_\+\+\_\+freertos\+\_\+irq\+\_\+stack\+\_\+top}!externals/freertos/portable/\+G\+C\+C/\+R\+I\+S\+C-\/\+V/port.\+c@{externals/freertos/portable/\+G\+C\+C/\+R\+I\+S\+C-\/\+V/port.\+c}}
+\subsubsection{\texorpdfstring{\+\_\+\+\_\+freertos\+\_\+irq\+\_\+stack\+\_\+top}{\_\_freertos\_irq\_stack\_top}}
+{\footnotesize\ttfamily const uint32\+\_\+t \+\_\+\+\_\+freertos\+\_\+irq\+\_\+stack\+\_\+top\mbox{[}$\,$\mbox{]}}
+
+\mbox{\Hypertarget{externals_2freertos_2portable_2_g_c_c_2_r_i_s_c-_v_2port_8c_a9e56109acb5aa444fc39ac7f8e9b6719}\label{externals_2freertos_2portable_2_g_c_c_2_r_i_s_c-_v_2port_8c_a9e56109acb5aa444fc39ac7f8e9b6719}} 
+\index{externals/freertos/portable/\+G\+C\+C/\+R\+I\+S\+C-\/\+V/port.\+c@{externals/freertos/portable/\+G\+C\+C/\+R\+I\+S\+C-\/\+V/port.\+c}!x\+I\+S\+R\+Stack\+Top@{x\+I\+S\+R\+Stack\+Top}}
+\index{x\+I\+S\+R\+Stack\+Top@{x\+I\+S\+R\+Stack\+Top}!externals/freertos/portable/\+G\+C\+C/\+R\+I\+S\+C-\/\+V/port.\+c@{externals/freertos/portable/\+G\+C\+C/\+R\+I\+S\+C-\/\+V/port.\+c}}
+\subsubsection{\texorpdfstring{x\+I\+S\+R\+Stack\+Top}{xISRStackTop}}
+{\footnotesize\ttfamily const \hyperlink{externals_2freertos_2portable_2_g_c_c_2_a_r_m___c_m0_2portmacro_8h_a84e9a8ba132feed0b2401c1f4e2ac63c}{Stack\+Type\+\_\+t} x\+I\+S\+R\+Stack\+Top = ( \hyperlink{externals_2freertos_2portable_2_g_c_c_2_a_r_m___c_m0_2portmacro_8h_a84e9a8ba132feed0b2401c1f4e2ac63c}{Stack\+Type\+\_\+t} ) \hyperlink{externals_2freertos_2portable_2_g_c_c_2_r_i_s_c-_v_2port_8c_a79855bf4f17a0196e1168d58bf49f525}{\+\_\+\+\_\+freertos\+\_\+irq\+\_\+stack\+\_\+top}}
+
+
+
+Definition at line 78 of file port.\+c.
+

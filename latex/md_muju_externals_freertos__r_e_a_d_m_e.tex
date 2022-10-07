@@ -1,0 +1,38 @@
+This repository contains Free\+R\+T\+OS kernel source/header files and kernel ports only. This repository is referenced as a submodule in \href{https://github.com/FreeRTOS/FreeRTOS}{\tt Free\+R\+T\+O\+S/\+Free\+R\+T\+OS} repository, which contains pre-\/configured demo application projects under {\ttfamily Free\+R\+T\+O\+S/\+Demo} directory.
+
+The easiest way to use Free\+R\+T\+OS is to start with one of the pre-\/configured demo application projects. That way you will have the correct Free\+R\+T\+OS source files included, and the correct include paths configured. Once a demo application is building and executing you can remove the demo application files, and start to add in your own application source files. See the \href{https://www.FreeRTOS.org/FreeRTOS-quick-start-guide.html}{\tt Free\+R\+T\+OS Kernel Quick Start Guide} for detailed instructions and other useful links.
+
+Additionally, for Free\+R\+T\+OS kernel feature information refer to the \href{https://www.FreeRTOS.org/features.html}{\tt Developer Documentation}, and \href{https://www.FreeRTOS.org/a00106.html}{\tt A\+PI Reference}.
+
+\subsubsection*{Getting help}
+
+If you have any questions or need assistance troubleshooting your Free\+R\+T\+OS project, we have an active community that can help on the \href{https://forums.freertos.org}{\tt Free\+R\+T\+OS Community Support Forum}.
+
+\subsection*{Cloning this repository}
+
+To clone using H\+T\+T\+PS\+: 
+\begin{DoxyCode}
+git clone https://github.com/FreeRTOS/FreeRTOS-Kernel.git
+\end{DoxyCode}
+ Using S\+SH\+: 
+\begin{DoxyCode}
+git clone git@github.com:FreeRTOS/FreeRTOS-Kernel.git
+\end{DoxyCode}
+
+
+\subsection*{Repository structure}
+
+
+\begin{DoxyItemize}
+\item The root of this repository contains the three files that are common to every port -\/ list.\+c, queue.\+c and tasks.\+c. The kernel is contained within these three files. croutine.\+c implements the optional co-\/routine functionality -\/ which is normally only used on very memory limited systems.
+\item The {\ttfamily ./portable} directory contains the files that are specific to a particular microcontroller and/or compiler. See the readme file in the {\ttfamily ./portable} directory for more information.
+\item The {\ttfamily ./include} directory contains the real time kernel header files.
+\end{DoxyItemize}
+
+\subsubsection*{Code Formatting}
+
+Free\+R\+T\+OS files are formatted using the \char`\"{}uncrustify\char`\"{} tool. The configuration file used by uncrustify can be found in the \href{https://github.com/FreeRTOS/FreeRTOS/blob/master/tools/uncrustify.cfg}{\tt Free\+R\+T\+O\+S/\+Free\+R\+T\+OS repository}.
+
+\subsubsection*{Spelling}
+
+{\itshape lexicon.\+txt} contains words that are not traditionally found in an English dictionary. It is used by the spellchecker to verify the various jargon, variable names, and other odd words used in the Free\+R\+T\+OS code base. If your pull request fails to pass the spelling and you believe this is a mistake, then add the word to {\itshape lexicon.\+txt}. Note that only the Free\+R\+T\+OS Kernel source files are checked for proper spelling, the portable section is ignored. 

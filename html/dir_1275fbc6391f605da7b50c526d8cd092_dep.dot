@@ -1,0 +1,16 @@
+digraph "muju/modules/hal" {
+  compound=true
+  node [ fontsize="10", fontname="Helvetica"];
+  edge [ labelfontsize="10", labelfontname="Helvetica"];
+  subgraph clusterdir_1ccb7794244f8f401e85482fdb53bfba {
+    graph [ bgcolor="#ddddee", pencolor="black", label="modules" fontname="Helvetica", fontsize="10", URL="dir_1ccb7794244f8f401e85482fdb53bfba.html"]
+  subgraph clusterdir_1275fbc6391f605da7b50c526d8cd092 {
+    graph [ bgcolor="#eeeeff", pencolor="black", label="" URL="dir_1275fbc6391f605da7b50c526d8cd092.html"];
+    dir_1275fbc6391f605da7b50c526d8cd092 [shape=plaintext label="hal"];
+    dir_ea4abe3a9b5d24338b7dbd9b37ded0b0 [shape=box label="inc" color="black" fillcolor="white" style="filled" URL="dir_ea4abe3a9b5d24338b7dbd9b37ded0b0.html"];
+    dir_de83f1cf9016fb2fc9f3ff5293d13109 [shape=box label="soc" color="red" fillcolor="white" style="filled" URL="dir_de83f1cf9016fb2fc9f3ff5293d13109.html"];
+    dir_71742a237b92c25f7d457d4cde00b2db [shape=box label="src" color="black" fillcolor="white" style="filled" URL="dir_71742a237b92c25f7d457d4cde00b2db.html"];
+  }
+  }
+  dir_71742a237b92c25f7d457d4cde00b2db->dir_de83f1cf9016fb2fc9f3ff5293d13109 [headlabel="1", labeldistance=1.5 headhref="dir_000097_000093.html"];
+}

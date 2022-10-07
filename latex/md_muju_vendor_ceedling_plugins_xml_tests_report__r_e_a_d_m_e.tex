@@ -1,0 +1,28 @@
+\subsection*{Overview}
+
+The xml\+\_\+tests\+\_\+report plugin creates an X\+ML file of test results in x\+Unit format, which is handy for Continuous Integration build servers or as input into other reporting tools. The X\+ML file is output to the appropriate {\ttfamily $<$build\+\_\+root$>$/artifacts/} directory (e.\+g. {\ttfamily artifacts/test/} for test tasks, {\ttfamily artifacts/gcov/} for gcov, or {\ttfamily artifacts/bullseye/} for bullseye runs).
+
+\subsection*{Setup}
+
+Enable the plugin in your project.\+yml by adding {\ttfamily xml\+\_\+tests\+\_\+report} to the list of enabled plugins.
+
+
+\begin{DoxyCode}
+:plugins:
+  :enabled:
+    - xml\_tests\_report
+\end{DoxyCode}
+
+
+\subsection*{Configuration}
+
+Optionally configure the output / artifact filename in your project.\+yml with the {\ttfamily artifact\+\_\+filename} configuration option. The default filename is {\ttfamily report.\+xml}.
+
+You can also configure the path that this artifact is stored. This can be done by setting {\ttfamily path}. The default is that it will be placed in a subfolder under the {\ttfamily build} directory.
+
+
+\begin{DoxyCode}
+:xml\_tests\_report:
+  :artifact\_filename: report\_xunit.xml
+\end{DoxyCode}
+ 

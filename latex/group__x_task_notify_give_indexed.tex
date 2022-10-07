@@ -1,0 +1,38 @@
+\hypertarget{group__x_task_notify_give_indexed}{}\section{x\+Task\+Notify\+Give\+Indexed}
+\label{group__x_task_notify_give_indexed}\index{x\+Task\+Notify\+Give\+Indexed@{x\+Task\+Notify\+Give\+Indexed}}
+task. h 
+\begin{DoxyPre}BaseType\_t \hyperlink{externals_2freertos_2include_2task_8h_a53ec0c8b6b8281a3055747813570193c}{xTaskNotifyGiveIndexed( TaskHandle\_t xTaskToNotify, UBaseType\_t uxIndexToNotify )};\end{DoxyPre}
+ 
+\begin{DoxyPre}BaseType\_t \hyperlink{externals_2freertos_2include_2task_8h_ac60cbd05577a3e4f3c3587dd9b213930}{xTaskNotifyGive( TaskHandle\_t xTaskToNotify )};\end{DoxyPre}
+
+
+Sends a direct to task notification to a particular index in the target task\textquotesingle{}s notification array in a manner similar to giving a counting semaphore.
+
+See \href{https://www.FreeRTOS.org/RTOS-task-notifications.html}{\tt https\+://www.\+Free\+R\+T\+O\+S.\+org/\+R\+T\+O\+S-\/task-\/notifications.\+html} for more details.
+
+config\+U\+S\+E\+\_\+\+T\+A\+S\+K\+\_\+\+N\+O\+T\+I\+F\+I\+C\+A\+T\+I\+O\+NS must be undefined or defined as 1 for these macros to be available.
+
+Each task has a private array of \char`\"{}notification values\char`\"{} (or \textquotesingle{}notifications\textquotesingle{}), each of which is a 32-\/bit unsigned integer (uint32\+\_\+t). The constant config\+T\+A\+S\+K\+\_\+\+N\+O\+T\+I\+F\+I\+C\+A\+T\+I\+O\+N\+\_\+\+A\+R\+R\+A\+Y\+\_\+\+E\+N\+T\+R\+I\+ES sets the number of indexes in the array, and (for backward compatibility) defaults to 1 if left undefined. Prior to Free\+R\+T\+OS V10.\+4.\+0 there was only one notification value per task.
+
+Events can be sent to a task using an intermediary object. Examples of such objects are queues, semaphores, mutexes and event groups. Task notifications are a method of sending an event directly to a task without the need for such an intermediary object.
+
+A notification sent to a task can optionally perform an action, such as update, overwrite or increment one of the task\textquotesingle{}s notification values. In that way task notifications can be used to send data to a task, or be used as light weight and fast binary or counting semaphores.
+
+\hyperlink{externals_2freertos_2include_2task_8h_a53ec0c8b6b8281a3055747813570193c}{x\+Task\+Notify\+Give\+Indexed()} is a helper macro intended for use when task notifications are used as light weight and faster binary or counting semaphore equivalents. Actual Free\+R\+T\+OS semaphores are given using the \hyperlink{externals_2freertos_2include_2semphr_8h_aae55761cabfa9bf85c8f4430f78c0953}{x\+Semaphore\+Give()} A\+PI function, the equivalent action that instead uses a task notification is \hyperlink{externals_2freertos_2include_2task_8h_a53ec0c8b6b8281a3055747813570193c}{x\+Task\+Notify\+Give\+Indexed()}.
+
+When task notifications are being used as a binary or counting semaphore equivalent then the task being notified should wait for the notification using the ul\+Task\+Notification\+Take\+Indexed() A\+PI function rather than the \hyperlink{externals_2freertos_2include_2task_8h_a5bcd5a5b7d7c41dd782a38093be1b7c9}{x\+Task\+Notify\+Wait\+Indexed()} A\+PI function.
+
+{\bfseries N\+O\+TE} Each notification within the array operates independently -\/ a task can only block on one notification within the array at a time and will not be unblocked by a notification sent to any other array index.
+
+Backward compatibility information\+: Prior to Free\+R\+T\+OS V10.\+4.\+0 each task had a single \char`\"{}notification value\char`\"{}, and all task notification A\+PI functions operated on that value. Replacing the single notification value with an array of notification values necessitated a new set of A\+PI functions that could address specific notifications within the array. \hyperlink{externals_2freertos_2include_2task_8h_ac60cbd05577a3e4f3c3587dd9b213930}{x\+Task\+Notify\+Give()} is the original A\+PI function, and remains backward compatible by always operating on the notification value at index 0 in the array. Calling \hyperlink{externals_2freertos_2include_2task_8h_ac60cbd05577a3e4f3c3587dd9b213930}{x\+Task\+Notify\+Give()} is equivalent to calling \hyperlink{externals_2freertos_2include_2task_8h_a53ec0c8b6b8281a3055747813570193c}{x\+Task\+Notify\+Give\+Indexed()} with the ux\+Index\+To\+Notify parameter set to 0.
+
+
+\begin{DoxyParams}{Parameters}
+{\em x\+Task\+To\+Notify} & The handle of the task being notified. The handle to a task can be returned from the \hyperlink{vendor_2ceedling_2plugins_2freertos_2src_2freertos_2include_2task_8h_adf67e7cd0bfd1eda9e8afd048206f7c2}{x\+Task\+Create()} A\+PI function used to create the task, and the handle of the currently running task can be obtained by calling \hyperlink{externals_2freertos_2include_2task_8h_a85a0f9c9f817b18686efbf8f37c72dfc}{x\+Task\+Get\+Current\+Task\+Handle()}.\\
+\hline
+{\em ux\+Index\+To\+Notify} & The index within the target task\textquotesingle{}s array of notification values to which the notification is to be sent. ux\+Index\+To\+Notify must be less than config\+T\+A\+S\+K\+\_\+\+N\+O\+T\+I\+F\+I\+C\+A\+T\+I\+O\+N\+\_\+\+A\+R\+R\+A\+Y\+\_\+\+E\+N\+T\+R\+I\+ES. \hyperlink{externals_2freertos_2include_2task_8h_ac60cbd05577a3e4f3c3587dd9b213930}{x\+Task\+Notify\+Give()} does not have this parameter and always sends notifications to index 0.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+\hyperlink{externals_2freertos_2include_2task_8h_ac60cbd05577a3e4f3c3587dd9b213930}{x\+Task\+Notify\+Give()} is a macro that calls \hyperlink{externals_2freertos_2include_2task_8h_a0d2d54fb8a64011dfbb54983e4ed06bd}{x\+Task\+Notify()} with the e\+Action parameter set to e\+Increment -\/ so pd\+P\+A\+SS is always returned. 
+\end{DoxyReturn}

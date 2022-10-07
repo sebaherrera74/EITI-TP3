@@ -1,0 +1,50 @@
+\hypertarget{group__ul_task_notify_take_indexed}{}\section{ul\+Task\+Notify\+Take\+Indexed}
+\label{group__ul_task_notify_take_indexed}\index{ul\+Task\+Notify\+Take\+Indexed@{ul\+Task\+Notify\+Take\+Indexed}}
+task. h 
+\begin{DoxyPre}
+uint32\_t \hyperlink{externals_2freertos_2include_2task_8h_a4f42982425f3b106e1a9f19b41ba4124}{ulTaskNotifyTakeIndexed( UBaseType\_t uxIndexToWaitOn, BaseType\_t xClearCountOnExit, TickType\_t xTicksToWait )};\end{DoxyPre}
+
+
+
+\begin{DoxyPre}uint32\_t \hyperlink{externals_2freertos_2include_2task_8h_a725a2da114ef870747edd7fd19d77bab}{ulTaskNotifyTake( BaseType\_t xClearCountOnExit, TickType\_t xTicksToWait )};
+\end{DoxyPre}
+
+
+Waits for a direct to task notification on a particular index in the calling task\textquotesingle{}s notification array in a manner similar to taking a counting semaphore.
+
+See \href{https://www.FreeRTOS.org/RTOS-task-notifications.html}{\tt https\+://www.\+Free\+R\+T\+O\+S.\+org/\+R\+T\+O\+S-\/task-\/notifications.\+html} for details.
+
+config\+U\+S\+E\+\_\+\+T\+A\+S\+K\+\_\+\+N\+O\+T\+I\+F\+I\+C\+A\+T\+I\+O\+NS must be undefined or defined as 1 for this function to be available.
+
+Each task has a private array of \char`\"{}notification values\char`\"{} (or \textquotesingle{}notifications\textquotesingle{}), each of which is a 32-\/bit unsigned integer (uint32\+\_\+t). The constant config\+T\+A\+S\+K\+\_\+\+N\+O\+T\+I\+F\+I\+C\+A\+T\+I\+O\+N\+\_\+\+A\+R\+R\+A\+Y\+\_\+\+E\+N\+T\+R\+I\+ES sets the number of indexes in the array, and (for backward compatibility) defaults to 1 if left undefined. Prior to Free\+R\+T\+OS V10.\+4.\+0 there was only one notification value per task.
+
+Events can be sent to a task using an intermediary object. Examples of such objects are queues, semaphores, mutexes and event groups. Task notifications are a method of sending an event directly to a task without the need for such an intermediary object.
+
+A notification sent to a task can optionally perform an action, such as update, overwrite or increment one of the task\textquotesingle{}s notification values. In that way task notifications can be used to send data to a task, or be used as light weight and fast binary or counting semaphores.
+
+\hyperlink{externals_2freertos_2include_2task_8h_a4f42982425f3b106e1a9f19b41ba4124}{ul\+Task\+Notify\+Take\+Indexed()} is intended for use when a task notification is used as a faster and lighter weight binary or counting semaphore alternative. Actual Free\+R\+T\+OS semaphores are taken using the \hyperlink{externals_2freertos_2include_2semphr_8h_af116e436d2a5ae5bd72dbade2b5ea930}{x\+Semaphore\+Take()} A\+PI function, the equivalent action that instead uses a task notification is \hyperlink{externals_2freertos_2include_2task_8h_a4f42982425f3b106e1a9f19b41ba4124}{ul\+Task\+Notify\+Take\+Indexed()}.
+
+When a task is using its notification value as a binary or counting semaphore other tasks should send notifications to it using the \hyperlink{externals_2freertos_2include_2task_8h_a53ec0c8b6b8281a3055747813570193c}{x\+Task\+Notify\+Give\+Indexed()} macro, or x\+Task\+Notify\+Index() function with the e\+Action parameter set to e\+Increment.
+
+\hyperlink{externals_2freertos_2include_2task_8h_a4f42982425f3b106e1a9f19b41ba4124}{ul\+Task\+Notify\+Take\+Indexed()} can either clear the task\textquotesingle{}s notification value at the array index specified by the ux\+Index\+To\+Wait\+On parameter to zero on exit, in which case the notification value acts like a binary semaphore, or decrement the notification value on exit, in which case the notification value acts like a counting semaphore.
+
+A task can use \hyperlink{externals_2freertos_2include_2task_8h_a4f42982425f3b106e1a9f19b41ba4124}{ul\+Task\+Notify\+Take\+Indexed()} to \mbox{[}optionally\mbox{]} block to wait for the task\textquotesingle{}s notification value to be non-\/zero. The task does not consume any C\+PU time while it is in the Blocked state.
+
+Where as \hyperlink{externals_2freertos_2include_2task_8h_a5bcd5a5b7d7c41dd782a38093be1b7c9}{x\+Task\+Notify\+Wait\+Indexed()} will return when a notification is pending, \hyperlink{externals_2freertos_2include_2task_8h_a4f42982425f3b106e1a9f19b41ba4124}{ul\+Task\+Notify\+Take\+Indexed()} will return when the task\textquotesingle{}s notification value is not zero.
+
+{\bfseries N\+O\+TE} Each notification within the array operates independently -\/ a task can only block on one notification within the array at a time and will not be unblocked by a notification sent to any other array index.
+
+Backward compatibility information\+: Prior to Free\+R\+T\+OS V10.\+4.\+0 each task had a single \char`\"{}notification value\char`\"{}, and all task notification A\+PI functions operated on that value. Replacing the single notification value with an array of notification values necessitated a new set of A\+PI functions that could address specific notifications within the array. \hyperlink{externals_2freertos_2include_2task_8h_a725a2da114ef870747edd7fd19d77bab}{ul\+Task\+Notify\+Take()} is the original A\+PI function, and remains backward compatible by always operating on the notification value at index 0 in the array. Calling \hyperlink{externals_2freertos_2include_2task_8h_a725a2da114ef870747edd7fd19d77bab}{ul\+Task\+Notify\+Take()} is equivalent to calling \hyperlink{externals_2freertos_2include_2task_8h_a4f42982425f3b106e1a9f19b41ba4124}{ul\+Task\+Notify\+Take\+Indexed()} with the ux\+Index\+To\+Wait\+On parameter set to 0.
+
+
+\begin{DoxyParams}{Parameters}
+{\em ux\+Index\+To\+Wait\+On} & The index within the calling task\textquotesingle{}s array of notification values on which the calling task will wait for a notification to be non-\/zero. ux\+Index\+To\+Wait\+On must be less than config\+T\+A\+S\+K\+\_\+\+N\+O\+T\+I\+F\+I\+C\+A\+T\+I\+O\+N\+\_\+\+A\+R\+R\+A\+Y\+\_\+\+E\+N\+T\+R\+I\+ES. x\+Task\+Notify\+Take() does not have this parameter and always waits for notifications on index 0.\\
+\hline
+{\em x\+Clear\+Count\+On\+Exit} & if x\+Clear\+Count\+On\+Exit is pd\+F\+A\+L\+SE then the task\textquotesingle{}s notification value is decremented when the function exits. In this way the notification value acts like a counting semaphore. If x\+Clear\+Count\+On\+Exit is not pd\+F\+A\+L\+SE then the task\textquotesingle{}s notification value is cleared to zero when the function exits. In this way the notification value acts like a binary semaphore.\\
+\hline
+{\em x\+Ticks\+To\+Wait} & The maximum amount of time that the task should wait in the Blocked state for the task\textquotesingle{}s notification value to be greater than zero, should the count not already be greater than zero when \hyperlink{externals_2freertos_2include_2task_8h_a725a2da114ef870747edd7fd19d77bab}{ul\+Task\+Notify\+Take()} was called. The task will not consume any processing time while it is in the Blocked state. This is specified in kernel ticks, the macro pd\+M\+S\+\_\+\+T\+O\+\_\+\+T\+I\+C\+S\+K( value\+\_\+in\+\_\+ms ) can be used to convert a time specified in milliseconds to a time specified in ticks.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The task\textquotesingle{}s notification count before it is either cleared to zero or decremented (see the x\+Clear\+Count\+On\+Exit parameter). 
+\end{DoxyReturn}

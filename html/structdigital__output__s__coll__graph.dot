@@ -1,0 +1,10 @@
+digraph "digital_output_s"
+{
+  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
+  node [fontname="Helvetica",fontsize="10",shape=record];
+  Node1 [label="digital_output_s",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black"];
+  Node2 -> Node1 [dir="back",color="darkorchid3",fontsize="10",style="dashed",label=" atributes" ,fontname="Helvetica"];
+  Node2 [label="digital_output_atributes_s",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$structdigital__output__atributes__s.html"];
+  Node3 -> Node1 [dir="back",color="darkorchid3",fontsize="10",style="dashed",label=" terminal" ,fontname="Helvetica"];
+  Node3 [label="terminal_s",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$structterminal__s.html"];
+}

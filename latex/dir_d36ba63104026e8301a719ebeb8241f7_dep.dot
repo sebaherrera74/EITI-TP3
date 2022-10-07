@@ -1,0 +1,16 @@
+digraph "muju/vendor/ceedling/plugins" {
+  compound=true
+  node [ fontsize="10", fontname="Helvetica"];
+  edge [ labelfontsize="10", labelfontname="Helvetica"];
+  subgraph clusterdir_1692786e1ed7274e5adeb7199a5c4d23 {
+    graph [ bgcolor="#ddddee", pencolor="black", label="ceedling" fontname="Helvetica", fontsize="10", URL="dir_1692786e1ed7274e5adeb7199a5c4d23.html"]
+  subgraph clusterdir_d36ba63104026e8301a719ebeb8241f7 {
+    graph [ bgcolor="#eeeeff", pencolor="black", label="" URL="dir_d36ba63104026e8301a719ebeb8241f7.html"];
+    dir_d36ba63104026e8301a719ebeb8241f7 [shape=plaintext label="plugins"];
+    dir_48aaa27054d806091e5c0480a8c66372 [shape=box label="fake_function_framework" color="red" fillcolor="white" style="filled" URL="dir_48aaa27054d806091e5c0480a8c66372.html"];
+    dir_b0990276d057921d1c724eff4febc9bf [shape=box label="freertos" color="red" fillcolor="white" style="filled" URL="dir_b0990276d057921d1c724eff4febc9bf.html"];
+  }
+  }
+  dir_dee195845ab3b7fc5359b8f8ad33bf1d [shape=box label="vendor" fillcolor="white" style="filled" color="red" URL="dir_dee195845ab3b7fc5359b8f8ad33bf1d.html"];
+  dir_48aaa27054d806091e5c0480a8c66372->dir_dee195845ab3b7fc5359b8f8ad33bf1d [headlabel="2", labeldistance=1.5 headhref="dir_000118_000125.html"];
+}

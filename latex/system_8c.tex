@@ -1,0 +1,367 @@
+\hypertarget{system_8c}{}\section{muju/externals/base/cpu/arm-\/thumb/sys\+\_\+newlib/src/system.c File Reference}
+\label{system_8c}\index{muju/externals/base/cpu/arm-\/thumb/sys\+\_\+newlib/src/system.\+c@{muju/externals/base/cpu/arm-\/thumb/sys\+\_\+newlib/src/system.\+c}}
+{\ttfamily \#include $<$reent.\+h$>$}\newline
+{\ttfamily \#include $<$errno.\+h$>$}\newline
+{\ttfamily \#include $<$signal.\+h$>$}\newline
+Include dependency graph for system.\+c\+:
+% FIG 0
+\subsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#define \hyperlink{system_8c_ad1480e9557edcc543498ca259cee6c7d}{W\+E\+AK}~\hyperlink{externals_2freertos_2portable_2_g_c_c_2_a_r_m___c_m4_f_2portmacro_8h_ac864e333c11a6614eab8e8542ba01ed0}{\+\_\+\+\_\+attribute\+\_\+\+\_\+} ((weak))
+\item 
+\#define \hyperlink{system_8c_a2779a550f9f18d83fbf37c31a11c0c9e}{W\+E\+A\+K\+\_\+\+I\+N\+IT}~\hyperlink{externals_2freertos_2portable_2_g_c_c_2_a_r_m___c_m4_f_2portmacro_8h_ac864e333c11a6614eab8e8542ba01ed0}{\+\_\+\+\_\+attribute\+\_\+\+\_\+} ((weak, constructor))
+\item 
+\#define \hyperlink{system_8c_a86d500a34c624c2cae56bc25a31b12f3}{U\+N\+U\+S\+ED}(x)~(void)x
+\item 
+\#define \hyperlink{system_8c_a4f9e8924083258282925302a84cefca6}{S\+E\+T\+\_\+\+E\+RR}(e)~(r-\/$>$\+\_\+errno = e)
+\end{DoxyCompactItemize}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{vendor__interrupt_8c_ad1480e9557edcc543498ca259cee6c7d}{W\+E\+AK} void \hyperlink{system_8c_abf83674bc13a72bae035995d6dd0bf42}{\+\_\+\+\_\+stdio\+\_\+putchar} (int c)
+\item 
+\hyperlink{vendor__interrupt_8c_ad1480e9557edcc543498ca259cee6c7d}{W\+E\+AK} int \hyperlink{system_8c_ad7a15b6216061ee489dbfe64db5831aa}{\+\_\+\+\_\+stdio\+\_\+getchar} ()
+\item 
+\hyperlink{system_8c_a2779a550f9f18d83fbf37c31a11c0c9e}{W\+E\+A\+K\+\_\+\+I\+N\+IT} void \hyperlink{system_8c_a240f1d9a1c0b76afc3f5421ed775fa3d}{\+\_\+\+\_\+stdio\+\_\+init} ()
+\item 
+void \hyperlink{system_8c_a2115a5a512e89dc34ce23bec2a9551fe}{\+\_\+exit} (int code)
+\item 
+int \hyperlink{system_8c_a2954d4448daa7cc0a36c2ee0b3184431}{\+\_\+close\+\_\+r} (struct \+\_\+reent $\ast$r, int fd)
+\item 
+int \hyperlink{system_8c_abd17b5e9cdbbe05c886efffb355b12d2}{\+\_\+execve\+\_\+r} (struct \+\_\+reent $\ast$r, const char $\ast$\hyperlink{unity_8c_af900396d7b72ff2a7002e8befe8cf8f1}{f}, char $\ast$const $\ast$args, char $\ast$const $\ast$env)
+\item 
+int \hyperlink{system_8c_a61eaa49feb1da195dc935b54c549cc1d}{\+\_\+fcntl\+\_\+r} (struct \+\_\+reent $\ast$r, int fd, int cmd, int arg)
+\item 
+int \hyperlink{system_8c_ad1477b32245bbd06de71bf17c6d13215}{\+\_\+fork\+\_\+r} (struct \+\_\+reent $\ast$r)
+\item 
+int \hyperlink{system_8c_ae475e9b594f340bf89b495f894c41760}{\+\_\+fstat\+\_\+r} (struct \+\_\+reent $\ast$r, int fd, struct stat $\ast$st)
+\item 
+int \hyperlink{system_8c_a727b166113490efb1291e2255fe34700}{\+\_\+getpid\+\_\+r} (struct \+\_\+reent $\ast$r)
+\item 
+int \hyperlink{system_8c_a36d822ac47597188f2a27b2c759ae271}{\+\_\+isatty\+\_\+r} (struct \+\_\+reent $\ast$r, int fd)
+\item 
+int \hyperlink{system_8c_ad3ec26944396263aad26f5b84d54b567}{\+\_\+kill\+\_\+r} (struct \+\_\+reent $\ast$r, int pid, int signal)
+\item 
+int \hyperlink{system_8c_aa78b2a3300cba9af871f3a1007da926e}{\+\_\+link\+\_\+r} (struct \+\_\+reent $\ast$r, const char $\ast$oldf, const char $\ast$newf)
+\item 
+\+\_\+off\+\_\+t \hyperlink{system_8c_a1495a8801cd4183170a930c807522ea0}{\+\_\+lseek\+\_\+r} (struct \+\_\+reent $\ast$r, int fd, \+\_\+off\+\_\+t off, int w)
+\item 
+int \hyperlink{system_8c_a8c9f7c10d79c6fa0acbd7e3f5c8d4769}{\+\_\+mkdir\+\_\+r} (struct \+\_\+reent $\ast$r, const char $\ast$name, int m)
+\item 
+int \hyperlink{system_8c_a63f13fc1c055eda6c5e0c531e237ac5c}{\+\_\+open\+\_\+r} (struct \+\_\+reent $\ast$r, const char $\ast$name, int \hyperlink{unity_8c_af900396d7b72ff2a7002e8befe8cf8f1}{f}, int m)
+\item 
+\+\_\+ssize\+\_\+t \hyperlink{system_8c_a6af33bd3bceaa5bcee0d8e0d4ae37e03}{\+\_\+read\+\_\+r} (struct \+\_\+reent $\ast$r, int fd, void $\ast$b, size\+\_\+t n)
+\item 
+int \hyperlink{system_8c_a45eff4a31963e5aa93e400fa62156393}{\+\_\+rename\+\_\+r} (struct \+\_\+reent $\ast$r, const char $\ast$oldf, const char $\ast$newf)
+\item 
+int \hyperlink{system_8c_ac5a9a4d482816264c070e617b02059b9}{\+\_\+stat\+\_\+r} (struct \+\_\+reent $\ast$r, const char $\ast$name, struct stat $\ast$s)
+\item 
+\+\_\+\+C\+L\+O\+C\+K\+\_\+\+T\+\_\+ \hyperlink{system_8c_adb407d132fa2bf6c2e72efcf87a65e8c}{\+\_\+times\+\_\+r} (struct \+\_\+reent $\ast$r, struct tms $\ast$tm)
+\item 
+int \hyperlink{system_8c_a6ce5a2e0fd26ffdbd0f79aff706dc22c}{\+\_\+unlink\+\_\+r} (struct \+\_\+reent $\ast$r, const char $\ast$name)
+\item 
+int \hyperlink{system_8c_a53de0b32ce38abb700adee68ab80da45}{\+\_\+wait\+\_\+r} (struct \+\_\+reent $\ast$r, int $\ast$st)
+\item 
+\+\_\+ssize\+\_\+t \hyperlink{system_8c_a82c3d25a585c361fd640f343bab13822}{\+\_\+write\+\_\+r} (struct \+\_\+reent $\ast$r, int fd, const void $\ast$b, size\+\_\+t n)
+\item 
+int \hyperlink{system_8c_af0c3c9282393088ab2bc40c5eeda634d}{\+\_\+gettimeofday\+\_\+r} (struct \+\_\+reent $\ast$r, struct timeval $\ast$\+\_\+\+\_\+tp, void $\ast$\+\_\+\+\_\+tzp)
+\item 
+void $\ast$ \hyperlink{system_8c_ae16cc37d1dada9382e4a7f1918aa8292}{\+\_\+sbrk\+\_\+r} (struct \+\_\+reent $\ast$r, ptrdiff\+\_\+t incr)
+\end{DoxyCompactItemize}
+
+
+\subsection{Macro Definition Documentation}
+\mbox{\Hypertarget{system_8c_a4f9e8924083258282925302a84cefca6}\label{system_8c_a4f9e8924083258282925302a84cefca6}} 
+\index{system.\+c@{system.\+c}!S\+E\+T\+\_\+\+E\+RR@{S\+E\+T\+\_\+\+E\+RR}}
+\index{S\+E\+T\+\_\+\+E\+RR@{S\+E\+T\+\_\+\+E\+RR}!system.\+c@{system.\+c}}
+\subsubsection{\texorpdfstring{S\+E\+T\+\_\+\+E\+RR}{SET\_ERR}}
+{\footnotesize\ttfamily \#define S\+E\+T\+\_\+\+E\+RR(\begin{DoxyParamCaption}\item[{}]{e }\end{DoxyParamCaption})~(r-\/$>$\+\_\+errno = e)}
+
+
+
+Definition at line 9 of file system.\+c.
+
+\mbox{\Hypertarget{system_8c_a86d500a34c624c2cae56bc25a31b12f3}\label{system_8c_a86d500a34c624c2cae56bc25a31b12f3}} 
+\index{system.\+c@{system.\+c}!U\+N\+U\+S\+ED@{U\+N\+U\+S\+ED}}
+\index{U\+N\+U\+S\+ED@{U\+N\+U\+S\+ED}!system.\+c@{system.\+c}}
+\subsubsection{\texorpdfstring{U\+N\+U\+S\+ED}{UNUSED}}
+{\footnotesize\ttfamily \#define U\+N\+U\+S\+ED(\begin{DoxyParamCaption}\item[{}]{x }\end{DoxyParamCaption})~(void)x}
+
+
+
+Definition at line 8 of file system.\+c.
+
+\mbox{\Hypertarget{system_8c_ad1480e9557edcc543498ca259cee6c7d}\label{system_8c_ad1480e9557edcc543498ca259cee6c7d}} 
+\index{system.\+c@{system.\+c}!W\+E\+AK@{W\+E\+AK}}
+\index{W\+E\+AK@{W\+E\+AK}!system.\+c@{system.\+c}}
+\subsubsection{\texorpdfstring{W\+E\+AK}{WEAK}}
+{\footnotesize\ttfamily \#define W\+E\+AK~\hyperlink{externals_2freertos_2portable_2_g_c_c_2_a_r_m___c_m4_f_2portmacro_8h_ac864e333c11a6614eab8e8542ba01ed0}{\+\_\+\+\_\+attribute\+\_\+\+\_\+} ((weak))}
+
+
+
+Definition at line 5 of file system.\+c.
+
+\mbox{\Hypertarget{system_8c_a2779a550f9f18d83fbf37c31a11c0c9e}\label{system_8c_a2779a550f9f18d83fbf37c31a11c0c9e}} 
+\index{system.\+c@{system.\+c}!W\+E\+A\+K\+\_\+\+I\+N\+IT@{W\+E\+A\+K\+\_\+\+I\+N\+IT}}
+\index{W\+E\+A\+K\+\_\+\+I\+N\+IT@{W\+E\+A\+K\+\_\+\+I\+N\+IT}!system.\+c@{system.\+c}}
+\subsubsection{\texorpdfstring{W\+E\+A\+K\+\_\+\+I\+N\+IT}{WEAK\_INIT}}
+{\footnotesize\ttfamily \#define W\+E\+A\+K\+\_\+\+I\+N\+IT~\hyperlink{externals_2freertos_2portable_2_g_c_c_2_a_r_m___c_m4_f_2portmacro_8h_ac864e333c11a6614eab8e8542ba01ed0}{\+\_\+\+\_\+attribute\+\_\+\+\_\+} ((weak, constructor))}
+
+
+
+Definition at line 6 of file system.\+c.
+
+
+
+\subsection{Function Documentation}
+\mbox{\Hypertarget{system_8c_ad7a15b6216061ee489dbfe64db5831aa}\label{system_8c_ad7a15b6216061ee489dbfe64db5831aa}} 
+\index{system.\+c@{system.\+c}!\+\_\+\+\_\+stdio\+\_\+getchar@{\+\_\+\+\_\+stdio\+\_\+getchar}}
+\index{\+\_\+\+\_\+stdio\+\_\+getchar@{\+\_\+\+\_\+stdio\+\_\+getchar}!system.\+c@{system.\+c}}
+\subsubsection{\texorpdfstring{\+\_\+\+\_\+stdio\+\_\+getchar()}{\_\_stdio\_getchar()}}
+{\footnotesize\ttfamily \hyperlink{vendor__interrupt_8c_ad1480e9557edcc543498ca259cee6c7d}{W\+E\+AK} int \+\_\+\+\_\+stdio\+\_\+getchar (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Definition at line 24 of file system.\+c.
+
+\mbox{\Hypertarget{system_8c_a240f1d9a1c0b76afc3f5421ed775fa3d}\label{system_8c_a240f1d9a1c0b76afc3f5421ed775fa3d}} 
+\index{system.\+c@{system.\+c}!\+\_\+\+\_\+stdio\+\_\+init@{\+\_\+\+\_\+stdio\+\_\+init}}
+\index{\+\_\+\+\_\+stdio\+\_\+init@{\+\_\+\+\_\+stdio\+\_\+init}!system.\+c@{system.\+c}}
+\subsubsection{\texorpdfstring{\+\_\+\+\_\+stdio\+\_\+init()}{\_\_stdio\_init()}}
+{\footnotesize\ttfamily \hyperlink{system_8c_a2779a550f9f18d83fbf37c31a11c0c9e}{W\+E\+A\+K\+\_\+\+I\+N\+IT} void \+\_\+\+\_\+stdio\+\_\+init (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Definition at line 17 of file system.\+c.
+
+\mbox{\Hypertarget{system_8c_abf83674bc13a72bae035995d6dd0bf42}\label{system_8c_abf83674bc13a72bae035995d6dd0bf42}} 
+\index{system.\+c@{system.\+c}!\+\_\+\+\_\+stdio\+\_\+putchar@{\+\_\+\+\_\+stdio\+\_\+putchar}}
+\index{\+\_\+\+\_\+stdio\+\_\+putchar@{\+\_\+\+\_\+stdio\+\_\+putchar}!system.\+c@{system.\+c}}
+\subsubsection{\texorpdfstring{\+\_\+\+\_\+stdio\+\_\+putchar()}{\_\_stdio\_putchar()}}
+{\footnotesize\ttfamily \hyperlink{vendor__interrupt_8c_ad1480e9557edcc543498ca259cee6c7d}{W\+E\+AK} void \+\_\+\+\_\+stdio\+\_\+putchar (\begin{DoxyParamCaption}\item[{int}]{c }\end{DoxyParamCaption})}
+
+
+
+Definition at line 20 of file system.\+c.
+
+\mbox{\Hypertarget{system_8c_a2954d4448daa7cc0a36c2ee0b3184431}\label{system_8c_a2954d4448daa7cc0a36c2ee0b3184431}} 
+\index{system.\+c@{system.\+c}!\+\_\+close\+\_\+r@{\+\_\+close\+\_\+r}}
+\index{\+\_\+close\+\_\+r@{\+\_\+close\+\_\+r}!system.\+c@{system.\+c}}
+\subsubsection{\texorpdfstring{\+\_\+close\+\_\+r()}{\_close\_r()}}
+{\footnotesize\ttfamily int \+\_\+close\+\_\+r (\begin{DoxyParamCaption}\item[{struct \+\_\+reent $\ast$}]{r,  }\item[{int}]{fd }\end{DoxyParamCaption})}
+
+
+
+Definition at line 36 of file system.\+c.
+
+\mbox{\Hypertarget{system_8c_abd17b5e9cdbbe05c886efffb355b12d2}\label{system_8c_abd17b5e9cdbbe05c886efffb355b12d2}} 
+\index{system.\+c@{system.\+c}!\+\_\+execve\+\_\+r@{\+\_\+execve\+\_\+r}}
+\index{\+\_\+execve\+\_\+r@{\+\_\+execve\+\_\+r}!system.\+c@{system.\+c}}
+\subsubsection{\texorpdfstring{\+\_\+execve\+\_\+r()}{\_execve\_r()}}
+{\footnotesize\ttfamily int \+\_\+execve\+\_\+r (\begin{DoxyParamCaption}\item[{struct \+\_\+reent $\ast$}]{r,  }\item[{const char $\ast$}]{f,  }\item[{char $\ast$const $\ast$}]{args,  }\item[{char $\ast$const $\ast$}]{env }\end{DoxyParamCaption})}
+
+
+
+Definition at line 42 of file system.\+c.
+
+\mbox{\Hypertarget{system_8c_a2115a5a512e89dc34ce23bec2a9551fe}\label{system_8c_a2115a5a512e89dc34ce23bec2a9551fe}} 
+\index{system.\+c@{system.\+c}!\+\_\+exit@{\+\_\+exit}}
+\index{\+\_\+exit@{\+\_\+exit}!system.\+c@{system.\+c}}
+\subsubsection{\texorpdfstring{\+\_\+exit()}{\_exit()}}
+{\footnotesize\ttfamily void \+\_\+exit (\begin{DoxyParamCaption}\item[{int}]{code }\end{DoxyParamCaption})}
+
+
+
+Definition at line 28 of file system.\+c.
+
+\mbox{\Hypertarget{system_8c_a61eaa49feb1da195dc935b54c549cc1d}\label{system_8c_a61eaa49feb1da195dc935b54c549cc1d}} 
+\index{system.\+c@{system.\+c}!\+\_\+fcntl\+\_\+r@{\+\_\+fcntl\+\_\+r}}
+\index{\+\_\+fcntl\+\_\+r@{\+\_\+fcntl\+\_\+r}!system.\+c@{system.\+c}}
+\subsubsection{\texorpdfstring{\+\_\+fcntl\+\_\+r()}{\_fcntl\_r()}}
+{\footnotesize\ttfamily int \+\_\+fcntl\+\_\+r (\begin{DoxyParamCaption}\item[{struct \+\_\+reent $\ast$}]{r,  }\item[{int}]{fd,  }\item[{int}]{cmd,  }\item[{int}]{arg }\end{DoxyParamCaption})}
+
+
+
+Definition at line 51 of file system.\+c.
+
+\mbox{\Hypertarget{system_8c_ad1477b32245bbd06de71bf17c6d13215}\label{system_8c_ad1477b32245bbd06de71bf17c6d13215}} 
+\index{system.\+c@{system.\+c}!\+\_\+fork\+\_\+r@{\+\_\+fork\+\_\+r}}
+\index{\+\_\+fork\+\_\+r@{\+\_\+fork\+\_\+r}!system.\+c@{system.\+c}}
+\subsubsection{\texorpdfstring{\+\_\+fork\+\_\+r()}{\_fork\_r()}}
+{\footnotesize\ttfamily int \+\_\+fork\+\_\+r (\begin{DoxyParamCaption}\item[{struct \+\_\+reent $\ast$}]{r }\end{DoxyParamCaption})}
+
+
+
+Definition at line 59 of file system.\+c.
+
+\mbox{\Hypertarget{system_8c_ae475e9b594f340bf89b495f894c41760}\label{system_8c_ae475e9b594f340bf89b495f894c41760}} 
+\index{system.\+c@{system.\+c}!\+\_\+fstat\+\_\+r@{\+\_\+fstat\+\_\+r}}
+\index{\+\_\+fstat\+\_\+r@{\+\_\+fstat\+\_\+r}!system.\+c@{system.\+c}}
+\subsubsection{\texorpdfstring{\+\_\+fstat\+\_\+r()}{\_fstat\_r()}}
+{\footnotesize\ttfamily int \+\_\+fstat\+\_\+r (\begin{DoxyParamCaption}\item[{struct \+\_\+reent $\ast$}]{r,  }\item[{int}]{fd,  }\item[{struct stat $\ast$}]{st }\end{DoxyParamCaption})}
+
+
+
+Definition at line 64 of file system.\+c.
+
+\mbox{\Hypertarget{system_8c_a727b166113490efb1291e2255fe34700}\label{system_8c_a727b166113490efb1291e2255fe34700}} 
+\index{system.\+c@{system.\+c}!\+\_\+getpid\+\_\+r@{\+\_\+getpid\+\_\+r}}
+\index{\+\_\+getpid\+\_\+r@{\+\_\+getpid\+\_\+r}!system.\+c@{system.\+c}}
+\subsubsection{\texorpdfstring{\+\_\+getpid\+\_\+r()}{\_getpid\_r()}}
+{\footnotesize\ttfamily int \+\_\+getpid\+\_\+r (\begin{DoxyParamCaption}\item[{struct \+\_\+reent $\ast$}]{r }\end{DoxyParamCaption})}
+
+
+
+Definition at line 71 of file system.\+c.
+
+\mbox{\Hypertarget{system_8c_af0c3c9282393088ab2bc40c5eeda634d}\label{system_8c_af0c3c9282393088ab2bc40c5eeda634d}} 
+\index{system.\+c@{system.\+c}!\+\_\+gettimeofday\+\_\+r@{\+\_\+gettimeofday\+\_\+r}}
+\index{\+\_\+gettimeofday\+\_\+r@{\+\_\+gettimeofday\+\_\+r}!system.\+c@{system.\+c}}
+\subsubsection{\texorpdfstring{\+\_\+gettimeofday\+\_\+r()}{\_gettimeofday\_r()}}
+{\footnotesize\ttfamily int \+\_\+gettimeofday\+\_\+r (\begin{DoxyParamCaption}\item[{struct \+\_\+reent $\ast$}]{r,  }\item[{struct timeval $\ast$}]{\+\_\+\+\_\+tp,  }\item[{void $\ast$}]{\+\_\+\+\_\+tzp }\end{DoxyParamCaption})}
+
+
+
+Definition at line 233 of file system.\+c.
+
+\mbox{\Hypertarget{system_8c_a36d822ac47597188f2a27b2c759ae271}\label{system_8c_a36d822ac47597188f2a27b2c759ae271}} 
+\index{system.\+c@{system.\+c}!\+\_\+isatty\+\_\+r@{\+\_\+isatty\+\_\+r}}
+\index{\+\_\+isatty\+\_\+r@{\+\_\+isatty\+\_\+r}!system.\+c@{system.\+c}}
+\subsubsection{\texorpdfstring{\+\_\+isatty\+\_\+r()}{\_isatty\_r()}}
+{\footnotesize\ttfamily int \+\_\+isatty\+\_\+r (\begin{DoxyParamCaption}\item[{struct \+\_\+reent $\ast$}]{r,  }\item[{int}]{fd }\end{DoxyParamCaption})}
+
+
+
+Definition at line 76 of file system.\+c.
+
+\mbox{\Hypertarget{system_8c_ad3ec26944396263aad26f5b84d54b567}\label{system_8c_ad3ec26944396263aad26f5b84d54b567}} 
+\index{system.\+c@{system.\+c}!\+\_\+kill\+\_\+r@{\+\_\+kill\+\_\+r}}
+\index{\+\_\+kill\+\_\+r@{\+\_\+kill\+\_\+r}!system.\+c@{system.\+c}}
+\subsubsection{\texorpdfstring{\+\_\+kill\+\_\+r()}{\_kill\_r()}}
+{\footnotesize\ttfamily int \+\_\+kill\+\_\+r (\begin{DoxyParamCaption}\item[{struct \+\_\+reent $\ast$}]{r,  }\item[{int}]{pid,  }\item[{int}]{signal }\end{DoxyParamCaption})}
+
+
+
+Definition at line 88 of file system.\+c.
+
+\mbox{\Hypertarget{system_8c_aa78b2a3300cba9af871f3a1007da926e}\label{system_8c_aa78b2a3300cba9af871f3a1007da926e}} 
+\index{system.\+c@{system.\+c}!\+\_\+link\+\_\+r@{\+\_\+link\+\_\+r}}
+\index{\+\_\+link\+\_\+r@{\+\_\+link\+\_\+r}!system.\+c@{system.\+c}}
+\subsubsection{\texorpdfstring{\+\_\+link\+\_\+r()}{\_link\_r()}}
+{\footnotesize\ttfamily int \+\_\+link\+\_\+r (\begin{DoxyParamCaption}\item[{struct \+\_\+reent $\ast$}]{r,  }\item[{const char $\ast$}]{oldf,  }\item[{const char $\ast$}]{newf }\end{DoxyParamCaption})}
+
+
+
+Definition at line 114 of file system.\+c.
+
+\mbox{\Hypertarget{system_8c_a1495a8801cd4183170a930c807522ea0}\label{system_8c_a1495a8801cd4183170a930c807522ea0}} 
+\index{system.\+c@{system.\+c}!\+\_\+lseek\+\_\+r@{\+\_\+lseek\+\_\+r}}
+\index{\+\_\+lseek\+\_\+r@{\+\_\+lseek\+\_\+r}!system.\+c@{system.\+c}}
+\subsubsection{\texorpdfstring{\+\_\+lseek\+\_\+r()}{\_lseek\_r()}}
+{\footnotesize\ttfamily \+\_\+off\+\_\+t \+\_\+lseek\+\_\+r (\begin{DoxyParamCaption}\item[{struct \+\_\+reent $\ast$}]{r,  }\item[{int}]{fd,  }\item[{\+\_\+off\+\_\+t}]{off,  }\item[{int}]{w }\end{DoxyParamCaption})}
+
+
+
+Definition at line 121 of file system.\+c.
+
+\mbox{\Hypertarget{system_8c_a8c9f7c10d79c6fa0acbd7e3f5c8d4769}\label{system_8c_a8c9f7c10d79c6fa0acbd7e3f5c8d4769}} 
+\index{system.\+c@{system.\+c}!\+\_\+mkdir\+\_\+r@{\+\_\+mkdir\+\_\+r}}
+\index{\+\_\+mkdir\+\_\+r@{\+\_\+mkdir\+\_\+r}!system.\+c@{system.\+c}}
+\subsubsection{\texorpdfstring{\+\_\+mkdir\+\_\+r()}{\_mkdir\_r()}}
+{\footnotesize\ttfamily int \+\_\+mkdir\+\_\+r (\begin{DoxyParamCaption}\item[{struct \+\_\+reent $\ast$}]{r,  }\item[{const char $\ast$}]{name,  }\item[{int}]{m }\end{DoxyParamCaption})}
+
+
+
+Definition at line 129 of file system.\+c.
+
+\mbox{\Hypertarget{system_8c_a63f13fc1c055eda6c5e0c531e237ac5c}\label{system_8c_a63f13fc1c055eda6c5e0c531e237ac5c}} 
+\index{system.\+c@{system.\+c}!\+\_\+open\+\_\+r@{\+\_\+open\+\_\+r}}
+\index{\+\_\+open\+\_\+r@{\+\_\+open\+\_\+r}!system.\+c@{system.\+c}}
+\subsubsection{\texorpdfstring{\+\_\+open\+\_\+r()}{\_open\_r()}}
+{\footnotesize\ttfamily int \+\_\+open\+\_\+r (\begin{DoxyParamCaption}\item[{struct \+\_\+reent $\ast$}]{r,  }\item[{const char $\ast$}]{name,  }\item[{int}]{f,  }\item[{int}]{m }\end{DoxyParamCaption})}
+
+
+
+Definition at line 136 of file system.\+c.
+
+\mbox{\Hypertarget{system_8c_a6af33bd3bceaa5bcee0d8e0d4ae37e03}\label{system_8c_a6af33bd3bceaa5bcee0d8e0d4ae37e03}} 
+\index{system.\+c@{system.\+c}!\+\_\+read\+\_\+r@{\+\_\+read\+\_\+r}}
+\index{\+\_\+read\+\_\+r@{\+\_\+read\+\_\+r}!system.\+c@{system.\+c}}
+\subsubsection{\texorpdfstring{\+\_\+read\+\_\+r()}{\_read\_r()}}
+{\footnotesize\ttfamily \+\_\+ssize\+\_\+t \+\_\+read\+\_\+r (\begin{DoxyParamCaption}\item[{struct \+\_\+reent $\ast$}]{r,  }\item[{int}]{fd,  }\item[{void $\ast$}]{b,  }\item[{size\+\_\+t}]{n }\end{DoxyParamCaption})}
+
+
+
+Definition at line 160 of file system.\+c.
+
+\mbox{\Hypertarget{system_8c_a45eff4a31963e5aa93e400fa62156393}\label{system_8c_a45eff4a31963e5aa93e400fa62156393}} 
+\index{system.\+c@{system.\+c}!\+\_\+rename\+\_\+r@{\+\_\+rename\+\_\+r}}
+\index{\+\_\+rename\+\_\+r@{\+\_\+rename\+\_\+r}!system.\+c@{system.\+c}}
+\subsubsection{\texorpdfstring{\+\_\+rename\+\_\+r()}{\_rename\_r()}}
+{\footnotesize\ttfamily int \+\_\+rename\+\_\+r (\begin{DoxyParamCaption}\item[{struct \+\_\+reent $\ast$}]{r,  }\item[{const char $\ast$}]{oldf,  }\item[{const char $\ast$}]{newf }\end{DoxyParamCaption})}
+
+
+
+Definition at line 185 of file system.\+c.
+
+\mbox{\Hypertarget{system_8c_ae16cc37d1dada9382e4a7f1918aa8292}\label{system_8c_ae16cc37d1dada9382e4a7f1918aa8292}} 
+\index{system.\+c@{system.\+c}!\+\_\+sbrk\+\_\+r@{\+\_\+sbrk\+\_\+r}}
+\index{\+\_\+sbrk\+\_\+r@{\+\_\+sbrk\+\_\+r}!system.\+c@{system.\+c}}
+\subsubsection{\texorpdfstring{\+\_\+sbrk\+\_\+r()}{\_sbrk\_r()}}
+{\footnotesize\ttfamily void$\ast$ \+\_\+sbrk\+\_\+r (\begin{DoxyParamCaption}\item[{struct \+\_\+reent $\ast$}]{r,  }\item[{ptrdiff\+\_\+t}]{incr }\end{DoxyParamCaption})}
+
+
+
+Definition at line 242 of file system.\+c.
+
+\mbox{\Hypertarget{system_8c_ac5a9a4d482816264c070e617b02059b9}\label{system_8c_ac5a9a4d482816264c070e617b02059b9}} 
+\index{system.\+c@{system.\+c}!\+\_\+stat\+\_\+r@{\+\_\+stat\+\_\+r}}
+\index{\+\_\+stat\+\_\+r@{\+\_\+stat\+\_\+r}!system.\+c@{system.\+c}}
+\subsubsection{\texorpdfstring{\+\_\+stat\+\_\+r()}{\_stat\_r()}}
+{\footnotesize\ttfamily int \+\_\+stat\+\_\+r (\begin{DoxyParamCaption}\item[{struct \+\_\+reent $\ast$}]{r,  }\item[{const char $\ast$}]{name,  }\item[{struct stat $\ast$}]{s }\end{DoxyParamCaption})}
+
+
+
+Definition at line 192 of file system.\+c.
+
+\mbox{\Hypertarget{system_8c_adb407d132fa2bf6c2e72efcf87a65e8c}\label{system_8c_adb407d132fa2bf6c2e72efcf87a65e8c}} 
+\index{system.\+c@{system.\+c}!\+\_\+times\+\_\+r@{\+\_\+times\+\_\+r}}
+\index{\+\_\+times\+\_\+r@{\+\_\+times\+\_\+r}!system.\+c@{system.\+c}}
+\subsubsection{\texorpdfstring{\+\_\+times\+\_\+r()}{\_times\_r()}}
+{\footnotesize\ttfamily \+\_\+\+C\+L\+O\+C\+K\+\_\+\+T\+\_\+ \+\_\+times\+\_\+r (\begin{DoxyParamCaption}\item[{struct \+\_\+reent $\ast$}]{r,  }\item[{struct tms $\ast$}]{tm }\end{DoxyParamCaption})}
+
+
+
+Definition at line 199 of file system.\+c.
+
+\mbox{\Hypertarget{system_8c_a6ce5a2e0fd26ffdbd0f79aff706dc22c}\label{system_8c_a6ce5a2e0fd26ffdbd0f79aff706dc22c}} 
+\index{system.\+c@{system.\+c}!\+\_\+unlink\+\_\+r@{\+\_\+unlink\+\_\+r}}
+\index{\+\_\+unlink\+\_\+r@{\+\_\+unlink\+\_\+r}!system.\+c@{system.\+c}}
+\subsubsection{\texorpdfstring{\+\_\+unlink\+\_\+r()}{\_unlink\_r()}}
+{\footnotesize\ttfamily int \+\_\+unlink\+\_\+r (\begin{DoxyParamCaption}\item[{struct \+\_\+reent $\ast$}]{r,  }\item[{const char $\ast$}]{name }\end{DoxyParamCaption})}
+
+
+
+Definition at line 205 of file system.\+c.
+
+\mbox{\Hypertarget{system_8c_a53de0b32ce38abb700adee68ab80da45}\label{system_8c_a53de0b32ce38abb700adee68ab80da45}} 
+\index{system.\+c@{system.\+c}!\+\_\+wait\+\_\+r@{\+\_\+wait\+\_\+r}}
+\index{\+\_\+wait\+\_\+r@{\+\_\+wait\+\_\+r}!system.\+c@{system.\+c}}
+\subsubsection{\texorpdfstring{\+\_\+wait\+\_\+r()}{\_wait\_r()}}
+{\footnotesize\ttfamily int \+\_\+wait\+\_\+r (\begin{DoxyParamCaption}\item[{struct \+\_\+reent $\ast$}]{r,  }\item[{int $\ast$}]{st }\end{DoxyParamCaption})}
+
+
+
+Definition at line 211 of file system.\+c.
+
+\mbox{\Hypertarget{system_8c_a82c3d25a585c361fd640f343bab13822}\label{system_8c_a82c3d25a585c361fd640f343bab13822}} 
+\index{system.\+c@{system.\+c}!\+\_\+write\+\_\+r@{\+\_\+write\+\_\+r}}
+\index{\+\_\+write\+\_\+r@{\+\_\+write\+\_\+r}!system.\+c@{system.\+c}}
+\subsubsection{\texorpdfstring{\+\_\+write\+\_\+r()}{\_write\_r()}}
+{\footnotesize\ttfamily \+\_\+ssize\+\_\+t \+\_\+write\+\_\+r (\begin{DoxyParamCaption}\item[{struct \+\_\+reent $\ast$}]{r,  }\item[{int}]{fd,  }\item[{const void $\ast$}]{b,  }\item[{size\+\_\+t}]{n }\end{DoxyParamCaption})}
+
+
+
+Definition at line 217 of file system.\+c.
+

@@ -1,0 +1,13 @@
+\hypertarget{group__x_task_notify_and_query_indexed_from_i_s_r}{}\section{x\+Task\+Notify\+And\+Query\+Indexed\+From\+I\+SR}
+\label{group__x_task_notify_and_query_indexed_from_i_s_r}\index{x\+Task\+Notify\+And\+Query\+Indexed\+From\+I\+SR@{x\+Task\+Notify\+And\+Query\+Indexed\+From\+I\+SR}}
+task. h 
+\begin{DoxyPre}BaseType\_t \hyperlink{externals_2freertos_2include_2task_8h_a310ee091fef5bf31f23e06bc2a71cfab}{xTaskNotifyAndQueryIndexedFromISR( TaskHandle\_t xTaskToNotify, UBaseType\_t uxIndexToNotify, uint32\_t ulValue, eNotifyAction eAction, uint32\_t *pulPreviousNotificationValue, BaseType\_t *pxHigherPriorityTaskWoken )};\end{DoxyPre}
+ 
+\begin{DoxyPre}BaseType\_t \hyperlink{externals_2freertos_2include_2task_8h_a5c491b42e243a91c7473887d1fb96dd5}{xTaskNotifyAndQueryFromISR( TaskHandle\_t xTaskToNotify, uint32\_t ulValue, eNotifyAction eAction, uint32\_t *pulPreviousNotificationValue, BaseType\_t *pxHigherPriorityTaskWoken )};\end{DoxyPre}
+
+
+See \href{https://www.FreeRTOS.org/RTOS-task-notifications.html}{\tt https\+://www.\+Free\+R\+T\+O\+S.\+org/\+R\+T\+O\+S-\/task-\/notifications.\+html} for details.
+
+\hyperlink{externals_2freertos_2include_2task_8h_a310ee091fef5bf31f23e06bc2a71cfab}{x\+Task\+Notify\+And\+Query\+Indexed\+From\+I\+S\+R()} performs the same operation as \hyperlink{externals_2freertos_2include_2task_8h_ab86169cb5493142a9e247e2cf2e583e2}{x\+Task\+Notify\+Indexed\+From\+I\+S\+R()} with the addition that it also returns the subject task\textquotesingle{}s prior notification value (the notification value at the time the function is called rather than at the time the function returns) in the additional pul\+Previous\+Notify\+Value parameter.
+
+\hyperlink{externals_2freertos_2include_2task_8h_a5c491b42e243a91c7473887d1fb96dd5}{x\+Task\+Notify\+And\+Query\+From\+I\+S\+R()} performs the same operation as \hyperlink{externals_2freertos_2include_2task_8h_a1ed9129068b96a909356bd0369c5ecb0}{x\+Task\+Notify\+From\+I\+S\+R()} with the addition that it also returns the subject task\textquotesingle{}s prior notification value (the notification value at the time the function is called rather than at the time the function returns) in the additional pul\+Previous\+Notify\+Value parameter. 

@@ -32,7 +32,7 @@
 
 /** @file digital.h
  **
- ** @brief Cabecera del modulo con las funciones del alumno
+ ** @brief Cabecera del modulo con las funciones de las saidas y entradas del micro
  **
  ** 
  ** | RV | YYYY.MM.DD | Autor       | Descripción de los cambios              |
@@ -40,7 +40,7 @@
  ** |  1 | 2022.08.27 | sherrera    | Version inicial del archivo             |
  ** 
  ** @defgroup  Plantilla de archivos 
- ** @brief    Plantilas de archivos normalizadas  
+ ** @brief     Plantilas de archivos normalizadas
  ** @{ 
  */
 
@@ -58,28 +58,41 @@ extern "C" {
 
 typedef struct digital_output_s * digital_output_t;
 
-//! Estructura que contiene los datos del alumno
-typedef struct alumno_s {
-    char apellido[25];    //!< Cadena de caracteres con el apellido del alumno
-     char nombres[25];    //!< Cadena de caracteres con el nombre del alumno
-    char dni[20];         //!< Cadena de caracteres con el DNI del alumno
-}* alumno_t;
 
 /* === Declaraciones de variables publicas ================================= */
 
 
 /* === Declaraciones de funciones publicas ================================= */
-/**
- * @brief Funcion para mostrar el nombre del alumno
- * Esta funcion muestra por pantallla los datos del alumno. 
- * Debe recibir un puntero a una estructura con los datos del alukno que se quiere mostrar
- * 
- * @param alumno  Puntero a la estructura con los datos del alumno
- */
 
+/**
+ * @brief Funcion para crear una salida digtial permitiendo encapsular
+ * en un tipo de dato.
+ * 
+ * @param[in] : Puerto asociado al microcontrolador
+ * @param[in] : Pin asociado al microcontrolador
+ * @return retoma un dato abstracto aociado a esa salida  */
 digital_output_t DigitalOutputCreate(uint8_t port, uint8_t bit);
+
+/**
+ * @brief Funcion que activa una salida asociada al pin del microcontrolador
+ *
+ * @param[in] : digital_output_t :Dato de tipo abstracto asociado al microcontrolador
+ * @return    : Vacio  */
 void DigitalOutputActivate(digital_output_t output);
+
+/**
+ * @brief Funcion que desactiva una salida asociada al pin del microcontrolador
+ *
+ * @param[in] : digital_output_t :Dato de tipo abstracto asociado al microcontrolador
+ * @return    : Vacio  */
 void DigitalOutputDeactivate(digital_output_t output);
+
+/**
+ * @brief Funcion que cambia de estado una salida asociada al pin del microcontrolador
+ *
+ * @param[in] : digital_output_t :Dato de tipo abstracto asociado al microcontrolador
+ * @return    : Vacio  */
+
 void DigitalOutputToogle(digital_output_t output);
 
 

@@ -1,0 +1,9 @@
+digraph "CHIP: LPC18xx/43xx I2C master-only driver"
+{
+  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
+  node [fontname="Helvetica",fontsize="10",shape=record];
+  rankdir=LR;
+  Node0 [label="CHIP: LPC18xx/43xx\l I2C master-only driver",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black"];
+  Node1 [label="CHIP: LPC18xx_43xx\l I2C driver",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$group___i2_c__18_x_x__43_x_x.html"];
+  Node1->Node0 [shape=plaintext, dir="back", style="solid"];
+}

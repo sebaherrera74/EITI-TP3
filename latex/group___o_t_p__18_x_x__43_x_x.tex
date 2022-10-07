@@ -1,0 +1,272 @@
+\hypertarget{group___o_t_p__18_x_x__43_x_x}{}\section{C\+H\+IP\+: L\+P\+C18xx/43xx O\+TP Controller driver}
+\label{group___o_t_p__18_x_x__43_x_x}\index{C\+H\+I\+P\+: L\+P\+C18xx/43xx O\+T\+P Controller driver@{C\+H\+I\+P\+: L\+P\+C18xx/43xx O\+T\+P Controller driver}}
+\subsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+struct \hyperlink{struct_l_p_c___o_t_p___t}{L\+P\+C\+\_\+\+O\+T\+P\+\_\+T}
+\begin{DoxyCompactList}\small\item\em O\+TP Register block. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Typedefs}
+\begin{DoxyCompactItemize}
+\item 
+typedef enum \hyperlink{group___o_t_p__18_x_x__43_x_x_ga6e90c3dfad51a2a8591e531b0a788134}{C\+H\+I\+P\+\_\+\+O\+T\+P\+\_\+\+B\+O\+O\+T\+\_\+\+S\+RC} \hyperlink{group___o_t_p__18_x_x__43_x_x_gada36d39d34c8821f0416a852faa926f6}{C\+H\+I\+P\+\_\+\+O\+T\+P\+\_\+\+B\+O\+O\+T\+\_\+\+S\+R\+C\+\_\+T}
+\begin{DoxyCompactList}\small\item\em O\+TP Boot Source selection used in Chip driver. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Enumerations}
+\begin{DoxyCompactItemize}
+\item 
+enum \hyperlink{group___o_t_p__18_x_x__43_x_x_ga6e90c3dfad51a2a8591e531b0a788134}{C\+H\+I\+P\+\_\+\+O\+T\+P\+\_\+\+B\+O\+O\+T\+\_\+\+S\+RC} \{ \newline
+\hyperlink{group___o_t_p__18_x_x__43_x_x_gga6e90c3dfad51a2a8591e531b0a788134a7edac5f881d9fa35771747241d92e54c}{C\+H\+I\+P\+\_\+\+O\+T\+P\+\_\+\+B\+O\+O\+T\+S\+R\+C\+\_\+\+P\+I\+NS}, 
+\hyperlink{group___o_t_p__18_x_x__43_x_x_gga6e90c3dfad51a2a8591e531b0a788134a4e63ed2b5c75666820d88e1952e38dd8}{C\+H\+I\+P\+\_\+\+O\+T\+P\+\_\+\+B\+O\+O\+T\+S\+R\+C\+\_\+\+U\+A\+R\+T0}, 
+\hyperlink{group___o_t_p__18_x_x__43_x_x_gga6e90c3dfad51a2a8591e531b0a788134a349bdd67e34610851e20d718fe8bf1a3}{C\+H\+I\+P\+\_\+\+O\+T\+P\+\_\+\+B\+O\+O\+T\+S\+R\+C\+\_\+\+S\+P\+I\+FI}, 
+\hyperlink{group___o_t_p__18_x_x__43_x_x_gga6e90c3dfad51a2a8591e531b0a788134ae8b3cc8a5fb8f85b6713923b4bb2acf9}{C\+H\+I\+P\+\_\+\+O\+T\+P\+\_\+\+B\+O\+O\+T\+S\+R\+C\+\_\+\+E\+M\+C8}, 
+\newline
+\hyperlink{group___o_t_p__18_x_x__43_x_x_gga6e90c3dfad51a2a8591e531b0a788134a0b4116043093206979c47889b1e0922f}{C\+H\+I\+P\+\_\+\+O\+T\+P\+\_\+\+B\+O\+O\+T\+S\+R\+C\+\_\+\+E\+M\+C16}, 
+\hyperlink{group___o_t_p__18_x_x__43_x_x_gga6e90c3dfad51a2a8591e531b0a788134aa31487f429556be80dc49ae3fd6d6bcc}{C\+H\+I\+P\+\_\+\+O\+T\+P\+\_\+\+B\+O\+O\+T\+S\+R\+C\+\_\+\+E\+M\+C32}, 
+\hyperlink{group___o_t_p__18_x_x__43_x_x_gga6e90c3dfad51a2a8591e531b0a788134a9a02466a89f214d4f43dcdf5a12aadb4}{C\+H\+I\+P\+\_\+\+O\+T\+P\+\_\+\+B\+O\+O\+T\+S\+R\+C\+\_\+\+U\+S\+B0}, 
+\hyperlink{group___o_t_p__18_x_x__43_x_x_gga6e90c3dfad51a2a8591e531b0a788134a47af95347b0d598a7384867a78e1cf79}{C\+H\+I\+P\+\_\+\+O\+T\+P\+\_\+\+B\+O\+O\+T\+S\+R\+C\+\_\+\+U\+S\+B1}, 
+\newline
+\hyperlink{group___o_t_p__18_x_x__43_x_x_gga6e90c3dfad51a2a8591e531b0a788134a27ef19497cee62cca57abd98174e3b31}{C\+H\+I\+P\+\_\+\+O\+T\+P\+\_\+\+B\+O\+O\+T\+S\+R\+C\+\_\+\+S\+PI}, 
+\hyperlink{group___o_t_p__18_x_x__43_x_x_gga6e90c3dfad51a2a8591e531b0a788134a65087c2a7e2a4757c72d68332201d6c2}{C\+H\+I\+P\+\_\+\+O\+T\+P\+\_\+\+B\+O\+O\+T\+S\+R\+C\+\_\+\+U\+A\+R\+T3}
+ \}\begin{DoxyCompactList}\small\item\em O\+TP Boot Source selection used in Chip driver. \end{DoxyCompactList}
+\end{DoxyCompactItemize}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+uint32\+\_\+t \hyperlink{group___o_t_p__18_x_x__43_x_x_ga511e3cb6017233783efebf0c9675cc97}{Chip\+\_\+\+O\+T\+P\+\_\+\+Init} (void)
+\begin{DoxyCompactList}\small\item\em Initialize for O\+TP Controller functions. \end{DoxyCompactList}\item 
+uint32\+\_\+t \hyperlink{group___o_t_p__18_x_x__43_x_x_gafefbdff9c8b9d1f5dd79a8dff3a44e08}{Chip\+\_\+\+O\+T\+P\+\_\+\+Prog\+Boot\+Src} (\hyperlink{group___o_t_p__18_x_x__43_x_x_gada36d39d34c8821f0416a852faa926f6}{C\+H\+I\+P\+\_\+\+O\+T\+P\+\_\+\+B\+O\+O\+T\+\_\+\+S\+R\+C\+\_\+T} Boot\+Src)
+\begin{DoxyCompactList}\small\item\em Program boot source in O\+TP Controller. \end{DoxyCompactList}\item 
+uint32\+\_\+t \hyperlink{group___o_t_p__18_x_x__43_x_x_gac6f321b6c7c397b3338c3ebe81d4d01f}{Chip\+\_\+\+O\+T\+P\+\_\+\+Prog\+J\+T\+A\+G\+Dis} (void)
+\begin{DoxyCompactList}\small\item\em Program the J\+T\+AG bit in O\+TP Controller. \end{DoxyCompactList}\item 
+uint32\+\_\+t \hyperlink{group___o_t_p__18_x_x__43_x_x_ga040917e9f2de58ca6cbff2993a5232b9}{Chip\+\_\+\+O\+T\+P\+\_\+\+Prog\+U\+S\+B\+ID} (uint32\+\_\+t Product\+ID, uint32\+\_\+t Vendor\+ID)
+\begin{DoxyCompactList}\small\item\em Program U\+SB ID in O\+TP Controller. \end{DoxyCompactList}\item 
+uint32\+\_\+t \hyperlink{group___o_t_p__18_x_x__43_x_x_gae9fc592f60829d5aefd72c9dbe83a58a}{Chip\+\_\+\+O\+T\+P\+\_\+\+Prog\+G\+P\+Word} (uint32\+\_\+t Word\+Num, uint32\+\_\+t Data, uint32\+\_\+t Mask)
+\begin{DoxyCompactList}\small\item\em Program O\+TP GP Word memory. \end{DoxyCompactList}\item 
+uint32\+\_\+t \hyperlink{group___o_t_p__18_x_x__43_x_x_gab94e93611ec4efa732ad045c471d646c}{Chip\+\_\+\+O\+T\+P\+\_\+\+Prog\+Key} (uint32\+\_\+t Key\+Num, uint8\+\_\+t $\ast$key)
+\begin{DoxyCompactList}\small\item\em Program A\+ES Key. \end{DoxyCompactList}\item 
+uint32\+\_\+t \hyperlink{group___o_t_p__18_x_x__43_x_x_gaabb646c42cbd57630ec23816c115a7a0}{Chip\+\_\+\+O\+T\+P\+\_\+\+Gen\+Rand} (void)
+\begin{DoxyCompactList}\small\item\em Generate Random Number using HW Random Number Generator. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+
+
+\subsection{Typedef Documentation}
+\mbox{\Hypertarget{group___o_t_p__18_x_x__43_x_x_gada36d39d34c8821f0416a852faa926f6}\label{group___o_t_p__18_x_x__43_x_x_gada36d39d34c8821f0416a852faa926f6}} 
+\index{C\+H\+I\+P\+: L\+P\+C18xx/43xx O\+T\+P Controller driver@{C\+H\+I\+P\+: L\+P\+C18xx/43xx O\+T\+P Controller driver}!C\+H\+I\+P\+\_\+\+O\+T\+P\+\_\+\+B\+O\+O\+T\+\_\+\+S\+R\+C\+\_\+T@{C\+H\+I\+P\+\_\+\+O\+T\+P\+\_\+\+B\+O\+O\+T\+\_\+\+S\+R\+C\+\_\+T}}
+\index{C\+H\+I\+P\+\_\+\+O\+T\+P\+\_\+\+B\+O\+O\+T\+\_\+\+S\+R\+C\+\_\+T@{C\+H\+I\+P\+\_\+\+O\+T\+P\+\_\+\+B\+O\+O\+T\+\_\+\+S\+R\+C\+\_\+T}!C\+H\+I\+P\+: L\+P\+C18xx/43xx O\+T\+P Controller driver@{C\+H\+I\+P\+: L\+P\+C18xx/43xx O\+T\+P Controller driver}}
+\subsubsection{\texorpdfstring{C\+H\+I\+P\+\_\+\+O\+T\+P\+\_\+\+B\+O\+O\+T\+\_\+\+S\+R\+C\+\_\+T}{CHIP\_OTP\_BOOT\_SRC\_T}}
+{\footnotesize\ttfamily typedef enum \hyperlink{group___o_t_p__18_x_x__43_x_x_ga6e90c3dfad51a2a8591e531b0a788134}{C\+H\+I\+P\+\_\+\+O\+T\+P\+\_\+\+B\+O\+O\+T\+\_\+\+S\+RC}  \hyperlink{group___o_t_p__18_x_x__43_x_x_gada36d39d34c8821f0416a852faa926f6}{C\+H\+I\+P\+\_\+\+O\+T\+P\+\_\+\+B\+O\+O\+T\+\_\+\+S\+R\+C\+\_\+T}}
+
+
+
+O\+TP Boot Source selection used in Chip driver. 
+
+
+
+\subsection{Enumeration Type Documentation}
+\mbox{\Hypertarget{group___o_t_p__18_x_x__43_x_x_ga6e90c3dfad51a2a8591e531b0a788134}\label{group___o_t_p__18_x_x__43_x_x_ga6e90c3dfad51a2a8591e531b0a788134}} 
+\index{C\+H\+I\+P\+: L\+P\+C18xx/43xx O\+T\+P Controller driver@{C\+H\+I\+P\+: L\+P\+C18xx/43xx O\+T\+P Controller driver}!C\+H\+I\+P\+\_\+\+O\+T\+P\+\_\+\+B\+O\+O\+T\+\_\+\+S\+RC@{C\+H\+I\+P\+\_\+\+O\+T\+P\+\_\+\+B\+O\+O\+T\+\_\+\+S\+RC}}
+\index{C\+H\+I\+P\+\_\+\+O\+T\+P\+\_\+\+B\+O\+O\+T\+\_\+\+S\+RC@{C\+H\+I\+P\+\_\+\+O\+T\+P\+\_\+\+B\+O\+O\+T\+\_\+\+S\+RC}!C\+H\+I\+P\+: L\+P\+C18xx/43xx O\+T\+P Controller driver@{C\+H\+I\+P\+: L\+P\+C18xx/43xx O\+T\+P Controller driver}}
+\subsubsection{\texorpdfstring{C\+H\+I\+P\+\_\+\+O\+T\+P\+\_\+\+B\+O\+O\+T\+\_\+\+S\+RC}{CHIP\_OTP\_BOOT\_SRC}}
+{\footnotesize\ttfamily enum \hyperlink{group___o_t_p__18_x_x__43_x_x_ga6e90c3dfad51a2a8591e531b0a788134}{C\+H\+I\+P\+\_\+\+O\+T\+P\+\_\+\+B\+O\+O\+T\+\_\+\+S\+RC}}
+
+
+
+O\+TP Boot Source selection used in Chip driver. 
+
+\begin{DoxyEnumFields}{Enumerator}
+\raisebox{\heightof{T}}[0pt][0pt]{\index{C\+H\+I\+P\+\_\+\+O\+T\+P\+\_\+\+B\+O\+O\+T\+S\+R\+C\+\_\+\+P\+I\+NS@{C\+H\+I\+P\+\_\+\+O\+T\+P\+\_\+\+B\+O\+O\+T\+S\+R\+C\+\_\+\+P\+I\+NS}!C\+H\+I\+P\+: L\+P\+C18xx/43xx O\+T\+P Controller driver@{C\+H\+I\+P\+: L\+P\+C18xx/43xx O\+T\+P Controller driver}}\index{C\+H\+I\+P\+: L\+P\+C18xx/43xx O\+T\+P Controller driver@{C\+H\+I\+P\+: L\+P\+C18xx/43xx O\+T\+P Controller driver}!C\+H\+I\+P\+\_\+\+O\+T\+P\+\_\+\+B\+O\+O\+T\+S\+R\+C\+\_\+\+P\+I\+NS@{C\+H\+I\+P\+\_\+\+O\+T\+P\+\_\+\+B\+O\+O\+T\+S\+R\+C\+\_\+\+P\+I\+NS}}}\mbox{\Hypertarget{group___o_t_p__18_x_x__43_x_x_gga6e90c3dfad51a2a8591e531b0a788134a7edac5f881d9fa35771747241d92e54c}\label{group___o_t_p__18_x_x__43_x_x_gga6e90c3dfad51a2a8591e531b0a788134a7edac5f881d9fa35771747241d92e54c}} 
+C\+H\+I\+P\+\_\+\+O\+T\+P\+\_\+\+B\+O\+O\+T\+S\+R\+C\+\_\+\+P\+I\+NS&Boot source -\/ External pins \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{C\+H\+I\+P\+\_\+\+O\+T\+P\+\_\+\+B\+O\+O\+T\+S\+R\+C\+\_\+\+U\+A\+R\+T0@{C\+H\+I\+P\+\_\+\+O\+T\+P\+\_\+\+B\+O\+O\+T\+S\+R\+C\+\_\+\+U\+A\+R\+T0}!C\+H\+I\+P\+: L\+P\+C18xx/43xx O\+T\+P Controller driver@{C\+H\+I\+P\+: L\+P\+C18xx/43xx O\+T\+P Controller driver}}\index{C\+H\+I\+P\+: L\+P\+C18xx/43xx O\+T\+P Controller driver@{C\+H\+I\+P\+: L\+P\+C18xx/43xx O\+T\+P Controller driver}!C\+H\+I\+P\+\_\+\+O\+T\+P\+\_\+\+B\+O\+O\+T\+S\+R\+C\+\_\+\+U\+A\+R\+T0@{C\+H\+I\+P\+\_\+\+O\+T\+P\+\_\+\+B\+O\+O\+T\+S\+R\+C\+\_\+\+U\+A\+R\+T0}}}\mbox{\Hypertarget{group___o_t_p__18_x_x__43_x_x_gga6e90c3dfad51a2a8591e531b0a788134a4e63ed2b5c75666820d88e1952e38dd8}\label{group___o_t_p__18_x_x__43_x_x_gga6e90c3dfad51a2a8591e531b0a788134a4e63ed2b5c75666820d88e1952e38dd8}} 
+C\+H\+I\+P\+\_\+\+O\+T\+P\+\_\+\+B\+O\+O\+T\+S\+R\+C\+\_\+\+U\+A\+R\+T0&Boot source -\/ U\+A\+R\+T0 \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{C\+H\+I\+P\+\_\+\+O\+T\+P\+\_\+\+B\+O\+O\+T\+S\+R\+C\+\_\+\+S\+P\+I\+FI@{C\+H\+I\+P\+\_\+\+O\+T\+P\+\_\+\+B\+O\+O\+T\+S\+R\+C\+\_\+\+S\+P\+I\+FI}!C\+H\+I\+P\+: L\+P\+C18xx/43xx O\+T\+P Controller driver@{C\+H\+I\+P\+: L\+P\+C18xx/43xx O\+T\+P Controller driver}}\index{C\+H\+I\+P\+: L\+P\+C18xx/43xx O\+T\+P Controller driver@{C\+H\+I\+P\+: L\+P\+C18xx/43xx O\+T\+P Controller driver}!C\+H\+I\+P\+\_\+\+O\+T\+P\+\_\+\+B\+O\+O\+T\+S\+R\+C\+\_\+\+S\+P\+I\+FI@{C\+H\+I\+P\+\_\+\+O\+T\+P\+\_\+\+B\+O\+O\+T\+S\+R\+C\+\_\+\+S\+P\+I\+FI}}}\mbox{\Hypertarget{group___o_t_p__18_x_x__43_x_x_gga6e90c3dfad51a2a8591e531b0a788134a349bdd67e34610851e20d718fe8bf1a3}\label{group___o_t_p__18_x_x__43_x_x_gga6e90c3dfad51a2a8591e531b0a788134a349bdd67e34610851e20d718fe8bf1a3}} 
+C\+H\+I\+P\+\_\+\+O\+T\+P\+\_\+\+B\+O\+O\+T\+S\+R\+C\+\_\+\+S\+P\+I\+FI&Boot source -\/ E\+MC 8-\/bit memory \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{C\+H\+I\+P\+\_\+\+O\+T\+P\+\_\+\+B\+O\+O\+T\+S\+R\+C\+\_\+\+E\+M\+C8@{C\+H\+I\+P\+\_\+\+O\+T\+P\+\_\+\+B\+O\+O\+T\+S\+R\+C\+\_\+\+E\+M\+C8}!C\+H\+I\+P\+: L\+P\+C18xx/43xx O\+T\+P Controller driver@{C\+H\+I\+P\+: L\+P\+C18xx/43xx O\+T\+P Controller driver}}\index{C\+H\+I\+P\+: L\+P\+C18xx/43xx O\+T\+P Controller driver@{C\+H\+I\+P\+: L\+P\+C18xx/43xx O\+T\+P Controller driver}!C\+H\+I\+P\+\_\+\+O\+T\+P\+\_\+\+B\+O\+O\+T\+S\+R\+C\+\_\+\+E\+M\+C8@{C\+H\+I\+P\+\_\+\+O\+T\+P\+\_\+\+B\+O\+O\+T\+S\+R\+C\+\_\+\+E\+M\+C8}}}\mbox{\Hypertarget{group___o_t_p__18_x_x__43_x_x_gga6e90c3dfad51a2a8591e531b0a788134ae8b3cc8a5fb8f85b6713923b4bb2acf9}\label{group___o_t_p__18_x_x__43_x_x_gga6e90c3dfad51a2a8591e531b0a788134ae8b3cc8a5fb8f85b6713923b4bb2acf9}} 
+C\+H\+I\+P\+\_\+\+O\+T\+P\+\_\+\+B\+O\+O\+T\+S\+R\+C\+\_\+\+E\+M\+C8&Boot source -\/ E\+MC 16-\/bit memory \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{C\+H\+I\+P\+\_\+\+O\+T\+P\+\_\+\+B\+O\+O\+T\+S\+R\+C\+\_\+\+E\+M\+C16@{C\+H\+I\+P\+\_\+\+O\+T\+P\+\_\+\+B\+O\+O\+T\+S\+R\+C\+\_\+\+E\+M\+C16}!C\+H\+I\+P\+: L\+P\+C18xx/43xx O\+T\+P Controller driver@{C\+H\+I\+P\+: L\+P\+C18xx/43xx O\+T\+P Controller driver}}\index{C\+H\+I\+P\+: L\+P\+C18xx/43xx O\+T\+P Controller driver@{C\+H\+I\+P\+: L\+P\+C18xx/43xx O\+T\+P Controller driver}!C\+H\+I\+P\+\_\+\+O\+T\+P\+\_\+\+B\+O\+O\+T\+S\+R\+C\+\_\+\+E\+M\+C16@{C\+H\+I\+P\+\_\+\+O\+T\+P\+\_\+\+B\+O\+O\+T\+S\+R\+C\+\_\+\+E\+M\+C16}}}\mbox{\Hypertarget{group___o_t_p__18_x_x__43_x_x_gga6e90c3dfad51a2a8591e531b0a788134a0b4116043093206979c47889b1e0922f}\label{group___o_t_p__18_x_x__43_x_x_gga6e90c3dfad51a2a8591e531b0a788134a0b4116043093206979c47889b1e0922f}} 
+C\+H\+I\+P\+\_\+\+O\+T\+P\+\_\+\+B\+O\+O\+T\+S\+R\+C\+\_\+\+E\+M\+C16&Boot source -\/ E\+MC 32-\/bit memory \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{C\+H\+I\+P\+\_\+\+O\+T\+P\+\_\+\+B\+O\+O\+T\+S\+R\+C\+\_\+\+E\+M\+C32@{C\+H\+I\+P\+\_\+\+O\+T\+P\+\_\+\+B\+O\+O\+T\+S\+R\+C\+\_\+\+E\+M\+C32}!C\+H\+I\+P\+: L\+P\+C18xx/43xx O\+T\+P Controller driver@{C\+H\+I\+P\+: L\+P\+C18xx/43xx O\+T\+P Controller driver}}\index{C\+H\+I\+P\+: L\+P\+C18xx/43xx O\+T\+P Controller driver@{C\+H\+I\+P\+: L\+P\+C18xx/43xx O\+T\+P Controller driver}!C\+H\+I\+P\+\_\+\+O\+T\+P\+\_\+\+B\+O\+O\+T\+S\+R\+C\+\_\+\+E\+M\+C32@{C\+H\+I\+P\+\_\+\+O\+T\+P\+\_\+\+B\+O\+O\+T\+S\+R\+C\+\_\+\+E\+M\+C32}}}\mbox{\Hypertarget{group___o_t_p__18_x_x__43_x_x_gga6e90c3dfad51a2a8591e531b0a788134aa31487f429556be80dc49ae3fd6d6bcc}\label{group___o_t_p__18_x_x__43_x_x_gga6e90c3dfad51a2a8591e531b0a788134aa31487f429556be80dc49ae3fd6d6bcc}} 
+C\+H\+I\+P\+\_\+\+O\+T\+P\+\_\+\+B\+O\+O\+T\+S\+R\+C\+\_\+\+E\+M\+C32&Boot source -\/ E\+MC 32-\/bit memory \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{C\+H\+I\+P\+\_\+\+O\+T\+P\+\_\+\+B\+O\+O\+T\+S\+R\+C\+\_\+\+U\+S\+B0@{C\+H\+I\+P\+\_\+\+O\+T\+P\+\_\+\+B\+O\+O\+T\+S\+R\+C\+\_\+\+U\+S\+B0}!C\+H\+I\+P\+: L\+P\+C18xx/43xx O\+T\+P Controller driver@{C\+H\+I\+P\+: L\+P\+C18xx/43xx O\+T\+P Controller driver}}\index{C\+H\+I\+P\+: L\+P\+C18xx/43xx O\+T\+P Controller driver@{C\+H\+I\+P\+: L\+P\+C18xx/43xx O\+T\+P Controller driver}!C\+H\+I\+P\+\_\+\+O\+T\+P\+\_\+\+B\+O\+O\+T\+S\+R\+C\+\_\+\+U\+S\+B0@{C\+H\+I\+P\+\_\+\+O\+T\+P\+\_\+\+B\+O\+O\+T\+S\+R\+C\+\_\+\+U\+S\+B0}}}\mbox{\Hypertarget{group___o_t_p__18_x_x__43_x_x_gga6e90c3dfad51a2a8591e531b0a788134a9a02466a89f214d4f43dcdf5a12aadb4}\label{group___o_t_p__18_x_x__43_x_x_gga6e90c3dfad51a2a8591e531b0a788134a9a02466a89f214d4f43dcdf5a12aadb4}} 
+C\+H\+I\+P\+\_\+\+O\+T\+P\+\_\+\+B\+O\+O\+T\+S\+R\+C\+\_\+\+U\+S\+B0&Boot source -\/ D\+FU U\+S\+B0 boot \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{C\+H\+I\+P\+\_\+\+O\+T\+P\+\_\+\+B\+O\+O\+T\+S\+R\+C\+\_\+\+U\+S\+B1@{C\+H\+I\+P\+\_\+\+O\+T\+P\+\_\+\+B\+O\+O\+T\+S\+R\+C\+\_\+\+U\+S\+B1}!C\+H\+I\+P\+: L\+P\+C18xx/43xx O\+T\+P Controller driver@{C\+H\+I\+P\+: L\+P\+C18xx/43xx O\+T\+P Controller driver}}\index{C\+H\+I\+P\+: L\+P\+C18xx/43xx O\+T\+P Controller driver@{C\+H\+I\+P\+: L\+P\+C18xx/43xx O\+T\+P Controller driver}!C\+H\+I\+P\+\_\+\+O\+T\+P\+\_\+\+B\+O\+O\+T\+S\+R\+C\+\_\+\+U\+S\+B1@{C\+H\+I\+P\+\_\+\+O\+T\+P\+\_\+\+B\+O\+O\+T\+S\+R\+C\+\_\+\+U\+S\+B1}}}\mbox{\Hypertarget{group___o_t_p__18_x_x__43_x_x_gga6e90c3dfad51a2a8591e531b0a788134a47af95347b0d598a7384867a78e1cf79}\label{group___o_t_p__18_x_x__43_x_x_gga6e90c3dfad51a2a8591e531b0a788134a47af95347b0d598a7384867a78e1cf79}} 
+C\+H\+I\+P\+\_\+\+O\+T\+P\+\_\+\+B\+O\+O\+T\+S\+R\+C\+\_\+\+U\+S\+B1&Boot source -\/ D\+FU U\+S\+B1 boot \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{C\+H\+I\+P\+\_\+\+O\+T\+P\+\_\+\+B\+O\+O\+T\+S\+R\+C\+\_\+\+S\+PI@{C\+H\+I\+P\+\_\+\+O\+T\+P\+\_\+\+B\+O\+O\+T\+S\+R\+C\+\_\+\+S\+PI}!C\+H\+I\+P\+: L\+P\+C18xx/43xx O\+T\+P Controller driver@{C\+H\+I\+P\+: L\+P\+C18xx/43xx O\+T\+P Controller driver}}\index{C\+H\+I\+P\+: L\+P\+C18xx/43xx O\+T\+P Controller driver@{C\+H\+I\+P\+: L\+P\+C18xx/43xx O\+T\+P Controller driver}!C\+H\+I\+P\+\_\+\+O\+T\+P\+\_\+\+B\+O\+O\+T\+S\+R\+C\+\_\+\+S\+PI@{C\+H\+I\+P\+\_\+\+O\+T\+P\+\_\+\+B\+O\+O\+T\+S\+R\+C\+\_\+\+S\+PI}}}\mbox{\Hypertarget{group___o_t_p__18_x_x__43_x_x_gga6e90c3dfad51a2a8591e531b0a788134a27ef19497cee62cca57abd98174e3b31}\label{group___o_t_p__18_x_x__43_x_x_gga6e90c3dfad51a2a8591e531b0a788134a27ef19497cee62cca57abd98174e3b31}} 
+C\+H\+I\+P\+\_\+\+O\+T\+P\+\_\+\+B\+O\+O\+T\+S\+R\+C\+\_\+\+S\+PI&Boot source -\/ S\+PI boot \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{C\+H\+I\+P\+\_\+\+O\+T\+P\+\_\+\+B\+O\+O\+T\+S\+R\+C\+\_\+\+U\+A\+R\+T3@{C\+H\+I\+P\+\_\+\+O\+T\+P\+\_\+\+B\+O\+O\+T\+S\+R\+C\+\_\+\+U\+A\+R\+T3}!C\+H\+I\+P\+: L\+P\+C18xx/43xx O\+T\+P Controller driver@{C\+H\+I\+P\+: L\+P\+C18xx/43xx O\+T\+P Controller driver}}\index{C\+H\+I\+P\+: L\+P\+C18xx/43xx O\+T\+P Controller driver@{C\+H\+I\+P\+: L\+P\+C18xx/43xx O\+T\+P Controller driver}!C\+H\+I\+P\+\_\+\+O\+T\+P\+\_\+\+B\+O\+O\+T\+S\+R\+C\+\_\+\+U\+A\+R\+T3@{C\+H\+I\+P\+\_\+\+O\+T\+P\+\_\+\+B\+O\+O\+T\+S\+R\+C\+\_\+\+U\+A\+R\+T3}}}\mbox{\Hypertarget{group___o_t_p__18_x_x__43_x_x_gga6e90c3dfad51a2a8591e531b0a788134a65087c2a7e2a4757c72d68332201d6c2}\label{group___o_t_p__18_x_x__43_x_x_gga6e90c3dfad51a2a8591e531b0a788134a65087c2a7e2a4757c72d68332201d6c2}} 
+C\+H\+I\+P\+\_\+\+O\+T\+P\+\_\+\+B\+O\+O\+T\+S\+R\+C\+\_\+\+U\+A\+R\+T3&Boot source -\/ U\+A\+R\+T3 \\
+\hline
+
+\end{DoxyEnumFields}
+
+
+Definition at line 69 of file otp\+\_\+18xx\+\_\+43xx.\+h.
+
+
+
+\subsection{Function Documentation}
+\mbox{\Hypertarget{group___o_t_p__18_x_x__43_x_x_gaabb646c42cbd57630ec23816c115a7a0}\label{group___o_t_p__18_x_x__43_x_x_gaabb646c42cbd57630ec23816c115a7a0}} 
+\index{C\+H\+I\+P\+: L\+P\+C18xx/43xx O\+T\+P Controller driver@{C\+H\+I\+P\+: L\+P\+C18xx/43xx O\+T\+P Controller driver}!Chip\+\_\+\+O\+T\+P\+\_\+\+Gen\+Rand@{Chip\+\_\+\+O\+T\+P\+\_\+\+Gen\+Rand}}
+\index{Chip\+\_\+\+O\+T\+P\+\_\+\+Gen\+Rand@{Chip\+\_\+\+O\+T\+P\+\_\+\+Gen\+Rand}!C\+H\+I\+P\+: L\+P\+C18xx/43xx O\+T\+P Controller driver@{C\+H\+I\+P\+: L\+P\+C18xx/43xx O\+T\+P Controller driver}}
+\subsubsection{\texorpdfstring{Chip\+\_\+\+O\+T\+P\+\_\+\+Gen\+Rand()}{Chip\_OTP\_GenRand()}}
+{\footnotesize\ttfamily uint32\+\_\+t Chip\+\_\+\+O\+T\+P\+\_\+\+Gen\+Rand (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+
+
+
+Generate Random Number using HW Random Number Generator. 
+
+\begin{DoxyReturn}{Returns}
+Error code of the random number generation. To load the random number into A\+ES, call Chip\+\_\+\+A\+E\+S\+\_\+\+Load\+Key\+R\+NG 
+\end{DoxyReturn}
+
+
+Definition at line 142 of file otp\+\_\+18xx\+\_\+43xx.\+c.
+
+\mbox{\Hypertarget{group___o_t_p__18_x_x__43_x_x_ga511e3cb6017233783efebf0c9675cc97}\label{group___o_t_p__18_x_x__43_x_x_ga511e3cb6017233783efebf0c9675cc97}} 
+\index{C\+H\+I\+P\+: L\+P\+C18xx/43xx O\+T\+P Controller driver@{C\+H\+I\+P\+: L\+P\+C18xx/43xx O\+T\+P Controller driver}!Chip\+\_\+\+O\+T\+P\+\_\+\+Init@{Chip\+\_\+\+O\+T\+P\+\_\+\+Init}}
+\index{Chip\+\_\+\+O\+T\+P\+\_\+\+Init@{Chip\+\_\+\+O\+T\+P\+\_\+\+Init}!C\+H\+I\+P\+: L\+P\+C18xx/43xx O\+T\+P Controller driver@{C\+H\+I\+P\+: L\+P\+C18xx/43xx O\+T\+P Controller driver}}
+\subsubsection{\texorpdfstring{Chip\+\_\+\+O\+T\+P\+\_\+\+Init()}{Chip\_OTP\_Init()}}
+{\footnotesize\ttfamily uint32\+\_\+t Chip\+\_\+\+O\+T\+P\+\_\+\+Init (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+
+
+
+Initialize for O\+TP Controller functions. 
+
+\begin{DoxyReturn}{Returns}
+Status of Otp\+\_\+\+Init function This function will initialise all the O\+TP driver function pointers and call the R\+OM O\+TP Initialisation function. 
+\end{DoxyReturn}
+
+
+Definition at line 66 of file otp\+\_\+18xx\+\_\+43xx.\+c.
+
+\mbox{\Hypertarget{group___o_t_p__18_x_x__43_x_x_gafefbdff9c8b9d1f5dd79a8dff3a44e08}\label{group___o_t_p__18_x_x__43_x_x_gafefbdff9c8b9d1f5dd79a8dff3a44e08}} 
+\index{C\+H\+I\+P\+: L\+P\+C18xx/43xx O\+T\+P Controller driver@{C\+H\+I\+P\+: L\+P\+C18xx/43xx O\+T\+P Controller driver}!Chip\+\_\+\+O\+T\+P\+\_\+\+Prog\+Boot\+Src@{Chip\+\_\+\+O\+T\+P\+\_\+\+Prog\+Boot\+Src}}
+\index{Chip\+\_\+\+O\+T\+P\+\_\+\+Prog\+Boot\+Src@{Chip\+\_\+\+O\+T\+P\+\_\+\+Prog\+Boot\+Src}!C\+H\+I\+P\+: L\+P\+C18xx/43xx O\+T\+P Controller driver@{C\+H\+I\+P\+: L\+P\+C18xx/43xx O\+T\+P Controller driver}}
+\subsubsection{\texorpdfstring{Chip\+\_\+\+O\+T\+P\+\_\+\+Prog\+Boot\+Src()}{Chip\_OTP\_ProgBootSrc()}}
+{\footnotesize\ttfamily uint32\+\_\+t Chip\+\_\+\+O\+T\+P\+\_\+\+Prog\+Boot\+Src (\begin{DoxyParamCaption}\item[{\hyperlink{group___o_t_p__18_x_x__43_x_x_gada36d39d34c8821f0416a852faa926f6}{C\+H\+I\+P\+\_\+\+O\+T\+P\+\_\+\+B\+O\+O\+T\+\_\+\+S\+R\+C\+\_\+T}}]{Boot\+Src }\end{DoxyParamCaption})}
+
+
+
+Program boot source in O\+TP Controller. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em Boot\+Src} & \+: Boot Source enum value \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Status 
+\end{DoxyReturn}
+
+
+Definition at line 87 of file otp\+\_\+18xx\+\_\+43xx.\+c.
+
+\mbox{\Hypertarget{group___o_t_p__18_x_x__43_x_x_gae9fc592f60829d5aefd72c9dbe83a58a}\label{group___o_t_p__18_x_x__43_x_x_gae9fc592f60829d5aefd72c9dbe83a58a}} 
+\index{C\+H\+I\+P\+: L\+P\+C18xx/43xx O\+T\+P Controller driver@{C\+H\+I\+P\+: L\+P\+C18xx/43xx O\+T\+P Controller driver}!Chip\+\_\+\+O\+T\+P\+\_\+\+Prog\+G\+P\+Word@{Chip\+\_\+\+O\+T\+P\+\_\+\+Prog\+G\+P\+Word}}
+\index{Chip\+\_\+\+O\+T\+P\+\_\+\+Prog\+G\+P\+Word@{Chip\+\_\+\+O\+T\+P\+\_\+\+Prog\+G\+P\+Word}!C\+H\+I\+P\+: L\+P\+C18xx/43xx O\+T\+P Controller driver@{C\+H\+I\+P\+: L\+P\+C18xx/43xx O\+T\+P Controller driver}}
+\subsubsection{\texorpdfstring{Chip\+\_\+\+O\+T\+P\+\_\+\+Prog\+G\+P\+Word()}{Chip\_OTP\_ProgGPWord()}}
+{\footnotesize\ttfamily uint32\+\_\+t Chip\+\_\+\+O\+T\+P\+\_\+\+Prog\+G\+P\+Word (\begin{DoxyParamCaption}\item[{uint32\+\_\+t}]{Word\+Num,  }\item[{uint32\+\_\+t}]{Data,  }\item[{uint32\+\_\+t}]{Mask }\end{DoxyParamCaption})}
+
+
+
+Program O\+TP GP Word memory. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em Word\+Num} & \+: Word Number (Select word 0 or word 1 or word 2) \\
+\hline
+{\em Data} & \+: Data value \\
+\hline
+{\em Mask} & \+: Mask value \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Status This function available in devices which are not A\+ES capable 
+\end{DoxyReturn}
+
+
+Definition at line 105 of file otp\+\_\+18xx\+\_\+43xx.\+c.
+
+\mbox{\Hypertarget{group___o_t_p__18_x_x__43_x_x_gac6f321b6c7c397b3338c3ebe81d4d01f}\label{group___o_t_p__18_x_x__43_x_x_gac6f321b6c7c397b3338c3ebe81d4d01f}} 
+\index{C\+H\+I\+P\+: L\+P\+C18xx/43xx O\+T\+P Controller driver@{C\+H\+I\+P\+: L\+P\+C18xx/43xx O\+T\+P Controller driver}!Chip\+\_\+\+O\+T\+P\+\_\+\+Prog\+J\+T\+A\+G\+Dis@{Chip\+\_\+\+O\+T\+P\+\_\+\+Prog\+J\+T\+A\+G\+Dis}}
+\index{Chip\+\_\+\+O\+T\+P\+\_\+\+Prog\+J\+T\+A\+G\+Dis@{Chip\+\_\+\+O\+T\+P\+\_\+\+Prog\+J\+T\+A\+G\+Dis}!C\+H\+I\+P\+: L\+P\+C18xx/43xx O\+T\+P Controller driver@{C\+H\+I\+P\+: L\+P\+C18xx/43xx O\+T\+P Controller driver}}
+\subsubsection{\texorpdfstring{Chip\+\_\+\+O\+T\+P\+\_\+\+Prog\+J\+T\+A\+G\+Dis()}{Chip\_OTP\_ProgJTAGDis()}}
+{\footnotesize\ttfamily uint32\+\_\+t Chip\+\_\+\+O\+T\+P\+\_\+\+Prog\+J\+T\+A\+G\+Dis (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+
+
+
+Program the J\+T\+AG bit in O\+TP Controller. 
+
+\begin{DoxyReturn}{Returns}
+Status 
+\end{DoxyReturn}
+
+
+Definition at line 93 of file otp\+\_\+18xx\+\_\+43xx.\+c.
+
+\mbox{\Hypertarget{group___o_t_p__18_x_x__43_x_x_gab94e93611ec4efa732ad045c471d646c}\label{group___o_t_p__18_x_x__43_x_x_gab94e93611ec4efa732ad045c471d646c}} 
+\index{C\+H\+I\+P\+: L\+P\+C18xx/43xx O\+T\+P Controller driver@{C\+H\+I\+P\+: L\+P\+C18xx/43xx O\+T\+P Controller driver}!Chip\+\_\+\+O\+T\+P\+\_\+\+Prog\+Key@{Chip\+\_\+\+O\+T\+P\+\_\+\+Prog\+Key}}
+\index{Chip\+\_\+\+O\+T\+P\+\_\+\+Prog\+Key@{Chip\+\_\+\+O\+T\+P\+\_\+\+Prog\+Key}!C\+H\+I\+P\+: L\+P\+C18xx/43xx O\+T\+P Controller driver@{C\+H\+I\+P\+: L\+P\+C18xx/43xx O\+T\+P Controller driver}}
+\subsubsection{\texorpdfstring{Chip\+\_\+\+O\+T\+P\+\_\+\+Prog\+Key()}{Chip\_OTP\_ProgKey()}}
+{\footnotesize\ttfamily uint32\+\_\+t Chip\+\_\+\+O\+T\+P\+\_\+\+Prog\+Key (\begin{DoxyParamCaption}\item[{uint32\+\_\+t}]{Key\+Num,  }\item[{uint8\+\_\+t $\ast$}]{key }\end{DoxyParamCaption})}
+
+
+
+Program A\+ES Key. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em Key\+Num} & \+: Key Number (Select 0 or 1) \\
+\hline
+{\em key} & \+: Pointer to A\+ES Key (16 bytes required) \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Status This function available in devices which are A\+ES capable 
+\end{DoxyReturn}
+
+
+Definition at line 128 of file otp\+\_\+18xx\+\_\+43xx.\+c.
+
+\mbox{\Hypertarget{group___o_t_p__18_x_x__43_x_x_ga040917e9f2de58ca6cbff2993a5232b9}\label{group___o_t_p__18_x_x__43_x_x_ga040917e9f2de58ca6cbff2993a5232b9}} 
+\index{C\+H\+I\+P\+: L\+P\+C18xx/43xx O\+T\+P Controller driver@{C\+H\+I\+P\+: L\+P\+C18xx/43xx O\+T\+P Controller driver}!Chip\+\_\+\+O\+T\+P\+\_\+\+Prog\+U\+S\+B\+ID@{Chip\+\_\+\+O\+T\+P\+\_\+\+Prog\+U\+S\+B\+ID}}
+\index{Chip\+\_\+\+O\+T\+P\+\_\+\+Prog\+U\+S\+B\+ID@{Chip\+\_\+\+O\+T\+P\+\_\+\+Prog\+U\+S\+B\+ID}!C\+H\+I\+P\+: L\+P\+C18xx/43xx O\+T\+P Controller driver@{C\+H\+I\+P\+: L\+P\+C18xx/43xx O\+T\+P Controller driver}}
+\subsubsection{\texorpdfstring{Chip\+\_\+\+O\+T\+P\+\_\+\+Prog\+U\+S\+B\+I\+D()}{Chip\_OTP\_ProgUSBID()}}
+{\footnotesize\ttfamily uint32\+\_\+t Chip\+\_\+\+O\+T\+P\+\_\+\+Prog\+U\+S\+B\+ID (\begin{DoxyParamCaption}\item[{uint32\+\_\+t}]{Product\+ID,  }\item[{uint32\+\_\+t}]{Vendor\+ID }\end{DoxyParamCaption})}
+
+
+
+Program U\+SB ID in O\+TP Controller. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em Product\+ID} & \+: U\+SB Product ID \\
+\hline
+{\em Vendor\+ID} & \+: U\+SB Vendor ID \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Status 
+\end{DoxyReturn}
+
+
+Definition at line 99 of file otp\+\_\+18xx\+\_\+43xx.\+c.
+

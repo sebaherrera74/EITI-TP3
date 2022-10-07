@@ -1,0 +1,74 @@
+\hypertarget{wait__for__event_8h}{}\section{muju/externals/freertos/portable/\+Third\+Party/\+G\+C\+C/\+Posix/utils/wait\+\_\+for\+\_\+event.h File Reference}
+\label{wait__for__event_8h}\index{muju/externals/freertos/portable/\+Third\+Party/\+G\+C\+C/\+Posix/utils/wait\+\_\+for\+\_\+event.\+h@{muju/externals/freertos/portable/\+Third\+Party/\+G\+C\+C/\+Posix/utils/wait\+\_\+for\+\_\+event.\+h}}
+{\ttfamily \#include $<$stdbool.\+h$>$}\newline
+{\ttfamily \#include $<$time.\+h$>$}\newline
+Include dependency graph for wait\+\_\+for\+\_\+event.\+h\+:
+% FIG 0
+This graph shows which files directly or indirectly include this file\+:
+% FIG 1
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+struct \hyperlink{structevent}{event} $\ast$ \hyperlink{wait__for__event_8h_a77a6be5e8b8a1ee1502c8528a287c12a}{event\+\_\+create} ()
+\item 
+void \hyperlink{wait__for__event_8h_a9f7ef4b58b1fc382740da44da0403a88}{event\+\_\+delete} (struct \hyperlink{structevent}{event} $\ast$)
+\item 
+bool \hyperlink{wait__for__event_8h_a913ef59916275e6d1b46782f543514d9}{event\+\_\+wait} (struct \hyperlink{structevent}{event} $\ast$ev)
+\item 
+bool \hyperlink{wait__for__event_8h_af49357008d87712f5635d6481ad36545}{event\+\_\+wait\+\_\+timed} (struct \hyperlink{structevent}{event} $\ast$ev, time\+\_\+t ms)
+\item 
+void \hyperlink{wait__for__event_8h_aff17cff73df8230c562038d0ca4af0e8}{event\+\_\+signal} (struct \hyperlink{structevent}{event} $\ast$ev)
+\end{DoxyCompactItemize}
+
+
+\subsection{Function Documentation}
+\mbox{\Hypertarget{wait__for__event_8h_a77a6be5e8b8a1ee1502c8528a287c12a}\label{wait__for__event_8h_a77a6be5e8b8a1ee1502c8528a287c12a}} 
+\index{wait\+\_\+for\+\_\+event.\+h@{wait\+\_\+for\+\_\+event.\+h}!event\+\_\+create@{event\+\_\+create}}
+\index{event\+\_\+create@{event\+\_\+create}!wait\+\_\+for\+\_\+event.\+h@{wait\+\_\+for\+\_\+event.\+h}}
+\subsubsection{\texorpdfstring{event\+\_\+create()}{event\_create()}}
+{\footnotesize\ttfamily struct \hyperlink{structevent}{event}$\ast$ event\+\_\+create (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Definition at line 14 of file wait\+\_\+for\+\_\+event.\+c.
+
+\mbox{\Hypertarget{wait__for__event_8h_a9f7ef4b58b1fc382740da44da0403a88}\label{wait__for__event_8h_a9f7ef4b58b1fc382740da44da0403a88}} 
+\index{wait\+\_\+for\+\_\+event.\+h@{wait\+\_\+for\+\_\+event.\+h}!event\+\_\+delete@{event\+\_\+delete}}
+\index{event\+\_\+delete@{event\+\_\+delete}!wait\+\_\+for\+\_\+event.\+h@{wait\+\_\+for\+\_\+event.\+h}}
+\subsubsection{\texorpdfstring{event\+\_\+delete()}{event\_delete()}}
+{\footnotesize\ttfamily void event\+\_\+delete (\begin{DoxyParamCaption}\item[{struct \hyperlink{structevent}{event} $\ast$}]{ }\end{DoxyParamCaption})}
+
+
+
+Definition at line 24 of file wait\+\_\+for\+\_\+event.\+c.
+
+\mbox{\Hypertarget{wait__for__event_8h_aff17cff73df8230c562038d0ca4af0e8}\label{wait__for__event_8h_aff17cff73df8230c562038d0ca4af0e8}} 
+\index{wait\+\_\+for\+\_\+event.\+h@{wait\+\_\+for\+\_\+event.\+h}!event\+\_\+signal@{event\+\_\+signal}}
+\index{event\+\_\+signal@{event\+\_\+signal}!wait\+\_\+for\+\_\+event.\+h@{wait\+\_\+for\+\_\+event.\+h}}
+\subsubsection{\texorpdfstring{event\+\_\+signal()}{event\_signal()}}
+{\footnotesize\ttfamily void event\+\_\+signal (\begin{DoxyParamCaption}\item[{struct \hyperlink{structevent}{event} $\ast$}]{ev }\end{DoxyParamCaption})}
+
+
+
+Definition at line 70 of file wait\+\_\+for\+\_\+event.\+c.
+
+\mbox{\Hypertarget{wait__for__event_8h_a913ef59916275e6d1b46782f543514d9}\label{wait__for__event_8h_a913ef59916275e6d1b46782f543514d9}} 
+\index{wait\+\_\+for\+\_\+event.\+h@{wait\+\_\+for\+\_\+event.\+h}!event\+\_\+wait@{event\+\_\+wait}}
+\index{event\+\_\+wait@{event\+\_\+wait}!wait\+\_\+for\+\_\+event.\+h@{wait\+\_\+for\+\_\+event.\+h}}
+\subsubsection{\texorpdfstring{event\+\_\+wait()}{event\_wait()}}
+{\footnotesize\ttfamily bool event\+\_\+wait (\begin{DoxyParamCaption}\item[{struct \hyperlink{structevent}{event} $\ast$}]{ev }\end{DoxyParamCaption})}
+
+
+
+Definition at line 31 of file wait\+\_\+for\+\_\+event.\+c.
+
+\mbox{\Hypertarget{wait__for__event_8h_af49357008d87712f5635d6481ad36545}\label{wait__for__event_8h_af49357008d87712f5635d6481ad36545}} 
+\index{wait\+\_\+for\+\_\+event.\+h@{wait\+\_\+for\+\_\+event.\+h}!event\+\_\+wait\+\_\+timed@{event\+\_\+wait\+\_\+timed}}
+\index{event\+\_\+wait\+\_\+timed@{event\+\_\+wait\+\_\+timed}!wait\+\_\+for\+\_\+event.\+h@{wait\+\_\+for\+\_\+event.\+h}}
+\subsubsection{\texorpdfstring{event\+\_\+wait\+\_\+timed()}{event\_wait\_timed()}}
+{\footnotesize\ttfamily bool event\+\_\+wait\+\_\+timed (\begin{DoxyParamCaption}\item[{struct \hyperlink{structevent}{event} $\ast$}]{ev,  }\item[{time\+\_\+t}]{ms }\end{DoxyParamCaption})}
+
+
+
+Definition at line 44 of file wait\+\_\+for\+\_\+event.\+c.
+

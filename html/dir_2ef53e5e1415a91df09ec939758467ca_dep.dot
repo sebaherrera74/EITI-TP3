@@ -1,0 +1,14 @@
+digraph "muju/vendor/ceedling/plugins/fake_function_framework/examples/fff_example/src" {
+  compound=true
+  node [ fontsize="10", fontname="Helvetica"];
+  edge [ labelfontsize="10", labelfontname="Helvetica"];
+  subgraph clusterdir_e43a7948ccc2a767082a3a4ffc97f022 {
+    graph [ bgcolor="#ddddee", pencolor="black", label="fff_example" fontname="Helvetica", fontsize="10", URL="dir_e43a7948ccc2a767082a3a4ffc97f022.html"]
+  subgraph clusterdir_2ef53e5e1415a91df09ec939758467ca {
+    graph [ bgcolor="#eeeeff", pencolor="black", label="" URL="dir_2ef53e5e1415a91df09ec939758467ca.html"];
+    dir_2ef53e5e1415a91df09ec939758467ca [shape=plaintext label="src"];
+    dir_1d4bba4db4f50e9e8d51db26600789f6 [shape=box label="subfolder" color="black" fillcolor="white" style="filled" URL="dir_1d4bba4db4f50e9e8d51db26600789f6.html"];
+  }
+  }
+  dir_2ef53e5e1415a91df09ec939758467ca->dir_1d4bba4db4f50e9e8d51db26600789f6 [headlabel="1", labeldistance=1.5 headhref="dir_000121_000122.html"];
+}
