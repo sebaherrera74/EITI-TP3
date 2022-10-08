@@ -1,9 +1,0 @@
-Para la implementación de Free\+R\+T\+OS V10.\+2.\+0 se copío el codigo fuente en la carpeta {\ttfamily source} y se movió la carpeta {\ttfamily includes} sin cambios respecto al archivo comprimido con la distribución oficial descargada del sitio \mbox{[}\href{https://www.freertos.org/a00104.html}{\tt https\+://www.\+freertos.\+org/a00104.\+html}\mbox{]}()
-
-En la carpeta {\ttfamily portable} se eliminaron los compiladores no utilizados dejando únicamente la carpeta {\ttfamily G\+CC} y dentro de la misma se eliminaron tambien las portaciones no utilizados dejando únicamente las carpetas {\ttfamily A\+R\+M\+\_\+\+C\+M3} y {\ttfamily A\+R\+M\+\_\+\+C\+M4F}, todo esto sin realizar ninguna modificación en el contenido de las mismas.
-
-En la carpeta {\ttfamily Mem\+Mang} se modificó el archivo {\ttfamily heap\+\_\+4.\+c} agregando un atributo a la definición devector uc\+Heap para ubicar al mismo en el segundo banco de memoria R\+AM. De esta forma el codigo original {\ttfamily P\+R\+I\+V\+I\+L\+E\+G\+E\+D\+\_\+\+D\+A\+TA static uint8\+\_\+t uc\+Heap\mbox{[} config\+T\+O\+T\+A\+L\+\_\+\+H\+E\+A\+P\+\_\+\+S\+I\+ZE \mbox{]};} se cambio por {\ttfamily \+\_\+\+\_\+attribute\+\_\+\+\_\+ ((section(\char`\"{}.\+data.\$\+R\+A\+M2\char`\"{}))) P\+R\+I\+V\+I\+L\+E\+G\+E\+D\+\_\+\+D\+A\+TA static uint8\+\_\+t uc\+Heap\mbox{[} config\+T\+O\+T\+A\+L\+\_\+\+H\+E\+A\+P\+\_\+\+S\+I\+ZE \mbox{]}}; `.
-
-{\bfseries Las otras implementación del gestor de memoria dinámica no se modificaron ni se probaron}.
-
-06/03/2019, Esteban Volentini \href{mailto:evolentini@gmail.com}{\tt evolentini@gmail.\+com} 

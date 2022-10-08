@@ -1,9 +1,0 @@
-digraph "CHIP: LPC43xx (M0 Core) Cortex CMSIS definitions"
-{
-  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
-  node [fontname="Helvetica",fontsize="10",shape=record];
-  rankdir=LR;
-  Node1 [label="CHIP: LPC43xx CMSIS\l include file",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$group___c_m_s_i_s__43_x_x___m0.html"];
-  Node0 [label="CHIP: LPC43xx (M0 Core)\l Cortex CMSIS definitions",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black"];
-  Node1->Node0 [shape=plaintext, dir="back", style="solid"];
-}
