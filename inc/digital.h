@@ -53,12 +53,13 @@ extern "C" {
 
 /* === Definicion y Macros publicos ======================================== */
 #include <stdint.h>
+#include <stdbool.h>
 
 /* == Declaraciones de tipos de datos publicos ============================= */
 
 typedef struct digital_output_s * digital_output_t;
 
-
+typedef struct digital_input_s * digital_input_t;
 /* === Declaraciones de variables publicas ================================= */
 
 
@@ -94,6 +95,22 @@ void DigitalOutputDeactivate(digital_output_t output);
  * @return    : Vacio  */
 
 void DigitalOutputToogle(digital_output_t output);
+
+/**
+ * @brief Funcion para crear una entrada digtial permitiendo encapsular
+ * en un tipo de dato.
+ *
+ * @param[in] : Puerto asociado al microcontrolador
+ * @param[in] : Pin asociado al microcontrolador
+ * @return retoma un dato abstracto aociado a esa salida  */
+digital_input_t DigitalInputCreate(uint8_t gpio, uint8_t bit);
+
+/**
+ * @brief Funcion que permite saber si una tecla fue presionada o no.
+ * @param[in] : Entrada digital asociada al microcontrolador
+ * @return retoma un valor verdadero o falso de acuerdo a si se presiono o no la tecla
+ *   */
+bool DigitalInputGetState(digital_input_t input);
 
 
 /* === Ciere de documentacion ============================================== */

@@ -43,9 +43,13 @@
 #include "stdbool.h"
 
 /* === Macros definitions ====================================================================== */
-//Defino mas saldias
+//Defino mas salidas
 #ifndef OUTPUT_INSTANCES
         # define OUTPUT_INSTANCES 4
+#endif
+
+#ifndef INPUT_INSTANCES
+        # define INPUT_INSTANCES 4
 #endif
 
 
@@ -56,6 +60,19 @@ struct digital_output_s{
 	bool allocated;
 
 };
+
+struct digital_input_s{
+	uint8_t gpioinput;
+	uint8_t bitinput;
+	bool allocatedinput;
+
+};
+
+
+
+
+
+
 /* === Private variable declarations =========================================================== */
 
 
@@ -67,6 +84,7 @@ struct digital_output_s{
 /* === Private variable definitions ============================================================ */
 
 static struct digital_output_s instance[OUTPUT_INSTANCES]={0};
+static struct digital_input_s instanceinput[INPUT_INSTANCES]={0};
 
 /* === Private function implementation ========================================================= */
 
@@ -83,6 +101,18 @@ digital_output_t DigitalOutputAllocate(void){
      return output;
 }
 
+digital_input_t DigitalInputAllocate(void){
+	digital_input_t input=NULL;
+
+	for (int index=0;index<INPUT_INSTANCES;index++){
+		if (instanceinput[index].allocatedinput==false){
+			instanceinput[index].allocatedinput=true;
+			input=&instanceinput[index];
+			break;
+		}
+	}
+     return input;
+}
 
 /* === Public function implementation ========================================================= */
 digital_output_t DigitalOutputCreate(uint8_t gpio, uint8_t bit){
@@ -97,6 +127,17 @@ digital_output_t DigitalOutputCreate(uint8_t gpio, uint8_t bit){
 	return output;
 }
 
+digital_input_t DigitalInputCreate(uint8_t gpio, uint8_t bit){
+	digital_input_t input=DigitalInputAllocate();
+
+	if (input){
+		input->gpioinput=gpio;
+		input->bitinput=bit;
+	}
+	return input;
+}
+
+
 void DigitalOutputActivate(digital_output_t output){
 	Chip_GPIO_SetPinState(LPC_GPIO_PORT, output->gpio, output->bit, true);
 
@@ -106,11 +147,16 @@ void DigitalOutputDeactivate(digital_output_t output){
 
 }
 void DigitalOutputToogle(digital_output_t output){
-	Chip_GPIO_SetPinToggle(LPC_GPIO_PORT,output->gpio ,  output->bit);
+	Chip_GPIO_SetPinToggle(LPC_GPIO_PORT,output->gpio,output->bit);
 
 }
 
+bool DigitalInputGetState(digital_input_t input){
 
+	Chip_GPIO_ReadPortBit(LPC_GPIO_PORT, input->gpioinput,input->bitinput);
+
+
+}
 
 /* === End of documentation ==================================================================== */
 

@@ -165,26 +165,30 @@ int main(void) {
     digital_output_t led_uno=DigitalOutputCreate(LED_1_GPIO,LED_1_BIT);
     digital_output_t led_dos=DigitalOutputCreate(LED_2_GPIO,LED_2_BIT);
     digital_output_t led_tres=DigitalOutputCreate(LED_3_GPIO,LED_3_BIT);
+    digital_input_t  tecla_uno=DigitalInputCreate(TEC_1_GPIO,TEC_1_BIT);
+    digital_input_t  tecla_dos=DigitalInputCreate(TEC_2_GPIO,TEC_2_BIT);
+    digital_input_t  tecla_tres=DigitalInputCreate(TEC_3_GPIO,TEC_3_BIT);
+    digital_input_t  tecla_cuatro=DigitalInputCreate(TEC_4_GPIO,TEC_4_BIT);
 
     while (true) {
-        if (Chip_GPIO_ReadPortBit(LPC_GPIO_PORT, TEC_1_GPIO, TEC_1_BIT) == 0) {
+        if (DigitalInputGetState(tecla_uno) == 0) {
         	DigitalOutputActivate(led_azul);
         } else {
         	 DigitalOutputDeactivate(led_azul);
         }
 
-        current_state = (Chip_GPIO_ReadPortBit(LPC_GPIO_PORT, TEC_2_GPIO, TEC_2_BIT) == 0);
+        current_state = (DigitalInputGetState(tecla_dos) == 0);
         if ((current_state) && (!last_state)) {
         	 DigitalOutputToogle(led_uno);
              // Chip_GPIO_SetPinToggle(LPC_GPIO_PORT, LED_1_GPIO, LED_1_BIT);
         }
         last_state = current_state;
 
-        if (Chip_GPIO_ReadPortBit(LPC_GPIO_PORT, TEC_3_GPIO, TEC_3_BIT) == 0) {
+        if (DigitalInputGetState(tecla_tres) == 0) {
         	DigitalOutputActivate(led_dos);
             //Chip_GPIO_SetPinState(LPC_GPIO_PORT, LED_2_GPIO, LED_2_BIT, true);
         }
-        if (Chip_GPIO_ReadPortBit(LPC_GPIO_PORT, TEC_4_GPIO, TEC_4_BIT) == 0) {
+        if (DigitalInputGetState(tecla_cuatro) == 0) {
         	DigitalOutputDeactivate(led_dos);
             //Chip_GPIO_SetPinState(LPC_GPIO_PORT, LED_2_GPIO, LED_2_BIT, false);
         }
