@@ -133,6 +133,7 @@ digital_input_t DigitalInputCreate(uint8_t gpio, uint8_t bit){
 	if (input){
 		input->gpioinput=gpio;
 		input->bitinput=bit;
+		Chip_GPIO_SetPinDIR(LPC_GPIO_PORT, input->gpioinput,input->bitinput,false);
 	}
 	return input;
 }
@@ -144,18 +145,13 @@ void DigitalOutputActivate(digital_output_t output){
 }
 void DigitalOutputDeactivate(digital_output_t output){
 	Chip_GPIO_SetPinState(LPC_GPIO_PORT,output->gpio, output->bit, false);
-
 }
 void DigitalOutputToogle(digital_output_t output){
 	Chip_GPIO_SetPinToggle(LPC_GPIO_PORT,output->gpio,output->bit);
-
 }
 
 bool DigitalInputGetState(digital_input_t input){
-
 	Chip_GPIO_ReadPortBit(LPC_GPIO_PORT, input->gpioinput,input->bitinput);
-
-
 }
 
 /* === End of documentation ==================================================================== */
